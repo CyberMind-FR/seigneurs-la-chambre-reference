@@ -7,7 +7,6 @@ canonical_text: 'LES SEIGNEURS DE LA CHAMBRE
 
   Vicomtes de Maurienne — Patrimoine médiéval (XIᵉ – XVIᵉ siècle)
 
-
   LES 10 SITES DE L’EXPOSITION
 
   LA CHAMBRE
@@ -30,7 +29,6 @@ canonical_text: 'LES SEIGNEURS DE LA CHAMBRE
 
   10 · Maison Forte de La Landonnière
 
-
   Les Amis du Couvent des Cordeliers
 
   Préserver et valoriser le patrimoine médiéval de la Maurienne
@@ -41,8 +39,7 @@ canonical_text: 'LES SEIGNEURS DE LA CHAMBRE
 
   04 79 56 30 32 (Mairie de La Chambre)
 
-  Adhésion : 5 € • Dons déductibles 66 % • Fondation du Patrimoine 75 %
-
+  Adhésion : 5 € • Dons déductibles 66 % • Fondation du Patrimoine 66 %
 
   MENTIONS LÉGALES
 
@@ -50,7 +47,7 @@ canonical_text: 'LES SEIGNEURS DE LA CHAMBRE
 
   Mairie de La Chambre — 73130 La Chambre (Savoie)
 
-  Auteurs : Fabrice GALOPO & Gérald KERMA — Commission Histoire et Patrimoine
+  Auteurs : Fabrice GALOPO, André GRANGE, Gérald KERMA — Commission Histoire et Patrimoine
 
   Date d’édition : Décembre 2025 • Imprimé en France
 
@@ -60,7 +57,7 @@ canonical_text: 'LES SEIGNEURS DE LA CHAMBRE
 
   Au profit de la sauvegarde du Couvent des Cordeliers'
 visual_reference: assets/page-15.jpg
-visual_reference_sha256: d7d10eda0deb4ab9f4fb9909d33b2c43cdb11c47747ccd4cab67e6c6c1d3b75f
+visual_reference_sha256: 69260d70c51d4e820b3127de72b35f6779e749d50c1d51d855a8e08cf4224deb
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
@@ -74,3 +71,4 @@ regeneration_prompt_guardrails:
 - Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
 - Ne créer aucun texte supplémentaire.
 - Ne jamais transformer un QR code avec un filtre artistique.
+- Pour toute correction ponctuelle, modifier chirurgicalement la référence visuelle existante; ne jamais régénérer la page entière.

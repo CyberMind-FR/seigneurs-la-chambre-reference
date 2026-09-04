@@ -5,12 +5,10 @@ subtitle: Les Amis du Couvent des Cordeliers de La Chambre
 content_locked: true
 canonical_text: 'L''Association
 
-
   Les Amis du Couvent des Cordeliers de La Chambre
 
   Créée en 2020, notre association a pour mission de faire connaître, préserver et valoriser le patrimoine du couvent des
   Cordeliers de La Chambre et plus largement le patrimoine historique de la Maurienne.
-
 
   NOUS REJOINDRE
 
@@ -18,7 +16,7 @@ canonical_text: 'L''Association
 
   • Dons déductibles (66%)
 
-  • Collecte Fondation du Patrimoine (75%)
+  • Collecte Fondation du Patrimoine (66%)
 
   • Site : www.couventdelachambre.fr
 
@@ -27,7 +25,6 @@ canonical_text: 'L''Association
   • Mairie de La Chambre : 04 79 56 30 32
 
   « Préserver ce patrimoine exceptionnel pour les générations futures »
-
 
   AUTEUR DE RÉFÉRENCE
 
@@ -47,21 +44,19 @@ canonical_text: 'L''Association
 
   Ouvrages en dépôt-vente à l’Office de Tourisme de La Chambre
 
-
   Sources principales :
 
   Laurence DALMASSO, Le couvent des Frères Mineurs Conventuels de La Chambre, 2001
 
   Georges CHAPIER, Châteaux Savoyards - Tome III : Les Châteaux de Maurienne, 1957
 
-
   Commission Histoire et Patrimoine
 
-  Fabrice GALOPO et Gérald KERMA
+  Fabrice GALOPO, André GRANGE, Gérald KERMA
 
   Décembre 2025'
 visual_reference: assets/page-14.jpg
-visual_reference_sha256: 9a8d7dc0968d7ce2be999be7b01b8671e5d80171d7eea6c4abb93a8d0006f87e
+visual_reference_sha256: 75f15d76e4cce3653951d1d83153d958e6c46cf1b5d9b8785758fb34fa83c60b
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
@@ -75,3 +70,4 @@ regeneration_prompt_guardrails:
 - Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
 - Ne créer aucun texte supplémentaire.
 - Ne jamais transformer un QR code avec un filtre artistique.
+- Pour toute correction ponctuelle, modifier chirurgicalement la référence visuelle existante; ne jamais régénérer la page entière.
