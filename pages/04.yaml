@@ -1,0 +1,75 @@
+page: 4
+type: site
+title: La Maison de La Tour
+subtitle: Du siège de la châtellenie comtale au pouvoir administratif
+content_locked: true
+canonical_text: 'La Maison de La Tour
+
+  Du siège de la châtellenie comtale au pouvoir administratif
+
+
+  Au cœur du bourg : le pouvoir administratif
+
+  Oubliez les châteaux perchés sur leurs promontoires rocheux. La Maison de La Tour se dresse au centre même du village de
+  La Chambre, accessible, visible, imposante. Ce n''est pas une forteresse militaire : c''est le siège du pouvoir administratif,
+  le cœur battant de la châtellenie de Maurienne.
+
+  Construite au XIIIe siècle, cette tour carrée de trois étages avec ses murs de forte proportion affirme une présence. Mais
+  à qui appartient-elle ? Surprise : pas aux seigneurs de La Chambre ! Cette « fortalisse » est propriété du comte de Savoie
+  lui-même.
+
+
+  1285 : L''achat décisif
+
+  Le 14 novembre 1285, un acte notarié scelle le destin de la Tour. Guilemet vend au comte Amé de Savoie des « maisons fortes
+  » situées au bourg de La Chambre : deux tours, des maisons attenantes, pour la somme considérable de 340 florins.
+
+  À partir de cette date, la Tour devient officiellement le centre administratif du comte de Savoie en Maurienne. Le châtelain
+  y siège, y rend la justice, y perçoit les taxes, y conserve les archives.
+
+
+  1456 : Du comte aux seigneurs
+
+  Coup de théâtre le 22 décembre 1456 ! Le duc de Savoie Louis vend la maison forte de la Tour à Aymon de La Chambre. C''est
+  un tournant majeur. Après près de deux siècles de propriété comtale, la Tour passe aux mains de la famille seigneuriale.
+  Les La Chambre réunissent enfin sous leur autorité le pouvoir féodal et le pouvoir administratif.
+
+
+  Aujourd''hui, la Maison de La Tour demeure un remarquable témoin de l''histoire administrative de la Maurienne.
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3565° N
+
+  Lng: 6.3025° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de La Chambre — ADS, série C • patrimoines.savoie.fr
+
+
+  EN SAVOIR PLUS
+
+  • Tour et logis situés au centre du village de La Chambre
+
+  • Tour des XIIIe-XIVe siècles, logis du XVIIIe siècle'
+visual_reference: assets/page-04.jpg
+visual_reference_sha256: eac727b6c211167693e3b5d9998f573e2eda35acd1814660dbdf25e9a100572d
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

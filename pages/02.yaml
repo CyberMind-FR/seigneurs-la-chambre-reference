@@ -1,0 +1,94 @@
+page: 2
+type: history
+title: Les Seigneurs de La Chambre
+subtitle: 'Les maîtres de la vallée : une dynastie oubliée'
+content_locked: true
+canonical_text: 'Les Seigneurs de La Chambre
+
+  Les maîtres de la vallée : une dynastie oubliée
+
+
+  Armoiries officielles
+
+  Avant que la Maison de Savoie ne domine les Alpes, avant que les ducs ne règnent depuis Turin ou Chambéry, une famille redoutable
+  contrôlait la Maurienne : les seigneurs de La Chambre, vicomtes de Maurienne, qui pendant près de quatre siècles ont été
+  les véritables maîtres de notre vallée.
+
+  Le comte de Foras, éminent généalogiste savoyard, écrivait au XIXe siècle : « Entre toutes les familles féodales dont les
+  possessions morcelaient le sol de notre Savoie au Moyen Âge, une des plus considérables est sans contredit celle des sires
+  de La Chambre en Maurienne. »
+
+
+  BLASONNEMENT OFFICIEL
+
+  « D''azur, semé de fleurs de lis d''or,
+
+  à la bande de gueules brochant sur le tout »
+
+  Source : Amédée de FORAS, Armorial et nobiliaire de l''ancien duché de Savoie
+
+
+  Les origines : délégués de l''évêque (XIe siècle)
+
+  Vers 1030, l''évêque-comte de Maurienne Éverard confie le titre de vicomte (vice-comes, lieutenant du comte) à un parent
+  laïc nommé Richolfus (ou Richard), seigneur de La Chambre et de Cuines. Le vicomte devient l''administrateur temporel de
+  la « Terre épiscopale », l''homme lige de l''évêché de Maurienne, son représentant armé et son collecteur d''impôts.
+
+  Cette même année 1030, l''empereur du Saint-Empire Conrad II investit Humbert aux Blanches Mains comme comte en Maurienne.
+  La vallée se retrouve donc avec deux pouvoirs : les Humbertiens (futurs Comtes de Savoie) et les vicomtes de La Chambre,
+  délégués de l''évêque.
+
+
+  L''âge d''or : Richard et Pierre (XIIe-XIIIe siècles)
+
+  Richard de La Chambre (v.1160-1231), chevalier, vicomte de Maurienne, est le premier seigneur dont nous connaissons véritablement
+  l''histoire. Par deux mariages stratégiques exceptionnels, il propulse sa famille au rang des plus grandes maisons nobles
+  de Savoie. Il épouse d''abord Alix, fille de Guigues VI, Dauphin de Viennois. La dot comprend le comté de Luille, titre
+  qui restera dans la famille jusqu''en 1454. Puis il épouse Marie de Flandre, fille supposée du comte Baudouin V de Hainaut,
+  liant ainsi les La Chambre aux plus grandes familles d''Europe.
+
+  Son fils Pierre de La Chambre (v.1205-v.1275) est cité dès 1233 comme premier conseiller du comte de Savoie Amédée IV. Le
+  25 mai 1261, Pierre dicte son testament, l''un des plus anciens et des plus importants documents médiévaux de Savoie.
+
+
+  Le siècle des fondations (XIVe siècle)
+
+  Jean II de La Chambre (v.1325-v.1370), vicomte de Maurienne, comte de Luille, est l''un des plus grands seigneurs de son
+  temps. En 1351, il cumule les charges de bailli du Chablais et de bailli du Valais. Il épouse en janvier 1343 Agnès de Savoie-Achaïe,
+  fille du prince Philippe Ier de Piémont, scellant définitivement l''alliance entre les deux maisons.
+
+  En 1345, avec son beau-frère Amédée V de Savoie-Achaïe, évêque de Maurienne, Jean II autorise la fondation du couvent des
+  Cordeliers à La Chambre. En 1365, le pape Urbain V approuve personnellement cette fondation.
+
+
+  Le crépuscule d''une lignée (XVe siècle)
+
+  Gaspard de La Chambre, dernier représentant mâle de la lignée directe, meurt sans postérité en 1454. Son neveu Aymon de
+  Seyssel hérite de tous les titres et possessions à condition de relever le nom et les armes de La Chambre. Le 15 août 1456,
+  le duc Louis Ier de Savoie érige la seigneurie de La Chambre en comté.
+
+
+  UN EMPIRE TERRITORIAL
+
+  • Le mandement de La Chambre : 9 communes
+
+  • Châteaux : Notre-Dame-du-Cruet, Château-Joli, Château de l''Aiguille, Maison de la Tour
+
+  • Titres : Vicomte de Maurienne, Comte de Luille
+
+  • Seigneuries : Argentine, Avrieux, Bonvillard, Chamoux, Conflans, Cuines, Grésy...'
+visual_reference: assets/page-02.jpg
+visual_reference_sha256: 689320d6230ac1eb5eda486c4554ec37ed573dc9f9ac9b53f8d12a1313a9a786
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: false
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

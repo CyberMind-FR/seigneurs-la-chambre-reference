@@ -1,0 +1,39 @@
+project: Les Seigneurs de La Chambre - SpiritualCept Research Notebook
+version: 1.0-reference
+principle: Séparer strictement contenu, composition et traitement visuel.
+format_lock:
+  page_count: 15
+  orientation: portrait
+  rule: Conserver les dimensions et proportions de la page source; aucune recadrage ou reflow automatique.
+visual_language:
+  genre: carnet de recherches historique / sketchbook documentaire
+  era_feel: document d'archives venu d'un autre temps, sans pastiche fantasy
+  paper: ivoire chaud, patine légère, grain fin
+  ink: brun-noir / sépia profond, traits fins de gravure et graphite
+  accent: rouge brun pour titres/repères, bleu et or réservés aux armoiries
+  contrast: fort pour impression, blancs papier préservés, détails et petits caractères nets
+  illustration: dessin documentaire à la plume, lavis/gravure, vues architecturales, plans, cartes et détails annotés
+  ornament: filets fins, fleurons discrets, repères de carnet, jamais décor envahissant
+layout_rules:
+- Titre principal en tête, large mais sans masquer les illustrations.
+- Sous-titre immédiatement sous le titre.
+- Corps en blocs courts, hiérarchie rouge-brun pour intertitres.
+- Armoiries récurrentes en haut à gauche lorsqu'elles existent dans la page source.
+- Illustration principale dominante, accompagnée de détails secondaires.
+- Bandeau bas réservé à carte/localisation/QR/encadré pratique selon la page.
+- Aucun élément ne doit être ajouté s'il crée une affirmation historique absente du contenu verrouillé.
+content_lock:
+- Ne jamais paraphraser, corriger ou compléter le texte sans validation éditoriale.
+- Ne jamais inventer une date, un nom, une légende, un plan, une source ou une localisation.
+- 'Les QR codes sont des actifs fonctionnels: ne jamais les styliser, redessiner ou rasteriser avec un filtre.'
+- Toute modification éditoriale doit être inscrite dans corrections.yaml.
+qr_policy:
+  render: noir pur sur fond blanc ou très clair, zone de silence intacte
+  min_rule: conserver exactement le payload validé; réinjecter l'actif QR original après tout traitement graphique
+  verification: scanner chaque QR dans le PDF final avant publication
+print_policy:
+  master: PDF HQ
+  contrast: micro-contraste renforcé sans écraser les demi-teintes
+  resolution: viser 300 dpi minimum à taille finale
+  compression: éviter les JPEG agressifs sur texte et QR
+  preflight: contrôle visuel page par page + test QR + contrôle des marges

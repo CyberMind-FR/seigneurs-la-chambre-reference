@@ -1,0 +1,69 @@
+page: 13
+type: synthesis
+title: Un patrimoine à préserver
+subtitle: Carte des 10 sites patrimoniaux et ressources numériques
+content_locked: true
+canonical_text: 'Un patrimoine à préserver
+
+
+  De 1030 à 1454, pendant plus de 400 ans, les seigneurs de La Chambre ont façonné l''histoire de la Maurienne. Rivaux puis
+  alliés des Comtes de Savoie, croisés à Jérusalem, conseillers des princes, fondateurs de couvents, ils ont été les véritables
+  maîtres de notre vallée.
+
+  Leur nom résonne encore dans chaque pierre de nos châteaux, dans chaque voûte du cloître des Cordeliers, dans chaque page
+  des archives médiévales. Ils nous rappellent qu''avant d''être savoyarde, puis française, la Maurienne fut d''abord chambrienne.
+
+
+  CARTE DES 10 SITES PATRIMONIAUX
+
+  • La Chambre : Couvent, Maison de La Tour
+
+  • Notre-Dame-du-Cruet : Château, Tour
+
+  • Sainte-Marie-de-Cuines : Château Joli, Tour de Burgin
+
+  • Saint-Étienne-de-Cuines : Châtel-André, Châtelet, Gruyère
+
+  • Saint-Rémy-de-Maurienne : La Landonnière
+
+
+  Ce patrimoine est fragile. Certains sites ont déjà disparu, d''autres nécessitent une attention urgente. L''Association
+  « Les Amis du Couvent des Cordeliers de La Chambre » œuvre pour préserver et valoriser ces témoignages irremplaçables de
+  notre histoire commune.
+
+
+  Découvrez en ligne
+
+  Ressources numériques
+
+  SITE ASSOCIATION : couventdelachambre.fr
+
+  VIDÉO SURVOL : YouTube
+
+  VISITE VIRTUELLE : drone-de-regard.fr
+
+  DIAPORAMA : sdlc.../diaporama
+
+  PRÉSENTATION HTML : sdlc.gk2.secubox.in
+
+  LIVRET PDF : sdlc.../livret.pdf
+
+
+  CONSEIL
+
+  Scannez les QR codes avec l''appareil photo de votre smartphone'
+visual_reference: assets/page-13.jpg
+visual_reference_sha256: dd724cedb3bfc13780a9588c2c9ed1e9d3ee32e055587c3c1ad680f7fc5f654e
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

@@ -1,0 +1,54 @@
+page: 9
+type: site
+title: La Maison-Forte de Gruyère
+subtitle: Saint-Étienne-de-Cuines, La Borgeat
+content_locked: true
+canonical_text: 'La Maison Forte de Gruyère
+
+  Saint-Étienne-de-Cuines, La Borgeat
+
+
+  Tour ronde imposante jouxte un corps de logis flanqué d''une tour carrée. Cette maison forte remarquable témoigne de l''architecture
+  défensive médiévale en Maurienne.
+
+  En 1477, Pierre de Gruyère — des célèbres comtes suisses du même nom — en hérite, donnant son nom à l''édifice. Un magnolia
+  séculaire ombrage encore aujourd''hui cette demeure chargée d''histoire.
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3490° N
+
+  Lng: 6.3210° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de Saint-Étienne-de-Cuines — ADS, série C • patrimoines.savoie.fr
+
+
+  ARCHITECTURE
+
+  • Tour ronde + Tour carrée
+
+  • Magnolia séculaire
+
+  • Propriété privée'
+visual_reference: assets/page-09.jpg
+visual_reference_sha256: b5d04064f71ea08730b0ae66ac641c28d8eb7a8a8b95972fe8299c3e1281fee9
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

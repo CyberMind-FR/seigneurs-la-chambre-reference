@@ -1,0 +1,92 @@
+page: 10
+type: site
+title: Le Château de Notre-Dame-du-Cruet
+subtitle: Forteresse des seigneurs de La Chambre (XIe-XVIe siècle)
+content_locked: true
+canonical_text: 'Le Château de Notre-Dame-du-Cruet
+
+  Forteresse des seigneurs de La Chambre (XIe-XVIe siècle)
+
+
+  Sentinelle de pierre au-dessus de la vallée
+
+  Imaginez-vous au XIe siècle. Sur un promontoire rocheux dominant la vallée de la Maurienne, une forteresse s''élève, veillant
+  sur la grande route du Mont-Cenis. Du haut de ses remparts, les seigneurs de La Chambre contrôlent le passage entre la France
+  et l''Italie : pèlerins se rendant à Rome, marchands lombards, armées en marche... tous passent sous leurs regards.
+
+  Le Château de Notre-Dame-Du-Cruet devient le cœur battant d''une puissance féodale qui rivalise avec les comtes de Savoie
+  eux-mêmes. Pendant quatre siècles, c''est ici que réside la famille de La Chambre, vicomtes de Maurienne, maîtres d''un
+  territoire de neuf communes s''étendant de La Chambre à Montgellafrey.
+
+
+  Guillaume Ier : le bâtisseur
+
+  Vers 1090-1100, Guillaume Ier de La Chambre fait édifier cette forteresse sur un site choisi pour ses qualités défensives
+  exceptionnelles. Le promontoire naturel offre une protection redoutable : au nord, un immense fossé est taillé dans le roc
+  sur 12 mètres de largeur et 7 mètres de profondeur. Un travail de titan qui témoigne de la puissance du seigneur.
+
+  Le château se déploie sur 3 500 m², protégé par 90 mètres de murailles flanquées de tours : une tour ronde, une tour carrée,
+  et une imposante tour-porte de 8 mètres de large. Au cœur de l''ensemble, le donjon rectangulaire de 16 mètres sur 11,50
+  mètres, avec ses murs épais de 1,50 mètre, affirme la domination seigneuriale sur toute la vallée.
+
+
+  1472 : Le dernier éclat
+
+  Le 25 mars 1472, le château résonne d''une dernière fête somptueuse. Louis de La Chambre y signe son contrat de mariage
+  avec Jeanne de Chalon, fille du prince d''Orange. Mais les jeux de pouvoir sont dangereux. En 1480, Louis devient gouverneur
+  et lieutenant général de Savoie. Trop puissant, il déplaît au roi de France Louis XI qui le fait enlever à Turin en 1482.
+
+  En 1491, accusé de félonie, Louis de La Chambre est condamné par contumace. Sentence terrible : tous ses châteaux doivent
+  être rasés. Le Château du Cruet est partiellement démantelé.
+
+
+  1536 : La fin dans les flammes
+
+  Le coup fatal vient des guerres franco-savoyardes. En 1536, les troupes françaises envahissent la Savoie. Le château du
+  Cruet, déjà affaibli, est entièrement incendié. Les explosifs achèvent ce que le temps avait épargné. La forteresse qui
+  avait résisté pendant quatre siècles s''effondre. Elle ne sera jamais reconstruite.
+
+  Ironie de l''histoire : en 1730, les ruines du château apparaissent dans les registres cadastraux comme propriété des Révérends
+  Pères de Saint-François - les Cordeliers de La Chambre ! Le couvent fondé par les seigneurs hérite des vestiges de leur
+  forteresse.
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3715° N
+
+  Lng: 6.3095° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de Notre-Dame-du-Cruet — ADS, série C • patrimoines.savoie.fr
+
+
+  EN SAVOIR PLUS
+
+  • Les ruines sont en propriété privée mais visibles depuis le sentier public
+
+  • Distance depuis l''église : 15 minutes de marche
+
+  • Point de vue exceptionnel sur la vallée de la Maurienne
+
+  • Édifié vers 1090-1100 • Démantelé en 1491 • Détruit en 1536'
+visual_reference: assets/page-10.jpg
+visual_reference_sha256: 99e8d25102aa328548e659526eabbb99fb290c91c9b7c89de167ac22e2781b68
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

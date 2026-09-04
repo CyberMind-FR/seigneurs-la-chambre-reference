@@ -1,0 +1,9 @@
+page_04:
+  status: canonical_override
+  reason: Correction éditoriale explicitement demandée.
+  forbidden:
+  - Académie de Maurienne
+  - Aujourd'hui, la Maison de La Tour abrite l'Académie de Maurienne
+  canonical_sentence: Aujourd'hui, la Maison de La Tour demeure un remarquable témoin de l'histoire administrative de la Maurienne.
+  note: La référence visuelle HQ existante peut encore montrer l'ancienne mention. Le texte canonique ci-dessus prévaut pour
+    toute régénération.

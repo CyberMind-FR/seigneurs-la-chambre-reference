@@ -1,0 +1,71 @@
+page: 8
+type: site
+title: La Maison-Forte du Châtelet
+subtitle: Des seigneurs de Cuynes aux notaires modernes
+content_locked: true
+canonical_text: 'La Maison-Forte du Châtelet
+
+  Des seigneurs de Cuynes aux notaires modernes
+
+
+  La tour des vassaux
+
+  Au centre du village de Saint-Étienne-de-Cuines, dominant la route qui mène au col du Glandon, se dresse la Maison-Forte
+  du Châtelet. Grosse maison carrée avec son toit à quatre pans, ses belles terrasses formant jardins suspendus, et son magnolia
+  centenaire : c''est l''une des maisons fortes les plus remarquables de Maurienne.
+
+  Construite au XIIIe siècle, la tour du Châtelet s''inscrit dans le vaste système défensif des seigneurs de La Chambre. Cette
+  tour de défense surveille la vallée des Villards d''où peuvent surgir les ennemis dauphinois.
+
+
+  XVe siècle : La famille De Pont puis de Gruyère
+
+  Au XVe siècle, la tour appartient à la famille De Pont. En 1477, un événement inattendu bouleverse l''histoire : Pierre
+  de Gruyère, fils bâtard du comte de Gruyère, hérite de la maison forte. Voilà comment une demeure mauriennaise devient la
+  propriété d''une famille venue de Suisse !
+
+
+  1629 : L''ère des notaires
+
+  En 1629, Colomban Rostaing, notaire à Saint-Colomban-des-Villards, achète le Châtelet. C''est un tournant symbolique : la
+  maison forte passe des mains de la noblesse féodale à celles de la bourgeoisie de robe. Et remarquablement, le Châtelet
+  est resté propriété de notaires jusqu''à aujourd''hui !
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3505° N
+
+  Lng: 6.3195° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de Saint-Étienne-de-Cuines — ADS, série C • patrimoines.savoie.fr
+
+
+  AUJOURD''HUI
+
+  • Gîtes de caractère « Le Colombier » et « Le Glandon »
+
+  • Le plus vieux magnolia de la commune ombrage la tour
+
+  • Située au centre du village, sur la route du col du Glandon'
+visual_reference: assets/page-08.jpg
+visual_reference_sha256: 61ed807b8c959163547c14bdfc7b8cef0ad56f92a38baec079d2cdcb0bc89970
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

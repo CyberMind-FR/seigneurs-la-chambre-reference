@@ -1,0 +1,75 @@
+page: 12
+type: site
+title: La Maison Forte de La Landonnière
+subtitle: Sentinelle des Seigneurs à Saint-Rémy (XVe siècle)
+content_locked: true
+canonical_text: 'La Maison Forte de La Landonnière
+
+  Sentinelle des Seigneurs à Saint-Rémy (XVe siècle)
+
+
+  L''extension du pouvoir seigneurial vers Saint-Rémy
+
+  À quatre kilomètres en aval de La Chambre, sur le territoire de Saint-Rémy-de-Maurienne, une maison forte aujourd''hui méconnue
+  témoigne de l''étendue du réseau défensif des seigneurs de La Chambre. La Landonnière, édifiée au XVe siècle, incarne cette
+  stratégie de contrôle territorial.
+
+  Lorsque vous longez la route menant de La Chambre vers Saint-Jean-de-Maurienne, imaginez ce réseau de demeures fortifiées
+  : le château de Notre-Dame-du-Cruet dominant la vallée, la Tour de La Chambre contrôlant le bourg, le Château-Joli surveillant
+  Sainte-Marie-de-Cuines... et plus bas, discrète mais stratégique, la maison forte de La Landonnière prolongeant l''influence
+  seigneuriale jusqu''à Saint-Rémy.
+
+
+  Aymon de La Chambre, bâtisseur et héritier (1454-1466)
+
+  Les archives identifient Aymon de La Chambre comme le premier propriétaire de cette maison forte. Aymon de Seyssel, devenu
+  Aymon de La Chambre en 1454 lorsqu''il hérita de son oncle Gaspard, dernier représentant de la lignée directe des vicomtes
+  de Maurienne. Parmi ses nombreux titres figurait celui de baron de Saint-Rémy.
+
+
+  La Chapelle Saint-Claude (1571)
+
+  Plus d''un siècle après la construction de la maison forte, en 1571, une chapelle dédiée à Saint Claude fut édifiée à La
+  Landonnière. Ce saint évêque de Besançon, très vénéré dans les Alpes, comptait une dizaine de chapelles dans chaque diocèse
+  savoyard. L''ajout d''une chapelle privée témoigne du statut élevé des propriétaires.
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3380° N
+
+  Lng: 6.2750° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de Saint-Rémy-de-Maurienne — ADS, série C • patrimoines.savoie.fr
+
+
+  POUR ALLER PLUS LOIN
+
+  • Localisation : Saint-Rémy-de-Maurienne, hameau de La Landonnière
+
+  • Époque : XVe siècle (Bas Moyen Âge)
+
+  • Chapelle : Saint-Claude (1571)
+
+  • Statut actuel : Propriété privée (visible depuis l''extérieur)'
+visual_reference: assets/page-12.jpg
+visual_reference_sha256: bf675f3ca1e1e959f099354c92bc7affb045a0c13d6923028c482e1d5fde61cb
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

@@ -1,0 +1,77 @@
+page: 14
+type: association
+title: L'Association
+subtitle: Les Amis du Couvent des Cordeliers de La Chambre
+content_locked: true
+canonical_text: 'L''Association
+
+
+  Les Amis du Couvent des Cordeliers de La Chambre
+
+  Créée en 2020, notre association a pour mission de faire connaître, préserver et valoriser le patrimoine du couvent des
+  Cordeliers de La Chambre et plus largement le patrimoine historique de la Maurienne.
+
+
+  NOUS REJOINDRE
+
+  • Adhésion annuelle : 5 €
+
+  • Dons déductibles (66%)
+
+  • Collecte Fondation du Patrimoine (75%)
+
+  • Site : www.couventdelachambre.fr
+
+  • Email : contact@couventdelachambre.fr
+
+  • Mairie de La Chambre : 04 79 56 30 32
+
+  « Préserver ce patrimoine exceptionnel pour les générations futures »
+
+
+  AUTEUR DE RÉFÉRENCE
+
+  Philippe DEMARIO
+
+  • Les Seigneurs de La Chambre en Maurienne, des origines…
+
+  Éditions Derrier, 1999, 328 p.
+
+  • La Chambre — Un village en Maurienne, des origines à la Seconde Guerre Mondiale
+
+  Éditions De Mario, 2000 (ISBN 978-2-9515915-0-9)
+
+  • La Maurienne médiévale — Châteaux et maisons fortes
+
+  avec Jean Prieur, Éditions Alan Sutton, 2005 (ISBN 978-2-84253-805-7)
+
+  Ouvrages en dépôt-vente à l’Office de Tourisme de La Chambre
+
+
+  Sources principales :
+
+  Laurence DALMASSO, Le couvent des Frères Mineurs Conventuels de La Chambre, 2001
+
+  Georges CHAPIER, Châteaux Savoyards - Tome III : Les Châteaux de Maurienne, 1957
+
+
+  Commission Histoire et Patrimoine
+
+  Fabrice GALOPO et Gérald KERMA
+
+  Décembre 2025'
+visual_reference: assets/page-14.jpg
+visual_reference_sha256: 9a8d7dc0968d7ce2be999be7b01b8671e5d80171d7eea6c4abb93a8d0006f87e
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: false
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

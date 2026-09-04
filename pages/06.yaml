@@ -1,0 +1,67 @@
+page: 6
+type: site
+title: La Tour de Burgin
+subtitle: Une demeure nobiliaire effacée de la mémoire
+content_locked: true
+canonical_text: 'La Tour de Burgin
+
+  Une demeure nobiliaire effacée de la mémoire
+
+
+  Une tour engloutie par le temps
+
+  En contrebas du majestueux manoir de Châtel-André, là où les regards se portent aujourd''hui sur des maisons modernes et
+  des champs paisibles, se dressait autrefois une tour médiévale dont le nom même est tombé dans l''oubli : la Tour de Burgin.
+
+  Construite à la même époque que le Châtelet de Châtel-André (XVe-XVIe siècles), cette demeure fortifiée faisait partie du
+  réseau défensif qui gardait l''accès à la vallée. Aujourd''hui, ses ruines sont « réduites à fort peu de choses », comme
+  l''écrivait l''historien Georges Chapier en 1957. Pendant des générations, ses pierres ont été récupérées pour bâtir les
+  maisons des alentours.
+
+
+  Les nobles Du Pont : une famille oubliée
+
+  Sur les origines de la Tour de Burgin, « on ignore à peu près tout », reconnaissait Georges Chapier. Les archives nous apprennent
+  seulement qu''elle appartenait aux XVe et XVIe siècles aux nobles du Pont. Cette famille s''éteignit avec Urbain du Pont,
+  dernier héritier mâle. La Tour de Burgin revint à l''une de ses filles, Marie du Pont, qui épousa Christophe de Bellegarde.
+
+
+  Jean Truchet : l''oncle du chimiste Berthollet
+
+  Au début du XVIIIe siècle, la Tour de Burgin est acquise par Jean Truchet, un avocat prospère de la vallée. Jean Truchet
+  devint l''oncle par alliance de Claude-Louis Berthollet (1748-1822), chimiste de génie né à Talloires, ami intime de Napoléon
+  Bonaparte, membre de l''expédition d''Égypte, et créateur de la nomenclature chimique encore utilisée aujourd''hui.
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3555° N
+
+  Lng: 6.3050° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de Sainte-Marie-de-Cuines — ADS, série C • patrimoines.savoie.fr
+
+
+  « La Tour de Burgin nous rappelle que le patrimoine n''est pas éternel. Sans protection, sans entretien, sans mémoire collective,
+  les plus fières forteresses redeviennent poussière. »'
+visual_reference: assets/page-06.jpg
+visual_reference_sha256: a9eb429d5af0e8f690a767e21d2a0e05298b09fa926f947913b8a5b37807ab00
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

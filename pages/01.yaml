@@ -1,0 +1,43 @@
+page: 1
+type: cover
+title: LES SEIGNEURS DE LA CHAMBRE
+subtitle: ET LEUR PATRIMOINE EN MAURIENNE
+content_locked: true
+canonical_text: 'LES SEIGNEURS DE LA CHAMBRE
+
+  ET LEUR PATRIMOINE EN MAURIENNE
+
+
+  Quatre siècles de puissance féodale
+
+  (XIe - XVe siècles)
+
+
+  Livret de l''exposition
+
+  Notre-Dame-du-Cruet — Décembre 2025
+
+
+  Association « Les Amis du Couvent des Cordeliers de La Chambre »
+
+  Commission Histoire et Patrimoine
+
+
+  « Le passé n''est pas derrière nous,
+
+  il est sous nos pas. »'
+visual_reference: assets/page-01.jpg
+visual_reference_sha256: cc375f8af08a360e4ce2d650adda8c28532c326241115becc51d49ee8d20ad33
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: false
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

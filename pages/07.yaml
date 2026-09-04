@@ -1,0 +1,74 @@
+page: 7
+type: site
+title: La Tour de Châtel-André
+subtitle: Sentinelle des vassaux (XIIe siècle)
+content_locked: true
+canonical_text: 'La Tour de Châtel-André
+
+  Sentinelle des vassaux (XIIe siècle)
+
+
+  Sentinelle sur la vallée
+
+  Levez les yeux vers le hameau du Perrel ! À 100 mètres au-dessus de la vallée, surgissent les ruines d''un imposant donjon
+  : 7 mètres sur 8, bâti en pierres massives, partie romane encore visible. Cette tour, c''est Châtel-André. De là-haut, vue
+  imprenable sur tout le bassin de La Chambre et la route du Mont-Cenis.
+
+
+  Tour des vassaux, pas des seigneurs !
+
+  Contrairement aux châteaux du Cruet et Château-Joli qui appartenaient directement aux seigneurs de La Chambre, Châtel-André
+  était la possession de leurs vassaux : la famille de Cuines ! Un vassal est un seigneur de rang inférieur qui tenait en
+  fief ses terres d''un suzerain plus puissant. Les Cuines devaient aux La Chambre : hommage, conseil, aide militaire et aide
+  financière.
+
+  On connaît les noms de ces vassaux : Antoine, seigneur de Cuines (1355) et Jacques (1392). Leur tour contrôlait la route
+  du Mont-Cenis, le passage du Glandon et les terres agricoles de la plaine.
+
+
+  1598 : Prise et reprise spectaculaire
+
+  Créqui, capitaine du maréchal de Lesdiguières (camp français), s''empare de Châtel-André au cours de la guerre pour le marquisat
+  de Saluces ! Mais victoire de courte durée : le duc Charles-Emmanuel Ier de Savoie contre-attaque et bat les troupes françaises
+  à Épierre et dans la plaine des Cuines. Créqui est repoussé, Châtel-André reprise !
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3520° N
+
+  Lng: 6.3240° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de Saint-Étienne-de-Cuines — ADS, série C • patrimoines.savoie.fr
+
+
+  MONUMENT HISTORIQUE
+
+  • Classé Monument Historique • XIIe siècle • Architecture romane
+
+  • Donjon de 7m × 8m avec vestiges romans
+
+  • Vue magnifique sur le bassin de La Chambre
+
+  • Hameau du Perrel, Saint-Étienne-de-Cuines'
+visual_reference: assets/page-07.jpg
+visual_reference_sha256: 601a459ebcb218799e3a7ca7dc2ffa33bbc4c880c6885b6334db7004807cca25
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

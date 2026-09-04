@@ -1,0 +1,72 @@
+page: 5
+type: site
+title: Le Château Joli
+subtitle: La poype féodale des premiers seigneurs (XIe-XIVe siècle)
+content_locked: true
+canonical_text: 'Le Château Joli
+
+  La poype féodale des premiers seigneurs (XIe-XIVe siècle)
+
+
+  Face à face : deux châteaux, une dynastie
+
+  Depuis la plaine des Cuines, levez les yeux. Au-dessus du village de Sainte-Marie, sur un mamelon stratégique, les ruines
+  du Château Joli surveillent encore la vallée. En face, de l''autre côté de l''Arc, se dressait le Château du Cruet. Deux
+  forteresses, deux promontoires rocheux, une seule famille : les seigneurs de La Chambre.
+
+  Cette disposition n''est pas un hasard. Les deux châteaux communiquaient visuellement, se répondaient, se complétaient.
+  L''un surveillait la vallée des Villards au sud, l''autre contrôlait la route du Mont-Cenis. Ensemble, ils formaient un
+  système défensif implacable.
+
+
+  Une « poype » : forteresse naturelle
+
+  Le Château Joli s''élève sur une poype féodale - un promontoire naturel transformé en forteresse imprenable. Sous le château
+  actuel, les archéologues ont découvert les traces d''une motte encore plus ancienne, antérieure au XIe siècle. Ce site était
+  donc déjà un lieu de pouvoir avant même l''arrivée des La Chambre.
+
+
+  Une princesse au château
+
+  Le Château Joli abrite la lignée directe de Richard Ier de La Chambre. Vers 1350, le château accueille une résidente illustre
+  : Agnès de Savoie-Achaïe, épouse de Jean II de La Chambre. Une princesse de sang comtal qui a grandi à la cour de Savoie
+  vient s''installer dans cette forteresse mauriennaise.
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3485° N
+
+  Lng: 6.3180° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de Sainte-Marie-de-Cuines — ADS, série C • patrimoines.savoie.fr
+
+
+  EN SAVOIR PLUS
+
+  • Ruines situées à 100 mètres d''altitude au-dessus du hameau du Mont
+
+  • Site en propriété privée, accès difficile
+
+  • Datation : fin XIe siècle - début XIIe siècle'
+visual_reference: assets/page-05.jpg
+visual_reference_sha256: e1ecb0166413bd3671eb0d295f04d989602a598e09f8db64580d90d32376e368
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

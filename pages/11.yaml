@@ -1,0 +1,55 @@
+page: 11
+type: site
+title: La Tour de Notre-Dame-du-Cruet
+subtitle: Sentinelle oubliée de la vallée du Bugeon
+content_locked: true
+canonical_text: 'La Tour de Notre-Dame-du-Cruet
+
+  Sentinelle oubliée de la vallée du Bugeon
+
+
+  Au centre du village de Notre-Dame-du-Cruet se dresse une tour carrée médiévale, sentinelle de la vallée du Bugeon. Cette
+  tour de quatre étages, haute de 12 mètres environ, témoigne du réseau de surveillance mis en place par les seigneurs de
+  La Chambre.
+
+  L''accès se faisait par une échelle amovible au premier étage, dispositif de défense classique au Moyen Âge. En cas d''attaque,
+  l''échelle retirée, la tour devenait imprenable.
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3699° N
+
+  Lng: 6.3109° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de Notre-Dame-du-Cruet — ADS, série C • patrimoines.savoie.fr
+
+
+  CARACTÉRISTIQUES
+
+  • Plan carré, murs de plus de 40 cm d''épaisseur
+
+  • Hauteur : environ 12 mètres (4 étages)
+
+  • Propriété privée'
+visual_reference: assets/page-11.jpg
+visual_reference_sha256: 90d2992e512f7778ab59bc8e08d149780da6af06161b0fb927eebc4929c0ddb4
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.

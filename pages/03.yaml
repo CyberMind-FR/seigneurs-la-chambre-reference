@@ -1,0 +1,90 @@
+page: 3
+type: site
+title: Le Couvent des Cordeliers
+subtitle: Le testament spirituel des Seigneurs de La Chambre
+content_locked: true
+canonical_text: 'Le Couvent des Cordeliers
+
+  Le testament spirituel des Seigneurs de La Chambre
+
+
+  La vision d''un seigneur (1365)
+
+  En cette année 1365, Jean II de La Chambre contemple ses domaines depuis les hauteurs du Cruet. Ses châteaux parsèment la
+  vallée : le fier Cruet, l''élégant Château-Joli qui veille sur Sainte-Marie-de-Cuines, la Maison de La Tour au cœur du bourg,
+  la Maison-Forte du Châtelet qui garde le passage... Autant de résidences qui témoignent de la puissance de sa lignée.
+
+  Mais Jean II sait que les pierres ne suffisent pas à bâtir l''éternité. Un seigneur doit aussi penser au salut de son âme.
+  Inspiré par la spiritualité franciscaine qui bouleverse l''Europe chrétienne, il prend une décision historique : fonder
+  un couvent de Cordeliers dans sa capitale de La Chambre.
+
+  Ce n''est pas un caprice de grand seigneur. C''est un investissement pour l''éternité. Jean II dote généreusement les premiers
+  frères d''une maison, d''un verger, d''un pré et d''une rente annuelle. Le pape Urbain V lui-même approuve cette fondation
+  en 1367.
+
+
+  La nécropole des seigneurs
+
+  Le Couvent des Cordeliers n''est pas qu''un lieu de prière. C''est le sanctuaire dynastique des La Chambre, leur dernière
+  demeure choisie. Tandis que les châteaux abritent la vie terrestre des seigneurs, c''est ici, dans l''église des Cordeliers,
+  que repose leur espérance céleste.
+
+  L''église conventuelle sert également d''église paroissiale pour le bourg de La Chambre. Chaque dimanche, le petit peuple
+  se mêle aux nobles dans la nef unique de 25 mètres. Point de séparation ostentatoire : riches et pauvres prient côte à côte
+  sous les voûtes gothiques.
+
+  Mais les Cordeliers font bien plus que prier. Ils dirigent un hôpital et une léproserie, soignant les corps meurtris que
+  la société rejette. Ils possèdent deux moulins sur le Bugeon, participant à l''économie locale. Ils confessent, prêchent,
+  accueillent les pèlerins en route vers Rome par le Mont-Cenis.
+
+
+  Un patrimoine architectural unique
+
+  Aujourd''hui encore, les murs rescapés du couvent témoignent de 650 ans d''histoire architecturale. Le gothique primitif
+  (fin XIVe siècle) s''exprime dans le portail d''albâtre blanc, dans la salle capitulaire aux voûtes d''ogives où les frères
+  tenaient leurs assemblées démocratiques, dans la sacristie miraculeusement préservée.
+
+  L''art flamboyant (XVe siècle) illumine les linteaux ornés de décors en accolade. La Renaissance baroque (1744) transforme
+  radicalement le monument avec un élégant cloître à voûtes d''arêtes. En 1792, la République supprime les ordres religieux.
+  Le couvent est vendu comme bien national en 1803. En 2021, le couvent est enfin inscrit comme Monument Historique.
+
+
+  CARTE
+
+  LOCALISATION
+
+  Lat: 45.3561° N
+
+  Lng: 6.3033° E
+
+  GOOGLE MAPS
+
+  Scannez pour y aller
+
+  MAPPE SARDE (1728-1738) — Paroisse de La Chambre — ADS, série C • patrimoines.savoie.fr
+
+
+  VISITE DU SITE
+
+  • Adresse : Rue du Couvent, 73130 La Chambre
+
+  • Éléments visibles : Portail gothique, cloître baroque, salle capitulaire, sacristie médiévale
+
+  • Statut : Monument Historique (inscription 2021)
+
+  • Contact : Mairie de La Chambre - 04 79 56 30 32'
+visual_reference: assets/page-03.jpg
+visual_reference_sha256: 5ef9493350a74245afe43395ddbf663297830c1d319ba01c1ec08a8607eda297
+layout_signature:
+  top: titre + sous-titre + éléments d'identité
+  middle: narration + illustration(s) documentaire(s)
+  bottom: cartographie / localisation / QR / informations pratiques selon la page source
+qr:
+  present: true
+  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+regeneration_prompt_guardrails:
+- Reproduire la page comme un poster de recherche SpiritualCept.
+- Conserver mot pour mot canonical_text.
+- Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
+- Ne créer aucun texte supplémentaire.
+- Ne jamais transformer un QR code avec un filtre artistique.
