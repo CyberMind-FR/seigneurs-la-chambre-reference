@@ -39,14 +39,31 @@ canonical_text: 'La Tour de Notre-Dame-du-Cruet
 
   • Propriété privée'
 visual_reference: assets/page-11.jpg
-visual_reference_sha256: 90d2992e512f7778ab59bc8e08d149780da6af06161b0fb927eebc4929c0ddb4
+visual_reference_sha256: 5328cadf342b94c36437d1a9eefc219df65e75671fea78f0d06a7addc6e72a8e
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: true
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs:
+  - id: google_maps
+    purpose: navigation
+    payload: https://www.google.com/maps?q=45.3699,6.3109
+    asset: assets/qr/page-11-google-maps.png
+    placement_px:
+      x: 1422
+      y: 2167
+      w: 250
+      h: 250
+    verified: true
+    verification_source: QR original du livret, décodé machine; localisation conservée comme donnée canonique du corpus.
+    verification_source_url: https://notredameducruet.fr/
+    provenance: payload exact décodé du QR du livret source original
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.

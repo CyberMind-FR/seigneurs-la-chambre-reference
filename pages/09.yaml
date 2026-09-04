@@ -38,14 +38,31 @@ canonical_text: 'La Maison Forte de Gruyère
 
   • Propriété privée'
 visual_reference: assets/page-09.jpg
-visual_reference_sha256: b5d04064f71ea08730b0ae66ac641c28d8eb7a8a8b95972fe8299c3e1281fee9
+visual_reference_sha256: 574499988a8ad15625c15fe0d41126f185ef235a042f64a7eb3fea4de28ea25b
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: true
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs:
+  - id: google_maps
+    purpose: navigation
+    payload: https://www.google.com/maps?q=45.349,6.321
+    asset: assets/qr/page-09-google-maps.png
+    placement_px:
+      x: 1451
+      y: 1813
+      w: 272
+      h: 272
+    verified: true
+    verification_source: QR original du livret, décodé machine; Maison Gruyère confirmée par la commune de Saint-Étienne-de-Cuines.
+    verification_source_url: https://www.st-etienne-cuines.fr/saint-etienne-de-cuines/histoire-et-patrimoine/
+    provenance: payload exact décodé du QR du livret source original
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.

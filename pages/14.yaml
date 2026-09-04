@@ -56,18 +56,21 @@ canonical_text: 'L''Association
 
   Décembre 2025'
 visual_reference: assets/page-14.jpg
-visual_reference_sha256: 75f15d76e4cce3653951d1d83153d958e6c46cf1b5d9b8785758fb34fa83c60b
+visual_reference_sha256: 5d3c6b194acd7c54c2e6b9b8df041ad9ca632b9e147ab6023f59abec3783dd08
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: false
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs: []
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.
 - Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
 - Ne créer aucun texte supplémentaire.
 - Ne jamais transformer un QR code avec un filtre artistique.
-- Pour toute correction ponctuelle, modifier chirurgicalement la référence visuelle existante; ne jamais régénérer la page entière.

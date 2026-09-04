@@ -74,14 +74,31 @@ canonical_text: 'Le Couvent des Cordeliers
 
   • Contact : Mairie de La Chambre - 04 79 56 30 32'
 visual_reference: assets/page-03.jpg
-visual_reference_sha256: 5ef9493350a74245afe43395ddbf663297830c1d319ba01c1ec08a8607eda297
+visual_reference_sha256: d5a7f1765e11329d63e5bff4a845214b0e60e7cae1d1244d6ac8a183ff4d3ae3
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: true
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs:
+  - id: google_maps
+    purpose: navigation
+    payload: https://www.google.com/maps?q=45.3561,6.3033
+    asset: assets/qr/page-03-google-maps.png
+    placement_px:
+      x: 1435
+      y: 2081
+      w: 234
+      h: 234
+    verified: true
+    verification_source: QR original du livret, décodé machine; existence du site confirmée par POP PA73000033.
+    verification_source_url: https://pop.culture.gouv.fr/notice/merimee/PA73000033
+    provenance: payload exact décodé du QR du livret source original
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.

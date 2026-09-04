@@ -56,14 +56,31 @@ canonical_text: 'Le Château Joli
 
   • Datation : fin XIe siècle - début XIIe siècle'
 visual_reference: assets/page-05.jpg
-visual_reference_sha256: e1ecb0166413bd3671eb0d295f04d989602a598e09f8db64580d90d32376e368
+visual_reference_sha256: 3871bada80a406b2f46011200690096d1798573d581f246199334b7eb9dc2fe2
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: true
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs:
+  - id: google_maps
+    purpose: navigation
+    payload: https://www.google.com/maps?q=45.3485,6.318
+    asset: assets/qr/page-05-google-maps.png
+    placement_px:
+      x: 1472
+      y: 2023
+      w: 236
+      h: 236
+    verified: true
+    verification_source: QR original du livret, décodé machine; Château-Joli confirmé par la commune de Sainte-Marie-de-Cuines.
+    verification_source_url: https://www.stemariedecuines.fr/fr/il4-mairie%2Cpatrimoine%2Ccommunal_p43-les-vestiges-medievaux.aspx
+    provenance: payload exact décodé du QR du livret source original
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.

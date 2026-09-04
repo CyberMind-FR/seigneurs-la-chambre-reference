@@ -59,14 +59,32 @@ canonical_text: 'La Maison Forte de La Landonnière
 
   • Statut actuel : Propriété privée (visible depuis l''extérieur)'
 visual_reference: assets/page-12.jpg
-visual_reference_sha256: bf675f3ca1e1e959f099354c92bc7affb045a0c13d6923028c482e1d5fde61cb
+visual_reference_sha256: 03e8ff183335e955033ef1dc719babaf4678adee5421dac556ad13f03586d4d0
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: true
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs:
+  - id: google_maps
+    purpose: navigation
+    payload: https://www.google.com/maps?q=45.338,6.275
+    asset: assets/qr/page-12-google-maps.png
+    placement_px:
+      x: 1451
+      y: 2198
+      w: 238
+      h: 238
+    verified: true
+    verification_source: QR original du livret, décodé machine; La Landonnière est répertoriée comme maison forte dans le
+      PLU de Saint-Rémy-de-Maurienne.
+    verification_source_url: https://netcreaweb.fr/sites/saintremy/images/Vie-Communale/Territoire/1-2_PLU.pdf
+    provenance: payload exact décodé du QR du livret source original
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.

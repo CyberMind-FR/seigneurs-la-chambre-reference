@@ -21,3 +21,17 @@ Ce dossier est la source de régénération de la série SpiritualCept Research 
 
 ## Important
 Le paquet distingue volontairement le **contenu canonique** de la **référence visuelle**. Cela permet de changer contraste, texture ou technique de dessin sans faire muter l'histoire.
+
+
+## Registre QR verrouillé
+
+`qr_registry.yaml` est désormais la source de vérité de tous les QR codes.
+
+- Les pages 3 à 12 reprennent **les payloads exacts décodés du livret source original** pour Google Maps.
+- La page 13 n'utilise plus les anciennes destinations `sdlc...` non vérifiées. Ses six ressources sont des pages actuelles vérifiées.
+- Les QR sont générés de façon déterministe en noir sur blanc, jamais par IA.
+- `scripts/validate_qr.py` redécode chaque QR dans les JPEG finaux et compare le résultat au registre.
+- Toute future modification d'un QR exige une mise à jour explicite de `qr_registry.yaml` et une nouvelle validation.
+
+Le plan réel du Château de Notre-Dame-du-Cruet fourni pour la reconstitution visuelle est conservé sous
+`assets/reference/page-10-plan-reel.jpg`.

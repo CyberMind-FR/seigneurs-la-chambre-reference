@@ -59,14 +59,31 @@ canonical_text: 'La Maison de La Tour
 
   • Tour des XIIIe-XIVe siècles, logis du XVIIIe siècle'
 visual_reference: assets/page-04.jpg
-visual_reference_sha256: eac727b6c211167693e3b5d9998f573e2eda35acd1814660dbdf25e9a100572d
+visual_reference_sha256: 53877422a2cf9a76169cf88de6a68800eb9e622140bed8743615669dc72a287b
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: true
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs:
+  - id: google_maps
+    purpose: navigation
+    payload: https://www.google.com/maps?q=45.3565,6.3025
+    asset: assets/qr/page-04-google-maps.png
+    placement_px:
+      x: 1400
+      y: 2280
+      w: 240
+      h: 240
+    verified: true
+    verification_source: QR original du livret, décodé machine; Maison de la Tour confirmée par l'Office de tourisme.
+    verification_source_url: https://www.tourisme-la-chambre.com/fr/la-chambre.html
+    provenance: payload exact décodé du QR du livret source original
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.

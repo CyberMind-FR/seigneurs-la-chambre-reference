@@ -5,8 +5,8 @@ page_04:
   - Académie de Maurienne
   - Aujourd'hui, la Maison de La Tour abrite l'Académie de Maurienne
   canonical_sentence: Aujourd'hui, la Maison de La Tour demeure un remarquable témoin de l'histoire administrative de la Maurienne.
-  note: La référence visuelle HQ existante peut encore montrer l'ancienne mention. Le texte canonique ci-dessus prévaut pour toute régénération.
-
+  note: La référence visuelle HQ existante peut encore montrer l'ancienne mention. Le texte canonique ci-dessus prévaut pour
+    toute régénération.
 page_14:
   status: canonical_override
   reason: Corrections éditoriales explicitement demandées le 2026-09-04.
@@ -17,14 +17,33 @@ page_14:
   - Collecte Fondation du Patrimoine (75%)
   - Fabrice GALOPO et Gérald KERMA
   note: Ne modifier aucun autre contenu, nom, rôle, illustration ou bloc de cette page.
-
 page_15:
   status: canonical_override
   reason: Corrections éditoriales explicitement demandées le 2026-09-04.
   canonical_changes:
-  - Adhésion : 5 € • Dons déductibles 66 % • Fondation du Patrimoine 66 %
-  - Auteurs : Fabrice GALOPO, André GRANGE, Gérald KERMA — Commission Histoire et Patrimoine
+  - Adhésion: 5 € • Dons déductibles 66 % • Fondation du Patrimoine 66 %
+  - Auteurs: Fabrice GALOPO, André GRANGE, Gérald KERMA — Commission Histoire et Patrimoine
   forbidden:
   - Fondation du Patrimoine 75 %
   - Fabrice GALOPO & Gérald KERMA
   note: Ne modifier aucun autre contenu, nom, rôle, illustration ou bloc de cette page.
+page_10:
+  status: visual_source_override
+  reason: Plan réel fourni par l'utilisateur.
+  source_asset: assets/reference/page-10-plan-reel.jpg
+  rule: Les visuels du château doivent s'inspirer de ce plan réel; ne pas inventer une géométrie incompatible.
+page_13:
+  status: canonical_override
+  reason: Remplacement des ressources numériques anciennes/non vérifiées par des destinations actuelles vérifiées le 2026-09-04.
+  registry: qr_registry.yaml
+  forbidden:
+  - sdlc.gk2.secubox.in
+  - sdlc.../diaporama
+  - sdlc.../livret.pdf
+  rule: Les six QR et leurs libellés proviennent exclusivement du registre QR.
+qr_global:
+  status: locked
+  registry: qr_registry.yaml
+  verified_on: '2026-09-04'
+  rule: Aucun payload QR ne peut être inventé, raccourci, reformulé ou généré par IA. Toute modification exige une nouvelle
+    vérification et mise à jour du registre.

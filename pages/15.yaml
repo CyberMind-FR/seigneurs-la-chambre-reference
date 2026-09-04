@@ -57,18 +57,21 @@ canonical_text: 'LES SEIGNEURS DE LA CHAMBRE
 
   Au profit de la sauvegarde du Couvent des Cordeliers'
 visual_reference: assets/page-15.jpg
-visual_reference_sha256: 69260d70c51d4e820b3127de72b35f6779e749d50c1d51d855a8e08cf4224deb
+visual_reference_sha256: 1f71002a3ee21d251c0635f1b15900146d9499beb0853ef2422c19d9e19c1746
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: false
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs: []
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.
 - Conserver structure, nombre de blocs, carte, repères et zones fonctionnelles de la référence visuelle.
 - Ne créer aucun texte supplémentaire.
 - Ne jamais transformer un QR code avec un filtre artistique.
-- Pour toute correction ponctuelle, modifier chirurgicalement la référence visuelle existante; ne jamais régénérer la page entière.

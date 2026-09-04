@@ -55,14 +55,31 @@ canonical_text: 'La Maison-Forte du Châtelet
 
   • Située au centre du village, sur la route du col du Glandon'
 visual_reference: assets/page-08.jpg
-visual_reference_sha256: 61ed807b8c959163547c14bdfc7b8cef0ad56f92a38baec079d2cdcb0bc89970
+visual_reference_sha256: 42aecca9b1f7086812038d0f8919fbb8a5f9aa87cd0d673ac575af12510b9de3
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: true
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs:
+  - id: google_maps
+    purpose: navigation
+    payload: https://www.google.com/maps?q=45.3505,6.3195
+    asset: assets/qr/page-08-google-maps.png
+    placement_px:
+      x: 1420
+      y: 2149
+      w: 238
+      h: 238
+    verified: true
+    verification_source: QR original du livret, décodé machine; Le Châtelet confirmé par la commune de Saint-Étienne-de-Cuines.
+    verification_source_url: https://www.st-etienne-cuines.fr/saint-etienne-de-cuines/histoire-et-patrimoine/
+    provenance: payload exact décodé du QR du livret source original
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.

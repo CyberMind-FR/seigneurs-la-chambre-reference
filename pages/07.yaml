@@ -58,14 +58,31 @@ canonical_text: 'La Tour de Châtel-André
 
   • Hameau du Perrel, Saint-Étienne-de-Cuines'
 visual_reference: assets/page-07.jpg
-visual_reference_sha256: 601a459ebcb218799e3a7ca7dc2ffa33bbc4c880c6885b6334db7004807cca25
+visual_reference_sha256: 764b28c4c9b8a08c2528c650036a3fd1c9d23e2eafd02e36ff72ee4774ea5c6a
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
   bottom: cartographie / localisation / QR / informations pratiques selon la page source
 qr:
   present: true
-  rule: Préserver/réinjecter le QR validé depuis le master; ne pas le générer par IA.
+  locked: true
+  registry: qr_registry.yaml
+  qrs:
+  - id: google_maps
+    purpose: navigation
+    payload: https://www.google.com/maps?q=45.352,6.324
+    asset: assets/qr/page-07-google-maps.png
+    placement_px:
+      x: 1435
+      y: 2122
+      w: 239
+      h: 239
+    verified: true
+    verification_source: QR original du livret, décodé machine; Tour de Châtel-André confirmée par la commune de Sainte-Marie-de-Cuines.
+    verification_source_url: https://www.stemariedecuines.fr/fr/il4-mairie%2Cpatrimoine%2Ccommunal_p43-les-vestiges-medievaux.aspx
+    provenance: payload exact décodé du QR du livret source original
+  rule: Utiliser exclusivement le payload exact du registre et réinjecter le QR après tout traitement graphique; aucune génération
+    IA.
 regeneration_prompt_guardrails:
 - Reproduire la page comme un poster de recherche SpiritualCept.
 - Conserver mot pour mot canonical_text.
