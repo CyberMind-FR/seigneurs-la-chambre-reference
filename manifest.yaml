@@ -1,78 +1,48 @@
-project: Les Seigneurs de La Chambre - SpiritualCept Research Notebook
-version: 1.3-complete-update
+project: Les Seigneurs de La Chambre - Contraste & Style
+version: v4-contrast-style
 pages:
 - page: 1
-  file: pages/01.yaml
-  title: LES SEIGNEURS DE LA CHAMBRE
-  visual_reference: assets/page-01.jpg
-  sha256: cc375f8af08a360e4ce2d650adda8c28532c326241115becc51d49ee8d20ad33
+  file: assets/page-01.jpg
+  sha256: 14db8ef8c42eda2e24bd3cae7997ef9d26664793d8824727df87048ec967d134
 - page: 2
-  file: pages/02.yaml
-  title: Les Seigneurs de La Chambre
-  visual_reference: assets/page-02.jpg
-  sha256: 689320d6230ac1eb5eda486c4554ec37ed573dc9f9ac9b53f8d12a1313a9a786
+  file: assets/page-02.jpg
+  sha256: 7662b62cd9c37eced0d125fa2eb49394e5c522525156d6a2ced46d38bcb00770
 - page: 3
-  file: pages/03.yaml
-  title: Le Couvent des Cordeliers
-  visual_reference: assets/page-03.jpg
-  sha256: d5a7f1765e11329d63e5bff4a845214b0e60e7cae1d1244d6ac8a183ff4d3ae3
+  file: assets/page-03.jpg
+  sha256: 68c3bcf6d385b263e87b1f7d033daaca30bf52ce987f063de41116957c88d0b0
 - page: 4
-  file: pages/04.yaml
-  title: La Maison de La Tour
-  visual_reference: assets/page-04.jpg
-  sha256: 53877422a2cf9a76169cf88de6a68800eb9e622140bed8743615669dc72a287b
+  file: assets/page-04.jpg
+  sha256: 24bec9cdb7e3405332704d327b6880f28b58a69433a5a8aca4ee8ef94afa498f
 - page: 5
-  file: pages/05.yaml
-  title: Le Château Joli
-  visual_reference: assets/page-05.jpg
-  sha256: 3871bada80a406b2f46011200690096d1798573d581f246199334b7eb9dc2fe2
+  file: assets/page-05.jpg
+  sha256: 5794f62fa852255f9808d49224a9bf025b219b0de17bedd9f5c96020dcf4adb2
 - page: 6
-  file: pages/06.yaml
-  title: La Tour de Burgin
-  visual_reference: assets/page-06.jpg
-  sha256: 006d1c5c1786ed14df33aafc2aff7fa662bb9be19e03e3cc407418ead94c482f
+  file: assets/page-06.jpg
+  sha256: 73a7df53f27a01447f19a889f2b1e8fc2290d7038e3c96c3f6ae98573ed7e6e9
 - page: 7
-  file: pages/07.yaml
-  title: La Tour de Châtel-André
-  visual_reference: assets/page-07.jpg
-  sha256: 764b28c4c9b8a08c2528c650036a3fd1c9d23e2eafd02e36ff72ee4774ea5c6a
+  file: assets/page-07.jpg
+  sha256: b8d723efd476a5b3625e832c14cffe5004875a47a2eed9b51ac11cf2ba03d6ca
 - page: 8
-  file: pages/08.yaml
-  title: La Maison-Forte du Châtelet
-  visual_reference: assets/page-08.jpg
-  sha256: 42aecca9b1f7086812038d0f8919fbb8a5f9aa87cd0d673ac575af12510b9de3
+  file: assets/page-08.jpg
+  sha256: 09cdbf147243b9fb143f355277629043a114b65f03773ed4d587dfb9e0931cf5
 - page: 9
-  file: pages/09.yaml
-  title: La Maison-Forte de Gruyère
-  visual_reference: assets/page-09.jpg
-  sha256: 574499988a8ad15625c15fe0d41126f185ef235a042f64a7eb3fea4de28ea25b
+  file: assets/page-09.jpg
+  sha256: e0d6d1c2d637644c0491603a575d7a060eaabfca10bdfa8de0f7c61037d1b2bb
 - page: 10
-  file: pages/10.yaml
-  title: Le Château de Notre-Dame-du-Cruet
-  visual_reference: assets/page-10.jpg
-  sha256: 2774676dc6603be2c0983aa59057f6d9a46f476705d09bb8e162af474d9e1fef
+  file: assets/page-10.jpg
+  sha256: 2e9fadf95d39345877aa71dc318ba17c90a7d52c04c139aa199d9eed7124e8c3
 - page: 11
-  file: pages/11.yaml
-  title: La Tour de Notre-Dame-du-Cruet
-  visual_reference: assets/page-11.jpg
-  sha256: 5328cadf342b94c36437d1a9eefc219df65e75671fea78f0d06a7addc6e72a8e
+  file: assets/page-11.jpg
+  sha256: 4b670b4009f971b2c20b2646a729ba761afb8b9dbab74ebc195a5acb88a4c500
 - page: 12
-  file: pages/12.yaml
-  title: La Maison Forte de La Landonnière
-  visual_reference: assets/page-12.jpg
-  sha256: 03e8ff183335e955033ef1dc719babaf4678adee5421dac556ad13f03586d4d0
+  file: assets/page-12.jpg
+  sha256: 943ab472b5805be653c5d82fee5f50e992f501cb8f9fb271ea959519ddf57a72
 - page: 13
-  file: pages/13.yaml
-  title: Un patrimoine à préserver
-  visual_reference: assets/page-13.jpg
-  sha256: 2a19733f90a7388764becee549a78e3161d1d429ee50199b60d823f65ab37409
+  file: assets/page-13.jpg
+  sha256: 1a4113c612c6859bc9200c802d16749e7294cfaadd2a047838cef3d3d08e096a
 - page: 14
-  file: pages/14.yaml
-  title: L'Association
-  visual_reference: assets/page-14.jpg
-  sha256: 5d3c6b194acd7c54c2e6b9b8df041ad9ca632b9e147ab6023f59abec3783dd08
+  file: assets/page-14.jpg
+  sha256: 9de757251e54dc1e840e190c3230a4f473612cc4a9df8979e8303489fc11a65b
 - page: 15
-  file: pages/15.yaml
-  title: LES SEIGNEURS DE LA CHAMBRE
-  visual_reference: assets/page-15.jpg
-  sha256: 1f71002a3ee21d251c0635f1b15900146d9499beb0853ef2422c19d9e19c1746
+  file: assets/page-15.jpg
+  sha256: 58657684b97650e229532430e2bcdcc892cdada9a965bb97226563f8d58b3af6

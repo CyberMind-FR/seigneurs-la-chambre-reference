@@ -1,9 +1,5 @@
 # Rapport de validation QR
 
-Date de validation : **2026-09-04**
-
-Chaque QR a été redécodé directement depuis le JPEG final et comparé caractère pour caractère au payload verrouillé dans `qr_registry.yaml`.
-
 | Page | QR | Validation | Payload |
 |---:|---:|:---:|---|
 | 3 | 1 | OK | `https://www.google.com/maps?q=45.3561,6.3033` |
