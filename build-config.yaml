@@ -1,7 +1,7 @@
 project: Les Seigneurs de La Chambre
-version: 2.1-colorized-exhibition
+version: 2.2-colorized-final
 source:
-  page_count: 15
+  page_count: 16
   assets_dir: assets
   pattern: page-{page:02d}.jpg
   qr_registry: qr_registry.yaml
@@ -24,6 +24,7 @@ source:
     13: Un patrimoine à préserver
     14: L'Association
     15: LES SEIGNEURS DE LA CHAMBRE - dos
+    16: Remerciements - Les Amis du Couvent des Cordeliers de La Chambre
 render:
   background: '#F5E8CE'
   preserve_aspect_ratio: true
@@ -31,19 +32,19 @@ render:
   qr_overlay: true
   qr_rule: Réinjecter les actifs QR du registre au-dessus du raster final, à leurs coordonnées normalisées.
 outputs:
-  sequential_15:
+  sequential_16:
     enabled: true
-    filename: Seigneurs_La_Chambre_15_pages_100pct_Colorise_v7.pdf
+    filename: Seigneurs_La_Chambre_16_pages_100pct_Colorise.pdf
     page_size: A5
-    pages: 15
+    pages: 16
   booklet_a5:
     enabled: true
-    filename: Seigneurs_La_Chambre_Livret_A5_16p_100pct_Colorise_v7.pdf
+    filename: Seigneurs_La_Chambre_Livret_A5_16p_100pct_Colorise.pdf
     page_size: A5
     pages: 16
   imposed_a4:
     enabled: true
-    filename: Seigneurs_La_Chambre_Livret_A4_Impose_RectoVerso_100pct_Colorise_v7.pdf
+    filename: Seigneurs_La_Chambre_Livret_A4_Impose_RectoVerso_100pct_Colorise.pdf
     page_size: A4-landscape
     imposition:
     - - 16
@@ -64,17 +65,17 @@ outputs:
       - 9
   panels_a2:
     enabled: true
-    filename: Seigneurs_La_Chambre_Panneaux_A2_15p_100pct_Colorise_v7.pdf
+    filename: Seigneurs_La_Chambre_Panneaux_A2_16p_100pct_Colorise.pdf
     page_size: A2
-    pages: 15
+    pages: 16
   panels_a1:
     enabled: true
-    filename: Seigneurs_La_Chambre_Panneaux_A1_15p_100pct_Colorise_v7.pdf
+    filename: Seigneurs_La_Chambre_Panneaux_A1_16p_100pct_Colorise.pdf
     page_size: A1
-    pages: 15
+    pages: 16
 release:
   dist_dir: dist
-  bundle: Seigneurs_La_Chambre_Print_PDFs_v7.zip
+  bundle: Seigneurs_La_Chambre_Print_PDFs.zip
   checksums: SHA256SUMS.txt
   report: build-report.json
   github_artifact_name: seigneurs-la-chambre-print-pdfs

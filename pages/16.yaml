@@ -1,0 +1,25 @@
+page: 16
+title: Remerciements
+role: page_finale
+canonical_text: |
+  Merci
+
+  Nous remercions toutes celles et ceux qui, par leurs recherches,
+  leurs témoignages, leur soutien ou leur curiosité, contribuent à faire vivre
+  la mémoire des seigneurs de La Chambre et de leur patrimoine.
+
+  Ce parcours patrimonial est une invitation à continuer d’explorer,
+  de transmettre et de préserver ce riche héritage, au cœur de la Maurienne.
+
+  À toutes et à tous,
+  merci !
+
+  Les Amis du Couvent des Cordeliers de La Chambre
+  www.couventdelachambre.fr
+
+  Découvrir • Partager • Préserver
+visual_reference: assets/page-16.jpg
+rules:
+  - utiliser le logo officiel fourni par l'association
+  - QR association déterministe
+  - aucune régénération libre du texte ou de la composition

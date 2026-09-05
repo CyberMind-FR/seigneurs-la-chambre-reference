@@ -1,13 +1,13 @@
 project: Les Seigneurs de La Chambre
-package: 100% colorized GitHub update v7
+package: 100% colorized GitHub update v13
 date: '2026-09-05'
-page_count: 15
-source_note: Jeu canonique colorisé validé, page 1 nouvelle couverture, page 10 Château de Notre-Dame-du-Cruet explicitement
-  fournie par l’utilisateur.
+page_count: 16
+source_note: 'Jeu canonique final : page 1 = première couverture conservée à l''identique avec simple colorisation déterministe;
+  page 16 = page de remerciements séparée.'
 pages:
 - page: 1
   file: assets/page-01.jpg
-  sha256: 663206316e100bf56e9a2d6dfc611828a6012f949c3960b6428f0a91fb5ef233
+  sha256: 7aa42e57d0547bcb796a9ce24b86d4065fb33d1b8125969412ee67274b1ee78c
 - page: 2
   file: assets/page-02.jpg
   sha256: ce1cb73a1d2fb7a38af343b63e3490380d1f44bb0abea7999b57521da2403c5d
@@ -50,3 +50,6 @@ pages:
 - page: 15
   file: assets/page-15.jpg
   sha256: 6a735ec8a57140dbb5362c313b57207567af6e987c3b8a75d292b18a6ca44c73
+- page: 16
+  file: assets/page-16.jpg
+  sha256: 8ce7958a85e795dd8cd56ee0a1a366c4b75d929e0dde260542b3a9fe371394a3

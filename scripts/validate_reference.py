@@ -5,8 +5,8 @@ ROOT=Path(__file__).resolve().parents[1]
 errors=[]
 manifest=yaml.safe_load((ROOT/"manifest.yaml").read_text(encoding="utf-8"))
 entries=manifest.get("pages",[])
-if manifest.get("page_count") != 15 or len(entries) != 15:
-    errors.append("manifest must contain exactly 15 pages")
+if manifest.get("page_count") != 16 or len(entries) != 16:
+    errors.append("manifest must contain exactly 16 pages")
 seen=[]
 for e in entries:
     p=int(e["page"]); seen.append(p)
@@ -17,12 +17,12 @@ for e in entries:
     actual=hashlib.sha256(asset.read_bytes()).hexdigest()
     if actual != e.get("sha256"):
         errors.append(f"page {p}: manifest hash mismatch")
-if sorted(seen) != list(range(1,16)):
-    errors.append("manifest page numbers must be 1..15")
+if sorted(seen) != list(range(1,17)):
+    errors.append("manifest page numbers must be 1..16")
 config=yaml.safe_load((ROOT/"build-config.yaml").read_text(encoding="utf-8"))
 order={int(k):v for k,v in config["source"]["canonical_order"].items()}
-if sorted(order) != list(range(1,16)):
-    errors.append("build-config canonical order must contain pages 1..15")
+if sorted(order) != list(range(1,17)):
+    errors.append("build-config canonical order must contain pages 1..16")
 # Editorial guards in canonical YAML when present.
 for p, forbidden in {4:["Académie de Maurienne"],14:["Collecte Fondation du Patrimoine (75%)","Fabrice GALOPO et Gérald KERMA"],15:["Fondation du Patrimoine 75 %","Fabrice GALOPO & Gérald KERMA"]}.items():
     y=ROOT/"pages"/f"{p:02d}.yaml"

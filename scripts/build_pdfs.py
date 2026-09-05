@@ -55,8 +55,8 @@ def main():
             raise FileNotFoundError(f)
         assets[p]=f
     reg=yaml.safe_load((ROOT/src['qr_registry']).read_text(encoding='utf-8')); ref=src['qr_reference_canvas']; qr_ref=(int(ref['width']),int(ref['height'])); bg=cfg['render']['background']; o=cfg['outputs']; report={'project':cfg['project'],'outputs':{}}
-    p1=out/o['sequential_15']['filename']; report['outputs'][p1.name]=seq(p1,A5,list(range(1,count+1)),assets,reg,qr_ref,bg)
-    physical={n:n for n in range(1,15)}; physical[15]=None; physical[16]=15
+    p1=out/o['sequential_16']['filename']; report['outputs'][p1.name]=seq(p1,A5,list(range(1,count+1)),assets,reg,qr_ref,bg)
+    physical={n:n for n in range(1,17)} if count==16 else ({**{n:n for n in range(1,15)},15:None,16:15})
     p2=out/o['booklet_a5']['filename']; report['outputs'][p2.name]=seq(p2,A5,[physical[n] for n in range(1,17)],assets,reg,qr_ref,bg)
     p3=out/o['imposed_a4']['filename']; report['outputs'][p3.name]=imposed(p3,o['imposed_a4']['imposition'],physical,assets,reg,qr_ref,bg)
     p4=out/o['panels_a2']['filename']; report['outputs'][p4.name]=seq(p4,A2,list(range(1,count+1)),assets,reg,qr_ref,bg)
