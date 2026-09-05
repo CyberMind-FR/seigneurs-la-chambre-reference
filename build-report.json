@@ -1,0 +1,13 @@
+{
+  "status": "corrected",
+  "issue": "v2.0.1 release mixed older sepia pages 01-09 with newer colorized pages 10-15",
+  "pages": 15,
+  "pdfs": [
+    "Seigneurs_La_Chambre_15_pages_100pct_Colorise_v4.pdf",
+    "Seigneurs_La_Chambre_Livret_A5_16p_100pct_Colorise_v4.pdf",
+    "Seigneurs_La_Chambre_Livret_A4_Impose_RectoVerso_100pct_Colorise_v4.pdf",
+    "Seigneurs_La_Chambre_Panneaux_A2_15p_100pct_Colorise_v4.pdf",
+    "Seigneurs_La_Chambre_Panneaux_A1_15p_100pct_Colorise_v4.pdf"
+  ],
+  "manifest_sha256": "35bb1d29ea27cd39d8ef9712afa54a2ca4fac622a134f81a45d68b189fb3adbf"
+}

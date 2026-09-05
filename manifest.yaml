@@ -1,35 +1,36 @@
 project: Les Seigneurs de La Chambre
-package: GitHub update - colorisé v3
+package: 100% colorized GitHub update v4
 date: '2026-09-05'
 page_count: 15
+source_note: Pages 1-9 recovered from the previously generated colorized series; pages 10-15 from the latest approved v3 package.
 pages:
 - page: 1
   file: assets/page-01.jpg
-  sha256: 14db8ef8c42eda2e24bd3cae7997ef9d26664793d8824727df87048ec967d134
+  sha256: 0d603478a30a0aa25b47a280cb84c9342ac7155e51b8b68ad8f0d284921271ee
 - page: 2
   file: assets/page-02.jpg
-  sha256: 7662b62cd9c37eced0d125fa2eb49394e5c522525156d6a2ced46d38bcb00770
+  sha256: 01327e6ada3b1c703a80a41be17d4a252fe7a319e9e40018c620412d566f39ac
 - page: 3
   file: assets/page-03.jpg
-  sha256: 68c3bcf6d385b263e87b1f7d033daaca30bf52ce987f063de41116957c88d0b0
+  sha256: 46c2ea65f6280dead6c84622faf076552a0dd57879e7238c088626c61f42daab
 - page: 4
   file: assets/page-04.jpg
-  sha256: 24bec9cdb7e3405332704d327b6880f28b58a69433a5a8aca4ee8ef94afa498f
+  sha256: 8b136ab6388fad54795eb6b20d25d3f20422c1da861bd0b7c78faf3708140c7a
 - page: 5
   file: assets/page-05.jpg
-  sha256: 5794f62fa852255f9808d49224a9bf025b219b0de17bedd9f5c96020dcf4adb2
+  sha256: 06ac2fd8d08840eec2fd06b5369b8817647ab4033307d9d3a623926cf10c6d83
 - page: 6
   file: assets/page-06.jpg
-  sha256: 73a7df53f27a01447f19a889f2b1e8fc2290d7038e3c96c3f6ae98573ed7e6e9
+  sha256: 9d558ffaf57fa8cdb49cbd9341af8de73b53f8f433a9bcc646719503bcdb1cae
 - page: 7
   file: assets/page-07.jpg
-  sha256: b8d723efd476a5b3625e832c14cffe5004875a47a2eed9b51ac11cf2ba03d6ca
+  sha256: 053f47a4561aa230474dbc183c944b67c29e9bbcefdbe7f0397c7c0c050dc0fb
 - page: 8
   file: assets/page-08.jpg
-  sha256: 09cdbf147243b9fb143f355277629043a114b65f03773ed4d587dfb9e0931cf5
+  sha256: 6c4ae48732f3a3526c463c9ae6b685bd25f75e7551f3080a2306d76c58760da7
 - page: 9
   file: assets/page-09.jpg
-  sha256: e0d6d1c2d637644c0491603a575d7a060eaabfca10bdfa8de0f7c61037d1b2bb
+  sha256: 8a9814277c601859c7b501f34dccaae0dbd9e61e32c7a88271383078c5704fb4
 - page: 10
   file: assets/page-10.jpg
   sha256: e21d44f5d988f5492133253bd5dda66eab7c7d6e6dfd8b204e31bcc0173a9a7f

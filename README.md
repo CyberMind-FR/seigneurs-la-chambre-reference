@@ -1,19 +1,13 @@
-# Les Seigneurs de La Chambre — version Contraste & Style
+# Les Seigneurs de La Chambre - package 100 % colorise v4
 
-Version régénérée pour impression haute qualité, avec amélioration de la lisibilité du texte et une ambiance graphique sépia / fusain / plume / ombre chinoise, avec colorisation douce pastels, craies et aquarelles.
+Ce paquet corrige le melange constate dans la release v2.0.1.
 
-Contenu conservé, QR restaurés et validés.
+## Correction
+- pages 01 a 09 : versions illustrees/colorisees recuperees depuis la serie generee precedemment ;
+- pages 10 a 15 : dernieres versions colorisees validees ;
+- QR pages 03 a 09 : reposes depuis les assets QR deterministes du referentiel ;
+- aucune page sepia ancienne ne doit etre reutilisee par le build.
 
-
-## PDFs régénérés (2026-09-05 v2)
-- Seigneurs_La_Chambre_15_pages_Colorise_v2.pdf
-- Seigneurs_La_Chambre_Livret_A5_16p_Colorise_v2.pdf
-- Seigneurs_La_Chambre_Livret_A4_Impose_RectoVerso_Colorise_v2.pdf
-
-
-## Mise à jour v3
-- page-10.jpg remplacée par la nouvelle affiche colorisée du Château de Notre-Dame-du-Cruet.
-- PDFs régénérés :
-  - Seigneurs_La_Chambre_15_pages_Colorise_v3.pdf
-  - Seigneurs_La_Chambre_Livret_A5_16p_Colorise_v3.pdf
-  - Seigneurs_La_Chambre_Livret_A4_Impose_RectoVerso_Colorise_v3.pdf
+## A copier dans le depot
+Remplacer le repertoire `assets/` et `manifest.yaml` par ceux de cette archive.
+La CI existante reconstruira ensuite tous les PDF depuis ces 15 assets.
