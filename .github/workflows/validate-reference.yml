@@ -1,8 +1,13 @@
 name: Validate reference package
 
 on:
-  push:
   pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
 
 jobs:
   validate:
@@ -15,12 +20,16 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: pip
 
       - name: Install validator dependencies
-        run: python -m pip install --disable-pip-version-check pyyaml opencv-python-headless
+        run: python -m pip install --disable-pip-version-check -r requirements-build.txt
 
       - name: Validate canonical package
         run: python scripts/validate_reference.py
 
-      - name: Validate every QR from final JPEGs
+      - name: Validate deterministic QR assets
         run: python scripts/validate_qr.py
+
+      - name: Check PDF builder syntax
+        run: python -m py_compile scripts/build_pdfs.py
