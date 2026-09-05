@@ -1,5 +1,7 @@
-project: Les Seigneurs de La Chambre - Contraste & Style
-version: v4-contrast-style
+project: Les Seigneurs de La Chambre
+package: GitHub update - colorisé v2
+date: '2026-09-05'
+page_count: 15
 pages:
 - page: 1
   file: assets/page-01.jpg
@@ -33,16 +35,16 @@ pages:
   sha256: 2e9fadf95d39345877aa71dc318ba17c90a7d52c04c139aa199d9eed7124e8c3
 - page: 11
   file: assets/page-11.jpg
-  sha256: 4b670b4009f971b2c20b2646a729ba761afb8b9dbab74ebc195a5acb88a4c500
+  sha256: af5e23c565742e1c3562d1a9b6d31dce9b0d94a47705d5f7c782e9c5baf41c4e
 - page: 12
   file: assets/page-12.jpg
-  sha256: 943ab472b5805be653c5d82fee5f50e992f501cb8f9fb271ea959519ddf57a72
+  sha256: db78feb96a02fc2520d89f24b363dc07747163c32ada16cd9be2182286ad7709
 - page: 13
   file: assets/page-13.jpg
-  sha256: 1a4113c612c6859bc9200c802d16749e7294cfaadd2a047838cef3d3d08e096a
+  sha256: 642d215fe776bcd1a677a0e478ec99a4e795fb0e9d27d3bea4611641b4e7c561
 - page: 14
   file: assets/page-14.jpg
-  sha256: 9de757251e54dc1e840e190c3230a4f473612cc4a9df8979e8303489fc11a65b
+  sha256: 406af47e0f57eae8b76fe8ea8da65daefb4ba80683adf069d9aaa74ef53daa45
 - page: 15
   file: assets/page-15.jpg
-  sha256: 58657684b97650e229532430e2bcdcc892cdada9a965bb97226563f8d58b3af6
+  sha256: 6a735ec8a57140dbb5362c313b57207567af6e987c3b8a75d292b18a6ca44c73
