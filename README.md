@@ -9,3 +9,11 @@ Contenu conservé, QR restaurés et validés.
 - Seigneurs_La_Chambre_15_pages_Colorise_v2.pdf
 - Seigneurs_La_Chambre_Livret_A5_16p_Colorise_v2.pdf
 - Seigneurs_La_Chambre_Livret_A4_Impose_RectoVerso_Colorise_v2.pdf
+
+
+## Mise à jour v3
+- page-10.jpg remplacée par la nouvelle affiche colorisée du Château de Notre-Dame-du-Cruet.
+- PDFs régénérés :
+  - Seigneurs_La_Chambre_15_pages_Colorise_v3.pdf
+  - Seigneurs_La_Chambre_Livret_A5_16p_Colorise_v3.pdf
+  - Seigneurs_La_Chambre_Livret_A4_Impose_RectoVerso_Colorise_v3.pdf
