@@ -1,8 +1,9 @@
-# Regle de construction - colorisation verrouillee
+# Colorisation verrouillée - v7
 
-1. `assets/page-01.jpg` a `assets/page-15.jpg` sont la source graphique du build.
-2. Une release ne doit jamais melanger ces assets avec une ancienne serie sepia.
-3. Toute regeneration graphique doit conserver texte, composition, plans et QR canoniques.
-4. Les QR sont des assets deterministes et sont superposes apres le traitement graphique.
-5. Le build doit echouer si un des 15 fichiers manque.
-6. Les PDF de release sont reconstruits exclusivement depuis les 15 assets presents dans le commit/tag.
+- Les 15 fichiers `assets/page-01.jpg` à `assets/page-15.jpg` constituent la source graphique de release.
+- Ordre canonique fixé dans `build-config.yaml`.
+- Page 01 : nouvelle couverture colorisée validée.
+- Page 10 : utiliser exclusivement l'image du Château de Notre-Dame-du-Cruet validée dans ce paquet.
+- Aucune ancienne planche sépia ne doit réapparaître.
+- Les QR sont des actifs déterministes ; ils sont superposés aux rasters et aux PDF après tout traitement graphique.
+- Le CI valide les 15 hashes, les QR et construit les PDF à partir des assets du commit/tag.

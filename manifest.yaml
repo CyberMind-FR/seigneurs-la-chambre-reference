@@ -1,48 +1,49 @@
 project: Les Seigneurs de La Chambre
-package: 100% colorized GitHub update v4
+package: 100% colorized GitHub update v7
 date: '2026-09-05'
 page_count: 15
-source_note: Pages 1-9 recovered from the previously generated colorized series; pages 10-15 from the latest approved v3 package.
+source_note: Jeu canonique colorisé validé, page 1 nouvelle couverture, page 10 Château de Notre-Dame-du-Cruet explicitement
+  fournie par l’utilisateur.
 pages:
 - page: 1
   file: assets/page-01.jpg
-  sha256: 0d603478a30a0aa25b47a280cb84c9342ac7155e51b8b68ad8f0d284921271ee
+  sha256: 663206316e100bf56e9a2d6dfc611828a6012f949c3960b6428f0a91fb5ef233
 - page: 2
   file: assets/page-02.jpg
-  sha256: 01327e6ada3b1c703a80a41be17d4a252fe7a319e9e40018c620412d566f39ac
+  sha256: ce1cb73a1d2fb7a38af343b63e3490380d1f44bb0abea7999b57521da2403c5d
 - page: 3
   file: assets/page-03.jpg
-  sha256: 46c2ea65f6280dead6c84622faf076552a0dd57879e7238c088626c61f42daab
+  sha256: d25b6242c3e760a351ec65c9878a7a7307fc43912b2e50c3d73cd12e7a0872ac
 - page: 4
   file: assets/page-04.jpg
-  sha256: 8b136ab6388fad54795eb6b20d25d3f20422c1da861bd0b7c78faf3708140c7a
+  sha256: 1c1c1db1e41645d09362b73fa4781d2a31b460785c45628057ff0a9037107ed5
 - page: 5
   file: assets/page-05.jpg
-  sha256: 06ac2fd8d08840eec2fd06b5369b8817647ab4033307d9d3a623926cf10c6d83
+  sha256: 4bf77d43ac0459dd995393547cf50280e321264ca98483c3af80df39a600e63b
 - page: 6
   file: assets/page-06.jpg
-  sha256: 9d558ffaf57fa8cdb49cbd9341af8de73b53f8f433a9bcc646719503bcdb1cae
+  sha256: 09583de73f9dd7a325d4fcc6ff9a98a7d418917e8412334757eb94e2a7798b2c
 - page: 7
   file: assets/page-07.jpg
-  sha256: 053f47a4561aa230474dbc183c944b67c29e9bbcefdbe7f0397c7c0c050dc0fb
+  sha256: f6e9913c2d25b10b192817b50a401924260fe369eede4d01c34ffe8c0a9206ff
 - page: 8
   file: assets/page-08.jpg
-  sha256: 6c4ae48732f3a3526c463c9ae6b685bd25f75e7551f3080a2306d76c58760da7
+  sha256: b3e3ee62638d9892a7185d249c7e5935dc58e4112c316882712f316e1919ea8c
 - page: 9
   file: assets/page-09.jpg
-  sha256: 8a9814277c601859c7b501f34dccaae0dbd9e61e32c7a88271383078c5704fb4
+  sha256: 82af9766c42fb86591bbe9a6dcc10228baa42058c6232965427dcd96acf9b656
 - page: 10
   file: assets/page-10.jpg
-  sha256: e21d44f5d988f5492133253bd5dda66eab7c7d6e6dfd8b204e31bcc0173a9a7f
+  sha256: 9fd65c5e1196ff15378a854427fd68d42b9d42976060a358d558ef42d3ec6c63
 - page: 11
   file: assets/page-11.jpg
-  sha256: af5e23c565742e1c3562d1a9b6d31dce9b0d94a47705d5f7c782e9c5baf41c4e
+  sha256: 810f3b634ca14742eb84660c450e355e5bfd621f340fef6b4e0077bd63f74615
 - page: 12
   file: assets/page-12.jpg
-  sha256: db78feb96a02fc2520d89f24b363dc07747163c32ada16cd9be2182286ad7709
+  sha256: e1f06d54de0e7e4792b9de294b81cd66a4ed27bacba73af3eb892eeb10177fc3
 - page: 13
   file: assets/page-13.jpg
-  sha256: 642d215fe776bcd1a677a0e478ec99a4e795fb0e9d27d3bea4611641b4e7c561
+  sha256: e42199467f26c884b23be3ad2450e95ed006bec761c8f3bf599177870efa9f4a
 - page: 14
   file: assets/page-14.jpg
   sha256: 406af47e0f57eae8b76fe8ea8da65daefb4ba80683adf069d9aaa74ef53daa45
