@@ -2,7 +2,7 @@ project: Les Seigneurs de La Chambre - SpiritualCept Research Notebook
 version: 1.1-reference-strict
 principle: Séparer strictement contenu, composition et traitement visuel.
 format_lock:
-  page_count: 15
+  page_count: 16
   orientation: portrait
   rule: Conserver les dimensions et proportions de la page source; aucun recadrage ou reflow automatique.
 visual_language:
@@ -24,14 +24,17 @@ layout_rules:
 - Aucun élément ne doit être ajouté s'il crée une affirmation historique absente du contenu verrouillé.
 content_lock:
 - Ne jamais paraphraser, corriger ou compléter le texte sans validation éditoriale.
-- Ne jamais inventer une date, un nom, une fonction, une catégorie, une légende, un plan, une source, une localisation, un taux ou un prix.
+- Ne jamais inventer une date, un nom, une fonction, une catégorie, une légende, un plan, une source, une localisation, un
+  taux ou un prix.
 - Ne jamais créer de personne ou de rôle absent du canonical_text.
 - 'Les QR codes sont des actifs fonctionnels: ne jamais les styliser, redessiner ou rasteriser avec un filtre.'
 - Toute modification éditoriale doit être inscrite dans corrections.yaml.
 modification_policy:
   mode: surgical_only
-  base_rule: Une page visuelle déjà validée est une base immuable. Une correction ponctuelle ne justifie jamais une régénération libre de la page entière.
-  deterministic_first: Pour texte, nombre, nom ou taux, préférer une retouche déterministe/compositing local à une génération d'image.
+  base_rule: Une page visuelle déjà validée est une base immuable. Une correction ponctuelle ne justifie jamais une régénération
+    libre de la page entière.
+  deterministic_first: Pour texte, nombre, nom ou taux, préférer une retouche déterministe/compositing local à une génération
+    d'image.
   pixel_rule: Préserver tous les pixels hors de la zone explicitement modifiée autant que techniquement possible.
   no_invention: Aucun élément textuel ou graphique absent de la référence validée ne peut être ajouté.
   source_priority:

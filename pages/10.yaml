@@ -76,7 +76,7 @@ canonical_text: 'Le Château de Notre-Dame-du-Cruet
 
   • Édifié vers 1090-1100 • Démantelé en 1491 • Détruit en 1536'
 visual_reference: assets/page-10.jpg
-visual_reference_sha256: 2774676dc6603be2c0983aa59057f6d9a46f476705d09bb8e162af474d9e1fef
+visual_reference_sha256: d73fd3107d17d08728ea5800a740689774319e97e6f3cd6e12c42f689288ce0d
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
@@ -110,6 +110,4 @@ regeneration_prompt_guardrails:
 visual_source_override:
   real_plan: assets/reference/page-10-plan-reel.jpg
   real_plan_sha256: e7503c38b3ed786935fe1c7fdb1508f15c77a5464ef4a8aaf9f660b784252412
-  rendered_visual: assets/page-10.jpg
-  rule: La représentation du château doit respecter la géométrie du plan réel fourni; la dernière version visuelle validée
-    est intégrée.
+  rule: Toute reconstitution visuelle du château doit respecter la géométrie et les éléments nommés du plan réel fourni.

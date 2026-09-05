@@ -1,13 +1,12 @@
 project: Les Seigneurs de La Chambre
-package: 100% colorized GitHub update v13
+package: GitHub clean final 16 pages v15
 date: '2026-09-05'
 page_count: 16
-source_note: 'Jeu canonique final : page 1 = première couverture conservée à l''identique avec simple colorisation déterministe;
-  page 16 = page de remerciements séparée.'
+source_note: Pages 1 à 16 validées. Aucun ancien PDF ni artefact dist n'est versionné; la CI génère les sorties.
 pages:
 - page: 1
   file: assets/page-01.jpg
-  sha256: 7aa42e57d0547bcb796a9ce24b86d4065fb33d1b8125969412ee67274b1ee78c
+  sha256: 0512c1994347acaab4fa2dd3e136d43503a412eab0a9205cc44ad1b741c75286
 - page: 2
   file: assets/page-02.jpg
   sha256: ce1cb73a1d2fb7a38af343b63e3490380d1f44bb0abea7999b57521da2403c5d

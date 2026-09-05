@@ -1,12 +1,12 @@
-# Les Seigneurs de La Chambre — package final colorisé
+# Les Seigneurs de La Chambre — source GitHub finale
 
-## État du livret
-- 16 pages.
-- Page 01 : reprise de la première couverture du projet, composition et contenu inchangés.
-  Seule une colorisation légère et déterministe des illustrations a été appliquée.
-- Pages 02 à 15 : versions colorisées validées déjà présentes.
-- Page 16 : page de remerciements séparée, avec logo officiel de l’association et QR association déterministe.
+Ce paquet contient uniquement la source utile du livret final 16 pages :
+- `assets/page-01.jpg` à `assets/page-16.jpg` ;
+- QR déterministes ;
+- `pages/01.yaml` à `pages/16.yaml` ;
+- règles de régénération, style et corrections ;
+- scripts de validation / génération PDF ;
+- GitHub Actions ;
+- Makefile et dépendances.
 
-## GitHub / CI
-Les workflows, scripts, Makefile et règles de construction sont inclus.
-`dist/` reste exclu du dépôt : les PDF et ZIP de release sont produits par GitHub Actions.
+Les anciens PDF, planches contact, notes de versions intermédiaires et `dist/` sont volontairement exclus. Les sorties PDF/ZIP sont produites par la CI.
