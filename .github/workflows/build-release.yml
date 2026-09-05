@@ -1,0 +1,85 @@
+name: Build and release print PDFs
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'assets/**'
+      - 'pages/**'
+      - 'style.yaml'
+      - 'corrections.yaml'
+      - 'manifest.yaml'
+      - 'qr_registry.yaml'
+      - 'build-config.yaml'
+      - 'requirements-build.txt'
+      - 'scripts/**'
+      - '.github/workflows/build-release.yml'
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+    paths:
+      - 'assets/**'
+      - 'pages/**'
+      - 'style.yaml'
+      - 'corrections.yaml'
+      - 'manifest.yaml'
+      - 'qr_registry.yaml'
+      - 'build-config.yaml'
+      - 'requirements-build.txt'
+      - 'scripts/**'
+      - '.github/workflows/build-release.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install build dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-build.txt
+
+      - name: Validate reference package
+        run: make validate
+
+      - name: Build PDFs
+        run: make build
+
+      - name: List generated files
+        run: ls -lh dist
+
+      - name: Upload PDF build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: seigneurs-la-chambre-print-pdfs-${{ github.run_number }}
+          path: |
+            dist/*.pdf
+            dist/*.zip
+            dist/SHA256SUMS.txt
+            dist/build-report.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish GitHub Release on version tag
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          name: Les Seigneurs de La Chambre ${{ github.ref_name }}
+          files: |
+            dist/*.pdf
+            dist/*.zip
+            dist/SHA256SUMS.txt
+            dist/build-report.json
+          fail_on_unmatched_files: true
