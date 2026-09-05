@@ -1,0 +1,77 @@
+[
+  {
+    "page": 1,
+    "file": "assets/page-01.jpg",
+    "sha256": "3e4c959eb6b2a8a9537907456a0adbf5f5ea27c48a4787f4b10e55cda98692da"
+  },
+  {
+    "page": 2,
+    "file": "assets/page-02.jpg",
+    "sha256": "9cf88aea08e74566ac2de4d9ac109071d13ef37aa5c0ae13bfdeab9fe9c56f2a"
+  },
+  {
+    "page": 3,
+    "file": "assets/page-03.jpg",
+    "sha256": "73839363882eed888573e568d06d57346644bd26d9234fe7a9197396252103e5"
+  },
+  {
+    "page": 4,
+    "file": "assets/page-04.jpg",
+    "sha256": "4c6d7dc0d26a3abb25f7cb8e5e32219005a2192f65543d8c669550102a478732"
+  },
+  {
+    "page": 5,
+    "file": "assets/page-05.jpg",
+    "sha256": "2f05da6f69893cd21564531382cff73c96a8eca0ea880b7e49d274b2fbdd7059"
+  },
+  {
+    "page": 6,
+    "file": "assets/page-06.jpg",
+    "sha256": "b26b4cfece50268565edba058a39c5ddc87ebe03d4ed134ef2e7afe1f8c5c044"
+  },
+  {
+    "page": 7,
+    "file": "assets/page-07.jpg",
+    "sha256": "b4259b4423e149323700f2be8c41396487b5e8f242eba8b17b2f924b57517b3a"
+  },
+  {
+    "page": 8,
+    "file": "assets/page-08.jpg",
+    "sha256": "a50b2199f2a4a4e3eabcbcb916ec3dd01451ea9e98caeb9b1330a428417d002a"
+  },
+  {
+    "page": 9,
+    "file": "assets/page-09.jpg",
+    "sha256": "ffbb05ec1b1635054960a1fd339639ac880db3484763b7f129080db23dc1b215"
+  },
+  {
+    "page": 10,
+    "file": "assets/page-10.jpg",
+    "sha256": "01feb2f9ee5100eda3d51b3c1180fa36eba4b104f2422bf752e15d2dcbfcb8f8"
+  },
+  {
+    "page": 11,
+    "file": "assets/page-11.jpg",
+    "sha256": "af5e23c565742e1c3562d1a9b6d31dce9b0d94a47705d5f7c782e9c5baf41c4e"
+  },
+  {
+    "page": 12,
+    "file": "assets/page-12.jpg",
+    "sha256": "db78feb96a02fc2520d89f24b363dc07747163c32ada16cd9be2182286ad7709"
+  },
+  {
+    "page": 13,
+    "file": "assets/page-13.jpg",
+    "sha256": "642d215fe776bcd1a677a0e478ec99a4e795fb0e9d27d3bea4611641b4e7c561"
+  },
+  {
+    "page": 14,
+    "file": "assets/page-14.jpg",
+    "sha256": "406af47e0f57eae8b76fe8ea8da65daefb4ba80683adf069d9aaa74ef53daa45"
+  },
+  {
+    "page": 15,
+    "file": "assets/page-15.jpg",
+    "sha256": "6a735ec8a57140dbb5362c313b57207567af6e987c3b8a75d292b18a6ca44c73"
+  }
+]
