@@ -1,0 +1,78 @@
+project: Les Seigneurs de La Chambre
+version: 2.0-colorized-exhibition
+source:
+  page_count: 15
+  assets_dir: assets
+  pattern: page-{page:02d}.jpg
+  qr_registry: qr_registry.yaml
+  qr_reference_canvas:
+    width: 1920
+    height: 2880
+  canonical_order:
+    1: LES SEIGNEURS DE LA CHAMBRE - couverture
+    2: Les Seigneurs de La Chambre
+    3: Le Couvent des Cordeliers
+    4: La Maison de La Tour
+    5: Le Château Joli
+    6: La Tour de Burgin
+    7: La Tour de Châtel-André
+    8: La Maison-Forte du Châtelet
+    9: La Maison-Forte de Gruyère
+    10: Le Château de Notre-Dame-du-Cruet
+    11: La Tour de Notre-Dame-du-Cruet
+    12: La Maison Forte de La Landonnière
+    13: Un patrimoine à préserver
+    14: L'Association
+    15: LES SEIGNEURS DE LA CHAMBRE - dos
+
+render:
+  background: '#F5E8CE'
+  preserve_aspect_ratio: true
+  crop: false
+  jpeg_quality_note: Les JPEG sources sont utilisés sans recompression intermédiaire par le constructeur PDF.
+  qr_overlay: true
+  qr_rule: Réinjecter les actifs QR du registre au-dessus du raster final, à leurs coordonnées normalisées.
+
+outputs:
+  sequential_15:
+    enabled: true
+    filename: Seigneurs_La_Chambre_15_pages_Colorise.pdf
+    page_size: A5
+    pages: 15
+  booklet_a5:
+    enabled: true
+    filename: Seigneurs_La_Chambre_Livret_A5_16p_Colorise.pdf
+    page_size: A5
+    pages: 16
+    physical_order: pages 1-14, page blanche intérieure dos, page 15 comme quatrième de couverture
+  imposed_a4:
+    enabled: true
+    filename: Seigneurs_La_Chambre_Livret_A4_Impose_RectoVerso_Colorise.pdf
+    page_size: A4-landscape
+    imposition:
+      - [16, 1]
+      - [2, 15]
+      - [14, 3]
+      - [4, 13]
+      - [12, 5]
+      - [6, 11]
+      - [10, 7]
+      - [8, 9]
+  panels_a2:
+    enabled: true
+    filename: Seigneurs_La_Chambre_Panneaux_A2_15p_Colorise.pdf
+    page_size: A2
+    pages: 15
+  panels_a1:
+    enabled: true
+    filename: Seigneurs_La_Chambre_Panneaux_A1_15p_Colorise.pdf
+    page_size: A1
+    pages: 15
+
+release:
+  dist_dir: dist
+  bundle: Seigneurs_La_Chambre_Print_PDFs.zip
+  checksums: SHA256SUMS.txt
+  report: build-report.json
+  github_artifact_name: seigneurs-la-chambre-print-pdfs
+  release_on_tags: 'v*'
