@@ -1,12 +1,14 @@
-# Les Seigneurs de La Chambre — source GitHub finale
+# Les Seigneurs de La Chambre
 
-Ce paquet contient uniquement la source utile du livret final 16 pages :
-- `assets/page-01.jpg` à `assets/page-16.jpg` ;
-- QR déterministes ;
-- `pages/01.yaml` à `pages/16.yaml` ;
-- règles de régénération, style et corrections ;
-- scripts de validation / génération PDF ;
-- GitHub Actions ;
-- Makefile et dépendances.
+Référentiel canonique du livret et des panneaux d’exposition.
 
-Les anciens PDF, planches contact, notes de versions intermédiaires et `dist/` sont volontairement exclus. Les sorties PDF/ZIP sont produites par la CI.
+- 16 pages sources dans `assets/`.
+- contenu canonique dans `pages/`.
+- corrections éditoriales dans `corrections.yaml`.
+- QR verrouillés dans `qr_registry.yaml` et `assets/qr/`.
+- règles strictes dans `REGENERATION_RULES.md`.
+- consignes de reprise dans `WORK_HANDOFF.md`.
+- PDF/ZIP générés uniquement par GitHub Actions dans les artifacts/releases.
+
+Validation locale : `make validate`
+Build + contrôle QR final : `make build`
