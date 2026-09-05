@@ -38,10 +38,10 @@ pages:
   sha256: af5e23c565742e1c3562d1a9b6d31dce9b0d94a47705d5f7c782e9c5baf41c4e
 - page: 12
   file: assets/page-12.jpg
-  sha256: db78feb96a02fc2520d89f24b363dc07747163c32ada16cd9be2182286ad7709
+  sha256: 642d215fe776bcd1a677a0e478ec99a4e795fb0e9d27d3bea4611641b4e7c561
 - page: 13
   file: assets/page-13.jpg
-  sha256: 642d215fe776bcd1a677a0e478ec99a4e795fb0e9d27d3bea4611641b4e7c561
+  sha256: db78feb96a02fc2520d89f24b363dc07747163c32ada16cd9be2182286ad7709
 - page: 14
   file: assets/page-14.jpg
   sha256: 406af47e0f57eae8b76fe8ea8da65daefb4ba80683adf069d9aaa74ef53daa45
