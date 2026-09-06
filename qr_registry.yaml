@@ -68,8 +68,8 @@ pages:
         w: 257
         h: 257
       verified: true
-      verification_source: QR original du livret, décodé machine; Tour de Burgin conservée comme donnée canonique du corpus et attestée dans les
-        sources patrimoniales locales.
+      verification_source: QR original du livret, décodé machine; Tour de Burgin conservée comme donnée canonique du corpus
+        et attestée dans les sources patrimoniales locales.
       verification_source_url: https://www.stemariedecuines.fr/fr/il4-mairie%2Cpatrimoine%2Ccommunal_p43-les-vestiges-medievaux.aspx
       provenance: payload exact décodé du QR du livret source original
   '07':
@@ -129,9 +129,9 @@ pages:
       asset: assets/qr/page-10-google-maps.png
       placement_px:
         x: 1445
-        y: 2185
-        w: 240
-        h: 240
+        y: 2146
+        w: 213
+        h: 226
       verified: true
       verification_source: QR original du livret, décodé machine; château confirmé par le site officiel de Notre-Dame-du-Cruet.
       verification_source_url: https://notredameducruet.fr/
@@ -165,7 +165,8 @@ pages:
         w: 238
         h: 238
       verified: true
-      verification_source: QR original du livret, décodé machine; La Landonnière est répertoriée comme maison forte dans le PLU de Saint-Rémy-de-Maurienne.
+      verification_source: QR original du livret, décodé machine; La Landonnière est répertoriée comme maison forte dans le
+        PLU de Saint-Rémy-de-Maurienne.
       verification_source_url: https://netcreaweb.fr/sites/saintremy/images/Vie-Communale/Territoire/1-2_PLU.pdf
       provenance: payload exact décodé du QR du livret source original
   '13':
@@ -176,10 +177,10 @@ pages:
       payload: https://www.couventdelachambre.fr/
       asset: assets/qr/page-13-01-association.png
       placement_px:
-        x: 88
-        y: 2381
-        w: 196
-        h: 196
+        x: 76
+        y: 2328
+        w: 218
+        h: 232
       verified: true
       verification_source: Site officiel actuel de l'association, indexé et mis à jour.
       verification_source_url: https://www.couventdelachambre.fr/
@@ -188,10 +189,10 @@ pages:
       payload: https://www.couventdelachambre.fr/pages/nouvelles/retrospective/etape-de-pelerins-franciscain-aout-2025.html
       asset: assets/qr/page-13-02-videos.png
       placement_px:
-        x: 383
-        y: 2381
-        w: 196
-        h: 196
+        x: 371
+        y: 2328
+        w: 218
+        h: 232
       verified: true
       verification_source: Page officielle de l'association contenant des lecteurs vidéo YouTube.
       verification_source_url: https://www.couventdelachambre.fr/pages/nouvelles/retrospective/etape-de-pelerins-franciscain-aout-2025.html
@@ -200,10 +201,10 @@ pages:
       payload: https://drone-de-regard.fr/VR/La-Chambre/couvent/
       asset: assets/qr/page-13-03-virtual_visit.png
       placement_px:
-        x: 686
-        y: 2381
-        w: 196
-        h: 196
+        x: 675
+        y: 2328
+        w: 218
+        h: 232
       verified: true
       verification_source: Visite virtuelle référencée par les sources patrimoniales actuelles et le projet communal.
       verification_source_url: https://drone-de-regard.fr/VR/La-Chambre/couvent/
@@ -212,22 +213,23 @@ pages:
       payload: https://www.fondation-patrimoine.org/les-projets/couvent-des-cordeliers-a-la-chambre-en-savoie/104155
       asset: assets/qr/page-13-04-fondation.png
       placement_px:
-        x: 1010
-        y: 2381
-        w: 196
-        h: 196
+        x: 999
+        y: 2328
+        w: 218
+        h: 232
       verified: true
-      verification_source: Page officielle de collecte Fondation du patrimoine, collecte en cours; réduction IR affichée à 66 %.
+      verification_source: Page officielle de collecte Fondation du patrimoine, collecte en cours; réduction IR affichée à
+        66 %.
       verification_source_url: https://www.fondation-patrimoine.org/les-projets/couvent-des-cordeliers-a-la-chambre-en-savoie/104155
     - id: commune
       purpose: patrimoine commune
       payload: https://la-chambre.fr/patrimoine-et-labels/
       asset: assets/qr/page-13-05-commune.png
       placement_px:
-        x: 1327
-        y: 2381
-        w: 196
-        h: 196
+        x: 1316
+        y: 2328
+        w: 218
+        h: 232
       verified: true
       verification_source: Page patrimoine du site officiel de la commune de La Chambre.
       verification_source_url: https://la-chambre.fr/patrimoine-et-labels/
@@ -236,10 +238,10 @@ pages:
       payload: https://www.couventdelachambre.fr/pages/le-couvent/documents.html
       asset: assets/qr/page-13-06-documents.png
       placement_px:
-        x: 1615
-        y: 2381
-        w: 196
-        h: 196
+        x: 1603
+        y: 2328
+        w: 218
+        h: 232
       verified: true
       verification_source: Page officielle Documents de l'association, mise à jour en 2026.
       verification_source_url: https://www.couventdelachambre.fr/pages/le-couvent/documents.html

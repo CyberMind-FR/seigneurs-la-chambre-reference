@@ -76,7 +76,7 @@ canonical_text: 'Le Château de Notre-Dame-du-Cruet
 
   • Édifié vers 1090-1100 • Démantelé en 1491 • Détruit en 1536'
 visual_reference: assets/page-10.jpg
-visual_reference_sha256: d73fd3107d17d08728ea5800a740689774319e97e6f3cd6e12c42f689288ce0d
+visual_reference_sha256: 93e9ac05d6479b7b02370eb5058b6d58a2a8b60c139f2bd64c7643adb83fb184
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)
@@ -92,9 +92,9 @@ qr:
     asset: assets/qr/page-10-google-maps.png
     placement_px:
       x: 1445
-      y: 2185
-      w: 240
-      h: 240
+      y: 2146
+      w: 213
+      h: 226
     verified: true
     verification_source: QR original du livret, décodé machine; château confirmé par le site officiel de Notre-Dame-du-Cruet.
     verification_source_url: https://notredameducruet.fr/
