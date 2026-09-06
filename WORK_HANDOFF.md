@@ -13,7 +13,8 @@ Finaliser et maintenir le livret/exposition sans dérive éditoriale ni visuelle
 
 ## Canon actuel
 - 16 pages, `assets/page-01.jpg` à `assets/page-16.jpg`.
-- Page 10 = Château de Notre-Dame-du-Cruet, version réorientée validée. Ne jamais la remplacer par une ancienne version.
+- Page 10 = Château de Notre-Dame-du-Cruet, version réorientée validée, avec QR Google Maps réinjecté de façon déterministe. Ne jamais la remplacer par une ancienne version.
+- Page 13 = six QR de ressources numériques alignés sur une même ligne et réinjectés depuis `assets/qr/`. Ne jamais styliser ou reconstruire ces QR.
 - Page 14 : portrait de Philippe DEMARIO supprimé, nom et bibliographie conservés.
 - Taux Fondation du Patrimoine : 66 %, jamais 75 %.
 - Page 4 : aucune mention « Académie de Maurienne ».
