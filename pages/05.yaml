@@ -56,7 +56,7 @@ canonical_text: 'Le Château Joli
 
   • Datation : fin XIe siècle - début XIIe siècle'
 visual_reference: assets/page-05.jpg
-visual_reference_sha256: 3871bada80a406b2f46011200690096d1798573d581f246199334b7eb9dc2fe2
+visual_reference_sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

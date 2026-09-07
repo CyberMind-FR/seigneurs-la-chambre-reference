@@ -39,7 +39,7 @@ canonical_text: 'La Tour de Notre-Dame-du-Cruet
 
   • Propriété privée'
 visual_reference: assets/page-11.jpg
-visual_reference_sha256: 5328cadf342b94c36437d1a9eefc219df65e75671fea78f0d06a7addc6e72a8e
+visual_reference_sha256: d4090803bb0c287fe6bb6a7044a77451b47b688de891a52320918f0ef48b0bc8
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

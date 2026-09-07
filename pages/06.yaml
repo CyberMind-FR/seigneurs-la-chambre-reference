@@ -51,7 +51,7 @@ canonical_text: 'La Tour de Burgin
   « La Tour de Burgin nous rappelle que le patrimoine n''est pas éternel. Sans protection, sans entretien, sans mémoire collective,
   les plus fières forteresses redeviennent poussière. »'
 visual_reference: assets/page-06.jpg
-visual_reference_sha256: 006d1c5c1786ed14df33aafc2aff7fa662bb9be19e03e3cc407418ead94c482f
+visual_reference_sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

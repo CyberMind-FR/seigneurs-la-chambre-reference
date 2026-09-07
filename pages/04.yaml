@@ -59,7 +59,7 @@ canonical_text: 'La Maison de La Tour
 
   • Tour des XIIIe-XIVe siècles, logis du XVIIIe siècle'
 visual_reference: assets/page-04.jpg
-visual_reference_sha256: 53877422a2cf9a76169cf88de6a68800eb9e622140bed8743615669dc72a287b
+visual_reference_sha256: 659d163181a62c876a478d5c103b7fbefb35586bad42b718c809cc8a27dc5933
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

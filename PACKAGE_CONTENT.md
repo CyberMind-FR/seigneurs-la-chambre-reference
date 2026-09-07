@@ -1,8 +1,5 @@
-# Contenu verrouillé du paquet v15
+# Contenu canonique du dépôt
 
-- 16 images finales, dans l'ordre canonique.
-- Page 01 : couverture colorisée validée avec logo de l'association.
-- Page 10 : Château de Notre-Dame-du-Cruet, version validée.
-- Page 14 : sans portrait de Philippe DEMARIO.
-- Page 16 : remerciements.
-- Aucun ancien PDF ni série intermédiaire.
+Sources uniquement : `assets/`, `pages/`, YAML de référence, scripts, Makefile et workflows GitHub Actions.
+
+Les PDF, ZIP, planches contact, rapports de build et répertoires `dist/` sont des sorties générées et ne doivent pas être versionnés.

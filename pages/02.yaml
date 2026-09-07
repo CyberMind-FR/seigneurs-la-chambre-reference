@@ -78,7 +78,7 @@ canonical_text: 'Les Seigneurs de La Chambre
 
   • Seigneuries : Argentine, Avrieux, Bonvillard, Chamoux, Conflans, Cuines, Grésy...'
 visual_reference: assets/page-02.jpg
-visual_reference_sha256: 689320d6230ac1eb5eda486c4554ec37ed573dc9f9ac9b53f8d12a1313a9a786
+visual_reference_sha256: e6ecfa02a8d335765d1e9772d8fd28e4d3ce3a8e41ccd04b4513725843c1f2b8
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

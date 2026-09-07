@@ -74,7 +74,7 @@ canonical_text: 'Le Couvent des Cordeliers
 
   • Contact : Mairie de La Chambre - 04 79 56 30 32'
 visual_reference: assets/page-03.jpg
-visual_reference_sha256: d5a7f1765e11329d63e5bff4a845214b0e60e7cae1d1244d6ac8a183ff4d3ae3
+visual_reference_sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

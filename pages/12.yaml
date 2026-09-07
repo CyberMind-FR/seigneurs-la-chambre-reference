@@ -59,7 +59,7 @@ canonical_text: 'La Maison Forte de La Landonnière
 
   • Statut actuel : Propriété privée (visible depuis l''extérieur)'
 visual_reference: assets/page-12.jpg
-visual_reference_sha256: 03e8ff183335e955033ef1dc719babaf4678adee5421dac556ad13f03586d4d0
+visual_reference_sha256: 0afd9e2eb552b9fff7339a03817205f511b83ae7614884437812463123e61638
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

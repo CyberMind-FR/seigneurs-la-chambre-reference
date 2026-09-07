@@ -8,10 +8,10 @@ format_lock:
 visual_language:
   genre: carnet de recherches historique / sketchbook documentaire
   era_feel: document d'archives venu d'un autre temps, sans pastiche fantasy
-  paper: ivoire chaud, patine légère, grain fin
+  paper: blanc neutre imprimable, sans dominante colorée, grain fin discret
   ink: brun-noir / sépia profond, traits fins de gravure et graphite
   accent: rouge brun pour titres/repères, bleu et or réservés aux armoiries
-  contrast: fort pour impression, blancs papier préservés, détails et petits caractères nets
+  contrast: fort pour impression, fond blanc neutre, textes brun-noir très lisibles, détails et petits caractères nets
   illustration: dessin documentaire à la plume, lavis/gravure, vues architecturales, plans, cartes et détails annotés
   ornament: filets fins, fleurons discrets, repères de carnet, jamais décor envahissant
 layout_rules:

@@ -38,7 +38,7 @@ canonical_text: 'La Maison Forte de Gruyère
 
   • Propriété privée'
 visual_reference: assets/page-09.jpg
-visual_reference_sha256: 574499988a8ad15625c15fe0d41126f185ef235a042f64a7eb3fea4de28ea25b
+visual_reference_sha256: d54cab494ac8f931d8cb9dd5953d7f171a0c0d6c0b7abd7a73cc32e7f7de1aed
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

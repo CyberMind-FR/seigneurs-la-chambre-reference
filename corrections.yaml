@@ -41,9 +41,23 @@ page_13:
   - sdlc.../diaporama
   - sdlc.../livret.pdf
   rule: Les six QR et leurs libellés proviennent exclusivement du registre QR.
+page_16:
+  status: qr_overlay_correction
+  reason: Le QR de l'association présent dans la référence visuelle ne se décodait pas.
+  registry: qr_registry.yaml
+  canonical_payload: https://www.couventdelachambre.fr/
+  rule: Remplacer uniquement la zone du QR existant par l'actif déterministe du registre, sans modifier le reste de la page.
 qr_global:
   status: locked
   registry: qr_registry.yaml
-  verified_on: '2026-09-04'
+  verified_on: '2026-09-07'
   rule: Aucun payload QR ne peut être inventé, raccourci, reformulé ou généré par IA. Toute modification exige une nouvelle
     vérification et mise à jour du registre.
+visual_global_2026_09_07:
+  status: explicitly_authorized
+  reason: Amélioration demandée de la lisibilité des 16 pages.
+  changes:
+  - Fond papier blanc neutre, sans dominante jaune.
+  - Textes et encres renforcés pour l'impression.
+  - Contenu, composition, illustrations et géométrie inchangés.
+  rule: Traitement colorimétrique déterministe uniquement; réinjection de tous les QR après traitement.
