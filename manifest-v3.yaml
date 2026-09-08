@@ -115,7 +115,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -165,7 +166,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -215,7 +217,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -265,7 +268,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -315,7 +319,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -365,7 +370,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -415,7 +421,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -465,7 +472,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -515,7 +523,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -565,7 +574,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -618,7 +628,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -668,7 +679,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -718,7 +730,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -768,7 +781,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -818,7 +832,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -868,7 +883,8 @@ assets:
       print_authorized: true
       web_authorized: true
       derivative_authorized: false
-      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+      notes: Functional QR encoding; payload changes require registry validation,
+        not graphical derivation.
     validation:
       documentary: pass
       rights: not_applicable
@@ -877,6 +893,117 @@ assets:
       resolution: vector
       machine_decode: pass
       visual: functional
+      overall: pass
+      blockers: []
+  heraldry_la_chambre_svg:
+    id: heraldry_la_chambre_svg
+    pages:
+    - 1
+    - 2
+    zones:
+    - P01-Z01
+    - P02-Z01
+    nature: reconstitution
+    class: svg
+    kind: heraldry
+    path: assets/svg/heraldry-la-chambre.svg
+    sha256: 1c4eff522a5f73c36fc034dcb22a96aac0a292d6e57c241ba33aa0dfd400be61
+    production:
+      method: redrawn
+      brief: Create an original vector rendering from the canonical blazon; do not
+        copy an unidentified external drawing.
+      text_free_required: true
+      toolchain:
+      - hand-authored SVG
+      - repository validation
+    provenance:
+      status: verified
+      source_refs:
+      - page_02_blazon
+      - canonical_pages
+    rights:
+      status: not_applicable
+    validation:
+      text_free: pending
+      sha256: pass
+      visual: pending
+      overall: pending_human_review
+      blockers:
+      - PRODUCED_PENDING_HERALDIC_REVIEW
+  page_10_castle_reconstruction_svg:
+    id: page_10_castle_reconstruction_svg
+    pages:
+    - 10
+    zones: []
+    nature: reconstitution
+    class: svg
+    kind: architectural_reconstruction
+    path: assets/svg/page-10-castle-reconstruction.svg
+    sha256: 4f38fae4207ee9b4386806db5dc152c3e50421d3efa83233532d8c4bc669d320
+    production:
+      method: redrawn
+      brief: Respect the real-plan geometry and avoid any architectural detail not
+        supported by the source set.
+      text_free_required: true
+      toolchain:
+      - hand-authored SVG
+      - repository validation
+    provenance:
+      status: verified
+      source_refs:
+      - page_10_plan_real
+      - canonical_pages
+    rights:
+      status: not_applicable
+    validation:
+      text_free: pending
+      sha256: pass
+      visual: pending_geometry_review
+      overall: pending_human_review
+      blockers:
+      - PRODUCED_PENDING_GEOMETRY_REVIEW
+  ornament_bundle_svg:
+    id: ornament_bundle_svg
+    pages:
+    - 1
+    - 2
+    - 3
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    zones: []
+    nature: ornament
+    class: svg
+    kind: ornament
+    path: assets/svg/spiritualcept-ornaments.svg
+    sha256: 0ce48c14256c87e446c614392fae19444cf8fb1e07c04e3565092800e4fb985c
+    production:
+      method: deterministic
+      brief: May reproduce the visual grammar of validated pages but must not encode
+        names, dates, labels, maps, heraldic facts, or other historical assertions.
+      text_free_required: true
+      toolchain:
+      - hand-authored SVG
+      - repository validation
+    provenance:
+      status: verified
+      source_refs:
+      - canonical_pages
+    rights:
+      status: not_applicable
+    validation:
+      text_free: pending
+      sha256: pass
+      visual: pass
       overall: pass
       blockers: []
 qr:

@@ -5,14 +5,12 @@ phase: B
 lot: 2
 branch: release/v3.0-phase-b
 purpose: atomic_asset_registry
-
 registries:
   provenance: sources/PROVENANCE_INDEX.yaml
   qr_payloads: qr_registry.yaml
   canonical_manifest: manifest.yaml
   incremental_manifest: manifest-v3.yaml
   phase_a_asset_spec: assets/ASSET_SPEC.md
-
 policy:
   every_produced_asset_requires_sha256: true
   every_historical_or_reconstructed_asset_requires_source_refs: true
@@ -20,260 +18,410 @@ policy:
   reconstruction_authorized: true
   direct_documentary_reproduction_requires_rights_clearance: true
   page_recomposition_forbidden_in_lot_2: true
-
 status_enum:
-  - READY
-  - READY_FUNCTIONAL
-  - READY_RECONSTRUCTION
-  - READY_ORNAMENT
-  - BLOCKED_RIGHTS
-  - BLOCKED_SOURCE_MISSING
-  - BLOCKED_EDITORIAL
-  - PLANNED
-
+- READY
+- READY_FUNCTIONAL
+- READY_RECONSTRUCTION
+- READY_ORNAMENT
+- BLOCKED_RIGHTS
+- BLOCKED_SOURCE_MISSING
+- BLOCKED_EDITORIAL
+- PLANNED
+- PRODUCED_VALIDATED
+- PRODUCED_PENDING_HERALDIC_REVIEW
+- PRODUCED_PENDING_GEOMETRY_REVIEW
 produced_assets:
   qr_p03_google_maps:
     path: assets/qr-svg/page-03-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: ed1daee27d44ab09b2df0c56e9ccfab31352c1324384adfc06b341087827630a
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p04_google_maps:
     path: assets/qr-svg/page-04-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: 2121081aabdb0259dcb5c3295cb1b982f3957216fc51fa499d17fa9b6a7e52ee
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p05_google_maps:
     path: assets/qr-svg/page-05-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: f2eef67e4ecf11360f7f151c93d71dcacc93f3670343a30187f1479cf0e04890
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p06_google_maps:
     path: assets/qr-svg/page-06-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: 4906e793489446088eec4603d8ae7062c8f0ceb1f1ba950ba1bac99cb222ae30
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p07_google_maps:
     path: assets/qr-svg/page-07-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: cb454fb617706fb0a58a92626cf64922b35236862381b480208242ce87510d7f
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p08_google_maps:
     path: assets/qr-svg/page-08-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: 004caa9aa4f0ddc930245963710e608159be6c06def4b56b2e9f6155956fe270
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p09_google_maps:
     path: assets/qr-svg/page-09-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: f99e5c25e62f50abcae2baff51f20da40e1bae78412b70a8e2d60e4e16ad7c34
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p10_google_maps:
     path: assets/qr-svg/page-10-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: fc9b27faf312c5c64f46ead4d03ad5501da0a36774329a89e7bcdffe58bfeb2c
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p11_google_maps:
     path: assets/qr-svg/page-11-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: 49b904d76cdc17282af7b700c34eb16c1c49933b0acdc62e2398bef4ef421e14
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p12_google_maps:
     path: assets/qr-svg/page-12-google-maps.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: e537a65f6ab827f4a55dce46039065941a2e93146497946b2d2f56ce68c8f3a3
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p13_association:
     path: assets/qr-svg/page-13-01-association.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
-    pages: [13, 16]
+    source_refs:
+    - qr_registry
+    pages:
+    - 13
+    - 16
     sha256: 0ca65370ac6536a4deef0e2296606edbea0c1de53ec0dd34b69efdcd2899ccab
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p13_videos:
     path: assets/qr-svg/page-13-02-videos.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: e1008918ccb3cdc045307bab6eb8fcaeaf4691dad442cb41b8fd47ccc8678e26
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p13_virtual_visit:
     path: assets/qr-svg/page-13-03-virtual_visit.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: a57c24aa3ea01c672d054fd9f4ab630a1d2e64ecab7202e2155258cf317387a2
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p13_fondation:
     path: assets/qr-svg/page-13-04-fondation.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: b9d2f6c453438946326c5dd48b695bbd00c7f67f8df176af9cb8c8eb47520634
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p13_commune:
     path: assets/qr-svg/page-13-05-commune.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: 525df82f60cd334830c1e32f587b702d0a049ae68a72740d8e75f0e9b06c80a6
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   qr_p13_documents:
     path: assets/qr-svg/page-13-06-documents.svg
     class: qr
     nature: functional
     status: READY_FUNCTIONAL
-    source_refs: [qr_registry]
+    source_refs:
+    - qr_registry
     sha256: edc95ba3bd1ca98ada59ec822ae3212fc511b96cbe79531e74005232755e9078
     text_free_required: true
-    validation: {machine_decode: pass, sha256: pass, forbidden_svg_structures: pass}
-
-production_candidates:
+    validation:
+      machine_decode: pass
+      sha256: pass
+      forbidden_svg_structures: pass
   heraldry_la_chambre_svg:
-    target_path: assets/svg/heraldry-la-chambre.svg
-    pages: [1, 2]
-    zones: [P01-Z01, P02-Z01]
+    path: assets/svg/heraldry-la-chambre.svg
     class: svg
     kind: heraldry
     nature: reconstitution
-    status: READY_RECONSTRUCTION
-    source_refs: [page_02_blazon, canonical_pages]
-    confidence:
+    status: PRODUCED_PENDING_HERALDIC_REVIEW
+    pages: &id001
+    - 1
+    - 2
+    zones: &id002
+    - P01-Z01
+    - P02-Z01
+    source_refs: &id003
+    - page_02_blazon
+    - canonical_pages
+    confidence: &id004
       heraldic_description: high
       exact_historical_drawing: low
+    sha256: 1c4eff522a5f73c36fc034dcb22a96aac0a292d6e57c241ba33aa0dfd400be61
     text_free_required: true
     must_be_labeled_reconstruction: false
-    rule: Create an original vector rendering from the canonical blazon; do not copy an unidentified external drawing.
-    validation_required:
-      - source_refs_resolve
-      - no_text_nodes
-      - no_embedded_raster
-      - blazon_semantics_match_pages_02_yaml
-      - sha256_recorded
-
+    release_ready: false
+    validation:
+      structural: pending
+      visual: pending
   page_10_castle_reconstruction_svg:
-    target_path: assets/svg/page-10-castle-reconstruction.svg
-    pages: [10]
+    path: assets/svg/page-10-castle-reconstruction.svg
     class: svg
     kind: architectural_reconstruction
     nature: reconstitution
-    status: READY_RECONSTRUCTION
-    source_refs: [page_10_plan_real, canonical_pages]
-    confidence:
+    status: PRODUCED_PENDING_GEOMETRY_REVIEW
+    pages: &id005
+    - 10
+    zones: []
+    source_refs: &id006
+    - page_10_plan_real
+    - canonical_pages
+    confidence: &id007
       geometry: high
       volumetry: medium
       decorative_detail: low
+    sha256: 4f38fae4207ee9b4386806db5dc152c3e50421d3efa83233532d8c4bc669d320
+    text_free_required: true
+    must_be_labeled_reconstruction: true
+    release_ready: false
+    validation:
+      structural: pending
+      visual: pending_geometry_review
+  ornament_bundle_svg:
+    path: assets/svg/spiritualcept-ornaments.svg
+    class: svg
+    kind: ornament
+    nature: ornament
+    status: PRODUCED_VALIDATED
+    pages: &id008
+    - 1
+    - 2
+    - 3
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    zones: []
+    source_refs: &id009
+    - canonical_pages
+    confidence: high
+    sha256: 0ce48c14256c87e446c614392fae19444cf8fb1e07c04e3565092800e4fb985c
+    text_free_required: true
+    must_be_labeled_reconstruction: false
+    release_ready: true
+    validation:
+      structural: pending
+      visual: pass
+production_candidates:
+  heraldry_la_chambre_svg:
+    target_path: assets/svg/heraldry-la-chambre.svg
+    pages: *id001
+    zones: *id002
+    class: svg
+    kind: heraldry
+    nature: reconstitution
+    status: PRODUCED_PENDING_HERALDIC_REVIEW
+    source_refs: *id003
+    confidence: *id004
+    text_free_required: true
+    must_be_labeled_reconstruction: false
+    rule: Create an original vector rendering from the canonical blazon; do not copy
+      an unidentified external drawing.
+    validation_required:
+    - source_refs_resolve
+    - no_text_nodes
+    - no_embedded_raster
+    - blazon_semantics_match_pages_02_yaml
+    - sha256_recorded
+    sha256: 1c4eff522a5f73c36fc034dcb22a96aac0a292d6e57c241ba33aa0dfd400be61
+    produced: true
+    release_ready: false
+    review:
+      structural_validation: pending
+      visual_review: pending
+  page_10_castle_reconstruction_svg:
+    target_path: assets/svg/page-10-castle-reconstruction.svg
+    pages: *id005
+    class: svg
+    kind: architectural_reconstruction
+    nature: reconstitution
+    status: PRODUCED_PENDING_GEOMETRY_REVIEW
+    source_refs: *id006
+    confidence: *id007
     text_free_required: true
     must_be_labeled_reconstruction: true
     reconstruction_label: Reconstitution graphique à partir des sources documentées.
-    rule: Respect the real-plan geometry and avoid any architectural detail not supported by the source set.
+    rule: Respect the real-plan geometry and avoid any architectural detail not supported
+      by the source set.
     validation_required:
-      - geometry_review_against_page_10_plan_real
-      - no_text_nodes
-      - no_unsourced_historical_detail
-      - sha256_recorded
-
+    - geometry_review_against_page_10_plan_real
+    - no_text_nodes
+    - no_unsourced_historical_detail
+    - sha256_recorded
+    sha256: 4f38fae4207ee9b4386806db5dc152c3e50421d3efa83233532d8c4bc669d320
+    produced: true
+    release_ready: false
+    review:
+      structural_validation: pending
+      visual_review: pending_geometry_review
   page_10_plan_documentary_trace_svg:
     target_path: assets/svg/page-10-plan-documentary-trace.svg
-    pages: [10]
+    pages:
+    - 10
     class: svg
     kind: plan
     nature: document
     status: BLOCKED_RIGHTS
-    source_refs: [page_10_plan_real]
+    source_refs:
+    - page_10_plan_real
     text_free_required: true
     must_be_labeled_reconstruction: false
-    blocker: Direct tracing for distribution remains blocked until reproduction rights for the source plan are documented.
-
+    blocker: Direct tracing for distribution remains blocked until reproduction rights
+      for the source plan are documented.
   association_logo_svg:
     target_path: assets/svg/association-logo.svg
-    pages: [1, 16]
+    pages:
+    - 1
+    - 16
     class: svg
     kind: association_logo
     nature: document
     status: BLOCKED_SOURCE_MISSING
-    source_refs: [association_logo_source]
+    source_refs:
+    - association_logo_source
     text_free_required: false
-    blocker: Validated source asset is not yet committed or referenced by a canonical repository path.
-
+    blocker: Validated source asset is not yet committed or referenced by a canonical
+      repository path.
   ornament_bundle_svg:
     target_path: assets/svg/spiritualcept-ornaments.svg
-    pages: [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    pages: *id008
     class: svg
     kind: ornament
     nature: ornament
-    status: READY_ORNAMENT
-    source_refs: [canonical_pages]
+    status: PRODUCED_VALIDATED
+    source_refs: *id009
     confidence: high
     text_free_required: true
     must_be_labeled_reconstruction: false
-    rule: May reproduce the visual grammar of validated pages but must not encode names, dates, labels, maps, heraldic facts, or other historical assertions.
-
+    rule: May reproduce the visual grammar of validated pages but must not encode
+      names, dates, labels, maps, heraldic facts, or other historical assertions.
+    sha256: 0ce48c14256c87e446c614392fae19444cf8fb1e07c04e3565092800e4fb985c
+    produced: true
+    release_ready: true
+    review:
+      structural_validation: pending
+      visual_review: pass
 blocked_slots:
   page_04_recomposition:
     status: BLOCKED_EDITORIAL
@@ -281,25 +429,29 @@ blocked_slots:
   page_14_portrait:
     status: BLOCKED_EDITORIAL
     rule: Keep the former Philippe DEMARIO portrait slot empty; no substitute portrait.
-
 release_gate:
   required_for_new_asset:
-    - source_refs_resolve
-    - status_is_not_blocked
-    - text_policy_passes
-    - sha256_recorded_when_file_exists
-    - visual_review_passes
-    - reconstruction_label_policy_passes
+  - source_refs_resolve
+  - status_is_not_blocked
+  - text_policy_passes
+  - sha256_recorded_when_file_exists
+  - visual_review_passes
+  - reconstruction_label_policy_passes
   required_for_documentary_asset:
-    - rights_clearance_if_direct_source_reproduction
+  - rights_clearance_if_direct_source_reproduction
   required_for_reconstruction:
-    - confidence_declared
-    - no_unsourced_historical_detail
-    - source_boundaries_documented
-
+  - confidence_declared
+  - no_unsourced_historical_detail
+  - source_boundaries_documented
 next_batch_priority:
-  - heraldry_la_chambre_svg
-  - page_10_castle_reconstruction_svg
-  - ornament_bundle_svg
-  - association_logo_svg_after_source_commit
-  - page_10_plan_documentary_trace_svg_after_rights_clearance
+- heraldry_la_chambre_svg
+- page_10_castle_reconstruction_svg
+- ornament_bundle_svg
+- association_logo_svg_after_source_commit
+- page_10_plan_documentary_trace_svg_after_rights_clearance
+lot_2_progress:
+  produced_non_qr_svg: 3
+  release_ready_non_qr_svg: 1
+  human_review_pending: 2
+  note: Heraldry and page 10 massing are produced but deliberately remain behind human
+    review gates.
