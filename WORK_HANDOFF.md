@@ -38,6 +38,27 @@ Les `assets/page-NN.jpg` restent les références de comparaison et deviennent a
 - Page 4 = aucune mention « Académie de Maurienne ».
 - Auteurs = `Fabrice GALOPO, André GRANGE, Gérald KERMA`.
 
+## Phase B — lot 2 : état opérationnel
+Le lot 2 porte sur l'inventaire des sources/provenances et sur le déblocage contrôlé des premiers actifs SVG non textuels.
+
+Les deux registres opérationnels sont maintenant :
+- `sources/PROVENANCE_INDEX.yaml` : provenance, droits, confiance et limites d'usage ;
+- `assets/ASSET_INDEX_V3.yaml` : actifs atomiques produits, candidats, validés ou bloqués.
+
+`manifest-v3.yaml` reste le registre incrémental des actifs réellement produits dans le pipeline v3.
+
+État actuel du front SVG :
+- 16 QR SVG uniques : produits, validés et fonctionnels ;
+- `assets/svg/spiritualcept-ornaments.svg` : produit et validé pour un usage ornemental non textuel ;
+- `assets/svg/heraldry-la-chambre.svg` : produit, mais revue héraldique encore nécessaire avant promotion ;
+- `assets/svg/page-10-castle-reconstruction.svg` : produit, mais revue géométrique encore nécessaire avant promotion ;
+- `page_10_plan_documentary_trace_svg` : bloqué pour reproduction documentaire directe tant que les droits du plan source ne sont pas établis ;
+- `association_logo_svg` : bloqué tant que l'actif source validé n'est pas committé ou référencé par un chemin canonique du dépôt.
+
+Le fait qu'une source soit présente dans le dépôt ne vaut pas autorisation de reproduction directe. Les reconstitutions non fac-similé restent autorisées lorsqu'elles sont sourcées, traçables, sans texte généré, avec confiance et limites d'interprétation déclarées.
+
+Le prototype déterministe de décomposition/recomposition engagé sur la page 03 sert de banc d'essai technique. Il ne lève aucun verrou éditorial et ne transforme aucune page recomposée en nouveau canon sans validation humaine explicite.
+
 ## Pipeline cible par page
 Pour chaque page NN :
 
@@ -95,14 +116,6 @@ Elles restent autorisées mais deviennent une voie secondaire. Elles servent lor
 
 Elles restent sourcées, sans texte, avec confiance et limites déclarées.
 
-## État des actifs déjà produits
-- 16 QR SVG uniques : validés et fonctionnels.
-- `assets/svg/spiritualcept-ornaments.svg` : validé, réutilisable.
-- `assets/svg/heraldry-la-chambre.svg` : expérimental, revue héraldique non passée. Ne pas le promouvoir automatiquement ; une extraction du blason canonique ou une correction fidèle peut être préférable.
-- `assets/svg/page-10-castle-reconstruction.svg` : expérimental, revue géométrique non passée. Ne pas le promouvoir automatiquement ; privilégier les fragments canoniques existants pour la composition de page 10.
-- `page_10_plan_documentary_trace_svg` : toujours bloqué pour reproduction directe tant que les droits ne sont pas établis.
-- `association_logo_svg` : bloqué tant que la source validée n'a pas de chemin canonique.
-
 ## Verrous
 ### Page 4
 `PAGE_04_EDITORIAL_ARBITRATION_REQUIRED` reste actif pour la recomposition v3.
@@ -135,18 +148,16 @@ Les prochains actifs raster découpés devront être enregistrés comme actifs a
 - Les PDF, ZIP, planches contact et `dist/` ne sont jamais committés.
 
 ## Prochaine priorité d'exécution
-Suspendre la course aux SVG documentaires et lancer un **prototype de décomposition/recomposition sur une page non bloquée** :
+Poursuivre le lot 2 sans promouvoir prématurément les actifs expérimentaux :
 
-1. choisir une page représentative hors page 4 ;
-2. définir ses zones exactes ;
-3. extraire les illustrations/éléments graphiques depuis le raster canonique ;
-4. produire la trame de fond ;
-5. composer le texte canonique séparément ;
-6. réinjecter le QR déterministe s'il existe ;
-7. produire un PDF de contrôle avec vraie couche texte ;
-8. comparer visuellement avec le canon et mesurer la résolution effective des fragments.
-
-Ce prototype doit décider le pipeline des 16 pages avant industrialisation.
+1. vérifier et compléter la provenance des actifs non textuels réellement mobilisables ;
+2. résoudre les blocages de droits ou de source lorsque cela est possible ;
+3. faire passer la revue héraldique de `assets/svg/heraldry-la-chambre.svg` ;
+4. faire passer la revue géométrique de `assets/svg/page-10-castle-reconstruction.svg` ;
+5. conserver le tracé documentaire direct du plan page 10 bloqué tant que les droits de reproduction ne sont pas documentés ;
+6. conserver le logo association bloqué tant que sa source canonique n'est pas enregistrée ;
+7. poursuivre le prototype page 03 comme test de pipeline multicouche, sans promotion en canon ;
+8. ne produire de nouveaux SVG documentaires que lorsqu'ils apportent une valeur réelle et que leur provenance est résolue.
 
 ## Validation
 Après modification d'une référence historique : `make sync && make validate`.

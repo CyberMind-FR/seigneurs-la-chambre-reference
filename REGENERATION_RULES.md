@@ -63,6 +63,40 @@ Produire un SVG uniquement lorsqu'il apporte une valeur réelle :
 
 Ne pas reconstruire en SVG une illustration raster validée simplement pour obtenir du vectoriel. Si le fragment canonique est de qualité suffisante pour la taille d'impression cible, le fragment raster est préféré à une reconstruction spéculative.
 
+## Phase B — lot 2 : sources, provenances et premiers SVG documentaires
+Le lot 2 formalise l'inventaire documentaire et le déblocage contrôlé des premiers actifs vectoriels non textuels.
+
+Les registres opérationnels sont :
+- `sources/PROVENANCE_INDEX.yaml` pour la provenance, les droits, les niveaux de confiance et les limites d'usage ;
+- `assets/ASSET_INDEX_V3.yaml` pour l'état des actifs atomiques produits, candidats ou bloqués ;
+- `manifest-v3.yaml` pour les actifs effectivement produits et enregistrés dans le pipeline v3.
+
+Tout nouvel actif documentaire ou reconstruit doit renseigner au minimum :
+- `id` ;
+- `type` ou `class` / `kind` ;
+- `status` ;
+- `source_refs` ;
+- `source_kind` lorsque pertinent ;
+- `rights_status` ou la section `rights` ;
+- `confidence` lorsque l'actif comporte une interprétation ;
+- `text_free_required` ;
+- `must_be_labeled_reconstruction` lorsqu'il s'agit d'une restitution ;
+- `sha256` dès que le fichier existe ;
+- l'état des validations et les éventuels blocages.
+
+Le fait qu'une source soit présente dans le dépôt ne vaut jamais, à lui seul, autorisation de reproduction directe. Une reproduction documentaire directe exige que les droits soient explicitement établis. En revanche, une reconstitution non fac-similé peut être autorisée lorsqu'elle est fondée sur des `source_refs` identifiés, que son niveau de confiance est déclaré et qu'elle ne copie pas directement une source dont les droits restent inconnus.
+
+### Matrice de déblocage active
+À la date de ce lot :
+- les 16 QR SVG uniques sont produits et fonctionnels ;
+- `assets/svg/spiritualcept-ornaments.svg` est produit et validé pour son usage ornemental non textuel ;
+- `assets/svg/heraldry-la-chambre.svg` est produit mais reste en attente de revue héraldique avant promotion ;
+- `assets/svg/page-10-castle-reconstruction.svg` est produit mais reste en attente de revue géométrique avant promotion ;
+- le tracé documentaire direct du plan réel de la page 10 reste bloqué tant que les droits de reproduction du plan source ne sont pas documentés ;
+- le SVG du logo de l'association reste bloqué tant que l'actif source validé n'est pas committé ou référencé par un chemin canonique du dépôt.
+
+Ce lot n'autorise pas, à lui seul, la recomposition complète d'une page ni la promotion automatique d'un actif encore marqué `pending`, `blocked` ou équivalent.
+
 ## Reconstitutions
 Les reconstitutions restent autorisées, mais deviennent une voie **secondaire** par rapport à l'extraction d'un visuel canonique existant.
 

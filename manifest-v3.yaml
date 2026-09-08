@@ -1021,3 +1021,24 @@ build_contract:
   qr_payload_source: qr_registry.yaml
   unknown_metadata_policy: block
   page_04_policy: PAGE_04_EDITORIAL_ARBITRATION_REQUIRED
+phase_b_lot_2:
+  status: active
+  purpose: sources_provenances_and_controlled_svg_unlock
+  registries:
+    provenance: sources/PROVENANCE_INDEX.yaml
+    atomic_assets: assets/ASSET_INDEX_V3.yaml
+  policy:
+    repository_presence_does_not_clear_reproduction_rights: true
+    direct_documentary_reproduction_requires_rights_clearance: true
+    reconstruction_authorized: true
+    reconstruction_requires_source_refs: true
+    reconstruction_requires_confidence: true
+    generated_text_in_graphic_assets_forbidden: true
+    page_recomposition_authorized_by_this_lot: false
+  asset_gate:
+    qr_svg: produced_validated
+    ornament_bundle_svg: produced_validated
+    heraldry_la_chambre_svg: produced_pending_heraldic_review
+    page_10_castle_reconstruction_svg: produced_pending_geometry_review
+    page_10_plan_documentary_trace_svg: blocked_rights
+    association_logo_svg: blocked_source_missing
