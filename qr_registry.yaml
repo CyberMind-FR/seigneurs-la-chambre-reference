@@ -88,7 +88,7 @@ pages:
       verification_source: QR original du livret, décodé machine; Tour de Châtel-André confirmée par la commune de Sainte-Marie-de-Cuines.
       verification_source_url: https://www.stemariedecuines.fr/fr/il4-mairie%2Cpatrimoine%2Ccommunal_p43-les-vestiges-medievaux.aspx
       provenance: payload exact décodé du QR du livret source original
-  08:
+  '08':
     title: La Maison-Forte du Châtelet
     qrs:
     - id: google_maps
@@ -104,7 +104,7 @@ pages:
       verification_source: QR original du livret, décodé machine; Le Châtelet confirmé par la commune de Saint-Étienne-de-Cuines.
       verification_source_url: https://www.st-etienne-cuines.fr/saint-etienne-de-cuines/histoire-et-patrimoine/
       provenance: payload exact décodé du QR du livret source original
-  09:
+  '09':
     title: La Maison-Forte de Gruyère
     qrs:
     - id: google_maps

@@ -57,7 +57,7 @@ canonical_text: 'LES SEIGNEURS DE LA CHAMBRE
 
   Au profit de la sauvegarde du Couvent des Cordeliers'
 visual_reference: assets/page-15.jpg
-visual_reference_sha256: ca967ef2d0f702561141d242d4c4e9c67568c0fba30e29f21638a8bd4f8569b5
+visual_reference_sha256: e2b31837f4393bbb3ccc0db4e0c523a91aa9237c165184aa7e959d555117606d
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

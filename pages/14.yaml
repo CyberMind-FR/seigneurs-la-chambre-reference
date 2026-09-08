@@ -56,7 +56,7 @@ canonical_text: 'L''Association
 
   Décembre 2025'
 visual_reference: assets/page-14.jpg
-visual_reference_sha256: bd75f48f70f7485f782bedd94c58c528df4e64498fcb54d874ef30d41e3fd0da
+visual_reference_sha256: 50ed5e18685a9b057f52ad6e769786e9d9d830628a542a868d13334462d92003
 layout_signature:
   top: titre + sous-titre + éléments d'identité
   middle: narration + illustration(s) documentaire(s)

@@ -13,9 +13,19 @@ page_14:
   canonical_changes:
   - Collecte Fondation du Patrimoine (66%)
   - Fabrice GALOPO, André GRANGE, Gérald KERMA
+  - contact@couventdelachambre.fr
   forbidden:
   - Collecte Fondation du Patrimoine (75%)
   - Fabrice GALOPO et Gérald KERMA
+  - contact@couventdeelachambre.fr
+  raster_correction_2026_09_08:
+    status: applied
+    reason: L'adresse imprimée comportait un e surnuméraire, confirmé par OCR et inspection agrandie.
+    was: contact@couventdeelachambre.fr
+    now: contact@couventdelachambre.fr
+    forbidden: contact@couventdeelachambre.fr
+    method: Suppression de la chasse de 9 px du second e et décalage local du suffixe; réencodage avec les tables JPEG d'origine.
+    rule: Zone unique x=346..468, y=642..671; 6 pixels avec écart RGB cumulé > 12 hors zone.
   note: Ne modifier aucun autre contenu, nom, rôle, illustration ou bloc de cette page.
 page_15:
   status: canonical_override
@@ -23,9 +33,27 @@ page_15:
   canonical_changes:
   - Adhésion: 5 € • Dons déductibles 66 % • Fondation du Patrimoine 66 %
   - Auteurs: Fabrice GALOPO, André GRANGE, Gérald KERMA — Commission Histoire et Patrimoine
+  - Préserver et valoriser le patrimoine médiéval de la Maurienne
   forbidden:
   - Fondation du Patrimoine 75 %
   - Fabrice GALOPO & Gérald KERMA
+  - Fabrice GALLOPO
+  - valoriser de patrimoine
+  raster_corrections_2026_09_08:
+  - status: applied
+    reason: Le nom imprimé contenait un L surnuméraire, confirmé par OCR et inspection agrandie.
+    was: Fabrice GALLOPO
+    now: Fabrice GALOPO
+    forbidden: Fabrice GALLOPO
+    method: Suppression de la chasse de 8 px du second L et décalage local de la fin de ligne; réencodage avec les tables JPEG d'origine.
+    rule: Zone x=344..797, y=1355..1377; mesure cumulée page 15 de 4 pixels avec écart RGB cumulé > 12 hors zones.
+  - status: applied
+    reason: L'article imprimé était incorrect, confirmé par OCR et inspection agrandie.
+    was: valoriser de patrimoine
+    now: valoriser le patrimoine
+    forbidden: valoriser de patrimoine
+    method: Remplacement du d par le glyphe l prélevé dans « la » sur la même ligne, sans fonte système; réencodage avec les tables JPEG d'origine.
+    rule: Zone x=404..421, y=1126..1161; mesure cumulée page 15 de 4 pixels avec écart RGB cumulé > 12 hors zones.
   note: Ne modifier aucun autre contenu, nom, rôle, illustration ou bloc de cette page.
 page_10:
   status: visual_source_override
