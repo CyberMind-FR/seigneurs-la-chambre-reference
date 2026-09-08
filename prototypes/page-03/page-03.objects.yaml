@@ -1,0 +1,140 @@
+schema_version: 1
+project: Les Seigneurs de La Chambre
+page: 3
+status: VISUAL_INVENTORY_REQUIRED
+purpose: exhaustive object-level inventory before any fragment extraction
+
+canonical_reference:
+  path: assets/page-03.jpg
+  sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
+
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  this_file_role: exhaustive_production_inventory
+  extraction_allowed_before_complete_visual_pass: false
+  inferred_bbox_forbidden: true
+  inferred_object_forbidden: true
+
+inventory_protocol:
+  pass_1:
+    name: full_page_visual_sweep
+    action: inspect complete canonical raster at native resolution
+    output: every visible object including marginal and decorative objects
+  pass_2:
+    name: region_decomposition
+    action: associate each object with zero or more Phase A macro zones without forcing one-to-one mapping
+  pass_3:
+    name: object_measurement
+    action: measure exact pixel bounding box on canonical raster
+  pass_4:
+    name: subobject_decomposition
+    action: split composite objects when text, border, illustration, shadow, cartouche, QR or ornament require independent treatment
+  pass_5:
+    name: layer_assignment
+    action: assign background raster_fragment documentary_vector text_layer or functional_overlay
+  pass_6:
+    name: completeness_review
+    action: compare inventory overlay against entire page and explicitly account for every visible non-background element
+
+object_schema:
+  required_fields:
+    - id
+    - visual_description
+    - object_class
+    - source_bbox_px
+    - parent_region
+    - phase_a_zone_refs
+    - layer_target
+    - text_relationship
+    - extraction_action
+    - provenance
+    - review_status
+  bbox_format: [x, y, width, height]
+  classes:
+    - illustration
+    - photograph
+    - documentary_map
+    - heraldry
+    - ornament
+    - border
+    - separator
+    - cartouche
+    - icon
+    - intrinsic_document_text
+    - editorial_text
+    - qr
+    - background_texture
+    - composite
+    - other_verified
+
+regions:
+  - id: R01
+    role: header_identity
+    bbox_px: null
+    review_status: TO_MEASURE
+    objects: []
+  - id: R02
+    role: upper_narrative
+    bbox_px: null
+    review_status: TO_MEASURE
+    objects: []
+  - id: R03
+    role: middle_narrative
+    bbox_px: null
+    review_status: TO_MEASURE
+    objects: []
+  - id: R04
+    role: lower_narrative
+    bbox_px: null
+    review_status: TO_MEASURE
+    objects: []
+  - id: R05
+    role: map_and_location
+    bbox_px: null
+    review_status: TO_MEASURE
+    objects: []
+  - id: R06
+    role: site_visit_information
+    bbox_px: null
+    review_status: TO_MEASURE
+    objects: []
+  - id: R07
+    role: page_wide_marginalia_and_structure
+    bbox_px: null
+    review_status: TO_MEASURE
+    objects: []
+
+known_functional_object:
+  id: P03-O-QR01
+  visual_description: Google Maps QR
+  object_class: qr
+  source_bbox_px: [1435, 2081, 234, 234]
+  parent_region: R05
+  phase_a_zone_refs: []
+  layer_target: functional_overlay
+  text_relationship: none
+  extraction_action: do_not_extract_use_deterministic_svg
+  provenance: qr_registry.yaml
+  asset: assets/qr-svg/page-03-google-maps.svg
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+
+completeness_gate:
+  status: BLOCKED
+  requirements:
+    - native_raster_dimensions_recorded
+    - all_regions_measured
+    - all_visible_objects_enumerated
+    - all_composite_objects_decomposed
+    - all_editorial_text_excluded_from_raster_fragment_outputs
+    - all_intrinsic_document_text_explicitly_classified
+    - all_ornaments_and_marginalia_accounted_for
+    - qr_accounted_for
+    - second_visual_sweep_finds_no_unregistered_object
+  extraction_unblock_condition: completeness_gate.status == PASS
+
+notes:
+  - Phase A reported nine visual zones for page 03; that count must not be interpreted as nine extractable objects.
+  - An object may cross macro-zone boundaries and a macro-zone may contain many objects.
+  - No object coordinates except the already canonical QR placement are asserted until measured from the full raster.
+  - The inventory must include small borders, separators, shadows, cartouches, marginal marks and decorative fragments when visibly present.
