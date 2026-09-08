@@ -4,17 +4,17 @@
 Migrer le livret/exposition vers une composition reproductible à couche texte sans dérive éditoriale ni visuelle. Le dépôt GitHub est l’unique source de vérité.
 
 ## Décision méthodologique active
-La méthode prioritaire de la v3 est désormais la **composition multicouche à partir des pages canoniques décomposées**.
+La méthode prioritaire de la v3 est la **composition multicouche à partir des pages canoniques décomposées**.
 
-On ne cherche plus à redessiner systématiquement les illustrations en SVG. On repart des 16 pages validées, on en extrait les morceaux visuels utiles, on crée une trame de fond indépendante, puis on recompose :
+On ne redessine plus systématiquement les illustrations en SVG. On repart des pages validées et on recompose :
 
-1. fond/trame papier ;
-2. fragments raster documentaires et illustrations validées ;
+1. fond/trame papier indépendant ;
+2. fragments raster documentaires extraits des pages canoniques ;
 3. vecteurs réellement utiles ;
-4. texte canonique en couche texte ;
-5. QR et éléments fonctionnels en overlay final.
+4. texte canonique en vraie couche texte ;
+5. QR et éléments fonctionnels déterministes en overlay final.
 
-Les `assets/page-NN.jpg` restent les références de comparaison et deviennent aussi, lorsque les droits et la qualité le permettent, une source de fragments graphiques. Ils ne sont pas destinés à rester les pages finales aplaties de la v3.
+Les `assets/page-NN.jpg` restent les références de comparaison et servent, lorsque leur qualité et leur statut le permettent, de sources de fragments. Ils ne sont pas les pages finales aplaties de la v3.
 
 ## Ordre de lecture obligatoire
 1. `REGENERATION_RULES.md`
@@ -27,6 +27,7 @@ Les `assets/page-NN.jpg` restent les références de comparaison et deviennent a
 8. `qr_registry.yaml`
 9. `assets/page-NN.jpg`
 10. `docs/migration-text-layer/PHASE_A_APPROVAL.md`
+11. `docs/migration-text-layer/PHASE_B_PAGE03_LAYERED_PROTOTYPE.md`
 
 ## Canon actuel
 - 16 pages, `assets/page-01.jpg` à `assets/page-16.jpg`.
@@ -38,90 +39,101 @@ Les `assets/page-NN.jpg` restent les références de comparaison et deviennent a
 - Page 4 = aucune mention « Académie de Maurienne ».
 - Auteurs = `Fabrice GALOPO, André GRANGE, Gérald KERMA`.
 
-## Phase B — lot 2 : état opérationnel
-Le lot 2 porte sur l'inventaire des sources/provenances et sur le déblocage contrôlé des premiers actifs SVG non textuels.
+## Prototype page 03 : méthode validée
+Le prototype multicouche de la page 03 a été exécuté de bout en bout.
 
-Les deux registres opérationnels sont maintenant :
-- `sources/PROVENANCE_INDEX.yaml` : provenance, droits, confiance et limites d'usage ;
-- `assets/ASSET_INDEX_V3.yaml` : actifs atomiques produits, candidats, validés ou bloqués.
+Run de référence : `34259978419` sur le commit `5eef23415fe41424cb4dc37488225414d139e949`.
 
-`manifest-v3.yaml` reste le registre incrémental des actifs réellement produits dans le pipeline v3.
+Résultats :
+- 11 fragments raster réellement découpés depuis `assets/page-03.jpg` ;
+- 25 blocs canoniques présents dans le PDF final ;
+- vraie couche texte : PASS ;
+- QR final décodé machine avec payload exact : PASS ;
+- SHA des fragments : PASS ;
+- source canonique inchangée : PASS ;
+- inspection visuelle effectuée ;
+- méthode : **PASS_WITH_RESOLUTION_BLOCKER**.
 
-État actuel du front SVG :
-- 16 QR SVG uniques : produits, validés et fonctionnels ;
-- `assets/svg/spiritualcept-ornaments.svg` : produit et validé pour un usage ornemental non textuel ;
-- `assets/svg/heraldry-la-chambre.svg` : produit, mais revue héraldique encore nécessaire avant promotion ;
-- `assets/svg/page-10-castle-reconstruction.svg` : produit, mais revue géométrique encore nécessaire avant promotion ;
-- `page_10_plan_documentary_trace_svg` : bloqué pour reproduction documentaire directe tant que les droits du plan source ne sont pas établis ;
-- `association_logo_svg` : bloqué tant que l'actif source validé n'est pas committé ou référencé par un chemin canonique du dépôt.
+Rapport : `docs/migration-text-layer/PHASE_B_PAGE03_LAYERED_PROTOTYPE.md`.
 
-Le fait qu'une source soit présente dans le dépôt ne vaut pas autorisation de reproduction directe. Les reconstitutions non fac-similé restent autorisées lorsqu'elles sont sourcées, traçables, sans texte généré, avec confiance et limites d'interprétation déclarées.
+### Gate de résolution découvert
+La page 03 canonique mesure seulement `1024 × 1536 px`. À l’échelle A5 du prototype, les fragments représentent environ **185,78 ppi**, sous le gate A5 de 300 ppi.
 
-Le prototype déterministe de décomposition/recomposition engagé sur la page 03 sert de banc d'essai technique. Il ne lève aucun verrou éditorial et ne transforme aucune page recomposée en nouveau canon sans validation humaine explicite.
+Ce problème est un gate de qualité des actifs, pas un échec de la méthode de composition. Ne jamais le masquer par un upscale présenté comme récupération de détail.
+
+Pour chaque fragment basse résolution, les voies légitimes sont :
+1. retrouver une source haute définition ;
+2. réduire sa taille de placement ;
+3. valider explicitement un seuil inférieur ;
+4. vectoriser seulement ce qui peut l’être sans dérive documentaire.
+
+## Industrialisation active : famille des pages « site »
+Le prototype page 03 devient le modèle technique de la famille de pages patrimoniales.
+
+Première vague d’industrialisation :
+- page 05 — Château Joli ;
+- page 06 — Tour de Burgin ;
+- page 07 — Tour de Châtel-André ;
+- page 08 — Maison-Forte du Châtelet ;
+- page 09 — Maison-Forte de Gruyère ;
+- page 11 — Tour de Notre-Dame-du-Cruet ;
+- page 12 — Maison Forte de La Landonnière.
+
+La page 04 est exclue car bloquée éditorialement. La page 10 est traitée séparément à cause du plan réel et de son verrou géométrique. Les pages 13 à 16 ont des structures spécifiques et seront industrialisées après la famille « site ».
+
+L’industrialisation commence par une mesure déterministe de chaque raster et la production de diagnostics visuels. Les bounding boxes sémantiques restent soumises à revue humaine avant extraction, exactement comme sur la page 03.
 
 ## Pipeline cible par page
-Pour chaque page NN :
-
 ### A. Cartographier
 - lire `pages/NN.yaml` et `assets/ASSET_SPEC.md` ;
-- identifier les zones texte, illustrations, documents, ornements, QR et espaces de fond ;
+- identifier texte, illustrations, cartes, ornements, QR et espaces de fond ;
 - comparer avec `assets/page-NN.jpg`.
 
-### B. Extraire
-Créer des fragments indépendants uniquement pour les zones utiles :
-- illustrations ;
-- photos ;
-- gravures ;
-- cartes/plans lorsque leur réutilisation est autorisée ;
-- éléments graphiques particuliers.
+### B. Mesurer
+- vérifier le SHA du raster ;
+- mesurer dimensions et densités visuelles sans OCR ;
+- produire overlay et planche-contact ;
+- ne jamais transformer une détection automatique en crop approuvé sans revue.
 
-Les fragments doivent être nettoyés du texte éditorial qui sera recomposé séparément. Aucun détail manquant n'est inventé pour remplir un détourage.
+### C. Extraire
+Créer uniquement les fragments approuvés : illustrations, photos, gravures, cartes/plans autorisés et éléments graphiques particuliers.
 
-### C. Construire le fond
-Utiliser une trame SpiritualCept claire, reproductible et indépendante du contenu documentaire. Le fond peut recevoir grain, filets et ornements génériques, mais aucune information historique implicite.
+Les légendes réellement présentes dans l’image mais absentes du YAML canonique restent intégrées au fragment raster, sauf décision éditoriale explicite. Elles ne sont ni OCRisées comme source de vérité ni réinventées.
 
-### D. Recomposer le texte
+### D. Construire le fond
+Utiliser une trame SpiritualCept claire, reproductible et indépendante du contenu documentaire.
+
+### E. Recomposer le texte
 Le texte vient uniquement de `pages/NN.yaml:canonical_text` et des corrections validées. Il doit rester du vrai texte dans le PDF final lorsque techniquement possible.
 
-Ne jamais utiliser l'OCR de la page JPEG comme source éditoriale de vérité.
+### F. Ajouter les fonctions
+Les QR viennent uniquement de `qr_registry.yaml` et des SVG déterministes validés. Leur placement part des coordonnées canoniques normalisées. Ils sont rendus en dernier.
 
-### E. Ajouter les fonctions
-Les QR viennent uniquement de `qr_registry.yaml` et des SVG déterministes déjà validés. Ils sont placés en dernier afin de rester parfaitement décodables.
+### G. Valider
+- SHA source ;
+- SHA fragments ;
+- présence exacte de tous les blocs de texte canonique ;
+- QR décodé depuis le rendu PDF final ;
+- résolution effective par fragment ;
+- inspection visuelle ;
+- comparaison avec la référence canonique.
 
-### F. Valider
-- comparer la nouvelle composition à la référence canonique ;
-- vérifier texte, positions, fragments, résolution d'impression et QR ;
-- enregistrer provenance et SHA ;
-- exécuter les validateurs ;
-- ne promouvoir la page qu'après inspection.
+## SVG : rôle limité et utile
+Le SVG reste privilégié pour QR, ornements, filets/formes, héraldique correctement spécifiée et documents dont la vectorisation est justifiée.
 
-## SVG : nouveau rôle
-Le SVG n'est plus la destination systématique des illustrations.
-
-À conserver/privilégier pour :
-- QR ;
-- ornements ;
-- filets/formes ;
-- héraldique spécifiée ;
-- éléments géométriques simples ;
-- documents dont la vectorisation est justifiée.
-
-À éviter pour :
-- reconstruction artificielle d'une illustration canonique déjà exploitable ;
-- volumétrie architecturale spéculative ;
-- remplacement d'une gravure/photo simplement pour « tout vectoriser ».
+Il n’est pas utilisé pour remplacer artificiellement une illustration canonique exploitable.
 
 ## Reconstitutions
-Elles restent autorisées mais deviennent une voie secondaire. Elles servent lorsqu'il n'existe pas de fragment canonique exploitable, lorsqu'une nouvelle vue est explicitement souhaitée, ou lorsqu'une restitution hypothétique est un objectif éditorial identifié.
+Elles restent autorisées mais secondaires. Elles servent lorsqu’aucun fragment canonique exploitable n’existe, lorsqu’une nouvelle vue est explicitement souhaitée, ou lorsqu’une restitution hypothétique est un objectif éditorial identifié.
 
 Elles restent sourcées, sans texte, avec confiance et limites déclarées.
 
 ## Verrous
 ### Page 4
-`PAGE_04_EDITORIAL_ARBITRATION_REQUIRED` reste actif pour la recomposition v3.
+`PAGE_04_EDITORIAL_ARBITRATION_REQUIRED` reste actif pour toute recomposition v3.
 
 ### Page 10
-Le plan réel reste l'autorité pour toute nouvelle reconstitution. La composition v3 peut réutiliser les fragments validés de la page canonique sans créer une nouvelle architecture.
+Le plan réel reste l’autorité pour toute nouvelle reconstitution. La composition v3 privilégie les fragments validés de la page canonique plutôt qu’une nouvelle architecture spéculative.
 
 ### Page 13
 QR déterministes, alignés et réinjectés en dernier.
@@ -135,34 +147,31 @@ Aucun portrait de Philippe DEMARIO, y compris sous forme de fragment extrait.
 - `manifest-v3.yaml` : actifs réellement produits ;
 - `assets/ASSET_SPEC.md` : cartographie des zones et besoins de production.
 
-Les prochains actifs raster découpés devront être enregistrés comme actifs atomiques avec : page source, zone source, bounding box ou masque de découpe, traitement appliqué, dimensions, résolution cible, SHA-256 et statut de droits.
+Chaque fragment raster produit doit enregistrer : page source, zone/bounding box source, traitement, dimensions, résolution effective, SHA-256, statut de droits et état de validation.
 
 ## Règles de travail
 - Ne jamais inventer de contenu.
-- Ne jamais faire d'une reconstruction générative la solution par défaut.
-- Préférer un fragment canonique fidèle lorsqu'il est exploitable.
-- Le texte est une couche indépendante, pas une partie de l'image.
-- Le fond est une couche indépendante, pas un morceau de page aplatie.
+- Ne jamais faire d’une reconstruction générative la solution par défaut.
+- Préférer un fragment canonique fidèle lorsqu’il est exploitable.
+- Le texte est une couche indépendante.
+- Le fond est une couche indépendante.
 - Les QR sont une couche fonctionnelle indépendante et déterministe.
-- Une retouche d'un fragment reste locale et traçable.
+- Une retouche d’un fragment reste locale et traçable.
 - Les PDF, ZIP, planches contact et `dist/` ne sont jamais committés.
 
-## Prochaine priorité d'exécution
-Poursuivre le lot 2 sans promouvoir prématurément les actifs expérimentaux :
-
-1. vérifier et compléter la provenance des actifs non textuels réellement mobilisables ;
-2. résoudre les blocages de droits ou de source lorsque cela est possible ;
-3. faire passer la revue héraldique de `assets/svg/heraldry-la-chambre.svg` ;
-4. faire passer la revue géométrique de `assets/svg/page-10-castle-reconstruction.svg` ;
-5. conserver le tracé documentaire direct du plan page 10 bloqué tant que les droits de reproduction ne sont pas documentés ;
-6. conserver le logo association bloqué tant que sa source canonique n'est pas enregistrée ;
-7. poursuivre le prototype page 03 comme test de pipeline multicouche, sans promotion en canon ;
-8. ne produire de nouveaux SVG documentaires que lorsqu'ils apportent une valeur réelle et que leur provenance est résolue.
+## Priorité d’exécution
+1. mesurer en CI les pages 05, 06, 07, 08, 09, 11 et 12 ;
+2. revoir visuellement les diagnostics et approuver les crops sémantiques ;
+3. généraliser le compositeur page 03 en compositeur piloté par YAML ;
+4. produire un proof multicouche par page de la famille ;
+5. reporter automatiquement texte, QR, SHA et ppi ;
+6. traiter ensuite page 10, puis les structures spécifiques 13–16 ;
+7. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
 
 ## Validation
-Après modification d'une référence historique : `make sync && make validate`.
+Après modification d’une référence historique : `make sync && make validate`.
 
-Après production d'actifs v3 : enregistrer les SHA/provenances puis `make validate`.
+Après production d’actifs v3 : enregistrer les SHA/provenances puis `make validate`.
 
 Après composition imprimable : `make build`, validation QR finale et contrôle de la couche texte.
 
