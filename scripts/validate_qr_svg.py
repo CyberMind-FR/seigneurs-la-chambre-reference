@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import tempfile
 from pathlib import Path
 
 import cairosvg
@@ -79,35 +80,35 @@ def validate(registry_path: Path, out_dir: Path, lock_path: Path, report_path: P
     if set(lock_by_path) != expected_names:
         raise SystemExit("QR SVG lock manifest does not match generated SVG set")
 
-    temp_dir = Path("dist/qr-svg-validation")
-    temp_dir.mkdir(parents=True, exist_ok=True)
     rows = []
     failures = []
 
-    for name in sorted(expected_names):
-        path = out_dir / name
-        raw = path.read_bytes()
-        lowered = raw.lower()
-        found_forbidden = [token.decode("ascii") for token in FORBIDDEN if token in lowered]
-        sha = hashlib.sha256(raw).hexdigest()
-        lock_item = lock_by_path[name]
-        sha_ok = sha == lock_item.get("sha256")
-        size = decode_svg(path, expected[name]["payload"], temp_dir)
-        decode_ok = size > 0
-        ok = not found_forbidden and sha_ok and decode_ok
-        if not ok:
-            failures.append(name)
-        rows.append(
-            {
-                "refs": ", ".join(expected[name]["refs"]),
-                "name": name,
-                "sha": sha,
-                "sha_ok": sha_ok,
-                "decode_ok": decode_ok,
-                "render_size": size,
-                "forbidden": ",".join(found_forbidden) if found_forbidden else "none",
-            }
-        )
+    with tempfile.TemporaryDirectory(prefix="seigneurs-qr-svg-") as tmp:
+        temp_dir = Path(tmp)
+        for name in sorted(expected_names):
+            path = out_dir / name
+            raw = path.read_bytes()
+            lowered = raw.lower()
+            found_forbidden = [token.decode("ascii") for token in FORBIDDEN if token in lowered]
+            sha = hashlib.sha256(raw).hexdigest()
+            lock_item = lock_by_path[name]
+            sha_ok = sha == lock_item.get("sha256")
+            size = decode_svg(path, expected[name]["payload"], temp_dir)
+            decode_ok = size > 0
+            ok = not found_forbidden and sha_ok and decode_ok
+            if not ok:
+                failures.append(name)
+            rows.append(
+                {
+                    "refs": ", ".join(expected[name]["refs"]),
+                    "name": name,
+                    "sha": sha,
+                    "sha_ok": sha_ok,
+                    "decode_ok": decode_ok,
+                    "render_size": size,
+                    "forbidden": ",".join(found_forbidden) if found_forbidden else "none",
+                }
+            )
 
     report_path.parent.mkdir(parents=True, exist_ok=True)
     lines = [
