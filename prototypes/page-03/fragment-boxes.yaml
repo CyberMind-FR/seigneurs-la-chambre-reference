@@ -1,7 +1,90 @@
-schema_version: 1
+schema_version: 2
 page: 3
 source: assets/page-03.jpg
+source_dimensions_px:
+  width: 1024
+  height: 1536
+review_basis:
+  workflow_run: 34251564059
+  artifact: prototype-page03-measurement
+  diagnostic_overlay: candidate-overlay.jpg
+  diagnostic_contact_sheet: candidate-contact-sheet.jpg
 policy: >-
-  Bounding boxes must come from measurement diagnostics and human visual review.
-  Never guess a box from the semantic zone name. Only status APPROVED is extracted.
-fragments: []
+  Bounding boxes are approved only after visual review of the measurement artifact.
+  They preserve validated page-03 visuals and intentionally keep raster captions that
+  are visible in the canonical page but absent from pages/03.yaml:canonical_text.
+  Main editorial text, map/location headings, practical information and QR are composed
+  separately as live/deterministic layers.
+fragments:
+  - id: portal_gothique_captioned
+    role: documentary_illustration_with_canonical_raster_caption
+    status: APPROVED
+    bbox_px: {x: 29, y: 18, w: 181, h: 238}
+    placement: source_coordinates
+    treatment: crop_only
+  - id: cloister_baroque_captioned
+    role: documentary_illustration_with_canonical_raster_caption
+    status: APPROVED
+    bbox_px: {x: 30, y: 260, w: 180, h: 262}
+    placement: source_coordinates
+    treatment: crop_only
+  - id: salle_capitulaire_captioned
+    role: documentary_illustration_with_canonical_raster_caption
+    status: APPROVED
+    bbox_px: {x: 30, y: 528, w: 181, h: 264}
+    placement: source_coordinates
+    treatment: crop_only
+  - id: franciscan_monk_captioned
+    role: documentary_illustration_with_canonical_raster_caption
+    status: APPROVED
+    bbox_px: {x: 778, y: 82, w: 205, h: 224}
+    placement: source_coordinates
+    treatment: crop_only
+  - id: valley_cruet_captioned
+    role: documentary_illustration_with_canonical_raster_caption
+    status: APPROVED
+    bbox_px: {x: 744, y: 265, w: 252, h: 264}
+    placement: source_coordinates
+    treatment: crop_only
+  - id: nave_captioned
+    role: documentary_illustration_with_canonical_raster_caption
+    status: APPROVED
+    bbox_px: {x: 787, y: 536, w: 204, h: 286}
+    placement: source_coordinates
+    treatment: crop_only
+  - id: portal_detail
+    role: documentary_detail
+    status: APPROVED
+    bbox_px: {x: 638, y: 836, w: 114, h: 194}
+    placement: source_coordinates
+    treatment: crop_only
+  - id: lintel_accolade_captioned
+    role: documentary_detail_with_canonical_raster_caption
+    status: APPROVED
+    bbox_px: {x: 787, y: 821, w: 205, h: 221}
+    placement: source_coordinates
+    treatment: crop_only
+  - id: map_document
+    role: documentary_map
+    status: APPROVED
+    bbox_px: {x: 39, y: 1092, w: 360, h: 197}
+    placement: source_coordinates
+    treatment: crop_only
+    note: intrinsic map labels remain raster; heading CARTE is live text
+  - id: localization_illustration
+    role: documentary_illustration
+    status: APPROVED
+    bbox_px: {x: 421, y: 1180, w: 240, h: 109}
+    placement: source_coordinates
+    treatment: crop_only
+  - id: site_visit_illustration
+    role: documentary_illustration
+    status: APPROVED
+    bbox_px: {x: 471, y: 1368, w: 426, h: 139}
+    placement: source_coordinates
+    treatment: crop_only
+validation:
+  no_free_reconstruction: true
+  canonical_source_sha_required: true
+  sha256_per_fragment_required: true
+  effective_ppi_must_be_measured: true
