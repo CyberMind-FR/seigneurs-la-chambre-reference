@@ -1,0 +1,49 @@
+schema_version: 1
+phase: B
+purpose: repository_source_inventory
+policy: >-
+  Inventory only. Presence in the repository does not imply reproduction rights.
+  No BLOCKED asset becomes READY through this file.
+canonical_reference_pages:
+  pattern: assets/page-NN.jpg
+  count: 16
+  role: composition_reference
+  rights_effect: none
+  production_rule: >-
+    May guide validated composition and local comparison only; does not by itself
+    authorize redrawing documentary or historical content.
+functional_sources:
+  - path: qr_registry.yaml
+    role: canonical_qr_payload_registry
+    status: VERIFIED_FUNCTIONAL_SOURCE
+    production_scope: deterministic_qr_only
+    derived_assets: assets/qr-svg/*.svg
+    validation: machine_decode_exact
+special_documentary_sources:
+  - path: assets/reference/page-10-plan-reel.jpg
+    role: geometry_authority_for_P10-Z03
+    status: BLOCKED_RIGHTS
+    provenance_status: origin_not_documented_in_repository
+    reproduction_rights_status: not_documented
+    allowed_now:
+      - internal_geometry_reference
+      - inventory
+    forbidden_until_resolved:
+      - release_svg_tracing
+      - reproduction_for_distribution
+      - rights_inference_from_repository_presence
+page_locks:
+  page_04:
+    status: BLOCKED_EDITORIAL_ARBITRATION
+    production_allowed: false
+  page_14_removed_portrait:
+    status: LOCKED_EMPTY
+    production_allowed: false
+conclusion:
+  newly_ready_documentary_assets: 0
+  newly_ready_functional_assets: 0
+  note: >-
+    Repository inspection confirms only one distinct documentary reference under
+    assets/reference, the page 10 real plan. Its rights remain undocumented, so
+    the next documentary production gate cannot be crossed without explicit
+    provenance/rights information or another documented source.
