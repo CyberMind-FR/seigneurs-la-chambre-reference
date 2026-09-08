@@ -24,3 +24,11 @@ Aucun autre contenu ou élément graphique n'a été volontairement modifié.
   - Dérive cumulée mesurée hors des deux bandes page 15 : 4 pixels avec écart RGB cumulé > 12.
 
 Méthode : compositing NumPy local, glyphes prélevés sur la même ligne, aucune fonte système, aucune génération d'image; JPEG réencodés avec leurs tables de quantification d'origine et `subsampling=0`.
+
+# Patch 2026-09-08 — conformité du build
+
+- Fond de compensation PDF : `#F5E8CE` → `#FFFFFF`.
+- Sortie `booklet_a5` dupliquant le séquentiel 16 pages : désactivée.
+- `outputs.*.enabled`, `page_size` et `pages` sont désormais contrôlés par le constructeur.
+- Seuil `render.effective_ppi_min: 300` ajouté; les insuffisances sont reportées par `WARNING` sans faux gain de résolution.
+- Clés de pages QR `08` et `09` explicitement cotées pour éviter leur interprétation YAML historique comme nombres octaux.
