@@ -1,0 +1,100 @@
+schema_version: 1
+page: 3
+reference:
+  source: user-supplied canonical page image
+  repository_equivalent: assets/page-03.jpg
+  dimensions_px: [1024, 1536]
+  coordinate_system: top-left origin, x right, y down
+  measurement_method: visual measurement on full-resolution supplied reference
+  bbox_tolerance_px: 6
+status: FIRST_EXHAUSTIVE_VISUAL_PASS
+
+policy:
+  macro_zones_are_not_atomic_objects: true
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/03.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  preserve_intrinsic_document_text_when_required: true
+  qr_payload_authority: qr_registry.yaml
+  extraction_before_reconstruction: true
+
+text_zones:
+  - {id: T01, role: title, bbox_px: [205,38,815,101], compose_as: live_text}
+  - {id: T02, role: subtitle, bbox_px: [239,111,808,142], compose_as: live_text}
+  - {id: T03, role: section_heading_vision, bbox_px: [228,194,505,220], compose_as: live_text}
+  - {id: T04, role: body_vision, bbox_px: [228,226,737,491], compose_as: live_text}
+  - {id: T05, role: section_heading_necropolis, bbox_px: [228,536,514,562], compose_as: live_text}
+  - {id: T06, role: body_necropolis, bbox_px: [228,570,768,789], compose_as: live_text}
+  - {id: T07, role: section_heading_architecture, bbox_px: [58,824,388,851], compose_as: live_text}
+  - {id: T08, role: body_architecture, bbox_px: [58,858,610,1038], compose_as: live_text}
+  - {id: T09, role: caption_portal, bbox_px: [59,194,160,250], compose_as: live_text}
+  - {id: T10, role: caption_cloister, bbox_px: [58,480,161,521], compose_as: live_text}
+  - {id: T11, role: caption_chapter_vaults, bbox_px: [48,711,175,773], compose_as: live_text}
+  - {id: T12, role: annotation_franciscan_spirituality, bbox_px: [783,174,878,216], compose_as: live_text}
+  - {id: T13, role: caption_cruet_view, bbox_px: [789,482,968,523], compose_as: live_text}
+  - {id: T14, role: caption_nave, bbox_px: [824,759,971,814], compose_as: live_text}
+  - {id: T15, role: caption_flamboyant_lintel, bbox_px: [788,1004,978,1031], compose_as: live_text}
+  - {id: T16, role: map_heading, bbox_px: [185,1071,254,1096], compose_as: live_text}
+  - {id: T17, role: location_heading, bbox_px: [485,1071,610,1098], compose_as: live_text}
+  - {id: T18, role: google_maps_heading, bbox_px: [782,1071,910,1098], compose_as: live_text}
+  - {id: T19, role: coordinates, bbox_px: [462,1112,620,1167], compose_as: live_text}
+  - {id: T20, role: qr_instruction, bbox_px: [757,1242,906,1269], compose_as: live_text}
+  - {id: T21, role: map_source_caption, bbox_px: [120,1297,876,1327], compose_as: live_text, note: verify exact canonical wording from pages/03.yaml}
+  - {id: T22, role: visit_heading, bbox_px: [411,1348,596,1373], compose_as: live_text}
+  - {id: T23, role: visit_information, bbox_px: [101,1375,468,1500], compose_as: live_text, note: includes address, visible elements, status and contact; icons are separate objects}
+
+graphic_zones:
+  - {id: G01, role: gothic_portal_illustration, bbox_px: [31,30,171,191], extraction: raster_fragment}
+  - {id: G02, role: baroque_cloister_illustration, bbox_px: [35,263,204,476], extraction: raster_fragment}
+  - {id: G03, role: chapter_room_vaults_illustration, bbox_px: [37,530,199,706], extraction: raster_fragment}
+  - {id: G04, role: franciscan_friar_illustration, bbox_px: [846,84,979,293], extraction: raster_fragment}
+  - {id: G05, role: cruet_valley_panorama, bbox_px: [737,252,985,480], extraction: raster_fragment}
+  - {id: G06, role: church_nave_illustration, bbox_px: [787,536,982,758], extraction: raster_fragment}
+  - {id: G07, role: gothic_window_detail, bbox_px: [622,832,759,1028], extraction: raster_fragment}
+  - {id: G08, role: flamboyant_lintel_detail, bbox_px: [786,831,982,995], extraction: raster_fragment}
+  - {id: G09, role: map_document, bbox_px: [43,1096,394,1286], extraction: documentary_fragment, intrinsic_text: preserve_as_document_content}
+  - {id: G10, role: location_couvent_vignette, bbox_px: [414,1179,636,1286], extraction: raster_fragment}
+  - {id: G11, role: visit_couvent_panorama, bbox_px: [481,1364,884,1506], extraction: raster_fragment}
+  - {id: G12, role: decorative_monogram, bbox_px: [906,1343,988,1433], extraction: raster_or_vector_after_review}
+  - {id: G13, role: compass_rose, bbox_px: [911,1444,986,1517], extraction: raster_or_vector_after_review}
+
+functional_zones:
+  - id: F01
+    role: google_maps_qr
+    bbox_px: [773,1119,881,1229]
+    extraction: do_not_extract
+    replacement: assets/qr-svg/page-03-google-maps.svg
+    render_last: true
+    exact_decode_required: true
+
+decorative_structure:
+  - {id: O01, role: title_separator_fleur_de_lis, bbox_px: [294,151,683,176], extraction: vector_or_reuse_validated_ornament}
+  - {id: O02, role: outer_page_border, bbox_px: [17,17,1008,1524], extraction: reconstruct_from_geometry_not_raster_crop}
+  - {id: O03, role: left_vertical_separator, bbox_px: [205,31,216,799], extraction: reconstruct_from_geometry}
+  - {id: O04, role: map_panel_frame, bbox_px: [35,1062,989,1328], extraction: reconstruct_from_geometry}
+  - {id: O05, role: visit_panel_frame, bbox_px: [36,1337,894,1518], extraction: reconstruct_from_geometry}
+  - {id: O06, role: bottom_right_decorative_column, bbox_px: [899,1337,991,1519], extraction: reconstruct_from_geometry}
+  - {id: O07, role: visit_icon_address, bbox_px: [67,1370,91,1394], extraction: vector_icon}
+  - {id: O08, role: visit_icon_visible_elements, bbox_px: [65,1404,92,1426], extraction: vector_icon}
+  - {id: O09, role: visit_icon_status, bbox_px: [67,1438,91,1464], extraction: vector_icon}
+  - {id: O10, role: visit_icon_contact, bbox_px: [66,1476,92,1502], extraction: vector_icon}
+  - {id: O11, role: map_compass, bbox_px: [45,1098,91,1164], extraction: preserve_with_map_or_separate_after_review}
+  - {id: O12, role: map_heading_icon, bbox_px: [166,1073,184,1094], extraction: vector_icon}
+  - {id: O13, role: location_pin_icon, bbox_px: [462,1073,481,1098], extraction: vector_icon}
+  - {id: O14, role: google_maps_phone_icon, bbox_px: [757,1072,776,1097], extraction: vector_icon}
+  - {id: O15, role: map_source_scroll_icon, bbox_px: [88,1298,112,1325], extraction: vector_icon}
+
+counts:
+  live_text_zones: 23
+  graphic_zones: 13
+  functional_zones: 1
+  decorative_structure_objects: 15
+  total_first_pass_objects: 52
+
+notes:
+  - This replaces the assumption that the 9 Phase-A macro zones are an exhaustive object inventory.
+  - Bounding boxes are measured from the supplied 1024x1536 reference and carry a +/-6 px review tolerance.
+  - Text zones are explicitly included. Their pixels are not to be reused as editorial content; the YAML canon is authoritative.
+  - Map labels are intrinsic to the map document and may remain raster inside G09 unless a separately sourced map reconstruction is authorized.
+  - Some graphic objects have soft watercolor edges; final extraction should use masks with feathering rather than rectangular crops in composition.
+  - Before industrialization, create a visual overlay and perform a second human pass for missed micro-ornaments and overlaps.
