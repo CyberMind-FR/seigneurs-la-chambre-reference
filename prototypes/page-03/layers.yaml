@@ -1,0 +1,142 @@
+schema_version: 1
+project: Les Seigneurs de La Chambre
+prototype: v3-layered-page-03
+page: 3
+title: Le Couvent des Cordeliers
+status: SPEC_READY_EXTRACTION_PENDING
+purpose: validate layered composition before industrializing 16 pages
+
+sources:
+  canonical_page:
+    path: assets/page-03.jpg
+    sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
+  canonical_text:
+    path: pages/03.yaml
+    key: canonical_text
+  qr_registry: qr_registry.yaml
+  qr_svg: assets/qr-svg/page-03-google-maps.svg
+  asset_spec: assets/ASSET_SPEC.md
+
+composition_order:
+  - background
+  - raster_fragments
+  - documentary_vectors
+  - text_layer
+  - functional_overlay
+
+layers:
+  background:
+    kind: generated_deterministic_background
+    content: none
+    style_source: style.yaml
+    requirements:
+      - white_or_light_ivory_printable
+      - subtle_grain_only
+      - no_documentary_information
+      - reusable
+
+  raster_fragments:
+    kind: extracted_from_canonical_page
+    source: assets/page-03.jpg
+    extraction_policy: preserve_validated_visuals_without_reconstruction
+    fragments:
+      - id: p03_visual_identity
+        zone_source: P03-Z01
+        status: BBOX_TO_MEASURE
+        text_policy: remove_editorial_text_if_entangled
+      - id: p03_narrative_illustration_01
+        zone_source: P03-Z04
+        status: BBOX_TO_MEASURE
+        text_policy: none
+      - id: p03_narrative_illustration_02
+        zone_source: P03-Z06
+        status: BBOX_TO_MEASURE
+        text_policy: none
+      - id: p03_map_document
+        zone_source: P03-Z08
+        status: BBOX_TO_MEASURE
+        text_policy: preserve_only_if_intrinsic_to_source_document
+      - id: p03_site_visit_visual
+        zone_source: P03-Z12
+        status: BBOX_TO_MEASURE
+        text_policy: remove_editorial_text_if_entangled
+    required_metadata:
+      - source_page
+      - source_zone
+      - crop_bbox_px
+      - output_dimensions_px
+      - treatment
+      - sha256
+      - rights_status
+
+  documentary_vectors:
+    kind: reusable_non_text_vectors
+    allowed:
+      - assets/svg/spiritualcept-ornaments.svg
+    rule: vectors_optional_not_goal
+
+  text_layer:
+    kind: real_text
+    source: pages/03.yaml:canonical_text
+    authority: canonical_yaml_only
+    selectable_in_pdf: true
+    ocr_as_authority: false
+    rasterized_text_forbidden_when_avoidable: true
+    blocks:
+      - title
+      - subtitle
+      - section_heading_vision
+      - body_vision
+      - section_heading_necropolis
+      - body_necropolis
+      - section_heading_architecture
+      - body_architecture
+      - map_labels
+      - location_coordinates
+      - map_source_caption
+      - site_visit_heading
+      - site_visit_information
+
+  functional_overlay:
+    kind: deterministic
+    qr:
+      id: google_maps
+      source: assets/qr-svg/page-03-google-maps.svg
+      payload_authority: qr_registry.yaml
+      canonical_reference_placement_px:
+        x: 1435
+        y: 2081
+        w: 234
+        h: 234
+      placement_policy: translate_reference_geometry_into_composition_coordinates
+      render_last: true
+      final_machine_decode_required: true
+
+validation:
+  canonical_text_exact: required
+  fragment_provenance: required
+  no_residual_editorial_text_in_visual_fragments: required
+  raster_effective_resolution: required
+  qr_exact_decode: required
+  visual_comparison_to_canonical: required
+  pdf_text_layer: required
+
+prototype_decisions:
+  page_03_selected_because:
+    - representative_site_page
+    - contains_long_text
+    - contains_documentary_visuals
+    - contains_map_and_location_block
+    - contains_functional_qr
+    - not_page_04_editorial_block
+  no_page_raster_modification: true
+  no_free_reconstruction: true
+  no_new_historical_assertion: true
+
+next_step:
+  - measure_exact_fragment_bounding_boxes_from_canonical_page
+  - extract_fragments_losslessly_or_near_losslessly
+  - register_fragment_sha256_and_provenance
+  - implement_composer
+  - build_control_pdf_with_real_text_layer
+  - validate_qr_and_visual_fidelity
