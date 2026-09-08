@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720">
+  <defs>
+    <clipPath id="shield-clip">
+      <path d="M70 60H530V330C530 515 435 635 300 685C165 635 70 515 70 330Z"/>
+    </clipPath>
+    <g id="fleur">
+      <path d="M0-40C-12-28-13-14 0 2C13-14 12-28 0-40Z"/>
+      <path d="M-2-4C-15-28-43-31-48-8C-35-18-23-13-18 1C-14 12-16 22-22 31C-9 25-2 14 0 3Z"/>
+      <path d="M2-4C15-28 43-31 48-8C35-18 23-13 18 1C14 12 16 22 22 31C9 25 2 14 0 3Z"/>
+      <path d="M0 0C-8 13-9 27-4 38H-23V50H23V38H4C9 27 8 13 0 0Z"/>
+    </g>
+  </defs>
+  <path d="M70 60H530V330C530 515 435 635 300 685C165 635 70 515 70 330Z" fill="#245a93"/>
+  <g clip-path="url(#shield-clip)" fill="#d8b34a">
+    <use href="#fleur" transform="translate(140 130) scale(0.55)"/>
+    <use href="#fleur" transform="translate(300 120) scale(0.55)"/>
+    <use href="#fleur" transform="translate(460 130) scale(0.55)"/>
+    <use href="#fleur" transform="translate(115 255) scale(0.55)"/>
+    <use href="#fleur" transform="translate(250 245) scale(0.55)"/>
+    <use href="#fleur" transform="translate(390 250) scale(0.55)"/>
+    <use href="#fleur" transform="translate(505 270) scale(0.55)"/>
+    <use href="#fleur" transform="translate(145 390) scale(0.55)"/>
+    <use href="#fleur" transform="translate(300 385) scale(0.55)"/>
+    <use href="#fleur" transform="translate(455 400) scale(0.55)"/>
+    <use href="#fleur" transform="translate(205 520) scale(0.55)"/>
+    <use href="#fleur" transform="translate(390 520) scale(0.55)"/>
+  </g>
+  <g clip-path="url(#shield-clip)">
+    <path d="M5 105L105 5L595 495L495 595Z" fill="#963536"/>
+  </g>
+  <path d="M70 60H530V330C530 515 435 635 300 685C165 635 70 515 70 330Z" fill="none" stroke="#3f2d23" stroke-width="14" stroke-linejoin="round"/>
+</svg>
