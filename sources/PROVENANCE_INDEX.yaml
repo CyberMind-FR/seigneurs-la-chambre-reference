@@ -1,0 +1,213 @@
+schema_version: 1
+project: Les Seigneurs de La Chambre
+release: v3.0.0
+phase: B
+lot: 2
+branch: release/v3.0-phase-b
+purpose: provenance_and_rights_registry
+
+policy:
+  repository_is_source_of_truth: true
+  presence_in_repository_implies_reproduction_rights: false
+  unknown_metadata_policy: explicit_unknown
+  direct_documentary_reproduction_requires_rights_clearance: true
+  reconstruction_authorized: true
+  reconstruction_requires_source_refs: true
+  reconstruction_requires_confidence: true
+  reconstruction_requires_label_when_ambiguity_is_possible: true
+  default_reconstruction_label: Reconstitution graphique à partir des sources documentées.
+  generated_text_in_graphic_assets_forbidden: true
+  page_recomposition_not_authorized_by_this_index: true
+
+status_enum:
+  - VERIFIED
+  - PARTIAL
+  - MISSING
+  - BLOCKED_RIGHTS
+  - BLOCKED_SOURCE_MISSING
+  - NOT_APPLICABLE
+
+rights_enum:
+  - CLEARED
+  - PROJECT_INTERNAL
+  - ASSOCIATION_PROVIDED
+  - RESTRICTED
+  - NOT_DOCUMENTED
+  - NOT_APPLICABLE
+
+confidence_enum:
+  - high
+  - medium
+  - low
+
+sources:
+  canonical_pages:
+    id: canonical_pages
+    title: Pages canoniques raster validées
+    kind: canonical_page
+    path_pattern: assets/page-NN.jpg
+    count: 16
+    provenance_status: VERIFIED
+    rights_status: PROJECT_INTERNAL
+    role:
+      - composition_reference
+      - pixel_fidelity_reference
+      - reconstruction_reference
+    allowed_uses:
+      - local_comparison
+      - composition_measurement
+      - non_facsimile_reconstruction_reference
+    forbidden_uses:
+      - automatic_editorial_inference
+      - invention_of_missing_historical_detail
+    notes: La page canonique valide la composition et le contenu visible, pas une provenance externe implicite.
+
+  canonical_page_specs:
+    id: canonical_page_specs
+    title: Fiches canoniques de pages
+    kind: page_spec
+    path_pattern: pages/NN.yaml
+    count: 16
+    provenance_status: VERIFIED
+    rights_status: PROJECT_INTERNAL
+    role:
+      - canonical_text_source
+      - page_semantics_source
+      - qr_reference_source
+    allowed_uses:
+      - text_composition
+      - source_ref_for_reconstruction
+    forbidden_uses:
+      - paraphrase_without_editorial_approval
+
+  qr_registry:
+    id: qr_registry
+    title: Registre canonique des QR
+    kind: qr_registry
+    path: qr_registry.yaml
+    provenance_status: VERIFIED
+    rights_status: NOT_APPLICABLE
+    role:
+      - functional_payload_source
+    allowed_uses:
+      - deterministic_qr_generation
+    derived_assets:
+      - assets/qr-svg/*.svg
+    validation: machine_decode_exact_payload
+
+  page_02_blazon:
+    id: page_02_blazon
+    title: Blasonnement officiel des Seigneurs de La Chambre
+    kind: canonical_textual_source
+    path: pages/02.yaml
+    provenance_status: VERIFIED
+    rights_status: PROJECT_INTERNAL
+    confidence: high
+    role:
+      - heraldic_description_source
+    canonical_basis: D'azur, semé de fleurs de lis d'or, à la bande de gueules brochant sur le tout
+    allowed_uses:
+      - original_svg_heraldic_rendering_from_textual_blazon
+      - reconstruction_reference
+    forbidden_uses:
+      - copy_of_unidentified_external_heraldic_artwork
+    notes: Le rendu SVG doit être nouveau et fondé sur le blasonnement canonique, pas sur la copie d'un dessin externe non documenté.
+
+  page_10_plan_real:
+    id: page_10_plan_real
+    title: Plan réel du Château de Notre-Dame-du-Cruet
+    kind: plan
+    path: assets/reference/page-10-plan-reel.jpg
+    git_blob_sha: 2326f8712596a8f0467098bdbacb30e552047ff5
+    file_size_bytes: 30602
+    provenance_status: PARTIAL
+    rights_status: NOT_DOCUMENTED
+    confidence: high
+    role:
+      - geometry_authority
+      - reconstruction_reference
+    allowed_uses:
+      - internal_geometry_reference
+      - reconstruction_source_ref
+      - non_facsimile_architectural_reconstruction
+      - comparison_against_canonical_page_10
+    forbidden_until_rights_resolved:
+      - direct_facsimile_distribution
+      - direct_documentary_svg_tracing_for_distribution
+      - claim_of_source_ownership
+    reconstruction_constraints:
+      must_preserve_named_geometry: true
+      must_not_invent_conflicting_architecture: true
+      must_be_labeled_reconstruction: true
+      confidence:
+        geometry: high
+        volumetry: medium
+        decorative_detail: low
+    notes: La libération des reconstitutions ne vaut pas autorisation de reproduire le plan source lui-même.
+
+  association_logo_source:
+    id: association_logo_source
+    title: Logo officiel de l'association
+    kind: association_asset
+    path: null
+    provenance_status: MISSING
+    rights_status: ASSOCIATION_PROVIDED
+    confidence: high
+    role:
+      - association_identity_source
+    current_state: BLOCKED_SOURCE_MISSING
+    required_to_unlock:
+      - commit_or_reference_the_validated_logo_asset_in_repository
+      - record_sha256
+    notes: Le logo a été fourni au projet hors dépôt, mais aucun chemin canonique de cet actif n'est actuellement enregistré dans la branche.
+
+  phase_b_source_inventory_snapshot:
+    id: phase_b_source_inventory_snapshot
+    title: Inventaire initial du front documentaire Phase B
+    kind: derived_internal
+    path: docs/migration-text-layer/PHASE_B_SOURCE_INVENTORY.yaml
+    provenance_status: VERIFIED
+    rights_status: PROJECT_INTERNAL
+    role:
+      - migration_audit_snapshot
+    notes: Snapshot historique. Le présent PROVENANCE_INDEX devient le registre opérationnel pour la suite du lot 2.
+
+reconstruction_gate:
+  status: AUTHORIZED
+  rule: Une reconstitution peut être produite lorsque source_refs, confiance et limites d'interprétation sont explicites.
+  direct_source_reproduction_gate: RIGHTS_REQUIRED
+  minimum_fields:
+    - source_refs
+    - confidence
+    - must_be_labeled_reconstruction
+    - text_free_required
+    - validation.no_unsourced_historical_detail
+  allowed_now:
+    - heraldic_rendering_from_canonical_blazon
+    - non_facsimile_page_10_architectural_reconstruction
+    - ornaments_without_historical_assertion
+  still_blocked:
+    - direct_trace_of_page_10_plan_for_distribution
+    - association_logo_svg_until_source_asset_is_committed
+    - any_reconstruction_without_source_refs
+    - any_graphic_asset_containing_generated_editorial_text
+
+page_locks:
+  page_04:
+    status: BLOCKED_EDITORIAL_ARBITRATION
+    production_allowed: false
+  page_10:
+    status: RECONSTRUCTION_AUTHORIZED_WITH_GEOMETRY_LOCK
+    geometry_source_ref: page_10_plan_real
+  page_14_removed_portrait:
+    status: LOCKED_EMPTY
+    production_allowed: false
+
+validation:
+  required_before_asset_release:
+    - source_refs_resolve
+    - confidence_declared
+    - text_free_check
+    - sha256_recorded_when_file_exists
+    - reconstruction_label_policy_checked
+    - no_unsourced_historical_detail
