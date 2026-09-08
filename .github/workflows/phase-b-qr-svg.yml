@@ -73,3 +73,5 @@ jobs:
           fi
           git commit -m 'Phase B: generate and validate deterministic SVG QR batch'
           git push origin HEAD:release/v3.0-phase-b
+
+# retry: validator now uses an external temporary directory so source hygiene remains intact
