@@ -1,0 +1,7 @@
+schema_version: 1
+page: 3
+source: assets/page-03.jpg
+policy: >-
+  Bounding boxes must come from measurement diagnostics and human visual review.
+  Never guess a box from the semantic zone name. Only status APPROVED is extracted.
+fragments: []
