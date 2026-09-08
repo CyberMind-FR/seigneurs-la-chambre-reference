@@ -4,6 +4,7 @@ on:
     branches: [release/v3.0-phase-b]
     paths:
       - 'scripts/prototype_page03_layers.py'
+      - 'scripts/prototype_page03_run.py'
       - 'prototypes/page-03/**'
       - 'assets/page-03.jpg'
       - 'assets/qr-svg/page-03-google-maps.svg'
@@ -22,7 +23,7 @@ jobs:
       - name: Install prototype dependencies
         run: pip install Pillow PyYAML opencv-python-headless reportlab svglib pymupdf
       - name: Compose layered proof and validate
-        run: python scripts/prototype_page03_layers.py
+        run: python scripts/prototype_page03_run.py
       - name: Validate canonical source unchanged
         run: |
           python - <<'PY'
