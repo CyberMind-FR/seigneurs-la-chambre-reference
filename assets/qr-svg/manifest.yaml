@@ -1,0 +1,238 @@
+schema_version: 1
+source: qr_registry.yaml
+generator: segno==1.6.6
+policy:
+  exact_payload_lock: true
+  output: svg
+  error_level: M
+  quiet_zone_modules: 4
+  dark: '#000000'
+  light: '#FFFFFF'
+  text_free: true
+assets:
+  qr_p03_google_maps:
+    id: qr_p03_google_maps
+    pages:
+    - 3
+    registry_refs:
+    - 03/google_maps
+    path: assets/qr-svg/page-03-google-maps.svg
+    sha256: ed1daee27d44ab09b2df0c56e9ccfab31352c1324384adfc06b341087827630a
+    generator: segno==1.6.6
+    designator: 4-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p04_google_maps:
+    id: qr_p04_google_maps
+    pages:
+    - 4
+    registry_refs:
+    - 04/google_maps
+    path: assets/qr-svg/page-04-google-maps.svg
+    sha256: 2121081aabdb0259dcb5c3295cb1b982f3957216fc51fa499d17fa9b6a7e52ee
+    generator: segno==1.6.6
+    designator: 4-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p05_google_maps:
+    id: qr_p05_google_maps
+    pages:
+    - 5
+    registry_refs:
+    - 05/google_maps
+    path: assets/qr-svg/page-05-google-maps.svg
+    sha256: f2eef67e4ecf11360f7f151c93d71dcacc93f3670343a30187f1479cf0e04890
+    generator: segno==1.6.6
+    designator: 4-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p06_google_maps:
+    id: qr_p06_google_maps
+    pages:
+    - 6
+    registry_refs:
+    - 06/google_maps
+    path: assets/qr-svg/page-06-google-maps.svg
+    sha256: 4906e793489446088eec4603d8ae7062c8f0ceb1f1ba950ba1bac99cb222ae30
+    generator: segno==1.6.6
+    designator: 4-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p07_google_maps:
+    id: qr_p07_google_maps
+    pages:
+    - 7
+    registry_refs:
+    - 07/google_maps
+    path: assets/qr-svg/page-07-google-maps.svg
+    sha256: cb454fb617706fb0a58a92626cf64922b35236862381b480208242ce87510d7f
+    generator: segno==1.6.6
+    designator: 3-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p08_google_maps:
+    id: qr_p08_google_maps
+    pages:
+    - 8
+    registry_refs:
+    - 08/google_maps
+    path: assets/qr-svg/page-08-google-maps.svg
+    sha256: 004caa9aa4f0ddc930245963710e608159be6c06def4b56b2e9f6155956fe270
+    generator: segno==1.6.6
+    designator: 4-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p09_google_maps:
+    id: qr_p09_google_maps
+    pages:
+    - 9
+    registry_refs:
+    - 09/google_maps
+    path: assets/qr-svg/page-09-google-maps.svg
+    sha256: f99e5c25e62f50abcae2baff51f20da40e1bae78412b70a8e2d60e4e16ad7c34
+    generator: segno==1.6.6
+    designator: 3-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p10_google_maps:
+    id: qr_p10_google_maps
+    pages:
+    - 10
+    registry_refs:
+    - 10/google_maps
+    path: assets/qr-svg/page-10-google-maps.svg
+    sha256: fc9b27faf312c5c64f46ead4d03ad5501da0a36774329a89e7bcdffe58bfeb2c
+    generator: segno==1.6.6
+    designator: 4-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p11_google_maps:
+    id: qr_p11_google_maps
+    pages:
+    - 11
+    registry_refs:
+    - 11/google_maps
+    path: assets/qr-svg/page-11-google-maps.svg
+    sha256: 49b904d76cdc17282af7b700c34eb16c1c49933b0acdc62e2398bef4ef421e14
+    generator: segno==1.6.6
+    designator: 4-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p12_google_maps:
+    id: qr_p12_google_maps
+    pages:
+    - 12
+    registry_refs:
+    - 12/google_maps
+    path: assets/qr-svg/page-12-google-maps.svg
+    sha256: e537a65f6ab827f4a55dce46039065941a2e93146497946b2d2f56ce68c8f3a3
+    generator: segno==1.6.6
+    designator: 3-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p13_01_association:
+    id: qr_p13_01_association
+    pages:
+    - 13
+    - 16
+    registry_refs:
+    - 13/association
+    - 16/association
+    path: assets/qr-svg/page-13-01-association.svg
+    sha256: 0ca65370ac6536a4deef0e2296606edbea0c1de53ec0dd34b69efdcd2899ccab
+    generator: segno==1.6.6
+    designator: 3-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p13_02_videos:
+    id: qr_p13_02_videos
+    pages:
+    - 13
+    registry_refs:
+    - 13/videos
+    path: assets/qr-svg/page-13-02-videos.svg
+    sha256: e1008918ccb3cdc045307bab6eb8fcaeaf4691dad442cb41b8fd47ccc8678e26
+    generator: segno==1.6.6
+    designator: 7-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p13_03_virtual_visit:
+    id: qr_p13_03_virtual_visit
+    pages:
+    - 13
+    registry_refs:
+    - 13/virtual_visit
+    path: assets/qr-svg/page-13-03-virtual_visit.svg
+    sha256: a57c24aa3ea01c672d054fd9f4ab630a1d2e64ecab7202e2155258cf317387a2
+    generator: segno==1.6.6
+    designator: 4-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p13_04_fondation:
+    id: qr_p13_04_fondation
+    pages:
+    - 13
+    registry_refs:
+    - 13/fondation
+    path: assets/qr-svg/page-13-04-fondation.svg
+    sha256: b9d2f6c453438946326c5dd48b695bbd00c7f67f8df176af9cb8c8eb47520634
+    generator: segno==1.6.6
+    designator: 6-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p13_05_commune:
+    id: qr_p13_05_commune
+    pages:
+    - 13
+    registry_refs:
+    - 13/commune
+    path: assets/qr-svg/page-13-05-commune.svg
+    sha256: 525df82f60cd334830c1e32f587b702d0a049ae68a72740d8e75f0e9b06c80a6
+    generator: segno==1.6.6
+    designator: 4-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'
+  qr_p13_06_documents:
+    id: qr_p13_06_documents
+    pages:
+    - 13
+    registry_refs:
+    - 13/documents
+    path: assets/qr-svg/page-13-06-documents.svg
+    sha256: edc95ba3bd1ca98ada59ec822ae3212fc511b96cbe79531e74005232755e9078
+    generator: segno==1.6.6
+    designator: 5-M
+    error_level: M
+    quiet_zone_modules: 4
+    dark: '#000000'
+    light: '#FFFFFF'

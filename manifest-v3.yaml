@@ -1,0 +1,896 @@
+schema_version: 3
+project: Les Seigneurs de La Chambre
+release: v3.0.0
+status: phase_b_in_progress
+phase_a_approval:
+  path: docs/migration-text-layer/PHASE_A_APPROVAL.md
+  sha256: 5f3b288f9d187aa0496e5a99e734c5490fbe27ab08f74038e72895379b7ab898
+  status: validated
+legacy_manifest:
+  path: manifest.yaml
+  sha256: 6ca401ba03899be8b577315a1935e3658b2ebcd00b636ebbe58b8c7a0af9824c
+  policy: preserved until v3 migration is complete
+pages:
+- page: 1
+  file: assets/page-01.jpg
+  sha256: 7b3058fe609f08f59d6fead46bb7d5d7e544de568b57187219fc55ee70ecbb8b
+  role: reference_raster
+- page: 2
+  file: assets/page-02.jpg
+  sha256: e6ecfa02a8d335765d1e9772d8fd28e4d3ce3a8e41ccd04b4513725843c1f2b8
+  role: reference_raster
+- page: 3
+  file: assets/page-03.jpg
+  sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
+  role: reference_raster
+- page: 4
+  file: assets/page-04.jpg
+  sha256: 659d163181a62c876a478d5c103b7fbefb35586bad42b718c809cc8a27dc5933
+  role: reference_raster
+- page: 5
+  file: assets/page-05.jpg
+  sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
+  role: reference_raster
+- page: 6
+  file: assets/page-06.jpg
+  sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031
+  role: reference_raster
+- page: 7
+  file: assets/page-07.jpg
+  sha256: 53440127c11ca72289c1c59ebf51cf1ef037972d1754b8794dada88c85c39c3e
+  role: reference_raster
+- page: 8
+  file: assets/page-08.jpg
+  sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927
+  role: reference_raster
+- page: 9
+  file: assets/page-09.jpg
+  sha256: d54cab494ac8f931d8cb9dd5953d7f171a0c0d6c0b7abd7a73cc32e7f7de1aed
+  role: reference_raster
+- page: 10
+  file: assets/page-10.jpg
+  sha256: 8aadbcf5cda05bec84012f52c636d8499bb5d052010bc5df998aaac3a5c13bae
+  role: reference_raster
+- page: 11
+  file: assets/page-11.jpg
+  sha256: d4090803bb0c287fe6bb6a7044a77451b47b688de891a52320918f0ef48b0bc8
+  role: reference_raster
+- page: 12
+  file: assets/page-12.jpg
+  sha256: 0afd9e2eb552b9fff7339a03817205f511b83ae7614884437812463123e61638
+  role: reference_raster
+- page: 13
+  file: assets/page-13.jpg
+  sha256: 9e98524888c952e4231a63df5a2da4b3d14a145683f0522090c0fa878f1a13b0
+  role: reference_raster
+- page: 14
+  file: assets/page-14.jpg
+  sha256: 50ed5e18685a9b057f52ad6e769786e9d9d830628a542a868d13334462d92003
+  role: reference_raster
+- page: 15
+  file: assets/page-15.jpg
+  sha256: e2b31837f4393bbb3ccc0db4e0c523a91aa9237c165184aa7e959d555117606d
+  role: reference_raster
+- page: 16
+  file: assets/page-16.jpg
+  sha256: 3faf93d696748d4b4d9fc7bf1eb8cf0b93bd09758e2913d1e7b74ec33b273331
+  role: reference_raster
+assets:
+  qr_p03_google_maps:
+    id: qr_p03_google_maps
+    pages:
+    - 3
+    zones:
+    - qr:03/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-03-google-maps.svg
+    sha256: ed1daee27d44ab09b2df0c56e9ccfab31352c1324384adfc06b341087827630a
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 03/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 4-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p04_google_maps:
+    id: qr_p04_google_maps
+    pages:
+    - 4
+    zones:
+    - qr:04/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-04-google-maps.svg
+    sha256: 2121081aabdb0259dcb5c3295cb1b982f3957216fc51fa499d17fa9b6a7e52ee
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 04/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 4-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p05_google_maps:
+    id: qr_p05_google_maps
+    pages:
+    - 5
+    zones:
+    - qr:05/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-05-google-maps.svg
+    sha256: f2eef67e4ecf11360f7f151c93d71dcacc93f3670343a30187f1479cf0e04890
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 05/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 4-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p06_google_maps:
+    id: qr_p06_google_maps
+    pages:
+    - 6
+    zones:
+    - qr:06/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-06-google-maps.svg
+    sha256: 4906e793489446088eec4603d8ae7062c8f0ceb1f1ba950ba1bac99cb222ae30
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 06/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 4-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p07_google_maps:
+    id: qr_p07_google_maps
+    pages:
+    - 7
+    zones:
+    - qr:07/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-07-google-maps.svg
+    sha256: cb454fb617706fb0a58a92626cf64922b35236862381b480208242ce87510d7f
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 07/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 3-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p08_google_maps:
+    id: qr_p08_google_maps
+    pages:
+    - 8
+    zones:
+    - qr:08/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-08-google-maps.svg
+    sha256: 004caa9aa4f0ddc930245963710e608159be6c06def4b56b2e9f6155956fe270
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 08/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 4-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p09_google_maps:
+    id: qr_p09_google_maps
+    pages:
+    - 9
+    zones:
+    - qr:09/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-09-google-maps.svg
+    sha256: f99e5c25e62f50abcae2baff51f20da40e1bae78412b70a8e2d60e4e16ad7c34
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 09/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 3-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p10_google_maps:
+    id: qr_p10_google_maps
+    pages:
+    - 10
+    zones:
+    - qr:10/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-10-google-maps.svg
+    sha256: fc9b27faf312c5c64f46ead4d03ad5501da0a36774329a89e7bcdffe58bfeb2c
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 10/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 4-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p11_google_maps:
+    id: qr_p11_google_maps
+    pages:
+    - 11
+    zones:
+    - qr:11/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-11-google-maps.svg
+    sha256: 49b904d76cdc17282af7b700c34eb16c1c49933b0acdc62e2398bef4ef421e14
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 11/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 4-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p12_google_maps:
+    id: qr_p12_google_maps
+    pages:
+    - 12
+    zones:
+    - qr:12/google_maps
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-12-google-maps.svg
+    sha256: e537a65f6ab827f4a55dce46039065941a2e93146497946b2d2f56ce68c8f3a3
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 12/google_maps
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 3-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p13_01_association:
+    id: qr_p13_01_association
+    pages:
+    - 13
+    - 16
+    zones:
+    - qr:13/association
+    - qr:16/association
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-13-01-association.svg
+    sha256: 0ca65370ac6536a4deef0e2296606edbea0c1de53ec0dd34b69efdcd2899ccab
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 13/association
+      - 16/association
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 3-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p13_02_videos:
+    id: qr_p13_02_videos
+    pages:
+    - 13
+    zones:
+    - qr:13/videos
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-13-02-videos.svg
+    sha256: e1008918ccb3cdc045307bab6eb8fcaeaf4691dad442cb41b8fd47ccc8678e26
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 13/videos
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 7-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p13_03_virtual_visit:
+    id: qr_p13_03_virtual_visit
+    pages:
+    - 13
+    zones:
+    - qr:13/virtual_visit
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-13-03-virtual_visit.svg
+    sha256: a57c24aa3ea01c672d054fd9f4ab630a1d2e64ecab7202e2155258cf317387a2
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 13/virtual_visit
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 4-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p13_04_fondation:
+    id: qr_p13_04_fondation
+    pages:
+    - 13
+    zones:
+    - qr:13/fondation
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-13-04-fondation.svg
+    sha256: b9d2f6c453438946326c5dd48b695bbd00c7f67f8df176af9cb8c8eb47520634
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 13/fondation
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 6-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p13_05_commune:
+    id: qr_p13_05_commune
+    pages:
+    - 13
+    zones:
+    - qr:13/commune
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-13-05-commune.svg
+    sha256: 525df82f60cd334830c1e32f587b702d0a049ae68a72740d8e75f0e9b06c80a6
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 13/commune
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 4-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+  qr_p13_06_documents:
+    id: qr_p13_06_documents
+    pages:
+    - 13
+    zones:
+    - qr:13/documents
+    nature: functional
+    class: qr
+    kind: qr
+    path: assets/qr-svg/page-13-06-documents.svg
+    sha256: edc95ba3bd1ca98ada59ec822ae3212fc511b96cbe79531e74005232755e9078
+    derivation:
+      registry: qr_registry.yaml
+      registry_refs:
+      - 13/documents
+      payload_copied_here: false
+    production:
+      method: deterministic
+      brief: Generate from exact registry payload only; no image model; no styling.
+      text_free_required: true
+      toolchain:
+      - segno==1.6.6
+      designator: 5-M
+    provenance:
+      status: verified
+      sources:
+      - path: qr_registry.yaml
+        role: functional_payload_source
+    licence:
+      status: not_applicable
+      identifier: null
+      text_or_url: null
+      holder: null
+    rights:
+      status: not_applicable
+      redistribution: true
+      print_authorized: true
+      web_authorized: true
+      derivative_authorized: false
+      notes: Functional QR encoding; payload changes require registry validation, not graphical derivation.
+    validation:
+      documentary: pass
+      rights: not_applicable
+      text_free: pass
+      sha256: pass
+      resolution: vector
+      machine_decode: pass
+      visual: functional
+      overall: pass
+      blockers: []
+qr:
+  registry: qr_registry.yaml
+  generator: segno==1.6.6
+  output: svg
+  dark: '#000000'
+  light: '#FFFFFF'
+  quiet_zone_modules: 4
+  exact_payload_lock: true
+fonts: {}
+build_contract:
+  text_source: pages/NN.yaml:canonical_text
+  illustrations_must_be_text_free: true
+  qr_payload_source: qr_registry.yaml
+  unknown_metadata_policy: block
+  page_04_policy: PAGE_04_EDITORIAL_ARBITRATION_REQUIRED
