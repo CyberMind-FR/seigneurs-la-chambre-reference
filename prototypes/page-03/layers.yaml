@@ -1,9 +1,9 @@
-schema_version: 1
+schema_version: 2
 project: Les Seigneurs de La Chambre
 prototype: v3-layered-page-03
 page: 3
 title: Le Couvent des Cordeliers
-status: SPEC_READY_EXTRACTION_PENDING
+status: OBJECT_INVENTORY_REQUIRED
 purpose: validate layered composition before industrializing 16 pages
 
 sources:
@@ -16,6 +16,14 @@ sources:
   qr_registry: qr_registry.yaml
   qr_svg: assets/qr-svg/page-03-google-maps.svg
   asset_spec: assets/ASSET_SPEC.md
+  object_inventory: prototypes/page-03/page-03.objects.yaml
+
+inventory_model:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  phase_a_zones_are: macro_layout_reference
+  phase_a_zones_are_not: exhaustive_extractable_object_inventory
+  extraction_gate: prototypes/page-03/page-03.objects.yaml:completeness_gate
+  extraction_allowed: false
 
 composition_order:
   - background
@@ -38,32 +46,14 @@ layers:
   raster_fragments:
     kind: extracted_from_canonical_page
     source: assets/page-03.jpg
+    inventory_source: prototypes/page-03/page-03.objects.yaml
     extraction_policy: preserve_validated_visuals_without_reconstruction
-    fragments:
-      - id: p03_visual_identity
-        zone_source: P03-Z01
-        status: BBOX_TO_MEASURE
-        text_policy: remove_editorial_text_if_entangled
-      - id: p03_narrative_illustration_01
-        zone_source: P03-Z04
-        status: BBOX_TO_MEASURE
-        text_policy: none
-      - id: p03_narrative_illustration_02
-        zone_source: P03-Z06
-        status: BBOX_TO_MEASURE
-        text_policy: none
-      - id: p03_map_document
-        zone_source: P03-Z08
-        status: BBOX_TO_MEASURE
-        text_policy: preserve_only_if_intrinsic_to_source_document
-      - id: p03_site_visit_visual
-        zone_source: P03-Z12
-        status: BBOX_TO_MEASURE
-        text_policy: remove_editorial_text_if_entangled
+    status: BLOCKED_UNTIL_OBJECT_INVENTORY_PASS
+    rule: never derive fragment list directly from Phase A zone count
     required_metadata:
+      - object_id
       - source_page
-      - source_zone
-      - crop_bbox_px
+      - source_bbox_px
       - output_dimensions_px
       - treatment
       - sha256
@@ -82,25 +72,11 @@ layers:
     selectable_in_pdf: true
     ocr_as_authority: false
     rasterized_text_forbidden_when_avoidable: true
-    blocks:
-      - title
-      - subtitle
-      - section_heading_vision
-      - body_vision
-      - section_heading_necropolis
-      - body_necropolis
-      - section_heading_architecture
-      - body_architecture
-      - map_labels
-      - location_coordinates
-      - map_source_caption
-      - site_visit_heading
-      - site_visit_information
 
   functional_overlay:
     kind: deterministic
     qr:
-      id: google_maps
+      id: P03-O-QR01
       source: assets/qr-svg/page-03-google-maps.svg
       payload_authority: qr_registry.yaml
       canonical_reference_placement_px:
@@ -113,6 +89,7 @@ layers:
       final_machine_decode_required: true
 
 validation:
+  object_inventory_complete: required_before_extraction
   canonical_text_exact: required
   fragment_provenance: required
   no_residual_editorial_text_in_visual_fragments: required
@@ -132,10 +109,14 @@ prototype_decisions:
   no_page_raster_modification: true
   no_free_reconstruction: true
   no_new_historical_assertion: true
+  previous_fragment_assumptions_invalidated: true
 
 next_step:
-  - measure_exact_fragment_bounding_boxes_from_canonical_page
-  - extract_fragments_losslessly_or_near_losslessly
+  - inspect_full_canonical_raster_at_native_resolution
+  - populate_page_03_objects_yaml_exhaustively
+  - perform_second_visual_completeness_sweep
+  - set_completeness_gate_PASS_only_after_no_unregistered_visible_object_remains
+  - measure_and_extract_registered_fragments
   - register_fragment_sha256_and_provenance
   - implement_composer
   - build_control_pdf_with_real_text_layer
