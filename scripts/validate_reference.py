@@ -71,8 +71,8 @@ if (ROOT/'QR_VALIDATION_REPORT.md').exists():
 # Editorial guards in canonical YAML.
 for p, forbidden in {
     4:['Académie de Maurienne'],
-    14:['Collecte Fondation du Patrimoine (75%)','Fabrice GALOPO et Gérald KERMA'],
-    15:['Fondation du Patrimoine 75 %','Fabrice GALOPO & Gérald KERMA'],
+    14:['Collecte Fondation du Patrimoine (75%)','Fabrice GALOPO et Gérald KERMA','contact@couventdeelachambre.fr'],
+    15:['Fondation du Patrimoine 75 %','Fabrice GALOPO & Gérald KERMA','Fabrice GALLOPO','valoriser de patrimoine'],
 }.items():
     y=ROOT/'pages'/f'{p:02d}.yaml'
     if y.exists():
