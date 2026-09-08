@@ -1,0 +1,185 @@
+schema_version: 1
+page: 3
+source_image:
+  path: assets/page-03.jpg
+  supplied_visual_measurement_size_px: [1024, 1536]
+  coordinate_origin: top_left
+  bbox_format: [x, y, width, height]
+status: MEASURED_OBJECT_MAP_V1
+method: manual_visual_measurement_on_supplied_full_page_image
+note: >-
+  This object map supersedes use of the nine Phase-A macro zones as an extraction list.
+  Macro zones remain layout semantics only. Objects below are production-level visual objects.
+  Bounding boxes are measured on the 1024x1536 supplied page image and must be scaled
+  proportionally if the repository canonical JPEG has different pixel dimensions.
+
+object_classes:
+  graphic: extractable documentary or illustrative raster object
+  ornament: non-editorial decorative object
+  functional: machine-functional object to replace from deterministic source
+  frame: structural geometry, preferably reconstructed as vector/layout rather than cropped
+  text: editorial content, never extracted as raster for v3
+
+objects:
+  - id: P03-G01
+    name: portail_gothique_albatre
+    class: graphic
+    bbox_px: [28, 31, 145, 158]
+    extraction: crop_or_mask
+    text_contamination: false
+    note: upper-left architectural drawing only; caption is separate text
+  - id: P03-G02
+    name: cloitre_baroque
+    class: graphic
+    bbox_px: [29, 257, 176, 220]
+    extraction: crop_or_mask
+    text_contamination: false
+    note: left-middle cloister illustration; caption excluded
+  - id: P03-G03
+    name: voutes_salle_capitulaire
+    class: graphic
+    bbox_px: [31, 527, 174, 183]
+    extraction: crop_or_mask
+    text_contamination: false
+    note: lower-left interior illustration; caption excluded
+  - id: P03-G04
+    name: moine_franciscain
+    class: graphic
+    bbox_px: [837, 84, 137, 211]
+    extraction: mask_preferred
+    text_contamination: false
+    note: figure only; handwritten Spiritualité franciscaine callout remains text layer
+  - id: P03-G05
+    name: panorama_cruet_vallee
+    class: graphic
+    bbox_px: [735, 264, 244, 220]
+    extraction: crop_or_mask
+    text_contamination: false
+    note: panorama only; caption excluded
+  - id: P03-G06
+    name: nef_interieure
+    class: graphic
+    bbox_px: [785, 532, 193, 230]
+    extraction: crop_or_mask
+    text_contamination: false
+    note: nave illustration only; arrow and caption should be rebuilt separately
+  - id: P03-G07
+    name: fenetre_gothique
+    class: graphic
+    bbox_px: [624, 834, 137, 197]
+    extraction: crop_or_mask
+    text_contamination: false
+  - id: P03-G08
+    name: linteau_accolade
+    class: graphic
+    bbox_px: [786, 833, 193, 164]
+    extraction: crop_or_mask
+    text_contamination: false
+    note: architectural detail only; caption excluded
+  - id: P03-G09
+    name: carte_mappe_sarde
+    class: graphic
+    bbox_px: [48, 1096, 338, 190]
+    extraction: crop
+    text_contamination: intrinsic_document_text
+    note: documentary map content is intrinsic; editorial CARTE heading is outside crop
+  - id: P03-G10
+    name: rose_des_vents_carte
+    class: ornament
+    bbox_px: [48, 1097, 53, 92]
+    extraction: vector_rebuild_preferred
+    text_contamination: false
+    note: overlaps map region and should not be double-extracted if already intrinsic to chosen map crop
+  - id: P03-G11
+    name: repere_la_chambre
+    class: graphic
+    bbox_px: [220, 1188, 28, 29]
+    extraction: preserve_with_map
+    text_contamination: intrinsic_document_text
+    note: marker belongs to map composition; do not duplicate if preserved in P03-G09
+  - id: P03-G12
+    name: vue_couvent_localisation
+    class: graphic
+    bbox_px: [418, 1192, 211, 91]
+    extraction: mask_preferred
+    text_contamination: false
+  - id: P03-G13
+    name: qr_google_maps_visible_reference
+    class: functional
+    bbox_px: [776, 1120, 105, 106]
+    extraction: do_not_extract
+    replacement: assets/qr-svg/page-03-google-maps.svg
+    text_contamination: false
+    note: bbox is visual reference only; deterministic SVG must be used
+  - id: P03-G14
+    name: vue_couvent_visite_site
+    class: graphic
+    bbox_px: [480, 1352, 395, 151]
+    extraction: mask_preferred
+    text_contamination: false
+  - id: P03-G15
+    name: monogramme_ornemental
+    class: ornament
+    bbox_px: [910, 1342, 71, 84]
+    extraction: crop_or_vector_rebuild
+    text_contamination: false
+    historical_assertion: false
+  - id: P03-G16
+    name: compas_bas_droit
+    class: ornament
+    bbox_px: [917, 1444, 64, 72]
+    extraction: vector_rebuild_preferred
+    text_contamination: false
+    historical_assertion: false
+  - id: P03-O01
+    name: separateur_titre_fleuron
+    class: ornament
+    bbox_px: [339, 157, 342, 23]
+    extraction: vector_rebuild_preferred
+    text_contamination: false
+  - id: P03-F01
+    name: cadre_carte_localisation_qr
+    class: frame
+    bbox_px: [35, 1062, 952, 264]
+    extraction: layout_vector
+    text_contamination: true
+    note: structural frame only; never crop whole region into final v3
+  - id: P03-F02
+    name: cadre_visite_site
+    class: frame
+    bbox_px: [35, 1334, 858, 181]
+    extraction: layout_vector
+    text_contamination: true
+    note: structural frame only; text and illustration remain independent layers
+
+text_regions:
+  policy: canonical_yaml_real_text_only
+  source: pages/03.yaml:canonical_text
+  raster_extraction_forbidden: true
+  regions:
+    - title_and_subtitle
+    - caption_portail_gothique
+    - caption_cloitre_baroque
+    - caption_voutes
+    - callout_spiritualite_franciscaine
+    - section_vision_heading_and_body
+    - caption_panorama_cruet
+    - section_necropole_heading_and_body
+    - caption_nef
+    - section_patrimoine_heading_and_body
+    - caption_linteau
+    - carte_heading
+    - localisation_heading_coordinates
+    - google_maps_heading_and_scan_instruction
+    - mappe_sarde_source_caption
+    - visite_site_heading_and_information
+
+review_gates:
+  - verify_each_bbox_against_repository_canonical_pixel_dimensions
+  - inspect_edges_at_100_percent_before_crop
+  - expand_crop_only_when_needed_to_preserve_strokes
+  - remove_no_documentary_detail
+  - never_use_phone_ocr_as_text_authority
+  - preserve_intrinsic_text_inside_documentary_map_only
+  - use_deterministic_qr_svg_not_visible_qr_pixels
+  - compare_recomposition_to_full_canonical_page
