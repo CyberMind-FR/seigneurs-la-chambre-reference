@@ -26,7 +26,8 @@ source:
     15: LES SEIGNEURS DE LA CHAMBRE - dos
     16: Remerciements - Les Amis du Couvent des Cordeliers de La Chambre
 render:
-  background: '#F5E8CE'
+  background: '#FFFFFF'
+  effective_ppi_min: 300
   preserve_aspect_ratio: true
   crop: false
   qr_overlay: true
@@ -38,7 +39,7 @@ outputs:
     page_size: A5
     pages: 16
   booklet_a5:
-    enabled: true
+    enabled: false
     filename: Seigneurs_La_Chambre_Livret_A5_16p_100pct_Colorise.pdf
     page_size: A5
     pages: 16
