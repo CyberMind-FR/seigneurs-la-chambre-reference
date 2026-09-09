@@ -5,7 +5,7 @@ schema_version: 1
 page: 5
 title: Le Château Joli
 family: site
-status: INSPECTED_PENDING_HUMAN_REVIEW
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source:
   path: assets/page-05.jpg
   sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
@@ -24,19 +24,19 @@ text_styles:
 # but absent from canonical_text stay inside their fragment (never OCRed, never retyped) and are
 # listed under `discrepancies` for editorial decision.
 fragments:
-  - {id: running_head_raster,     role: canonical_raster_text_absent_from_yaml, status: INSPECTED, bbox_px: {x: 214, y: 32,   w: 632, h: 36},  treatment: crop_only, note: "bandeau « Les Seigneurs de La Chambre et leur patrimoine en Maurienne » + fleurons"}
-  - {id: heraldry_captioned,      role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 30,  y: 60,   w: 158, h: 266}, treatment: crop_only, note: "armoiries + légende « Armes des La Chambre (voir blasonnement officiel p.2) »"}
-  - {id: title_ornament,          role: ornament,                                status: INSPECTED, bbox_px: {x: 298, y: 194,  w: 432, h: 34},  treatment: crop_only}
-  - {id: hero_captioned,          role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 578, y: 72, w: 421, h: 474}, treatment: crop_only, mask_px: [[578, 72, 145, 78], [578, 150, 252, 38]], note: "vue Château Joli / Cruet + callouts « Face à face… », « Le Château Joli domine… » ; résidus raster du titre/sous-titre masqués (ciel)"}
-  - {id: poype_captioned,         role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 33,  y: 704,  w: 427, h: 318}, treatment: crop_only, note: "poype annotée (Tour maîtresse, Motte primitive, Fossé naturel, Enceinte médiévale, cartouche POYPE FÉODALE)"}
-  - {id: princess_captioned,      role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 480, y: 727,  w: 518, h: 300}, treatment: crop_only, note: "Agnès de Savoie-Achaïe + légende raster"}
-  - {id: map_document,            role: documentary_map,                         status: INSPECTED, bbox_px: {x: 40,  y: 1043, w: 369, h: 203}, treatment: crop_only, mask_px: [[189, 1043, 62, 18]], note: "carte + rose des vents + icône ; ancien titre raster CARTE masqué, titre vivant recomposé"}
-  - {id: localization_vignette,   role: documentary_illustration,                status: INSPECTED, bbox_px: {x: 452, y: 1140, w: 251, h: 113}, treatment: crop_only}
-  - {id: pin_icon,                role: icon,                                    status: INSPECTED, bbox_px: {x: 495, y: 1046, w: 19,  h: 26},  treatment: crop_only}
-  - {id: phone_icon,              role: icon,                                    status: INSPECTED, bbox_px: {x: 773, y: 1045, w: 17,  h: 27},  treatment: crop_only}
-  - {id: mappe_icon,              role: icon,                                    status: INSPECTED, bbox_px: {x: 60,  y: 1266, w: 32,  h: 26},  treatment: crop_only}
-  - {id: info_icons,              role: icon,                                    status: INSPECTED, bbox_px: {x: 40,  y: 1337, w: 50,  h: 135}, treatment: crop_only}
-  - {id: ruins_vignette,          role: documentary_illustration,                status: INSPECTED, bbox_px: {x: 575, y: 1314, w: 428, h: 158}, treatment: crop_only, mask_px: [[575, 1345, 95, 22]], note: "résidu raster de la fin de la 1re puce (« du Mont ») masqué (ciel)"}
+  - {id: running_head_raster,     role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 214, y: 32,   w: 632, h: 36},  treatment: crop_only, note: "bandeau « Les Seigneurs de La Chambre et leur patrimoine en Maurienne » + fleurons"}
+  - {id: heraldry_captioned,      role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 30,  y: 60,   w: 158, h: 266}, treatment: crop_only, note: "armoiries + légende « Armes des La Chambre (voir blasonnement officiel p.2) »"}
+  - {id: title_ornament,          role: ornament,                                status: APPROVED, bbox_px: {x: 298, y: 194,  w: 432, h: 34},  treatment: crop_only}
+  - {id: hero_captioned,          role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 578, y: 72, w: 421, h: 474}, treatment: crop_only, mask_px: [[578, 72, 145, 78], [578, 150, 252, 38]], note: "vue Château Joli / Cruet + callouts « Face à face… », « Le Château Joli domine… » ; résidus raster du titre/sous-titre masqués (ciel)"}
+  - {id: poype_captioned,         role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 33,  y: 704,  w: 427, h: 318}, treatment: crop_only, note: "poype annotée (Tour maîtresse, Motte primitive, Fossé naturel, Enceinte médiévale, cartouche POYPE FÉODALE)"}
+  - {id: princess_captioned,      role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 480, y: 727,  w: 518, h: 300}, treatment: crop_only, note: "Agnès de Savoie-Achaïe + légende raster"}
+  - {id: map_document,            role: documentary_map,                         status: APPROVED, bbox_px: {x: 40,  y: 1043, w: 369, h: 203}, treatment: crop_only, mask_px: [[189, 1043, 62, 18]], note: "carte + rose des vents + icône ; ancien titre raster CARTE masqué, titre vivant recomposé"}
+  - {id: localization_vignette,   role: documentary_illustration,                status: APPROVED, bbox_px: {x: 452, y: 1140, w: 251, h: 113}, treatment: crop_only}
+  - {id: pin_icon,                role: icon,                                    status: APPROVED, bbox_px: {x: 495, y: 1046, w: 19,  h: 26},  treatment: crop_only}
+  - {id: phone_icon,              role: icon,                                    status: APPROVED, bbox_px: {x: 773, y: 1045, w: 17,  h: 27},  treatment: crop_only}
+  - {id: mappe_icon,              role: icon,                                    status: APPROVED, bbox_px: {x: 60,  y: 1266, w: 32,  h: 26},  treatment: crop_only}
+  - {id: info_icons,              role: icon,                                    status: APPROVED, bbox_px: {x: 40,  y: 1337, w: 50,  h: 135}, treatment: crop_only}
+  - {id: ruins_vignette,          role: documentary_illustration,                status: APPROVED, bbox_px: {x: 575, y: 1314, w: 428, h: 158}, treatment: crop_only, mask_px: [[575, 1345, 95, 22]], note: "résidu raster de la fin de la 1re puce (« du Mont ») masqué (ciel)"}
 
 vectors:
   - {kind: rect, bbox_px: [30, 1032, 962, 230], stroke: "#715240", width: 0.45}
@@ -73,6 +73,7 @@ qr:
 # Text visible in the canonical raster but absent from pages/05.yaml:canonical_text.
 # Kept raster inside the fragment named; never retyped; reported for editorial arbitration.
 discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés"}
   raster_text_absent_from_canon:
     - {fragment: running_head_raster, description: "bandeau courant « Les Seigneurs de La Chambre et leur patrimoine en Maurienne »"}
     - {fragment: heraldry_captioned, description: "légende des armoiries (voir blasonnement officiel p.2)"}
@@ -88,10 +89,14 @@ validation:
   qr_exact_decode: true
   fragment_sha256: true
   min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
-  accept_fragment_statuses: [APPROVED, INSPECTED]
+  accept_fragment_statuses: [APPROVED]
   edge_ink_epsilon: 0.02
   fragment_edge_ink: warn
   text_ink_collision: fail
   text_ink_collision_min_px: 40
   text_overflow: warn
   fragment_lock: warn
+  # Dérogation explicite de résolution (décision du propriétaire du projet, 2026-09-09) :
+  # les rasters canoniques (181–186 ppi à la taille A5) sont acceptés pour la sortie A5 ;
+  # les gates 300/1200 restent la cible et restent bloquants pour A2/A1.
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}

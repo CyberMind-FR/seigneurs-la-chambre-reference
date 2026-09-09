@@ -2,16 +2,16 @@ schema_version: 2
 project: Les Seigneurs de La Chambre
 page: 8
 title: La Maison-Forte du Châtelet
-status: INSPECTED_PENDING_HUMAN_REVIEW
+status: APPROVED
 generated_from:
   composition: prototypes/page-08/composition.yaml
-  composition_run: null
+  composition_run: 08046d239c384cf64bf0ddb5ad0a6e16b12c7fd5429a5159165d7ce147e19b45
 canonical_reference:
   path: assets/page-08.jpg
   sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927
   dimensions_px:
-  - null
-  - null
+  - 1024
+  - 1536
 principle:
   hierarchy: page -> regions -> objects -> subobjects -> layers
   asset_spec_role: macro_layout_reference_only
@@ -25,14 +25,14 @@ regions:
   bbox_px:
   - 0
   - 0
-  - 0
+  - 1024
   - 344
 - id: R02
   role: narrative
   bbox_px:
   - 0
   - 344
-  - 0
+  - 1024
   - 754
 - id: R03
   role: structural_frame_band
@@ -67,17 +67,17 @@ objects:
   - 26
   - 632
   - 36
-  parent_region: R06
+  parent_region: R01
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
+  sha256: d03007a5fbd854f74e289a2004ea7016c9033f072abe3c5057d82860a38ef4a2
+  effective_ppi_a5: 185.78
   dirty_edges: []
-  review_status: INSPECTED
+  review_status: APPROVED
 - id: P08-O-heraldry_captioned
   visual_description: heraldry captioned
   object_class: composite
@@ -86,17 +86,18 @@ objects:
   - 60
   - 145
   - 258
-  parent_region: R06
+  parent_region: R01
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: cc96d2628b414d26e5d8dc4a62307a5b524b4d3b1baaa873dd980b3a3fb5aebd
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - top
+  review_status: APPROVED
 - id: P08-O-title_ornament
   visual_description: title ornament
   object_class: ornament
@@ -105,17 +106,19 @@ objects:
   - 195
   - 430
   - 30
-  parent_region: R06
+  parent_region: R01
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 8e4973a6227ee03f27606f7f280f4f9aea05048c32b54aba94e728be90517063
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
 - id: P08-O-magnolia_flower
   visual_description: résidu raster de la fin du titre masqué (fond)
   object_class: illustration
@@ -124,17 +127,28 @@ objects:
   - 120
   - 150
   - 182
-  parent_region: R06
+  parent_region: R01
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 845
+    y: 120
+    w: 45
+    h: 16
+    fill_rgb:
+    - 255
+    - 253
+    - 246
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 69b0d45ccdc050ebe0951d41bded89a6b3f10010bc21e80ed593d943cf9fa147
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
 - id: P08-O-small_blason_square
   visual_description: small blason square
   object_class: heraldry
@@ -143,17 +157,20 @@ objects:
   - 185
   - 90
   - 90
-  parent_region: R06
+  parent_region: R01
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 98d8595eef0e1169a91ae4746632964391b6ab565e7c5a0a7c300ed63a72738f
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
 - id: P08-O-hero_captioned
   visual_description: maison forte + callouts « Magnolia centenaire… », « Maison-Forte du Châtelet, centre du village… »
   object_class: composite
@@ -162,17 +179,18 @@ objects:
   - 255
   - 615
   - 650
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 7a0d9629688d5a1c3627f6cd33089b9e75d1717d5248133ea31fe3427e8f6713
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - top
+  review_status: APPROVED
 - id: P08-O-cross_h1
   visual_description: cross h1
   object_class: ornament
@@ -181,17 +199,19 @@ objects:
   - 346
   - 22
   - 22
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 6972c2e12222d2dcd1891212e5578bfa6fe5e90d043f053ca89ce66b004c4cc5
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
 - id: P08-O-cross_h2
   visual_description: cross h2
   object_class: ornament
@@ -200,17 +220,19 @@ objects:
   - 614
   - 22
   - 22
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: eba7d24a1c979be57c9c30b1a88ad0849c99eac8b65f6f78410db84811a8b7cf
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
 - id: P08-O-cross_h3
   visual_description: cross h3
   object_class: ornament
@@ -219,17 +241,19 @@ objects:
   - 800
   - 22
   - 22
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: bf6d7083f98c13891f4717c1b8526c17eb67c79a66c61fbd8f797394621d327a
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
 - id: P08-O-panorama_captioned
   visual_description: bandeau « Système défensif des seigneurs de La Chambre » (Le Châtelet / Le Cruet)
   object_class: composite
@@ -238,17 +262,19 @@ objects:
   - 955
   - 945
   - 140
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: bd8cbd2b82ec7e1c02a523f8da5f01881f40002e4e03e489c709ab8adaf54d4e
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  review_status: APPROVED
 - id: P08-O-map_document
   visual_description: ancien titre CARTE masqué ; icône conservée
   object_class: documentary_map
@@ -261,13 +287,22 @@ objects:
   layer_target: raster_fragment
   text_relationship: intrinsic_document_text
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 189
+    y: 1110
+    w: 60
+    h: 18
+    fill_rgb:
+    - 255
+    - 253
+    - 246
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 2635494b3d9219d152ae235550101bcd00e8334507d9c6f8588c1712c5aa5618
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  review_status: APPROVED
 - id: P08-O-pin_icon
   visual_description: pin icon
   object_class: icon
@@ -283,10 +318,10 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
+  sha256: a8830b2b639f698d39a9adcd7aec342886001c71e6916eee38de1f3ad31484d5
+  effective_ppi_a5: 185.78
   dirty_edges: []
-  review_status: INSPECTED
+  review_status: APPROVED
 - id: P08-O-phone_icon
   visual_description: phone icon
   object_class: icon
@@ -302,10 +337,11 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 91a57589ba7830ac6953a1cb58ed69a8ca6a7c7d0522fcab9ffe8fcb9549a400
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  review_status: APPROVED
 - id: P08-O-localization_vignette
   visual_description: localization vignette
   object_class: illustration
@@ -321,10 +357,13 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 65080cd5aa4be1a37a7f6a877556e8e381f1bcf48219b03cd69fe50d7fd910ec
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
 - id: P08-O-mappe_icon
   visual_description: mappe icon
   object_class: icon
@@ -340,10 +379,10 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
+  sha256: 19c82332ce0217c8f5c6a20907c1cbb05226e70d1bdeef423389d5e53ddee788
+  effective_ppi_a5: 185.78
   dirty_edges: []
-  review_status: INSPECTED
+  review_status: APPROVED
 - id: P08-O-info_icons
   visual_description: info icons
   object_class: icon
@@ -359,10 +398,10 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
+  sha256: a998d6e9da6e2068ee211c60e6f03722f9ceae15cb01ca9a370c34452721c9a8
+  effective_ppi_a5: 185.78
   dirty_edges: []
-  review_status: INSPECTED
+  review_status: APPROVED
 - id: P08-O-bottom_vignette
   visual_description: bottom vignette
   object_class: illustration
@@ -378,10 +417,14 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 010114845c0e81b3f85868e0c4ad664b79ea96b9f696687405684276b9ea240d
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
 text_zones:
 - id: P08-T-title
   role: title
@@ -392,7 +435,7 @@ text_zones:
   - 74
   - 690
   - 70
-  parent_region: R06
+  parent_region: R01
   layer_target: text_layer
   compose_as: live_text
   style: title
@@ -406,7 +449,7 @@ text_zones:
   - 150
   - 600
   - 38
-  parent_region: R06
+  parent_region: R01
   layer_target: text_layer
   compose_as: live_text
   style: subtitle
@@ -420,7 +463,7 @@ text_zones:
   - 344
   - 300
   - 26
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -434,7 +477,7 @@ text_zones:
   - 376
   - 334
   - 132
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -448,7 +491,7 @@ text_zones:
   - 518
   - 334
   - 74
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -462,7 +505,7 @@ text_zones:
   - 612
   - 300
   - 54
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -476,7 +519,7 @@ text_zones:
   - 668
   - 334
   - 116
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -490,7 +533,7 @@ text_zones:
   - 798
   - 300
   - 26
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -504,7 +547,7 @@ text_zones:
   - 830
   - 334
   - 114
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -663,7 +706,20 @@ text_zones:
   compose_as: live_text
   style: tiny
   authority: pages/08.yaml:canonical_text
-functional_objects: []
+functional_objects:
+- id: P08-F-google_maps
+  object_class: qr
+  source_bbox_px:
+  - 757
+  - 1146
+  - 127
+  - 127
+  parent_region: R03
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-08-google-maps.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
 structural_frames:
 - id: P08-FR01
   kind: rect
@@ -711,6 +767,11 @@ structural_frames:
   layer_target: documentary_vector
   extraction_action: layout_vector
 discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés
   raster_text_absent_from_canon:
   - fragment: running_head_raster
     description: bandeau courant
@@ -725,10 +786,10 @@ discrepancies:
     description: toponymes intrinsèques de la carte
   canonical_text_not_visible_in_raster: []
 completeness_gate:
-  status: INSPECTED_PENDING_HUMAN_REVIEW
-  native_raster_dimensions_recorded: false
-  all_objects_have_sha256: false
+  status: PASS
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
   all_editorial_text_composed_live: true
-  qr_accounted_for: false
+  qr_accounted_for: true
   second_visual_sweep_by_human: pending
-  last_methodology_gate: null
+  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER

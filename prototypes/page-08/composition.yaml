@@ -3,7 +3,7 @@ schema_version: 1
 page: 8
 title: La Maison-Forte du Châtelet
 family: site
-status: INSPECTED_PENDING_HUMAN_REVIEW
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-08.jpg, sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927}
 canonical_text: {path: pages/08.yaml, key: canonical_text, expected_blocks: 20}
 qr_registry: qr_registry.yaml
@@ -14,23 +14,23 @@ text_styles:
   small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
 
 fragments:
-  - {id: running_head_raster,   role: canonical_raster_text_absent_from_yaml, status: INSPECTED, bbox_px: {x: 214, y: 26,   w: 632, h: 36},  treatment: crop_only}
-  - {id: heraldry_captioned,    role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 36,  y: 60,   w: 145, h: 258}, treatment: crop_only}
-  - {id: title_ornament,        role: ornament, status: INSPECTED, bbox_px: {x: 300, y: 195, w: 430, h: 30}, treatment: crop_only}
-  - {id: magnolia_flower,       role: documentary_illustration, status: INSPECTED, bbox_px: {x: 845, y: 120, w: 150, h: 182}, treatment: crop_only, mask_px: [[845, 120, 45, 16]], note: "résidu raster de la fin du titre masqué (fond)"}
-  - {id: small_blason_square,   role: heraldry, status: INSPECTED, bbox_px: {x: 755, y: 185, w: 90, h: 90}, treatment: crop_only}
-  - {id: hero_captioned,        role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 380, y: 255, w: 615, h: 650}, treatment: crop_only, note: "maison forte + callouts « Magnolia centenaire… », « Maison-Forte du Châtelet, centre du village… »"}
-  - {id: cross_h1, role: ornament, status: INSPECTED, bbox_px: {x: 46, y: 346, w: 22, h: 22}, treatment: crop_only}
-  - {id: cross_h2, role: ornament, status: INSPECTED, bbox_px: {x: 46, y: 614, w: 22, h: 22}, treatment: crop_only}
-  - {id: cross_h3, role: ornament, status: INSPECTED, bbox_px: {x: 46, y: 800, w: 22, h: 22}, treatment: crop_only}
-  - {id: panorama_captioned,    role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 40, y: 955, w: 945, h: 140}, treatment: crop_only, note: "bandeau « Système défensif des seigneurs de La Chambre » (Le Châtelet / Le Cruet)"}
-  - {id: map_document,          role: documentary_map, status: INSPECTED, bbox_px: {x: 40, y: 1105, w: 356, h: 195}, treatment: crop_only, mask_px: [[189, 1110, 60, 18]], note: "ancien titre CARTE masqué ; icône conservée"}
-  - {id: pin_icon,   role: icon, status: INSPECTED, bbox_px: {x: 468, y: 1110, w: 18, h: 28}, treatment: crop_only}
-  - {id: phone_icon, role: icon, status: INSPECTED, bbox_px: {x: 748, y: 1110, w: 16, h: 28}, treatment: crop_only}
-  - {id: localization_vignette, role: documentary_illustration, status: INSPECTED, bbox_px: {x: 425, y: 1205, w: 245, h: 105}, treatment: crop_only}
-  - {id: mappe_icon, role: icon, status: INSPECTED, bbox_px: {x: 68, y: 1313, w: 26, h: 30}, treatment: crop_only}
-  - {id: info_icons, role: icon, status: INSPECTED, bbox_px: {x: 54, y: 1393, w: 40, h: 104}, treatment: crop_only}
-  - {id: bottom_vignette,       role: documentary_illustration, status: INSPECTED, bbox_px: {x: 578, y: 1360, w: 446, h: 175}, treatment: crop_only}
+  - {id: running_head_raster,   role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 214, y: 26,   w: 632, h: 36},  treatment: crop_only}
+  - {id: heraldry_captioned,    role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 36,  y: 60,   w: 145, h: 258}, treatment: crop_only}
+  - {id: title_ornament,        role: ornament, status: APPROVED, bbox_px: {x: 300, y: 195, w: 430, h: 30}, treatment: crop_only}
+  - {id: magnolia_flower,       role: documentary_illustration, status: APPROVED, bbox_px: {x: 845, y: 120, w: 150, h: 182}, treatment: crop_only, mask_px: [[845, 120, 45, 16]], note: "résidu raster de la fin du titre masqué (fond)"}
+  - {id: small_blason_square,   role: heraldry, status: APPROVED, bbox_px: {x: 755, y: 185, w: 90, h: 90}, treatment: crop_only}
+  - {id: hero_captioned,        role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 380, y: 255, w: 615, h: 650}, treatment: crop_only, note: "maison forte + callouts « Magnolia centenaire… », « Maison-Forte du Châtelet, centre du village… »"}
+  - {id: cross_h1, role: ornament, status: APPROVED, bbox_px: {x: 46, y: 346, w: 22, h: 22}, treatment: crop_only}
+  - {id: cross_h2, role: ornament, status: APPROVED, bbox_px: {x: 46, y: 614, w: 22, h: 22}, treatment: crop_only}
+  - {id: cross_h3, role: ornament, status: APPROVED, bbox_px: {x: 46, y: 800, w: 22, h: 22}, treatment: crop_only}
+  - {id: panorama_captioned,    role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 40, y: 955, w: 945, h: 140}, treatment: crop_only, note: "bandeau « Système défensif des seigneurs de La Chambre » (Le Châtelet / Le Cruet)"}
+  - {id: map_document,          role: documentary_map, status: APPROVED, bbox_px: {x: 40, y: 1105, w: 356, h: 195}, treatment: crop_only, mask_px: [[189, 1110, 60, 18]], note: "ancien titre CARTE masqué ; icône conservée"}
+  - {id: pin_icon,   role: icon, status: APPROVED, bbox_px: {x: 468, y: 1110, w: 18, h: 28}, treatment: crop_only}
+  - {id: phone_icon, role: icon, status: APPROVED, bbox_px: {x: 748, y: 1110, w: 16, h: 28}, treatment: crop_only}
+  - {id: localization_vignette, role: documentary_illustration, status: APPROVED, bbox_px: {x: 425, y: 1205, w: 245, h: 105}, treatment: crop_only}
+  - {id: mappe_icon, role: icon, status: APPROVED, bbox_px: {x: 68, y: 1313, w: 26, h: 30}, treatment: crop_only}
+  - {id: info_icons, role: icon, status: APPROVED, bbox_px: {x: 54, y: 1393, w: 40, h: 104}, treatment: crop_only}
+  - {id: bottom_vignette,       role: documentary_illustration, status: APPROVED, bbox_px: {x: 578, y: 1360, w: 446, h: 175}, treatment: crop_only}
 
 vectors:
   - {kind: rect, bbox_px: [30, 1098, 962, 208], stroke: "#715240", width: 0.45}
@@ -65,6 +65,7 @@ qr:
   - {id: google_maps, svg: assets/qr-svg/page-08-google-maps.svg, placement: reference_canvas}
 
 discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés"}
   raster_text_absent_from_canon:
     - {fragment: running_head_raster, description: "bandeau courant"}
     - {fragment: heraldry_captioned, description: "légende des armoiries"}
@@ -79,10 +80,14 @@ validation:
   qr_exact_decode: true
   fragment_sha256: true
   min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
-  accept_fragment_statuses: [APPROVED, INSPECTED]
+  accept_fragment_statuses: [APPROVED]
   edge_ink_epsilon: 0.02
   fragment_edge_ink: warn
   text_ink_collision: fail
   text_ink_collision_min_px: 40
   text_overflow: warn
   fragment_lock: warn
+  # Dérogation explicite de résolution (décision du propriétaire du projet, 2026-09-09) :
+  # les rasters canoniques (181–186 ppi à la taille A5) sont acceptés pour la sortie A5 ;
+  # les gates 300/1200 restent la cible et restent bloquants pour A2/A1.
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}

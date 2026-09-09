@@ -1044,7 +1044,7 @@ phase_b_lot_2:
     association_logo_svg: blocked_source_missing
 
 layered_compositions:
-  status: site_family_composed_pending_human_review
+  status: site_family_composed_and_validated  # gkerma, 2026-09-09
   composer: scripts/layered_compose.py
   measurement: scripts/layered_measure.py
   inventory: scripts/layered_inventory.py
@@ -1054,59 +1054,59 @@ layered_compositions:
   pages:
   - page: 3
     composition: prototypes/page-03/composition.yaml
-    composition_sha256: b64cec34f82852d45e0872311a4a4e7b335de3528803e0851642f710da6ab297
+    composition_sha256: 47c7c825e4d23e46b56b7b095122ab6b24954462d70927ddd034db25aa4323d7
     fragment_lock: prototypes/page-03/fragments.lock.yaml
-    status: PROTOTYPE_PORTED_TO_GENERIC_COMPOSER
-    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
     effective_ppi_a5: 185.78
   - page: 5
     composition: prototypes/page-05/composition.yaml
-    composition_sha256: ef764ef7c502ef787a3676b4b86507b6adbbef0041a3af95d741f5dc9eec6948
+    composition_sha256: bbb89e291b2f4f5d56e514d2a42fc90e870ffcef38d55142d06f7e3b4132f4df
     fragment_lock: prototypes/page-05/fragments.lock.yaml
-    status: INSPECTED_PENDING_HUMAN_REVIEW
-    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
     effective_ppi_a5: 185.78
   - page: 6
     composition: prototypes/page-06/composition.yaml
-    composition_sha256: ee8354261e6684263d5d78baa48751b7c801c7af2dd03053d27d3d9a2232ed20
+    composition_sha256: 8192434ecf9419e33d3795a3f79f425e59323b41e062d53b9a60baf78bd37594
     fragment_lock: prototypes/page-06/fragments.lock.yaml
-    status: INSPECTED_PENDING_HUMAN_REVIEW
-    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
     effective_ppi_a5: 185.78
   - page: 7
     composition: prototypes/page-07/composition.yaml
-    composition_sha256: 331323f7f148180acf28d001b92c7e5fdd0fa629bd58c0a615657fbd641e4e8f
+    composition_sha256: b25653106b2e62f0eb826225fb7a8a1cec643efe66e4b6cbbecaceef9adcfcc0
     fragment_lock: prototypes/page-07/fragments.lock.yaml
-    status: INSPECTED_PENDING_HUMAN_REVIEW
-    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
     effective_ppi_a5: 185.78
   - page: 8
     composition: prototypes/page-08/composition.yaml
-    composition_sha256: 26cdd2b967830eab1eedff53d76058bcd628e733e13ff5713b23637947a6698a
+    composition_sha256: 7b943833cc271d4cfe5d2a85c348866f7177f3718cac3b736c44c716debf7655
     fragment_lock: prototypes/page-08/fragments.lock.yaml
-    status: INSPECTED_PENDING_HUMAN_REVIEW
-    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
     effective_ppi_a5: 185.78
   - page: 9
     composition: prototypes/page-09/composition.yaml
-    composition_sha256: c4e7659415dab3cbf9836baf42a664e5bb717acfbe2abaf87886f47a829c553a
+    composition_sha256: b3d5901003b835cd89a5942f8262c5d7b9fab8331f9ad9b2afe168ba71670499
     fragment_lock: prototypes/page-09/fragments.lock.yaml
-    status: INSPECTED_PENDING_HUMAN_REVIEW
-    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
     effective_ppi_a5: 185.78
   - page: 11
     composition: prototypes/page-11/composition.yaml
-    composition_sha256: 8bd82a0f0cccb15f2cca07ba20870bbae98c84da5f2b84793a6c4eb58795929b
+    composition_sha256: 8a2bc9791b436bf89d1d8b827eacab10eaa19b13ea077400634dab00cd8486ec
     fragment_lock: prototypes/page-11/fragments.lock.yaml
-    status: INSPECTED_PENDING_HUMAN_REVIEW
-    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
     effective_ppi_a5: 181.06
   - page: 12
     composition: prototypes/page-12/composition.yaml
-    composition_sha256: 150f55f60074a007d3ed857e14f626737207fe3c37e8a190fff8ff1e384b4f0b
+    composition_sha256: 61ec32062d9aec87454af2f2dcf9bc8c14c8353a92e0180c411dc6353cfc78da
     fragment_lock: prototypes/page-12/fragments.lock.yaml
-    status: INSPECTED_PENDING_HUMAN_REVIEW
-    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
     effective_ppi_a5: 181.06
   excluded:
   - {page: 4, reason: PAGE_04_EDITORIAL_ARBITRATION_REQUIRED}

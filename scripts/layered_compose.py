@@ -560,6 +560,14 @@ class Composer:
                              "pass": (min(kind_ppi) >= gate_ppi) if kind_ppi else True,
                              "failing_fragments": [f["id"] for f in self.fragments if f["raster_kind"] == kind and f["effective_ppi"] < gate_ppi]}
         resolution_pass = all(k["pass"] for k in by_kind.values())
+        # Explicit human waiver (REGENERATION_RULES: « validation explicite d'un seuil inférieur »):
+        # scoped to page sizes, with an accepted minimum ppi; the target gates stay reported.
+        waiver = val.get("resolution_waiver") or {}
+        waiver_applies = bool(waiver.get("approved")) and self.page_size_name in (waiver.get("page_sizes") or []) \
+            and ppi_min >= float(waiver.get("min_ppi_accepted", 0))
+        waiver_report = {"declared": bool(waiver), "applies": waiver_applies,
+                         "approved_by": waiver.get("approved_by"), "date": waiver.get("date"),
+                         "page_sizes": waiver.get("page_sizes"), "min_ppi_accepted": waiver.get("min_ppi_accepted")}
         frag_sha_pass = all((ROOT / f["path"]).exists() and sha256(ROOT / f["path"]) == f["sha256"] for f in self.fragments)
         lock = self.lock_check()
         fails = [i for i in self.issues if i[0] == "fail"]
@@ -568,6 +576,8 @@ class Composer:
         review = "PENDING_HUMAN_REVIEW" if any(f["status"] != "APPROVED" for f in self.fragments) else "REVIEWED"
         if not (text_pass and qr_pass and frag_sha_pass) or fails:
             gate_status = "FAIL"
+        elif not resolution_pass and waiver_applies:
+            gate_status = "PASS_WITH_RESOLUTION_WAIVER"
         elif not resolution_pass:
             gate_status = "PASS_WITH_RESOLUTION_BLOCKER"
         else:
@@ -582,7 +592,7 @@ class Composer:
             "fragments_skipped": self.skipped_fragments,
             "fragment_effective_ppi_min": round(ppi_min, 2),
             "resolution_gate": {"page_size": self.page_size_name, "rule": "final placement size, every output format",
-                                "by_raster_kind": by_kind, "pass": resolution_pass},
+                                "by_raster_kind": by_kind, "pass": resolution_pass, "waiver": waiver_report},
             "text_ink_collisions": collisions,
             "text_qr_overlaps": qr_overlaps,
             "dirty_fragment_edges": [{"id": f["id"], "edges": f["dirty_edges"], "grown_px": f["grown_px"]} for f in self.fragments if f["dirty_edges"]],
