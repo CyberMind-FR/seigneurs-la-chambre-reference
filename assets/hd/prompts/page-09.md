@@ -26,13 +26,13 @@ Format : carré, ratio largeur/hauteur ≈ 1.05. Le sujet doit rester entièreme
 - Référence à joindre : `reference/page-09/magnolia_captioned.png` (crop canonique 200×252 px)
 - Ratio L/H : 0.7937 — canevas natif conseillé : portrait 1024×1536 → recadrage centré 1024×1290 px
 - Gate 300.0 ppi (continuous_tone) — couverture au canevas natif : A5 ✔(≥323 px) A4 ✔(≥457 px) A2 ✔(≥646 px) A1 ✔(≥914 px)
-- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)
+- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner
 
 ```text
 Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.
 Sujet : Fleur de magnolia blanche et feuillage, dessin botanique.
 Style : Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée : traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée, lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
-À ne pas reproduire : légende « Magnolia séculaire ombrageant la demeure »; toute légende ou annotation présente dans l'image de référence. Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
+À ne pas reproduire : légende « Magnolia séculaire ombrageant la demeure »; toute légende ou annotation présente dans l'image de référence (légende inscrite au canon et composée en couche texte). Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
 Format : portrait (plus haut que large), ratio largeur/hauteur ≈ 0.79. Le sujet doit rester entièrement dans le cadre avec une légère marge de papier crème uni sur les bords (l'image sera recadrée au centre à ce ratio exact, sans agrandissement). Produis la plus grande taille disponible (au minimum 1024×1536 px).
 ```
 

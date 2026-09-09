@@ -5,7 +5,7 @@ title: Le Couvent des Cordeliers
 status: APPROVED
 generated_from:
   composition: prototypes/page-03/composition.yaml
-  composition_run: fd806a8188f01421814874a7eee3c3fba8610512d147e551d5e3d3739cb6b030
+  composition_run: 891467da9b2404fd9fe99273873cc8951055c182ffaef52d0035c3e85ef12e93
 canonical_reference:
   path: assets/page-03.jpg
   sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
@@ -78,10 +78,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 56
+    y: 195
+    w: 98
+    h: 56
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 13dd92c5d8ffe6d2337b071f9c322dd072ec7fbc8f1f8563c157fb2413e3e89a
+  sha256: 9d14f83c6ac67b976dbd232b7890bc72bcedebbe811b4a73eacac8d9f52f3b8d
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -99,10 +108,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 55
+    y: 479
+    w: 96
+    h: 40
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 90058d5b4dc93e330400f1b1fe3c87a3ec64837d494b2de30f762509d548bf9d
+  sha256: b19ec25befcc7bba44970caec7a3dbc5e0e94beb5df446ab00203630d705c7e8
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -120,10 +138,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 42
+    y: 713
+    w: 138
+    h: 60
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: b14437b88bb362b910fd93e16620c4d3ee3571af83fa05124379d5d6d27c6c96
+  sha256: 331907e07d10ffdb544269da5f3e72a88d850045104a6739fa6d77a0a0251ef4
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -181,10 +208,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 788
+    y: 484
+    w: 164
+    h: 42
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 97e4718032e9339e39df47f8284736af401390b54cece2202722a76d42bd7a27
+  sha256: 83b4da54392e5f61be188e4aad6a80a2250d369fd81cf99b7bd525d795c5112c
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -202,10 +238,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 854
+    y: 760
+    w: 130
+    h: 62
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 3182d78dc61df8bd603a94d39e5e1ea9add6387ac7b401da02ab566e62a79473
+  sha256: 0895608a3ef179b08eddbca3dc65ae607412905f91257f00e0b2f56ff9084b33
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -245,10 +290,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 789
+    y: 991
+    w: 170
+    h: 40
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 8c3592009414287e6e28781f7c40cd3524b8bd36266ce281d946ddb84dc356c5
+  sha256: 7be66e300fde2e3ad657bce54c0a18d4753d471ee52e6eea3fabf62ae939d81f
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -678,6 +732,104 @@ text_zones:
   layer_target: text_layer
   compose_as: live_text
   style: tiny
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-cap_portal
+  role: cap_portal
+  canonical_block: 25
+  expect: Portail gothique en
+  bbox_px:
+  - 56
+  - 195
+  - 98
+  - 56
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-cap_cloister
+  role: cap_cloister
+  canonical_block: 26
+  expect: Cloître baroque (1744)
+  bbox_px:
+  - 55
+  - 479
+  - 96
+  - 40
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-cap_salle
+  role: cap_salle
+  canonical_block: 27
+  expect: Voûtes d'ogives de
+  bbox_px:
+  - 42
+  - 713
+  - 138
+  - 60
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-cap_valley
+  role: cap_valley
+  canonical_block: 28
+  expect: Vue depuis le
+  bbox_px:
+  - 788
+  - 484
+  - 164
+  - 42
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-cap_nave_1
+  role: cap_nave_1
+  canonical_block: 29
+  expect: Nef unique de
+  bbox_px:
+  - 854
+  - 760
+  - 130
+  - 20
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-cap_nave_2
+  role: cap_nave_2
+  canonical_block: 30
+  expect: Riche et pauvre,
+  bbox_px:
+  - 854
+  - 780
+  - 130
+  - 42
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-cap_lintel
+  role: cap_lintel
+  canonical_block: 31
+  expect: Linteau en accolade
+  bbox_px:
+  - 789
+  - 991
+  - 170
+  - 40
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
   authority: pages/03.yaml:canonical_text
 functional_objects:
 - id: P03-F-google_maps

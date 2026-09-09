@@ -12,7 +12,7 @@ source:
 canonical_text:
   path: pages/03.yaml
   key: canonical_text
-  expected_blocks: 25
+  expected_blocks: 32
 qr_registry: qr_registry.yaml
 canvas:
   page_size: A5
@@ -36,15 +36,15 @@ text_styles:
 #    heading locally, the live heading is composed at the canonical position.
 # Edge-ink warnings that remain concern the page frame lines adjoining the crops.
 fragments:
-  - {id: portal_gothique_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 27,  y: 10,   w: 180, h: 246}, treatment: crop_only}
-  - {id: cloister_baroque_captioned,  role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 30,  y: 260,  w: 180, h: 262}, treatment: crop_only}
-  - {id: salle_capitulaire_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 30,  y: 528,  w: 181, h: 264}, treatment: crop_only}
+  - {id: portal_gothique_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 27,  y: 10,   w: 180, h: 246}, treatment: crop_only, mask_px: [{box: [56, 195, 98, 56], fill: paper}]}
+  - {id: cloister_baroque_captioned,  role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 30,  y: 260,  w: 180, h: 262}, treatment: crop_only, mask_px: [{box: [55, 479, 96, 40], fill: paper}]}
+  - {id: salle_capitulaire_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 30,  y: 528,  w: 181, h: 264}, treatment: crop_only, mask_px: [{box: [42, 713, 138, 60], fill: paper}]}
   - {id: franciscan_monk,             role: documentary_illustration,                               status: APPROVED, bbox_px: {x: 846, y: 86,   w: 134, h: 226}, treatment: crop_only}
   - {id: franciscan_caption_raster,   role: canonical_raster_caption_absent_from_yaml,              status: APPROVED, bbox_px: {x: 779, y: 160,  w: 92,  h: 54},  treatment: crop_only, note: "caption « Spiritualité franciscaine » + arrow; absent from pages/03.yaml, kept raster, not OCRed"}
-  - {id: valley_cruet_captioned,      role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 744, y: 265,  w: 252, h: 264}, treatment: crop_only}
-  - {id: nave_captioned,              role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 787, y: 536,  w: 204, h: 286}, treatment: crop_only}
+  - {id: valley_cruet_captioned,      role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 744, y: 265,  w: 252, h: 264}, treatment: crop_only, mask_px: [{box: [788, 484, 164, 42], fill: paper}]}
+  - {id: nave_captioned,              role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 787, y: 536,  w: 204, h: 286}, treatment: crop_only, mask_px: [{box: [854, 760, 130, 62], fill: paper}]}
   - {id: portal_detail,               role: documentary_detail,                                     status: APPROVED, bbox_px: {x: 638, y: 836,  w: 114, h: 194}, treatment: crop_only}
-  - {id: lintel_accolade_captioned,   role: documentary_detail_with_canonical_raster_caption,       status: APPROVED, bbox_px: {x: 787, y: 821,  w: 205, h: 221}, treatment: crop_only}
+  - {id: lintel_accolade_captioned,   role: documentary_detail_with_canonical_raster_caption,       status: APPROVED, bbox_px: {x: 787, y: 821,  w: 205, h: 221}, treatment: crop_only, mask_px: [{box: [789, 991, 170, 40], fill: paper}]}
   - {id: map_document,                role: documentary_map,                                        status: APPROVED, bbox_px: {x: 39,  y: 1092, w: 360, h: 197}, treatment: crop_only, note: intrinsic map labels remain raster; heading CARTE is live text}
   - {id: localization_illustration,   role: documentary_illustration,                               status: APPROVED, bbox_px: {x: 421, y: 1180, w: 240, h: 109}, treatment: crop_only}
   - {id: site_visit_illustration,     role: documentary_illustration,                               status: APPROVED, bbox_px: {x: 460, y: 1354, w: 428, h: 158}, treatment: crop_only, mask_px: [[460, 1354, 90, 15]], note: old raster heading masked with paper colour}
@@ -84,6 +84,14 @@ text_blocks:
   - {key: elements,        block: 22, expect: "• Éléments visibles",                 bbox_px: [96, 1400, 375, 42],  style: tiny}
   - {key: statut,          block: 23, expect: "• Statut",                            bbox_px: [96, 1446, 375, 26],  style: tiny}
   - {key: contact,         block: 24, expect: "• Contact",                           bbox_px: [96, 1478, 375, 26],  style: tiny}
+  # Légendes raster inscrites au canon le 2026-09-09 (ordre du propriétaire) — composées en couche texte, raster masqué.
+  - {key: cap_portal, block: 25, expect: "Portail gothique en", bbox_px: [56, 195, 98, 56], style: caption, caption_of: portal_gothique_captioned}
+  - {key: cap_cloister, block: 26, expect: "Cloître baroque (1744)", bbox_px: [55, 479, 96, 40], style: caption, caption_of: cloister_baroque_captioned}
+  - {key: cap_salle, block: 27, expect: "Voûtes d'ogives de", bbox_px: [42, 713, 138, 60], style: caption, caption_of: salle_capitulaire_captioned}
+  - {key: cap_valley, block: 28, expect: "Vue depuis le", bbox_px: [788, 484, 164, 42], style: caption, caption_of: valley_cruet_captioned}
+  - {key: cap_nave_1, block: 29, expect: "Nef unique de", bbox_px: [854, 760, 130, 20], style: caption, caption_of: nave_captioned}
+  - {key: cap_nave_2, block: 30, expect: "Riche et pauvre,", bbox_px: [854, 780, 130, 42], style: caption, caption_of: nave_captioned}
+  - {key: cap_lintel, block: 31, expect: "Linteau en accolade", bbox_px: [789, 991, 170, 40], style: caption, caption_of: lintel_accolade_captioned}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-03-google-maps.svg, placement: reference_canvas}

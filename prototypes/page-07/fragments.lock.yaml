@@ -44,7 +44,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   hero_captioned:
-    sha256: 4eb05aec88c4d72c3b967d3ae07024c3f1c38b323b74022ee941f67df03b1b62
+    sha256: 04e7ac4e39e41ff54bf5b705be305f0b92d3a2abb57c0173e77591a21a2e7e52
     bbox_px:
       x: 580
       y: 175
@@ -84,7 +84,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   vassal_scene_captioned:
-    sha256: c1915bb34ecabe48008c12dc1be4d840945fc231412a24a6a334b87309c27285
+    sha256: 902205c0f5a2cd1c3d7e87f09ae4b546f3c7b97bd1928975c3a980aeddf29cc8
     bbox_px:
       x: 26
       y: 608
@@ -94,7 +94,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   defensive_box_captioned:
-    sha256: 4cf99aa5bbf40d6a43abdcceb66995ec5cb1c15bf0cdf10eb7187aa6ef45a170
+    sha256: 9595fa2d2a784d8dbc193be06336fce5095a0af6a9d84501f6d6d6fae40a1ff3
     bbox_px:
       x: 575
       y: 607
@@ -114,7 +114,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   battle_scene_captioned:
-    sha256: 3a5923ece1ba1ffa20ba2eb60898b5711f4c05b33608ee031fab10f343b8ddc3
+    sha256: 5208b983116f1ef1c2fdfdc427d775a40df0f6b567efa3e4e8e7164516ae4f7a
     bbox_px:
       x: 495
       y: 895

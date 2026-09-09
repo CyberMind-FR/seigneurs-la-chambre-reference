@@ -5,7 +5,7 @@ title: La Maison-Forte du Châtelet
 status: APPROVED
 generated_from:
   composition: prototypes/page-08/composition.yaml
-  composition_run: 426c7291c7e467e08f2577b8447293770cabd67de4c910f5e23367546bc9bbbf
+  composition_run: 712cae8a3130e3890b6597e96bd36a14573bdee28b0209e9e371494b7fb40a5b
 canonical_reference:
   path: assets/page-08.jpg
   sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927
@@ -184,10 +184,28 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 869
+    y: 287
+    w: 122
+    h: 64
+    fill_rgb:
+    - 255
+    - 253
+    - 246
+    fill_mode: paper
+  - x: 884
+    y: 387
+    w: 108
+    h: 102
+    fill_rgb:
+    - 255
+    - 253
+    - 246
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: 0ae73f4d230843965eb48410b33eac77fa968f364ccecc86db52693200f1085d
+  sha256: 444af177464d61a32117d5596c948c5e92fee9abc7e17b51f4a5278999e5cf6d
   effective_ppi_a5: 300.97
   dirty_edges:
   - top
@@ -267,10 +285,37 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 155
+    y: 961
+    w: 78
+    h: 22
+    fill_rgb:
+    - 255
+    - 255
+    - 255
+    fill_mode: border_median
+  - x: 425
+    y: 959
+    w: 186
+    h: 44
+    fill_rgb:
+    - 255
+    - 255
+    - 253
+    fill_mode: border_median
+  - x: 837
+    y: 961
+    w: 60
+    h: 22
+    fill_rgb:
+    - 255
+    - 255
+    - 253
+    fill_mode: border_median
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
-  sha256: 1b4cb512d3e38155965516ddce367c4eb00e437ef13a87577b65e008aca8e511
+  sha256: 1da3ba03bacca95c111ac0687e2ff7355d193926a711a5f85faad21aa64a8f45
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -708,6 +753,76 @@ text_zones:
   compose_as: live_text
   style: tiny
   authority: pages/08.yaml:canonical_text
+- id: P08-T-cap_hero_1
+  role: cap_hero_1
+  canonical_block: 20
+  expect: Magnolia centenaire dans
+  bbox_px:
+  - 869
+  - 287
+  - 122
+  - 64
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-cap_hero_2
+  role: cap_hero_2
+  canonical_block: 21
+  expect: Maison-Forte du Châtelet,
+  bbox_px:
+  - 884
+  - 387
+  - 108
+  - 102
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-cap_pano_1
+  role: cap_pano_1
+  canonical_block: 22
+  expect: Le Châtelet
+  bbox_px:
+  - 155
+  - 961
+  - 78
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-cap_pano_2
+  role: cap_pano_2
+  canonical_block: 23
+  expect: Système défensif des
+  bbox_px:
+  - 425
+  - 959
+  - 186
+  - 44
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-cap_pano_3
+  role: cap_pano_3
+  canonical_block: 24
+  expect: Le Cruet
+  bbox_px:
+  - 837
+  - 961
+  - 60
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/08.yaml:canonical_text
 functional_objects:
 - id: P08-F-google_maps
   object_class: qr
@@ -779,13 +894,14 @@ discrepancies:
     description: bandeau courant
   - fragment: heraldry_captioned
     description: légende des armoiries
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  raster_text_inscribed_in_canon_2026_09_09:
   - fragment: hero_captioned
     description: callouts « Magnolia centenaire dans les jardins suspendus », « Maison-Forte du Châtelet, centre du village
       de Saint-Étienne-de-Cuines »
   - fragment: panorama_captioned
     description: libellés « Le Châtelet », « Système défensif des seigneurs de La Chambre », « Le Cruet »
-  - fragment: map_document
-    description: toponymes intrinsèques de la carte
   canonical_text_not_visible_in_raster: []
 completeness_gate:
   status: PASS

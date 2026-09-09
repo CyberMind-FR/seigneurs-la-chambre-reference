@@ -5,7 +5,7 @@ title: La Tour de Notre-Dame-du-Cruet
 status: APPROVED
 generated_from:
   composition: prototypes/page-11/composition.yaml
-  composition_run: 0d2cdb76374b70daa2b9016ac0bad3f8d1e4ce60ef44370a0e931ff775aa13bc
+  composition_run: 65136ea07b77ab76331923a687fb64ca2d597fc55044c746900cf2a9586be08d
 canonical_reference:
   path: assets/page-11.jpg
   sha256: d4090803bb0c287fe6bb6a7044a77451b47b688de891a52320918f0ef48b0bc8
@@ -177,10 +177,55 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 40
+    y: 800
+    w: 92
+    h: 44
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 40
+    y: 874
+    w: 62
+    h: 42
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 40
+    y: 916
+    w: 96
+    h: 40
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 40
+    y: 994
+    w: 68
+    h: 20
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 40
+    y: 1014
+    w: 100
+    h: 22
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-11.jpg
-  sha256: 8d8c72b12023bbb916bac6e81ecf153629f384f577348753f07ba22867a926b8
+  sha256: 1ed4851cb1277f3f52f5692b3989916335649cbdde3216e9ba02403b20afd003
   effective_ppi_a5: 300.56
   dirty_edges:
   - bottom
@@ -199,10 +244,46 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 589
+    y: 835
+    w: 206
+    h: 22
+    fill_rgb:
+    - 255
+    - 254
+    - 251
+    fill_mode: border_median
+  - x: 930
+    y: 839
+    w: 56
+    h: 18
+    fill_rgb:
+    - 255
+    - 255
+    - 254
+    fill_mode: border_median
+  - x: 599
+    y: 957
+    w: 68
+    h: 18
+    fill_rgb:
+    - 158
+    - 160
+    - 149
+    fill_mode: border_median
+  - x: 577
+    y: 992
+    w: 68
+    h: 18
+    fill_rgb:
+    - 151
+    - 149
+    - 133
+    fill_mode: border_median
   provenance: canonical_pages
   source_ref: assets/page-11.jpg
-  sha256: 5137de962bab418c49c262676383cfc79a0e287574272b96dc18df153c514b14
+  sha256: edd13d83d133670b874ddbd49c17bc9ac97d6156e1d5f2af88f16f2d067a6b3b
   effective_ppi_a5: 300.56
   dirty_edges:
   - bottom
@@ -578,6 +659,104 @@ text_zones:
   compose_as: live_text
   style: tiny
   authority: pages/11.yaml:canonical_text
+- id: P11-T-cap_ladder_1
+  role: cap_ladder_1
+  canonical_block: 15
+  expect: Porte d'accès au
+  bbox_px:
+  - 40
+  - 800
+  - 92
+  - 44
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-cap_ladder_2
+  role: cap_ladder_2
+  canonical_block: 16
+  expect: Échelle amovible (retirée
+  bbox_px:
+  - 40
+  - 874
+  - 96
+  - 82
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-cap_ladder_3
+  role: cap_ladder_3
+  canonical_block: 17
+  expect: Entrée au rez-de-chaussée
+  bbox_px:
+  - 40
+  - 994
+  - 100
+  - 42
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-cap_valley_1
+  role: cap_valley_1
+  canonical_block: 18
+  expect: Vue sur la
+  bbox_px:
+  - 589
+  - 835
+  - 206
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_title_red
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-cap_valley_2
+  role: cap_valley_2
+  canonical_block: 19
+  expect: Le Cruet
+  bbox_px:
+  - 930
+  - 839
+  - 56
+  - 18
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-cap_valley_3
+  role: cap_valley_3
+  canonical_block: 20
+  expect: Le Bugeon
+  bbox_px:
+  - 599
+  - 957
+  - 68
+  - 18
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-cap_valley_4
+  role: cap_valley_4
+  canonical_block: 21
+  expect: Le Bugeon
+  bbox_px:
+  - 577
+  - 992
+  - 68
+  - 18
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/11.yaml:canonical_text
 functional_objects:
 - id: P11-F-google_maps
   object_class: qr
@@ -651,13 +830,14 @@ discrepancies:
     description: légende des armoiries
   - fragment: callout_box_captioned
     description: 'cartouche « Tour carrée médiévale / 4 étages / Hauteur : environ 12 m »'
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  raster_text_inscribed_in_canon_2026_09_09:
   - fragment: tower_ladder_captioned
     description: annotations de la coupe (Porte d'accès au 1er étage, Échelle amovible (retirée en cas d'attaque), Entrée
       au rez-de-chaussée)
   - fragment: valley_box_captioned
     description: titre « Vue sur la vallée du Bugeon » et toponymes (Le Cruet, Le Bugeon)
-  - fragment: map_document
-    description: toponymes intrinsèques de la carte
   canonical_text_differs_from_raster:
   - le raster montre deux intertitres (« Sentinelle au coeur de la vallée », « Un dispositif défensif classique ») absents
     de canonical_text ; non recomposés

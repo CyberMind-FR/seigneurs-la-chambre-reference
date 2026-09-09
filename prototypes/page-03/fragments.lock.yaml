@@ -4,7 +4,7 @@ source: assets/page-03.jpg
 source_sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
 fragments:
   portal_gothique_captioned:
-    sha256: 13dd92c5d8ffe6d2337b071f9c322dd072ec7fbc8f1f8563c157fb2413e3e89a
+    sha256: 9d14f83c6ac67b976dbd232b7890bc72bcedebbe811b4a73eacac8d9f52f3b8d
     bbox_px:
       x: 27
       y: 10
@@ -14,7 +14,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   cloister_baroque_captioned:
-    sha256: 90058d5b4dc93e330400f1b1fe3c87a3ec64837d494b2de30f762509d548bf9d
+    sha256: b19ec25befcc7bba44970caec7a3dbc5e0e94beb5df446ab00203630d705c7e8
     bbox_px:
       x: 30
       y: 260
@@ -24,7 +24,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   salle_capitulaire_captioned:
-    sha256: b14437b88bb362b910fd93e16620c4d3ee3571af83fa05124379d5d6d27c6c96
+    sha256: 331907e07d10ffdb544269da5f3e72a88d850045104a6739fa6d77a0a0251ef4
     bbox_px:
       x: 30
       y: 528
@@ -54,7 +54,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   valley_cruet_captioned:
-    sha256: 97e4718032e9339e39df47f8284736af401390b54cece2202722a76d42bd7a27
+    sha256: 83b4da54392e5f61be188e4aad6a80a2250d369fd81cf99b7bd525d795c5112c
     bbox_px:
       x: 744
       y: 265
@@ -64,7 +64,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   nave_captioned:
-    sha256: 3182d78dc61df8bd603a94d39e5e1ea9add6387ac7b401da02ab566e62a79473
+    sha256: 0895608a3ef179b08eddbca3dc65ae607412905f91257f00e0b2f56ff9084b33
     bbox_px:
       x: 787
       y: 536
@@ -84,7 +84,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   lintel_accolade_captioned:
-    sha256: 8c3592009414287e6e28781f7c40cd3524b8bd36266ce281d946ddb84dc356c5
+    sha256: 7be66e300fde2e3ad657bce54c0a18d4753d471ee52e6eea3fabf62ae939d81f
     bbox_px:
       x: 787
       y: 821
