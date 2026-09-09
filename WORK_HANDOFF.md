@@ -1,69 +1,179 @@
 # WORK HANDOFF — Les Seigneurs de La Chambre
 
 ## Mission
-Finaliser et maintenir le livret/exposition sans dérive éditoriale ni visuelle. Le dépôt GitHub est l’unique source de vérité.
+Migrer le livret/exposition vers une composition reproductible à couche texte sans dérive éditoriale ni visuelle. Le dépôt GitHub est l’unique source de vérité.
+
+## Décision méthodologique active
+La méthode prioritaire de la v3 est la **composition multicouche à partir des pages canoniques décomposées**.
+
+On ne redessine plus systématiquement les illustrations en SVG. On repart des pages validées et on recompose :
+
+1. fond/trame papier indépendant ;
+2. fragments raster documentaires extraits des pages canoniques ;
+3. vecteurs réellement utiles ;
+4. texte canonique en vraie couche texte ;
+5. QR et éléments fonctionnels déterministes en overlay final.
+
+Les `assets/page-NN.jpg` restent les références de comparaison et servent, lorsque leur qualité et leur statut le permettent, de sources de fragments. Ils ne sont pas les pages finales aplaties de la v3.
 
 ## Ordre de lecture obligatoire
 1. `REGENERATION_RULES.md`
 2. `corrections.yaml`
-3. `manifest.yaml`, `manifest-pages.json` et, sur la branche v3, `manifest-v3.yaml`
-4. `pages/NN.yaml`
-5. `qr_registry.yaml`
-6. `assets/page-NN.jpg`
-7. `docs/migration-text-layer/PHASE_A_APPROVAL.md` pour toute production v3
+3. `manifest.yaml`, `manifest-pages.json`, `manifest-v3.yaml`
+4. `sources/PROVENANCE_INDEX.yaml`
+5. `assets/ASSET_INDEX_V3.yaml`
+6. `assets/ASSET_SPEC.md`
+7. `pages/NN.yaml`
+8. `qr_registry.yaml`
+9. `assets/page-NN.jpg`
+10. `docs/migration-text-layer/PHASE_A_APPROVAL.md`
+11. `docs/migration-text-layer/PHASE_B_PAGE03_LAYERED_PROTOTYPE.md`
 
 ## Canon actuel
 - 16 pages, `assets/page-01.jpg` à `assets/page-16.jpg`.
-- Page 10 = Château de Notre-Dame-du-Cruet, version réorientée validée, avec QR Google Maps réinjecté de façon déterministe. Ne jamais la remplacer par une ancienne version.
-- Page 13 = six QR de ressources numériques alignés sur une même ligne et réinjectés depuis `assets/qr/`. Ne jamais styliser ou reconstruire ces QR.
-- Page 14 : portrait de Philippe DEMARIO supprimé, nom et bibliographie conservés.
-- Page 16 : QR de l'association enregistré et réinjecté de façon déterministe.
-- Les 16 pages utilisent un fond papier blanc neutre et des encres renforcées pour la lisibilité; le contenu et la composition restent verrouillés.
-- Taux Fondation du Patrimoine : 66 %, jamais 75 %.
-- Page 4 : aucune mention « Académie de Maurienne ».
-- Auteurs : `Fabrice GALOPO, André GRANGE, Gérald KERMA`.
+- Page 10 = Château de Notre-Dame-du-Cruet, version réorientée validée, QR Google Maps déterministe.
+- Page 13 = six QR de ressources numériques alignés.
+- Page 14 = portrait de Philippe DEMARIO supprimé, nom et bibliographie conservés.
+- Page 16 = QR association enregistré.
+- Fondation du Patrimoine = 66 %, jamais 75 %.
+- Page 4 = aucune mention « Académie de Maurienne ».
+- Auteurs = `Fabrice GALOPO, André GRANGE, Gérald KERMA`.
 
-## Release v3 — état de migration
-- Branche active de production : `release/v3.0-phase-b`.
-- Phase A explicitement validée le 2026-09-08 dans `docs/migration-text-layer/PHASE_A_APPROVAL.md`.
-- `assets/ASSET_SPEC.md`, l’amendement étroit au canon et le schéma de manifeste v3 sont les documents approuvés qui bornent la Phase B.
-- Premier lot Phase B terminé : **16 QR SVG uniques** produits depuis `qr_registry.yaml` avec `segno==1.6.6`, noir pur, fond blanc, zone de silence de 4 modules.
-- Les 17 placements fonctionnels restent représentés par 16 actifs, car le QR `association` est réutilisé en pages 13 et 16.
-- Les SVG sont sous `assets/qr-svg/`; leurs SHA sont verrouillés dans `assets/qr-svg/manifest.yaml` et intégrés à `manifest-v3.yaml`.
-- Rapport machine : `docs/migration-text-layer/PHASE_B_QR_BATCH.md` = PASS, décodage exact caractère par caractère de chaque actif.
-- `make validate` contrôle désormais le référentiel historique, les QR bitmap sources et le lot QR SVG.
-- Le workflow one-shot ayant produit ce lot a été retiré après succès : aucun générateur temporaire ne reste dans `.github/workflows/`.
-- `manifest.yaml` reste intact pendant la migration ; `manifest-v3.yaml` est le manifeste incrémental de la v3.
+## Prototype page 03 : méthode validée
+Le prototype multicouche de la page 03 a été exécuté de bout en bout.
+
+Run de référence : `34259978419` sur le commit `5eef23415fe41424cb4dc37488225414d139e949`.
+
+Résultats :
+- 11 fragments raster réellement découpés depuis `assets/page-03.jpg` ;
+- 25 blocs canoniques présents dans le PDF final ;
+- vraie couche texte : PASS ;
+- QR final décodé machine avec payload exact : PASS ;
+- SHA des fragments : PASS ;
+- source canonique inchangée : PASS ;
+- inspection visuelle effectuée ;
+- méthode : **PASS_WITH_RESOLUTION_BLOCKER**.
+
+Rapport : `docs/migration-text-layer/PHASE_B_PAGE03_LAYERED_PROTOTYPE.md`.
+
+### Gate de résolution découvert
+La page 03 canonique mesure seulement `1024 × 1536 px`. À l’échelle A5 du prototype, les fragments représentent environ **185,78 ppi**, sous le gate A5 de 300 ppi.
+
+Ce problème est un gate de qualité des actifs, pas un échec de la méthode de composition. Ne jamais le masquer par un upscale présenté comme récupération de détail.
+
+Pour chaque fragment basse résolution, les voies légitimes sont :
+1. retrouver une source haute définition ;
+2. réduire sa taille de placement ;
+3. valider explicitement un seuil inférieur ;
+4. vectoriser seulement ce qui peut l’être sans dérive documentaire.
+
+## Industrialisation active : famille des pages « site »
+Le prototype page 03 devient le modèle technique de la famille de pages patrimoniales.
+
+Première vague d’industrialisation :
+- page 05 — Château Joli ;
+- page 06 — Tour de Burgin ;
+- page 07 — Tour de Châtel-André ;
+- page 08 — Maison-Forte du Châtelet ;
+- page 09 — Maison-Forte de Gruyère ;
+- page 11 — Tour de Notre-Dame-du-Cruet ;
+- page 12 — Maison Forte de La Landonnière.
+
+La page 04 est exclue car bloquée éditorialement. La page 10 est traitée séparément à cause du plan réel et de son verrou géométrique. Les pages 13 à 16 ont des structures spécifiques et seront industrialisées après la famille « site ».
+
+L’industrialisation commence par une mesure déterministe de chaque raster et la production de diagnostics visuels. Les bounding boxes sémantiques restent soumises à revue humaine avant extraction, exactement comme sur la page 03.
+
+## Pipeline cible par page
+### A. Cartographier
+- lire `pages/NN.yaml` et `assets/ASSET_SPEC.md` ;
+- identifier texte, illustrations, cartes, ornements, QR et espaces de fond ;
+- comparer avec `assets/page-NN.jpg`.
+
+### B. Mesurer
+- vérifier le SHA du raster ;
+- mesurer dimensions et densités visuelles sans OCR ;
+- produire overlay et planche-contact ;
+- ne jamais transformer une détection automatique en crop approuvé sans revue.
+
+### C. Extraire
+Créer uniquement les fragments approuvés : illustrations, photos, gravures, cartes/plans autorisés et éléments graphiques particuliers.
+
+Les légendes réellement présentes dans l’image mais absentes du YAML canonique restent intégrées au fragment raster, sauf décision éditoriale explicite. Elles ne sont ni OCRisées comme source de vérité ni réinventées.
+
+### D. Construire le fond
+Utiliser une trame SpiritualCept claire, reproductible et indépendante du contenu documentaire.
+
+### E. Recomposer le texte
+Le texte vient uniquement de `pages/NN.yaml:canonical_text` et des corrections validées. Il doit rester du vrai texte dans le PDF final lorsque techniquement possible.
+
+### F. Ajouter les fonctions
+Les QR viennent uniquement de `qr_registry.yaml` et des SVG déterministes validés. Leur placement part des coordonnées canoniques normalisées. Ils sont rendus en dernier.
+
+### G. Valider
+- SHA source ;
+- SHA fragments ;
+- présence exacte de tous les blocs de texte canonique ;
+- QR décodé depuis le rendu PDF final ;
+- résolution effective par fragment ;
+- inspection visuelle ;
+- comparaison avec la référence canonique.
+
+## SVG : rôle limité et utile
+Le SVG reste privilégié pour QR, ornements, filets/formes, héraldique correctement spécifiée et documents dont la vectorisation est justifiée.
+
+Il n’est pas utilisé pour remplacer artificiellement une illustration canonique exploitable.
+
+## Reconstitutions
+Elles restent autorisées mais secondaires. Elles servent lorsqu’aucun fragment canonique exploitable n’existe, lorsqu’une nouvelle vue est explicitement souhaitée, ou lorsqu’une restitution hypothétique est un objectif éditorial identifié.
+
+Elles restent sourcées, sans texte, avec confiance et limites déclarées.
+
+## Verrous
+### Page 4
+`PAGE_04_EDITORIAL_ARBITRATION_REQUIRED` reste actif pour toute recomposition v3.
+
+### Page 10
+Le plan réel reste l’autorité pour toute nouvelle reconstitution. La composition v3 privilégie les fragments validés de la page canonique plutôt qu’une nouvelle architecture spéculative.
+
+### Page 13
+QR déterministes, alignés et réinjectés en dernier.
+
+### Page 14
+Aucun portrait de Philippe DEMARIO, y compris sous forme de fragment extrait.
+
+## Registres
+- `sources/PROVENANCE_INDEX.yaml` : provenance/droits/confiance ;
+- `assets/ASSET_INDEX_V3.yaml` : actifs atomiques ;
+- `manifest-v3.yaml` : actifs réellement produits ;
+- `assets/ASSET_SPEC.md` : cartographie des zones et besoins de production.
+
+Chaque fragment raster produit doit enregistrer : page source, zone/bounding box source, traitement, dimensions, résolution effective, SHA-256, statut de droits et état de validation.
 
 ## Règles de travail
-- Une page validée est immuable hors correction explicitement demandée.
-- Une correction locale reste locale. Pas de régénération complète pour un détail.
-- Aucun texte, nom, date, rôle, lieu, plan, QR ou élément architectural ne peut être inventé.
-- Les QR fonctionnels proviennent uniquement de `qr_registry.yaml`; les PNG historiques restent sous `assets/qr/` et les nouveaux SVG déterministes sous `assets/qr-svg/`.
-- Aucun QR n’est généré ou stylisé par un modèle d’image.
-- Toute illustration v3 produite doit être sans texte et respecter l’amendement validé, `assets/ASSET_SPEC.md`, la provenance et les droits enregistrés.
-- Toute normalisation colorimétrique globale doit utiliser `scripts/normalize_white_background.py`, qui réinjecte les QR en dernier pour les rasters hérités.
-- Après remplacement d’une page historique : exécuter `make sync` puis `make validate`.
-- Après production d’un lot v3 : recalculer les SHA dans `manifest-v3.yaml`, exécuter les validateurs propres au lot, puis `make validate`.
-- Après build : `make build` doit aussi valider les QR du PDF final.
-- Les PDF, ZIP, planches contact et `dist/` ne sont jamais committés. Ils sont produits par la CI et publiés comme artifacts/releases.
+- Ne jamais inventer de contenu.
+- Ne jamais faire d’une reconstruction générative la solution par défaut.
+- Préférer un fragment canonique fidèle lorsqu’il est exploitable.
+- Le texte est une couche indépendante.
+- Le fond est une couche indépendante.
+- Les QR sont une couche fonctionnelle indépendante et déterministe.
+- Une retouche d’un fragment reste locale et traçable.
+- Les PDF, ZIP, planches contact et `dist/` ne sont jamais committés.
 
-## Procédure sûre pour toute modification
-1. Lire le canon et la correction demandée.
-2. Vérifier l’autorisation et les blocages dans la Phase A validée.
-3. Travailler sur la branche de phase appropriée.
-4. Modifier ou produire uniquement les actifs autorisés.
-5. Enregistrer provenance, licence, droits, SHA et validations dans `manifest-v3.yaml` pour les actifs v3.
-6. Exécuter `make validate`.
-7. Pour une sortie imprimable, exécuter `make build`.
-8. Inspecter visuellement les pages/actifs concernés avant merge.
-9. Ne merger que si validation et contrôle visuel sont conformes.
+## Priorité d’exécution
+1. mesurer en CI les pages 05, 06, 07, 08, 09, 11 et 12 ;
+2. revoir visuellement les diagnostics et approuver les crops sémantiques ;
+3. généraliser le compositeur page 03 en compositeur piloté par YAML ;
+4. produire un proof multicouche par page de la famille ;
+5. reporter automatiquement texte, QR, SHA et ppi ;
+6. traiter ensuite page 10, puis les structures spécifiques 13–16 ;
+7. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
 
-## Blocages toujours actifs
-- Page 4 : `PAGE_04_EDITORIAL_ARBITRATION_REQUIRED` pour toute recomposition v3.
-- Ancien emplacement du portrait Philippe DEMARIO : rester vide, aucun portrait de substitution.
-- Toute source documentaire dont provenance, licence ou droit d’usage ne sont pas établis reste bloquée.
-- Page 10 : toute reconstitution doit respecter `assets/reference/page-10-plan-reel.jpg` comme autorité géométrique.
+## Validation
+Après modification d’une référence historique : `make sync && make validate`.
+
+Après production d’actifs v3 : enregistrer les SHA/provenances puis `make validate`.
+
+Après composition imprimable : `make build`, validation QR finale et contrôle de la couche texte.
 
 ## Interdiction de reconstruction par archive
-Ne jamais fabriquer une nouvelle source à partir d’un ancien ZIP. Toujours partir du checkout Git courant.
+Toujours partir du checkout Git courant. Aucun ancien ZIP ne devient source de vérité.

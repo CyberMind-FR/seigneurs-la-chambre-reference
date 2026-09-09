@@ -1,0 +1,44 @@
+name: Prototype page 03 layered proof
+on:
+  push:
+    branches: [release/v3.0-phase-b]
+    paths:
+      - 'scripts/prototype_page03_layers.py'
+      - 'scripts/prototype_page03_run.py'
+      - 'prototypes/page-03/**'
+      - 'assets/page-03.jpg'
+      - 'assets/qr-svg/page-03-google-maps.svg'
+      - 'pages/03.yaml'
+      - '.github/workflows/prototype-page03-measure.yml'
+  workflow_dispatch:
+
+jobs:
+  compose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install prototype dependencies
+        run: pip install Pillow PyYAML opencv-python-headless reportlab svglib pymupdf
+      - name: Compose layered proof and validate
+        run: python scripts/prototype_page03_run.py
+      - name: Validate canonical source unchanged
+        run: |
+          python - <<'PY'
+          import hashlib,yaml
+          p='assets/page-03.jpg'
+          got=hashlib.sha256(open(p,'rb').read()).hexdigest()
+          spec=yaml.safe_load(open('pages/03.yaml'))
+          assert got==spec['visual_reference_sha256'], (got,spec['visual_reference_sha256'])
+          print('canonical page03 SHA OK',got)
+          PY
+      - name: Show proof validation
+        run: cat dist/prototype-page-03/proof-validation.json
+      - name: Upload proof and diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: prototype-page03-layered-proof
+          path: dist/prototype-page-03/
+          retention-days: 14
