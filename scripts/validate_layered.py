@@ -41,10 +41,10 @@ def main():
         if m["methodology_gate"] == "FAIL":
             failed.append(page)
         kinds = m["resolution_gate"]["by_raster_kind"]
-        print("page {:02d} gate={} text={} qr={} fragments={} ppi_min={:.2f} (tone {}/300, line-art {}/1200) collisions={} lock={}".format(
+        print("page {:02d} gate={} text={} qr={} fragments={} ppi_min={:.2f} (source {:.2f}; tone {}/300, line-art {}/1200; upscaled {}) collisions={} lock={}".format(
             m["page"], m["methodology_gate"], m["text_layer_pass"], m["qr_decode_pass"], m["fragment_count"],
-            m["fragment_effective_ppi_min"], kinds["continuous_tone"]["effective_ppi_min"], kinds["line_art"]["effective_ppi_min"],
-            len(m["text_ink_collisions"]), m["fragment_lock"].get("match")))
+            m["fragment_effective_ppi_min"], m.get("fragment_source_ppi_min", 0.0), kinds["continuous_tone"]["effective_ppi_min"], kinds["line_art"]["effective_ppi_min"],
+            len(m.get("provisional_upscale", {}).get("fragments", [])), len(m["text_ink_collisions"]), m["fragment_lock"].get("match")))
         for issue in m["issues"]:
             if issue["severity"] == "fail":
                 print(f"    FAIL [{issue['code']}] {issue['message']}")

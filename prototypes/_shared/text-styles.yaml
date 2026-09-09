@@ -1,57 +1,63 @@
 # Shared text styles for the layered v3 composer (site-page family).
-# Fonts: PDF base-14 Times is used until the project records its licensed font choice
-# (assets/ASSET_SPEC.md §7 item 6). Colours follow style.yaml (sepia body, red-brown titles).
+# Fonts: Liberation Serif (embedded) until the project locks its final font (ASSET_SPEC §7 item 6).
+# Colours follow style.yaml (sepia body, red-brown titles).
 # A page composition may override any style locally under its own `text_styles:` key.
 schema_version: 1
-# TrueType fonts registered on demand (first existing path wins). DejaVu Serif is used only for
-# blocks containing glyphs absent from the PDF base-14 Times (e.g. U+1D49 in "XIᵉ", page 15).
+# TrueType fonts registered on demand (first existing path wins) and EMBEDDED in the PDFs.
+# Liberation Serif (SIL Open Font License 1.1) is metric-compatible with Times and covers the
+# canonical glyphs (incl. U+1D49). Provisional project font until a final choice is locked
+# (assets/ASSET_SPEC.md §7); CI installs fonts-liberation + fonts-dejavu-core.
 fonts:
+  LiberationSerif: [/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf, /usr/share/fonts/liberation/LiberationSerif-Regular.ttf]
+  LiberationSerif-Bold: [/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf, /usr/share/fonts/liberation/LiberationSerif-Bold.ttf]
+  LiberationSerif-Italic: [/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf, /usr/share/fonts/liberation/LiberationSerif-Italic.ttf]
   DejaVuSerif: [/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf, /usr/share/fonts/dejavu/DejaVuSerif.ttf]
 defaults:
+  font: LiberationSerif   # canvas initial font + SVG renderer default (must be an embedded TTF)
   fit: shrink          # shrink font size (down to min_size) until the block fits its bbox
   min_size: 4.6
   shrink_step: 0.2
 styles:
-  title:      {font: Times-Bold,   size: 20.5, leading: 21.0, color: "#3f2d23", align: center}
-  subtitle:   {font: Times-Italic, size: 9.8,  leading: 10.4, color: "#8b2e2e", align: center}
-  heading:    {font: Times-Bold,   size: 9.4,  leading: 10.2, color: "#8b2e2e", align: left}
-  body:       {font: Times-Roman,  size: 6.15, leading: 7.05, color: "#2f241e", align: justify}
-  small:      {font: Times-Roman,  size: 5.8,  leading: 6.5,  color: "#2f241e", align: left}
-  small_bold: {font: Times-Bold,   size: 6.1,  leading: 6.8,  color: "#2f241e", align: left}
-  tiny:       {font: Times-Roman,  size: 5.3,  leading: 5.8,  color: "#2f241e", align: left}
-  box_title:  {font: Times-Bold,   size: 6.4,  leading: 7.0,  color: "#8b2e2e", align: center}
-  quote:      {font: Times-Italic, size: 7.2,  leading: 8.2,  color: "#8b2e2e", align: center}
-  band:       {font: Times-Italic, size: 5.6,  leading: 6.2,  color: "#3f2d23", align: center}
+  title:      {font: LiberationSerif-Bold,   size: 20.5, leading: 21.0, color: "#3f2d23", align: center}
+  subtitle:   {font: LiberationSerif-Italic, size: 9.8,  leading: 10.4, color: "#8b2e2e", align: center}
+  heading:    {font: LiberationSerif-Bold,   size: 9.4,  leading: 10.2, color: "#8b2e2e", align: left}
+  body:       {font: LiberationSerif,  size: 6.15, leading: 7.05, color: "#2f241e", align: justify}
+  small:      {font: LiberationSerif,  size: 5.8,  leading: 6.5,  color: "#2f241e", align: left}
+  small_bold: {font: LiberationSerif-Bold,   size: 6.1,  leading: 6.8,  color: "#2f241e", align: left}
+  tiny:       {font: LiberationSerif,  size: 5.3,  leading: 5.8,  color: "#2f241e", align: left}
+  box_title:  {font: LiberationSerif-Bold,   size: 6.4,  leading: 7.0,  color: "#8b2e2e", align: center}
+  quote:      {font: LiberationSerif-Italic, size: 7.2,  leading: 8.2,  color: "#8b2e2e", align: center}
+  band:       {font: LiberationSerif-Italic, size: 5.6,  leading: 6.2,  color: "#3f2d23", align: center}
   # Banner styles: live text composed on a coloured raster cartouche (mask_fill: border_median).
-  banner_title: {font: Times-Bold,   size: 9.0, leading: 9.6, color: "#fffdf7", align: center}
-  banner_small: {font: Times-Bold,   size: 6.6, leading: 7.2, color: "#fffdf7", align: left}
-  banner_band:  {font: Times-Bold,   size: 6.4, leading: 7.0, color: "#fffdf7", align: center}
-  label_bold:   {font: Times-Bold,   size: 5.2, leading: 5.8, color: "#8b2e2e", align: center}
-  site_list:    {font: Times-Italic, size: 6.0, leading: 6.8, color: "#2f241e", align: left}
-  legal:        {font: Times-Roman,  size: 4.9, leading: 5.5, color: "#2f241e", align: left}
-  merci_title:  {font: Times-Bold,   size: 26,  leading: 27,  color: "#1f2a44", align: center}
-  merci_body:   {font: Times-Roman,  size: 8.4, leading: 9.6, color: "#2f241e", align: center}
-  merci_italic: {font: Times-Italic, size: 8.8, leading: 9.8, color: "#2f241e", align: center}
-  body_large:        {font: Times-Roman,  size: 7.6,  leading: 8.6,  color: "#2f241e", align: justify}
-  body_large_center: {font: Times-Roman,  size: 7.6,  leading: 8.6,  color: "#2f241e", align: center}
-  heading_center:    {font: Times-Bold,   size: 9.4,  leading: 10.2, color: "#8b2e2e", align: center}
-  heading_large:     {font: Times-Bold,   size: 11.0, leading: 12.0, color: "#8b2e2e", align: left}
-  title2:            {font: Times-Bold,   size: 15.0, leading: 16.0, color: "#2f241e", align: center}
-  title_caps:        {font: Times-Bold,   size: 22.0, leading: 23.0, color: "#3f2d23", align: center}
-  subtitle_dark:     {font: Times-Roman,  size: 10.5, leading: 11.5, color: "#2f241e", align: center}
-  banner_big:        {font: Times-Bold,   size: 12.0, leading: 13.0, color: "#fffdf7", align: center}
-  quote_large:       {font: Times-Italic, size: 9.2,  leading: 10.0, color: "#8b2e2e", align: center}
-  ref_title:         {font: Times-Italic, size: 7.0,  leading: 7.8,  color: "#8b2e2e", align: left}
-  small_italic:      {font: Times-Italic, size: 5.8,  leading: 6.5,  color: "#2f241e", align: center}
-  small_italic_left: {font: Times-Italic, size: 6.2,  leading: 7.0,  color: "#2f241e", align: left}
-  tiny_center:       {font: Times-Roman,  size: 5.3,  leading: 5.8,  color: "#2f241e", align: center}
-  small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
-  subtitle_dark_unicode: {font: DejaVuSerif, size: 9.4, leading: 10.6, color: "#2f241e", align: center}
+  banner_title: {font: LiberationSerif-Bold,   size: 9.0, leading: 9.6, color: "#fffdf7", align: center}
+  banner_small: {font: LiberationSerif-Bold,   size: 6.6, leading: 7.2, color: "#fffdf7", align: left}
+  banner_band:  {font: LiberationSerif-Bold,   size: 6.4, leading: 7.0, color: "#fffdf7", align: center}
+  label_bold:   {font: LiberationSerif-Bold,   size: 5.2, leading: 5.8, color: "#8b2e2e", align: center}
+  site_list:    {font: LiberationSerif-Italic, size: 6.0, leading: 6.8, color: "#2f241e", align: left}
+  legal:        {font: LiberationSerif,  size: 4.9, leading: 5.5, color: "#2f241e", align: left}
+  merci_title:  {font: LiberationSerif-Bold,   size: 26,  leading: 27,  color: "#1f2a44", align: center}
+  merci_body:   {font: LiberationSerif,  size: 8.4, leading: 9.6, color: "#2f241e", align: center}
+  merci_italic: {font: LiberationSerif-Italic, size: 8.8, leading: 9.8, color: "#2f241e", align: center}
+  body_large:        {font: LiberationSerif,  size: 7.6,  leading: 8.6,  color: "#2f241e", align: justify}
+  body_large_center: {font: LiberationSerif,  size: 7.6,  leading: 8.6,  color: "#2f241e", align: center}
+  heading_center:    {font: LiberationSerif-Bold,   size: 9.4,  leading: 10.2, color: "#8b2e2e", align: center}
+  heading_large:     {font: LiberationSerif-Bold,   size: 11.0, leading: 12.0, color: "#8b2e2e", align: left}
+  title2:            {font: LiberationSerif-Bold,   size: 15.0, leading: 16.0, color: "#2f241e", align: center}
+  title_caps:        {font: LiberationSerif-Bold,   size: 22.0, leading: 23.0, color: "#3f2d23", align: center}
+  subtitle_dark:     {font: LiberationSerif,  size: 10.5, leading: 11.5, color: "#2f241e", align: center}
+  banner_big:        {font: LiberationSerif-Bold,   size: 12.0, leading: 13.0, color: "#fffdf7", align: center}
+  quote_large:       {font: LiberationSerif-Italic, size: 9.2,  leading: 10.0, color: "#8b2e2e", align: center}
+  ref_title:         {font: LiberationSerif-Italic, size: 7.0,  leading: 7.8,  color: "#8b2e2e", align: left}
+  small_italic:      {font: LiberationSerif-Italic, size: 5.8,  leading: 6.5,  color: "#2f241e", align: center}
+  small_italic_left: {font: LiberationSerif-Italic, size: 6.2,  leading: 7.0,  color: "#2f241e", align: left}
+  tiny_center:       {font: LiberationSerif,  size: 5.3,  leading: 5.8,  color: "#2f241e", align: center}
+  small_bold_center: {font: LiberationSerif-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
+  subtitle_dark_unicode: {font: LiberationSerif, size: 9.4, leading: 10.6, color: "#2f241e", align: center}
   # Cover (page 01) and dynasty page (02) styles
-  subtitle_caps_red:  {font: Times-Bold,   size: 15.0, leading: 16.0, color: "#8b2e2e", align: center}
-  subtitle_large:     {font: Times-Italic, size: 12.0, leading: 13.0, color: "#8b2e2e", align: center}
-  cover_italic:       {font: Times-Italic, size: 13.0, leading: 14.5, color: "#2f241e", align: center}
-  cover_bold:         {font: Times-Bold,   size: 12.0, leading: 13.0, color: "#2f241e", align: center}
-  cover_body:         {font: Times-Roman,  size: 9.5,  leading: 10.5, color: "#2f241e", align: center}
-  cover_small_italic: {font: Times-Italic, size: 7.4,  leading: 8.2,  color: "#2f241e", align: center}
-  body_large_italic:  {font: Times-Italic, size: 7.6,  leading: 8.6,  color: "#2f241e", align: justify}
+  subtitle_caps_red:  {font: LiberationSerif-Bold,   size: 15.0, leading: 16.0, color: "#8b2e2e", align: center}
+  subtitle_large:     {font: LiberationSerif-Italic, size: 12.0, leading: 13.0, color: "#8b2e2e", align: center}
+  cover_italic:       {font: LiberationSerif-Italic, size: 13.0, leading: 14.5, color: "#2f241e", align: center}
+  cover_bold:         {font: LiberationSerif-Bold,   size: 12.0, leading: 13.0, color: "#2f241e", align: center}
+  cover_body:         {font: LiberationSerif,  size: 9.5,  leading: 10.5, color: "#2f241e", align: center}
+  cover_small_italic: {font: LiberationSerif-Italic, size: 7.4,  leading: 8.2,  color: "#2f241e", align: center}
+  body_large_italic:  {font: LiberationSerif-Italic, size: 7.6,  leading: 8.6,  color: "#2f241e", align: justify}

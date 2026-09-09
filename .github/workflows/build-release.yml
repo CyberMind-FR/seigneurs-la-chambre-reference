@@ -30,12 +30,16 @@ jobs:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: requirements-build.txt
+      - name: Install fonts (Liberation Serif embedded in the v3 PDFs, DejaVu fallback)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-liberation fonts-dejavu-core
       - name: Install build dependencies
         run: python -m pip install --disable-pip-version-check -r requirements-build.txt
       - name: Validate reference package
         run: make validate
-      - name: Build PDFs
+      - name: Build PDFs (v2 raster)
         run: make build
+      - name: Build PDFs (v3 layered)
+        run: make build-v3
       - name: Resolve release mode
         id: release
         shell: bash
@@ -73,7 +77,9 @@ jobs:
             dist/*.pdf
             dist/*.zip
             dist/SHA256SUMS.txt
+            dist/SHA256SUMS-v3.txt
             dist/build-report.json
+            dist/build-report-v3.json
           if-no-files-found: error
           retention-days: 30
       - name: Publish GitHub Release
@@ -88,5 +94,7 @@ jobs:
             dist/*.pdf
             dist/*.zip
             dist/SHA256SUMS.txt
+            dist/SHA256SUMS-v3.txt
             dist/build-report.json
+            dist/build-report-v3.json
           fail_on_unmatched_files: true
