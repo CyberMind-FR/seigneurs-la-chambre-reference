@@ -40,7 +40,7 @@ vectors:
 
 text_blocks:
   - {key: title,     block: 0,  expect: "L'Association",              bbox_px: [300, 36, 400, 66],   style: title}
-  - {key: subtitle,  block: 1,  expect: "Les Amis du Couvent",        bbox_px: [180, 132, 512, 104], style: title2}
+  - {key: subtitle,  block: 1,  expect: "Amis du Couvent",        bbox_px: [180, 132, 512, 104], style: title2}
   - {key: p1,        block: 2,  expect: "Créée en 2020",              bbox_px: [70, 278, 490, 118],  style: body_large}
   - {key: banner1,   block: 3,  expect: "NOUS REJOINDRE",             bbox_px: [70, 428, 441, 38],   style: banner_title, valign: middle}
   - {key: b1,        block: 4,  expect: "• Adhésion",                 bbox_px: [118, 486, 358, 24],  style: body_large}
@@ -95,3 +95,7 @@ validation:
   text_overflow: warn
   fragment_lock: warn
   resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
+  # Upscale provisoire (décision gkerma, 2026-09-09 : « prendre en compte le dpi demandé… upscale des croquis
+  # si nécessaire ! On le régénérera ultérieurement ») : chaque fragment est rééchantillonné (Lanczos) jusqu'au
+  # gate de son type à la taille A5 ; journalisé par fragment (upscale_factor), jamais présenté comme source HD.
+  upscale: {enabled: true, approved_by: gkerma, date: '2026-09-09', max_factor: 8, note: "provisoire — croquis à régénérer en haute définition"}

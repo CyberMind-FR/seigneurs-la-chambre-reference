@@ -79,7 +79,7 @@ discrepancies:
     - {fragment: monk_church_captioned, description: "« Couvent des Cordeliers, fondation de 1365 »"}
     - {fragment: louis_medallion_captioned, description: "« Louis Ier de Savoie (1402-1465) »"}
     - {fragment: territory_map, description: "toponymes intrinsèques de la carte du mandement"}
-    - {fragment: footer_landscape_raster, description: "pied de page avec folio"}
+    - {fragment: footer_landscape_raster, description: "pied de page avec folio (ancienne forme « Les Amis du Couvent… », voir corrections.yaml)"}
   canonical_text_differs_from_raster:
     - "le paragraphe du comte de Foras est en italique dans le raster ; le canon ne porte pas de marquage : composé en italique (style), texte identique"
   canonical_text_not_visible_in_raster: []
@@ -99,3 +99,7 @@ validation:
   text_overflow: warn
   fragment_lock: warn
   resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
+  # Upscale provisoire (décision gkerma, 2026-09-09 : « prendre en compte le dpi demandé… upscale des croquis
+  # si nécessaire ! On le régénérera ultérieurement ») : chaque fragment est rééchantillonné (Lanczos) jusqu'au
+  # gate de son type à la taille A5 ; journalisé par fragment (upscale_factor), jamais présenté comme source HD.
+  upscale: {enabled: true, approved_by: gkerma, date: '2026-09-09', max_factor: 8, note: "provisoire — croquis à régénérer en haute définition"}

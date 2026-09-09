@@ -58,7 +58,7 @@ text_blocks:
   - {key: c4_sites,   block: 10, expect: "8 · Château",                 bbox_px: [45, 880, 390, 48],   style: site_list}
   - {key: c5,         block: 11, expect: "SAINT-RÉMY-DE-MAURIENNE",     bbox_px: [110, 971, 310, 32],  style: banner_small, valign: middle}
   - {key: c5_sites,   block: 12, expect: "10 · Maison Forte",           bbox_px: [45, 1027, 390, 22],  style: site_list}
-  - {key: assoc,      block: 13, expect: "Les Amis du Couvent",         bbox_px: [225, 1098, 520, 30], style: heading_large}
+  - {key: assoc,      block: 13, expect: "Amis du Couvent",         bbox_px: [225, 1098, 520, 30], style: heading_large}
   - {key: assoc_sub,  block: 14, expect: "Préserver et valoriser",      bbox_px: [225, 1128, 520, 22], style: small_italic_left}
   - {key: web,        block: 15, expect: "www.couventdelachambre.fr",   bbox_px: [262, 1162, 480, 18], style: small}
   - {key: mail,       block: 16, expect: "contact@",                    bbox_px: [262, 1188, 480, 18], style: small}
@@ -83,7 +83,7 @@ discrepancies:
   canonical_text_not_visible_in_raster: []
   raster_typography:
     - "bandeaux colorés à texte blanc : ancien texte masqué à la couleur du cartouche, texte canonique composé en blanc"
-    - "sous-titre composé en DejaVu Serif (le « ᵉ » U+1D49 n'existe pas dans Times base-14) ; fonte du projet toujours à verrouiller"
+    - "sous-titre composé en Liberation Serif embarquée (le « ᵉ » U+1D49 n'existe pas dans Times base-14) ; fonte du projet toujours à verrouiller"
 
 validation:
   canonical_text_exact: true
@@ -99,3 +99,7 @@ validation:
   text_overflow: warn
   fragment_lock: warn
   resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
+  # Upscale provisoire (décision gkerma, 2026-09-09 : « prendre en compte le dpi demandé… upscale des croquis
+  # si nécessaire ! On le régénérera ultérieurement ») : chaque fragment est rééchantillonné (Lanczos) jusqu'au
+  # gate de son type à la taille A5 ; journalisé par fragment (upscale_factor), jamais présenté comme source HD.
+  upscale: {enabled: true, approved_by: gkerma, date: '2026-09-09', max_factor: 8, note: "provisoire — croquis à régénérer en haute définition"}

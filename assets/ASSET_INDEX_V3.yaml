@@ -462,6 +462,50 @@ lot_2_progress:
 # SHA-256 in prototypes/page-NN/fragments.lock.yaml. Proof PDFs live in dist/ and are never committed.
 # Resolution gates (2026-09-09): 300 ppi continuous tone / 1200 ppi line art at final size, every format.
 layered_compositions:
+  page_01:
+    composition: prototypes/page-01/composition.yaml
+    inventory: prototypes/page-01/page-01.objects.yaml
+    fragment_lock: prototypes/page-01/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 17
+    canonical_text_blocks: 10
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: not_applicable
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 17
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_02:
+    composition: prototypes/page-02/composition.yaml
+    inventory: prototypes/page-02/page-02.objects.yaml
+    fragment_lock: prototypes/page-02/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 20
+    canonical_text_blocks: 25
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: not_applicable
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 20
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
   page_03:
     composition: prototypes/page-03/composition.yaml
     inventory: prototypes/page-03/page-03.objects.yaml
@@ -477,10 +521,12 @@ layered_compositions:
       qr_exact_decode: pass
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 185.78
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 12
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
   page_05:
     composition: prototypes/page-05/composition.yaml
@@ -497,10 +543,12 @@ layered_compositions:
       qr_exact_decode: pass
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 185.78
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 13
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
   page_06:
     composition: prototypes/page-06/composition.yaml
@@ -517,10 +565,12 @@ layered_compositions:
       qr_exact_decode: pass
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 185.78
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 19
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
   page_07:
     composition: prototypes/page-07/composition.yaml
@@ -537,10 +587,12 @@ layered_compositions:
       qr_exact_decode: pass
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 185.78
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 22
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
   page_08:
     composition: prototypes/page-08/composition.yaml
@@ -557,10 +609,12 @@ layered_compositions:
       qr_exact_decode: pass
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 185.78
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 17
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
   page_09:
     composition: prototypes/page-09/composition.yaml
@@ -577,50 +631,12 @@ layered_compositions:
       qr_exact_decode: pass
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 185.78
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
-      human_review: done (gkerma, 2026-09-09)
-  page_11:
-    composition: prototypes/page-11/composition.yaml
-    inventory: prototypes/page-11/page-11.objects.yaml
-    fragment_lock: prototypes/page-11/fragments.lock.yaml
-    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
-    rights_status: PROJECT_INTERNAL
-    status: APPROVED
-    fragment_count: 14
-    canonical_text_blocks: 15
-    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
-    validation:
-      text_layer: pass
-      qr_exact_decode: pass
-      fragment_sha256: pass
-      text_ink_collision: pass
-      effective_ppi_a5: 181.06
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
-      human_review: done (gkerma, 2026-09-09)
-  page_12:
-    composition: prototypes/page-12/composition.yaml
-    inventory: prototypes/page-12/page-12.objects.yaml
-    fragment_lock: prototypes/page-12/fragments.lock.yaml
-    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
-    rights_status: PROJECT_INTERNAL
-    status: APPROVED
-    fragment_count: 18
-    canonical_text_blocks: 21
-    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
-    validation:
-      text_layer: pass
-      qr_exact_decode: pass
-      fragment_sha256: pass
-      text_ink_collision: pass
-      effective_ppi_a5: 181.06
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 15
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
   page_10:
     composition: prototypes/page-10/composition.yaml
@@ -637,10 +653,56 @@ layered_compositions:
       qr_exact_decode: pass
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 181.06
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 18
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_11:
+    composition: prototypes/page-11/composition.yaml
+    inventory: prototypes/page-11/page-11.objects.yaml
+    fragment_lock: prototypes/page-11/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 14
+    canonical_text_blocks: 15
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 14
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_12:
+    composition: prototypes/page-12/composition.yaml
+    inventory: prototypes/page-12/page-12.objects.yaml
+    fragment_lock: prototypes/page-12/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 18
+    canonical_text_blocks: 21
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 18
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
   page_13:
     composition: prototypes/page-13/composition.yaml
@@ -657,10 +719,12 @@ layered_compositions:
       qr_exact_decode: pass
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 181.06
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 17
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
   page_14:
     composition: prototypes/page-14/composition.yaml
@@ -674,15 +738,17 @@ layered_compositions:
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
-      qr_exact_decode: pass
+      qr_exact_decode: not_applicable
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 181.06
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 14
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
-    blocked_fragments: [book_cover_1, book_cover_2, book_cover_3]  # P14-Z07..Z09 BLOCKED_SOURCE_RIGHTS, not extracted
+    blocked_fragments: ['book_cover_1', 'book_cover_2', 'book_cover_3']  # rights not documented, not extracted
   page_15:
     composition: prototypes/page-15/composition.yaml
     inventory: prototypes/page-15/page-15.objects.yaml
@@ -695,13 +761,15 @@ layered_compositions:
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
-      qr_exact_decode: pass
+      qr_exact_decode: not_applicable
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 181.06
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 27
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
       human_review: done (gkerma, 2026-09-09)
   page_16:
     composition: prototypes/page-16/composition.yaml
@@ -718,49 +786,10 @@ layered_compositions:
       qr_exact_decode: pass
       fragment_sha256: pass
       text_ink_collision: pass
-      effective_ppi_a5: 131.81
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
-      human_review: done (gkerma, 2026-09-09)
-    note: raster 768x1024 (131.8 ppi at A5) is below the approved A5 waiver (180 ppi) - resolution blocker reported, no upscale
-  page_01:
-    composition: prototypes/page-01/composition.yaml
-    inventory: prototypes/page-01/page-01.objects.yaml
-    fragment_lock: prototypes/page-01/fragments.lock.yaml
-    source_refs: [canonical_pages, canonical_page_specs]
-    rights_status: PROJECT_INTERNAL
-    status: APPROVED
-    fragment_count: 17
-    canonical_text_blocks: 10
-    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
-    validation:
-      text_layer: pass
-      qr_exact_decode: not_applicable
-      fragment_sha256: pass
-      text_ink_collision: pass
-      effective_ppi_a5: 185.78
-      resolution_gate_300_continuous_tone: fail
-      resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_WAIVER
-      human_review: done (gkerma, 2026-09-09)
-  page_02:
-    composition: prototypes/page-02/composition.yaml
-    inventory: prototypes/page-02/page-02.objects.yaml
-    fragment_lock: prototypes/page-02/fragments.lock.yaml
-    source_refs: [canonical_pages, canonical_page_specs]
-    rights_status: PROJECT_INTERNAL
-    status: APPROVED
-    fragment_count: 20
-    canonical_text_blocks: 25
-    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
-    validation:
-      text_layer: pass
-      qr_exact_decode: not_applicable
-      fragment_sha256: pass
-      text_ink_collision: pass
-      effective_ppi_a5: 185.78
-      resolution_gate_300_continuous_tone: fail
+      source_ppi_a5: 131.81
+      effective_ppi_a5_after_upscale: 300.52
+      provisional_upscale_fragments: 8
+      resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_WAIVER
       human_review: done (gkerma, 2026-09-09)

@@ -5,7 +5,7 @@ title: Le Couvent des Cordeliers
 status: APPROVED
 generated_from:
   composition: prototypes/page-03/composition.yaml
-  composition_run: 27b853007a228929c6301ae2cc1305cdc111182786be827cf3914e25f3405076
+  composition_run: fd806a8188f01421814874a7eee3c3fba8610512d147e551d5e3d3739cb6b030
 canonical_reference:
   path: assets/page-03.jpg
   sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
@@ -81,8 +81,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 2720e09fa778cef46f5ca95377588c37612e65d5a8c3d463391659df6a00b98f
-  effective_ppi_a5: 185.78
+  sha256: 13dd92c5d8ffe6d2337b071f9c322dd072ec7fbc8f1f8563c157fb2413e3e89a
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   - top
@@ -102,8 +102,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: efd46de0eed0fd72d527557c79e1f6457a7458ce0f28d2b0aeb45dc458a94093
-  effective_ppi_a5: 185.78
+  sha256: 90058d5b4dc93e330400f1b1fe3c87a3ec64837d494b2de30f762509d548bf9d
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   - top
@@ -123,8 +123,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 132029a0992361453741b7f2c3fa6c9774a3e4ff3314d1ad3aa2bc32d219527e
-  effective_ppi_a5: 185.78
+  sha256: b14437b88bb362b910fd93e16620c4d3ee3571af83fa05124379d5d6d27c6c96
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   review_status: APPROVED
@@ -143,8 +143,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 6b946de6343a4c1bce90e6751fd40bf49229c10a35ce95b5f754ccd27f4116c0
-  effective_ppi_a5: 185.78
+  sha256: b13c90c255806ee61c1fc59e88d50e6765ab46598b7260afd74ffb22c09a1b85
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -165,8 +165,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 2797adc07f0434844c765f37f701ca8796e906ae74290d5af8a50dca58919cfe
-  effective_ppi_a5: 185.78
+  sha256: 25c0d76a137e8a15caa176d707fe0a378248fceeb9fd0dd48d19857c705f5d1e
+  effective_ppi_a5: 300.97
   dirty_edges: []
   review_status: APPROVED
 - id: P03-O-valley_cruet_captioned
@@ -184,8 +184,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: d44f8e07c05945b672e5ddf07568fee0587fa686986f383304f6e22bdda5d5c5
-  effective_ppi_a5: 185.78
+  sha256: 97e4718032e9339e39df47f8284736af401390b54cece2202722a76d42bd7a27
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   - top
@@ -205,8 +205,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: a8f0962f3939616bd9e2317921df7bbe051fd7130e14d79fe7ecab2aa4a895f6
-  effective_ppi_a5: 185.78
+  sha256: 3182d78dc61df8bd603a94d39e5e1ea9add6387ac7b401da02ab566e62a79473
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   review_status: APPROVED
@@ -225,8 +225,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 02eb3bc2461cc76eb4dd2895ba46d55bdfbc234318e04d18f8ffc7fbfb6649cf
-  effective_ppi_a5: 185.78
+  sha256: 6c52ad0b1bfb88daa432b238ea573e7fab20922bc5c02c7e8bd35a8673af7f51
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -248,8 +248,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: e210dfe506d7b89f6dae1eb2e54c05aafd7efa71bed19fa89a50b666493f990a
-  effective_ppi_a5: 185.78
+  sha256: 8c3592009414287e6e28781f7c40cd3524b8bd36266ce281d946ddb84dc356c5
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   review_status: APPROVED
@@ -268,8 +268,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: f62fc0f95073bc0bb6efd77e8142afa0c9494a0c6e94b2b8b402c9b9731a5309
-  effective_ppi_a5: 185.78
+  sha256: d5a93d2539036cefda6112f2dac05299304c0d36aecfa07421a4f24921b47f39
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -290,8 +290,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 80676da65f8aeab04ec9e6f0c8533c05137598b02abe2a048bb09ccf8c42fc4e
-  effective_ppi_a5: 185.78
+  sha256: 70c15d21a9fcee906afc41c1db1f860b65519a0bd3950de4c2da12551efd25fb
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -322,8 +322,8 @@ objects:
     fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
-  sha256: 9626b5ee87c6a62cbc4c83a9d8c7f011f0ef1cd2aaf009ee48f0f05dbbfaa485
-  effective_ppi_a5: 185.78
+  sha256: 0e492b6ecc0a38ba9cf74cbb9425e634c7a4dda9b02e152b86c8511ed03f0513
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   - top
@@ -748,4 +748,4 @@ completeness_gate:
   all_editorial_text_composed_live: true
   qr_accounted_for: true
   second_visual_sweep_by_human: pending
-  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+  last_methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE

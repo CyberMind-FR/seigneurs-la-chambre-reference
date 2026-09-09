@@ -4,142 +4,202 @@ source: assets/page-02.jpg
 source_sha256: e6ecfa02a8d335765d1e9772d8fd28e4d3ce3a8e41ccd04b4513725843c1f2b8
 fragments:
   running_head_raster:
-    sha256: 52e5d4b3837dc646aae561fca73f26d959f0e1de3db78876339a66a6afb75774
+    sha256: 0a2cd61087a3b3d7841029315080431d2f039be335f6869c000664d531d5e847
     bbox_px:
       x: 250
       y: 16
       w: 530
       h: 26
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   heraldry_official:
-    sha256: 528cf87e74957935f800eeeeeba29ea2c05030641ca235157e0598c9709156da
+    sha256: bf979b56210adfa5db38df42e26e9bdba0c9aaba0d268b12e24300158613129c
     bbox_px:
       x: 35
       y: 165
       w: 210
       h: 236
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   title_ornament:
-    sha256: c611252301b2d3a1208ab1935a3383320bcfc606001ad84c176ecf22e1212b1a
+    sha256: 393aafd84eb51c2bda61d9cd75b8b288741b4c3f6085c38c111f1f0c87d9ddbe
     bbox_px:
       x: 415
       y: 170
       w: 190
       h: 30
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   village_captioned:
-    sha256: b6139cdcb1882908eb6517a19ebd5cc628943fec7481cfb5c0f8d3b1a3ea1695
+    sha256: 9a53b7edfdb3ab4b5981b2c7c5dff88d299d0b7d84178b864c4d7e2dac3abced
     bbox_px:
       x: 655
       y: 105
       w: 369
       h: 430
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   blason_box_frame:
-    sha256: 0d3170a29f340c4b71a6f02800011fc739fb205490671348a797f34868e2e4be
+    sha256: c1af544ff866705945b0b49fd8abb6472bf4d527b6e35c5f2385f66ce22d60dc
     bbox_px:
       x: 245
       y: 420
       w: 440
       h: 115
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   bishop_captioned:
-    sha256: f80945887dad1edff84d73ec9fc5c92b2bd27eacb1481191cdbcaf402943e2e2
+    sha256: aecd0f44bc69dcd3cbb7b947ca13113bdf4dee006dec026923563095ee13f8cd
     bbox_px:
       x: 35
       y: 452
       w: 195
       h: 246
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   cross_h1:
-    sha256: 0281d0053558c388c6bb598633210ce8b967cfe88371fd92c83cd5c0eefadd5c
+    sha256: 777fbe3897d196533e32b1d65735e01ec84ee5fd22dee1418167f366f4d10d3b
     bbox_px:
       x: 231
       y: 551
       w: 19
       h: 21
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   seal_vicomte_captioned:
-    sha256: 41b2dddab9cf3162f82377d78df77a8a8ae81dab37028ceee8cb5c22a8ca7548
+    sha256: 4f985b3e9e9fb61d892c7fb74e1b99531d4a975bb0eb7837106359971c4a12f9
     bbox_px:
       x: 41
       y: 735
       w: 188
       h: 150
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   cross_h2:
-    sha256: 96b7bf380664f9ff63135e42e1039f6a2ce3b3697e25c7657463110124aa023f
+    sha256: b6355ee4e3bf155fd692466aea871ccf81fcac28d1cad6899f2f879b0d59a6c5
     bbox_px:
       x: 231
       y: 752
       w: 18
       h: 21
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   knight_captioned:
-    sha256: afccb14f7860ac9a823c3884cd6e9c31a2d4b895d81baa054ce47c78050bc5c3
+    sha256: d7d6c4d8fbd0bbccc036d0820e49adc764fd08f23fc92a12ae496d547af981e0
     bbox_px:
       x: 25
       y: 885
       w: 186
       h: 310
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   cross_h3:
-    sha256: 6b6a315c016c36635a22736c5dae87e81cbb8cfe07aba65de3980ac93c875c05
+    sha256: f39701163b959f200d3e7fcfe1ae89ed4185e344b9e8b40b91d6041c9bc65b8b
     bbox_px:
       x: 231
       y: 956
       w: 19
       h: 22
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   cross_h4:
-    sha256: 520b52c959c90d6eb1a28f8c16fce0889140b3c744ec7b3b2c8a9727e6b3261a
+    sha256: 9be21d42c67b8f0008495f922903a2874243e9c6bf3baf4f9de7d57d3b8f432d
     bbox_px:
       x: 231
       y: 1112
       w: 19
       h: 22
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   equestrian_seal_captioned:
-    sha256: 4ea0ad9f574d720724bab8ffb211a31f64ef11d8d0bb67b9c44a8551b2984cd2
+    sha256: e11c72efbeff2df2a47dc7ba2d6f58c2c521f8dcf2efc201d7ec160d3bd7cd2c
     bbox_px:
       x: 795
       y: 551
       w: 165
       h: 178
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   testament_captioned:
-    sha256: 936aae0cc272029436bfb3247f82d1668eba1b38f671c8a2b9f32800f5fe8299
+    sha256: 66559fd895708bd8bae3c70aa6246728ae4f7a4518a4b831770cdaca7ce60472
     bbox_px:
       x: 771
       y: 740
       w: 236
       h: 200
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   monk_church_captioned:
-    sha256: 6cdd481f1c0546705bd756c7851d8df1ac0736215369a3cd75bf3319e5ad9131
+    sha256: 4aa4bfdb634d30936f12f05d9ec25ae20657d148677e6e077095cea926a0d309
     bbox_px:
       x: 765
       y: 925
       w: 240
       h: 188
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   louis_medallion_captioned:
-    sha256: e4a5653e01ae6cdd2b1926cbfc08aef5bee698bfb852899ff65ecce2ebdfd33a
+    sha256: 208f5b5d300c25c193d6560ca2b1af262a7d731f136504ab621e5dd1c9c35e0c
     bbox_px:
       x: 775
       y: 1113
       w: 232
       h: 102
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   territory_map:
-    sha256: 4cb9a3bc44821f1638349ec5c4070e2c77d73fdee05fa7cc3e5c45d33cdf8a81
+    sha256: bd5b8a4f8490a9200ba35982feb4bac992becd85c0039cfed431205917061c89
     bbox_px:
       x: 40
       y: 1228
       w: 355
       h: 225
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   empire_icons:
-    sha256: 2f3a554681c6465a70e5578fa328a08a0f6e426470a33bac4a6ac15253a4ae93
+    sha256: 6c36ddbde19cad13e852f6093a990b964252866eb301555af35d976912c6b415
     bbox_px:
       x: 467
       y: 1263
       w: 32
       h: 162
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   heraldic_banner:
-    sha256: ea3a8b9390a497e19281f24b18388f5b6ce4693cabc339a830a21ceb0982af67
+    sha256: 57e6bd4fa6e71049c66c5d8fa963f6e2c352b1bdfe3613428a59540119937ccb
     bbox_px:
       x: 845
       y: 1222
       w: 141
       h: 232
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   footer_landscape_raster:
-    sha256: 172fa641ecd58cca233cdd67f6eb2b80de61b67ef51e5d29fff5c33870e08856
+    sha256: 075e080594ee19b737a33391ccfe92839f3d941b4b980e5b18c24825caeb1d8b
     bbox_px:
       x: 20
       y: 1430
       w: 985
       h: 75
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true

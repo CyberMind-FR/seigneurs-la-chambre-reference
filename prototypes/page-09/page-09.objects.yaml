@@ -5,7 +5,7 @@ title: La Maison-Forte de Gruyère
 status: APPROVED
 generated_from:
   composition: prototypes/page-09/composition.yaml
-  composition_run: 7a6eaf6ad51078990bb924eb311e0f72707200e9fe6ddc227fed8bf3cc917863
+  composition_run: 998847c89f78458c175728ba9f7f4d0fc63c5ef225ec2b3db85d1a408ae28da8
 canonical_reference:
   path: assets/page-09.jpg
   sha256: d54cab494ac8f931d8cb9dd5953d7f171a0c0d6c0b7abd7a73cc32e7f7de1aed
@@ -74,8 +74,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 0fe1cfccb0888477db965b55b093cec02510642f29bafb9a09088142f018f369
-  effective_ppi_a5: 185.78
+  sha256: 5f7bc072b17751acea54f71b9a0ee106a681a4f5c1831362ae38059fddaf400c
+  effective_ppi_a5: 300.97
   dirty_edges: []
   review_status: APPROVED
 - id: P09-O-heraldry_captioned
@@ -93,8 +93,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: f025c0a7d7ac969fc9bb11c9cb931b8c1c61e90d48649447dab32d97daee96f6
-  effective_ppi_a5: 185.78
+  sha256: ab0210aa8a5a339a69dad1d9b4aec5fbb96c7bd96b361ca759c41da44f80c079
+  effective_ppi_a5: 300.97
   dirty_edges:
   - top
   review_status: APPROVED
@@ -113,8 +113,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: c38aa1cd7d98fe4f775a6fee0daf8d71430a0362fdb4d1ed0651a9cf62344bc1
-  effective_ppi_a5: 185.78
+  sha256: 4d3b88a6fefe4155405f0cb7afdda31d9bd4d05420a71eed1771afb451cacc35
+  effective_ppi_a5: 300.97
   dirty_edges: []
   review_status: APPROVED
 - id: P09-O-title_ornament
@@ -132,8 +132,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 4c35eb2c984b42c8b263483ad1bb7125b4415b8750ec172383929b9aaaa12566
-  effective_ppi_a5: 185.78
+  sha256: 8209d571aeef50c0ecda50bdff688df4ebe4761bb5afde5590245c9c5df57c24
+  effective_ppi_a5: 1200.16
   dirty_edges:
   - left
   - right
@@ -153,8 +153,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 999f282006404bcbebc7c1dbc79161dc4d91229b14fc3a1af02ff1ca74a49a9b
-  effective_ppi_a5: 185.78
+  sha256: 619f0b3eb79fac4fadd0e1f6eb68f7b3dfc68f024d4e4413f347f7b6fea0e84c
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -176,8 +176,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 5361537382646ded05bf32b12e764c345cc5bfbaf4201e570d6f3a1784a152be
-  effective_ppi_a5: 185.78
+  sha256: 7df039b2cfdf5fad35f146d1c35e58657cc8af2b1e76099f7561f4b2270214ff
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -198,8 +198,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: baa3b1ec6e72e0ae3a8438be4f2f89aad31913318f6bbd4e9faf1f86529024ed
-  effective_ppi_a5: 185.78
+  sha256: 4c96c88d27e755d93c061485f3cbf649a6802f1cb453023059ab09b4b138ce34
+  effective_ppi_a5: 1200.16
   dirty_edges:
   - left
   review_status: APPROVED
@@ -218,8 +218,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: a5689aeebc0294183d9c30e3cf5f367c9769f00359845e686e2166b5130ec034
-  effective_ppi_a5: 185.78
+  sha256: 0d8ce660549276e5a8f35b9645fed913c28a2cb9c2f2e7c3bad74b672b9ba4f0
+  effective_ppi_a5: 300.97
   dirty_edges:
   - right
   review_status: APPROVED
@@ -238,8 +238,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: a439064f2bc80ed66470012108c08d2109231430dcae0c1eaf5f54ad4137d46b
-  effective_ppi_a5: 185.78
+  sha256: db492c5435d2a676afc93f6a942a1a600a1e90fde642176476e4e9cdb2d550e1
+  effective_ppi_a5: 1200.16
   dirty_edges:
   - right
   - top
@@ -259,8 +259,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 906d8977ae94870424eeecbbf65e4dab6b04fe8ea29699debb8848536cc2b5a6
-  effective_ppi_a5: 185.78
+  sha256: 9cef37907bad529f16159774614d1eb9daebb60fa67f72028bc2d2997dd180d5
+  effective_ppi_a5: 1200.16
   dirty_edges: []
   review_status: APPROVED
 - id: P09-O-phone_icon
@@ -278,8 +278,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 07a238fdcbb0af18990e5b6dbf0f726d098b09be8d0677292f22611176f92502
-  effective_ppi_a5: 185.78
+  sha256: b2f4b86df45e18a305895a86dd86e09e75021011635eaabc74e6b4f8a34966c2
+  effective_ppi_a5: 1200.16
   dirty_edges: []
   review_status: APPROVED
 - id: P09-O-localization_vignette
@@ -297,8 +297,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 2d792908c087d52ce0976f2245c9ec7b0743b980cf37c224dc0a2acef9831b05
-  effective_ppi_a5: 185.78
+  sha256: 341825e1611aa19d4f15d8e2d2706508539b79fef92ca7dbc2e3635fb63639f2
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -319,8 +319,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 0ecc9194378a1b9364497e2c47b0f5aba2fa77900a663e86c2d4c2f43e64b5be
-  effective_ppi_a5: 185.78
+  sha256: aa792a05079978b2029bad428e059a7a8ded1590750a4211abaf2d4332dc6b47
+  effective_ppi_a5: 1200.16
   dirty_edges:
   - left
   - top
@@ -340,8 +340,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: adb3bdeca319172928fead30a933c8f244c5e44b652c9b0da9182454b76d0e20
-  effective_ppi_a5: 185.78
+  sha256: 719f7a1be8e5307785bf3dccacd93c9fdc9096c6436af02ec8ea7a0456ee6cdf
+  effective_ppi_a5: 1200.16
   dirty_edges:
   - top
   review_status: APPROVED
@@ -360,8 +360,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 2167a83a3d6cee10b31407516bd3eb885426bf3d09fc61884d1e4315e03587d5
-  effective_ppi_a5: 185.78
+  sha256: cfffa838ffcb2a787e49ad92a8469da9506783319cc1451a6e8a0268cec79540
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -670,4 +670,4 @@ completeness_gate:
   all_editorial_text_composed_live: true
   qr_accounted_for: true
   second_visual_sweep_by_human: pending
-  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+  last_methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE

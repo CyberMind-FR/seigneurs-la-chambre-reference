@@ -11,7 +11,7 @@ canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
 text_styles_from: prototypes/_shared/text-styles.yaml
 text_styles:
-  small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
+  small_bold_center: {font: LiberationSerif-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
 
 fragments:
   - {id: running_head_raster,   role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 236, y: 22, w: 570, h: 28}, treatment: crop_only}
@@ -89,3 +89,7 @@ validation:
   # les rasters canoniques (181–186 ppi à la taille A5) sont acceptés pour la sortie A5 ;
   # les gates 300/1200 restent la cible et restent bloquants pour A2/A1.
   resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
+  # Upscale provisoire (décision gkerma, 2026-09-09 : « prendre en compte le dpi demandé… upscale des croquis
+  # si nécessaire ! On le régénérera ultérieurement ») : chaque fragment est rééchantillonné (Lanczos) jusqu'au
+  # gate de son type à la taille A5 ; journalisé par fragment (upscale_factor), jamais présenté comme source HD.
+  upscale: {enabled: true, approved_by: gkerma, date: '2026-09-09', max_factor: 8, note: "provisoire — croquis à régénérer en haute définition"}

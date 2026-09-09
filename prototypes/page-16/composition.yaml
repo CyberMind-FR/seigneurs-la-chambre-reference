@@ -37,7 +37,7 @@ text_blocks:
   - {key: l5,      block: 5,  expect: "de transmettre",              bbox_px: [60, 253, 648, 24],  style: merci_body}
   - {key: l6,      block: 6,  expect: "À toutes et à tous",          bbox_px: [200, 308, 368, 24], style: merci_italic}
   - {key: l7,      block: 7,  expect: "merci !",                     bbox_px: [200, 336, 368, 24], style: merci_italic}
-  - {key: assoc,   block: 8,  expect: "Les Amis du Couvent",         bbox_px: [150, 618, 468, 20], style: small_bold_center}
+  - {key: assoc,   block: 8,  expect: "Amis du Couvent",         bbox_px: [150, 618, 468, 20], style: small_bold_center}
   - {key: site,    block: 9,  expect: "www.couventdelachambre.fr",   bbox_px: [40, 955, 300, 22],  style: small_bold}
   - {key: motto,   block: 10, expect: "Découvrir • Partager",        bbox_px: [200, 905, 368, 24], style: merci_italic}
 
@@ -67,3 +67,7 @@ validation:
   text_overflow: warn
   fragment_lock: warn
   resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
+  # Upscale provisoire (décision gkerma, 2026-09-09 : « prendre en compte le dpi demandé… upscale des croquis
+  # si nécessaire ! On le régénérera ultérieurement ») : chaque fragment est rééchantillonné (Lanczos) jusqu'au
+  # gate de son type à la taille A5 ; journalisé par fragment (upscale_factor), jamais présenté comme source HD.
+  upscale: {enabled: true, approved_by: gkerma, date: '2026-09-09', max_factor: 8, note: "provisoire — croquis à régénérer en haute définition"}

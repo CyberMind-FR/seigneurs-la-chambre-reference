@@ -57,7 +57,7 @@ discrepancies:
     - {fragment: maison_forte_captioned, description: "« Maison forte de La Tour »"}
     - {fragment: fidem_servare_raster, description: "devise « Fidem servare et jus dicere »"}
     - {fragment: timeline_and_logo, description: "frise : XIe s. Origines Vicomtés épiscopales / XIIe-XIIIe s. Âge d'or Mariages et alliances / XIVe s. Fondations Couvent des Cordeliers / XVe s. Crépuscule Passage aux Seyssel ; texte intrinsèque du logo"}
-    - {fragment: footer_raster, description: "pied de page avec folio"}
+    - {fragment: footer_raster, description: "pied de page avec folio (ancienne forme « Les Amis du Couvent… », voir corrections.yaml:association_name_2026_09_09)"}
   canonical_text_not_visible_in_raster:
     - "blocs 8–9 « Le passé n'est pas derrière nous, / il est sous nos pas. » : absents de la page canonique ; composés dans l'espace libre entre la ligne Commission et la frise (position à arbitrer)"
 
@@ -75,3 +75,7 @@ validation:
   text_overflow: warn
   fragment_lock: warn
   resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
+  # Upscale provisoire (décision gkerma, 2026-09-09 : « prendre en compte le dpi demandé… upscale des croquis
+  # si nécessaire ! On le régénérera ultérieurement ») : chaque fragment est rééchantillonné (Lanczos) jusqu'au
+  # gate de son type à la taille A5 ; journalisé par fragment (upscale_factor), jamais présenté comme source HD.
+  upscale: {enabled: true, approved_by: gkerma, date: '2026-09-09', max_factor: 8, note: "provisoire — croquis à régénérer en haute définition"}
