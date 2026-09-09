@@ -5,7 +5,7 @@ title: La Maison-Forte de Gruyère
 status: APPROVED
 generated_from:
   composition: prototypes/page-09/composition.yaml
-  composition_run: 0d9cf4f682cd61b646fe79677b75916f414e4dddef55aca79e0c3531b0171f4c
+  composition_run: 7a6eaf6ad51078990bb924eb311e0f72707200e9fe6ddc227fed8bf3cc917863
 canonical_reference:
   path: assets/page-09.jpg
   sha256: d54cab494ac8f931d8cb9dd5953d7f171a0c0d6c0b7abd7a73cc32e7f7de1aed
@@ -664,6 +664,7 @@ discrepancies:
     la couche texte'
 completeness_gate:
   status: PASS
+  blocked_fragments: []
   native_raster_dimensions_recorded: true
   all_objects_have_sha256: true
   all_editorial_text_composed_live: true

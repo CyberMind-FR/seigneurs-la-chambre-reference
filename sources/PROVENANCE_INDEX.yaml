@@ -230,6 +230,11 @@ derived_fragments:
     - prototypes/page-09/fragments.lock.yaml
     - prototypes/page-11/fragments.lock.yaml
     - prototypes/page-12/fragments.lock.yaml
-  allowed_treatments: [crop_only, crop_grow_to_clean_edge, paper_colour_mask_of_old_raster_text]
+    - prototypes/page-10/fragments.lock.yaml
+    - prototypes/page-13/fragments.lock.yaml
+    - prototypes/page-14/fragments.lock.yaml
+    - prototypes/page-15/fragments.lock.yaml
+    - prototypes/page-16/fragments.lock.yaml
+  allowed_treatments: [crop_only, crop_grow_to_clean_edge, paper_colour_mask_of_old_raster_text, banner_colour_mask_of_old_raster_text]
   forbidden: [generative_fill, upscale_presented_as_hd, ocr_of_raster_captions_as_editorial_authority]
   registry: assets/ASSET_INDEX_V3.yaml:layered_compositions

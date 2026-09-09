@@ -1,0 +1,61 @@
+schema_version: 1
+page: 16
+source: assets/page-16.jpg
+source_sha256: 3faf93d696748d4b4d9fc7bf1eb8cf0b93bd09758e2913d1e7b74ec33b273331
+fragments:
+  corner_tl:
+    sha256: c089858ac1879953fc8c321ce7520c38dbec3e97225f1fd4e8a36284dc1df3fb
+    bbox_px:
+      x: 12
+      y: 8
+      w: 45
+      h: 45
+  corner_tr:
+    sha256: 2a6635c46c9ff5df05de3d9552d4213f8f2abdb0ab6079e617d42a85a39618fa
+    bbox_px:
+      x: 710
+      y: 8
+      w: 45
+      h: 45
+  corner_bl:
+    sha256: 7ab047bc1a3e02cab98fdc9dfc63346d4318b497cd49ab0fd4f786e22be582ed
+    bbox_px:
+      x: 12
+      y: 970
+      w: 45
+      h: 45
+  corner_br:
+    sha256: 97883906ce11acd5e86988f969004341bf6b0bde256ed5d3c4a17c422d427d34
+    bbox_px:
+      x: 710
+      y: 970
+      w: 45
+      h: 45
+  title_ornament:
+    sha256: 8f87cc16c2152b784aafb481e45ee33a25e96d68929f89c9dcf0589cda7308b1
+    bbox_px:
+      x: 222
+      y: 83
+      w: 333
+      h: 32
+  logo_raster:
+    sha256: b31a22368145bbce5d21444687069bff4cd1d2fe495d12050fd4d7b6cde2649c
+    bbox_px:
+      x: 227
+      y: 393
+      w: 316
+      h: 222
+  landscape:
+    sha256: ea027e0b0ed15e1b5601378797f9b4a24358a63796139dfc8683308a22e4c1d0
+    bbox_px:
+      x: 18
+      y: 553
+      w: 734
+      h: 347
+  qr_caption_raster:
+    sha256: 029604a0ffafde84e0263be6dc3652d6c23cff7ffb54c47309c162f44125c7ae
+    bbox_px:
+      x: 644
+      y: 901
+      w: 109
+      h: 80

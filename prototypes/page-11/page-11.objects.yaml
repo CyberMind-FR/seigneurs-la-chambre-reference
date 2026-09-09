@@ -5,7 +5,7 @@ title: La Tour de Notre-Dame-du-Cruet
 status: APPROVED
 generated_from:
   composition: prototypes/page-11/composition.yaml
-  composition_run: 866d4a510ec1b01c97a37e0d8b0b539232dbe334f7a3855fc570e8860e005ee3
+  composition_run: e2f0ee13c47ccfae23e6b65ecffccfe9958c6a944bbac1ea3219007910c26dde
 canonical_reference:
   path: assets/page-11.jpg
   sha256: d4090803bb0c287fe6bb6a7044a77451b47b688de891a52320918f0ef48b0bc8
@@ -229,6 +229,7 @@ objects:
     - 255
     - 253
     - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-11.jpg
   sha256: 5756eb1cd73461be4a079b6bb75cba11a51eda91fa3e7052dab3feaf2e544a5c
@@ -356,6 +357,7 @@ objects:
     - 255
     - 253
     - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-11.jpg
   sha256: 1bf265c9699ef797fd8f33943febf858d59e616998ec719d77f9d860e99746d5
@@ -667,6 +669,7 @@ discrepancies:
   canonical_text_not_visible_in_raster: []
 completeness_gate:
   status: PASS
+  blocked_fragments: []
   native_raster_dimensions_recorded: true
   all_objects_have_sha256: true
   all_editorial_text_composed_live: true

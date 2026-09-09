@@ -5,7 +5,7 @@ title: Le Couvent des Cordeliers
 status: APPROVED
 generated_from:
   composition: prototypes/page-03/composition.yaml
-  composition_run: 864309b4701a1bbd757e759d0b282ceeacdb8b45adc15deab8dff8bc6aeda214
+  composition_run: 27b853007a228929c6301ae2cc1305cdc111182786be827cf3914e25f3405076
 canonical_reference:
   path: assets/page-03.jpg
   sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
@@ -319,6 +319,7 @@ objects:
     - 255
     - 253
     - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-03.jpg
   sha256: 9626b5ee87c6a62cbc4c83a9d8c7f011f0ef1cd2aaf009ee48f0f05dbbfaa485
@@ -741,6 +742,7 @@ structural_frames:
 discrepancies: {}
 completeness_gate:
   status: PASS
+  blocked_fragments: []
   native_raster_dimensions_recorded: true
   all_objects_have_sha256: true
   all_editorial_text_composed_live: true

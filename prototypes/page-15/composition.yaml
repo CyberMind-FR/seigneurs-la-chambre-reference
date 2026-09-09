@@ -1,0 +1,101 @@
+# Layered v3 composition — page 15 — dos / synthèse de l'exposition (raster 1055x1491)
+schema_version: 1
+page: 15
+title: LES SEIGNEURS DE LA CHAMBRE
+family: back_cover
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
+source: {path: assets/page-15.jpg, sha256: e2b31837f4393bbb3ccc0db4e0c523a91aa9237c165184aa7e959d555117606d}
+canonical_text: {path: pages/15.yaml, key: canonical_text, expected_blocks: 27}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles: {}
+
+fragments:
+  - {id: heraldry,             role: heraldry, status: APPROVED, bbox_px: {x: 35, y: 28, w: 170, h: 232}, treatment: crop_only, note: "armoiries + fleuron (sans légende sur cette page)"}
+  - {id: statue_top_right,     role: documentary_illustration, status: APPROVED, bbox_px: {x: 878, y: 25, w: 162, h: 310}, treatment: crop_only}
+  - {id: mountains_right,      role: documentary_illustration, status: APPROVED, bbox_px: {x: 738, y: 150, w: 302, h: 142}, treatment: crop_only, note: "recadrage documenté : les montagnes très claires derrière le sous-titre (x<738) ne sont pas reprises pour ne pas réintroduire de texte raster"}
+  - {id: title_ornament,       role: ornament, status: APPROVED, bbox_px: {x: 298, y: 260, w: 460, h: 34}, treatment: crop_only}
+  - {id: banner_10_sites,      role: ornament, status: APPROVED, bbox_px: {x: 88, y: 298, w: 785, h: 62}, treatment: crop_only, mask_px: [[150, 306, 682, 46]], mask_fill: border_median}
+  - {id: banner_la_chambre,    role: ornament, status: APPROVED, bbox_px: {x: 40, y: 373, w: 297, h: 48}, treatment: crop_only, mask_px: [[105, 379, 226, 36]], mask_fill: border_median, note: "bandeau + icône ; texte canonique composé en blanc"}
+  - {id: banner_ste_marie,     role: ornament, status: APPROVED, bbox_px: {x: 40, y: 518, w: 392, h: 48}, treatment: crop_only, mask_px: [[105, 524, 321, 36]], mask_fill: border_median}
+  - {id: banner_st_etienne,    role: ornament, status: APPROVED, bbox_px: {x: 40, y: 658, w: 392, h: 48}, treatment: crop_only, mask_px: [[105, 664, 321, 36]], mask_fill: border_median}
+  - {id: banner_nd_cruet,      role: ornament, status: APPROVED, bbox_px: {x: 40, y: 813, w: 392, h: 48}, treatment: crop_only, mask_px: [[105, 819, 321, 36]], mask_fill: border_median}
+  - {id: banner_st_remy,       role: ornament, status: APPROVED, bbox_px: {x: 40, y: 963, w: 397, h: 48}, treatment: crop_only, mask_px: [[105, 969, 326, 36]], mask_fill: border_median}
+  - {id: site_01, role: documentary_illustration, status: APPROVED, bbox_px: {x: 440, y: 363, w: 283, h: 137}, treatment: crop_only, note: "repère numéroté intrinsèque"}
+  - {id: site_02, role: documentary_illustration, status: APPROVED, bbox_px: {x: 735, y: 363, w: 296, h: 137}, treatment: crop_only}
+  - {id: site_03, role: documentary_illustration, status: APPROVED, bbox_px: {x: 440, y: 508, w: 290, h: 137}, treatment: crop_only}
+  - {id: site_04, role: documentary_illustration, status: APPROVED, bbox_px: {x: 735, y: 508, w: 297, h: 137}, treatment: crop_only}
+  - {id: site_05, role: documentary_illustration, status: APPROVED, bbox_px: {x: 441, y: 648, w: 206, h: 147}, treatment: crop_only}
+  - {id: site_06, role: documentary_illustration, status: APPROVED, bbox_px: {x: 640, y: 648, w: 202, h: 147}, treatment: crop_only}
+  - {id: site_07, role: documentary_illustration, status: APPROVED, bbox_px: {x: 830, y: 648, w: 207, h: 147}, treatment: crop_only}
+  - {id: site_08, role: documentary_illustration, status: APPROVED, bbox_px: {x: 441, y: 808, w: 301, h: 137}, treatment: crop_only}
+  - {id: site_09, role: documentary_illustration, status: APPROVED, bbox_px: {x: 735, y: 808, w: 302, h: 137}, treatment: crop_only}
+  - {id: site_10, role: documentary_illustration, status: APPROVED, bbox_px: {x: 440, y: 958, w: 597, h: 122}, treatment: crop_only}
+  - {id: cloister_arch_left,   role: documentary_illustration, status: APPROVED, bbox_px: {x: 47, y: 1093, w: 157, h: 147}, treatment: crop_only}
+  - {id: contact_icons,        role: icon, status: APPROVED, bbox_px: {x: 221, y: 1161, w: 29, h: 80}, treatment: crop_only}
+  - {id: cloister_right,       role: documentary_illustration, status: APPROVED, bbox_px: {x: 748, y: 1093, w: 270, h: 152}, treatment: crop_only}
+  - {id: dark_band,            role: ornament, status: APPROVED, bbox_px: {x: 38, y: 1243, w: 980, h: 37}, treatment: crop_only, mask_px: [[150, 1249, 760, 26]], mask_fill: border_median}
+  - {id: seal_left,            role: ornament, status: APPROVED, bbox_px: {x: 43, y: 1298, w: 119, h: 119}, treatment: crop_only, note: "sceau PATRIMOINE MAURIENNE (texte intrinsèque)"}
+  - {id: prix_fleuron,         role: ornament, status: APPROVED, bbox_px: {x: 888, y: 1408, w: 64, h: 27}, treatment: crop_only}
+  - {id: bottom_ornament,      role: ornament, status: APPROVED, bbox_px: {x: 298, y: 1428, w: 455, h: 52}, treatment: crop_only}
+
+vectors:
+  - {kind: rect, bbox_px: [178, 1292, 652, 133], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,      block: 0,  expect: "LES SEIGNEURS DE LA CHAMBRE", bbox_px: [240, 40, 540, 110], style: title_caps}
+  - {key: subtitle,   block: 1,  expect: "Vicomtes de Maurienne",       bbox_px: [230, 165, 500, 62],  style: subtitle_dark_unicode}
+  - {key: banner,     block: 2,  expect: "LES 10 SITES",                bbox_px: [150, 306, 660, 46],  style: banner_big, valign: middle}
+  - {key: c1,         block: 3,  expect: "LA CHAMBRE",                  bbox_px: [110, 381, 210, 32],  style: banner_small, valign: middle}
+  - {key: c1_sites,   block: 4,  expect: "1 · Couvent",                 bbox_px: [45, 438, 390, 22],   style: site_list}
+  - {key: c2,         block: 5,  expect: "SAINTE-MARIE-DE-CUINES",      bbox_px: [110, 526, 305, 32],  style: banner_small, valign: middle}
+  - {key: c2_sites,   block: 6,  expect: "3 · Château Joli",            bbox_px: [45, 585, 390, 22],   style: site_list}
+  - {key: c3,         block: 7,  expect: "SAINT-ÉTIENNE-DE-CUINES",     bbox_px: [110, 666, 305, 32],  style: banner_small, valign: middle}
+  - {key: c3_sites,   block: 8,  expect: "5 · Tour de Châtel-André",    bbox_px: [45, 715, 385, 72],   style: site_list}
+  - {key: c4,         block: 9,  expect: "NOTRE-DAME-DU-CRUET",         bbox_px: [110, 821, 305, 32],  style: banner_small, valign: middle}
+  - {key: c4_sites,   block: 10, expect: "8 · Château",                 bbox_px: [45, 880, 390, 48],   style: site_list}
+  - {key: c5,         block: 11, expect: "SAINT-RÉMY-DE-MAURIENNE",     bbox_px: [110, 971, 310, 32],  style: banner_small, valign: middle}
+  - {key: c5_sites,   block: 12, expect: "10 · Maison Forte",           bbox_px: [45, 1027, 390, 22],  style: site_list}
+  - {key: assoc,      block: 13, expect: "Les Amis du Couvent",         bbox_px: [225, 1098, 520, 30], style: heading_large}
+  - {key: assoc_sub,  block: 14, expect: "Préserver et valoriser",      bbox_px: [225, 1128, 520, 22], style: small_italic_left}
+  - {key: web,        block: 15, expect: "www.couventdelachambre.fr",   bbox_px: [262, 1162, 480, 18], style: small}
+  - {key: mail,       block: 16, expect: "contact@",                    bbox_px: [262, 1188, 480, 18], style: small}
+  - {key: phone,      block: 17, expect: "04 79 56 30 32",              bbox_px: [262, 1214, 480, 18], style: small}
+  - {key: band,       block: 18, expect: "Adhésion : 5 €",              bbox_px: [40, 1250, 976, 24],  style: banner_band, valign: middle}
+  - {key: legal_h,    block: 19, expect: "MENTIONS LÉGALES",            bbox_px: [300, 1296, 420, 20], style: small_bold_center}
+  - {key: legal1,     block: 20, expect: "Édité par",                   bbox_px: [200, 1322, 630, 16], style: legal}
+  - {key: legal2,     block: 21, expect: "Mairie de La Chambre",        bbox_px: [200, 1340, 630, 16], style: legal}
+  - {key: legal3,     block: 22, expect: "Auteurs :",                   bbox_px: [200, 1358, 630, 16], style: legal}
+  - {key: legal4,     block: 23, expect: "Date d’édition",              bbox_px: [200, 1376, 630, 16], style: legal}
+  - {key: legal5,     block: 24, expect: "© 2025",                      bbox_px: [200, 1394, 630, 16], style: legal}
+  - {key: prix,       block: 25, expect: "Prix : 5 €",                  bbox_px: [850, 1300, 180, 26], style: heading_center}
+  - {key: prix_sub,   block: 26, expect: "Au profit",                   bbox_px: [845, 1330, 190, 70], style: small_italic}
+
+qr: []
+
+discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon prévaut ; les textes raster absents du canon restent dans leurs fragments"}
+  raster_text_absent_from_canon:
+    - {fragment: seal_left, description: "sceau PATRIMOINE MAURIENNE (intrinsèque)"}
+    - {fragment: site_01, description: "repères numérotés 1..10 intrinsèques aux vignettes"}
+  canonical_text_not_visible_in_raster: []
+  raster_typography:
+    - "bandeaux colorés à texte blanc : ancien texte masqué à la couleur du cartouche, texte canonique composé en blanc"
+    - "sous-titre composé en DejaVu Serif (le « ᵉ » U+1D49 n'existe pas dans Times base-14) ; fonte du projet toujours à verrouiller"
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}

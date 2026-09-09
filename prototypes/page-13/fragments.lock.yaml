@@ -1,0 +1,124 @@
+schema_version: 1
+page: 13
+source: assets/page-13.jpg
+source_sha256: 9e98524888c952e4231a63df5a2da4b3d14a145683f0522090c0fa878f1a13b0
+fragments:
+  running_head_raster:
+    sha256: 6a4e4d744ad1a6183b7f4907685211a08d02aa5c41e1958e7eda468feb8efc86
+    bbox_px:
+      x: 230
+      y: 22
+      w: 596
+      h: 30
+  heraldry_captioned:
+    sha256: 15905bd30b74fc56c3ff1e7d803e5fbe79175f9bce42efb3b5d8ba5263e09821
+    bbox_px:
+      x: 36
+      y: 40
+      w: 132
+      h: 250
+  statue:
+    sha256: c3d3fc07caa99f19d44f31662419081e97a335200e05a0bedef2eb103d315012
+    bbox_px:
+      x: 817
+      y: 45
+      w: 221
+      h: 375
+  title_ornament:
+    sha256: 9c89d0dd0bd5ef9a2a52203fef33aeba25a9464f03d8e9e0d5d852d943832983
+    bbox_px:
+      x: 298
+      y: 138
+      w: 424
+      h: 30
+  left_mountains_vignette:
+    sha256: 403e4aff67760e6da6d28867bbedff09f06702ef69c267c8776120489e845198
+    bbox_px:
+      x: 25
+      y: 325
+      w: 182
+      h: 80
+  map_composite:
+    sha256: b09023ddf0a83ce42490788909e1f6400e5e7cdbe537d2172dabbb165b8c22f3
+    bbox_px:
+      x: 25
+      y: 430
+      w: 1015
+      h: 512
+  drop_cap_c:
+    sha256: 8ae67f1426db5b8aa2c0e910497f9611b6e51c554886deadd31e10021f033ad1
+    bbox_px:
+      x: 55
+      y: 954
+      w: 65
+      h: 70
+  association_cartouche:
+    sha256: a020b353971fe4016df177509e9212ac2363266ef7c3402a4e3b324acfe11c8c
+    bbox_px:
+      x: 702
+      y: 950
+      w: 314
+      h: 108
+  fleuron_left:
+    sha256: a6bdc0fd7d928b4c8979f14da2fd56a960dba2e2115f3a1e2da0a1de14804ded
+    bbox_px:
+      x: 205
+      y: 1081
+      w: 115
+      h: 24
+  fleuron_right:
+    sha256: 0bd43499ac11cc4cea6c3b779812d9a50d7b66dd35e39db30d9a96cfd6fd8586
+    bbox_px:
+      x: 700
+      y: 1081
+      w: 115
+      h: 24
+  picto_association:
+    sha256: 6967cebf400ab5a469648bd9f836985e27f20cd8cf51ddd1ddcdf9a05efadc76
+    bbox_px:
+      x: 70
+      y: 1116
+      w: 58
+      h: 44
+  picto_videos:
+    sha256: e8de6fcb9b423403132844618c6b6ba86fb83e1db47ed891014d2b232e86ef4e
+    bbox_px:
+      x: 242
+      y: 1117
+      w: 57
+      h: 43
+  picto_virtual:
+    sha256: 252e492263e107aab8945acc4c44de70861e97a5a82ec3b451397db7a88abea8
+    bbox_px:
+      x: 400
+      y: 1118
+      w: 70
+      h: 42
+  picto_fondation:
+    sha256: 6a05ea8e1902fdeb2678209b6712f815ad3c0043bff8b85bebf1a44a00977332
+    bbox_px:
+      x: 577
+      y: 1113
+      w: 60
+      h: 47
+  picto_commune:
+    sha256: d18d14cc2880f6e0d9d8b9a1222d484f7e9b878c55433cbfd4a5fcec4bc8b5d6
+    bbox_px:
+      x: 752
+      y: 1117
+      w: 59
+      h: 44
+  picto_documents:
+    sha256: d2d1911c4b42461bf1a8a6d4b5a31dafd4f8d6a74dbaf438f853e6cfb0ea1295
+    bbox_px:
+      x: 919
+      y: 1117
+      w: 60
+      h: 44
+  bottom_band:
+    sha256: 051a2c1a3934856366e8fd7995e613350fe3d6e945ab33f2f419db49182004d7
+    bbox_px:
+      x: 25
+      y: 1328
+      w: 1015
+      h: 163

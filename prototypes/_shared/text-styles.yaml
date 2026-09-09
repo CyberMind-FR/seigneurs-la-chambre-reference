@@ -3,6 +3,10 @@
 # (assets/ASSET_SPEC.md §7 item 6). Colours follow style.yaml (sepia body, red-brown titles).
 # A page composition may override any style locally under its own `text_styles:` key.
 schema_version: 1
+# TrueType fonts registered on demand (first existing path wins). DejaVu Serif is used only for
+# blocks containing glyphs absent from the PDF base-14 Times (e.g. U+1D49 in "XIᵉ", page 15).
+fonts:
+  DejaVuSerif: [/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf, /usr/share/fonts/dejavu/DejaVuSerif.ttf]
 defaults:
   fit: shrink          # shrink font size (down to min_size) until the block fits its bbox
   min_size: 4.6
@@ -18,3 +22,28 @@ styles:
   box_title:  {font: Times-Bold,   size: 6.4,  leading: 7.0,  color: "#8b2e2e", align: center}
   quote:      {font: Times-Italic, size: 7.2,  leading: 8.2,  color: "#8b2e2e", align: center}
   band:       {font: Times-Italic, size: 5.6,  leading: 6.2,  color: "#3f2d23", align: center}
+  # Banner styles: live text composed on a coloured raster cartouche (mask_fill: border_median).
+  banner_title: {font: Times-Bold,   size: 9.0, leading: 9.6, color: "#fffdf7", align: center}
+  banner_small: {font: Times-Bold,   size: 6.6, leading: 7.2, color: "#fffdf7", align: left}
+  banner_band:  {font: Times-Bold,   size: 6.4, leading: 7.0, color: "#fffdf7", align: center}
+  label_bold:   {font: Times-Bold,   size: 5.2, leading: 5.8, color: "#8b2e2e", align: center}
+  site_list:    {font: Times-Italic, size: 6.0, leading: 6.8, color: "#2f241e", align: left}
+  legal:        {font: Times-Roman,  size: 4.9, leading: 5.5, color: "#2f241e", align: left}
+  merci_title:  {font: Times-Bold,   size: 26,  leading: 27,  color: "#1f2a44", align: center}
+  merci_body:   {font: Times-Roman,  size: 8.4, leading: 9.6, color: "#2f241e", align: center}
+  merci_italic: {font: Times-Italic, size: 8.8, leading: 9.8, color: "#2f241e", align: center}
+  body_large:        {font: Times-Roman,  size: 7.6,  leading: 8.6,  color: "#2f241e", align: justify}
+  body_large_center: {font: Times-Roman,  size: 7.6,  leading: 8.6,  color: "#2f241e", align: center}
+  heading_center:    {font: Times-Bold,   size: 9.4,  leading: 10.2, color: "#8b2e2e", align: center}
+  heading_large:     {font: Times-Bold,   size: 11.0, leading: 12.0, color: "#8b2e2e", align: left}
+  title2:            {font: Times-Bold,   size: 15.0, leading: 16.0, color: "#2f241e", align: center}
+  title_caps:        {font: Times-Bold,   size: 22.0, leading: 23.0, color: "#3f2d23", align: center}
+  subtitle_dark:     {font: Times-Roman,  size: 10.5, leading: 11.5, color: "#2f241e", align: center}
+  banner_big:        {font: Times-Bold,   size: 12.0, leading: 13.0, color: "#fffdf7", align: center}
+  quote_large:       {font: Times-Italic, size: 9.2,  leading: 10.0, color: "#8b2e2e", align: center}
+  ref_title:         {font: Times-Italic, size: 7.0,  leading: 7.8,  color: "#8b2e2e", align: left}
+  small_italic:      {font: Times-Italic, size: 5.8,  leading: 6.5,  color: "#2f241e", align: center}
+  small_italic_left: {font: Times-Italic, size: 6.2,  leading: 7.0,  color: "#2f241e", align: left}
+  tiny_center:       {font: Times-Roman,  size: 5.3,  leading: 5.8,  color: "#2f241e", align: center}
+  small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
+  subtitle_dark_unicode: {font: DejaVuSerif, size: 9.4, leading: 10.6, color: "#2f241e", align: center}

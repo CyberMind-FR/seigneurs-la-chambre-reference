@@ -5,7 +5,7 @@ title: La Tour de Burgin
 status: APPROVED
 generated_from:
   composition: prototypes/page-06/composition.yaml
-  composition_run: fe4e161f1332f859834cbe5997aaa8888f77a1dcb42f798c281e0f7d84c21dd4
+  composition_run: bf22fd990b6b0549a154e111825feb9db7ae62975b80fe9a2fa6ff694a3a28cf
 canonical_reference:
   path: assets/page-06.jpg
   sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031
@@ -116,6 +116,7 @@ objects:
     - 255
     - 253
     - 246
+    fill_mode: paper
   - x: 481
     y: 712
     w: 45
@@ -124,6 +125,7 @@ objects:
     - 255
     - 253
     - 246
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
   sha256: d504c5619ddf48d019675f831dbe159a727cc05ee54c6df173b581655e5dd542
@@ -300,6 +302,7 @@ objects:
     - 255
     - 253
     - 246
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
   sha256: 3fde6dcf95b20079013b829ca2d72be24760bc1ef5bdffcf47285f3cd7a35109
@@ -798,6 +801,7 @@ discrepancies:
   - titre en petites capitales dans le raster ; composé en Times-Bold (fonte non encore verrouillée, ASSET_SPEC §7)
 completeness_gate:
   status: PASS
+  blocked_fragments: []
   native_raster_dimensions_recorded: true
   all_objects_have_sha256: true
   all_editorial_text_composed_live: true

@@ -5,7 +5,7 @@ title: La Maison-Forte du Châtelet
 status: APPROVED
 generated_from:
   composition: prototypes/page-08/composition.yaml
-  composition_run: 08046d239c384cf64bf0ddb5ad0a6e16b12c7fd5429a5159165d7ce147e19b45
+  composition_run: 216dfcff0c5da5133b62dee884b1002ca76a2f696957aabb52586e639c573743
 canonical_reference:
   path: assets/page-08.jpg
   sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927
@@ -140,6 +140,7 @@ objects:
     - 255
     - 253
     - 246
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
   sha256: 69b0d45ccdc050ebe0951d41bded89a6b3f10010bc21e80ed593d943cf9fa147
@@ -296,6 +297,7 @@ objects:
     - 255
     - 253
     - 246
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-08.jpg
   sha256: 2635494b3d9219d152ae235550101bcd00e8334507d9c6f8588c1712c5aa5618
@@ -787,6 +789,7 @@ discrepancies:
   canonical_text_not_visible_in_raster: []
 completeness_gate:
   status: PASS
+  blocked_fragments: []
   native_raster_dimensions_recorded: true
   all_objects_have_sha256: true
   all_editorial_text_composed_live: true

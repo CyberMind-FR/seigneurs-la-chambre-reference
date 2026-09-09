@@ -39,8 +39,13 @@ La composition v3 est exécutée par `scripts/layered_compose.py` à partir de
 Traitements de fragment admis, tous déclarés dans le YAML et journalisés dans `fragments.json` :
 - `crop_only` : découpe rectangulaire ;
 - `crop_grow_to_clean_edge` : élargissement borné (`max_grow_px`) d'un bord qui coupe un trait ;
-- `mask_px` : masquage local, couleur du papier mesurée, d'un résidu de texte raster ou d'un objet
-  voisin inclus dans le crop (jamais pour effacer un détail documentaire).
+- `mask_px` : masquage local d'un résidu de texte raster ou d'un objet voisin inclus dans le crop
+  (jamais pour effacer un détail documentaire). Remplissage : couleur du papier mesurée (défaut),
+  couleur médiane de l'anneau de bordure du masque (`mask_fill: border_median`, texte d'un cartouche
+  coloré recomposé en texte vivant) ou couleur hexadécimale déclarée.
+Texte vivant : césure uniquement aux traits d'union présents dans le canon, jamais de coupure
+arbitraire ; taille ajustée en hauteur et en largeur dans la boîte déclarée ; fontes TrueType
+déclarées dans `prototypes/_shared/text-styles.yaml` lorsque Times base-14 n'a pas le glyphe.
 Contrôles bloquants : couche texte exacte, QR décodé, SHA source et fragments, texte dans une zone
 QR, **collision d'encre entre texte vivant et fragment**. Contrôles signalés : bord de crop
 traversant de l'encre, débordement de bloc, gate de résolution.

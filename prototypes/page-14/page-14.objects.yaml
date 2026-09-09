@@ -1,0 +1,865 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 14
+title: L'Association
+status: APPROVED
+generated_from:
+  composition: prototypes/page-14/composition.yaml
+  composition_run: 317d6cab373a4504bc5978ec8300a430210da8029ded60bb73337e41966aded2
+canonical_reference:
+  path: assets/page-14.jpg
+  sha256: 50ed5e18685a9b057f52ad6e769786e9d9d830628a542a868d13334462d92003
+  dimensions_px:
+  - 1055
+  - 1491
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/14.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 1055
+  - 0
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 0
+  - 1055
+  - 445
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 42
+  - 445
+  - 958
+  - 320
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 175
+  - 1215
+  - 670
+  - 95
+- id: R05
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P14-O-heraldry_captioned
+  visual_description: heraldry captioned
+  object_class: composite
+  source_bbox_px:
+  - 30
+  - 40
+  - 138
+  - 232
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: a75aa0d0a288a6100a54092d3c672b394e497f0f7796a58f5e90619eaf008d93
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P14-O-cloister_top_right
+  visual_description: résidus raster de la fin du titre et du sous-titre masqués (ciel/feuillage)
+  object_class: illustration
+  source_bbox_px:
+  - 600
+  - 38
+  - 440
+  - 450
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 600
+    y: 38
+    w: 96
+    h: 82
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  - x: 600
+    y: 128
+    w: 92
+    h: 108
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: 102d4991a022952bda3b2f738b85dd8b0522d9524c6ee5616c4aa29d2fdca6a7
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P14-O-landscape_mid_right
+  visual_description: 'recadrage documenté : la bande x=440..477 (fins de lignes des puces sur le ciel) n''est pas reprise'
+  object_class: illustration
+  source_bbox_px:
+  - 478
+  - 485
+  - 554
+  - 242
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: fca3f7a85c87e5168c0182537f21f5c51cceaca27c3adb532f88459cf9e1a42d
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P14-O-banner_nous_rejoindre
+  visual_description: cartouche rouge ; ancien texte masqué (couleur du cartouche), titre canonique composé en blanc
+  object_class: ornament
+  source_bbox_px:
+  - 68
+  - 418
+  - 445
+  - 58
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 120
+    y: 426
+    w: 332
+    h: 40
+    fill_rgb:
+    - 104
+    - 35
+    - 24
+    fill_mode: border_median
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: 4574fc00263a34d40423ae14024275328433fe1ea4d5f305329c689eb6b422be
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P14-O-icons_column
+  visual_description: icons column
+  object_class: icon
+  source_bbox_px:
+  - 60
+  - 476
+  - 40
+  - 234
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: b48e4149be50fe122336246710a58ab6e904e60e2ac44b284df9ca34f074bc6c
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P14-O-quote_fleuron_left
+  visual_description: quote fleuron left
+  object_class: ornament
+  source_bbox_px:
+  - 62
+  - 733
+  - 34
+  - 34
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: 1994a1f39b70005dd77b4c5646b4d6dd99d96bdd236ae41a3c18ca04b856d885
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P14-O-quote_fleuron_right
+  visual_description: quote fleuron right
+  object_class: ornament
+  source_bbox_px:
+  - 956
+  - 733
+  - 34
+  - 34
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: 68eaf7d5cf171fde4a47670cd4d110f5021af0d1add045783acc774b13ec1243
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - right
+  review_status: APPROVED
+- id: P14-O-books
+  visual_description: books
+  object_class: illustration
+  source_bbox_px:
+  - 38
+  - 788
+  - 255
+  - 138
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: 414be64c539d1e1b8d4348df80675c9c788babe8adc6da4803f36ad4533d97c8
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P14-O-banner_auteur
+  visual_description: banner auteur
+  object_class: ornament
+  source_bbox_px:
+  - 293
+  - 788
+  - 455
+  - 55
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 370
+    y: 796
+    w: 300
+    h: 40
+    fill_rgb:
+    - 106
+    - 39
+    - 26
+    fill_mode: border_median
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: c87559cbd8b2a7d7dd6f33b5c4ec94a5c8551de2a994303225e066b985f835db
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+- id: P14-O-quill
+  visual_description: quill
+  object_class: illustration
+  source_bbox_px:
+  - 893
+  - 776
+  - 114
+  - 126
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: 78764a521bcf1080ecf14085a411a5f689470bdb545bcd155fdda2e20ee8e53f
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P14-O-book_cover_1
+  visual_description: 'P14-Z07 — reproduction documentaire, droits non documentés : non extraite'
+  object_class: illustration
+  source_bbox_px:
+  - 763
+  - 833
+  - 122
+  - 117
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: BLOCKED_SOURCE_RIGHTS
+- id: P14-O-book_cover_2
+  visual_description: P14-Z08 — non extraite
+  object_class: illustration
+  source_bbox_px:
+  - 763
+  - 948
+  - 152
+  - 117
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: BLOCKED_SOURCE_RIGHTS
+- id: P14-O-book_cover_3
+  visual_description: P14-Z09 — non extraite
+  object_class: illustration
+  source_bbox_px:
+  - 763
+  - 1063
+  - 152
+  - 117
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: BLOCKED_SOURCE_RIGHTS
+- id: P14-O-seal_left
+  visual_description: sceau PATRIMOINE MAURIENNE (texte intrinsèque)
+  object_class: ornament
+  source_bbox_px:
+  - 36
+  - 1195
+  - 118
+  - 118
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: 83a20871f4aeaff361ff9fc1921814528745e48fc849ae7822721ca922a1ceee
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P14-O-seal_right
+  visual_description: sceau des Cordeliers (texte intrinsèque)
+  object_class: ornament
+  source_bbox_px:
+  - 886
+  - 1191
+  - 133
+  - 134
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: d333727e1250358dfbf67e2265f71b9b283cfb1342a53d9b361d1e5b6c9d920b
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P14-O-castle_bottom_left
+  visual_description: castle bottom left
+  object_class: illustration
+  source_bbox_px:
+  - 18
+  - 1312
+  - 245
+  - 178
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: fa15bdf2e6afa8eb18b3374cff45233225770277f85741381f4322510a8e550a
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P14-O-cross_bottom_right
+  visual_description: cross bottom right
+  object_class: illustration
+  source_bbox_px:
+  - 768
+  - 1325
+  - 272
+  - 165
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-14.jpg
+  sha256: b8ae7a47191c60c12261b0ba56fb5c698b47692bc538c3d316bc668bcace6c13
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+text_zones:
+- id: P14-T-title
+  role: title
+  canonical_block: 0
+  expect: L'Association
+  bbox_px:
+  - 300
+  - 36
+  - 400
+  - 66
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Les Amis du Couvent
+  bbox_px:
+  - 180
+  - 132
+  - 512
+  - 104
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: title2
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-p1
+  role: p1
+  canonical_block: 2
+  expect: Créée en 2020
+  bbox_px:
+  - 70
+  - 278
+  - 490
+  - 118
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-banner1
+  role: banner1
+  canonical_block: 3
+  expect: NOUS REJOINDRE
+  bbox_px:
+  - 70
+  - 428
+  - 441
+  - 38
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: banner_title
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-b1
+  role: b1
+  canonical_block: 4
+  expect: • Adhésion
+  bbox_px:
+  - 118
+  - 486
+  - 358
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-b2
+  role: b2
+  canonical_block: 5
+  expect: • Dons
+  bbox_px:
+  - 118
+  - 526
+  - 358
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-b3
+  role: b3
+  canonical_block: 6
+  expect: • Collecte
+  bbox_px:
+  - 118
+  - 566
+  - 358
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-b4
+  role: b4
+  canonical_block: 7
+  expect: • Site
+  bbox_px:
+  - 118
+  - 606
+  - 358
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-b5
+  role: b5
+  canonical_block: 8
+  expect: • Email
+  bbox_px:
+  - 118
+  - 646
+  - 358
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-b6
+  role: b6
+  canonical_block: 9
+  expect: • Mairie
+  bbox_px:
+  - 118
+  - 686
+  - 358
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-quote
+  role: quote
+  canonical_block: 10
+  expect: « Préserver ce patrimoine
+  bbox_px:
+  - 100
+  - 733
+  - 855
+  - 30
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: quote_large
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-banner2
+  role: banner2
+  canonical_block: 11
+  expect: AUTEUR DE RÉFÉRENCE
+  bbox_px:
+  - 295
+  - 796
+  - 451
+  - 40
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: banner_title
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-author
+  role: author
+  canonical_block: 12
+  expect: Philippe DEMARIO
+  bbox_px:
+  - 340
+  - 848
+  - 400
+  - 18
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-r1
+  role: r1
+  canonical_block: 13
+  expect: • Les Seigneurs de La Chambre en Maurienne
+  bbox_px:
+  - 340
+  - 868
+  - 410
+  - 36
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: ref_title
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-r1b
+  role: r1b
+  canonical_block: 14
+  expect: Éditions Derrier
+  bbox_px:
+  - 345
+  - 904
+  - 400
+  - 18
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-r2
+  role: r2
+  canonical_block: 15
+  expect: • La Chambre — Un village
+  bbox_px:
+  - 340
+  - 952
+  - 410
+  - 36
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: ref_title
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-r2b
+  role: r2b
+  canonical_block: 16
+  expect: Éditions De Mario
+  bbox_px:
+  - 345
+  - 990
+  - 400
+  - 32
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-r3
+  role: r3
+  canonical_block: 17
+  expect: • La Maurienne médiévale
+  bbox_px:
+  - 340
+  - 1072
+  - 410
+  - 36
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: ref_title
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-r3b
+  role: r3b
+  canonical_block: 18
+  expect: avec Jean Prieur
+  bbox_px:
+  - 345
+  - 1110
+  - 400
+  - 32
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-depot
+  role: depot
+  canonical_block: 19
+  expect: Ouvrages en dépôt-vente
+  bbox_px:
+  - 280
+  - 1185
+  - 500
+  - 18
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_italic
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-sources_h
+  role: sources_h
+  canonical_block: 20
+  expect: Sources principales
+  bbox_px:
+  - 300
+  - 1220
+  - 420
+  - 18
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-src1
+  role: src1
+  canonical_block: 21
+  expect: Laurence DALMASSO
+  bbox_px:
+  - 195
+  - 1240
+  - 640
+  - 18
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-src2
+  role: src2
+  canonical_block: 22
+  expect: Georges CHAPIER
+  bbox_px:
+  - 195
+  - 1262
+  - 640
+  - 18
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-commission
+  role: commission
+  canonical_block: 23
+  expect: Commission Histoire
+  bbox_px:
+  - 300
+  - 1345
+  - 450
+  - 30
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading_center
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-authors
+  role: authors
+  canonical_block: 24
+  expect: Fabrice GALOPO
+  bbox_px:
+  - 280
+  - 1382
+  - 490
+  - 26
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large_center
+  authority: pages/14.yaml:canonical_text
+- id: P14-T-date
+  role: date
+  canonical_block: 25
+  expect: Décembre 2025
+  bbox_px:
+  - 380
+  - 1412
+  - 290
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_italic
+  authority: pages/14.yaml:canonical_text
+functional_objects: []
+structural_frames:
+- id: P14-FR01
+  kind: rect
+  bbox_px:
+  - 42
+  - 445
+  - 958
+  - 320
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P14-FR02
+  kind: rect
+  bbox_px:
+  - 175
+  - 1215
+  - 670
+  - 95
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon prévaut ; les textes raster absents du canon restent dans leurs fragments
+  raster_text_absent_from_canon:
+  - fragment: heraldry_captioned
+    description: légende des armoiries
+  - fragment: seal_left
+    description: sceau PATRIMOINE MAURIENNE (intrinsèque)
+  - fragment: seal_right
+    description: sceau des Cordeliers (intrinsèque)
+  canonical_text_not_visible_in_raster:
+  - 'bloc 12 « Philippe DEMARIO » : le nom est dans le canon mais n''apparaît pas en texte dans le raster (portrait supprimé,
+    nom conservé par le canon) ; composé sous le bandeau AUTEUR DE RÉFÉRENCE'
+  locked_void: 'ancien emplacement du portrait de Philippe DEMARIO : aucun fragment, aucun remplacement (P14-Z06 LOCKED_VOID)'
+  blocked_rights:
+  - 'P14-Z07..Z09 couvertures d''ouvrages : non extraites (BLOCKED_SOURCE_RIGHTS) ; la zone reste vide dans le proof jusqu''à
+    documentation des droits'
+  raster_typography: 'bandeaux rouges à texte blanc : ancien texte masqué à la couleur du cartouche (mask_fill: border_median),
+    titre canonique composé en blanc'
+completeness_gate:
+  status: PASS_WITH_BLOCKED_RIGHTS_FRAGMENTS
+  blocked_fragments:
+  - P14-O-book_cover_1
+  - P14-O-book_cover_2
+  - P14-O-book_cover_3
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER

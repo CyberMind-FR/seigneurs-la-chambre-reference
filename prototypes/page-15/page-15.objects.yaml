@@ -1,0 +1,1108 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 15
+title: LES SEIGNEURS DE LA CHAMBRE
+status: APPROVED
+generated_from:
+  composition: prototypes/page-15/composition.yaml
+  composition_run: 9def7eb2eb28aab042c9778fdb2b9bd31f34a2d5ca88c10cd52393b21ea6e5dd
+canonical_reference:
+  path: assets/page-15.jpg
+  sha256: e2b31837f4393bbb3ccc0db4e0c523a91aa9237c165184aa7e959d555117606d
+  dimensions_px:
+  - 1055
+  - 1491
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/15.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 1055
+  - 0
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 0
+  - 1055
+  - 1292
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 178
+  - 1292
+  - 652
+  - 133
+- id: R04
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P15-O-heraldry
+  visual_description: armoiries + fleuron (sans légende sur cette page)
+  object_class: heraldry
+  source_bbox_px:
+  - 35
+  - 28
+  - 170
+  - 232
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 7311501e48be75ca392d734aaa6ada5fb068fa404d4ee239eab9704c83f82412
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P15-O-statue_top_right
+  visual_description: statue top right
+  object_class: illustration
+  source_bbox_px:
+  - 878
+  - 25
+  - 162
+  - 310
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: da7dc1d06e1cf3cb81a7358c87fac3043d8ae65fe649d0120b8b3eef988bcc14
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-mountains_right
+  visual_description: 'recadrage documenté : les montagnes très claires derrière le sous-titre (x<738) ne sont pas reprises
+    pour ne pas réintroduire de texte raster'
+  object_class: illustration
+  source_bbox_px:
+  - 738
+  - 150
+  - 302
+  - 142
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: dc95b033b9368b74a755ea24dc370b17a35e54f96e18b6c4e17560ceeab8586b
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 298
+  - 260
+  - 460
+  - 34
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: c27ab977d320acfef28467deb4d5b9ae67a2da134b456e418ebf5897e1160d65
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-banner_10_sites
+  visual_description: banner 10 sites
+  object_class: ornament
+  source_bbox_px:
+  - 88
+  - 298
+  - 785
+  - 62
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 150
+    y: 306
+    w: 682
+    h: 46
+    fill_rgb:
+    - 101
+    - 25
+    - 19
+    fill_mode: border_median
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: adf76b02ce618ea21715cff3eb05328a2ecaa64271da6b5ab16158396416d9c8
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-banner_la_chambre
+  visual_description: bandeau + icône ; texte canonique composé en blanc
+  object_class: ornament
+  source_bbox_px:
+  - 40
+  - 373
+  - 297
+  - 48
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 105
+    y: 379
+    w: 226
+    h: 36
+    fill_rgb:
+    - 111
+    - 79
+    - 69
+    fill_mode: border_median
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 1ab2e8c680bfb07dfbcef9d5c5f4fbb747674e8c72d3451cf79c1d242ea32978
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-banner_ste_marie
+  visual_description: banner ste marie
+  object_class: ornament
+  source_bbox_px:
+  - 40
+  - 518
+  - 392
+  - 48
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 105
+    y: 524
+    w: 321
+    h: 36
+    fill_rgb:
+    - 18
+    - 45
+    - 30
+    fill_mode: border_median
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 98f156e2321a39f8fb422068019a0cd3cc2297a19312cb29fc19cfb6cc7a4fec
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-banner_st_etienne
+  visual_description: banner st etienne
+  object_class: ornament
+  source_bbox_px:
+  - 40
+  - 658
+  - 392
+  - 48
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 105
+    y: 664
+    w: 321
+    h: 36
+    fill_rgb:
+    - 90
+    - 57
+    - 17
+    fill_mode: border_median
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: c0d868a32373629b16113d95f48cf20f35ef6cd9a8a881564a82f746810c0696
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-banner_nd_cruet
+  visual_description: banner nd cruet
+  object_class: ornament
+  source_bbox_px:
+  - 40
+  - 813
+  - 392
+  - 48
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 105
+    y: 819
+    w: 321
+    h: 36
+    fill_rgb:
+    - 20
+    - 47
+    - 72
+    fill_mode: border_median
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 117122dda53b8c11623613482b75498fef5c1ac164632d0a7e3745dc09213a23
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - right
+  review_status: APPROVED
+- id: P15-O-banner_st_remy
+  visual_description: banner st remy
+  object_class: ornament
+  source_bbox_px:
+  - 40
+  - 963
+  - 397
+  - 48
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 105
+    y: 969
+    w: 326
+    h: 36
+    fill_rgb:
+    - 53
+    - 36
+    - 46
+    fill_mode: border_median
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 126757a0e19256e02c2b71d6623c667f81cd47613dca03241f5962dce8b5b64d
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-site_01
+  visual_description: repère numéroté intrinsèque
+  object_class: illustration
+  source_bbox_px:
+  - 440
+  - 363
+  - 283
+  - 137
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: a7154bdda688db51ca9b4cb6d83b349b602b9182d59e0a549496dbf52e9ea633
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  review_status: APPROVED
+- id: P15-O-site_02
+  visual_description: site 02
+  object_class: illustration
+  source_bbox_px:
+  - 735
+  - 363
+  - 296
+  - 137
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: e0331aa5c19312d7492413152096f8247c5c77a53732b8fa03afd6e124af0b0e
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  review_status: APPROVED
+- id: P15-O-site_03
+  visual_description: site 03
+  object_class: illustration
+  source_bbox_px:
+  - 440
+  - 508
+  - 290
+  - 137
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 5178add93cc1513bc7770b18311d382bef2e826d3941bf56555fb33023936094
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
+- id: P15-O-site_04
+  visual_description: site 04
+  object_class: illustration
+  source_bbox_px:
+  - 735
+  - 508
+  - 297
+  - 137
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: a2c572b9ca5e76129a85d61bab0f9c92f1ae2dc7eb5c5b6fe939eb6000ef4a61
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - top
+  review_status: APPROVED
+- id: P15-O-site_05
+  visual_description: site 05
+  object_class: illustration
+  source_bbox_px:
+  - 441
+  - 648
+  - 206
+  - 147
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 6e6cb8a299b25bd479bb185d0f5c2d1b4a77b61aa65104e92924c2b6ca9e383a
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-site_06
+  visual_description: site 06
+  object_class: illustration
+  source_bbox_px:
+  - 640
+  - 648
+  - 202
+  - 147
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 269035a0f177fbce4f4f14ee4a365246e45a76eac9b2ba613cebfa06b094987b
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-site_07
+  visual_description: site 07
+  object_class: illustration
+  source_bbox_px:
+  - 830
+  - 648
+  - 207
+  - 147
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 2f27a011efc97f1bc2cdaa6b938063a5e5f2b40c4fec5f287d3ac1a1caaedbe5
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P15-O-site_08
+  visual_description: site 08
+  object_class: illustration
+  source_bbox_px:
+  - 441
+  - 808
+  - 301
+  - 137
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 1b3eb2dd2f6d1ad63ba2e250a8e3e186043ce34324349f69ddc237eb1eaeef32
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  review_status: APPROVED
+- id: P15-O-site_09
+  visual_description: site 09
+  object_class: illustration
+  source_bbox_px:
+  - 735
+  - 808
+  - 302
+  - 137
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 446b847d003ab4a6a0688ee4289eec37c286964831df0eefaf0b98e593b3922b
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  review_status: APPROVED
+- id: P15-O-site_10
+  visual_description: site 10
+  object_class: illustration
+  source_bbox_px:
+  - 440
+  - 958
+  - 597
+  - 122
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 0056e30e9654f4cb6fbceee6d1bb31bbbb0dab05f488a325a69dcd880b637004
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P15-O-cloister_arch_left
+  visual_description: cloister arch left
+  object_class: illustration
+  source_bbox_px:
+  - 47
+  - 1093
+  - 157
+  - 147
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 1ed40427529fb92950b0a38bd6be6eb0dc50d73d5e94b709dd9b3db5317c862a
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - top
+  review_status: APPROVED
+- id: P15-O-contact_icons
+  visual_description: contact icons
+  object_class: icon
+  source_bbox_px:
+  - 221
+  - 1161
+  - 29
+  - 80
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 30c56d9df68f79c7af88ab3875f5457c294017b87c4f736a5ec27e3f3eb1faa9
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P15-O-cloister_right
+  visual_description: cloister right
+  object_class: illustration
+  source_bbox_px:
+  - 748
+  - 1093
+  - 270
+  - 152
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 70c454a12bda1d2a89c022e226a9d008e77beea050ee0e57b0ab71a218cab220
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - top
+  review_status: APPROVED
+- id: P15-O-dark_band
+  visual_description: dark band
+  object_class: ornament
+  source_bbox_px:
+  - 38
+  - 1243
+  - 980
+  - 37
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 150
+    y: 1249
+    w: 760
+    h: 26
+    fill_rgb:
+    - 21
+    - 40
+    - 44
+    fill_mode: border_median
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: c3081400faa2c8394f119b8bd92132d51c8ac211d50ad39f6dec94e6ad2110ef
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+- id: P15-O-seal_left
+  visual_description: sceau PATRIMOINE MAURIENNE (texte intrinsèque)
+  object_class: ornament
+  source_bbox_px:
+  - 43
+  - 1298
+  - 119
+  - 119
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 6891594a649da5bfdb135c1ee979cc7cc9b92041ceb14cc42ceef1e254fd936d
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-prix_fleuron
+  visual_description: prix fleuron
+  object_class: ornament
+  source_bbox_px:
+  - 888
+  - 1408
+  - 64
+  - 27
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: 93440cd8ec832aacf1ea51c95486091b36d3911d7bbbcdaffa855edf3ab0f0f5
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P15-O-bottom_ornament
+  visual_description: bottom ornament
+  object_class: ornament
+  source_bbox_px:
+  - 298
+  - 1428
+  - 455
+  - 52
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-15.jpg
+  sha256: bee60d0eb690a43242757f1f6198c8ac2f88252519a3e3930ffc2161605831dd
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
+text_zones:
+- id: P15-T-title
+  role: title
+  canonical_block: 0
+  expect: LES SEIGNEURS DE LA CHAMBRE
+  bbox_px:
+  - 240
+  - 40
+  - 540
+  - 110
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: title_caps
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Vicomtes de Maurienne
+  bbox_px:
+  - 230
+  - 165
+  - 500
+  - 62
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle_dark_unicode
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-banner
+  role: banner
+  canonical_block: 2
+  expect: LES 10 SITES
+  bbox_px:
+  - 150
+  - 306
+  - 660
+  - 46
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: banner_big
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c1
+  role: c1
+  canonical_block: 3
+  expect: LA CHAMBRE
+  bbox_px:
+  - 110
+  - 381
+  - 210
+  - 32
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: banner_small
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c1_sites
+  role: c1_sites
+  canonical_block: 4
+  expect: 1 · Couvent
+  bbox_px:
+  - 45
+  - 438
+  - 390
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: site_list
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c2
+  role: c2
+  canonical_block: 5
+  expect: SAINTE-MARIE-DE-CUINES
+  bbox_px:
+  - 110
+  - 526
+  - 305
+  - 32
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: banner_small
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c2_sites
+  role: c2_sites
+  canonical_block: 6
+  expect: 3 · Château Joli
+  bbox_px:
+  - 45
+  - 585
+  - 390
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: site_list
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c3
+  role: c3
+  canonical_block: 7
+  expect: SAINT-ÉTIENNE-DE-CUINES
+  bbox_px:
+  - 110
+  - 666
+  - 305
+  - 32
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: banner_small
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c3_sites
+  role: c3_sites
+  canonical_block: 8
+  expect: 5 · Tour de Châtel-André
+  bbox_px:
+  - 45
+  - 715
+  - 385
+  - 72
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: site_list
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c4
+  role: c4
+  canonical_block: 9
+  expect: NOTRE-DAME-DU-CRUET
+  bbox_px:
+  - 110
+  - 821
+  - 305
+  - 32
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: banner_small
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c4_sites
+  role: c4_sites
+  canonical_block: 10
+  expect: 8 · Château
+  bbox_px:
+  - 45
+  - 880
+  - 390
+  - 48
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: site_list
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c5
+  role: c5
+  canonical_block: 11
+  expect: SAINT-RÉMY-DE-MAURIENNE
+  bbox_px:
+  - 110
+  - 971
+  - 310
+  - 32
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: banner_small
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-c5_sites
+  role: c5_sites
+  canonical_block: 12
+  expect: 10 · Maison Forte
+  bbox_px:
+  - 45
+  - 1027
+  - 390
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: site_list
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-assoc
+  role: assoc
+  canonical_block: 13
+  expect: Les Amis du Couvent
+  bbox_px:
+  - 225
+  - 1098
+  - 520
+  - 30
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading_large
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-assoc_sub
+  role: assoc_sub
+  canonical_block: 14
+  expect: Préserver et valoriser
+  bbox_px:
+  - 225
+  - 1128
+  - 520
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_italic_left
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-web
+  role: web
+  canonical_block: 15
+  expect: www.couventdelachambre.fr
+  bbox_px:
+  - 262
+  - 1162
+  - 480
+  - 18
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-mail
+  role: mail
+  canonical_block: 16
+  expect: contact@
+  bbox_px:
+  - 262
+  - 1188
+  - 480
+  - 18
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-phone
+  role: phone
+  canonical_block: 17
+  expect: 04 79 56 30 32
+  bbox_px:
+  - 262
+  - 1214
+  - 480
+  - 18
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-band
+  role: band
+  canonical_block: 18
+  expect: 'Adhésion : 5 €'
+  bbox_px:
+  - 40
+  - 1250
+  - 976
+  - 24
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: banner_band
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-legal_h
+  role: legal_h
+  canonical_block: 19
+  expect: MENTIONS LÉGALES
+  bbox_px:
+  - 300
+  - 1296
+  - 420
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-legal1
+  role: legal1
+  canonical_block: 20
+  expect: Édité par
+  bbox_px:
+  - 200
+  - 1322
+  - 630
+  - 16
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: legal
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-legal2
+  role: legal2
+  canonical_block: 21
+  expect: Mairie de La Chambre
+  bbox_px:
+  - 200
+  - 1340
+  - 630
+  - 16
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: legal
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-legal3
+  role: legal3
+  canonical_block: 22
+  expect: 'Auteurs :'
+  bbox_px:
+  - 200
+  - 1358
+  - 630
+  - 16
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: legal
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-legal4
+  role: legal4
+  canonical_block: 23
+  expect: Date d’édition
+  bbox_px:
+  - 200
+  - 1376
+  - 630
+  - 16
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: legal
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-legal5
+  role: legal5
+  canonical_block: 24
+  expect: © 2025
+  bbox_px:
+  - 200
+  - 1394
+  - 630
+  - 16
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: legal
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-prix
+  role: prix
+  canonical_block: 25
+  expect: 'Prix : 5 €'
+  bbox_px:
+  - 850
+  - 1300
+  - 180
+  - 26
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading_center
+  authority: pages/15.yaml:canonical_text
+- id: P15-T-prix_sub
+  role: prix_sub
+  canonical_block: 26
+  expect: Au profit
+  bbox_px:
+  - 845
+  - 1330
+  - 190
+  - 70
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_italic
+  authority: pages/15.yaml:canonical_text
+functional_objects: []
+structural_frames:
+- id: P15-FR01
+  kind: rect
+  bbox_px:
+  - 178
+  - 1292
+  - 652
+  - 133
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon prévaut ; les textes raster absents du canon restent dans leurs fragments
+  raster_text_absent_from_canon:
+  - fragment: seal_left
+    description: sceau PATRIMOINE MAURIENNE (intrinsèque)
+  - fragment: site_01
+    description: repères numérotés 1..10 intrinsèques aux vignettes
+  canonical_text_not_visible_in_raster: []
+  raster_typography:
+  - 'bandeaux colorés à texte blanc : ancien texte masqué à la couleur du cartouche, texte canonique composé en blanc'
+  - sous-titre composé en DejaVu Serif (le « ᵉ » U+1D49 n'existe pas dans Times base-14) ; fonte du projet toujours à verrouiller
+completeness_gate:
+  status: PASS
+  blocked_fragments: []
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER
