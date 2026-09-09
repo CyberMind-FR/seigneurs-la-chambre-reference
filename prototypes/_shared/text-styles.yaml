@@ -47,3 +47,11 @@ styles:
   tiny_center:       {font: Times-Roman,  size: 5.3,  leading: 5.8,  color: "#2f241e", align: center}
   small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
   subtitle_dark_unicode: {font: DejaVuSerif, size: 9.4, leading: 10.6, color: "#2f241e", align: center}
+  # Cover (page 01) and dynasty page (02) styles
+  subtitle_caps_red:  {font: Times-Bold,   size: 15.0, leading: 16.0, color: "#8b2e2e", align: center}
+  subtitle_large:     {font: Times-Italic, size: 12.0, leading: 13.0, color: "#8b2e2e", align: center}
+  cover_italic:       {font: Times-Italic, size: 13.0, leading: 14.5, color: "#2f241e", align: center}
+  cover_bold:         {font: Times-Bold,   size: 12.0, leading: 13.0, color: "#2f241e", align: center}
+  cover_body:         {font: Times-Roman,  size: 9.5,  leading: 10.5, color: "#2f241e", align: center}
+  cover_small_italic: {font: Times-Italic, size: 7.4,  leading: 8.2,  color: "#2f241e", align: center}
+  body_large_italic:  {font: Times-Italic, size: 7.6,  leading: 8.6,  color: "#2f241e", align: justify}

@@ -1046,7 +1046,7 @@ phase_b_lot_2:
     association_logo_svg: blocked_source_missing
 
 layered_compositions:
-  status: site_family_composed_and_validated  # gkerma, 2026-09-09
+  status: all_pages_but_04_composed_and_validated  # gkerma, 2026-09-09
   composer: scripts/layered_compose.py
   measurement: scripts/layered_measure.py
   inventory: scripts/layered_inventory.py
@@ -1145,7 +1145,20 @@ layered_compositions:
     status: APPROVED
     methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
     effective_ppi_a5: 131.81
+  - page: 1
+    composition: prototypes/page-01/composition.yaml
+    composition_sha256: 572bd39cefe6072646118f2251e33a9522e349c8dd6b4283566f00c37f26cea6
+    fragment_lock: prototypes/page-01/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+    effective_ppi_a5: 185.78
+  - page: 2
+    composition: prototypes/page-02/composition.yaml
+    composition_sha256: 27c8848781140d089a1725f367fd2dc432c92d4c129e21f4ce77ef8d5e9b01d2
+    fragment_lock: prototypes/page-02/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+    effective_ppi_a5: 185.78
   excluded:
   - {page: 4, reason: PAGE_04_EDITORIAL_ARBITRATION_REQUIRED}
-  - {pages: [1, 2], reason: cover and dynasty page — not yet composed}
-  status_note: pages 10 and 13-16 composed and validated on 2026-09-09 (gkerma)
+  status_note: 15 of 16 pages composed and validated on 2026-09-09 (gkerma); page 04 awaits the editorial lock

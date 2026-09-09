@@ -1,0 +1,915 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 2
+title: Les Seigneurs de La Chambre
+status: APPROVED
+generated_from:
+  composition: prototypes/page-02/composition.yaml
+  composition_run: 37dd3e4b65becf9594232a98961cf4b94aa872185feb2cc8c29ac6ead54a96fb
+canonical_reference:
+  path: assets/page-02.jpg
+  sha256: e6ecfa02a8d335765d1e9772d8fd28e4d3ce3a8e41ccd04b4513725843c1f2b8
+  dimensions_px:
+  - 1024
+  - 1536
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/02.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 1024
+  - 547
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 547
+  - 1024
+  - 673
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1220
+  - 960
+  - 235
+- id: R04
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P02-O-running_head_raster
+  visual_description: bandeau courant (défaut raster « Les… Seigneurs »)
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 250
+  - 16
+  - 530
+  - 26
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 52e5d4b3837dc646aae561fca73f26d959f0e1de3db78876339a66a6afb75774
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
+- id: P02-O-heraldry_official
+  visual_description: armoiries officielles (P02-Z01) telles que dans la page canonique ; la légende « Armoiries officielles
+    » est un bloc canonique composé
+  object_class: heraldry
+  source_bbox_px:
+  - 35
+  - 165
+  - 210
+  - 236
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 528cf87e74957935f800eeeeeba29ea2c05030641ca235157e0598c9709156da
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+- id: P02-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 415
+  - 170
+  - 190
+  - 30
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: c611252301b2d3a1208ab1935a3383320bcfc606001ad84c176ecf22e1212b1a
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
+- id: P02-O-village_captioned
+  visual_description: La Chambre + légende « La Chambre, capitale et coeur de la seigneurie » ; résidus raster du titre, du
+    sous-titre et des fins de lignes des paragraphes masqués (ciel/feuillage)
+  object_class: composite
+  source_bbox_px:
+  - 655
+  - 105
+  - 369
+  - 430
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px:
+  - x: 655
+    y: 105
+    w: 240
+    h: 17
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 655
+    y: 135
+    w: 120
+    h: 28
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 655
+    y: 195
+    w: 40
+    h: 166
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: b6139cdcb1882908eb6517a19ebd5cc628943fec7481cfb5c0f8d3b1a3ea1695
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P02-O-blason_box_frame
+  visual_description: cadre ornemental de l'encadré BLASONNEMENT OFFICIEL ; intérieur masqué, texte canonique composé
+  object_class: ornament
+  source_bbox_px:
+  - 245
+  - 420
+  - 440
+  - 115
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 256
+    y: 434
+    w: 412
+    h: 94
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 0d3170a29f340c4b71a6f02800011fc739fb205490671348a797f34868e2e4be
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P02-O-bishop_captioned
+  visual_description: évêque-comte + légende
+  object_class: composite
+  source_bbox_px:
+  - 35
+  - 452
+  - 195
+  - 246
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: f80945887dad1edff84d73ec9fc5c92b2bd27eacb1481191cdbcaf402943e2e2
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  review_status: APPROVED
+- id: P02-O-cross_h1
+  visual_description: cross h1
+  object_class: ornament
+  source_bbox_px:
+  - 231
+  - 551
+  - 19
+  - 21
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 0281d0053558c388c6bb598633210ce8b967cfe88371fd92c83cd5c0eefadd5c
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+- id: P02-O-seal_vicomte_captioned
+  visual_description: sceau + légende « Sceau d'un vicomte de La Chambre (XIIIe siècle) »
+  object_class: composite
+  source_bbox_px:
+  - 41
+  - 735
+  - 188
+  - 150
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 41b2dddab9cf3162f82377d78df77a8a8ae81dab37028ceee8cb5c22a8ca7548
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P02-O-cross_h2
+  visual_description: cross h2
+  object_class: ornament
+  source_bbox_px:
+  - 231
+  - 752
+  - 18
+  - 21
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 96b7bf380664f9ff63135e42e1039f6a2ce3b3697e25c7657463110124aa023f
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+- id: P02-O-knight_captioned
+  visual_description: chevalier + légende « Une lignée chevaleresque… » + fleur de lys
+  object_class: composite
+  source_bbox_px:
+  - 25
+  - 885
+  - 186
+  - 310
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: afccb14f7860ac9a823c3884cd6e9c31a2d4b895d81baa054ce47c78050bc5c3
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P02-O-cross_h3
+  visual_description: cross h3
+  object_class: ornament
+  source_bbox_px:
+  - 231
+  - 956
+  - 19
+  - 22
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 6b6a315c016c36635a22736c5dae87e81cbb8cfe07aba65de3980ac93c875c05
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+- id: P02-O-cross_h4
+  visual_description: cross h4
+  object_class: ornament
+  source_bbox_px:
+  - 231
+  - 1112
+  - 19
+  - 22
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 520b52c959c90d6eb1a28f8c16fce0889140b3c744ec7b3b2c8a9727e6b3261a
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+- id: P02-O-equestrian_seal_captioned
+  visual_description: sceau équestre + légende « Sceau équestre (XIIe siècle) »
+  object_class: composite
+  source_bbox_px:
+  - 795
+  - 551
+  - 165
+  - 178
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 4ea0ad9f574d720724bab8ffb211a31f64ef11d8d0bb67b9c44a8551b2984cd2
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+- id: P02-O-testament_captioned
+  visual_description: testament + légende « Testament de Pierre de La Chambre (1261) »
+  object_class: composite
+  source_bbox_px:
+  - 771
+  - 740
+  - 236
+  - 200
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 936aae0cc272029436bfb3247f82d1668eba1b38f671c8a2b9f32800f5fe8299
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - right
+  review_status: APPROVED
+- id: P02-O-monk_church_captioned
+  visual_description: moine + couvent + légende « Couvent des Cordeliers, fondation de 1365 »
+  object_class: composite
+  source_bbox_px:
+  - 765
+  - 925
+  - 240
+  - 188
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 6cdd481f1c0546705bd756c7851d8df1ac0736215369a3cd75bf3319e5ad9131
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P02-O-louis_medallion_captioned
+  visual_description: médaillon + légende « Louis Ier de Savoie (1402-1465) »
+  object_class: composite
+  source_bbox_px:
+  - 775
+  - 1113
+  - 232
+  - 102
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: e4a5653e01ae6cdd2b1926cbfc08aef5bee698bfb852899ff65ecce2ebdfd33a
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+- id: P02-O-territory_map
+  visual_description: carte du mandement avec toponymes intrinsèques ; résidu raster du « U » du titre masqué
+  object_class: documentary_map
+  source_bbox_px:
+  - 40
+  - 1228
+  - 355
+  - 225
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px:
+  - x: 380
+    y: 1234
+    w: 15
+    h: 22
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 4cb9a3bc44821f1638349ec5c4070e2c77d73fdee05fa7cc3e5c45d33cdf8a81
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P02-O-empire_icons
+  visual_description: empire icons
+  object_class: icon
+  source_bbox_px:
+  - 467
+  - 1263
+  - 32
+  - 162
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 2f3a554681c6465a70e5578fa328a08a0f6e426470a33bac4a6ac15253a4ae93
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+- id: P02-O-heraldic_banner
+  visual_description: heraldic banner
+  object_class: heraldry
+  source_bbox_px:
+  - 845
+  - 1222
+  - 141
+  - 232
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: ea3a8b9390a497e19281f24b18388f5b6ce4693cabc339a830a21ceb0982af67
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P02-O-footer_landscape_raster
+  visual_description: bandeau paysage + pied de page « … — 2 — »
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 20
+  - 1430
+  - 985
+  - 75
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-02.jpg
+  sha256: 172fa641ecd58cca233cdd67f6eb2b80de61b67ef51e5d29fff5c33870e08856
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+text_zones:
+- id: P02-T-title
+  role: title
+  canonical_block: 0
+  expect: Les Seigneurs de La Chambre
+  bbox_px:
+  - 130
+  - 58
+  - 780
+  - 84
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Les maîtres de la vallée
+  bbox_px:
+  - 250
+  - 136
+  - 530
+  - 36
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle_large
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-armoiries
+  role: armoiries
+  canonical_block: 2
+  expect: Armoiries officielles
+  bbox_px:
+  - 45
+  - 404
+  - 190
+  - 22
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: quote
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-p1
+  role: p1
+  canonical_block: 3
+  expect: Avant que la Maison
+  bbox_px:
+  - 270
+  - 205
+  - 380
+  - 104
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-p2
+  role: p2
+  canonical_block: 4
+  expect: Le comte de Foras
+  bbox_px:
+  - 270
+  - 310
+  - 380
+  - 108
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large_italic
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-blason_h
+  role: blason_h
+  canonical_block: 5
+  expect: BLASONNEMENT OFFICIEL
+  bbox_px:
+  - 258
+  - 438
+  - 410
+  - 18
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-blason_1
+  role: blason_1
+  canonical_block: 6
+  expect: « D'azur
+  bbox_px:
+  - 258
+  - 460
+  - 410
+  - 18
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_italic
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-blason_2
+  role: blason_2
+  canonical_block: 7
+  expect: à la bande de gueules
+  bbox_px:
+  - 258
+  - 480
+  - 410
+  - 18
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_italic
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-blason_src
+  role: blason_src
+  canonical_block: 8
+  expect: 'Source : Amédée de FORAS'
+  bbox_px:
+  - 258
+  - 506
+  - 410
+  - 16
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny_center
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-h1
+  role: h1
+  canonical_block: 9
+  expect: Les origines
+  bbox_px:
+  - 258
+  - 547
+  - 470
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-p3
+  role: p3
+  canonical_block: 10
+  expect: Vers 1030
+  bbox_px:
+  - 232
+  - 577
+  - 520
+  - 96
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-p4
+  role: p4
+  canonical_block: 11
+  expect: Cette même année 1030
+  bbox_px:
+  - 232
+  - 677
+  - 520
+  - 74
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-h2
+  role: h2
+  canonical_block: 12
+  expect: L'âge d'or
+  bbox_px:
+  - 258
+  - 750
+  - 470
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-p5
+  role: p5
+  canonical_block: 13
+  expect: Richard de La Chambre
+  bbox_px:
+  - 232
+  - 780
+  - 520
+  - 112
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-p6
+  role: p6
+  canonical_block: 14
+  expect: Son fils Pierre
+  bbox_px:
+  - 232
+  - 895
+  - 520
+  - 56
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-h3
+  role: h3
+  canonical_block: 15
+  expect: Le siècle des fondations
+  bbox_px:
+  - 258
+  - 955
+  - 470
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-p7
+  role: p7
+  canonical_block: 16
+  expect: Jean II de La Chambre
+  bbox_px:
+  - 232
+  - 985
+  - 520
+  - 72
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-p8
+  role: p8
+  canonical_block: 17
+  expect: En 1345
+  bbox_px:
+  - 232
+  - 1058
+  - 520
+  - 50
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-h4
+  role: h4
+  canonical_block: 18
+  expect: Le crépuscule
+  bbox_px:
+  - 258
+  - 1112
+  - 470
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-p9
+  role: p9
+  canonical_block: 19
+  expect: Gaspard de La Chambre
+  bbox_px:
+  - 232
+  - 1142
+  - 520
+  - 74
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-empire_h
+  role: empire_h
+  canonical_block: 20
+  expect: UN EMPIRE TERRITORIAL
+  bbox_px:
+  - 400
+  - 1232
+  - 340
+  - 28
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading_center
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-e1
+  role: e1
+  canonical_block: 21
+  expect: • Le mandement
+  bbox_px:
+  - 505
+  - 1270
+  - 320
+  - 26
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: site_list
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-e2
+  role: e2
+  canonical_block: 22
+  expect: • Châteaux
+  bbox_px:
+  - 505
+  - 1310
+  - 320
+  - 40
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: site_list
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-e3
+  role: e3
+  canonical_block: 23
+  expect: • Titres
+  bbox_px:
+  - 505
+  - 1355
+  - 320
+  - 26
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: site_list
+  authority: pages/02.yaml:canonical_text
+- id: P02-T-e4
+  role: e4
+  canonical_block: 24
+  expect: • Seigneuries
+  bbox_px:
+  - 505
+  - 1390
+  - 320
+  - 40
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: site_list
+  authority: pages/02.yaml:canonical_text
+functional_objects: []
+structural_frames:
+- id: P02-FR01
+  kind: rect
+  bbox_px:
+  - 30
+  - 1220
+  - 960
+  - 235
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon prévaut ; les textes raster absents du canon restent dans leurs fragments
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant (avec un défaut de rendu raster sur « Les »)
+  - fragment: village_captioned
+    description: « La Chambre, capitale et coeur de la seigneurie »
+  - fragment: bishop_captioned
+    description: « L'évêque-comte, maître spirituel et temporel de la Maurienne »
+  - fragment: seal_vicomte_captioned
+    description: « Sceau d'un vicomte de La Chambre (XIIIe siècle) »
+  - fragment: knight_captioned
+    description: « Une lignée chevaleresque, au service de la vallée et de l'Église. »
+  - fragment: equestrian_seal_captioned
+    description: « Sceau équestre (XIIe siècle) »
+  - fragment: testament_captioned
+    description: « Testament de Pierre de La Chambre (1261) »
+  - fragment: monk_church_captioned
+    description: « Couvent des Cordeliers, fondation de 1365 »
+  - fragment: louis_medallion_captioned
+    description: « Louis Ier de Savoie (1402-1465) »
+  - fragment: territory_map
+    description: toponymes intrinsèques de la carte du mandement
+  - fragment: footer_landscape_raster
+    description: pied de page avec folio
+  canonical_text_differs_from_raster:
+  - 'le paragraphe du comte de Foras est en italique dans le raster ; le canon ne porte pas de marquage : composé en italique
+    (style), texte identique'
+  canonical_text_not_visible_in_raster: []
+  heraldry_note: 'P02-Z01 : armoiries reprises de la page canonique ; assets/svg/heraldry-la-chambre.svg reste PRODUCED_PENDING_HERALDIC_REVIEW,
+    non utilisé'
+completeness_gate:
+  status: PASS
+  blocked_fragments: []
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER

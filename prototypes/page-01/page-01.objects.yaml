@@ -1,0 +1,608 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 1
+title: LES SEIGNEURS DE LA CHAMBRE
+status: APPROVED
+generated_from:
+  composition: prototypes/page-01/composition.yaml
+  composition_run: 29d71db071882b34e7b059c09c2bac69275a67da9cedd4ac69b52a317543f169
+canonical_reference:
+  path: assets/page-01.jpg
+  sha256: 7b3058fe609f08f59d6fead46bb7d5d7e544de568b57187219fc55ee70ecbb8b
+  dimensions_px:
+  - 1024
+  - 1536
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/01.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 1024
+  - 0
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 0
+  - 1024
+  - 1536
+- id: R03
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P01-O-running_head_raster
+  visual_description: running head raster
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 258
+  - 54
+  - 508
+  - 30
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 79525a8a1a38730a42e7ab5ccb45df72a33e8f0731985da5addc00a0de3113eb
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - right
+  review_status: APPROVED
+- id: P01-O-church_captioned
+  visual_description: église + légende « Église Notre-Dame-du-Cruet XIVe siècle »
+  object_class: composite
+  source_bbox_px:
+  - 25
+  - 98
+  - 278
+  - 325
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 36edcc243c73bb5c7265204ad10f42ac18c3c94f33031ed31ec44d7c11b3a1a8
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P01-O-shield
+  visual_description: armoiries avec repères de construction (ornement)
+  object_class: heraldry
+  source_bbox_px:
+  - 378
+  - 175
+  - 290
+  - 278
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: d05f2444d424a0b1c456948b5b48dd60e2e735415577695dd51c1d57d41867cd
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - right
+  review_status: APPROVED
+- id: P01-O-mountains_captioned
+  visual_description: Maurienne + légende « Maurienne Terre de passage et de seigneuries »
+  object_class: composite
+  source_bbox_px:
+  - 655
+  - 92
+  - 312
+  - 280
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 91d33a91f3825633916423d5802c1b4734407acd9fbadf5931360b798ae839ec
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - right
+  review_status: APPROVED
+- id: P01-O-sword_ornament
+  visual_description: sword ornament
+  object_class: ornament
+  source_bbox_px:
+  - 887
+  - 262
+  - 88
+  - 256
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: c0cb6a66c0885f92e6bb06b926622b02152a1fb63bee32a7c477606a23dfaf42
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P01-O-compass_small
+  visual_description: compass small
+  object_class: ornament
+  source_bbox_px:
+  - 50
+  - 450
+  - 60
+  - 66
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 68b59a5bbddcbc49b0a4dc0ca4aa316999522b02bab3655379df98a6b5fc8167
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P01-O-seal_captioned
+  visual_description: sceau + ruban + légende « Sceau d'un seigneur de La Chambre XIIIe siècle » ; résidu raster du sous-titre
+    masqué
+  object_class: composite
+  source_bbox_px:
+  - 35
+  - 620
+  - 232
+  - 398
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px:
+  - x: 176
+    y: 622
+    w: 92
+    h: 44
+    fill_rgb:
+    - 255
+    - 253
+    - 250
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 043767ba4b10cfdedee159a16dff03127a2963fdd32a4c30684cab6208e7c417
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
+- id: P01-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 254
+  - 688
+  - 516
+  - 40
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 772f88f0fba41ee151e043050bc2a4f880ed7f4c0cb878f2d0e508eb25893477
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+- id: P01-O-ornament_2
+  visual_description: ornament 2
+  object_class: ornament
+  source_bbox_px:
+  - 291
+  - 870
+  - 492
+  - 36
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 0888dd7c01b08416d91ec4fc1e56d6ab7b5b34e413f62e9fcf8bb025062658eb
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
+- id: P01-O-maison_forte_captioned
+  visual_description: maison forte + légende « Maison forte de La Tour »
+  object_class: composite
+  source_bbox_px:
+  - 745
+  - 725
+  - 255
+  - 340
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: f114457f6d61b6a97209f62f8d43528ad234867198a866261b945daee5e8f201
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  review_status: APPROVED
+- id: P01-O-castle_bottom_left
+  visual_description: résidus raster des lignes « Notre-Dame-du-Cruet — Décembre 2025 », « Association… », « Commission… »
+    masqués (ciel)
+  object_class: illustration
+  source_bbox_px:
+  - 25
+  - 993
+  - 390
+  - 282
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 320
+    y: 993
+    w: 95
+    h: 22
+    fill_rgb:
+    - 255
+    - 253
+    - 250
+    fill_mode: paper
+  - x: 270
+    y: 1060
+    w: 145
+    h: 55
+    fill_rgb:
+    - 255
+    - 253
+    - 250
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 60081cd31a0892f2880f8587da43e5cdf78a4d1c9f5372a786caece9dfac5c50
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P01-O-compass_rose
+  visual_description: compass rose
+  object_class: ornament
+  source_bbox_px:
+  - 835
+  - 1086
+  - 150
+  - 160
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: aac0d66fcb9e712f9c54fcf5f686180bcd2f9977ee5279a5847b4e92c798c0d7
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P01-O-fidem_servare_raster
+  visual_description: devise « Fidem servare et jus dicere » (raster, absente du canon)
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 679
+  - 1196
+  - 140
+  - 62
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: fbaa32d84dc0c1fd38c0c8f24d0e827cc242138c54858bee271743ec7fdd2589
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  review_status: APPROVED
+- id: P01-O-timeline_and_logo
+  visual_description: frise chronologique (XIe–XVe s., libellés raster absents du canon) + logo de l'association (texte intrinsèque)
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 175
+  - 1240
+  - 690
+  - 225
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 3e4629673b083080364c61fa9cb239d228befc07fc19bbb78e733ad1bc95a346
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P01-O-compass_instrument
+  visual_description: compass instrument
+  object_class: ornament
+  source_bbox_px:
+  - 15
+  - 1235
+  - 190
+  - 240
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: e0e72d242a98e2e297fb55254276de3286c0523ac1f05d556f12c235a6b4d485
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P01-O-quill_book
+  visual_description: quill book
+  object_class: ornament
+  source_bbox_px:
+  - 775
+  - 1235
+  - 240
+  - 230
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 1f673b68d52ea8dca90f11b6bf20de2d730686e53ccd520262b71f2d58f83fc7
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P01-O-footer_raster
+  visual_description: pied de page « Les Amis du Couvent des Cordeliers de La Chambre — 1 — »
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 288
+  - 1476
+  - 450
+  - 22
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-01.jpg
+  sha256: 9de4e9a513b9040cef73ace41ce9b961b044e0f06634b80b328a971611d7e5f4
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+text_zones:
+- id: P01-T-title
+  role: title
+  canonical_block: 0
+  expect: LES SEIGNEURS DE LA CHAMBRE
+  bbox_px:
+  - 70
+  - 530
+  - 890
+  - 90
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: title_caps
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: ET LEUR PATRIMOINE
+  bbox_px:
+  - 150
+  - 622
+  - 730
+  - 56
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle_caps_red
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-l2
+  role: l2
+  canonical_block: 2
+  expect: Quatre siècles
+  bbox_px:
+  - 280
+  - 750
+  - 480
+  - 45
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: cover_italic
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-l3
+  role: l3
+  canonical_block: 3
+  expect: (XIe - XVe siècles)
+  bbox_px:
+  - 280
+  - 798
+  - 480
+  - 40
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: cover_italic
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-l4
+  role: l4
+  canonical_block: 4
+  expect: Livret de l'exposition
+  bbox_px:
+  - 300
+  - 935
+  - 430
+  - 40
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: cover_bold
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-l5
+  role: l5
+  canonical_block: 5
+  expect: Notre-Dame-du-Cruet — Décembre
+  bbox_px:
+  - 300
+  - 985
+  - 430
+  - 34
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: cover_body
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-l6
+  role: l6
+  canonical_block: 6
+  expect: Association
+  bbox_px:
+  - 240
+  - 1058
+  - 540
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: cover_small_italic
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-l7
+  role: l7
+  canonical_block: 7
+  expect: Commission
+  bbox_px:
+  - 240
+  - 1088
+  - 540
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: cover_small_italic
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-q1
+  role: q1
+  canonical_block: 8
+  expect: « Le passé
+  bbox_px:
+  - 420
+  - 1150
+  - 260
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_italic
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-q2
+  role: q2
+  canonical_block: 9
+  expect: il est sous nos pas
+  bbox_px:
+  - 420
+  - 1174
+  - 260
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_italic
+  authority: pages/01.yaml:canonical_text
+functional_objects: []
+structural_frames: []
+discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon prévaut ; les textes raster absents du canon restent dans leurs fragments
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant
+  - fragment: church_captioned
+    description: « Église Notre-Dame-du-Cruet XIVe siècle »
+  - fragment: mountains_captioned
+    description: « Maurienne Terre de passage et de seigneuries »
+  - fragment: seal_captioned
+    description: « Sceau d'un seigneur de La Chambre XIIIe siècle »
+  - fragment: maison_forte_captioned
+    description: « Maison forte de La Tour »
+  - fragment: fidem_servare_raster
+    description: devise « Fidem servare et jus dicere »
+  - fragment: timeline_and_logo
+    description: 'frise : XIe s. Origines Vicomtés épiscopales / XIIe-XIIIe s. Âge d''or Mariages et alliances / XIVe s. Fondations
+      Couvent des Cordeliers / XVe s. Crépuscule Passage aux Seyssel ; texte intrinsèque du logo'
+  - fragment: footer_raster
+    description: pied de page avec folio
+  canonical_text_not_visible_in_raster:
+  - 'blocs 8–9 « Le passé n''est pas derrière nous, / il est sous nos pas. » : absents de la page canonique ; composés dans
+    l''espace libre entre la ligne Commission et la frise (position à arbitrer)'
+completeness_gate:
+  status: PASS
+  blocked_fragments: []
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER
