@@ -74,6 +74,20 @@ facteur ≤ 8) jusqu'au gate de sa classe pour la première version finalisée, 
 Quand le facteur maximal ne suffit pas (page 16, trait : 131,8 → 1054 ppi), la dérogation A5
 explicite s'applique (`PASS_WITH_RESOLUTION_WAIVER`).
 
+### Sources HD régénérées (Phase C, 2026-09-09)
+Une illustration peut être remplacée par une **reconstitution HD guidée par référence** (prompt +
+crop canonique, cf. `assets/hd/README.md`) aux conditions suivantes :
+- la grille (`composition.yaml`) ne change pas : la source est déclarée dans
+  `prototypes/page-NN/hd-sources.yaml`, recadrée au centre au ratio exact de la bbox, jamais
+  agrandie, jamais masquée ;
+- seules les illustrations et détails documentaires y sont éligibles ; armoiries, cartes, plans,
+  ornements, icônes, textes raster, logo, couvertures d'ouvrages et QR n'y passent jamais ;
+- l'image ne porte aucun texte ; une légende raster disparue doit être inscrite au canon (ou
+  abandonnée par décision éditoriale tracée) avant approbation (`caption_resolution`) ;
+- approbation humaine tracée (`APPROVED`, `rights`, `approved_by`, `approved_on`), SHA-256 dans le
+  lock ; contrôle `make hd-check` ;
+- l'image est une reconstitution : la mention sur les illustrations s'applique.
+
 ## Politique de trame de fond
 Le fond de page devient un actif indépendant et reproductible.
 Il doit respecter `style.yaml` et le langage SpiritualCept : papier blanc/ivoire très clair, grain discret, contraste d'impression élevé, aucune information documentaire encodée dans la texture.

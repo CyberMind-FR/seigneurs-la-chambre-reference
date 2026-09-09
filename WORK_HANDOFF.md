@@ -93,6 +93,23 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
 - `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
   committées).
 
+## État au 2026-09-09 : Phase C — circuit de régénération HD des croquis par prompts
+
+Rapport : `docs/migration-text-layer/PHASE_C_HD_REGENERATION.md`. Contrat : `assets/hd/README.md`.
+
+- Décision : les croquis et le fond sont régénérés par **prompts ChatGPT guidés par le crop
+  canonique**, sans toucher aux grilles ; armoiries, cartes/plans, ornements, icônes, textes
+  raster, logo, couvertures et QR n'y passent jamais.
+- Livré : 95 briefs d'observation (`assets/hd/briefs.yaml`), 91 prompts committés
+  (`assets/hd/prompts/`, `make hd-prompts` / `make hd-pack`), ingestion (`make hd-ingest` →
+  `prototypes/page-NN/hd-sources.yaml`, jamais d'approbation automatique), contrôle
+  (`make hd-check`, dans `make validate`), prise en charge dans le compositeur (source `APPROVED`
+  → recadrage centré, jamais agrandie, SHA dans le lock), fond de page optionnel.
+- **Aucune image HD produite** (pas de génération d'images dans l'environnement) : la génération
+  se fait dans ChatGPT, puis dépôt sous `assets/hd/page-NN/<fragment>.png`.
+- Bloquant pour 35 illustrations à légende raster : inscription des légendes au canon
+  (propositions transcrites dans `briefs.yaml`), puis `caption_resolution`.
+
 ## État au 2026-09-09 : première version finalisée v3.0.0-rc1 — livret complet 16 pages
 
 Rapport : `docs/migration-text-layer/V3_0_RC1.md`.
@@ -245,7 +262,11 @@ Chaque fragment raster produit doit enregistrer : page source, zone/bounding box
 9. ~~assembler une première version finalisée (RC1)~~ — fait le 2026-09-09 (`make build-v3`) ;
 10. laisser page 04 hors recomposition jusqu’à levée explicite du verrou éditorial (fallback raster
     v2 dans le livret v3 en attendant) ;
-11. régénérer les croquis en haute définition, puis désactiver l'upscale provisoire page par page ;
+11. ~~outiller la régénération HD des croquis~~ — fait (Phase C) ; générer dans ChatGPT, déposer,
+    `make hd-ingest`, revue, `APPROVED`, puis désactiver l'upscale provisoire page par page quand
+    tous les fragments d'une page ont une source HD (ordre conseillé : 13, 14, 15, 16, puis sites) ;
+11b. arbitrer l'inscription au canon des 35 légendes raster (`assets/hd/briefs.yaml`) et les droits
+    des images générées ; décider Git LFS pour `assets/hd/` ;
 12. confirmer le nom de l'association sur le site officiel ; régénérer les rasters qui portent
     encore « Les Amis… » ; arbitrer mention illustrations, armoiries communales, citation de
     couverture, droits (couvertures p14, logo p16).
