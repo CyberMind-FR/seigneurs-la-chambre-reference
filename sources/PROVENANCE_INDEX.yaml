@@ -211,3 +211,25 @@ validation:
     - sha256_recorded_when_file_exists
     - reconstruction_label_policy_checked
     - no_unsourced_historical_detail
+
+# Raster fragments of the layered v3 compositions are derivatives of canonical_pages:
+# same provenance and rights, local deterministic crops (optional paper-colour masks of old raster
+# text), SHA-256 locked per page. They never become an independent documentary source.
+derived_fragments:
+  id: layered_fragments
+  kind: derived_internal
+  parent_source: canonical_pages
+  provenance_status: VERIFIED
+  rights_status: PROJECT_INTERNAL
+  lock_files:
+    - prototypes/page-03/fragments.lock.yaml
+    - prototypes/page-05/fragments.lock.yaml
+    - prototypes/page-06/fragments.lock.yaml
+    - prototypes/page-07/fragments.lock.yaml
+    - prototypes/page-08/fragments.lock.yaml
+    - prototypes/page-09/fragments.lock.yaml
+    - prototypes/page-11/fragments.lock.yaml
+    - prototypes/page-12/fragments.lock.yaml
+  allowed_treatments: [crop_only, crop_grow_to_clean_edge, paper_colour_mask_of_old_raster_text]
+  forbidden: [generative_fill, upscale_presented_as_hd, ocr_of_raster_captions_as_editorial_authority]
+  registry: assets/ASSET_INDEX_V3.yaml:layered_compositions

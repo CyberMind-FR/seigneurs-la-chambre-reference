@@ -67,6 +67,26 @@ Pour chaque fragment basse résolution, les voies légitimes sont :
 3. valider explicitement un seuil inférieur ;
 4. vectoriser seulement ce qui peut l’être sans dérive documentaire.
 
+## État au 2026-09-09 : famille « site » composée par le compositeur générique
+
+Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
+
+- Compositeur générique piloté par YAML : `scripts/layered_compose.py` +
+  `prototypes/page-NN/composition.yaml` (aucun script par page). Le prototype page 03 est porté
+  dans ce format (`prototypes/page-03/composition.yaml`) ; les scripts `prototype_page03_*.py`
+  restent comme témoins historiques.
+- Pages 03, 05, 06, 07, 08, 09, 11, 12 : proofs multicouches produits, couche texte exacte,
+  QR décodés, SHA des fragments verrouillés (`fragments.lock.yaml`), 0 collision texte/croquis,
+  gate `PASS_WITH_RESOLUTION_BLOCKER` (181–186 ppi A5). Crops `INSPECTED`, revue humaine attendue.
+- Contrôles ajoutés après revue du 2026-09-09 : collision d'encre texte/fragment (rendus
+  monocouche), bord de crop traversant un trait, texte dans une zone QR, masque local couleur
+  papier des résidus de texte raster (traitement déclaré et journalisé par fragment).
+- Écarts texte visible ↔ canon signalés page par page (bandeau courant, légendes d'armoiries,
+  callouts, page 11 plus courte que le raster, page 09 `title` ≠ `canonical_text`) : non corrigés,
+  à arbitrer.
+- `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
+  committées).
+
 ## Industrialisation active : famille des pages « site »
 Le prototype page 03 devient le modèle technique de la famille de pages patrimoniales.
 
@@ -160,13 +180,14 @@ Chaque fragment raster produit doit enregistrer : page source, zone/bounding box
 - Les PDF, ZIP, planches contact et `dist/` ne sont jamais committés.
 
 ## Priorité d’exécution
-1. mesurer en CI les pages 05, 06, 07, 08, 09, 11 et 12 ;
-2. revoir visuellement les diagnostics et approuver les crops sémantiques ;
-3. généraliser le compositeur page 03 en compositeur piloté par YAML ;
-4. produire un proof multicouche par page de la famille ;
-5. reporter automatiquement texte, QR, SHA et ppi ;
-6. traiter ensuite page 10, puis les structures spécifiques 13–16 ;
-7. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
+1. ~~mesurer en CI les pages 05, 06, 07, 08, 09, 11 et 12~~ — fait (`layered-site-compose.yml`) ;
+2. revoir visuellement les diagnostics et approuver les crops sémantiques (`INSPECTED` → `APPROVED`) ;
+3. ~~généraliser le compositeur page 03 en compositeur piloté par YAML~~ — fait ;
+4. ~~produire un proof multicouche par page de la famille~~ — fait ;
+5. ~~reporter automatiquement texte, QR, SHA et ppi~~ — fait ;
+6. arbitrer les écarts texte visible ↔ canon et le gate de résolution ;
+7. traiter ensuite page 10, puis les structures spécifiques 13–16 ;
+8. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
 
 ## Validation
 Après modification d’une référence historique : `make sync && make validate`.

@@ -33,6 +33,18 @@ Chaque fragment doit :
 
 Le détourage, le masquage de l'ancien texte, la restauration locale du fond autour d'un fragment et la correction colorimétrique non destructive sont autorisés. Une génération libre de remplacement n'est pas la méthode par défaut.
 
+### Compositeur générique et traitements admis (2026-09-09)
+La composition v3 est exécutée par `scripts/layered_compose.py` à partir de
+`prototypes/page-NN/composition.yaml` : une page se reconstruit sans toucher au code métier.
+Traitements de fragment admis, tous déclarés dans le YAML et journalisés dans `fragments.json` :
+- `crop_only` : découpe rectangulaire ;
+- `crop_grow_to_clean_edge` : élargissement borné (`max_grow_px`) d'un bord qui coupe un trait ;
+- `mask_px` : masquage local, couleur du papier mesurée, d'un résidu de texte raster ou d'un objet
+  voisin inclus dans le crop (jamais pour effacer un détail documentaire).
+Contrôles bloquants : couche texte exacte, QR décodé, SHA source et fragments, texte dans une zone
+QR, **collision d'encre entre texte vivant et fragment**. Contrôles signalés : bord de crop
+traversant de l'encre, débordement de bloc, gate de résolution.
+
 ## Politique de trame de fond
 Le fond de page devient un actif indépendant et reproductible.
 Il doit respecter `style.yaml` et le langage SpiritualCept : papier blanc/ivoire très clair, grain discret, contraste d'impression élevé, aucune information documentaire encodée dans la texture.
