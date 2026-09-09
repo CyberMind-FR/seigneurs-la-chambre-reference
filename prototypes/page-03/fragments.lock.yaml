@@ -1,0 +1,125 @@
+schema_version: 1
+page: 3
+source: assets/page-03.jpg
+source_sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
+fragments:
+  portal_gothique_captioned:
+    sha256: 13dd92c5d8ffe6d2337b071f9c322dd072ec7fbc8f1f8563c157fb2413e3e89a
+    bbox_px:
+      x: 27
+      y: 10
+      w: 180
+      h: 246
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  cloister_baroque_captioned:
+    sha256: 90058d5b4dc93e330400f1b1fe3c87a3ec64837d494b2de30f762509d548bf9d
+    bbox_px:
+      x: 30
+      y: 260
+      w: 180
+      h: 262
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  salle_capitulaire_captioned:
+    sha256: b14437b88bb362b910fd93e16620c4d3ee3571af83fa05124379d5d6d27c6c96
+    bbox_px:
+      x: 30
+      y: 528
+      w: 181
+      h: 264
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  franciscan_monk:
+    sha256: b13c90c255806ee61c1fc59e88d50e6765ab46598b7260afd74ffb22c09a1b85
+    bbox_px:
+      x: 846
+      y: 86
+      w: 134
+      h: 226
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  franciscan_caption_raster:
+    sha256: 25c0d76a137e8a15caa176d707fe0a378248fceeb9fd0dd48d19857c705f5d1e
+    bbox_px:
+      x: 779
+      y: 160
+      w: 92
+      h: 54
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  valley_cruet_captioned:
+    sha256: 97e4718032e9339e39df47f8284736af401390b54cece2202722a76d42bd7a27
+    bbox_px:
+      x: 744
+      y: 265
+      w: 252
+      h: 264
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  nave_captioned:
+    sha256: 3182d78dc61df8bd603a94d39e5e1ea9add6387ac7b401da02ab566e62a79473
+    bbox_px:
+      x: 787
+      y: 536
+      w: 204
+      h: 286
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  portal_detail:
+    sha256: 6c52ad0b1bfb88daa432b238ea573e7fab20922bc5c02c7e8bd35a8673af7f51
+    bbox_px:
+      x: 638
+      y: 836
+      w: 114
+      h: 194
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  lintel_accolade_captioned:
+    sha256: 8c3592009414287e6e28781f7c40cd3524b8bd36266ce281d946ddb84dc356c5
+    bbox_px:
+      x: 787
+      y: 821
+      w: 205
+      h: 221
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  map_document:
+    sha256: d5a93d2539036cefda6112f2dac05299304c0d36aecfa07421a4f24921b47f39
+    bbox_px:
+      x: 39
+      y: 1092
+      w: 360
+      h: 197
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  localization_illustration:
+    sha256: 70c15d21a9fcee906afc41c1db1f860b65519a0bd3950de4c2da12551efd25fb
+    bbox_px:
+      x: 421
+      y: 1180
+      w: 240
+      h: 109
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
+  site_visit_illustration:
+    sha256: 0e492b6ecc0a38ba9cf74cbb9425e634c7a4dda9b02e152b86c8511ed03f0513
+    bbox_px:
+      x: 460
+      y: 1354
+      w: 428
+      h: 158
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true

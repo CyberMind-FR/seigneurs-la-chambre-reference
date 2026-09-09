@@ -1,0 +1,444 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 16
+title: Remerciements
+status: APPROVED
+generated_from:
+  composition: prototypes/page-16/composition.yaml
+  composition_run: fd40fdde7c6c49316520ecc83fbdc312825906a9619f9507deac208a713d3810
+canonical_reference:
+  path: assets/page-16.jpg
+  sha256: 3faf93d696748d4b4d9fc7bf1eb8cf0b93bd09758e2913d1e7b74ec33b273331
+  dimensions_px:
+  - 768
+  - 1024
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/16.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 768
+  - 0
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 0
+  - 768
+  - 24
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 24
+  - 24
+  - 720
+  - 976
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 30
+  - 708
+  - 964
+- id: R05
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P16-O-corner_tl
+  visual_description: corner tl
+  object_class: ornament
+  source_bbox_px:
+  - 12
+  - 8
+  - 45
+  - 45
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-16.jpg
+  sha256: a6a71d2f04e2c6e929d1950670942ef724eca2724903f42b81064079376b547e
+  effective_ppi_a5: 1054.44
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P16-O-corner_tr
+  visual_description: corner tr
+  object_class: ornament
+  source_bbox_px:
+  - 710
+  - 8
+  - 45
+  - 45
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-16.jpg
+  sha256: 6a61ff2d7999bd79d31bc3202814e3d608095ad699a96fa4c5b9f77714371b8f
+  effective_ppi_a5: 1054.44
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P16-O-corner_bl
+  visual_description: corner bl
+  object_class: ornament
+  source_bbox_px:
+  - 12
+  - 970
+  - 45
+  - 45
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-16.jpg
+  sha256: 2ead0e206e256d80988c9778c93a18031cea01d82a777db8e9e761f42a92ba28
+  effective_ppi_a5: 1054.44
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P16-O-corner_br
+  visual_description: corner br
+  object_class: ornament
+  source_bbox_px:
+  - 710
+  - 970
+  - 45
+  - 45
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-16.jpg
+  sha256: b586d23582f772b47fab959ff4c10821a806b1f07d38993c4944435ad8a3a6aa
+  effective_ppi_a5: 1054.44
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P16-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 222
+  - 83
+  - 333
+  - 32
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-16.jpg
+  sha256: f9bd3b9648419b718c3c9c6d114470506cb88a8c0062c88e9192d468009e59ad
+  effective_ppi_a5: 1054.44
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
+- id: P16-O-logo_raster
+  visual_description: logo de l'association tel que présent dans la page canonique (texte intrinsèque « Amis du Couvent des
+    Cordeliers De La Chambre. ») ; l'actif vectoriel officiel reste BLOCKED_SOURCE_ASSET
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 227
+  - 393
+  - 316
+  - 222
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-16.jpg
+  sha256: 30c5d320d9a912a6b55b8ed590262f973b5cd2b7e983704b5c963a91dc068fdc
+  effective_ppi_a5: 300.52
+  dirty_edges: []
+  review_status: APPROVED
+- id: P16-O-landscape
+  visual_description: paysage + fleuron bas (intrinsèque)
+  object_class: illustration
+  source_bbox_px:
+  - 18
+  - 553
+  - 734
+  - 347
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-16.jpg
+  sha256: 64c2d3670158f638f8ef6e43aaca60e3317c94e091290ec87fac7edbf065faec
+  effective_ppi_a5: 300.52
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P16-O-qr_caption_raster
+  visual_description: « En savoir plus sur l'association et nos actions » (raster, absent du canon)
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 644
+  - 901
+  - 109
+  - 80
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-16.jpg
+  sha256: 4f86fc681112f1408e80a8410e1c574aed97fcfcaca264c0c2e9d11b00084796
+  effective_ppi_a5: 300.52
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+text_zones:
+- id: P16-T-title
+  role: title
+  canonical_block: 0
+  expect: Merci
+  bbox_px:
+  - 200
+  - 28
+  - 368
+  - 60
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: merci_title
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-l1
+  role: l1
+  canonical_block: 1
+  expect: Nous remercions
+  bbox_px:
+  - 60
+  - 130
+  - 648
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: merci_body
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-l2
+  role: l2
+  canonical_block: 2
+  expect: leurs témoignages
+  bbox_px:
+  - 60
+  - 155
+  - 648
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: merci_body
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-l3
+  role: l3
+  canonical_block: 3
+  expect: la mémoire des seigneurs
+  bbox_px:
+  - 60
+  - 180
+  - 648
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: merci_body
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-l4
+  role: l4
+  canonical_block: 4
+  expect: Ce parcours patrimonial
+  bbox_px:
+  - 60
+  - 228
+  - 648
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: merci_body
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-l5
+  role: l5
+  canonical_block: 5
+  expect: de transmettre
+  bbox_px:
+  - 60
+  - 253
+  - 648
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: merci_body
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-l6
+  role: l6
+  canonical_block: 6
+  expect: À toutes et à tous
+  bbox_px:
+  - 200
+  - 308
+  - 368
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: merci_italic
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-l7
+  role: l7
+  canonical_block: 7
+  expect: merci !
+  bbox_px:
+  - 200
+  - 336
+  - 368
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: merci_italic
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-assoc
+  role: assoc
+  canonical_block: 8
+  expect: Amis du Couvent
+  bbox_px:
+  - 150
+  - 618
+  - 468
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-site
+  role: site
+  canonical_block: 9
+  expect: www.couventdelachambre.fr
+  bbox_px:
+  - 40
+  - 955
+  - 300
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/16.yaml:canonical_text
+- id: P16-T-motto
+  role: motto
+  canonical_block: 10
+  expect: Découvrir • Partager
+  bbox_px:
+  - 200
+  - 905
+  - 368
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: merci_italic
+  authority: pages/16.yaml:canonical_text
+functional_objects:
+- id: P16-F-association
+  object_class: qr
+  source_bbox_px:
+  - 568
+  - 912
+  - 78
+  - 78
+  parent_region: R03
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-13-01-association.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+structural_frames:
+- id: P16-FR01
+  kind: rect
+  bbox_px:
+  - 24
+  - 24
+  - 720
+  - 976
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P16-FR02
+  kind: rect
+  bbox_px:
+  - 30
+  - 30
+  - 708
+  - 964
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon prévaut ; les textes raster absents du canon restent dans leurs fragments
+  raster_text_absent_from_canon:
+  - fragment: logo_raster
+    description: texte intrinsèque du logo
+  - fragment: qr_caption_raster
+    description: « En savoir plus sur l'association et nos actions »
+  canonical_text_not_visible_in_raster:
+  - bloc 8 « Les Amis du Couvent des Cordeliers de La Chambre » n'apparaît qu'à travers le logo dans le raster ; composé sous
+    le logo
+  resolution: 'raster canonique 768x1024 = 131,8 ppi en A5, sous la dérogation (180) : blocage rapporté, aucun upscale'
+completeness_gate:
+  status: PASS
+  blocked_fragments: []
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER

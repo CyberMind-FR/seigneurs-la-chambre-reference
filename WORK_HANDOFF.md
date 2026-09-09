@@ -57,7 +57,7 @@ Résultats :
 Rapport : `docs/migration-text-layer/PHASE_B_PAGE03_LAYERED_PROTOTYPE.md`.
 
 ### Gate de résolution découvert
-La page 03 canonique mesure seulement `1024 × 1536 px`. À l’échelle A5 du prototype, les fragments représentent environ **185,78 ppi**, sous le gate A5 de 300 ppi.
+La page 03 canonique mesure seulement `1024 × 1536 px`. À l’échelle A5 du prototype, les fragments représentent environ **185,78 ppi**, sous le gate de 300 ppi (demi-teintes) — et très loin du gate de 1200 ppi pour les rasters au trait. Depuis le 2026-09-09 ces deux gates s'appliquent à la taille de placement finale de **tous** les formats (A5, A2, A1), sans seuil réduit pour les grands formats.
 
 Ce problème est un gate de qualité des actifs, pas un échec de la méthode de composition. Ne jamais le masquer par un upscale présenté comme récupération de détail.
 
@@ -66,6 +66,97 @@ Pour chaque fragment basse résolution, les voies légitimes sont :
 2. réduire sa taille de placement ;
 3. valider explicitement un seuil inférieur ;
 4. vectoriser seulement ce qui peut l’être sans dérive documentaire.
+
+## État au 2026-09-09 : famille « site » composée par le compositeur générique
+
+Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
+
+- Compositeur générique piloté par YAML : `scripts/layered_compose.py` +
+  `prototypes/page-NN/composition.yaml` (aucun script par page). Le prototype page 03 est porté
+  dans ce format (`prototypes/page-03/composition.yaml`) ; les scripts `prototype_page03_*.py`
+  restent comme témoins historiques.
+- Pages 03, 05, 06, 07, 08, 09, 11, 12 : proofs multicouches produits, couche texte exacte,
+  QR décodés, SHA des fragments verrouillés (`fragments.lock.yaml`), 0 collision texte/croquis,
+  gate `PASS_WITH_RESOLUTION_BLOCKER` (181–186 ppi à la taille A5 contre 300 ppi demi-teintes /
+  1200 ppi trait, gates identiques pour tous les formats depuis le 2026-09-09).
+- **Validation du 2026-09-09 (gkerma)** : crops `APPROVED` sur les 8 pages, écarts texte ↔ canon
+  arbitrés (le canon prévaut, légendes raster conservées dans leurs fragments), dérogation de
+  résolution explicite pour la sortie A5 (≥ 180 ppi accepté ; 300/1200 restent la cible et
+  bloquent A2/A1) → gate `PASS_WITH_RESOLUTION_WAIVER`. Détail :
+  `docs/migration-text-layer/PHASE_B_SITE_FAMILY_VALIDATION.md`.
+- Contrôles ajoutés après revue du 2026-09-09 : collision d'encre texte/fragment (rendus
+  monocouche), bord de crop traversant un trait, texte dans une zone QR, masque local couleur
+  papier des résidus de texte raster (traitement déclaré et journalisé par fragment).
+- Écarts texte visible ↔ canon signalés page par page (bandeau courant, légendes d'armoiries,
+  callouts, page 11 plus courte que le raster, page 09 `title` ≠ `canonical_text`) : non corrigés,
+  à arbitrer.
+- `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
+  committées).
+
+## État au 2026-09-09 : Phase C — circuit de régénération HD des croquis par prompts
+
+Rapport : `docs/migration-text-layer/PHASE_C_HD_REGENERATION.md`. Contrat : `assets/hd/README.md`.
+
+- Décision : les croquis et le fond sont régénérés par **prompts ChatGPT guidés par le crop
+  canonique**, sans toucher aux grilles ; armoiries, cartes/plans, ornements, icônes, textes
+  raster, logo, couvertures et QR n'y passent jamais.
+- Livré : 95 briefs d'observation (`assets/hd/briefs.yaml`), 91 prompts committés
+  (`assets/hd/prompts/`, `make hd-prompts` / `make hd-pack`), ingestion (`make hd-ingest` →
+  `prototypes/page-NN/hd-sources.yaml`, jamais d'approbation automatique), contrôle
+  (`make hd-check`, dans `make validate`), prise en charge dans le compositeur (source `APPROVED`
+  → recadrage centré, jamais agrandie, SHA dans le lock), fond de page optionnel.
+- **Aucune image HD produite** (pas de génération d'images dans l'environnement) : la génération
+  se fait dans ChatGPT, puis dépôt sous `assets/hd/page-NN/<fragment>.png`.
+- Bloquant pour 35 illustrations à légende raster : inscription des légendes au canon
+  (propositions transcrites dans `briefs.yaml`), puis `caption_resolution`.
+
+## État au 2026-09-09 : première version finalisée v3.0.0-rc1 — livret complet 16 pages
+
+Rapport : `docs/migration-text-layer/V3_0_RC1.md`.
+
+- `make build-v3` (`scripts/build_layered.py`) assemble les 16 pages : 15 compositions multicouches
+  + page 04 en **fallback raster v2** (méthode inchangée, autorisée par
+  `build-config.yaml:v3.fallback_raster_pages_allowed`, verrou éditorial intact). Sorties :
+  `Seigneurs_La_Chambre_v3_16_pages_A5.pdf`, `..._v3_Livret_A4_Impose_RectoVerso.pdf`,
+  `..._v3_Panneaux_A2_16p.pdf`, `..._v3_Panneaux_A1_16p.pdf`, `build-report-v3.json`,
+  `SHA256SUMS-v3.txt`, `Seigneurs_La_Chambre_v3_Print_PDFs.zip` (jamais committés ; CI
+  `build-release.yml`).
+- `scripts/validate_built_layered.py` (`make validate-build-v3`) : 16 pages, tous les QR du registre
+  redécodés sur le PDF final, blocs canoniques présents, **polices toutes embarquées** (Liberation
+  Serif TTF ; plus aucune police base-14), aucune chaîne interdite de `corrections.yaml`.
+- **Upscale provisoire déclaré** (décision du propriétaire) : les fragments sous le gate sont
+  ré-échantillonnés jusqu'à 300/1200 ppi, journalisés par fragment, gate
+  `PASS_WITH_PROVISIONAL_UPSCALE` (page 16 : `PASS_WITH_RESOLUTION_WAIVER`). Les croquis restent à
+  régénérer en HD ; voir `REGENERATION_RULES.md` §Gates.
+- **Nom de l'association corrigé** dans le canon : « Amis du Couvent des Cordeliers de La Chambre »
+  (sans article ; forme au singulier « Ami » non attestée) — `corrections.yaml:association_name_2026_09_09`,
+  vérification sur le site officiel encore en attente (site inaccessible depuis l'environnement).
+  Les éléments raster (pieds de page 01/02, cartouche 13, logo) portent encore « Les Amis… ».
+- Registres régénérés par `make layered-register` (`assets/ASSET_INDEX_V3.yaml`, `manifest-v3.yaml`
+  section `layered_compositions`, statut `release_candidate`).
+
+## État au 2026-09-09 (nuit) : pages 01 et 02 composées et validées — 15/16 pages
+
+Rapport : `docs/migration-text-layer/PHASE_B_PAGES_01_02.md`. Seule la page 04 reste hors
+production (verrou éditorial). La citation de couverture (blocs 8–9 du canon, absente du raster)
+est composée entre la ligne Commission et la frise : emplacement à arbitrer.
+
+## État au 2026-09-09 (soir) : pages 10 et 13–16 composées et validées
+
+Rapport : `docs/migration-text-layer/PHASE_B_PAGES_10_13_16.md`. 15 pages sur 16 sont
+composées (03, 05–16) ; restent 01, 02 et la page 04 (verrou). Page 16 : 131,8 ppi, sous la
+dérogation A5 → blocage rapporté. Page 14 : couvertures d'ouvrages non extraites (droits).
+
+### Points éditoriaux ouverts (remarques du propriétaire, 2026-09-09)
+- **Mention sur les illustrations** : échelle des plans non respectée, vues artistiques non
+  nécessairement réalistes (pas d'archive d'époque), état actuel des ruines de certains sites.
+  À rédiger, inscrire au canon (`pages/NN.yaml` + `corrections.yaml`) puis composer. Une
+  proposition de formulation figure dans le rapport (PROPOSITION, hors canon).
+- **Armoiries réelles des communes** : rechercher les blasons officiels et remplacer, quand la
+  source et les droits sont établis, les armoiries de La Chambre en tête des pages de sites par
+  celles de la commune (Sainte-Marie-de-Cuines 05–06, Saint-Étienne-de-Cuines 07–09,
+  Notre-Dame-du-Cruet 10–11, Saint-Rémy-de-Maurienne 12, La Chambre 03–04). Gate provenance /
+  droits / SHA avant production ; rendu SVG d'après blasonnement officiel de préférence.
 
 ## Industrialisation active : famille des pages « site »
 Le prototype page 03 devient le modèle technique de la famille de pages patrimoniales.
@@ -160,20 +251,33 @@ Chaque fragment raster produit doit enregistrer : page source, zone/bounding box
 - Les PDF, ZIP, planches contact et `dist/` ne sont jamais committés.
 
 ## Priorité d’exécution
-1. mesurer en CI les pages 05, 06, 07, 08, 09, 11 et 12 ;
-2. revoir visuellement les diagnostics et approuver les crops sémantiques ;
-3. généraliser le compositeur page 03 en compositeur piloté par YAML ;
-4. produire un proof multicouche par page de la famille ;
-5. reporter automatiquement texte, QR, SHA et ppi ;
-6. traiter ensuite page 10, puis les structures spécifiques 13–16 ;
-7. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
+1. ~~mesurer en CI les pages 05, 06, 07, 08, 09, 11 et 12~~ — fait (`layered-site-compose.yml`) ;
+2. ~~revoir visuellement les diagnostics et approuver les crops sémantiques~~ — validé le 2026-09-09 ;
+3. ~~généraliser le compositeur page 03 en compositeur piloté par YAML~~ — fait ;
+4. ~~produire un proof multicouche par page de la famille~~ — fait ;
+5. ~~reporter automatiquement texte, QR, SHA et ppi~~ — fait ;
+6. ~~arbitrer les écarts texte visible ↔ canon et le gate de résolution~~ — validé le 2026-09-09 (canon prévaut ; dérogation A5) ;
+7. ~~traiter ensuite page 10, puis les structures spécifiques 13–16~~ — fait et validé le 2026-09-09 ;
+8. ~~composer les pages 01 et 02~~ — fait et validé le 2026-09-09 ; arbitrer la mention illustrations et les armoiries communales ;
+9. ~~assembler une première version finalisée (RC1)~~ — fait le 2026-09-09 (`make build-v3`) ;
+10. laisser page 04 hors recomposition jusqu’à levée explicite du verrou éditorial (fallback raster
+    v2 dans le livret v3 en attendant) ;
+11. ~~outiller la régénération HD des croquis~~ — fait (Phase C) ; générer dans ChatGPT, déposer,
+    `make hd-ingest`, revue, `APPROVED`, puis désactiver l'upscale provisoire page par page quand
+    tous les fragments d'une page ont une source HD (ordre conseillé : 13, 14, 15, 16, puis sites) ;
+11b. arbitrer l'inscription au canon des 35 légendes raster (`assets/hd/briefs.yaml`) et les droits
+    des images générées ; décider Git LFS pour `assets/hd/` ;
+12. confirmer le nom de l'association sur le site officiel ; régénérer les rasters qui portent
+    encore « Les Amis… » ; arbitrer mention illustrations, armoiries communales, citation de
+    couverture, droits (couvertures p14, logo p16).
 
 ## Validation
 Après modification d’une référence historique : `make sync && make validate`.
 
 Après production d’actifs v3 : enregistrer les SHA/provenances puis `make validate`.
 
-Après composition imprimable : `make build`, validation QR finale et contrôle de la couche texte.
+Après composition imprimable : `make clean && make validate && make build && make build-v3`
+(`make validate` refuse un checkout contenant `dist/` ; `build-v3` enchaîne `validate-build-v3`).
 
 ## Interdiction de reconstruction par archive
 Toujours partir du checkout Git courant. Aucun ancien ZIP ne devient source de vérité.

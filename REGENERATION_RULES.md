@@ -33,6 +33,61 @@ Chaque fragment doit :
 
 Le détourage, le masquage de l'ancien texte, la restauration locale du fond autour d'un fragment et la correction colorimétrique non destructive sont autorisés. Une génération libre de remplacement n'est pas la méthode par défaut.
 
+### Compositeur générique et traitements admis (2026-09-09)
+La composition v3 est exécutée par `scripts/layered_compose.py` à partir de
+`prototypes/page-NN/composition.yaml` : une page se reconstruit sans toucher au code métier.
+Traitements de fragment admis, tous déclarés dans le YAML et journalisés dans `fragments.json` :
+- `crop_only` : découpe rectangulaire ;
+- `crop_grow_to_clean_edge` : élargissement borné (`max_grow_px`) d'un bord qui coupe un trait ;
+- `mask_px` : masquage local d'un résidu de texte raster ou d'un objet voisin inclus dans le crop
+  (jamais pour effacer un détail documentaire). Remplissage : couleur du papier mesurée (défaut),
+  couleur médiane de l'anneau de bordure du masque (`mask_fill: border_median`, texte d'un cartouche
+  coloré recomposé en texte vivant) ou couleur hexadécimale déclarée.
+Texte vivant : césure uniquement aux traits d'union présents dans le canon, jamais de coupure
+arbitraire ; taille ajustée en hauteur et en largeur dans la boîte déclarée ; fontes TrueType
+déclarées dans `prototypes/_shared/text-styles.yaml` lorsque Times base-14 n'a pas le glyphe.
+Contrôles bloquants : couche texte exacte, QR décodé, SHA source et fragments, texte dans une zone
+QR, **collision d'encre entre texte vivant et fragment**. Contrôles signalés : bord de crop
+traversant de l'encre, débordement de bloc, gate de résolution.
+
+### Gates de résolution (décision du 2026-09-09)
+Mesurés à la **taille de placement finale**, identiques pour tous les formats de sortie (A5, A2, A1) :
+- **300 ppi** pour les rasters en demi-teintes (illustrations, cartes, photos, lavis) ;
+- **1200 ppi** pour les rasters au trait (icônes, ornements, croix, marques bitonales).
+Le texte et les QR sont vectoriels (couche texte réelle, SVG déterministes) et ne relèvent pas de ces
+gates. Chaque fragment déclare (ou hérite de son rôle) `raster_kind: continuous_tone | line_art`.
+Ces gates remplacent les seuils 300 A5 / 180 A2 / 150 A1 de `assets/ASSET_SPEC.md` §2 (document
+validé en Phase A : sa modification exige une nouvelle validation humaine, il n'est donc pas réécrit ici).
+Un raster sous le gate n'est jamais « récupéré » par upscale : source HD, réduction de placement,
+validation explicite d'un seuil inférieur, ou vectorisation sans dérive.
+
+**Exception provisoire (décision du propriétaire, 2026-09-09, « upscale des croquis si nécessaire,
+on le régénérera ultérieurement »)** : un fragment sous le gate peut être ré-échantillonné (Lanczos,
+facteur ≤ 8) jusqu'au gate de sa classe pour la première version finalisée, à trois conditions :
+1. l'upscale est **déclaré** dans `composition.yaml` (`validation.upscale.enabled: true`, approbateur,
+   date, `max_factor`) et **journalisé** par fragment (`source_ppi`, `upscale_factor`,
+   `upscale_provisional: true` dans `fragments.json` et `fragments.lock.yaml`) ;
+2. la page porte le gate `PASS_WITH_PROVISIONAL_UPSCALE`, jamais `PASS` — un upscale n'est jamais
+   présenté comme de la haute définition ;
+3. les croquis concernés restent inscrits à régénérer en haute définition ; à la régénération,
+   `upscale.enabled` repasse à `false` et le gate doit redevenir `PASS` sans ré-échantillonnage.
+Quand le facteur maximal ne suffit pas (page 16, trait : 131,8 → 1054 ppi), la dérogation A5
+explicite s'applique (`PASS_WITH_RESOLUTION_WAIVER`).
+
+### Sources HD régénérées (Phase C, 2026-09-09)
+Une illustration peut être remplacée par une **reconstitution HD guidée par référence** (prompt +
+crop canonique, cf. `assets/hd/README.md`) aux conditions suivantes :
+- la grille (`composition.yaml`) ne change pas : la source est déclarée dans
+  `prototypes/page-NN/hd-sources.yaml`, recadrée au centre au ratio exact de la bbox, jamais
+  agrandie, jamais masquée ;
+- seules les illustrations et détails documentaires y sont éligibles ; armoiries, cartes, plans,
+  ornements, icônes, textes raster, logo, couvertures d'ouvrages et QR n'y passent jamais ;
+- l'image ne porte aucun texte ; une légende raster disparue doit être inscrite au canon (ou
+  abandonnée par décision éditoriale tracée) avant approbation (`caption_resolution`) ;
+- approbation humaine tracée (`APPROVED`, `rights`, `approved_by`, `approved_on`), SHA-256 dans le
+  lock ; contrôle `make hd-check` ;
+- l'image est une reconstitution : la mention sur les illustrations s'applique.
+
 ## Politique de trame de fond
 Le fond de page devient un actif indépendant et reproductible.
 Il doit respecter `style.yaml` et le langage SpiritualCept : papier blanc/ivoire très clair, grain discret, contraste d'impression élevé, aucune information documentaire encodée dans la texture.
@@ -167,9 +222,12 @@ Commandes minimales :
 - `make sync`
 - `make validate`
 
-Après composition imprimable :
-- `make build`
-- validation du PDF final et de sa couche texte.
+Après composition imprimable, dans cet ordre (`make validate` refuse un checkout contenant `dist/`) :
+- `make clean && make validate`
+- `make build` (PDF v2, méthode raster) puis `make build-v3` (PDF v3 multicouches, qui enchaîne
+  `validate-build-v3` : 16 pages, QR redécodés, couche texte complète, polices toutes embarquées,
+  aucune chaîne interdite de `corrections.yaml`) ;
+- `make release` équivaut à `build` + `build-v3`.
 
 ## Style verrouillé
 Le langage graphique SpiritualCept reste un carnet de recherches historique / sketchbook documentaire : papier blanc neutre imprimable, encre brun-noir / sépia, gravure et graphite, titres rouge-brun, accents bleu/or héraldiques, ornements fins et forte lisibilité d'impression.

@@ -1,0 +1,928 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 10
+title: Le Château de Notre-Dame-du-Cruet
+status: APPROVED
+generated_from:
+  composition: prototypes/page-10/composition.yaml
+  composition_run: cb1ba2eb2ff69d24692dbc1d983a4078e5dfd549c43939c55ad421adc1df00fd
+canonical_reference:
+  path: assets/page-10.jpg
+  sha256: 8aadbcf5cda05bec84012f52c636d8499bb5d052010bc5df998aaac3a5c13bae
+  dimensions_px:
+  - 1055
+  - 1491
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/10.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 1055
+  - 225
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 225
+  - 1055
+  - 850
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1075
+  - 1010
+  - 185
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1260
+  - 1010
+  - 34
+- id: R05
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1298
+  - 1010
+  - 175
+- id: R06
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P10-O-running_head_raster
+  visual_description: running head raster
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 234
+  - 16
+  - 590
+  - 36
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: 7907f8837607b17aa727bade95c81a2ab77e8d9b1f5b8e14aa4ad7f94ffde9d0
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-heraldry_captioned
+  visual_description: heraldry captioned
+  object_class: composite
+  source_bbox_px:
+  - 36
+  - 40
+  - 128
+  - 205
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: fef501a2a8e751663a0be3498320e079a98ea935d322eb2d91c208a65d8a7bb4
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  - top
+  review_status: APPROVED
+- id: P10-O-marian_figure_captioned
+  visual_description: figure mariale + légende « Notre-Dame-du-Cruet, protectrice du château et de la vallée »
+  object_class: composite
+  source_bbox_px:
+  - 880
+  - 50
+  - 160
+  - 300
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: 6a0bea6a899bc44c128514bffd25d9cc15fee2e149d07cd2cdd8ded3a875c5c2
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 298
+  - 176
+  - 443
+  - 28
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: a85a31d246f72fbdad89a5abe443521911a1ddf37d5c010dc90ef8fa8670653e
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-hero
+  visual_description: vue principale des ruines (illustration canonique validée, pas de nouvelle reconstitution)
+  object_class: illustration
+  source_bbox_px:
+  - 500
+  - 185
+  - 540
+  - 322
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: c3448877fa4d53fbc78869f27999ebdfb1e7ebe3c5b9b4f728791913302d2822
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-cross_h1
+  visual_description: cross h1
+  object_class: ornament
+  source_bbox_px:
+  - 163
+  - 226
+  - 20
+  - 17
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: e4160d1cfcde50c9bd7b2a27b5019ad6ad32791c9dcaf8acfcb347936dd17138
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - top
+  review_status: APPROVED
+- id: P10-O-cross_h2
+  visual_description: cross h2
+  object_class: ornament
+  source_bbox_px:
+  - 50
+  - 448
+  - 19
+  - 22
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: c20dfd7be1ec4deeddfeb0990929ef33292be4faff308f36825ee14d960def81
+  effective_ppi_a5: 1200.43
+  dirty_edges: []
+  review_status: APPROVED
+- id: P10-O-plan_box_captioned
+  visual_description: 'encadré « Plan du château (XIe-XVe siècle) » : plan canonique avec ses libellés intrinsèques (Tour
+    de guet, Basse cour, Porte d''entrée, Tour porte, Tour ronde, Tour carrée, Cour haute, Logis, Donjon, Fossé) conformes
+    au plan réel'
+  object_class: documentary_map
+  source_bbox_px:
+  - 515
+  - 507
+  - 522
+  - 300
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: 17325fb736ee9554678a39273ba7389af452e2d59c4695edec76b53c349e534c
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-cross_h3
+  visual_description: cross h3
+  object_class: ornament
+  source_bbox_px:
+  - 50
+  - 673
+  - 21
+  - 20
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: 482524894f327e533bd4a6c9301234aad37fdcaa40fd4da4351fa9f6c7cbaea0
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - top
+  review_status: APPROVED
+- id: P10-O-chronology_box_captioned
+  visual_description: 'encadré « Chronologie du château » : pictogrammes + dates + libellés raster absents du canon'
+  object_class: composite
+  source_bbox_px:
+  - 515
+  - 814
+  - 522
+  - 258
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: e6ea22742157b18c51da9e873f912ef7e31e3990ba48134636898d5f17795c92
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-cross_h4
+  visual_description: cross h4
+  object_class: ornament
+  source_bbox_px:
+  - 50
+  - 856
+  - 19
+  - 22
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: 23af8762e5165dc40b19d3dd626fb821f484b99054cef64ad2a32182d48b09f4
+  effective_ppi_a5: 1200.43
+  dirty_edges: []
+  review_status: APPROVED
+- id: P10-O-map_document
+  visual_description: ancien titre CARTE masqué ; icône conservée
+  object_class: documentary_map
+  source_bbox_px:
+  - 40
+  - 1086
+  - 362
+  - 178
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px:
+  - x: 178
+    y: 1088
+    w: 62
+    h: 20
+    fill_rgb:
+    - 255
+    - 252
+    - 241
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: 0056a3f3642c07daac90cdd1e92d8eb3e07a9577046e47e50851ed231640b1aa
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-pin_icon
+  visual_description: pin icon
+  object_class: icon
+  source_bbox_px:
+  - 462
+  - 1088
+  - 17
+  - 22
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: 5e5a4ddb29a7df26ec86b6bc1d17d79f4fe724573ac95fe3755f18889aa086ee
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - top
+  review_status: APPROVED
+- id: P10-O-phone_icon
+  visual_description: phone icon
+  object_class: icon
+  source_bbox_px:
+  - 773
+  - 1088
+  - 19
+  - 23
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: bac83973145050359b7990c23c0c729b6b78bf7ca274de05323929f72f6fab59
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - top
+  review_status: APPROVED
+- id: P10-O-localization_vignette
+  visual_description: localization vignette
+  object_class: illustration
+  source_bbox_px:
+  - 415
+  - 1160
+  - 255
+  - 100
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: aee6178a42863a453ec246383cfd9a1f51f05caa805956e905eb10c66b286cf2
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-mappe_icon
+  visual_description: mappe icon
+  object_class: icon
+  source_bbox_px:
+  - 58
+  - 1264
+  - 34
+  - 28
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: beda377448aec9a5ca4c0beb0dea70dcee63b6914020e96459d52152274fe51e
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-info_icons
+  visual_description: info icons
+  object_class: icon
+  source_bbox_px:
+  - 48
+  - 1323
+  - 30
+  - 112
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: ce51f707bfbb93e60d71131250d8686d068c6959ebf58862e9cbdfc7d9f54b4b
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+- id: P10-O-bottom_panorama
+  visual_description: résidu raster de la fin du titre EN SAVOIR PLUS masqué (ciel)
+  object_class: illustration
+  source_bbox_px:
+  - 520
+  - 1310
+  - 500
+  - 160
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 520
+    y: 1310
+    w: 75
+    h: 14
+    fill_rgb:
+    - 255
+    - 252
+    - 241
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-10.jpg
+  sha256: 75b9f0a79395275e763c04a9ec90a002d32b555167e89b1503582fe690d13aca
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+text_zones:
+- id: P10-T-title
+  role: title
+  canonical_block: 0
+  expect: Le Château de Notre-Dame-du-Cruet
+  bbox_px:
+  - 190
+  - 66
+  - 720
+  - 70
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Forteresse des seigneurs
+  bbox_px:
+  - 215
+  - 128
+  - 600
+  - 38
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-h1
+  role: h1
+  canonical_block: 2
+  expect: Sentinelle de pierre
+  bbox_px:
+  - 190
+  - 225
+  - 320
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-p1
+  role: p1
+  canonical_block: 3
+  expect: Imaginez-vous
+  bbox_px:
+  - 135
+  - 255
+  - 362
+  - 106
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-p2
+  role: p2
+  canonical_block: 4
+  expect: Le Château de Notre-Dame-Du-Cruet devient
+  bbox_px:
+  - 135
+  - 362
+  - 362
+  - 74
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-h2
+  role: h2
+  canonical_block: 5
+  expect: Guillaume Ier
+  bbox_px:
+  - 78
+  - 447
+  - 400
+  - 28
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-p3
+  role: p3
+  canonical_block: 6
+  expect: Vers 1090-1100
+  bbox_px:
+  - 52
+  - 482
+  - 425
+  - 112
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-p4
+  role: p4
+  canonical_block: 7
+  expect: Le château se déploie
+  bbox_px:
+  - 52
+  - 596
+  - 425
+  - 74
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-h3
+  role: h3
+  canonical_block: 8
+  expect: '1472 : Le dernier éclat'
+  bbox_px:
+  - 78
+  - 672
+  - 400
+  - 28
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-p5
+  role: p5
+  canonical_block: 9
+  expect: Le 25 mars 1472
+  bbox_px:
+  - 52
+  - 706
+  - 425
+  - 100
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-p6
+  role: p6
+  canonical_block: 10
+  expect: En 1491
+  bbox_px:
+  - 52
+  - 808
+  - 425
+  - 46
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-h4
+  role: h4
+  canonical_block: 11
+  expect: '1536 : La fin'
+  bbox_px:
+  - 78
+  - 856
+  - 400
+  - 28
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-p7
+  role: p7
+  canonical_block: 12
+  expect: Le coup fatal
+  bbox_px:
+  - 52
+  - 890
+  - 425
+  - 74
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-p8
+  role: p8
+  canonical_block: 13
+  expect: Ironie de l'histoire
+  bbox_px:
+  - 52
+  - 966
+  - 425
+  - 66
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-carte
+  role: carte
+  canonical_block: 14
+  expect: CARTE
+  bbox_px:
+  - 181
+  - 1087
+  - 120
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-localisation
+  role: localisation
+  canonical_block: 15
+  expect: LOCALISATION
+  bbox_px:
+  - 485
+  - 1089
+  - 180
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-lat
+  role: lat
+  canonical_block: 16
+  expect: 'Lat:'
+  bbox_px:
+  - 470
+  - 1120
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-lng
+  role: lng
+  canonical_block: 17
+  expect: 'Lng:'
+  bbox_px:
+  - 470
+  - 1142
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-google_maps
+  role: google_maps
+  canonical_block: 18
+  expect: GOOGLE MAPS
+  bbox_px:
+  - 797
+  - 1089
+  - 170
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-scan
+  role: scan
+  canonical_block: 19
+  expect: Scannez pour y aller
+  bbox_px:
+  - 780
+  - 1234
+  - 180
+  - 16
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-mappe_sarde
+  role: mappe_sarde
+  canonical_block: 20
+  expect: MAPPE SARDE
+  bbox_px:
+  - 100
+  - 1264
+  - 880
+  - 24
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-box_title
+  role: box_title
+  canonical_block: 21
+  expect: EN SAVOIR PLUS
+  bbox_px:
+  - 340
+  - 1304
+  - 300
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-b1
+  role: b1
+  canonical_block: 22
+  expect: • Les ruines
+  bbox_px:
+  - 100
+  - 1328
+  - 410
+  - 20
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-b2
+  role: b2
+  canonical_block: 23
+  expect: • Distance
+  bbox_px:
+  - 100
+  - 1354
+  - 410
+  - 20
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-b3
+  role: b3
+  canonical_block: 24
+  expect: • Point de vue
+  bbox_px:
+  - 100
+  - 1380
+  - 410
+  - 20
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-b4
+  role: b4
+  canonical_block: 25
+  expect: • Édifié
+  bbox_px:
+  - 100
+  - 1406
+  - 410
+  - 20
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/10.yaml:canonical_text
+functional_objects:
+- id: P10-F-google_maps
+  object_class: qr
+  source_bbox_px:
+  - 794
+  - 1111
+  - 117
+  - 117
+  parent_region: R03
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-10-google-maps.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+structural_frames:
+- id: P10-FR01
+  kind: rect
+  bbox_px:
+  - 30
+  - 1075
+  - 1010
+  - 185
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P10-FR02
+  kind: line
+  bbox_px:
+  - - 405
+    - 1075
+  - - 405
+    - 1260
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P10-FR03
+  kind: line
+  bbox_px:
+  - - 725
+    - 1075
+  - - 725
+    - 1260
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P10-FR04
+  kind: rect
+  bbox_px:
+  - 30
+  - 1260
+  - 1010
+  - 34
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P10-FR05
+  kind: rect
+  bbox_px:
+  - 30
+  - 1298
+  - 1010
+  - 175
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon prévaut ; les textes raster absents du canon restent dans leurs fragments
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant
+  - fragment: heraldry_captioned
+    description: légende des armoiries
+  - fragment: marian_figure_captioned
+    description: légende « Notre-Dame-du-Cruet, protectrice du château et de la vallée »
+  - fragment: plan_box_captioned
+    description: titre « Plan du château (XIe-XVe siècle) » et libellés du plan (intrinsèques au document)
+  - fragment: chronology_box_captioned
+    description: titre « Chronologie du château », dates et libellés des cinq événements
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  canonical_text_differs_from_raster:
+  - 'le raster porte « Imposéeevause au XIe siècle » (défaut) là où le canon dit « Imaginez-vous au XIe siècle » : le canon
+    prévaut'
+  - 'le raster porte « Paroisse de Notre-Dame-du-Cunet » (défaut) là où le canon dit « Notre-Dame-du-Cruet » : le canon prévaut'
+  canonical_text_not_visible_in_raster: []
+completeness_gate:
+  status: PASS
+  blocked_fragments: []
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE

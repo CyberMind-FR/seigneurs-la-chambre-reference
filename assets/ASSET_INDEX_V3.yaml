@@ -455,3 +455,341 @@ lot_2_progress:
   human_review_pending: 2
   note: Heraldry and page 10 massing are produced but deliberately remain behind human
     review gates.
+
+# Layered v3 compositions (Phase B — site-page family industrialisation, 2026-09-09).
+# Each page is rebuilt from prototypes/page-NN/composition.yaml by scripts/layered_compose.py;
+# raster fragments are cut from the canonical page (source_refs: canonical_pages) and locked by
+# SHA-256 in prototypes/page-NN/fragments.lock.yaml. Proof PDFs live in dist/ and are never committed.
+# Resolution gates (2026-09-09): 300 ppi continuous tone / 1200 ppi line art at final size, every format.
+layered_compositions:
+  page_01:
+    composition: prototypes/page-01/composition.yaml
+    inventory: prototypes/page-01/page-01.objects.yaml
+    fragment_lock: prototypes/page-01/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 17
+    canonical_text_blocks: 10
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: not_applicable
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 17
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_02:
+    composition: prototypes/page-02/composition.yaml
+    inventory: prototypes/page-02/page-02.objects.yaml
+    fragment_lock: prototypes/page-02/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 20
+    canonical_text_blocks: 25
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: not_applicable
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 20
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_03:
+    composition: prototypes/page-03/composition.yaml
+    inventory: prototypes/page-03/page-03.objects.yaml
+    fragment_lock: prototypes/page-03/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 12
+    canonical_text_blocks: 25
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 12
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_05:
+    composition: prototypes/page-05/composition.yaml
+    inventory: prototypes/page-05/page-05.objects.yaml
+    fragment_lock: prototypes/page-05/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 13
+    canonical_text_blocks: 20
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 13
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_06:
+    composition: prototypes/page-06/composition.yaml
+    inventory: prototypes/page-06/page-06.objects.yaml
+    fragment_lock: prototypes/page-06/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 19
+    canonical_text_blocks: 17
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 19
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_07:
+    composition: prototypes/page-07/composition.yaml
+    inventory: prototypes/page-07/page-07.objects.yaml
+    fragment_lock: prototypes/page-07/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 22
+    canonical_text_blocks: 21
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 22
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_08:
+    composition: prototypes/page-08/composition.yaml
+    inventory: prototypes/page-08/page-08.objects.yaml
+    fragment_lock: prototypes/page-08/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 17
+    canonical_text_blocks: 20
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 17
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_09:
+    composition: prototypes/page-09/composition.yaml
+    inventory: prototypes/page-09/page-09.objects.yaml
+    fragment_lock: prototypes/page-09/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 15
+    canonical_text_blocks: 15
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 185.78
+      effective_ppi_a5_after_upscale: 300.97
+      provisional_upscale_fragments: 15
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_10:
+    composition: prototypes/page-10/composition.yaml
+    inventory: prototypes/page-10/page-10.objects.yaml
+    fragment_lock: prototypes/page-10/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 18
+    canonical_text_blocks: 26
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 18
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_11:
+    composition: prototypes/page-11/composition.yaml
+    inventory: prototypes/page-11/page-11.objects.yaml
+    fragment_lock: prototypes/page-11/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 14
+    canonical_text_blocks: 15
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 14
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_12:
+    composition: prototypes/page-12/composition.yaml
+    inventory: prototypes/page-12/page-12.objects.yaml
+    fragment_lock: prototypes/page-12/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 18
+    canonical_text_blocks: 21
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 18
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_13:
+    composition: prototypes/page-13/composition.yaml
+    inventory: prototypes/page-13/page-13.objects.yaml
+    fragment_lock: prototypes/page-13/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 17
+    canonical_text_blocks: 20
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 17
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_14:
+    composition: prototypes/page-14/composition.yaml
+    inventory: prototypes/page-14/page-14.objects.yaml
+    fragment_lock: prototypes/page-14/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 14
+    canonical_text_blocks: 26
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: not_applicable
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 14
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+    blocked_fragments: ['book_cover_1', 'book_cover_2', 'book_cover_3']  # rights not documented, not extracted
+  page_15:
+    composition: prototypes/page-15/composition.yaml
+    inventory: prototypes/page-15/page-15.objects.yaml
+    fragment_lock: prototypes/page-15/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 27
+    canonical_text_blocks: 27
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: not_applicable
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 181.06
+      effective_ppi_a5_after_upscale: 300.56
+      provisional_upscale_fragments: 27
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: pass
+      methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+      human_review: done (gkerma, 2026-09-09)
+  page_16:
+    composition: prototypes/page-16/composition.yaml
+    inventory: prototypes/page-16/page-16.objects.yaml
+    fragment_lock: prototypes/page-16/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs, qr_registry]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 8
+    canonical_text_blocks: 11
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: pass
+      fragment_sha256: pass
+      text_ink_collision: pass
+      source_ppi_a5: 131.81
+      effective_ppi_a5_after_upscale: 300.52
+      provisional_upscale_fragments: 8
+      resolution_gate_300_continuous_tone: pass
+      resolution_gate_1200_line_art: fail
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+      human_review: done (gkerma, 2026-09-09)

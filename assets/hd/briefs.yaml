@@ -1,0 +1,341 @@
+# Briefs d'observation pour la régénération HD des croquis (Phase C).
+#
+# Chaque entrée décrit CE QUI EST VISIBLE dans le fragment canonique (assets/page-NN.jpg,
+# bbox de prototypes/page-NN/composition.yaml). Ce sont des descriptions d'observation,
+# pas des assertions historiques : elles ne créent aucun contenu éditorial. Les noms de
+# sites viennent du canon (pages/NN.yaml). Tout texte, légende, flèche, cartouche, numéro
+# ou résidu de titre présent dans le raster est listé dans `remove` : il n'est jamais
+# régénéré dans l'image (le texte est une couche indépendante, cf. REGENERATION_RULES.md).
+#
+# Champs : subject (sujet observé), remove (éléments à ne pas reproduire), notes (contraintes),
+#          exclude (motif d'exclusion de la voie « prompt image »).
+schema_version: 1
+style:
+  name: carnet_aquarelle_encre
+  fr: >-
+    Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée :
+    traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et
+    naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour
+    les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée,
+    lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
+  negative_fr: >-
+    Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure
+    ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau)
+    sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de
+    vignettage : le dessin s'estompe naturellement dans le papier crème.
+  label_fr: >-
+    Vue artistique reconstituée : les proportions, l'échelle et l'état des bâtiments ne sont pas
+    nécessairement fidèles (absence d'archive d'époque ; certains sites sont aujourd'hui en ruine).
+pages:
+  1:
+    church_captioned:
+      subject: Façade d'église gothique de montagne avec rosace et portail en arc brisé, vue de trois quarts ; arbres et sommets enneigés à l'arrière-plan.
+      remove: [légende « Église Notre-Dame-du-Cruet XIVe siècle », flèche]
+    mountains_captioned:
+      subject: Massif alpin enneigé dominant des versants boisés de conifères, ciel clair.
+      remove: [légende « Maurienne Terre de passage et de seigneuries », flèche, fleur de lys dorée en bas à droite]
+    seal_captioned:
+      subject: Sceau de cire rouge à figure debout (personnage en pied), suspendu à un ruban bleu et rouge, vu de face.
+      remove: [légende « Sceau d'un seigneur de La Chambre XIIIe siècle », flèche, résidu du titre « ET L » en haut]
+      notes: La légende circulaire du sceau doit rester un simple décor (traits), sans lettres lisibles.
+    maison_forte_captioned:
+      subject: Tour-maison forte en pierre à galerie de bois sous un toit à quatre pans, bâtiment annexe à toit de tuiles, arbres.
+      remove: [légende « Maison forte de La Tour », flèche]
+    castle_bottom_left:
+      subject: Château fort sur éperon rocheux avec tour carrée à toit pyramidal et corps de logis, rochers, sapins, montagnes enneigées.
+      remove: [lignes de texte résiduelles en haut et à droite, filet ornemental en bas]
+  2:
+    village_captioned:
+      subject: Village de montagne groupé autour de son clocher sur un promontoire, vallée et sommets enneigés.
+      remove: [callout « La Chambre, capitale et coeur de la seigneurie », flèche, résidus du titre et du sous-titre, fragments de texte en marge gauche]
+    bishop_captioned:
+      subject: Évêque en chape rouge et mitre dorée tenant une crosse, buste de trois quarts, barbe grise.
+      remove: [légende « L'évêque-comte, maître spirituel et temporel de la Maurienne »]
+      notes: Portrait générique reconstitué, sans ressemblance revendiquée.
+    seal_vicomte_captioned:
+      subject: Sceau de cire rouge à croix, attaché par des cordelettes tressées.
+      remove: [légende « Sceau d'un vicomte de La Chambre (XIIIe siècle) »]
+      notes: Bordure du sceau sans lettres lisibles.
+    knight_captioned:
+      subject: Chevalier en armure sur un cheval brun, bouclier bleu semé de fleurs de lys, clocher et arbres à l'arrière-plan.
+      remove: [légende « Une lignée chevaleresque… », flèche, fleur de lys ornementale en bas à droite]
+    equestrian_seal_captioned:
+      subject: Sceau équestre en cire brune, cavalier au galop dans un cercle à bordure ornée.
+      remove: [légende « Sceau équestre (XIIe siècle) », flèche]
+      notes: La bordure circulaire ne doit contenir aucune lettre ; simple décor.
+    testament_captioned:
+      subject: Livre manuscrit ancien ouvert, reliure sombre, pages couvertes d'une écriture ancienne suggérée.
+      remove: [légende « Testament de Pierre de La Chambre (1261) », flèche]
+      notes: L'écriture est suggérée par des traits abstraits, sans aucune lettre ni mot lisible.
+    monk_church_captioned:
+      subject: Moine franciscain en bure brune et chapeau, debout devant la façade d'une église à rosace.
+      remove: [légende « Couvent des Cordeliers, fondation de 1365 », résidu « (1261) » en haut]
+    louis_medallion_captioned:
+      subject: Médaillon rond au profil d'un homme coiffé d'un bonnet, style médaille, cadré dans la moitié gauche ; moitié droite en papier vierge.
+      remove: [légendes « fondation de 1365 » et « Louis Ier de Savoie (1402-1465) », flèche]
+      notes: Conserver le médaillon à gauche et laisser la droite vide (la légende sera composée en couche texte).
+  3:
+    portal_gothique_captioned:
+      subject: Portail gothique en arc brisé à remplages, dessin architectural à l'encre avec lavis léger.
+      remove: [légende « Portail gothique en albâtre blanc (fin XIVe siècle) », traits de construction]
+    cloister_baroque_captioned:
+      subject: Cour de cloître à arcades, toits de tuiles, grand cyprès et puits central, montagnes.
+      remove: [légende « Cloître baroque (1744) »]
+    salle_capitulaire_captioned:
+      subject: Intérieur voûté d'ogives, fenêtres gothiques, petit tabernacle au fond.
+      remove: [légende « Voûtes d'ogives de la salle capitulaire (fin XIVe siècle) »]
+    franciscan_monk:
+      subject: Moine franciscain de profil, capuche relevée, mains jointes, bure claire à cordelière.
+      remove: [flèche]
+    valley_cruet_captioned:
+      subject: Château à tours rondes et toits pointus sur un promontoire rocheux dominant la vallée, montagnes enneigées.
+      remove: [légende « Vue depuis le Cruet sur la vallée de La Chambre », résidu de pierre sculptée en haut à droite]
+    nave_captioned:
+      subject: Nef d'église gothique vue de l'intérieur, chaire de bois, bancs, vitraux en arc brisé.
+      remove: [légende « Nef unique de 25 m… », flèche]
+    portal_detail:
+      subject: Fenêtre gothique à remplage, détail architectural à l'encre avec lavis léger.
+      remove: [traits de construction]
+    lintel_accolade_captioned:
+      subject: Linteau sculpté en accolade de style flamboyant, détail de pierre.
+      remove: [légende « Linteau en accolade (art flamboyant, XVe siècle) »]
+    localization_illustration:
+      subject: Petit ensemble conventuel avec clocher, arcades et arbres, vignette de localisation.
+      remove: []
+    site_visit_illustration:
+      subject: Ensemble conventuel avec église à rosace, cloître, clocher, arbres et montagnes.
+      remove: [résidu du titre « DU SITE » en haut à gauche]
+  5:
+    hero_captioned:
+      subject: Ruine de château sur un piton rocheux dominant une vallée alpine ; un second château au loin sur un autre sommet ; sapins, montagnes enneigées.
+      remove: [résidus du titre et du sous-titre, callouts « Face à face… » et « Le Château Joli domine… », flèches]
+    poype_captioned:
+      subject: Motte castrale, tour maîtresse au sommet d'un tertre herbeux, enceinte de pierre au pied et fossé.
+      remove: [callouts « Tour maîtresse », « Motte primitive », « Fossé naturel », « Enceinte médiévale », cartouche « POYPE FÉODALE », flèches]
+    princess_captioned:
+      subject: Dame noble médiévale de profil, couronne, voile, robe rouge brodée, collier de perles ; ruines de château et vallée derrière elle.
+      remove: [légende « Agnès de Savoie-Achaïe… », flèche]
+      notes: Portrait générique reconstitué, sans ressemblance revendiquée.
+    localization_vignette:
+      subject: Ruine de château sur une colline, montagnes enneigées.
+      remove: []
+    ruins_vignette:
+      subject: Ruines d'un mur d'enceinte percé d'une porte en arc, arbres.
+      remove: [résidu de texte à gauche, filet ornemental à droite]
+  6:
+    sky_patch_top_right:
+      subject: Ciel d'aquarelle bleu pâle avec nuages légers (raccord de fond).
+      remove: [ornement doré en haut à droite]
+    hero_captioned:
+      subject: Tour ruinée en pierre au milieu de prairies et de murets, hameau avec clocher, manoir au loin, montagnes.
+      remove: [résidu du sous-titre, cartouches « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin », flèches, ornements, résidu d'armoiries en bas à gauche]
+    berthollet_portrait_captioned:
+      subject: Portrait gravé d'un homme du XVIIIe siècle en perruque et jabot, buste de face, style gravure au trait.
+      remove: [cartouche « Claude-Louis Berthollet 1748-1822 »]
+      notes: Reconstitution d'après l'iconographie classique du personnage ; ressemblance non garantie.
+    vestiges_box_captioned:
+      subject: Vestiges de murs en pierres sèches dans une prairie, arbres et montagnes.
+      remove: [cadre ornemental, titre « Vestiges aujourd'hui », citation « Réduits à fort peu de choses » (Georges Chapier, 1957)]
+    localization_vignette:
+      subject: Village de montagne à deux clochers, montagnes enneigées.
+      remove: []
+    monk_bottom_left:
+      subject: Moine en médaillon vertical, style gravure sépia sur fond feuillu.
+      remove: []
+    ruins_bottom_right:
+      subject: Arcades gothiques ruinées, style gravure sépia.
+      remove: []
+  7:
+    hero_captioned:
+      subject: Donjon roman ruiné sur un rocher, sapins, montagnes enneigées.
+      remove: [légende « Donjon de Châtel-André (XIIe siècle) », flèche, résidu en haut à gauche]
+    valley_panorama:
+      subject: Panorama de vallée alpine avec rivière, village et clocher, montagnes.
+      remove: []
+    vassal_scene_captioned:
+      subject: Deux hommes en costume médiéval se serrant la main, l'un en cape rouge et chapeau.
+      remove: [légende « Le vassal rend hommage à son suzerain », flèches]
+    defensive_box_captioned:
+      subject: Deux tours ruinées sur deux sommets qui se font face, vallée avec village et clocher entre elles, montagnes.
+      remove: [cadre, titre « Un système défensif complémentaire », toponymes, ligne pointillée, flèches]
+      notes: La ligne de visée pointillée pourra être rétablie en vecteur documentaire.
+    battle_scene_captioned:
+      subject: Troupes de soldats du XVIe siècle en armes et bannières attaquant une tour sur une colline, fumée.
+      remove: [légende « Reprise de la tour par les troupes savoyardes (1598) », flèche]
+    localization_vignette:
+      subject: Tour ruinée sur une colline, montagnes enneigées.
+      remove: []
+    bottom_vignette:
+      subject: Tour ruinée sur une butte avec arbres, montagnes.
+      remove: [résidu du titre « MONUMENT HISTORIQUE », résidu de sceau à droite]
+  8:
+    magnolia_flower:
+      subject: Fleur de magnolia blanche avec feuilles, dessin botanique.
+      remove: [légende « Magnolia centenaire », résidu à gauche]
+    hero_captioned:
+      subject: Maison forte à quatre niveaux en pierre sous toit d'ardoise, ruelle pavée, mur d'enceinte, clocher voisin, magnolia en fleurs, montagnes.
+      remove: [callouts « Magnolia centenaire… » et « Maison-Forte du Châtelet… », flèches, résidu en haut]
+    panorama_captioned:
+      subject: Panorama de vallée entre deux tours sur des collines, montagnes.
+      remove: [libellés, ligne pointillée]
+    localization_vignette:
+      subject: Village avec clocher et maison forte, montagnes.
+      remove: []
+    bottom_vignette:
+      subject: Maison forte à toit d'ardoise entourée d'arbres, muret, montagnes.
+      remove: [cadre ornemental à droite et en bas]
+  9:
+    hero:
+      subject: Château à tour ronde crénelée et tour carrée, corps de logis à galerie, magnolia en fleurs, escalier et mur de clôture, montagnes, oiseaux.
+      remove: [texte partiel « Magnol… » à droite, fleur de magnolia partielle en haut à droite]
+    magnolia_captioned:
+      subject: Fleur de magnolia blanche et feuillage, dessin botanique.
+      remove: [légende « Magnolia séculaire ombrageant la demeure »]
+    localization_vignette:
+      subject: Village avec clocher et château à tours, montagnes.
+      remove: []
+    architecture_vignette:
+      subject: Château à deux tours à toits coniques, corps de logis, grand arbre, portail et mur.
+      remove: [résidu de cadre à droite]
+  10:
+    marian_figure_captioned:
+      subject: Statue dorée de Vierge à l'Enfant sur un socle, montagnes derrière.
+      remove: [légende « Notre-Dame-du-Cruet, protectrice du château et de la vallée »]
+    hero:
+      subject: Ruines de château à plusieurs tours sur une crête rocheuse boisée, vallée et montagnes.
+      remove: [résidu de statue à droite, légende résiduelle]
+      notes: Illustration canonique validée — reprendre exactement la même vue, sans nouvelle architecture ; le plan réel reste l'autorité géométrique (verrou page 10).
+    chronology_box_captioned:
+      exclude: encadré constitué de texte et de pictogrammes — voie « couche texte + icônes SVG », pas de génération d'image
+    localization_vignette:
+      subject: Ruine de château sur une colline, montagnes.
+      remove: []
+    bottom_panorama:
+      subject: Vallée alpine avec village, sapins et montagnes.
+      remove: [résidu du titre « EN SAVOIR PLUS »]
+  11:
+    hero:
+      subject: Tour carrée médiévale en pierre à créneaux, village et clocher, montagnes, oiseaux.
+      remove: [cartouche « Tour carrée médiévale… » en haut à droite]
+    tower_ladder_captioned:
+      subject: Tour carrée en pierre avec balcon de bois, échelle amovible appuyée, porte en arc au rez-de-chaussée, végétation.
+      remove: [annotations « Porte d'accès… », « Échelle amovible… », « Entrée au rez-de-chaussée », flèches]
+    valley_box_captioned:
+      subject: Panorama de vallée avec village, rivière et ruine sur une colline à droite, montagnes.
+      remove: [cadre, titre « Vue sur la vallée du Bugeon », toponymes]
+    localization_vignette:
+      subject: Tour carrée et village à clocher, montagnes.
+      remove: []
+    bottom_vignette:
+      subject: Village avec tour carrée et clocher, montagnes.
+      remove: [résidu du titre « CARACTÉRISTIQUES »]
+  12:
+    statue:
+      subject: Statue de chevalier en pierre, cape, épée et bouclier à fleurs de lys, montagnes.
+      remove: [résidus à gauche]
+    hero:
+      subject: Maison forte à trois niveaux avec tour à toit, corps annexe, murets et portail, montagnes.
+      remove: [fleuron et filet en haut, résidu d'armoiries en haut à droite]
+    chapel:
+      subject: Chapelle en pierre à clocher-mur et porte en arc, montagnes.
+      remove: []
+    portrait_medallion:
+      subject: Portrait en médaillon d'un homme moustachu coiffé d'un chapeau, style gravure.
+      remove: [résidu « ne. » à gauche]
+      notes: Portrait générique reconstitué, sans ressemblance revendiquée.
+    network_panorama_captioned:
+      subject: Long panorama de vallée avec plusieurs sites fortifiés sur les hauteurs, villages et montagnes.
+      remove: [titre « RÉSEAU DES FORTERESSES… », cartouches toponymiques]
+    localization_vignette:
+      subject: Village à clocher dans la vallée, montagnes.
+      remove: []
+    bottom_vignette:
+      subject: Maison forte et chapelle avec arbres, montagnes.
+      remove: [résidu du titre « LOIN », résidus de cadre à droite]
+  13:
+    statue:
+      subject: Statue de chevalier en pierre, épée et bouclier bleu à fleurs de lys, montagnes.
+      remove: [résidu « er » à gauche, ornement à droite]
+    left_mountains_vignette:
+      subject: Sommets alpins enneigés.
+      remove: []
+    bottom_band:
+      subject: Panorama de vallée avec village et clocher ; à droite, une main tenant un smartphone à écran vide.
+      remove: [texte « CONSEIL… », pictogrammes, code QR sur l'écran]
+  14:
+    cloister_top_right:
+      subject: Cloître à arcades avec clocher et puits, cyprès, montagnes.
+      remove: [résidus du titre et du sous-titre à gauche]
+    landscape_mid_right:
+      subject: Église et bâtiments sur un promontoire dominant une vallée, montagnes.
+      remove: []
+    books:
+      subject: Pile de livres anciens et livre ouvert.
+      remove: []
+      notes: L'écriture des pages est suggérée par des traits abstraits, sans lettre lisible.
+    quill:
+      subject: Plume d'oie et encrier.
+      remove: []
+    book_cover_1:
+      exclude: reproduction documentaire de couverture d'ouvrage — droits non documentés (BLOCKED_SOURCE_RIGHTS), jamais régénérée
+    book_cover_2:
+      exclude: reproduction documentaire de couverture d'ouvrage — droits non documentés (BLOCKED_SOURCE_RIGHTS), jamais régénérée
+    book_cover_3:
+      exclude: reproduction documentaire de couverture d'ouvrage — droits non documentés (BLOCKED_SOURCE_RIGHTS), jamais régénérée
+    castle_bottom_left:
+      subject: Château ruiné sur un piton rocheux, montagnes.
+      remove: [résidu de cadre ornemental]
+    cross_bottom_right:
+      subject: Croix de pierre sculptée sur un socle, montagnes.
+      remove: [résidu de cadre ornemental]
+  15:
+    statue_top_right:
+      subject: Statue de chevalier en pierre avec épée et bouclier à fleurs de lys.
+      remove: [résidu d'ornement]
+    mountains_right:
+      subject: Ruine de château sur un rocher et montagnes enneigées ; la partie droite (statue) reste en papier vierge.
+      remove: [partie de statue à droite]
+    site_01:
+      subject: Couvent des Cordeliers (La Chambre) — cloître à arcades avec clocher, fontaine et montagnes.
+      remove: [pastille numérotée « 1 »]
+    site_02:
+      subject: Maison de La Tour (La Chambre) — maison forte à tour carrée et corps de logis, arbres, montagnes.
+      remove: [pastille numérotée « 2 »]
+    site_03:
+      subject: Château Joli (Sainte-Marie-de-Cuines) — château ruiné sur une colline, montagnes.
+      remove: [pastille numérotée « 3 »]
+    site_04:
+      subject: Tour de Burgin (Sainte-Marie-de-Cuines) — tour carrée et bâtiments, montagnes.
+      remove: [pastille numérotée « 4 »]
+    site_05:
+      subject: Tour de Châtel-André (Saint-Étienne-de-Cuines) — haute tour carrée sur un rocher, montagnes.
+      remove: [pastille numérotée « 5 », pastille voisine « 6 » partielle]
+    site_06:
+      subject: Maison-Forte du Châtelet (Saint-Étienne-de-Cuines) — maison à porte en arc et grand arbre, montagnes.
+      remove: [pastille numérotée « 6 », pastille voisine « 7 » partielle]
+    site_07:
+      subject: Maison Forte de Gruyère (Saint-Étienne-de-Cuines) — tour ronde et bâtiments, montagnes.
+      remove: [pastille numérotée « 7 »]
+    site_08:
+      subject: Château de Notre-Dame-du-Cruet — château ruiné sur une crête rocheuse, sapins, montagnes.
+      remove: [pastille numérotée « 8 »]
+    site_09:
+      subject: Tour de Notre-Dame-du-Cruet — tour carrée et église à clocher, montagnes.
+      remove: [pastille numérotée « 9 »]
+    site_10:
+      subject: Maison Forte de La Landonnière (Saint-Rémy-de-Maurienne) — long corps de logis et chapelle, arbres, montagnes.
+      remove: [pastille numérotée « 10 »]
+    cloister_arch_left:
+      subject: Arcade romane à colonnettes, style gravure.
+      remove: []
+    cloister_right:
+      subject: Cloître à arcades avec puits et fleurs, montagnes.
+      remove: []
+  16:
+    landscape:
+      subject: Panorama alpin avec chapelle sur un promontoire, cyprès, vallée et sommets enneigés.
+      remove: [texte du logo en haut, fleuron et filet en bas]
+background:
+  paper_texture:
+    subject: Texture de papier crème très légère, uniforme, sans motif ni tache, tuilable, couleur moyenne #FFFDF7.
+    notes: Fond commun du livret ; optionnel (le fond par défaut est une couleur unie). Doit rester quasi uniforme pour ne pas gêner la lisibilité du texte.

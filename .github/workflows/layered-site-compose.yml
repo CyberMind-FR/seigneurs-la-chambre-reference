@@ -1,0 +1,59 @@
+name: Layered composition (all composed pages)
+on:
+  push:
+    branches: [release/v3.0-phase-b]
+    paths:
+      - 'scripts/layered_measure.py'
+      - 'scripts/layered_compose.py'
+      - 'scripts/layered_inventory.py'
+      - 'prototypes/**'
+      - 'pages/*.yaml'
+      - 'assets/page-*.jpg'
+      - 'assets/qr-svg/*.svg'
+      - 'qr_registry.yaml'
+      - '.github/workflows/layered-site-compose.yml'
+  workflow_dispatch:
+
+jobs:
+  compose:
+    name: page-${{ matrix.page }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        page: ['01', '02', '03', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-build.txt
+      - name: Install fonts (Liberation Serif embedded in the v3 PDFs, DejaVu fallback)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-liberation fonts-dejavu-core
+      - name: Install composition dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-build.txt
+      - name: Measure canonical page (diagnostics, no OCR)
+        run: python scripts/layered_measure.py ${{ matrix.page }}
+      - name: Compose layered proof and validate (text layer, QR decode, SHA, ppi, collisions)
+        run: python scripts/layered_compose.py ${{ matrix.page }}
+      - name: Validate canonical source unchanged
+        run: |
+          python - <<'PY'
+          import hashlib, yaml
+          page = "${{ matrix.page }}"
+          spec = yaml.safe_load(open(f"pages/{page}.yaml", encoding="utf-8"))
+          got = hashlib.sha256(open(spec["visual_reference"], "rb").read()).hexdigest()
+          assert got == spec["visual_reference_sha256"], (got, spec["visual_reference_sha256"])
+          print("canonical page", page, "SHA OK", got)
+          PY
+      - name: Show proof validation
+        run: cat dist/layered/page-${{ matrix.page }}/proof-validation.json
+      - name: Upload proof, fragments and diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: layered-page-${{ matrix.page }}
+          path: |
+            dist/layered/page-${{ matrix.page }}/
+            dist/layered-measure/page-${{ matrix.page }}/
+          retention-days: 14

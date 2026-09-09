@@ -1,0 +1,743 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 5
+title: Le Château Joli
+status: APPROVED
+generated_from:
+  composition: prototypes/page-05/composition.yaml
+  composition_run: 48210a531b9b51da13a287860442eef5aded23cd3bc513822388eb21b4bbc86b
+canonical_reference:
+  path: assets/page-05.jpg
+  sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
+  dimensions_px:
+  - 1024
+  - 1536
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/05.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 1024
+  - 250
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 250
+  - 1024
+  - 782
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1032
+  - 962
+  - 230
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1262
+  - 962
+  - 32
+- id: R05
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1300
+  - 962
+  - 205
+- id: R06
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P05-O-running_head_raster
+  visual_description: bandeau « Les Seigneurs de La Chambre et leur patrimoine en Maurienne » + fleurons
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 214
+  - 32
+  - 632
+  - 36
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: a81eeecaecce8bd3dedbf517223ee7f14e350e08ca8516ec9a40fe2eaef53e92
+  effective_ppi_a5: 300.97
+  dirty_edges:
+  - top
+  review_status: APPROVED
+- id: P05-O-heraldry_captioned
+  visual_description: armoiries + légende « Armes des La Chambre (voir blasonnement officiel p.2) »
+  object_class: composite
+  source_bbox_px:
+  - 30
+  - 60
+  - 158
+  - 266
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: 769506fbf24e95d5fd128cb0bbeb7d63a5f2dd88ab1a854360ad4439a6bdbc37
+  effective_ppi_a5: 300.97
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P05-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 298
+  - 194
+  - 432
+  - 34
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: c73d97e5c7f4a2803a5450a9e062c16e30be4659062741af95d45ea0a24a1dd9
+  effective_ppi_a5: 1200.16
+  dirty_edges:
+  - bottom
+  - left
+  review_status: APPROVED
+- id: P05-O-hero_captioned
+  visual_description: vue Château Joli / Cruet + callouts « Face à face… », « Le Château Joli domine… » ; résidus raster du
+    titre/sous-titre masqués (ciel)
+  object_class: composite
+  source_bbox_px:
+  - 578
+  - 72
+  - 421
+  - 474
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px:
+  - x: 578
+    y: 72
+    w: 145
+    h: 78
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  - x: 578
+    y: 150
+    w: 252
+    h: 38
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: f34131637fa23e283021ad46cbd407c77d1d9ad6fbe3983e5e2b1a6ca4db090b
+  effective_ppi_a5: 300.97
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
+- id: P05-O-poype_captioned
+  visual_description: poype annotée (Tour maîtresse, Motte primitive, Fossé naturel, Enceinte médiévale, cartouche POYPE FÉODALE)
+  object_class: composite
+  source_bbox_px:
+  - 33
+  - 704
+  - 427
+  - 318
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: 2267f1017dab815336535e08f2a998b374b2308fcdade821a0c6de3b217e32db
+  effective_ppi_a5: 300.97
+  dirty_edges:
+  - right
+  review_status: APPROVED
+- id: P05-O-princess_captioned
+  visual_description: Agnès de Savoie-Achaïe + légende raster
+  object_class: composite
+  source_bbox_px:
+  - 480
+  - 727
+  - 518
+  - 300
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: d3a559a9dc9a58577f392dbff04c8538da0c6e6680bb310ce9fc567e852e70bf
+  effective_ppi_a5: 300.97
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
+- id: P05-O-map_document
+  visual_description: carte + rose des vents + icône ; ancien titre raster CARTE masqué, titre vivant recomposé
+  object_class: documentary_map
+  source_bbox_px:
+  - 40
+  - 1043
+  - 369
+  - 203
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px:
+  - x: 189
+    y: 1043
+    w: 62
+    h: 18
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: a81ea971098a571adf746d2026f4dbff316287a87c2f4fc087a58783f8c5ba3c
+  effective_ppi_a5: 300.97
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+- id: P05-O-localization_vignette
+  visual_description: localization vignette
+  object_class: illustration
+  source_bbox_px:
+  - 452
+  - 1140
+  - 251
+  - 113
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: 2fa574e1ac313cd584a57fd89ff0ef67c608737e9087c24cb374bf744efdf8b2
+  effective_ppi_a5: 300.97
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P05-O-pin_icon
+  visual_description: pin icon
+  object_class: icon
+  source_bbox_px:
+  - 495
+  - 1046
+  - 19
+  - 26
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: 2d86d6c797e66752720043388738ef7abef077de8dcd8f313e3ae8ba8e96a6cf
+  effective_ppi_a5: 1200.16
+  dirty_edges: []
+  review_status: APPROVED
+- id: P05-O-phone_icon
+  visual_description: phone icon
+  object_class: icon
+  source_bbox_px:
+  - 773
+  - 1045
+  - 17
+  - 27
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: 7e385111d1899fe445b257dfda7506b27686ea66d438d40f162799f257f71729
+  effective_ppi_a5: 1200.16
+  dirty_edges: []
+  review_status: APPROVED
+- id: P05-O-mappe_icon
+  visual_description: mappe icon
+  object_class: icon
+  source_bbox_px:
+  - 60
+  - 1266
+  - 32
+  - 26
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: beae763ee9064c8b8ac1ca9f0c1b836b71b94037118372dcd0c3cffc0ca42b98
+  effective_ppi_a5: 1200.16
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P05-O-info_icons
+  visual_description: info icons
+  object_class: icon
+  source_bbox_px:
+  - 40
+  - 1337
+  - 50
+  - 135
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: 5c4a238e3c93e8621c5ae71a26c12a922aa5a8089f4fa858a1ffbd835e2283b2
+  effective_ppi_a5: 1200.16
+  dirty_edges:
+  - bottom
+  - left
+  review_status: APPROVED
+- id: P05-O-ruins_vignette
+  visual_description: résidu raster de la fin de la 1re puce (« du Mont ») masqué (ciel)
+  object_class: illustration
+  source_bbox_px:
+  - 575
+  - 1314
+  - 428
+  - 158
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 575
+    y: 1345
+    w: 95
+    h: 22
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-05.jpg
+  sha256: 0bd92c56d485451ab359a93280fe79bad6865e5d9bbecf059a8e82aabc100891
+  effective_ppi_a5: 300.97
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+text_zones:
+- id: P05-T-title
+  role: title
+  canonical_block: 0
+  expect: Le Château Joli
+  bbox_px:
+  - 200
+  - 74
+  - 640
+  - 76
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: La poype féodale
+  bbox_px:
+  - 200
+  - 154
+  - 660
+  - 40
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-h1
+  role: h1
+  canonical_block: 2
+  expect: Face à face
+  bbox_px:
+  - 188
+  - 250
+  - 386
+  - 28
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-p1
+  role: p1
+  canonical_block: 3
+  expect: Depuis la plaine
+  bbox_px:
+  - 188
+  - 282
+  - 386
+  - 126
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-p2
+  role: p2
+  canonical_block: 4
+  expect: Cette disposition
+  bbox_px:
+  - 188
+  - 417
+  - 386
+  - 104
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-h2
+  role: h2
+  canonical_block: 5
+  expect: Une « poype »
+  bbox_px:
+  - 44
+  - 556
+  - 400
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-p3
+  role: p3
+  canonical_block: 6
+  expect: Le Château Joli s'élève
+  bbox_px:
+  - 44
+  - 586
+  - 400
+  - 108
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-h3
+  role: h3
+  canonical_block: 7
+  expect: Une princesse
+  bbox_px:
+  - 504
+  - 568
+  - 440
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-p4
+  role: p4
+  canonical_block: 8
+  expect: Le Château Joli abrite
+  bbox_px:
+  - 504
+  - 604
+  - 446
+  - 104
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-carte
+  role: carte
+  canonical_block: 9
+  expect: CARTE
+  bbox_px:
+  - 191
+  - 1041
+  - 130
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-localisation
+  role: localisation
+  canonical_block: 10
+  expect: LOCALISATION
+  bbox_px:
+  - 520
+  - 1045
+  - 180
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-lat
+  role: lat
+  canonical_block: 11
+  expect: 'Lat:'
+  bbox_px:
+  - 499
+  - 1082
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-lng
+  role: lng
+  canonical_block: 12
+  expect: 'Lng:'
+  bbox_px:
+  - 499
+  - 1104
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-google_maps
+  role: google_maps
+  canonical_block: 13
+  expect: GOOGLE MAPS
+  bbox_px:
+  - 797
+  - 1045
+  - 170
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-scan
+  role: scan
+  canonical_block: 14
+  expect: Scannez pour y aller
+  bbox_px:
+  - 760
+  - 1220
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-mappe_sarde
+  role: mappe_sarde
+  canonical_block: 15
+  expect: MAPPE SARDE
+  bbox_px:
+  - 100
+  - 1266
+  - 860
+  - 24
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-box_title
+  role: box_title
+  canonical_block: 16
+  expect: EN SAVOIR PLUS
+  bbox_px:
+  - 340
+  - 1316
+  - 250
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-b1
+  role: b1
+  canonical_block: 17
+  expect: • Ruines
+  bbox_px:
+  - 100
+  - 1348
+  - 470
+  - 24
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-b2
+  role: b2
+  canonical_block: 18
+  expect: • Site en propriété
+  bbox_px:
+  - 100
+  - 1390
+  - 470
+  - 24
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-b3
+  role: b3
+  canonical_block: 19
+  expect: • Datation
+  bbox_px:
+  - 100
+  - 1432
+  - 470
+  - 24
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/05.yaml:canonical_text
+functional_objects:
+- id: P05-F-google_maps
+  object_class: qr
+  source_bbox_px:
+  - 785
+  - 1079
+  - 126
+  - 126
+  parent_region: R03
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-05-google-maps.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+structural_frames:
+- id: P05-FR01
+  kind: rect
+  bbox_px:
+  - 30
+  - 1032
+  - 962
+  - 230
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P05-FR02
+  kind: line
+  bbox_px:
+  - - 440
+    - 1032
+  - - 440
+    - 1262
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P05-FR03
+  kind: line
+  bbox_px:
+  - - 718
+    - 1032
+  - - 718
+    - 1262
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P05-FR04
+  kind: rect
+  bbox_px:
+  - 30
+  - 1262
+  - 962
+  - 32
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P05-FR05
+  kind: rect
+  bbox_px:
+  - 30
+  - 1300
+  - 962
+  - 205
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant « Les Seigneurs de La Chambre et leur patrimoine en Maurienne »
+  - fragment: heraldry_captioned
+    description: légende des armoiries (voir blasonnement officiel p.2)
+  - fragment: hero_captioned
+    description: callouts de la vue principale (Face à face… / Le Château Joli domine…)
+  - fragment: poype_captioned
+    description: annotations du croquis de la poype et cartouche POYPE FÉODALE
+  - fragment: princess_captioned
+    description: légende du portrait d'Agnès de Savoie-Achaïe (dates)
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte (conservés comme document)
+  canonical_text_not_visible_in_raster: []
+completeness_gate:
+  status: PASS
+  blocked_fragments: []
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE

@@ -1,0 +1,101 @@
+# Layered v3 composition — page 14 — L'Association (raster 1055x1491)
+# Locks: the former portrait zone stays void (no fragment there, no replacement); the three book
+# covers are documentary reproductions with undocumented rights (ASSET_SPEC P14-Z07..Z09
+# BLOCKED_SOURCE_RIGHTS): inventoried, not extracted, not composed.
+schema_version: 1
+page: 14
+title: L'Association
+family: association
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
+source: {path: assets/page-14.jpg, sha256: 50ed5e18685a9b057f52ad6e769786e9d9d830628a542a868d13334462d92003}
+canonical_text: {path: pages/14.yaml, key: canonical_text, expected_blocks: 26}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles: {}
+
+fragments:
+  - {id: heraldry_captioned,    role: heraldry_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 30, y: 40, w: 138, h: 232}, treatment: crop_only}
+  - {id: cloister_top_right,    role: documentary_illustration, status: APPROVED, bbox_px: {x: 600, y: 38, w: 440, h: 450}, treatment: crop_only, mask_px: [[600, 38, 96, 82], [600, 128, 92, 108]], note: "résidus raster de la fin du titre et du sous-titre masqués (ciel/feuillage)"}
+  - {id: landscape_mid_right,   role: documentary_illustration, status: APPROVED, bbox_px: {x: 478, y: 485, w: 554, h: 242}, treatment: crop_only, note: "recadrage documenté : la bande x=440..477 (fins de lignes des puces sur le ciel) n'est pas reprise"}
+  - {id: banner_nous_rejoindre, role: ornament, status: APPROVED, bbox_px: {x: 68, y: 418, w: 445, h: 58}, treatment: crop_only, mask_px: [[120, 426, 332, 40]], mask_fill: border_median, note: "cartouche rouge ; ancien texte masqué (couleur du cartouche), titre canonique composé en blanc"}
+  - {id: icons_column,          role: icon, status: APPROVED, bbox_px: {x: 60, y: 476, w: 40, h: 234}, treatment: crop_only}
+  - {id: quote_fleuron_left,    role: ornament, status: APPROVED, bbox_px: {x: 62, y: 733, w: 34, h: 34}, treatment: crop_only}
+  - {id: quote_fleuron_right,   role: ornament, status: APPROVED, bbox_px: {x: 956, y: 733, w: 34, h: 34}, treatment: crop_only}
+  - {id: books,                 role: documentary_illustration, status: APPROVED, bbox_px: {x: 38, y: 788, w: 255, h: 138}, treatment: crop_only}
+  - {id: banner_auteur,         role: ornament, status: APPROVED, bbox_px: {x: 293, y: 788, w: 455, h: 55}, treatment: crop_only, mask_px: [[370, 796, 300, 40]], mask_fill: border_median}
+  - {id: quill,                 role: documentary_illustration, status: APPROVED, bbox_px: {x: 893, y: 776, w: 114, h: 126}, treatment: crop_only}
+  - {id: book_cover_1,          role: documentary_illustration, status: BLOCKED_SOURCE_RIGHTS, bbox_px: {x: 763, y: 833, w: 122, h: 117}, treatment: crop_only, note: "P14-Z07 — reproduction documentaire, droits non documentés : non extraite"}
+  - {id: book_cover_2,          role: documentary_illustration, status: BLOCKED_SOURCE_RIGHTS, bbox_px: {x: 763, y: 948, w: 152, h: 117}, treatment: crop_only, note: "P14-Z08 — non extraite"}
+  - {id: book_cover_3,          role: documentary_illustration, status: BLOCKED_SOURCE_RIGHTS, bbox_px: {x: 763, y: 1063, w: 152, h: 117}, treatment: crop_only, note: "P14-Z09 — non extraite"}
+  - {id: seal_left,             role: ornament, status: APPROVED, bbox_px: {x: 36, y: 1195, w: 118, h: 118}, treatment: crop_only, note: "sceau PATRIMOINE MAURIENNE (texte intrinsèque)"}
+  - {id: seal_right,            role: ornament, status: APPROVED, bbox_px: {x: 886, y: 1191, w: 133, h: 134}, treatment: crop_only, note: "sceau des Cordeliers (texte intrinsèque)"}
+  - {id: castle_bottom_left,    role: documentary_illustration, status: APPROVED, bbox_px: {x: 18, y: 1312, w: 245, h: 178}, treatment: crop_only}
+  - {id: cross_bottom_right,    role: documentary_illustration, status: APPROVED, bbox_px: {x: 768, y: 1325, w: 272, h: 165}, treatment: crop_only}
+
+vectors:
+  - {kind: rect, bbox_px: [42, 445, 958, 320], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [175, 1215, 670, 95], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,     block: 0,  expect: "L'Association",              bbox_px: [300, 36, 400, 66],   style: title}
+  - {key: subtitle,  block: 1,  expect: "Amis du Couvent",        bbox_px: [180, 132, 512, 104], style: title2}
+  - {key: p1,        block: 2,  expect: "Créée en 2020",              bbox_px: [70, 278, 490, 118],  style: body_large}
+  - {key: banner1,   block: 3,  expect: "NOUS REJOINDRE",             bbox_px: [70, 428, 441, 38],   style: banner_title, valign: middle}
+  - {key: b1,        block: 4,  expect: "• Adhésion",                 bbox_px: [118, 486, 358, 24],  style: body_large}
+  - {key: b2,        block: 5,  expect: "• Dons",                     bbox_px: [118, 526, 358, 24],  style: body_large}
+  - {key: b3,        block: 6,  expect: "• Collecte",                 bbox_px: [118, 566, 358, 24],  style: body_large}
+  - {key: b4,        block: 7,  expect: "• Site",                     bbox_px: [118, 606, 358, 24],  style: body_large}
+  - {key: b5,        block: 8,  expect: "• Email",                    bbox_px: [118, 646, 358, 24],  style: body_large}
+  - {key: b6,        block: 9,  expect: "• Mairie",                   bbox_px: [118, 686, 358, 24],  style: body_large}
+  - {key: quote,     block: 10, expect: "« Préserver ce patrimoine",  bbox_px: [100, 733, 855, 30],  style: quote_large}
+  - {key: banner2,   block: 11, expect: "AUTEUR DE RÉFÉRENCE",        bbox_px: [295, 796, 451, 40],  style: banner_title, valign: middle}
+  - {key: author,    block: 12, expect: "Philippe DEMARIO",           bbox_px: [340, 848, 400, 18],  style: small_bold}
+  - {key: r1,        block: 13, expect: "• Les Seigneurs de La Chambre en Maurienne", bbox_px: [340, 868, 410, 36], style: ref_title}
+  - {key: r1b,       block: 14, expect: "Éditions Derrier",           bbox_px: [345, 904, 400, 18],  style: small}
+  - {key: r2,        block: 15, expect: "• La Chambre — Un village",  bbox_px: [340, 952, 410, 36],  style: ref_title}
+  - {key: r2b,       block: 16, expect: "Éditions De Mario",          bbox_px: [345, 990, 400, 32],  style: small}
+  - {key: r3,        block: 17, expect: "• La Maurienne médiévale",   bbox_px: [340, 1072, 410, 36], style: ref_title}
+  - {key: r3b,       block: 18, expect: "avec Jean Prieur",           bbox_px: [345, 1110, 400, 32], style: small}
+  - {key: depot,     block: 19, expect: "Ouvrages en dépôt-vente",    bbox_px: [280, 1185, 500, 18], style: small_italic}
+  - {key: sources_h, block: 20, expect: "Sources principales",        bbox_px: [300, 1220, 420, 18], style: small_bold_center}
+  - {key: src1,      block: 21, expect: "Laurence DALMASSO",          bbox_px: [195, 1240, 640, 18], style: tiny}
+  - {key: src2,      block: 22, expect: "Georges CHAPIER",            bbox_px: [195, 1262, 640, 18], style: tiny}
+  - {key: commission, block: 23, expect: "Commission Histoire",       bbox_px: [300, 1345, 450, 30], style: heading_center}
+  - {key: authors,   block: 24, expect: "Fabrice GALOPO",             bbox_px: [280, 1382, 490, 26], style: body_large_center}
+  - {key: date,      block: 25, expect: "Décembre 2025",              bbox_px: [380, 1412, 290, 22], style: small_italic}
+
+qr: []
+
+discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon prévaut ; les textes raster absents du canon restent dans leurs fragments"}
+  raster_text_absent_from_canon:
+    - {fragment: heraldry_captioned, description: "légende des armoiries"}
+    - {fragment: seal_left, description: "sceau PATRIMOINE MAURIENNE (intrinsèque)"}
+    - {fragment: seal_right, description: "sceau des Cordeliers (intrinsèque)"}
+  canonical_text_not_visible_in_raster:
+    - "bloc 12 « Philippe DEMARIO » : le nom est dans le canon mais n'apparaît pas en texte dans le raster (portrait supprimé, nom conservé par le canon) ; composé sous le bandeau AUTEUR DE RÉFÉRENCE"
+  locked_void: "ancien emplacement du portrait de Philippe DEMARIO : aucun fragment, aucun remplacement (P14-Z06 LOCKED_VOID)"
+  blocked_rights:
+    - "P14-Z07..Z09 couvertures d'ouvrages : non extraites (BLOCKED_SOURCE_RIGHTS) ; la zone reste vide dans le proof jusqu'à documentation des droits"
+  raster_typography: "bandeaux rouges à texte blanc : ancien texte masqué à la couleur du cartouche (mask_fill: border_median), titre canonique composé en blanc"
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
+  # Upscale provisoire (décision gkerma, 2026-09-09 : « prendre en compte le dpi demandé… upscale des croquis
+  # si nécessaire ! On le régénérera ultérieurement ») : chaque fragment est rééchantillonné (Lanczos) jusqu'au
+  # gate de son type à la taille A5 ; journalisé par fragment (upscale_factor), jamais présenté comme source HD.
+  upscale: {enabled: true, approved_by: gkerma, date: '2026-09-09', max_factor: 8, note: "provisoire — croquis à régénérer en haute définition"}

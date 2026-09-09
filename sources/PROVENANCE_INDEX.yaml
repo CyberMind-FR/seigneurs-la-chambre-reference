@@ -211,3 +211,47 @@ validation:
     - sha256_recorded_when_file_exists
     - reconstruction_label_policy_checked
     - no_unsourced_historical_detail
+
+# Raster fragments of the layered v3 compositions are derivatives of canonical_pages:
+# same provenance and rights, local deterministic crops (optional paper-colour masks of old raster
+# text), SHA-256 locked per page. They never become an independent documentary source.
+derived_fragments:
+  id: layered_fragments
+  kind: derived_internal
+  parent_source: canonical_pages
+  provenance_status: VERIFIED
+  rights_status: PROJECT_INTERNAL
+  lock_files:
+    - prototypes/page-03/fragments.lock.yaml
+    - prototypes/page-05/fragments.lock.yaml
+    - prototypes/page-06/fragments.lock.yaml
+    - prototypes/page-07/fragments.lock.yaml
+    - prototypes/page-08/fragments.lock.yaml
+    - prototypes/page-09/fragments.lock.yaml
+    - prototypes/page-11/fragments.lock.yaml
+    - prototypes/page-12/fragments.lock.yaml
+    - prototypes/page-10/fragments.lock.yaml
+    - prototypes/page-13/fragments.lock.yaml
+    - prototypes/page-14/fragments.lock.yaml
+    - prototypes/page-15/fragments.lock.yaml
+    - prototypes/page-16/fragments.lock.yaml
+    - prototypes/page-01/fragments.lock.yaml
+    - prototypes/page-02/fragments.lock.yaml
+  allowed_treatments: [crop_only, crop_grow_to_clean_edge, paper_colour_mask_of_old_raster_text, banner_colour_mask_of_old_raster_text]
+  forbidden: [generative_fill, upscale_presented_as_hd, ocr_of_raster_captions_as_editorial_authority]
+  registry: assets/ASSET_INDEX_V3.yaml:layered_compositions
+
+hd_regenerated_illustrations:
+  status: NOT_APPLICABLE  # aucune image produite au 2026-09-09 ; devient PARTIAL au premier dépôt
+  nature: reconstitution
+  method: "prompt guidé par le crop canonique (assets/hd/prompts, ChatGPT génération d'images), sans texte"
+  declaration: "prototypes/page-NN/hd-sources.yaml (par fragment : path, sha256, px, status, generator, prompt_id, prompt_sha256, rights, approved_by, approved_on, caption_resolution)"
+  eligible_roles: [documentary_illustration, documentary_illustration_with_canonical_raster_caption, documentary_detail, documentary_detail_with_canonical_raster_caption]
+  never_eligible: [heraldry, documentary_map, ornament, icon, canonical_raster_text_absent_from_yaml, canonical_raster_caption_absent_from_yaml, book covers (BLOCKED_SOURCE_RIGHTS), qr]
+  rights: NOT_DOCUMENTED  # à déclarer par le propriétaire à l'approbation de chaque image (conditions du compte de génération)
+  confidence: medium
+  label_required: true
+  default_label: Reconstitution graphique à partir des sources documentées.
+  forbidden: [text_in_generated_image, upscale_of_hd_source, grid_modification, generation_of_heraldry_maps_plans_or_logos]
+  control: scripts/hd_check.py (make hd-check, dans make validate)
+

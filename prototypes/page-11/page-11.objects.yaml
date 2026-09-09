@@ -1,0 +1,678 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 11
+title: La Tour de Notre-Dame-du-Cruet
+status: APPROVED
+generated_from:
+  composition: prototypes/page-11/composition.yaml
+  composition_run: 0d2cdb76374b70daa2b9016ac0bad3f8d1e4ce60ef44370a0e931ff775aa13bc
+canonical_reference:
+  path: assets/page-11.jpg
+  sha256: d4090803bb0c287fe6bb6a7044a77451b47b688de891a52320918f0ef48b0bc8
+  dimensions_px:
+  - 1055
+  - 1491
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/11.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 1055
+  - 322
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 322
+  - 1055
+  - 741
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1063
+  - 995
+  - 205
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1268
+  - 995
+  - 34
+- id: R05
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1310
+  - 995
+  - 152
+- id: R06
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P11-O-running_head_raster
+  visual_description: running head raster
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 236
+  - 22
+  - 570
+  - 28
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: 0a3719d7f7cc0b1ef8581769398a2248fb1b1496436ceb9d16474f4f2ea4d286
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
+- id: P11-O-heraldry_captioned
+  visual_description: heraldry captioned
+  object_class: composite
+  source_bbox_px:
+  - 36
+  - 45
+  - 160
+  - 252
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: 938cb69f63e5d4ecf5fc337f9d292c357775e91496f9603e7657136d2c1da618
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - top
+  review_status: APPROVED
+- id: P11-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 300
+  - 190
+  - 470
+  - 30
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: dc5aa376fae3e46919c0d5e0a5c79f4d264cffb5cd082d8d8f549e72474f4db5
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+- id: P11-O-callout_box_captioned
+  visual_description: 'cartouche « Tour carrée médiévale 4 étages Hauteur : environ 12 m »'
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 888
+  - 203
+  - 140
+  - 148
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: 133cc0cb2dbe5840ff9bf4fb7470e25545142359059903a0e059f78fb01e1a17
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P11-O-hero
+  visual_description: 'recadrage documenté : la bande x=365..431 (montagnes sous le texte du canon) n''est pas reprise pour
+    ne pas réintroduire de texte raster'
+  object_class: illustration
+  source_bbox_px:
+  - 432
+  - 219
+  - 600
+  - 596
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: 94f1f095909b6c7f57c13aedfe4c5baf7ac7e7fd001767e8c74912159bd07f22
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P11-O-tower_ladder_captioned
+  visual_description: coupe de la tour + annotations (Porte d'accès au 1er étage, Échelle amovible…, Entrée au rez-de-chaussée)
+  object_class: composite
+  source_bbox_px:
+  - 40
+  - 755
+  - 345
+  - 300
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: 8d8c72b12023bbb916bac6e81ecf153629f384f577348753f07ba22867a926b8
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  - right
+  - top
+  review_status: APPROVED
+- id: P11-O-valley_box_captioned
+  visual_description: encadré « Vue sur la vallée du Bugeon » avec toponymes raster
+  object_class: composite
+  source_bbox_px:
+  - 410
+  - 815
+  - 614
+  - 240
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: 5137de962bab418c49c262676383cfc79a0e287574272b96dc18df153c514b14
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  - left
+  review_status: APPROVED
+- id: P11-O-map_document
+  visual_description: ancien titre CARTE masqué ; icône conservée
+  object_class: documentary_map
+  source_bbox_px:
+  - 40
+  - 1076
+  - 360
+  - 184
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px:
+  - x: 185
+    y: 1079
+    w: 66
+    h: 19
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: 5b10edc99851557c563aeb33e706ec291ffae40ad0035c0c6af6ccd4d7cde691
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - bottom
+  review_status: APPROVED
+- id: P11-O-pin_icon
+  visual_description: pin icon
+  object_class: icon
+  source_bbox_px:
+  - 461
+  - 1078
+  - 20
+  - 26
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: f7b9c01ce17e16d912856f43edb29745d790ea57b29c82abe93853821c001abd
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - top
+  review_status: APPROVED
+- id: P11-O-phone_icon
+  visual_description: phone icon
+  object_class: icon
+  source_bbox_px:
+  - 775
+  - 1078
+  - 15
+  - 25
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: 9aa73567e05d7550c24e99e277cf1c0ef56768d79a761c6be913cb4ef84fb088
+  effective_ppi_a5: 1200.43
+  dirty_edges:
+  - right
+  - top
+  review_status: APPROVED
+- id: P11-O-localization_vignette
+  visual_description: localization vignette
+  object_class: illustration
+  source_bbox_px:
+  - 425
+  - 1160
+  - 265
+  - 105
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: b2292d03ae4d06bfa0d2ca40a87e100c650405210e8ef2b58b44cef61efbc612
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - left
+  review_status: APPROVED
+- id: P11-O-mappe_icon
+  visual_description: mappe icon
+  object_class: icon
+  source_bbox_px:
+  - 58
+  - 1270
+  - 29
+  - 27
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: 9374aadd13395f2eb94e0f3d79356ef28d246652db21f2883cf22234fa6ceb63
+  effective_ppi_a5: 1200.43
+  dirty_edges: []
+  review_status: APPROVED
+- id: P11-O-info_icons
+  visual_description: info icons
+  object_class: icon
+  source_bbox_px:
+  - 56
+  - 1336
+  - 30
+  - 92
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: c88fa2e4eff4980229b86170a5fb29ff75e758aeb5ca3d6df4475ce5579fdd4a
+  effective_ppi_a5: 1200.43
+  dirty_edges: []
+  review_status: APPROVED
+- id: P11-O-bottom_vignette
+  visual_description: résidu raster du titre CARACTÉRISTIQUES masqué (ciel)
+  object_class: illustration
+  source_bbox_px:
+  - 495
+  - 1320
+  - 510
+  - 140
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 495
+    y: 1320
+    w: 120
+    h: 17
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-11.jpg
+  sha256: c81561713b0b933453010a7deddeb27843f3c4027d461193c727917ef055d2a6
+  effective_ppi_a5: 300.56
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
+text_zones:
+- id: P11-T-title
+  role: title
+  canonical_block: 0
+  expect: La Tour de Notre-Dame-du-Cruet
+  bbox_px:
+  - 200
+  - 66
+  - 760
+  - 70
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Sentinelle oubliée
+  bbox_px:
+  - 230
+  - 145
+  - 600
+  - 38
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-p1
+  role: p1
+  canonical_block: 2
+  expect: Au centre du village
+  bbox_px:
+  - 42
+  - 322
+  - 388
+  - 130
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-p2
+  role: p2
+  canonical_block: 3
+  expect: L'accès se faisait
+  bbox_px:
+  - 42
+  - 630
+  - 340
+  - 120
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-carte
+  role: carte
+  canonical_block: 4
+  expect: CARTE
+  bbox_px:
+  - 187
+  - 1078
+  - 120
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-localisation
+  role: localisation
+  canonical_block: 5
+  expect: LOCALISATION
+  bbox_px:
+  - 485
+  - 1080
+  - 180
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-lat
+  role: lat
+  canonical_block: 6
+  expect: 'Lat:'
+  bbox_px:
+  - 478
+  - 1114
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-lng
+  role: lng
+  canonical_block: 7
+  expect: 'Lng:'
+  bbox_px:
+  - 478
+  - 1136
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-google_maps
+  role: google_maps
+  canonical_block: 8
+  expect: GOOGLE MAPS
+  bbox_px:
+  - 800
+  - 1080
+  - 170
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-scan
+  role: scan
+  canonical_block: 9
+  expect: Scannez pour y aller
+  bbox_px:
+  - 790
+  - 1253
+  - 180
+  - 15
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-mappe_sarde
+  role: mappe_sarde
+  canonical_block: 10
+  expect: MAPPE SARDE
+  bbox_px:
+  - 100
+  - 1272
+  - 880
+  - 24
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-box_title
+  role: box_title
+  canonical_block: 11
+  expect: CARACTÉRISTIQUES
+  bbox_px:
+  - 340
+  - 1318
+  - 300
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-b1
+  role: b1
+  canonical_block: 12
+  expect: • Plan carré
+  bbox_px:
+  - 100
+  - 1340
+  - 390
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-b2
+  role: b2
+  canonical_block: 13
+  expect: • Hauteur
+  bbox_px:
+  - 100
+  - 1368
+  - 390
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-b3
+  role: b3
+  canonical_block: 14
+  expect: • Propriété
+  bbox_px:
+  - 100
+  - 1396
+  - 390
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/11.yaml:canonical_text
+functional_objects:
+- id: P11-F-google_maps
+  object_class: qr
+  source_bbox_px:
+  - 781
+  - 1122
+  - 137
+  - 129
+  parent_region: R03
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-11-google-maps.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+structural_frames:
+- id: P11-FR01
+  kind: rect
+  bbox_px:
+  - 30
+  - 1063
+  - 995
+  - 205
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P11-FR02
+  kind: line
+  bbox_px:
+  - - 410
+    - 1063
+  - - 410
+    - 1268
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P11-FR03
+  kind: line
+  bbox_px:
+  - - 720
+    - 1063
+  - - 720
+    - 1268
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P11-FR04
+  kind: rect
+  bbox_px:
+  - 30
+  - 1268
+  - 995
+  - 34
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P11-FR05
+  kind: rect
+  bbox_px:
+  - 30
+  - 1310
+  - 995
+  - 152
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant
+  - fragment: heraldry_captioned
+    description: légende des armoiries
+  - fragment: callout_box_captioned
+    description: 'cartouche « Tour carrée médiévale / 4 étages / Hauteur : environ 12 m »'
+  - fragment: tower_ladder_captioned
+    description: annotations de la coupe (Porte d'accès au 1er étage, Échelle amovible (retirée en cas d'attaque), Entrée
+      au rez-de-chaussée)
+  - fragment: valley_box_captioned
+    description: titre « Vue sur la vallée du Bugeon » et toponymes (Le Cruet, Le Bugeon)
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  canonical_text_differs_from_raster:
+  - le raster montre deux intertitres (« Sentinelle au coeur de la vallée », « Un dispositif défensif classique ») absents
+    de canonical_text ; non recomposés
+  - le raster prolonge le bloc 2 par « …pour contrôler les voies de communication et protéger leurs terres. » absent du canon
+    ; le canon prévaut
+  - le raster coupe le bloc 3 en deux paragraphes ; composé en un bloc
+  - 'le raster porte un résidu « ler » sous le QR (défaut de l''ancienne page) : disparaît, le texte « Scannez pour y aller
+    » est vivant'
+  canonical_text_not_visible_in_raster: []
+completeness_gate:
+  status: PASS
+  blocked_fragments: []
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE

@@ -1014,7 +1014,9 @@ qr:
   light: '#FFFFFF'
   quiet_zone_modules: 4
   exact_payload_lock: true
-fonts: {}
+fonts:
+  base14: [Times-Roman, Times-Bold, Times-Italic]  # provisional, project font still to lock (ASSET_SPEC §7)
+  DejaVuSerif: {use: 'page 15 subtitle (U+1D49)', licence: 'DejaVu Fonts License (Bitstream Vera derivative)', source: system fonts-dejavu-core}
 build_contract:
   text_source: pages/NN.yaml:canonical_text
   illustrations_must_be_text_free: true
@@ -1042,3 +1044,138 @@ phase_b_lot_2:
     page_10_castle_reconstruction_svg: produced_pending_geometry_review
     page_10_plan_documentary_trace_svg: blocked_rights
     association_logo_svg: blocked_source_missing
+
+layered_compositions:
+  status: release_candidate  # 15 of 16 pages composed and validated; page 04 raster fallback (editorial lock)
+  composer: scripts/layered_compose.py
+  measurement: scripts/layered_measure.py
+  inventory: scripts/layered_inventory.py
+  validation: scripts/validate_layered.py
+  build: scripts/build_layered.py
+  build_validation: scripts/validate_built_layered.py
+  shared_text_styles: prototypes/_shared/text-styles.yaml
+  pipeline: background -> raster_fragments -> documentary_vectors -> text_layer -> functional_overlay
+  resolution_policy: gates 300 ppi continuous tone / 1200 ppi line art at final size; provisional Lanczos upscale declared per composition (gkerma, 2026-09-09), sketches to be regenerated in HD
+  pages:
+  - page: 1
+    composition: prototypes/page-01/composition.yaml
+    composition_sha256: 1cd4500f1aa52209046a49a00148085c74d2facdea575649fc89c857e26ddf1c
+    fragment_lock: prototypes/page-01/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 185.78
+    effective_ppi_a5_after_upscale: 300.97
+  - page: 2
+    composition: prototypes/page-02/composition.yaml
+    composition_sha256: bc4c0dee17a5218dc1f97d4e2e805546f49317ba15e0dd7c64b7fe93c0af2adf
+    fragment_lock: prototypes/page-02/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 185.78
+    effective_ppi_a5_after_upscale: 300.97
+  - page: 3
+    composition: prototypes/page-03/composition.yaml
+    composition_sha256: 5fbee9f3e22ffb6f7eee902661c50acdefe7459de2ce0071b9ceac89fe761ff7
+    fragment_lock: prototypes/page-03/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 185.78
+    effective_ppi_a5_after_upscale: 300.97
+  - page: 5
+    composition: prototypes/page-05/composition.yaml
+    composition_sha256: 2b0bf4a9bcf430d40c6f3f7e7658a2021e8ff0727d7cb15b0724994c9bb25f0a
+    fragment_lock: prototypes/page-05/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 185.78
+    effective_ppi_a5_after_upscale: 300.97
+  - page: 6
+    composition: prototypes/page-06/composition.yaml
+    composition_sha256: 8a36d8ee030bb7b997c2723bb224bf96765ba796dec33f0385a2b7213cf04178
+    fragment_lock: prototypes/page-06/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 185.78
+    effective_ppi_a5_after_upscale: 300.97
+  - page: 7
+    composition: prototypes/page-07/composition.yaml
+    composition_sha256: 1b9c3c536df1a31de94f86dcafd6821f60bb3d4b75823014cd41b20ff7fe392f
+    fragment_lock: prototypes/page-07/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 185.78
+    effective_ppi_a5_after_upscale: 300.97
+  - page: 8
+    composition: prototypes/page-08/composition.yaml
+    composition_sha256: 705617d7daec5291085b14c7d38fb44f6d9fb7e86bb329bbacd73cdc2d515bb2
+    fragment_lock: prototypes/page-08/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 185.78
+    effective_ppi_a5_after_upscale: 300.97
+  - page: 9
+    composition: prototypes/page-09/composition.yaml
+    composition_sha256: 7ce3fd8d6a7c67da44e6d7dcb1356d2642edcb87e2e34833f52948547119b60b
+    fragment_lock: prototypes/page-09/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 185.78
+    effective_ppi_a5_after_upscale: 300.97
+  - page: 10
+    composition: prototypes/page-10/composition.yaml
+    composition_sha256: bd80365f3647f114ef4e68d3a85cac19637fbf0fe40a522fa438b6a852444d48
+    fragment_lock: prototypes/page-10/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 181.06
+    effective_ppi_a5_after_upscale: 300.56
+  - page: 11
+    composition: prototypes/page-11/composition.yaml
+    composition_sha256: f294486dd1cc426dbe2613bc3e07eebc64ae6b915e810cec9d899faa3ff21df3
+    fragment_lock: prototypes/page-11/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 181.06
+    effective_ppi_a5_after_upscale: 300.56
+  - page: 12
+    composition: prototypes/page-12/composition.yaml
+    composition_sha256: c955f17609d576a28b6d92d2c7666b14bddc9731a9c071384f961718cc454973
+    fragment_lock: prototypes/page-12/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 181.06
+    effective_ppi_a5_after_upscale: 300.56
+  - page: 13
+    composition: prototypes/page-13/composition.yaml
+    composition_sha256: 6c2c1d8a179310b7a6f3a59bee71fcc744feb97d8b0dffe4de261890e7b2233e
+    fragment_lock: prototypes/page-13/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 181.06
+    effective_ppi_a5_after_upscale: 300.56
+  - page: 14
+    composition: prototypes/page-14/composition.yaml
+    composition_sha256: ffdb323952628991b11002f41444690b557937c6c2b6f8417b10c10abc689fd8
+    fragment_lock: prototypes/page-14/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 181.06
+    effective_ppi_a5_after_upscale: 300.56
+  - page: 15
+    composition: prototypes/page-15/composition.yaml
+    composition_sha256: 6c4348d5fa79580d79f5f9db77adc374dc57859990b5a64e8cad9239a63c2206
+    fragment_lock: prototypes/page-15/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
+    source_ppi_a5: 181.06
+    effective_ppi_a5_after_upscale: 300.56
+  - page: 16
+    composition: prototypes/page-16/composition.yaml
+    composition_sha256: 3c0395a4733625d5c8eb8c18558dba8dea4492c72504cbe093f7bfb3a9e0df32
+    fragment_lock: prototypes/page-16/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+    source_ppi_a5: 131.81
+    effective_ppi_a5_after_upscale: 300.52
+  excluded:
+  - {page: 4, reason: PAGE_04_EDITORIAL_ARBITRATION_REQUIRED — raster fallback in the v3 build}

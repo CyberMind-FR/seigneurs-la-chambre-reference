@@ -1,0 +1,105 @@
+# Layered v3 composition — page 02 — Les Seigneurs de La Chambre (raster 1024x1536)
+schema_version: 1
+page: 2
+title: Les Seigneurs de La Chambre
+family: history
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09 (« Go, pages 01 et 02 »)
+source: {path: assets/page-02.jpg, sha256: e6ecfa02a8d335765d1e9772d8fd28e4d3ce3a8e41ccd04b4513725843c1f2b8}
+canonical_text: {path: pages/02.yaml, key: canonical_text, expected_blocks: 25}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles: {}
+
+fragments:
+  - {id: running_head_raster,        role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 250, y: 16, w: 530, h: 26}, treatment: crop_only, note: "bandeau courant (défaut raster « Les… Seigneurs »)"}
+  - {id: heraldry_official,          role: heraldry, status: APPROVED, bbox_px: {x: 35, y: 165, w: 210, h: 236}, treatment: crop_only, note: "armoiries officielles (P02-Z01) telles que dans la page canonique ; la légende « Armoiries officielles » est un bloc canonique composé"}
+  - {id: title_ornament,             role: ornament, status: APPROVED, bbox_px: {x: 415, y: 170, w: 190, h: 30}, treatment: crop_only}
+  - {id: village_captioned,          role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 655, y: 105, w: 369, h: 430}, treatment: crop_only, mask_px: [[655, 105, 240, 17], [655, 135, 120, 28], [655, 195, 40, 166]], note: "La Chambre + légende « La Chambre, capitale et coeur de la seigneurie » ; résidus raster du titre, du sous-titre et des fins de lignes des paragraphes masqués (ciel/feuillage)"}
+  - {id: blason_box_frame,           role: ornament, status: APPROVED, bbox_px: {x: 245, y: 420, w: 440, h: 115}, treatment: crop_only, mask_px: [[256, 434, 412, 94]], note: "cadre ornemental de l'encadré BLASONNEMENT OFFICIEL ; intérieur masqué, texte canonique composé"}
+  - {id: bishop_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 35, y: 452, w: 195, h: 246}, treatment: crop_only, note: "évêque-comte + légende"}
+  - {id: cross_h1, role: ornament, status: APPROVED, bbox_px: {x: 231, y: 551, w: 19, h: 21}, treatment: crop_only}
+  - {id: seal_vicomte_captioned,     role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 41, y: 735, w: 188, h: 150}, treatment: crop_only, note: "sceau + légende « Sceau d'un vicomte de La Chambre (XIIIe siècle) »"}
+  - {id: cross_h2, role: ornament, status: APPROVED, bbox_px: {x: 231, y: 752, w: 18, h: 21}, treatment: crop_only}
+  - {id: knight_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 25, y: 885, w: 186, h: 310}, treatment: crop_only, note: "chevalier + légende « Une lignée chevaleresque… » + fleur de lys"}
+  - {id: cross_h3, role: ornament, status: APPROVED, bbox_px: {x: 231, y: 956, w: 19, h: 22}, treatment: crop_only}
+  - {id: cross_h4, role: ornament, status: APPROVED, bbox_px: {x: 231, y: 1112, w: 19, h: 22}, treatment: crop_only}
+  - {id: equestrian_seal_captioned,  role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 795, y: 551, w: 165, h: 178}, treatment: crop_only, note: "sceau équestre + légende « Sceau équestre (XIIe siècle) »"}
+  - {id: testament_captioned,        role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 771, y: 740, w: 236, h: 200}, treatment: crop_only, note: "testament + légende « Testament de Pierre de La Chambre (1261) »"}
+  - {id: monk_church_captioned,      role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 765, y: 925, w: 240, h: 188}, treatment: crop_only, note: "moine + couvent + légende « Couvent des Cordeliers, fondation de 1365 »"}
+  - {id: louis_medallion_captioned,  role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 775, y: 1113, w: 232, h: 102}, treatment: crop_only, note: "médaillon + légende « Louis Ier de Savoie (1402-1465) »"}
+  - {id: territory_map,              role: documentary_map, status: APPROVED, bbox_px: {x: 40, y: 1228, w: 355, h: 225}, treatment: crop_only, mask_px: [[380, 1234, 15, 22]], note: "carte du mandement avec toponymes intrinsèques ; résidu raster du « U » du titre masqué"}
+  - {id: empire_icons,               role: icon, status: APPROVED, bbox_px: {x: 467, y: 1263, w: 32, h: 162}, treatment: crop_only}
+  - {id: heraldic_banner,            role: heraldry, status: APPROVED, bbox_px: {x: 845, y: 1222, w: 141, h: 232}, treatment: crop_only}
+  - {id: footer_landscape_raster,    role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 20, y: 1430, w: 985, h: 75}, treatment: crop_only, note: "bandeau paysage + pied de page « … — 2 — »"}
+
+vectors:
+  - {kind: rect, bbox_px: [30, 1220, 960, 235], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,       block: 0,  expect: "Les Seigneurs de La Chambre", bbox_px: [130, 58, 780, 84],   style: title}
+  - {key: subtitle,    block: 1,  expect: "Les maîtres de la vallée",    bbox_px: [250, 136, 530, 36],   style: subtitle_large}
+  - {key: armoiries,   block: 2,  expect: "Armoiries officielles",       bbox_px: [45, 404, 190, 22],    style: quote}
+  - {key: p1,          block: 3,  expect: "Avant que la Maison",         bbox_px: [270, 205, 380, 104],  style: body_large}
+  - {key: p2,          block: 4,  expect: "Le comte de Foras",           bbox_px: [270, 310, 380, 108],  style: body_large_italic}
+  - {key: blason_h,    block: 5,  expect: "BLASONNEMENT OFFICIEL",       bbox_px: [258, 438, 410, 18],   style: small_bold_center}
+  - {key: blason_1,    block: 6,  expect: "« D'azur",                    bbox_px: [258, 460, 410, 18],   style: small_italic}
+  - {key: blason_2,    block: 7,  expect: "à la bande de gueules",       bbox_px: [258, 480, 410, 18],   style: small_italic}
+  - {key: blason_src,  block: 8,  expect: "Source : Amédée de FORAS",    bbox_px: [258, 506, 410, 16],   style: tiny_center}
+  - {key: h1,          block: 9,  expect: "Les origines",                bbox_px: [258, 547, 470, 26],   style: heading}
+  - {key: p3,          block: 10, expect: "Vers 1030",                   bbox_px: [232, 577, 520, 96],   style: body}
+  - {key: p4,          block: 11, expect: "Cette même année 1030",       bbox_px: [232, 677, 520, 74],   style: body}
+  - {key: h2,          block: 12, expect: "L'âge d'or",                  bbox_px: [258, 750, 470, 26],   style: heading}
+  - {key: p5,          block: 13, expect: "Richard de La Chambre",       bbox_px: [232, 780, 520, 112],  style: body}
+  - {key: p6,          block: 14, expect: "Son fils Pierre",             bbox_px: [232, 895, 520, 56],   style: body}
+  - {key: h3,          block: 15, expect: "Le siècle des fondations",    bbox_px: [258, 955, 470, 26],   style: heading}
+  - {key: p7,          block: 16, expect: "Jean II de La Chambre",       bbox_px: [232, 985, 520, 72],   style: body}
+  - {key: p8,          block: 17, expect: "En 1345",                     bbox_px: [232, 1058, 520, 50],  style: body}
+  - {key: h4,          block: 18, expect: "Le crépuscule",               bbox_px: [258, 1112, 470, 26],  style: heading}
+  - {key: p9,          block: 19, expect: "Gaspard de La Chambre",       bbox_px: [232, 1142, 520, 74],  style: body}
+  - {key: empire_h,    block: 20, expect: "UN EMPIRE TERRITORIAL",       bbox_px: [400, 1232, 340, 28],  style: heading_center}
+  - {key: e1,          block: 21, expect: "• Le mandement",              bbox_px: [505, 1270, 320, 26],  style: site_list}
+  - {key: e2,          block: 22, expect: "• Châteaux",                  bbox_px: [505, 1310, 320, 40],  style: site_list}
+  - {key: e3,          block: 23, expect: "• Titres",                    bbox_px: [505, 1355, 320, 26],  style: site_list}
+  - {key: e4,          block: 24, expect: "• Seigneuries",               bbox_px: [505, 1390, 320, 40],  style: site_list}
+
+qr: []
+
+discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon prévaut ; les textes raster absents du canon restent dans leurs fragments"}
+  raster_text_absent_from_canon:
+    - {fragment: running_head_raster, description: "bandeau courant (avec un défaut de rendu raster sur « Les »)"}
+    - {fragment: village_captioned, description: "« La Chambre, capitale et coeur de la seigneurie »"}
+    - {fragment: bishop_captioned, description: "« L'évêque-comte, maître spirituel et temporel de la Maurienne »"}
+    - {fragment: seal_vicomte_captioned, description: "« Sceau d'un vicomte de La Chambre (XIIIe siècle) »"}
+    - {fragment: knight_captioned, description: "« Une lignée chevaleresque, au service de la vallée et de l'Église. »"}
+    - {fragment: equestrian_seal_captioned, description: "« Sceau équestre (XIIe siècle) »"}
+    - {fragment: testament_captioned, description: "« Testament de Pierre de La Chambre (1261) »"}
+    - {fragment: monk_church_captioned, description: "« Couvent des Cordeliers, fondation de 1365 »"}
+    - {fragment: louis_medallion_captioned, description: "« Louis Ier de Savoie (1402-1465) »"}
+    - {fragment: territory_map, description: "toponymes intrinsèques de la carte du mandement"}
+    - {fragment: footer_landscape_raster, description: "pied de page avec folio (ancienne forme « Les Amis du Couvent… », voir corrections.yaml)"}
+  canonical_text_differs_from_raster:
+    - "le paragraphe du comte de Foras est en italique dans le raster ; le canon ne porte pas de marquage : composé en italique (style), texte identique"
+  canonical_text_not_visible_in_raster: []
+  heraldry_note: "P02-Z01 : armoiries reprises de la page canonique ; assets/svg/heraldry-la-chambre.svg reste PRODUCED_PENDING_HERALDIC_REVIEW, non utilisé"
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
+  # Upscale provisoire (décision gkerma, 2026-09-09 : « prendre en compte le dpi demandé… upscale des croquis
+  # si nécessaire ! On le régénérera ultérieurement ») : chaque fragment est rééchantillonné (Lanczos) jusqu'au
+  # gate de son type à la taille A5 ; journalisé par fragment (upscale_factor), jamais présenté comme source HD.
+  upscale: {enabled: true, approved_by: gkerma, date: '2026-09-09', max_factor: 8, note: "provisoire — croquis à régénérer en haute définition"}

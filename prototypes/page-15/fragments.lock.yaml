@@ -1,0 +1,275 @@
+schema_version: 1
+page: 15
+source: assets/page-15.jpg
+source_sha256: e2b31837f4393bbb3ccc0db4e0c523a91aa9237c165184aa7e959d555117606d
+fragments:
+  heraldry:
+    sha256: cc492be3f4193a47b13698420cfa2b154092b65f32bdd8f7dad4579047538010
+    bbox_px:
+      x: 35
+      y: 28
+      w: 170
+      h: 232
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  statue_top_right:
+    sha256: cc32b612d0761e1bf50eaa0158ef3b006ee2a33d0923b7de7dae8c180a0caff3
+    bbox_px:
+      x: 878
+      y: 25
+      w: 162
+      h: 310
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  mountains_right:
+    sha256: 9f5b59c7502c6fa88bac93c7d8ab4b2080e6243141fd4e62d3c0006b47cf5824
+    bbox_px:
+      x: 738
+      y: 150
+      w: 302
+      h: 142
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  title_ornament:
+    sha256: 11d71190645cd87ed25cbd3e26ce69ced5c38cdbabc19d03e7d31775106be5ed
+    bbox_px:
+      x: 298
+      y: 260
+      w: 460
+      h: 34
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  banner_10_sites:
+    sha256: 863bfdf42fc59c4db2076fcba16c51ed9c80815d30c79d3576712817c3f72319
+    bbox_px:
+      x: 88
+      y: 298
+      w: 785
+      h: 62
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  banner_la_chambre:
+    sha256: 1a7766943795edec2be27730b970070d6fbb2d7c2527b221a15064dce3080a03
+    bbox_px:
+      x: 40
+      y: 373
+      w: 297
+      h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  banner_ste_marie:
+    sha256: a7e6fc59166d5328a029c9ff2cb21ae267bed8aa27774ed47cfe336f6c3fe790
+    bbox_px:
+      x: 40
+      y: 518
+      w: 392
+      h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  banner_st_etienne:
+    sha256: 160a76ee41d2572e87af5ccbaee7c3330ccd9fb00a730d55406f728f9b98a131
+    bbox_px:
+      x: 40
+      y: 658
+      w: 392
+      h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  banner_nd_cruet:
+    sha256: a6be058dd3c28bd5cdad888d4ce010808321df61de7d39e42869be6f207d6cdd
+    bbox_px:
+      x: 40
+      y: 813
+      w: 392
+      h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  banner_st_remy:
+    sha256: c7a7d3e25b8c0a0bac450199054a4095012ef23c464dffe77fc913c362bc4d9b
+    bbox_px:
+      x: 40
+      y: 963
+      w: 397
+      h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  site_01:
+    sha256: 7f7cf0caf9c497d49dc124946685968e1b09a0dca467a05b33d6e3c3affe31cb
+    bbox_px:
+      x: 440
+      y: 363
+      w: 283
+      h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  site_02:
+    sha256: 7d122c6fb2e026502d1b5a9a39c9205dba85c2ab6977652632d3cd3c6f32c949
+    bbox_px:
+      x: 735
+      y: 363
+      w: 296
+      h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  site_03:
+    sha256: d075133b04ae248edbbd98f29fc9f7f87f705a074a5a788cfad1e8b40c819906
+    bbox_px:
+      x: 440
+      y: 508
+      w: 290
+      h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  site_04:
+    sha256: bd6aa500ee677df899acecad4dd328095f614785b2864346182410d87dfcf7fc
+    bbox_px:
+      x: 735
+      y: 508
+      w: 297
+      h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  site_05:
+    sha256: 9366b6820e19e75df4fd13dafb7573834dc9712fb254e745f4f8dd9c1370afe7
+    bbox_px:
+      x: 441
+      y: 648
+      w: 206
+      h: 147
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  site_06:
+    sha256: 3889b9eae93d29f45c848bdcb8d077ebb057d3700ba9f421c187d9a935c1c354
+    bbox_px:
+      x: 640
+      y: 648
+      w: 202
+      h: 147
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  site_07:
+    sha256: eefa91f2a16c8ef4ee009edf0013475b3518aa8063b7aadb709462b14112e047
+    bbox_px:
+      x: 830
+      y: 648
+      w: 207
+      h: 147
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  site_08:
+    sha256: 098bdbb8fa8b22a9f53f0b7d7ee0178c21b647e33cf286e98c7ca122efacc84d
+    bbox_px:
+      x: 441
+      y: 808
+      w: 301
+      h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  site_09:
+    sha256: ebe154ae0691d9bdf3b37ef082252ab2b7161e47e5b6f4e853002c847acf3fea
+    bbox_px:
+      x: 735
+      y: 808
+      w: 302
+      h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  site_10:
+    sha256: bffedda065becde59fdf37f094221ba5b8826a2d14f9d227f8b2f3b38ff33017
+    bbox_px:
+      x: 440
+      y: 958
+      w: 597
+      h: 122
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  cloister_arch_left:
+    sha256: b7ce51394634b920a4875494b52c593e591a7198389802236992224ae7246771
+    bbox_px:
+      x: 47
+      y: 1093
+      w: 157
+      h: 147
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  contact_icons:
+    sha256: 1e957fdaa607367691585e42ffa76605ad797da2038fa3b76ace8b6d620d3fef
+    bbox_px:
+      x: 221
+      y: 1161
+      w: 29
+      h: 80
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  cloister_right:
+    sha256: d425768253e4b3527d92cb324b6d63464d54d6ac22c7bfa68fc14972975db672
+    bbox_px:
+      x: 748
+      y: 1093
+      w: 270
+      h: 152
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
+  dark_band:
+    sha256: 3e201683c3a70f9e8598cece8a4c1f88fe51904f246009e582be1b3fa0a9704e
+    bbox_px:
+      x: 38
+      y: 1243
+      w: 980
+      h: 37
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  seal_left:
+    sha256: 42ab3749df3b9f868e24632a9a6dac0672bd2f08197ed25503915afd7b1d4337
+    bbox_px:
+      x: 43
+      y: 1298
+      w: 119
+      h: 119
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  prix_fleuron:
+    sha256: f735ff8e8563296a716e290e0cd4d1f62f42cda84da14d300c18af2cb49a55fd
+    bbox_px:
+      x: 888
+      y: 1408
+      w: 64
+      h: 27
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
+  bottom_ornament:
+    sha256: 90d04130e70e70d41f47b7aa8a54c1a6f7c9770514b9b35282c23a4f1c16d3c3
+    bbox_px:
+      x: 298
+      y: 1428
+      w: 455
+      h: 52
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
