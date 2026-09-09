@@ -1,0 +1,662 @@
+#!/usr/bin/env python3
+"""Generic YAML-driven layered composer for the v3 pipeline.
+
+    background -> raster fragments -> documentary vectors -> live canonical text -> deterministic QR
+
+Usage:
+    python scripts/layered_compose.py 3                      # uses prototypes/page-03/composition.yaml
+    python scripts/layered_compose.py 5 --write-lock         # also records fragment SHA lock file
+
+Everything page-specific lives in the composition YAML: page geometry, background, fragment
+list (source bbox / destination bbox / treatment), vectors, text styles, text blocks mapped to
+canonical_text blocks, QR overlays and validation rules. The script contains no per-page logic.
+
+Guarantees:
+  * the canonical raster is never modified and its SHA-256 is verified;
+  * no OCR: text comes only from pages/NN.yaml:canonical_text;
+  * QR payloads come only from the page spec / qr_registry.yaml and are redecoded from the
+    final rendered PDF;
+  * every produced fragment gets a SHA-256, an effective-ppi measurement, and an edge-ink
+    check (a crop edge that cuts through strokes is reported, never silently accepted);
+  * live text is checked for ink collisions against every raster fragment.
+"""
+from pathlib import Path
+import argparse
+import hashlib
+import json
+import re
+import sys
+from xml.sax.saxutils import escape
+
+import cv2
+import numpy as np
+from PIL import Image, ImageDraw
+from reportlab.lib import colors
+from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT, TA_RIGHT
+from reportlab.lib.pagesizes import A1, A2, A4, A5
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.pdfgen import canvas
+from reportlab.platypus import Paragraph
+from reportlab.graphics import renderPDF
+from svglib.svglib import svg2rlg
+import yaml
+
+try:  # PyMuPDF renamed its module; support both.
+    import pymupdf as fitz
+except ImportError:  # pragma: no cover
+    import fitz
+
+ROOT = Path(__file__).resolve().parents[1]
+PAGE_SIZES = {"A5": A5, "A4": A4, "A2": A2, "A1": A1}
+ALIGN = {"left": TA_LEFT, "center": TA_CENTER, "right": TA_RIGHT, "justify": TA_JUSTIFY}
+INK_THRESHOLD = 45.0
+
+
+# ----------------------------------------------------------------------------- helpers
+def sha256(path):
+    h = hashlib.sha256()
+    with Path(path).open("rb") as f:
+        for b in iter(lambda: f.read(1 << 20), b""):
+            h.update(b)
+    return h.hexdigest()
+
+
+def normalize_ws(s):
+    return re.sub(r"\s+", " ", s or "").strip()
+
+
+def bbox_tuple(b):
+    if isinstance(b, dict):
+        return int(b["x"]), int(b["y"]), int(b["w"]), int(b["h"])
+    x, y, w, h = b
+    return int(x), int(y), int(w), int(h)
+
+
+def load_yaml(path):
+    return yaml.safe_load((ROOT / path).read_text(encoding="utf-8")) or {}
+
+
+class Geometry:
+    """Maps canonical-raster pixel coordinates to PDF points (contain-fit, centred)."""
+
+    def __init__(self, src_w, src_h, page_w, page_h):
+        self.src_w, self.src_h, self.page_w, self.page_h = src_w, src_h, page_w, page_h
+        content_h = page_h
+        content_w = content_h * src_w / src_h
+        if content_w > page_w:
+            content_w = page_w
+            content_h = content_w * src_h / src_w
+        self.ox = (page_w - content_w) / 2
+        self.oy = (page_h - content_h) / 2
+        self.scale = content_w / src_w  # points per source pixel (uniform)
+        self.content_w, self.content_h = content_w, content_h
+
+    def box(self, x, y, w, h):
+        return (self.ox + x * self.scale,
+                self.oy + (self.src_h - (y + h)) * self.scale,
+                w * self.scale, h * self.scale)
+
+    def ppi_for(self, src_px_w, dest_pt_w):
+        return src_px_w / (dest_pt_w / 72.0)
+
+
+def paper_colour(rgb):
+    f = rgb.astype(np.float32)
+    gray = f.mean(axis=2)
+    bright = f[gray > 215]
+    return np.median(bright, axis=0) if len(bright) else np.array([255.0, 255.0, 255.0], np.float32)
+
+
+def ink_mask(rgb, bg):
+    dist = np.sqrt(((rgb.astype(np.float32) - bg) ** 2).sum(axis=2))
+    return dist > INK_THRESHOLD
+
+
+# ----------------------------------------------------------------------------- composer
+class Composer:
+    def __init__(self, page, spec_path=None, out_dir=None, page_size=None, write_lock=False):
+        self.page = page
+        self.spec_path = Path(spec_path) if spec_path else ROOT / f"prototypes/page-{page:02d}/composition.yaml"
+        self.spec = yaml.safe_load(self.spec_path.read_text(encoding="utf-8"))
+        if int(self.spec.get("page", page)) != page:
+            raise SystemExit(f"composition page mismatch: {self.spec.get('page')} != {page}")
+        self.out = Path(out_dir) if out_dir else ROOT / f"dist/layered/page-{page:02d}"
+        self.out.mkdir(parents=True, exist_ok=True)
+        self.page_size_name = page_size or self.spec.get("canvas", {}).get("page_size", "A5")
+        self.page_w, self.page_h = PAGE_SIZES[self.page_size_name]
+        self.write_lock = write_lock
+        self.issues = []          # (severity, code, message)
+        self.report = {"page": page, "spec": str(self.spec_path.relative_to(ROOT)), "page_size": self.page_size_name}
+
+    # ---- sources
+    def load_sources(self):
+        page_spec = load_yaml(self.spec["canonical_text"]["path"])
+        src_rel = self.spec["source"]["path"]
+        if page_spec.get("visual_reference") != src_rel:
+            raise SystemExit(f"source path {src_rel} differs from pages/{self.page:02d}.yaml visual_reference")
+        expected = self.spec["source"].get("sha256") or page_spec["visual_reference_sha256"]
+        got = sha256(ROOT / src_rel)
+        if got != expected or got != page_spec["visual_reference_sha256"]:
+            raise SystemExit(f"canonical page-{self.page:02d} SHA mismatch: {got}")
+        self.page_spec = page_spec
+        self.src_path = ROOT / src_rel
+        self.img = Image.open(self.src_path).convert("RGB")
+        self.rgb = np.asarray(self.img)
+        self.bg = paper_colour(self.rgb)
+        self.ink = ink_mask(self.rgb, self.bg)
+        self.geom = Geometry(self.img.width, self.img.height, self.page_w, self.page_h)
+        self.report.update({
+            "source": src_rel, "source_sha256": got,
+            "source_px": [self.img.width, self.img.height],
+            "content_pt": [round(self.geom.content_w, 2), round(self.geom.content_h, 2)],
+            "source_effective_ppi": round(72.0 / self.geom.scale, 2),
+        })
+
+    def canonical_blocks(self):
+        key = self.spec["canonical_text"].get("key", "canonical_text")
+        text = self.page_spec[key]
+        blocks = [normalize_ws(b) for b in re.split(r"\n+", text) if normalize_ws(b)]
+        expected = self.spec["canonical_text"].get("expected_blocks")
+        if expected is not None and len(blocks) != int(expected):
+            raise SystemExit(f"canonical block count changed: got {len(blocks)}, expected {expected}")
+        return blocks
+
+    # ---- styles
+    def styles(self):
+        shared = load_yaml(self.spec["text_styles_from"]) if self.spec.get("text_styles_from") else {}
+        defaults = dict(shared.get("defaults", {}))
+        defaults.update(self.spec.get("text_defaults", {}))
+        merged = dict(shared.get("styles", {}))
+        for k, v in (self.spec.get("text_styles") or {}).items():
+            base = dict(merged.get(k, {}))
+            base.update(v)
+            merged[k] = base
+        self.style_defaults = defaults
+        self.style_specs = merged
+
+    def make_style(self, name, size=None):
+        s = self.style_specs[name]
+        size = size or float(s["size"])
+        leading = float(s.get("leading", size * 1.12)) * (size / float(s["size"]))
+        return ParagraphStyle(name, fontName=s.get("font", "Times-Roman"), fontSize=size, leading=leading,
+                              textColor=colors.HexColor(s.get("color", "#2f241e")), alignment=ALIGN[s.get("align", "left")])
+
+    # ---- fragments
+    def edge_ink(self, x, y, w, h):
+        sub = self.ink[y:y + h, x:x + w]
+        if sub.size == 0:
+            return {"top": 1.0, "bottom": 1.0, "left": 1.0, "right": 1.0}
+        return {"top": float(sub[0, :].mean()), "bottom": float(sub[-1, :].mean()),
+                "left": float(sub[:, 0].mean()), "right": float(sub[:, -1].mean())}
+
+    def grow_to_clean_edge(self, x, y, w, h, max_grow, eps):
+        W, H = self.img.width, self.img.height
+        grown = {"top": 0, "bottom": 0, "left": 0, "right": 0}
+        for _ in range(max_grow * 4):
+            e = self.edge_ink(x, y, w, h)
+            dirty = [k for k, v in e.items() if v > eps]
+            if not dirty:
+                break
+            moved = False
+            if "top" in dirty and grown["top"] < max_grow and y > 0:
+                y -= 1; h += 1; grown["top"] += 1; moved = True
+            if "bottom" in dirty and grown["bottom"] < max_grow and y + h < H:
+                h += 1; grown["bottom"] += 1; moved = True
+            if "left" in dirty and grown["left"] < max_grow and x > 0:
+                x -= 1; w += 1; grown["left"] += 1; moved = True
+            if "right" in dirty and grown["right"] < max_grow and x + w < W:
+                w += 1; grown["right"] += 1; moved = True
+            if not moved:
+                break
+        return (x, y, w, h), grown
+
+    def extract_fragments(self):
+        val = self.spec.get("validation", {})
+        accept = set(val.get("accept_fragment_statuses", ["APPROVED"]))
+        eps = float(val.get("edge_ink_epsilon", 0.02))
+        produced, skipped = [], []
+        frag_dir = self.out / "fragments"
+        frag_dir.mkdir(parents=True, exist_ok=True)
+        for f in self.spec.get("fragments", []):
+            if f.get("status") not in accept:
+                skipped.append({"id": f["id"], "status": f.get("status")})
+                continue
+            x, y, w, h = bbox_tuple(f["bbox_px"])
+            if min(x, y, w, h) < 0 or x + w > self.img.width or y + h > self.img.height:
+                raise SystemExit(f"invalid bbox for fragment {f['id']}")
+            before = self.edge_ink(x, y, w, h)
+            grown = {"top": 0, "bottom": 0, "left": 0, "right": 0}
+            treatment = f.get("treatment", "crop_only")
+            if treatment == "crop_grow_to_clean_edge":
+                (x, y, w, h), grown = self.grow_to_clean_edge(x, y, w, h, int(f.get("max_grow_px", 12)), eps)
+            elif treatment != "crop_only":
+                raise SystemExit(f"unknown treatment {treatment!r} for fragment {f['id']}")
+            after = self.edge_ink(x, y, w, h)
+            dirty = sorted(k for k, v in after.items() if v > eps)
+            path = frag_dir / f"{f['id']}.png"
+            crop = self.img.crop((x, y, x + w, y + h))
+            masks = []
+            for m in f.get("mask_px", []) or []:
+                # Deterministic local masking of old raster text / neighbouring objects inside the
+                # crop, filled with the measured paper colour (REGENERATION_RULES: masquage de
+                # l'ancien texte, restauration locale du fond). Recorded in fragments.json.
+                mx, my, mw, mh = bbox_tuple(m)
+                fill = tuple(int(round(v)) for v in self.bg)
+                ImageDraw.Draw(crop).rectangle((mx - x, my - y, mx - x + mw - 1, my - y + mh - 1), fill=fill)
+                masks.append({"x": mx, "y": my, "w": mw, "h": mh, "fill_rgb": list(fill)})
+            crop.save(path)
+            dest = bbox_tuple(f["dest_bbox_px"]) if f.get("dest_bbox_px") else (x, y, w, h)
+            dx, dy, dw, dh = self.geom.box(*dest)
+            ppi = self.geom.ppi_for(w, dw)
+            rec = {
+                "id": f["id"], "role": f.get("role"), "status": f.get("status"),
+                "path": str(path.relative_to(ROOT)), "sha256": sha256(path),
+                "treatment": treatment,
+                "requested_bbox_px": dict(zip("xywh", bbox_tuple(f["bbox_px"]))),
+                "bbox_px": {"x": x, "y": y, "w": w, "h": h},
+                "grown_px": grown,
+                "masks_px": masks,
+                "dest_bbox_px": dict(zip("xywh", dest)),
+                "dest_pt": [round(dx, 2), round(dy, 2), round(dw, 2), round(dh, 2)],
+                "effective_ppi": round(ppi, 2),
+                "edge_ink_before": {k: round(v, 4) for k, v in before.items()},
+                "edge_ink_after": {k: round(v, 4) for k, v in after.items()},
+                "dirty_edges": dirty,
+            }
+            if dirty:
+                self.issues.append((val.get("fragment_edge_ink", "warn"), "fragment_edge_ink",
+                                    f"fragment {f['id']} crop edge cuts through ink on {dirty}"))
+            produced.append(rec)
+        self.fragments, self.skipped_fragments = produced, skipped
+        (self.out / "fragments.json").write_text(json.dumps({"produced": produced, "skipped": skipped}, indent=2, ensure_ascii=False) + "\n")
+        return produced
+
+    # ---- drawing
+    def draw_fragments(self, c):
+        for f in self.fragments:
+            x, y, w, h = f["dest_pt"]
+            c.drawImage(str(ROOT / f["path"]), x, y, width=w, height=h, preserveAspectRatio=False, mask="auto")
+
+    def draw_vectors(self, c):
+        for v in self.spec.get("vectors", []) or []:
+            kind = v.get("kind")
+            c.saveState()
+            c.setStrokeColor(colors.HexColor(v.get("stroke", "#715240")))
+            c.setLineWidth(float(v.get("width", 0.45)))
+            if kind == "rect":
+                x, y, w, h = self.geom.box(*bbox_tuple(v["bbox_px"]))
+                fill = v.get("fill")
+                if fill:
+                    c.setFillColor(colors.HexColor(fill))
+                c.rect(x, y, w, h, fill=1 if fill else 0, stroke=1)
+            elif kind == "line":
+                (x1, y1), (x2, y2) = v["from"], v["to"]
+                ax, ay, _, _ = self.geom.box(x1, y1, 0, 0)
+                bx, by, _, _ = self.geom.box(x2, y2, 0, 0)
+                c.line(ax, ay, bx, by)
+            elif kind == "svg":
+                self.draw_svg(c, ROOT / v["path"], bbox_tuple(v["bbox_px"]))
+            else:
+                raise SystemExit(f"unknown vector kind {kind!r}")
+            c.restoreState()
+
+    def draw_svg(self, c, path, bbox):
+        d = svg2rlg(str(path))
+        if d is None or d.width <= 0 or d.height <= 0:
+            raise SystemExit(f"invalid SVG drawing {path}")
+        x, y, w, h = self.geom.box(*bbox)
+        c.saveState()
+        c.translate(x, y)
+        c.scale(w / d.width, h / d.height)
+        renderPDF.draw(d, c, 0, 0)
+        c.restoreState()
+
+    def fit_paragraph(self, text, style_name, w_pt, h_pt):
+        spec = self.style_specs[style_name]
+        fit = spec.get("fit", self.style_defaults.get("fit", "shrink"))
+        min_size = float(spec.get("min_size", self.style_defaults.get("min_size", 4.6)))
+        step = float(spec.get("shrink_step", self.style_defaults.get("shrink_step", 0.2)))
+        size = float(spec["size"])
+        while True:
+            style = self.make_style(style_name, size)
+            p = Paragraph(escape(text), style)
+            _, ah = p.wrap(w_pt, 10000)
+            if ah <= h_pt + 0.01 or fit != "shrink" or size - step < min_size:
+                return p, size, ah
+            size = round(size - step, 3)
+
+    def draw_text(self, c, blocks):
+        val = self.spec.get("validation", {})
+        assigned, drawn = {}, []
+        for tb in self.spec.get("text_blocks", []):
+            idx = int(tb["block"])
+            if idx in assigned:
+                raise SystemExit(f"canonical block {idx} assigned twice ({assigned[idx]} and {tb['key']})")
+            if not 0 <= idx < len(blocks):
+                raise SystemExit(f"text block {tb['key']}: canonical block {idx} out of range")
+            assigned[idx] = tb["key"]
+            text = blocks[idx]
+            expect = tb.get("expect")
+            if expect and not text.startswith(normalize_ws(expect)):
+                raise SystemExit(f"text block {tb['key']}: canonical block {idx} no longer starts with {expect!r}: {text[:60]!r}")
+            bx, by, bw, bh = bbox_tuple(tb["bbox_px"])
+            x, y, w, h = self.geom.box(bx, by, bw, bh)
+            p, size, ah = self.fit_paragraph(text, tb["style"], w, h)
+            valign = tb.get("valign", "top")
+            top = y + h if valign == "top" else y + h - (h - ah) / 2 if valign == "middle" else y + ah
+            p.drawOn(c, x, top - ah)
+            overflow = ah > h + 0.01
+            drawn_px_h = ah / self.geom.scale
+            drawn_px_y = by + (h - (top - y)) / self.geom.scale
+            rec = {"key": tb["key"], "block": idx, "style": tb["style"], "font_size": size,
+                   "bbox_px": {"x": bx, "y": by, "w": bw, "h": bh},
+                   "drawn_px": {"x": bx, "y": int(round(drawn_px_y)), "w": bw, "h": int(round(drawn_px_h))},
+                   "overflow": overflow, "text_preview": text[:60]}
+            if overflow:
+                self.issues.append((val.get("text_overflow", "warn"), "text_overflow",
+                                    f"text block {tb['key']} overflows its bbox ({ah:.1f}pt > {h:.1f}pt at {size}pt)"))
+            drawn.append(rec)
+        missing = [i for i in range(len(blocks)) if i not in assigned]
+        if missing and val.get("all_blocks_assigned", True):
+            raise SystemExit(f"canonical blocks not assigned to any text block: {missing}")
+        self.text_drawn = drawn
+        return drawn
+
+    def qr_boxes(self):
+        canvas_ref = self.spec.get("canvas", {}).get("qr_reference_canvas", [1920, 2880])
+        registry = load_yaml(self.spec.get("qr_registry", "qr_registry.yaml"))
+        page_reg = registry.get("pages", {}).get(f"{self.page:02d}", {}).get("qrs", [])
+        page_qrs = {q["id"]: q for q in (self.page_spec.get("qr", {}).get("qrs") or [])}
+        out = []
+        for q in self.spec.get("qr", []) or []:
+            spec_q = page_qrs.get(q["id"])
+            reg_q = next((r for r in page_reg if r["id"] == q["id"]), None)
+            if spec_q is None or reg_q is None:
+                raise SystemExit(f"QR {q['id']} missing from pages/{self.page:02d}.yaml or qr_registry.yaml")
+            if spec_q["payload"] != reg_q["payload"]:
+                raise SystemExit(f"QR {q['id']} payload differs between page spec and registry")
+            if q.get("placement", "reference_canvas") == "reference_canvas":
+                p = spec_q["placement_px"]
+                rw, rh = canvas_ref
+                bbox = (round(p["x"] * self.img.width / rw), round(p["y"] * self.img.height / rh),
+                        round(p["w"] * self.img.width / rw), round(p["h"] * self.img.height / rh))
+            else:
+                bbox = bbox_tuple(q["bbox_px"])
+            out.append({"id": q["id"], "svg": q["svg"], "payload": spec_q["payload"], "bbox_px": dict(zip("xywh", bbox))})
+        return out
+
+    def draw_qr(self, c, qrs):
+        for q in qrs:
+            self.draw_svg(c, ROOT / q["svg"], bbox_tuple(q["bbox_px"]))
+
+    def render_layers(self, pdf, blocks, qrs, only=None, record_text=True):
+        c = canvas.Canvas(str(pdf), pagesize=(self.page_w, self.page_h), pageCompression=1)
+        c.setTitle(self.spec.get("pdf_title", f"Composition v3 multicouche - Page {self.page:02d}"))
+        c.setAuthor(self.spec.get("pdf_author", "Les Amis du Couvent des Cordeliers de La Chambre"))
+        order = self.spec.get("layer_order", ["background", "raster_fragments", "documentary_vectors", "text_layer", "functional_overlay"])
+        if order[-1] != "functional_overlay":
+            raise SystemExit("functional_overlay (QR) must be the last layer")
+        for layer in order:
+            if only is not None and layer not in only:
+                continue
+            if layer == "background":
+                c.setFillColor(colors.HexColor(self.spec.get("canvas", {}).get("background", "#fffdf7")))
+                c.rect(0, 0, self.page_w, self.page_h, fill=1, stroke=0)
+            elif layer == "raster_fragments":
+                self.draw_fragments(c)
+            elif layer == "documentary_vectors":
+                self.draw_vectors(c)
+            elif layer == "text_layer":
+                saved = getattr(self, "text_drawn", None)
+                self.draw_text(c, blocks)
+                if not record_text and saved is not None:
+                    self.text_drawn = saved
+            elif layer == "functional_overlay":
+                self.draw_qr(c, qrs)
+            else:
+                raise SystemExit(f"unknown layer {layer!r}")
+        c.showPage()
+        c.save()
+        return pdf
+
+    def compose(self):
+        blocks = self.canonical_blocks()
+        self.styles()
+        self.extract_fragments()
+        qrs = self.qr_boxes()
+        pdf = self.render_layers(self.out / f"page-{self.page:02d}-layered-proof.pdf", blocks, qrs)
+        # Diagnostic single-layer renders used for the ink-collision check (never distributed).
+        diag = self.out / "diagnostics"
+        diag.mkdir(exist_ok=True)
+        self.pdf_text_only = self.render_layers(diag / "text-only.pdf", blocks, qrs, only={"text_layer"}, record_text=False)
+        self.pdf_fragments_only = self.render_layers(diag / "fragments-only.pdf", blocks, qrs, only={"raster_fragments"})
+        self.pdf, self.blocks, self.qrs = pdf, blocks, qrs
+        return pdf
+
+    # ---- validation
+    def layer_ink(self, pdf, zoom=3):
+        page = fitz.open(pdf)[0]
+        pix = page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), alpha=False)
+        arr = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)[:, :, :3].astype(np.float32)
+        bg = np.array(colors.HexColor(self.spec.get("canvas", {}).get("background", "#fffdf7")).rgb()) * 255.0
+        return np.sqrt(((arr - bg) ** 2).sum(axis=2)) > INK_THRESHOLD, zoom
+
+    def text_collisions(self):
+        """Pixels where rendered live text overlaps ink of a rendered raster fragment.
+
+        Computed from single-layer renders of the same composition, so centred titles, glyph
+        shapes and destination scaling are all taken into account exactly.
+        """
+        val = self.spec.get("validation", {})
+        mode = val.get("text_ink_collision", "warn")
+        min_px = int(val.get("text_ink_collision_min_px", 40))
+        text_ink, zoom = self.layer_ink(self.pdf_text_only)
+        frag_ink, _ = self.layer_ink(self.pdf_fragments_only)
+        frag_ink = cv2.morphologyEx(frag_ink.astype(np.uint8), cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))) > 0
+        text_ink = cv2.dilate(text_ink.astype(np.uint8), cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))) > 0
+        both = text_ink & frag_ink
+        # min_px is expressed in source-raster pixels; convert to render pixels.
+        render_px_per_src = self.geom.scale * zoom
+        min_render_px = min_px * render_px_per_src * render_px_per_src
+
+        def render_rect(bx, by, bw, bh):
+            x, y, w, h = self.geom.box(bx, by, bw, bh)
+            x0 = int(x * zoom); y0 = int((self.page_h - (y + h)) * zoom)
+            return x0, y0, int(w * zoom) + 1, int(h * zoom) + 1
+
+        out = []
+        for t in self.text_drawn:
+            d = t["drawn_px"]
+            x0, y0, w, h = render_rect(d["x"], d["y"], d["w"], d["h"])
+            region = both[y0:y0 + h, x0:x0 + w]
+            hits = int(region.sum())
+            if hits < min_render_px:
+                continue
+            for f in self.fragments:
+                fb = f["dest_bbox_px"]
+                fx0, fy0, fw, fh = render_rect(fb["x"], fb["y"], fb["w"], fb["h"])
+                ix0, iy0 = max(x0, fx0), max(y0, fy0)
+                ix1, iy1 = min(x0 + w, fx0 + fw), min(y0 + h, fy0 + fh)
+                if ix1 <= ix0 or iy1 <= iy0:
+                    continue
+                n = int(both[iy0:iy1, ix0:ix1].sum())
+                if n < min_render_px:
+                    continue
+                src_px = int(round(n / (render_px_per_src ** 2)))
+                ys, xs = np.nonzero(both[iy0:iy1, ix0:ix1])
+                ox = (ix0 + xs.min()) / zoom; oy = (iy0 + ys.min()) / zoom
+                ow = (xs.max() - xs.min() + 1) / zoom; oh = (ys.max() - ys.min() + 1) / zoom
+                sx = int((ox - self.geom.ox) / self.geom.scale); sy = int((oy - self.geom.oy) / self.geom.scale)
+                out.append({"text": t["key"], "fragment": f["id"], "ink_px": src_px,
+                            "overlap_px": [sx, sy, int(ow / self.geom.scale) + 1, int(oh / self.geom.scale) + 1]})
+                self.issues.append((mode, "text_ink_collision", f"text {t['key']} overlaps {src_px}px of ink in fragment {f['id']}"))
+        return out
+
+    def text_qr_overlaps(self):
+        """Live text must never enter a QR placement box.
+
+        The registry QR SVGs embed their 4-module quiet zone (assets/qr-svg/manifest.yaml), so the
+        placement bbox already contains it; `qr_quiet_zone_fraction` adds an optional extra margin.
+        """
+        val = self.spec.get("validation", {})
+        mode = val.get("text_qr_overlap", "fail")
+        margin = float(val.get("qr_quiet_zone_fraction", 0.0))
+        out = []
+        for q in self.qrs:
+            b = q["bbox_px"]
+            mx, my = b["w"] * margin, b["h"] * margin
+            qx0, qy0, qx1, qy1 = b["x"] - mx, b["y"] - my, b["x"] + b["w"] + mx, b["y"] + b["h"] + my
+            for t in self.text_drawn:
+                d = t["drawn_px"]
+                if d["x"] < qx1 and d["x"] + d["w"] > qx0 and d["y"] < qy1 and d["y"] + d["h"] > qy0:
+                    out.append({"text": t["key"], "qr": q["id"]})
+                    self.issues.append((mode, "text_qr_overlap", f"text {t['key']} enters the quiet zone of QR {q['id']}"))
+        return out
+
+    def decode_qr(self, page, q, zoom=4):
+        b = q["bbox_px"]
+        margin = max(8, b["w"] // 4)
+        x, y, w, h = self.geom.box(b["x"] - margin, b["y"] - margin, b["w"] + 2 * margin, b["h"] + 2 * margin)
+        clip = fitz.Rect(x, self.page_h - (y + h), x + w, self.page_h - y)
+        pix = page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), clip=clip, alpha=False)
+        arr = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)[:, :, :3]
+        decoded, _, _ = cv2.QRCodeDetector().detectAndDecode(cv2.cvtColor(arr, cv2.COLOR_RGB2BGR))
+        return decoded
+
+    def validate(self):
+        val = self.spec.get("validation", {})
+        doc = fitz.open(self.pdf)
+        if len(doc) != 1:
+            raise SystemExit("proof must have exactly one page")
+        page = doc[0]
+        text = normalize_ws(page.get_text("text"))
+        missing = [b for b in self.blocks if normalize_ws(b) not in text]
+        pix = page.get_pixmap(matrix=fitz.Matrix(4, 4), alpha=False)
+        render = self.out / f"page-{self.page:02d}-layered-proof-render.png"
+        pix.save(render)
+        qr_results = []
+        for q in self.qrs:
+            decoded = self.decode_qr(page, q)
+            qr_results.append({"id": q["id"], "expected": q["payload"], "decoded": decoded, "pass": decoded == q["payload"]})
+        collisions = self.text_collisions()
+        qr_overlaps = self.text_qr_overlaps()
+        gates = val.get("min_effective_ppi", {"A5": 300})
+        gate = float(gates.get(self.page_size_name, 300))
+        ppi_min = min([f["effective_ppi"] for f in self.fragments], default=self.report["source_effective_ppi"])
+        frag_sha_pass = all((ROOT / f["path"]).exists() and sha256(ROOT / f["path"]) == f["sha256"] for f in self.fragments)
+        lock = self.lock_check()
+        fails = [i for i in self.issues if i[0] == "fail"]
+        warns = [i for i in self.issues if i[0] != "fail"]
+        text_pass, qr_pass = not missing, all(r["pass"] for r in qr_results)
+        review = "PENDING_HUMAN_REVIEW" if any(f["status"] != "APPROVED" for f in self.fragments) else "REVIEWED"
+        if not (text_pass and qr_pass and frag_sha_pass) or fails:
+            gate_status = "FAIL"
+        elif ppi_min < gate:
+            gate_status = "PASS_WITH_RESOLUTION_BLOCKER"
+        else:
+            gate_status = "PASS"
+        metrics = {
+            "page": self.page, "pdf": str(self.pdf.relative_to(ROOT)), "pdf_sha256": sha256(self.pdf),
+            "render": str(render.relative_to(ROOT)),
+            "canonical_text_paragraphs": len(self.blocks), "canonical_text_missing_from_pdf": missing,
+            "text_layer_pass": text_pass,
+            "qr": qr_results, "qr_decode_pass": qr_pass,
+            "fragment_count": len(self.fragments), "fragment_sha_pass": frag_sha_pass,
+            "fragments_skipped": self.skipped_fragments,
+            "fragment_effective_ppi_min": round(ppi_min, 2),
+            "resolution_gate": {"page_size": self.page_size_name, "gate_ppi": gate, "pass": ppi_min >= gate},
+            "text_ink_collisions": collisions,
+            "text_qr_overlaps": qr_overlaps,
+            "dirty_fragment_edges": [{"id": f["id"], "edges": f["dirty_edges"], "grown_px": f["grown_px"]} for f in self.fragments if f["dirty_edges"]],
+            "text_overflow": [t["key"] for t in self.text_drawn if t["overflow"]],
+            "fragment_lock": lock,
+            "issues": [{"severity": s, "code": c, "message": m} for s, c, m in self.issues],
+            "review_status": review,
+            "methodology_gate": gate_status,
+        }
+        (self.out / "proof-validation.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False) + "\n")
+        self.report.update({"fragments": self.fragments, "text_blocks": self.text_drawn, "qr": self.qrs})
+        (self.out / "composition-report.json").write_text(json.dumps(self.report, indent=2, ensure_ascii=False) + "\n")
+        self.diagnostics(render, collisions)
+        return metrics, fails, warns
+
+    def lock_check(self):
+        lock_path = self.spec_path.parent / "fragments.lock.yaml"
+        current = {f["id"]: {"sha256": f["sha256"], "bbox_px": f["bbox_px"]} for f in self.fragments}
+        if self.write_lock:
+            lock_path.write_text(yaml.safe_dump({
+                "schema_version": 1, "page": self.page, "source": self.report["source"],
+                "source_sha256": self.report["source_sha256"], "fragments": current,
+            }, allow_unicode=True, sort_keys=False), encoding="utf-8")
+            return {"path": str(lock_path.relative_to(ROOT)), "written": True, "match": True}
+        if not lock_path.exists():
+            return {"path": str(lock_path.relative_to(ROOT)), "exists": False, "match": None}
+        lock = yaml.safe_load(lock_path.read_text(encoding="utf-8")) or {}
+        diffs = [k for k, v in current.items() if lock.get("fragments", {}).get(k) != v]
+        diffs += [k for k in lock.get("fragments", {}) if k not in current]
+        if diffs and self.spec.get("validation", {}).get("fragment_lock", "warn") == "fail":
+            self.issues.append(("fail", "fragment_lock", f"fragment lock mismatch: {diffs}"))
+        elif diffs:
+            self.issues.append(("warn", "fragment_lock", f"fragment lock mismatch: {diffs}"))
+        return {"path": str(lock_path.relative_to(ROOT)), "exists": True, "match": not diffs, "diff": diffs}
+
+    def diagnostics(self, render_path, collisions):
+        """Overlay of all boxes on the rendered proof + side-by-side comparison with the canonical page."""
+        render = Image.open(render_path).convert("RGB")
+        sx = render.width / self.page_w
+        sy = render.height / self.page_h
+        draw = ImageDraw.Draw(render)
+
+        def rect_px(bx, by, bw, bh, colour, width=2):
+            x, y, w, h = self.geom.box(bx, by, bw, bh)
+            draw.rectangle((x * sx, (self.page_h - (y + h)) * sy, (x + w) * sx, (self.page_h - y) * sy), outline=colour, width=width)
+
+        for f in self.fragments:
+            d = f["dest_bbox_px"]
+            rect_px(d["x"], d["y"], d["w"], d["h"], (220, 30, 30))
+        for t in self.text_drawn:
+            d = t["drawn_px"]
+            rect_px(d["x"], d["y"], d["w"], d["h"], (30, 60, 220))
+        for q in self.qrs:
+            b = q["bbox_px"]
+            rect_px(b["x"], b["y"], b["w"], b["h"], (30, 160, 30))
+        for col in collisions:
+            x, y, w, h = col["overlap_px"]
+            rect_px(x, y, w, h, (255, 0, 255), 4)
+        render.save(self.out / f"page-{self.page:02d}-layered-proof-overlay.png")
+
+        h = 1200
+        left = self.img.resize((round(self.img.width * h / self.img.height), h))
+        right = Image.open(render_path).convert("RGB")
+        right = right.resize((round(right.width * h / right.height), h))
+        sheet = Image.new("RGB", (left.width + right.width + 30, h + 30), "white")
+        sheet.paste(left, (10, 20)); sheet.paste(right, (left.width + 20, 20))
+        d = ImageDraw.Draw(sheet)
+        d.text((10, 4), "canonical reference", fill="black")
+        d.text((left.width + 20, 4), f"layered proof {self.page_size_name}", fill="black")
+        sheet.save(self.out / f"page-{self.page:02d}-compare.jpg", quality=88)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("page", type=int)
+    ap.add_argument("--spec", default=None)
+    ap.add_argument("--out", default=None)
+    ap.add_argument("--page-size", default=None, choices=sorted(PAGE_SIZES))
+    ap.add_argument("--write-lock", action="store_true", help="write prototypes/page-NN/fragments.lock.yaml")
+    args = ap.parse_args()
+    comp = Composer(args.page, args.spec, args.out, args.page_size, args.write_lock)
+    comp.load_sources()
+    comp.compose()
+    metrics, fails, warns = comp.validate()
+    print(json.dumps({k: v for k, v in metrics.items() if k not in ("fragments_skipped",)}, indent=2, ensure_ascii=False))
+    for s, code, msg in warns:
+        print(f"WARN [{code}] {msg}", file=sys.stderr)
+    for s, code, msg in fails:
+        print(f"FAIL [{code}] {msg}", file=sys.stderr)
+    if metrics["methodology_gate"] == "FAIL":
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

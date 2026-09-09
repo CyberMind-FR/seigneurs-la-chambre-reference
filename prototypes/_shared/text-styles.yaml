@@ -1,0 +1,20 @@
+# Shared text styles for the layered v3 composer (site-page family).
+# Fonts: PDF base-14 Times is used until the project records its licensed font choice
+# (assets/ASSET_SPEC.md §7 item 6). Colours follow style.yaml (sepia body, red-brown titles).
+# A page composition may override any style locally under its own `text_styles:` key.
+schema_version: 1
+defaults:
+  fit: shrink          # shrink font size (down to min_size) until the block fits its bbox
+  min_size: 4.6
+  shrink_step: 0.2
+styles:
+  title:      {font: Times-Bold,   size: 20.5, leading: 21.0, color: "#3f2d23", align: center}
+  subtitle:   {font: Times-Italic, size: 9.8,  leading: 10.4, color: "#8b2e2e", align: center}
+  heading:    {font: Times-Bold,   size: 9.4,  leading: 10.2, color: "#8b2e2e", align: left}
+  body:       {font: Times-Roman,  size: 6.15, leading: 7.05, color: "#2f241e", align: justify}
+  small:      {font: Times-Roman,  size: 5.8,  leading: 6.5,  color: "#2f241e", align: left}
+  small_bold: {font: Times-Bold,   size: 6.1,  leading: 6.8,  color: "#2f241e", align: left}
+  tiny:       {font: Times-Roman,  size: 5.3,  leading: 5.8,  color: "#2f241e", align: left}
+  box_title:  {font: Times-Bold,   size: 6.4,  leading: 7.0,  color: "#8b2e2e", align: center}
+  quote:      {font: Times-Italic, size: 7.2,  leading: 8.2,  color: "#8b2e2e", align: center}
+  band:       {font: Times-Italic, size: 5.6,  leading: 6.2,  color: "#3f2d23", align: center}
