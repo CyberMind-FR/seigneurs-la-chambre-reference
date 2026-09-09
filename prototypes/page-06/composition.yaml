@@ -1,0 +1,91 @@
+# Layered v3 composition — page 06 — La Tour de Burgin (site-page family)
+schema_version: 1
+page: 6
+title: La Tour de Burgin
+family: site
+status: INSPECTED_PENDING_HUMAN_REVIEW
+source: {path: assets/page-06.jpg, sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031}
+canonical_text: {path: pages/06.yaml, key: canonical_text, expected_blocks: 17}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles:
+  title: {size: 22.0, leading: 22.5}
+
+fragments:
+  - {id: heraldry_captioned,       role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 40,  y: 30,   w: 135, h: 252}, treatment: crop_only}
+  - {id: sky_patch_top_right,      role: documentary_illustration,                status: INSPECTED, bbox_px: {x: 852, y: 36,   w: 148, h: 104}, treatment: crop_only, note: "ciel de la vue principale qui remonte à droite du titre"}
+  - {id: hero_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 481, y: 140, w: 520, h: 650}, treatment: crop_only, mask_px: [[481, 140, 313, 27], [481, 712, 45, 50]], note: "tour + paysage + callouts « Manoir de Châtel-André », « Emplacement de la Tour de Burgin » ; résidus raster du sous-titre (ciel) et des fins de lignes du paragraphe 3 (herbe) masqués"}
+  - {id: title_ornament,           role: ornament,                                status: INSPECTED, bbox_px: {x: 276, y: 190,  w: 433, h: 30},  treatment: crop_only}
+  - {id: cross_h1,                 role: ornament,                                status: INSPECTED, bbox_px: {x: 40,  y: 302,  w: 24,  h: 26},  treatment: crop_only}
+  - {id: cross_h2,                 role: ornament,                                status: INSPECTED, bbox_px: {x: 40,  y: 676,  w: 24,  h: 26},  treatment: crop_only}
+  - {id: cross_h3,                 role: ornament,                                status: INSPECTED, bbox_px: {x: 40,  y: 900,  w: 24,  h: 26},  treatment: crop_only}
+  - {id: du_pont_blason_captioned, role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 526, y: 678,  w: 146, h: 224}, treatment: crop_only, note: "armoiries DU PONT + cartouche raster"}
+  - {id: berthollet_portrait_captioned, role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 501, y: 910, w: 181, h: 212}, treatment: crop_only}
+  - {id: vestiges_box_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 700, y: 795, w: 290, h: 318}, treatment: crop_only, note: "encadré « Vestiges aujourd'hui » + citation Chapier (raster, absents du canon)"}
+  - {id: map_document,             role: documentary_map,                         status: INSPECTED, bbox_px: {x: 40,  y: 1145, w: 359, h: 193}, treatment: crop_only, mask_px: [[218, 1145, 64, 20]], note: "carte + rose des vents + icône ; ancien titre CARTE masqué"}
+  - {id: localization_vignette,    role: documentary_illustration,                status: INSPECTED, bbox_px: {x: 427, y: 1228, w: 259, h: 114}, treatment: crop_only}
+  - {id: pin_icon,                 role: icon, status: INSPECTED, bbox_px: {x: 473, y: 1148, w: 19, h: 26}, treatment: crop_only}
+  - {id: phone_icon,               role: icon, status: INSPECTED, bbox_px: {x: 754, y: 1148, w: 14, h: 24}, treatment: crop_only}
+  - {id: mappe_icon,               role: icon, status: INSPECTED, bbox_px: {x: 64,  y: 1356, w: 28, h: 28}, treatment: crop_only}
+  - {id: monk_bottom_left,         role: documentary_illustration, status: INSPECTED, bbox_px: {x: 40,  y: 1385, w: 140, h: 150}, treatment: crop_only}
+  - {id: fleuron_left,             role: ornament, status: INSPECTED, bbox_px: {x: 180, y: 1430, w: 53,  h: 40},  treatment: crop_only}
+  - {id: fleuron_right,            role: ornament, status: INSPECTED, bbox_px: {x: 790, y: 1430, w: 80,  h: 40},  treatment: crop_only}
+  - {id: ruins_bottom_right,       role: documentary_illustration, status: INSPECTED, bbox_px: {x: 840, y: 1385, w: 160, h: 150}, treatment: crop_only}
+
+vectors:
+  - {kind: rect, bbox_px: [30, 1132, 962, 208], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [413, 1132], to: [413, 1340], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [705, 1132], to: [705, 1340], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1340, 962, 34], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,        block: 0,  expect: "La Tour de Burgin",          bbox_px: [200, 40, 660, 76],   style: title}
+  - {key: subtitle,     block: 1,  expect: "Une demeure nobiliaire",     bbox_px: [230, 128, 580, 40],  style: subtitle}
+  - {key: h1,           block: 2,  expect: "Une tour engloutie",         bbox_px: [72, 298, 410, 30],   style: heading}
+  - {key: p1,           block: 3,  expect: "En contrebas",               bbox_px: [42, 336, 438, 122],  style: body}
+  - {key: p2,           block: 4,  expect: "Construite à la même",       bbox_px: [42, 467, 438, 162],  style: body}
+  - {key: h2,           block: 5,  expect: "Les nobles Du Pont",         bbox_px: [72, 672, 420, 30],   style: heading}
+  - {key: p3,           block: 6,  expect: "Sur les origines",           bbox_px: [42, 710, 434, 152],  style: body}
+  - {key: h3,           block: 7,  expect: "Jean Truchet",               bbox_px: [72, 897, 420, 30],   style: heading}
+  - {key: p4,           block: 8,  expect: "Au début du XVIIIe",         bbox_px: [42, 935, 448, 150],  style: body}
+  - {key: carte,        block: 9,  expect: "CARTE",                      bbox_px: [220, 1144, 120, 20], style: small_bold}
+  - {key: localisation, block: 10, expect: "LOCALISATION",               bbox_px: [498, 1147, 180, 22], style: small_bold}
+  - {key: lat,          block: 11, expect: "Lat:",                       bbox_px: [480, 1180, 180, 20], style: small}
+  - {key: lng,          block: 12, expect: "Lng:",                       bbox_px: [480, 1202, 180, 20], style: small}
+  - {key: google_maps,  block: 13, expect: "GOOGLE MAPS",                bbox_px: [776, 1147, 170, 22], style: small_bold}
+  - {key: scan,         block: 14, expect: "Scannez pour y aller",       bbox_px: [755, 1322, 180, 16], style: tiny}
+  - {key: mappe_sarde,  block: 15, expect: "MAPPE SARDE",                bbox_px: [105, 1355, 860, 24], style: tiny}
+  - {key: quote,        block: 16, expect: "« La Tour de Burgin",        bbox_px: [250, 1400, 520, 125], style: quote}
+
+qr:
+  - {id: google_maps, svg: assets/qr-svg/page-06-google-maps.svg, placement: reference_canvas}
+
+discrepancies:
+  raster_text_absent_from_canon:
+    - {fragment: heraldry_captioned, description: "légende des armoiries (voir blasonnement officiel p.2)"}
+    - {fragment: hero_captioned, description: "callouts « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin »"}
+    - {fragment: du_pont_blason_captioned, description: "cartouche « DU PONT »"}
+    - {fragment: berthollet_portrait_captioned, description: "légende « Claude-Louis Berthollet 1748-1822 »"}
+    - {fragment: vestiges_box_captioned, description: "titre « Vestiges aujourd'hui » et citation « Réduits à fort peu de choses » (Georges Chapier, 1957)"}
+    - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
+  canonical_text_not_visible_in_raster: []
+  paragraph_structure:
+    - {block: 8, description: "le raster coupe le bloc canonique 8 en deux paragraphes (« …vallée. » / « Jean Truchet devint… ») ; le canon est composé en un seul bloc"}
+  raster_typography:
+    - "titre en petites capitales dans le raster ; composé en Times-Bold (fonte non encore verrouillée, ASSET_SPEC §7)"
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {A5: 300, A2: 180, A1: 150}
+  accept_fragment_statuses: [APPROVED, INSPECTED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn

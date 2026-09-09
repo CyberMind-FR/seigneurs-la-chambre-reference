@@ -1,0 +1,159 @@
+schema_version: 1
+page: 7
+source: assets/page-07.jpg
+source_sha256: 53440127c11ca72289c1c59ebf51cf1ef037972d1754b8794dada88c85c39c3e
+fragments:
+  running_head_raster:
+    sha256: bc4dafbfe93564d779040ac18fccdb9672047a220d62dc11f38543c13de8f95e
+    bbox_px:
+      x: 214
+      y: 26
+      w: 632
+      h: 36
+  heraldry_captioned:
+    sha256: 4bfe97e881cf8bfc916af0f92dbb399dc1cbe33bba7778e8d2d7f6a0c029e7ff
+    bbox_px:
+      x: 36
+      y: 42
+      w: 138
+      h: 276
+  compass_rose_top_right:
+    sha256: 1055cacb5fef6fd5fd5758a47b81a0bca32f53da9cd8e0ba5b51ff9df04cdd78
+    bbox_px:
+      x: 880
+      y: 38
+      w: 114
+      h: 127
+  title_ornament:
+    sha256: 7c72c04fb789bc8158919ced2d6d955cd00ea876dba46437d92fa729196b8ce6
+    bbox_px:
+      x: 298
+      y: 193
+      w: 425
+      h: 31
+  hero_captioned:
+    sha256: e962ea3369edeeaec335cc713dc6612856282297f942a3db519c0804c6c0cdf6
+    bbox_px:
+      x: 580
+      y: 175
+      w: 421
+      h: 405
+  cross_h1:
+    sha256: d77750844a3e2c8f2fc8e64e90bd08158920d42b2a02d7a55b4df01b11bc8168
+    bbox_px:
+      x: 198
+      y: 236
+      w: 22
+      h: 22
+  valley_panorama:
+    sha256: 0c14d386264812387405be568295e501db07f52a53c5696b77e3ee9b65572df8
+    bbox_px:
+      x: 47
+      y: 387
+      w: 503
+      h: 186
+  cross_h2:
+    sha256: 739b77f6f8e8e6b4f9ac910e2eabf59920a8780f956ce540b4febffd2b84afc7
+    bbox_px:
+      x: 198
+      y: 606
+      w: 22
+      h: 22
+  vassal_scene_captioned:
+    sha256: b7703f44752c9b6bb875e02d77c71e788e72e3b9501088b141a836385882cb51
+    bbox_px:
+      x: 26
+      y: 608
+      w: 158
+      h: 290
+  defensive_box_captioned:
+    sha256: ea49f8e29d519c488c650c2ae34e91180a6bd9e49ece4745d8af55f4ea5a8f84
+    bbox_px:
+      x: 575
+      y: 607
+      w: 422
+      h: 265
+  cross_h3:
+    sha256: cc1ba0960c6fb1e336c33814a304b83deda640239a7cdbe75ca52971d422c955
+    bbox_px:
+      x: 58
+      y: 922
+      w: 22
+      h: 22
+  battle_scene_captioned:
+    sha256: 3962a8a44de655d414de2aa9e56fe7358ec9c9461bfb3f2371427a6d42640fcc
+    bbox_px:
+      x: 495
+      y: 895
+      w: 495
+      h: 176
+  map_document:
+    sha256: 274183fe842cd85a9ccdb16ee7c2375830689fc108354f59507f806fe4e2812b
+    bbox_px:
+      x: 40
+      y: 1118
+      w: 368
+      h: 182
+  carte_icon:
+    sha256: 1f479ff2feaabf40eaa5ce399908c818724b489e66266b5b320e08bbec33f210
+    bbox_px:
+      x: 155
+      y: 1094
+      w: 22
+      h: 26
+  pin_icon:
+    sha256: 638c6ef971683e5b5947b4005783c4174bd00f9d1557b18cc1df5d601f717673
+    bbox_px:
+      x: 472
+      y: 1093
+      w: 20
+      h: 27
+  phone_icon:
+    sha256: 4baaaf01cc4b39e062f5e23bc9c2907f3590b2186545ba596210bd45636c5874
+    bbox_px:
+      x: 752
+      y: 1093
+      w: 18
+      h: 29
+  localization_vignette:
+    sha256: ab670267e0d5fde7626e39cac488b0289022a0962e4aa83b94c10059cf3caec4
+    bbox_px:
+      x: 435
+      y: 1186
+      w: 235
+      h: 106
+  mappe_icon:
+    sha256: b21b86ff2a52283c925ef61fbc7599aedd507d61ef82fdca5a6531f1ab84467d
+    bbox_px:
+      x: 58
+      y: 1311
+      w: 30
+      h: 27
+  mh_icon:
+    sha256: 78a2fe50a2bc6ab323fa9efb30dc9ff766ecbe8255f9d36b0eea2c2edd88e96b
+    bbox_px:
+      x: 314
+      y: 1360
+      w: 24
+      h: 24
+  info_icons:
+    sha256: cc51ee417ea7f9a3d670b3a502d0fa0a1f5e6a4a00b514c574dbbc458a0f0d4a
+    bbox_px:
+      x: 50
+      y: 1392
+      w: 45
+      h: 130
+  bottom_vignette:
+    sha256: 828cd671984b4cba4835f1e53c9ff18b61dbaa70aa9ccbd30573e31ea3346204
+    bbox_px:
+      x: 495
+      y: 1360
+      w: 390
+      h: 150
+  mh_seal:
+    sha256: e2d51df2c7f688cee425b7f411434955779cfc769997f5349f2a1f3a17824f70
+    bbox_px:
+      x: 872
+      y: 1372
+      w: 111
+      h: 117

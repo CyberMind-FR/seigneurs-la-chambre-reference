@@ -1,0 +1,92 @@
+# Layered v3 composition — page 12 — La Maison Forte de La Landonnière (site-page family, raster 1055x1491)
+schema_version: 1
+page: 12
+title: La Maison Forte de La Landonnière
+family: site
+status: INSPECTED_PENDING_HUMAN_REVIEW
+source: {path: assets/page-12.jpg, sha256: 0afd9e2eb552b9fff7339a03817205f511b83ae7614884437812463123e61638}
+canonical_text: {path: pages/12.yaml, key: canonical_text, expected_blocks: 21}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles:
+  small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
+
+fragments:
+  - {id: running_head_raster,   role: canonical_raster_text_absent_from_yaml, status: INSPECTED, bbox_px: {x: 262, y: 24, w: 532, h: 26}, treatment: crop_only}
+  - {id: heraldry_captioned,    role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 30, y: 45, w: 140, h: 232}, treatment: crop_only}
+  - {id: statue,                role: documentary_illustration, status: INSPECTED, bbox_px: {x: 878, y: 22, w: 154, h: 296}, treatment: crop_only, mask_px: [[878, 72, 10, 62]], note: "résidu raster de la fin du titre masqué"}
+  - {id: title_ornament,        role: ornament, status: INSPECTED, bbox_px: {x: 306, y: 190, w: 448, h: 26}, treatment: crop_only}
+  - {id: hero,                  role: documentary_illustration, status: INSPECTED, bbox_px: {x: 420, y: 185, w: 612, h: 465}, treatment: crop_only}
+  - {id: cross_h1, role: ornament, status: INSPECTED, bbox_px: {x: 36, y: 294, w: 22, h: 22}, treatment: crop_only}
+  - {id: cross_h2, role: ornament, status: INSPECTED, bbox_px: {x: 36, y: 634, w: 22, h: 22}, treatment: crop_only}
+  - {id: cross_h3, role: ornament, status: INSPECTED, bbox_px: {x: 438, y: 659, w: 22, h: 22}, treatment: crop_only}
+  - {id: chapel,                role: documentary_illustration, status: INSPECTED, bbox_px: {x: 775, y: 655, w: 257, h: 238}, treatment: crop_only}
+  - {id: portrait_medallion,    role: documentary_illustration, status: INSPECTED, bbox_px: {x: 301, y: 773, w: 120, h: 116}, treatment: crop_only, mask_px: [[301, 773, 40, 16]], note: "résidu raster « ne. » de la fin d'une ligne masqué (fond)"}
+  - {id: network_panorama_captioned, role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 31, y: 896, w: 993, h: 194}, treatment: crop_only, note: "bandeau « RÉSEAU DES FORTERESSES DES SEIGNEURS DE LA CHAMBRE » avec cartouches toponymiques raster"}
+  - {id: map_document,          role: documentary_map, status: INSPECTED, bbox_px: {x: 40, y: 1106, w: 350, h: 170}, treatment: crop_only, mask_px: [[201, 1109, 60, 17]], note: "ancien titre CARTE masqué ; icône conservée"}
+  - {id: pin_icon,   role: icon, status: INSPECTED, bbox_px: {x: 466, y: 1106, w: 20, h: 26}, treatment: crop_only}
+  - {id: phone_icon, role: icon, status: INSPECTED, bbox_px: {x: 772, y: 1106, w: 17, h: 25}, treatment: crop_only}
+  - {id: localization_vignette, role: documentary_illustration, status: INSPECTED, bbox_px: {x: 425, y: 1195, w: 262, h: 85}, treatment: crop_only}
+  - {id: mappe_icon, role: icon, status: INSPECTED, bbox_px: {x: 58, y: 1288, w: 34, h: 29}, treatment: crop_only}
+  - {id: info_icons, role: icon, status: INSPECTED, bbox_px: {x: 56, y: 1347, w: 26, h: 104}, treatment: crop_only}
+  - {id: bottom_vignette,       role: documentary_illustration, status: INSPECTED, bbox_px: {x: 590, y: 1330, w: 442, h: 160}, treatment: crop_only, mask_px: [[590, 1330, 32, 18]], note: "résidu raster « LOIN » du titre masqué (ciel)"}
+
+vectors:
+  - {kind: rect, bbox_px: [30, 1095, 995, 190], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [400, 1095], to: [400, 1285], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [728, 1095], to: [728, 1285], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1285, 995, 32], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1322, 995, 165], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,        block: 0,  expect: "La Maison Forte de La Landonnière", bbox_px: [190, 66, 700, 70], style: title}
+  - {key: subtitle,     block: 1,  expect: "Sentinelle des Seigneurs",     bbox_px: [230, 143, 600, 38],  style: subtitle}
+  - {key: h1,           block: 2,  expect: "L'extension du pouvoir",       bbox_px: [62, 290, 350, 52],   style: heading}
+  - {key: p1,           block: 3,  expect: "À quatre kilomètres",          bbox_px: [33, 345, 378, 92],   style: body}
+  - {key: p2,           block: 4,  expect: "Lorsque vous longez",          bbox_px: [33, 445, 378, 142],  style: body}
+  - {key: h2,           block: 5,  expect: "Aymon de La Chambre",          bbox_px: [62, 630, 350, 52],   style: heading}
+  - {key: p3,           block: 6,  expect: "Les archives identifient",     bbox_px: [33, 684, 266, 206],  style: body}
+  - {key: h3,           block: 7,  expect: "La Chapelle Saint-Claude",     bbox_px: [464, 655, 300, 26],  style: heading}
+  - {key: p4,           block: 8,  expect: "Plus d'un siècle",             bbox_px: [438, 690, 332, 160], style: body}
+  - {key: carte,        block: 9,  expect: "CARTE",                        bbox_px: [203, 1107, 120, 20], style: small_bold}
+  - {key: localisation, block: 10, expect: "LOCALISATION",                 bbox_px: [492, 1108, 180, 22], style: small_bold}
+  - {key: lat,          block: 11, expect: "Lat:",                         bbox_px: [478, 1138, 180, 20], style: small}
+  - {key: lng,          block: 12, expect: "Lng:",                         bbox_px: [478, 1160, 180, 20], style: small}
+  - {key: google_maps,  block: 13, expect: "GOOGLE MAPS",                  bbox_px: [797, 1108, 170, 22], style: small_bold}
+  - {key: scan,         block: 14, expect: "Scannez pour y aller",         bbox_px: [780, 1264, 180, 16], style: tiny}
+  - {key: mappe_sarde,  block: 15, expect: "MAPPE SARDE",                  bbox_px: [100, 1290, 880, 24], style: tiny}
+  - {key: box_title,    block: 16, expect: "POUR ALLER PLUS LOIN",         bbox_px: [330, 1330, 290, 22], style: small_bold_center}
+  - {key: b1,           block: 17, expect: "• Localisation",               bbox_px: [95, 1352, 480, 20],  style: tiny}
+  - {key: b2,           block: 18, expect: "• Époque",                     bbox_px: [95, 1378, 480, 20],  style: tiny}
+  - {key: b3,           block: 19, expect: "• Chapelle",                   bbox_px: [95, 1403, 480, 20],  style: tiny}
+  - {key: b4,           block: 20, expect: "• Statut actuel",              bbox_px: [95, 1428, 480, 20],  style: tiny}
+
+qr:
+  - {id: google_maps, svg: assets/qr-svg/page-12-google-maps.svg, placement: reference_canvas}
+
+discrepancies:
+  raster_text_absent_from_canon:
+    - {fragment: running_head_raster, description: "bandeau courant"}
+    - {fragment: heraldry_captioned, description: "légende des armoiries"}
+    - {fragment: network_panorama_captioned, description: "titre « RÉSEAU DES FORTERESSES DES SEIGNEURS DE LA CHAMBRE » et cartouches (Notre-Dame-du-Cruet Château, La Chambre Tour & Maison de La Tour, Sainte-Marie-de-Cuines Château Joli, Saint-Étienne-de-Cuines Châtel-André Châtelet Gruyère, Saint-Rémy-de-Maurienne La Landonnière)"}
+    - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
+  canonical_text_differs_from_raster:
+    - "le raster coupe le bloc 6 en trois paragraphes ; composé en un bloc à gauche du médaillon"
+    - "le raster montre « Scannez pour y aller » superposé au QR (défaut de l'ancienne page) : disparaît"
+  canonical_text_not_visible_in_raster: []
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {A5: 300, A2: 180, A1: 150}
+  accept_fragment_statuses: [APPROVED, INSPECTED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn
