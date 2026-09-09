@@ -1,4 +1,4 @@
-.PHONY: help sync qr-svg validate-qr-svg validate-phase-b-svg manifest-v3 validate validate-layered layered-measure layered-compose layered-inventory layered-register build validate-build build-v3 validate-build-v3 release clean
+.PHONY: help sync qr-svg validate-qr-svg validate-phase-b-svg manifest-v3 validate validate-layered layered-measure layered-compose layered-inventory layered-register hd-prompts hd-pack hd-ingest hd-check build validate-build build-v3 validate-build-v3 release clean
 
 PYTHON ?= python3
 DIST ?= dist
@@ -16,6 +16,10 @@ help:
 	@echo "make layered-compose     - compose les proofs multicouches des pages LAYERED_PAGES et écrit les locks de fragments"
 	@echo "make layered-inventory   - dérive les inventaires objets (page-NN.objects.yaml) des compositions"
 	@echo "make validate-layered    - recompose et valide chaque page multicouche (texte, QR, SHA, ppi, collisions)"
+	@echo "make hd-prompts          - régénère les prompts HD (assets/hd/prompts) depuis les briefs et les grilles"
+	@echo "make hd-pack             - prompts + crops de référence bruts dans dist/hd-pack (jamais committés)"
+	@echo "make hd-ingest           - inscrit les images déposées dans assets/hd/page-NN/ (statut PENDING_REVIEW)"
+	@echo "make hd-check            - contrôle prompts à jour, SHA, ratio, gates et approbations des sources HD"
 	@echo "make build               - construit les PDF puis valide les QR du PDF final"
 	@echo "make validate-build      - valide les QR réinjectés dans le PDF final"
 	@echo "make build-v3            - assemble les PDF v3 (compositions multicouches, page 04 en repli raster) puis les valide"
@@ -42,6 +46,7 @@ validate:
 	$(PYTHON) scripts/validate_qr.py
 	$(PYTHON) scripts/validate_qr_svg.py
 	$(PYTHON) scripts/validate_phase_b_svg.py
+	$(MAKE) hd-check
 	$(MAKE) validate-layered
 
 layered-measure:
@@ -59,6 +64,19 @@ layered-register:
 
 validate-layered:
 	$(PYTHON) scripts/validate_layered.py $(LAYERED_PAGES)
+
+hd-prompts:
+	$(PYTHON) scripts/hd_prompt_pack.py
+
+hd-pack:
+	$(PYTHON) scripts/hd_prompt_pack.py --pack --out $(DIST)
+
+hd-ingest:
+	$(PYTHON) scripts/hd_ingest.py
+
+hd-check:
+	$(PYTHON) scripts/hd_prompt_pack.py --check
+	$(PYTHON) scripts/hd_check.py
 
 validate-build:
 	$(PYTHON) scripts/validate_built_pdfs.py

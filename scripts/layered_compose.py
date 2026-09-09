@@ -134,6 +134,13 @@ class Composer:
         self.write_lock = write_lock
         self.issues = []          # (severity, code, message)
         self.report = {"page": page, "spec": str(self.spec_path.relative_to(ROOT)), "page_size": self.page_size_name}
+        # Phase C — HD regenerated sources are declared OUTSIDE the composition (grids untouched):
+        # prototypes/page-NN/hd-sources.yaml, written by scripts/hd_ingest.py, approved by a human.
+        self.hd_path = self.spec_path.parent / "hd-sources.yaml"
+        self.hd = yaml.safe_load(self.hd_path.read_text(encoding="utf-8")) if self.hd_path.exists() else {}
+        if self.hd and int(self.hd.get("page", page)) != page:
+            raise SystemExit(f"hd-sources page mismatch: {self.hd.get('page')} != {page}")
+        self.report["hd_sources"] = str(self.hd_path.relative_to(ROOT)) if self.hd else None
 
     # ---- sources
     def load_sources(self):
@@ -248,6 +255,10 @@ class Composer:
             x, y, w, h = bbox_tuple(f["bbox_px"])
             if min(x, y, w, h) < 0 or x + w > self.img.width or y + h > self.img.height:
                 raise SystemExit(f"invalid bbox for fragment {f['id']}")
+            hd = self.hd_entry(f["id"], val)
+            if hd is not None:
+                produced.append(self.extract_hd_fragment(f, hd, frag_dir, val))
+                continue
             before = self.edge_ink(x, y, w, h)
             grown = {"top": 0, "bottom": 0, "left": 0, "right": 0}
             treatment = f.get("treatment", "crop_only")
@@ -330,6 +341,103 @@ class Composer:
         self.fragments, self.skipped_fragments = produced, skipped
         (self.out / "fragments.json").write_text(json.dumps({"produced": produced, "skipped": skipped}, indent=2, ensure_ascii=False) + "\n")
         return produced
+
+    # ---- Phase C: HD regenerated sources (never upscaled, never masked, centre-cropped to the grid ratio)
+    def hd_entry(self, frag_id, val):
+        entry = ((self.hd or {}).get("fragments") or {}).get(frag_id)
+        if not entry:
+            return None
+        accept = set(val.get("accept_hd_statuses", ["APPROVED"]))
+        if entry.get("status") not in accept:
+            self.issues.append(("info", "hd_source_pending", f"fragment {frag_id}: HD source declared but status {entry.get('status')!r} — canonical crop used"))
+            return None
+        return entry
+
+    def extract_hd_fragment(self, f, hd, frag_dir, val):
+        src = ROOT / hd["path"]
+        if not src.exists():
+            raise SystemExit(f"fragment {f['id']}: HD source {hd['path']} missing")
+        got = sha256(src)
+        if got != hd.get("sha256"):
+            raise SystemExit(f"fragment {f['id']}: HD source SHA mismatch ({got} != {hd.get('sha256')}) — re-run hd_ingest and re-approve")
+        x, y, w, h = bbox_tuple(f["bbox_px"])
+        dest = bbox_tuple(f["dest_bbox_px"]) if f.get("dest_bbox_px") else (x, y, w, h)
+        dx, dy, dw, dh = self.geom.box(*dest)
+        im = Image.open(src)
+        im = im.convert("RGBA") if im.mode in ("RGBA", "LA", "P") else im.convert("RGB")
+        target = dest[2] / dest[3]
+        ratio = im.width / im.height
+        tol = float(val.get("hd_aspect_tolerance", 0.03))
+        if abs(ratio - target) / target > tol:
+            raise SystemExit(f"fragment {f['id']}: HD source ratio {ratio:.4f} differs from grid ratio {target:.4f} by more than {tol:.0%}")
+        # centre-crop to the exact grid ratio (the grid never moves; the HD image adapts)
+        if ratio > target:
+            cw, ch = int(round(im.height * target)), im.height
+        else:
+            cw, ch = im.width, int(round(im.width / target))
+        cx, cy = (im.width - cw) // 2, (im.height - ch) // 2
+        crop = im.crop((cx, cy, cx + cw, cy + ch))
+        path = frag_dir / f"{f['id']}.png"
+        crop.save(path)
+        kind = f.get("raster_kind") or ("line_art" if f.get("role") in LINE_ART_ROLES else "continuous_tone")
+        ppi = self.geom.ppi_for(crop.width, dw)
+        gates_cfg = dict(DEFAULT_PPI_GATES)
+        for gk, gv in (val.get("min_effective_ppi") or {}).items():
+            if gk in gates_cfg:
+                gates_cfg[gk] = float(gv)
+        if ppi < gates_cfg[kind]:
+            self.issues.append(("warn", "hd_source_below_gate", f"fragment {f['id']}: HD source {ppi:.1f} ppi < {gates_cfg[kind]:.0f} ppi at {self.page_size_name} (never upscaled)"))
+        return {
+            "id": f["id"], "role": f.get("role"), "status": f.get("status"), "raster_kind": kind,
+            "source": "hd", "hd_path": hd["path"], "hd_sha256": got, "hd_px": [im.width, im.height],
+            "hd_center_crop_px": {"x": cx, "y": cy, "w": cw, "h": ch}, "hd_status": hd.get("status"),
+            "hd_generator": hd.get("generator"), "hd_prompt_id": hd.get("prompt_id"), "hd_rights": hd.get("rights"),
+            "path": str(path.relative_to(ROOT)), "sha256": sha256(path),
+            "treatment": "hd_center_crop",
+            "requested_bbox_px": dict(zip("xywh", (x, y, w, h))),
+            "bbox_px": {"x": x, "y": y, "w": w, "h": h},
+            "grown_px": {"top": 0, "bottom": 0, "left": 0, "right": 0},
+            "masks_px": [],
+            "dest_bbox_px": dict(zip("xywh", dest)),
+            "dest_pt": [round(dx, 2), round(dy, 2), round(dw, 2), round(dh, 2)],
+            "effective_ppi": round(ppi, 2),
+            "source_ppi": round(ppi, 2),
+            "upscale_factor": 1.0,
+            "upscale_provisional": False,
+            "output_px": [crop.width, crop.height],
+            "edge_ink_before": {}, "edge_ink_after": {}, "dirty_edges": [],
+        }
+
+    def draw_background_image(self, c, val):
+        bg = (self.hd or {}).get("background")
+        if not bg:
+            return None
+        accept = set(val.get("accept_hd_statuses", ["APPROVED"]))
+        if bg.get("status") not in accept:
+            return None
+        src = ROOT / bg["path"]
+        if not src.exists() or sha256(src) != bg.get("sha256"):
+            raise SystemExit(f"background image {bg['path']} missing or SHA mismatch")
+        mode = bg.get("mode", "cover")
+        with Image.open(src) as im:
+            iw, ih = im.size
+        if mode == "cover":
+            scale = max(self.page_w / iw, self.page_h / ih)
+            w, h = iw * scale, ih * scale
+            c.drawImage(str(src), (self.page_w - w) / 2, (self.page_h - h) / 2, width=w, height=h, mask="auto")
+        elif mode == "tile":
+            tw = float(bg.get("tile_pt", 144))
+            th = tw * ih / iw
+            yy = 0.0
+            while yy < self.page_h:
+                xx = 0.0
+                while xx < self.page_w:
+                    c.drawImage(str(src), xx, yy, width=tw, height=th, mask="auto")
+                    xx += tw
+                yy += th
+        else:
+            raise SystemExit(f"unknown background mode {mode!r}")
+        return {"path": bg["path"], "sha256": bg["sha256"], "mode": mode}
 
     # ---- drawing
     def draw_fragments(self, c):
@@ -467,6 +575,7 @@ class Composer:
             if layer == "background":
                 c.setFillColor(colors.HexColor(self.spec.get("canvas", {}).get("background", "#fffdf7")))
                 c.rect(0, 0, self.page_w, self.page_h, fill=1, stroke=0)
+                self.report["background_image"] = self.draw_background_image(c, self.spec.get("validation", {}))
             elif layer == "raster_fragments":
                 self.draw_fragments(c)
             elif layer == "documentary_vectors":
@@ -692,6 +801,8 @@ class Composer:
             if f.get("upscale_provisional"):  # provisional upscale is part of the audited identity
                 entry.update({"source_ppi": f["source_ppi"], "upscale_factor": f["upscale_factor"],
                               "upscale_provisional": True})
+            if f.get("source") == "hd":  # HD regenerated source (Phase C) is part of the audited identity
+                entry.update({"source": "hd", "hd_path": f["hd_path"], "hd_sha256": f["hd_sha256"]})
             current[f["id"]] = entry
         if self.write_lock:
             lock_path.write_text(yaml.safe_dump({
