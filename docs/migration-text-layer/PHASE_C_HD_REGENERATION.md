@@ -94,6 +94,13 @@ Image synthétique (crop canonique ré-échantillonné ×4, ratio décalé de 2 
 
 `make validate` (avec `hd-check`) : voir le rapport de PR.
 
+## 5 bis. Mise à jour du 2026-09-09 — légendes inscrites au canon
+
+Les 35 légendes raster ont été inscrites au canon et composées en couche texte
+(`CANON_AMENDMENT_CAPTIONS_2026_09_09.md`). Les 35 fragments sont désormais en voie `prompt_image`
+(`caption_in_canon: true` dans `assets/hd/prompts/manifest.json`) : leur approbation HD n'exige
+plus `caption_resolution`. Le point 1 ci-dessous est donc réglé, sous réserve de relecture.
+
 ## 6. Décisions attendues du propriétaire
 
 1. **Légendes raster → canon** : 35 fragments `*_captioned`. Les textes visibles sont transcrits

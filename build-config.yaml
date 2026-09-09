@@ -87,7 +87,7 @@ release:
 # fall back to the canonical raster + registry QR overlay (v2 method). Page 04 stays a raster
 # fallback while PAGE_04_EDITORIAL_ARBITRATION_REQUIRED holds.
 v3:
-  version: 3.0.0-rc1
+  version: 3.0.0
   fallback_raster_pages_allowed: [4]
   outputs:
     sequential_16: {filename: Seigneurs_La_Chambre_v3_16_pages_A5.pdf, page_size: A5}
