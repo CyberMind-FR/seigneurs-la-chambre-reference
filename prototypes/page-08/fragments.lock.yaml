@@ -1,0 +1,124 @@
+schema_version: 1
+page: 8
+source: assets/page-08.jpg
+source_sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927
+fragments:
+  running_head_raster:
+    sha256: d03007a5fbd854f74e289a2004ea7016c9033f072abe3c5057d82860a38ef4a2
+    bbox_px:
+      x: 214
+      y: 26
+      w: 632
+      h: 36
+  heraldry_captioned:
+    sha256: cc96d2628b414d26e5d8dc4a62307a5b524b4d3b1baaa873dd980b3a3fb5aebd
+    bbox_px:
+      x: 36
+      y: 60
+      w: 145
+      h: 258
+  title_ornament:
+    sha256: 8e4973a6227ee03f27606f7f280f4f9aea05048c32b54aba94e728be90517063
+    bbox_px:
+      x: 300
+      y: 195
+      w: 430
+      h: 30
+  magnolia_flower:
+    sha256: 69b0d45ccdc050ebe0951d41bded89a6b3f10010bc21e80ed593d943cf9fa147
+    bbox_px:
+      x: 845
+      y: 120
+      w: 150
+      h: 182
+  small_blason_square:
+    sha256: 98d8595eef0e1169a91ae4746632964391b6ab565e7c5a0a7c300ed63a72738f
+    bbox_px:
+      x: 755
+      y: 185
+      w: 90
+      h: 90
+  hero_captioned:
+    sha256: 7a0d9629688d5a1c3627f6cd33089b9e75d1717d5248133ea31fe3427e8f6713
+    bbox_px:
+      x: 380
+      y: 255
+      w: 615
+      h: 650
+  cross_h1:
+    sha256: 6972c2e12222d2dcd1891212e5578bfa6fe5e90d043f053ca89ce66b004c4cc5
+    bbox_px:
+      x: 46
+      y: 346
+      w: 22
+      h: 22
+  cross_h2:
+    sha256: eba7d24a1c979be57c9c30b1a88ad0849c99eac8b65f6f78410db84811a8b7cf
+    bbox_px:
+      x: 46
+      y: 614
+      w: 22
+      h: 22
+  cross_h3:
+    sha256: bf6d7083f98c13891f4717c1b8526c17eb67c79a66c61fbd8f797394621d327a
+    bbox_px:
+      x: 46
+      y: 800
+      w: 22
+      h: 22
+  panorama_captioned:
+    sha256: bd8cbd2b82ec7e1c02a523f8da5f01881f40002e4e03e489c709ab8adaf54d4e
+    bbox_px:
+      x: 40
+      y: 955
+      w: 945
+      h: 140
+  map_document:
+    sha256: 2635494b3d9219d152ae235550101bcd00e8334507d9c6f8588c1712c5aa5618
+    bbox_px:
+      x: 40
+      y: 1105
+      w: 356
+      h: 195
+  pin_icon:
+    sha256: a8830b2b639f698d39a9adcd7aec342886001c71e6916eee38de1f3ad31484d5
+    bbox_px:
+      x: 468
+      y: 1110
+      w: 18
+      h: 28
+  phone_icon:
+    sha256: 91a57589ba7830ac6953a1cb58ed69a8ca6a7c7d0522fcab9ffe8fcb9549a400
+    bbox_px:
+      x: 748
+      y: 1110
+      w: 16
+      h: 28
+  localization_vignette:
+    sha256: 65080cd5aa4be1a37a7f6a877556e8e381f1bcf48219b03cd69fe50d7fd910ec
+    bbox_px:
+      x: 425
+      y: 1205
+      w: 245
+      h: 105
+  mappe_icon:
+    sha256: 19c82332ce0217c8f5c6a20907c1cbb05226e70d1bdeef423389d5e53ddee788
+    bbox_px:
+      x: 68
+      y: 1313
+      w: 26
+      h: 30
+  info_icons:
+    sha256: a998d6e9da6e2068ee211c60e6f03722f9ceae15cb01ca9a370c34452721c9a8
+    bbox_px:
+      x: 54
+      y: 1393
+      w: 40
+      h: 104
+  bottom_vignette:
+    sha256: 010114845c0e81b3f85868e0c4ad664b79ea96b9f696687405684276b9ea240d
+    bbox_px:
+      x: 578
+      y: 1360
+      w: 446
+      h: 175

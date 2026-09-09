@@ -1,0 +1,769 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 12
+title: La Maison Forte de La Landonnière
+status: INSPECTED_PENDING_HUMAN_REVIEW
+generated_from:
+  composition: prototypes/page-12/composition.yaml
+  composition_run: null
+canonical_reference:
+  path: assets/page-12.jpg
+  sha256: 0afd9e2eb552b9fff7339a03817205f511b83ae7614884437812463123e61638
+  dimensions_px:
+  - null
+  - null
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/12.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 0
+  - 290
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 290
+  - 0
+  - 805
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1095
+  - 995
+  - 190
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1285
+  - 995
+  - 32
+- id: R05
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1322
+  - 995
+  - 165
+- id: R06
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P12-O-running_head_raster
+  visual_description: running head raster
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 262
+  - 24
+  - 532
+  - 26
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-heraldry_captioned
+  visual_description: heraldry captioned
+  object_class: composite
+  source_bbox_px:
+  - 30
+  - 45
+  - 140
+  - 232
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-statue
+  visual_description: résidu raster de la fin du titre masqué
+  object_class: illustration
+  source_bbox_px:
+  - 878
+  - 22
+  - 154
+  - 296
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 306
+  - 190
+  - 448
+  - 26
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-hero
+  visual_description: hero
+  object_class: illustration
+  source_bbox_px:
+  - 420
+  - 185
+  - 612
+  - 465
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-cross_h1
+  visual_description: cross h1
+  object_class: ornament
+  source_bbox_px:
+  - 36
+  - 294
+  - 22
+  - 22
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-cross_h2
+  visual_description: cross h2
+  object_class: ornament
+  source_bbox_px:
+  - 36
+  - 634
+  - 22
+  - 22
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-cross_h3
+  visual_description: cross h3
+  object_class: ornament
+  source_bbox_px:
+  - 438
+  - 659
+  - 22
+  - 22
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-chapel
+  visual_description: chapel
+  object_class: illustration
+  source_bbox_px:
+  - 775
+  - 655
+  - 257
+  - 238
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-portrait_medallion
+  visual_description: résidu raster « ne. » de la fin d'une ligne masqué (fond)
+  object_class: illustration
+  source_bbox_px:
+  - 301
+  - 773
+  - 120
+  - 116
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-network_panorama_captioned
+  visual_description: bandeau « RÉSEAU DES FORTERESSES DES SEIGNEURS DE LA CHAMBRE » avec cartouches toponymiques raster
+  object_class: composite
+  source_bbox_px:
+  - 31
+  - 896
+  - 993
+  - 194
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-map_document
+  visual_description: ancien titre CARTE masqué ; icône conservée
+  object_class: documentary_map
+  source_bbox_px:
+  - 40
+  - 1106
+  - 350
+  - 170
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-pin_icon
+  visual_description: pin icon
+  object_class: icon
+  source_bbox_px:
+  - 466
+  - 1106
+  - 20
+  - 26
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-phone_icon
+  visual_description: phone icon
+  object_class: icon
+  source_bbox_px:
+  - 772
+  - 1106
+  - 17
+  - 25
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-localization_vignette
+  visual_description: localization vignette
+  object_class: illustration
+  source_bbox_px:
+  - 425
+  - 1195
+  - 262
+  - 85
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-mappe_icon
+  visual_description: mappe icon
+  object_class: icon
+  source_bbox_px:
+  - 58
+  - 1288
+  - 34
+  - 29
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-info_icons
+  visual_description: info icons
+  object_class: icon
+  source_bbox_px:
+  - 56
+  - 1347
+  - 26
+  - 104
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P12-O-bottom_vignette
+  visual_description: résidu raster « LOIN » du titre masqué (ciel)
+  object_class: illustration
+  source_bbox_px:
+  - 590
+  - 1330
+  - 442
+  - 160
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-12.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+text_zones:
+- id: P12-T-title
+  role: title
+  canonical_block: 0
+  expect: La Maison Forte de La Landonnière
+  bbox_px:
+  - 190
+  - 66
+  - 700
+  - 70
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Sentinelle des Seigneurs
+  bbox_px:
+  - 230
+  - 143
+  - 600
+  - 38
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-h1
+  role: h1
+  canonical_block: 2
+  expect: L'extension du pouvoir
+  bbox_px:
+  - 62
+  - 290
+  - 350
+  - 52
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-p1
+  role: p1
+  canonical_block: 3
+  expect: À quatre kilomètres
+  bbox_px:
+  - 33
+  - 345
+  - 378
+  - 92
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-p2
+  role: p2
+  canonical_block: 4
+  expect: Lorsque vous longez
+  bbox_px:
+  - 33
+  - 445
+  - 378
+  - 142
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-h2
+  role: h2
+  canonical_block: 5
+  expect: Aymon de La Chambre
+  bbox_px:
+  - 62
+  - 630
+  - 350
+  - 52
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-p3
+  role: p3
+  canonical_block: 6
+  expect: Les archives identifient
+  bbox_px:
+  - 33
+  - 684
+  - 266
+  - 206
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-h3
+  role: h3
+  canonical_block: 7
+  expect: La Chapelle Saint-Claude
+  bbox_px:
+  - 464
+  - 655
+  - 300
+  - 26
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-p4
+  role: p4
+  canonical_block: 8
+  expect: Plus d'un siècle
+  bbox_px:
+  - 438
+  - 690
+  - 332
+  - 160
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-carte
+  role: carte
+  canonical_block: 9
+  expect: CARTE
+  bbox_px:
+  - 203
+  - 1107
+  - 120
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-localisation
+  role: localisation
+  canonical_block: 10
+  expect: LOCALISATION
+  bbox_px:
+  - 492
+  - 1108
+  - 180
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-lat
+  role: lat
+  canonical_block: 11
+  expect: 'Lat:'
+  bbox_px:
+  - 478
+  - 1138
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-lng
+  role: lng
+  canonical_block: 12
+  expect: 'Lng:'
+  bbox_px:
+  - 478
+  - 1160
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-google_maps
+  role: google_maps
+  canonical_block: 13
+  expect: GOOGLE MAPS
+  bbox_px:
+  - 797
+  - 1108
+  - 170
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-scan
+  role: scan
+  canonical_block: 14
+  expect: Scannez pour y aller
+  bbox_px:
+  - 780
+  - 1264
+  - 180
+  - 16
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-mappe_sarde
+  role: mappe_sarde
+  canonical_block: 15
+  expect: MAPPE SARDE
+  bbox_px:
+  - 100
+  - 1290
+  - 880
+  - 24
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-box_title
+  role: box_title
+  canonical_block: 16
+  expect: POUR ALLER PLUS LOIN
+  bbox_px:
+  - 330
+  - 1330
+  - 290
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-b1
+  role: b1
+  canonical_block: 17
+  expect: • Localisation
+  bbox_px:
+  - 95
+  - 1352
+  - 480
+  - 20
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-b2
+  role: b2
+  canonical_block: 18
+  expect: • Époque
+  bbox_px:
+  - 95
+  - 1378
+  - 480
+  - 20
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-b3
+  role: b3
+  canonical_block: 19
+  expect: • Chapelle
+  bbox_px:
+  - 95
+  - 1403
+  - 480
+  - 20
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-b4
+  role: b4
+  canonical_block: 20
+  expect: • Statut actuel
+  bbox_px:
+  - 95
+  - 1428
+  - 480
+  - 20
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/12.yaml:canonical_text
+functional_objects: []
+structural_frames:
+- id: P12-FR01
+  kind: rect
+  bbox_px:
+  - 30
+  - 1095
+  - 995
+  - 190
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P12-FR02
+  kind: line
+  bbox_px:
+  - - 400
+    - 1095
+  - - 400
+    - 1285
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P12-FR03
+  kind: line
+  bbox_px:
+  - - 728
+    - 1095
+  - - 728
+    - 1285
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P12-FR04
+  kind: rect
+  bbox_px:
+  - 30
+  - 1285
+  - 995
+  - 32
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P12-FR05
+  kind: rect
+  bbox_px:
+  - 30
+  - 1322
+  - 995
+  - 165
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant
+  - fragment: heraldry_captioned
+    description: légende des armoiries
+  - fragment: network_panorama_captioned
+    description: titre « RÉSEAU DES FORTERESSES DES SEIGNEURS DE LA CHAMBRE » et cartouches (Notre-Dame-du-Cruet Château,
+      La Chambre Tour & Maison de La Tour, Sainte-Marie-de-Cuines Château Joli, Saint-Étienne-de-Cuines Châtel-André Châtelet
+      Gruyère, Saint-Rémy-de-Maurienne La Landonnière)
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  canonical_text_differs_from_raster:
+  - le raster coupe le bloc 6 en trois paragraphes ; composé en un bloc à gauche du médaillon
+  - 'le raster montre « Scannez pour y aller » superposé au QR (défaut de l''ancienne page) : disparaît'
+  canonical_text_not_visible_in_raster: []
+completeness_gate:
+  status: INSPECTED_PENDING_HUMAN_REVIEW
+  native_raster_dimensions_recorded: false
+  all_objects_have_sha256: false
+  all_editorial_text_composed_live: true
+  qr_accounted_for: false
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: null

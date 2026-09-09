@@ -1,0 +1,97 @@
+# Layered v3 composition — page 05 — Le Château Joli (site-page family, first industrialised page)
+# Geometry in canonical-raster pixels (1024x1536), measured with scripts/layered_measure.py
+# (object overlay + --probe). Text comes only from pages/05.yaml:canonical_text.
+schema_version: 1
+page: 5
+title: Le Château Joli
+family: site
+status: INSPECTED_PENDING_HUMAN_REVIEW
+source:
+  path: assets/page-05.jpg
+  sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
+canonical_text:
+  path: pages/05.yaml
+  key: canonical_text
+  expected_blocks: 20
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles:
+  small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
+
+# Raster fragments cut from the canonical page. Captions/callouts that are visible in the raster
+# but absent from canonical_text stay inside their fragment (never OCRed, never retyped) and are
+# listed under `discrepancies` for editorial decision.
+fragments:
+  - {id: running_head_raster,     role: canonical_raster_text_absent_from_yaml, status: INSPECTED, bbox_px: {x: 214, y: 32,   w: 632, h: 36},  treatment: crop_only, note: "bandeau « Les Seigneurs de La Chambre et leur patrimoine en Maurienne » + fleurons"}
+  - {id: heraldry_captioned,      role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 30,  y: 60,   w: 158, h: 266}, treatment: crop_only, note: "armoiries + légende « Armes des La Chambre (voir blasonnement officiel p.2) »"}
+  - {id: title_ornament,          role: ornament,                                status: INSPECTED, bbox_px: {x: 298, y: 194,  w: 432, h: 34},  treatment: crop_only}
+  - {id: hero_captioned,          role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 578, y: 72, w: 421, h: 474}, treatment: crop_only, mask_px: [[578, 72, 145, 78], [578, 150, 252, 38]], note: "vue Château Joli / Cruet + callouts « Face à face… », « Le Château Joli domine… » ; résidus raster du titre/sous-titre masqués (ciel)"}
+  - {id: poype_captioned,         role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 33,  y: 704,  w: 427, h: 318}, treatment: crop_only, note: "poype annotée (Tour maîtresse, Motte primitive, Fossé naturel, Enceinte médiévale, cartouche POYPE FÉODALE)"}
+  - {id: princess_captioned,      role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 480, y: 727,  w: 518, h: 300}, treatment: crop_only, note: "Agnès de Savoie-Achaïe + légende raster"}
+  - {id: map_document,            role: documentary_map,                         status: INSPECTED, bbox_px: {x: 40,  y: 1043, w: 369, h: 203}, treatment: crop_only, mask_px: [[189, 1043, 62, 18]], note: "carte + rose des vents + icône ; ancien titre raster CARTE masqué, titre vivant recomposé"}
+  - {id: localization_vignette,   role: documentary_illustration,                status: INSPECTED, bbox_px: {x: 452, y: 1140, w: 251, h: 113}, treatment: crop_only}
+  - {id: pin_icon,                role: icon,                                    status: INSPECTED, bbox_px: {x: 495, y: 1046, w: 19,  h: 26},  treatment: crop_only}
+  - {id: phone_icon,              role: icon,                                    status: INSPECTED, bbox_px: {x: 773, y: 1045, w: 17,  h: 27},  treatment: crop_only}
+  - {id: mappe_icon,              role: icon,                                    status: INSPECTED, bbox_px: {x: 60,  y: 1266, w: 32,  h: 26},  treatment: crop_only}
+  - {id: info_icons,              role: icon,                                    status: INSPECTED, bbox_px: {x: 40,  y: 1337, w: 50,  h: 135}, treatment: crop_only}
+  - {id: ruins_vignette,          role: documentary_illustration,                status: INSPECTED, bbox_px: {x: 575, y: 1314, w: 428, h: 158}, treatment: crop_only, mask_px: [[575, 1345, 95, 22]], note: "résidu raster de la fin de la 1re puce (« du Mont ») masqué (ciel)"}
+
+vectors:
+  - {kind: rect, bbox_px: [30, 1032, 962, 230], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [440, 1032], to: [440, 1262], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [718, 1032], to: [718, 1262], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1262, 962, 32], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1300, 962, 205], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,        block: 0,  expect: "Le Château Joli",            bbox_px: [200, 74, 640, 76],    style: title}
+  - {key: subtitle,     block: 1,  expect: "La poype féodale",           bbox_px: [200, 154, 660, 40],   style: subtitle}
+  - {key: h1,           block: 2,  expect: "Face à face",                bbox_px: [188, 250, 386, 28],   style: heading}
+  - {key: p1,           block: 3,  expect: "Depuis la plaine",           bbox_px: [188, 282, 386, 126],  style: body}
+  - {key: p2,           block: 4,  expect: "Cette disposition",          bbox_px: [188, 417, 386, 104],  style: body}
+  - {key: h2,           block: 5,  expect: "Une « poype »",              bbox_px: [44, 556, 400, 26],    style: heading}
+  - {key: p3,           block: 6,  expect: "Le Château Joli s'élève",    bbox_px: [44, 586, 400, 108],   style: body}
+  - {key: h3,           block: 7,  expect: "Une princesse",              bbox_px: [504, 568, 440, 26],   style: heading}
+  - {key: p4,           block: 8,  expect: "Le Château Joli abrite",     bbox_px: [504, 604, 446, 104],  style: body}
+  - {key: carte,        block: 9,  expect: "CARTE",                      bbox_px: [191, 1041, 130, 20],  style: small_bold}
+  - {key: localisation, block: 10, expect: "LOCALISATION",               bbox_px: [520, 1045, 180, 22],  style: small_bold}
+  - {key: lat,          block: 11, expect: "Lat:",                       bbox_px: [499, 1082, 180, 20],  style: small}
+  - {key: lng,          block: 12, expect: "Lng:",                       bbox_px: [499, 1104, 180, 20],  style: small}
+  - {key: google_maps,  block: 13, expect: "GOOGLE MAPS",                bbox_px: [797, 1045, 170, 22],  style: small_bold}
+  - {key: scan,         block: 14, expect: "Scannez pour y aller",       bbox_px: [760, 1220, 180, 20],  style: tiny}
+  - {key: mappe_sarde,  block: 15, expect: "MAPPE SARDE",                bbox_px: [100, 1266, 860, 24],  style: tiny}
+  - {key: box_title,    block: 16, expect: "EN SAVOIR PLUS",             bbox_px: [340, 1316, 250, 22],  style: small_bold_center}
+  - {key: b1,           block: 17, expect: "• Ruines",                   bbox_px: [100, 1348, 470, 24],  style: tiny}
+  - {key: b2,           block: 18, expect: "• Site en propriété",        bbox_px: [100, 1390, 470, 24],  style: tiny}
+  - {key: b3,           block: 19, expect: "• Datation",                 bbox_px: [100, 1432, 470, 24],  style: tiny}
+
+qr:
+  - {id: google_maps, svg: assets/qr-svg/page-05-google-maps.svg, placement: reference_canvas}
+
+# Text visible in the canonical raster but absent from pages/05.yaml:canonical_text.
+# Kept raster inside the fragment named; never retyped; reported for editorial arbitration.
+discrepancies:
+  raster_text_absent_from_canon:
+    - {fragment: running_head_raster, description: "bandeau courant « Les Seigneurs de La Chambre et leur patrimoine en Maurienne »"}
+    - {fragment: heraldry_captioned, description: "légende des armoiries (voir blasonnement officiel p.2)"}
+    - {fragment: hero_captioned, description: "callouts de la vue principale (Face à face… / Le Château Joli domine…)"}
+    - {fragment: poype_captioned, description: "annotations du croquis de la poype et cartouche POYPE FÉODALE"}
+    - {fragment: princess_captioned, description: "légende du portrait d'Agnès de Savoie-Achaïe (dates)"}
+    - {fragment: map_document, description: "toponymes intrinsèques de la carte (conservés comme document)"}
+  canonical_text_not_visible_in_raster: []
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED, INSPECTED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn

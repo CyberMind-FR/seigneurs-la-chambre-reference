@@ -1,0 +1,849 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 7
+title: La Tour de Châtel-André
+status: INSPECTED_PENDING_HUMAN_REVIEW
+generated_from:
+  composition: prototypes/page-07/composition.yaml
+  composition_run: null
+canonical_reference:
+  path: assets/page-07.jpg
+  sha256: 53440127c11ca72289c1c59ebf51cf1ef037972d1754b8794dada88c85c39c3e
+  dimensions_px:
+  - null
+  - null
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/07.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 0
+  - 232
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 232
+  - 0
+  - 848
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1080
+  - 962
+  - 220
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1300
+  - 962
+  - 34
+- id: R05
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1345
+  - 962
+  - 180
+- id: R06
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P07-O-running_head_raster
+  visual_description: running head raster
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 214
+  - 26
+  - 632
+  - 36
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-heraldry_captioned
+  visual_description: heraldry captioned
+  object_class: composite
+  source_bbox_px:
+  - 36
+  - 42
+  - 138
+  - 276
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-compass_rose_top_right
+  visual_description: compass rose top right
+  object_class: ornament
+  source_bbox_px:
+  - 880
+  - 38
+  - 114
+  - 127
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 298
+  - 193
+  - 425
+  - 31
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-hero_captioned
+  visual_description: donjon + légende « Donjon de Châtel-André (XIIe siècle) » ; résidu raster du sous-titre masqué (ciel)
+  object_class: composite
+  source_bbox_px:
+  - 580
+  - 175
+  - 421
+  - 405
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-cross_h1
+  visual_description: cross h1
+  object_class: ornament
+  source_bbox_px:
+  - 198
+  - 236
+  - 22
+  - 22
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-valley_panorama
+  visual_description: valley panorama
+  object_class: illustration
+  source_bbox_px:
+  - 47
+  - 387
+  - 503
+  - 186
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-cross_h2
+  visual_description: cross h2
+  object_class: ornament
+  source_bbox_px:
+  - 198
+  - 606
+  - 22
+  - 22
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-vassal_scene_captioned
+  visual_description: scène d'hommage + légende « Le vassal rend hommage à son suzerain »
+  object_class: composite
+  source_bbox_px:
+  - 26
+  - 608
+  - 158
+  - 290
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-defensive_box_captioned
+  visual_description: encadré « Un système défensif complémentaire » avec toponymes raster
+  object_class: composite
+  source_bbox_px:
+  - 575
+  - 607
+  - 422
+  - 265
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-cross_h3
+  visual_description: cross h3
+  object_class: ornament
+  source_bbox_px:
+  - 58
+  - 922
+  - 22
+  - 22
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-battle_scene_captioned
+  visual_description: scène de 1598 + légende « Reprise de la tour par les troupes savoyardes (1598) »
+  object_class: composite
+  source_bbox_px:
+  - 495
+  - 895
+  - 495
+  - 176
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-map_document
+  visual_description: map document
+  object_class: documentary_map
+  source_bbox_px:
+  - 40
+  - 1118
+  - 368
+  - 182
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-carte_icon
+  visual_description: carte icon
+  object_class: icon
+  source_bbox_px:
+  - 155
+  - 1094
+  - 22
+  - 26
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-pin_icon
+  visual_description: pin icon
+  object_class: icon
+  source_bbox_px:
+  - 472
+  - 1093
+  - 20
+  - 27
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-phone_icon
+  visual_description: phone icon
+  object_class: icon
+  source_bbox_px:
+  - 752
+  - 1093
+  - 18
+  - 29
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-localization_vignette
+  visual_description: localization vignette
+  object_class: illustration
+  source_bbox_px:
+  - 435
+  - 1186
+  - 235
+  - 106
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-mappe_icon
+  visual_description: mappe icon
+  object_class: icon
+  source_bbox_px:
+  - 58
+  - 1311
+  - 30
+  - 27
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-mh_icon
+  visual_description: mh icon
+  object_class: icon
+  source_bbox_px:
+  - 314
+  - 1360
+  - 24
+  - 24
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-info_icons
+  visual_description: info icons
+  object_class: icon
+  source_bbox_px:
+  - 50
+  - 1392
+  - 45
+  - 130
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-bottom_vignette
+  visual_description: résidus raster du titre MONUMENT HISTORIQUE et de la fin de la 1re puce masqués (ciel)
+  object_class: illustration
+  source_bbox_px:
+  - 495
+  - 1360
+  - 390
+  - 150
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P07-O-mh_seal
+  visual_description: sceau « MONUMENT HISTORIQUE » (texte intrinsèque à l'ornement)
+  object_class: ornament
+  source_bbox_px:
+  - 872
+  - 1372
+  - 111
+  - 117
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-07.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+text_zones:
+- id: P07-T-title
+  role: title
+  canonical_block: 0
+  expect: La Tour de Châtel-André
+  bbox_px:
+  - 200
+  - 68
+  - 660
+  - 76
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Sentinelle des vassaux
+  bbox_px:
+  - 230
+  - 146
+  - 580
+  - 40
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-h1
+  role: h1
+  canonical_block: 2
+  expect: Sentinelle sur la vallée
+  bbox_px:
+  - 222
+  - 232
+  - 330
+  - 26
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-p1
+  role: p1
+  canonical_block: 3
+  expect: Levez les yeux
+  bbox_px:
+  - 196
+  - 262
+  - 378
+  - 120
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-h2
+  role: h2
+  canonical_block: 4
+  expect: Tour des vassaux
+  bbox_px:
+  - 222
+  - 602
+  - 340
+  - 26
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-p2
+  role: p2
+  canonical_block: 5
+  expect: Contrairement aux châteaux
+  bbox_px:
+  - 196
+  - 632
+  - 360
+  - 142
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-p3
+  role: p3
+  canonical_block: 6
+  expect: On connaît les noms
+  bbox_px:
+  - 196
+  - 778
+  - 360
+  - 84
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-h3
+  role: h3
+  canonical_block: 7
+  expect: '1598 : Prise'
+  bbox_px:
+  - 82
+  - 918
+  - 400
+  - 26
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-p4
+  role: p4
+  canonical_block: 8
+  expect: Créqui, capitaine
+  bbox_px:
+  - 58
+  - 948
+  - 432
+  - 112
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-carte
+  role: carte
+  canonical_block: 9
+  expect: CARTE
+  bbox_px:
+  - 183
+  - 1094
+  - 130
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-localisation
+  role: localisation
+  canonical_block: 10
+  expect: LOCALISATION
+  bbox_px:
+  - 498
+  - 1095
+  - 180
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-lat
+  role: lat
+  canonical_block: 11
+  expect: 'Lat:'
+  bbox_px:
+  - 478
+  - 1128
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-lng
+  role: lng
+  canonical_block: 12
+  expect: 'Lng:'
+  bbox_px:
+  - 478
+  - 1150
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-google_maps
+  role: google_maps
+  canonical_block: 13
+  expect: GOOGLE MAPS
+  bbox_px:
+  - 776
+  - 1095
+  - 170
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-scan
+  role: scan
+  canonical_block: 14
+  expect: Scannez pour y aller
+  bbox_px:
+  - 752
+  - 1268
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-mappe_sarde
+  role: mappe_sarde
+  canonical_block: 15
+  expect: MAPPE SARDE
+  bbox_px:
+  - 100
+  - 1311
+  - 870
+  - 24
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-box_title
+  role: box_title
+  canonical_block: 16
+  expect: MONUMENT HISTORIQUE
+  bbox_px:
+  - 342
+  - 1362
+  - 258
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-b1
+  role: b1
+  canonical_block: 17
+  expect: • Classé
+  bbox_px:
+  - 98
+  - 1396
+  - 392
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-b2
+  role: b2
+  canonical_block: 18
+  expect: • Donjon
+  bbox_px:
+  - 98
+  - 1425
+  - 392
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-b3
+  role: b3
+  canonical_block: 19
+  expect: • Vue magnifique
+  bbox_px:
+  - 98
+  - 1455
+  - 392
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-b4
+  role: b4
+  canonical_block: 20
+  expect: • Hameau du Perrel
+  bbox_px:
+  - 98
+  - 1484
+  - 392
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/07.yaml:canonical_text
+functional_objects: []
+structural_frames:
+- id: P07-FR01
+  kind: rect
+  bbox_px:
+  - 30
+  - 1080
+  - 962
+  - 220
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P07-FR02
+  kind: line
+  bbox_px:
+  - - 420
+    - 1080
+  - - 420
+    - 1300
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P07-FR03
+  kind: line
+  bbox_px:
+  - - 735
+    - 1080
+  - - 735
+    - 1300
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P07-FR04
+  kind: rect
+  bbox_px:
+  - 30
+  - 1300
+  - 962
+  - 34
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P07-FR05
+  kind: rect
+  bbox_px:
+  - 30
+  - 1345
+  - 962
+  - 180
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant « Les Seigneurs de La Chambre et leur patrimoine en Maurienne »
+  - fragment: heraldry_captioned
+    description: légende des armoiries (voir blasonnement officiel p.2)
+  - fragment: hero_captioned
+    description: légende « Donjon de Châtel-André (XIIe siècle) »
+  - fragment: vassal_scene_captioned
+    description: légende « Le vassal rend hommage à son suzerain »
+  - fragment: defensive_box_captioned
+    description: titre « Un système défensif complémentaire » et toponymes (Le Cruet, Châtel-André, Route du Mont-Cenis, La
+      Chambre, Vallée des Villards)
+  - fragment: battle_scene_captioned
+    description: légende « Reprise de la tour par les troupes savoyardes (1598) »
+  - fragment: mh_seal
+    description: sceau MONUMENT HISTORIQUE (texte intrinsèque)
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  canonical_text_not_visible_in_raster: []
+completeness_gate:
+  status: INSPECTED_PENDING_HUMAN_REVIEW
+  native_raster_dimensions_recorded: false
+  all_objects_have_sha256: false
+  all_editorial_text_composed_live: true
+  qr_accounted_for: false
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: null

@@ -1,0 +1,734 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 8
+title: La Maison-Forte du Châtelet
+status: INSPECTED_PENDING_HUMAN_REVIEW
+generated_from:
+  composition: prototypes/page-08/composition.yaml
+  composition_run: null
+canonical_reference:
+  path: assets/page-08.jpg
+  sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927
+  dimensions_px:
+  - null
+  - null
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/08.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 0
+  - 344
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 344
+  - 0
+  - 754
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1098
+  - 962
+  - 208
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1306
+  - 962
+  - 34
+- id: R05
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1352
+  - 962
+  - 190
+- id: R06
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P08-O-running_head_raster
+  visual_description: running head raster
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 214
+  - 26
+  - 632
+  - 36
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-heraldry_captioned
+  visual_description: heraldry captioned
+  object_class: composite
+  source_bbox_px:
+  - 36
+  - 60
+  - 145
+  - 258
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 300
+  - 195
+  - 430
+  - 30
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-magnolia_flower
+  visual_description: résidu raster de la fin du titre masqué (fond)
+  object_class: illustration
+  source_bbox_px:
+  - 845
+  - 120
+  - 150
+  - 182
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-small_blason_square
+  visual_description: small blason square
+  object_class: heraldry
+  source_bbox_px:
+  - 755
+  - 185
+  - 90
+  - 90
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-hero_captioned
+  visual_description: maison forte + callouts « Magnolia centenaire… », « Maison-Forte du Châtelet, centre du village… »
+  object_class: composite
+  source_bbox_px:
+  - 380
+  - 255
+  - 615
+  - 650
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-cross_h1
+  visual_description: cross h1
+  object_class: ornament
+  source_bbox_px:
+  - 46
+  - 346
+  - 22
+  - 22
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-cross_h2
+  visual_description: cross h2
+  object_class: ornament
+  source_bbox_px:
+  - 46
+  - 614
+  - 22
+  - 22
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-cross_h3
+  visual_description: cross h3
+  object_class: ornament
+  source_bbox_px:
+  - 46
+  - 800
+  - 22
+  - 22
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-panorama_captioned
+  visual_description: bandeau « Système défensif des seigneurs de La Chambre » (Le Châtelet / Le Cruet)
+  object_class: composite
+  source_bbox_px:
+  - 40
+  - 955
+  - 945
+  - 140
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-map_document
+  visual_description: ancien titre CARTE masqué ; icône conservée
+  object_class: documentary_map
+  source_bbox_px:
+  - 40
+  - 1105
+  - 356
+  - 195
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-pin_icon
+  visual_description: pin icon
+  object_class: icon
+  source_bbox_px:
+  - 468
+  - 1110
+  - 18
+  - 28
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-phone_icon
+  visual_description: phone icon
+  object_class: icon
+  source_bbox_px:
+  - 748
+  - 1110
+  - 16
+  - 28
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-localization_vignette
+  visual_description: localization vignette
+  object_class: illustration
+  source_bbox_px:
+  - 425
+  - 1205
+  - 245
+  - 105
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-mappe_icon
+  visual_description: mappe icon
+  object_class: icon
+  source_bbox_px:
+  - 68
+  - 1313
+  - 26
+  - 30
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-info_icons
+  visual_description: info icons
+  object_class: icon
+  source_bbox_px:
+  - 54
+  - 1393
+  - 40
+  - 104
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P08-O-bottom_vignette
+  visual_description: bottom vignette
+  object_class: illustration
+  source_bbox_px:
+  - 578
+  - 1360
+  - 446
+  - 175
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-08.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+text_zones:
+- id: P08-T-title
+  role: title
+  canonical_block: 0
+  expect: La Maison-Forte du Châtelet
+  bbox_px:
+  - 200
+  - 74
+  - 690
+  - 70
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Des seigneurs de Cuynes
+  bbox_px:
+  - 230
+  - 150
+  - 600
+  - 38
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-h1
+  role: h1
+  canonical_block: 2
+  expect: La tour des vassaux
+  bbox_px:
+  - 72
+  - 344
+  - 300
+  - 26
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-p1
+  role: p1
+  canonical_block: 3
+  expect: Au centre du village
+  bbox_px:
+  - 42
+  - 376
+  - 334
+  - 132
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-p2
+  role: p2
+  canonical_block: 4
+  expect: Construite au XIIIe
+  bbox_px:
+  - 42
+  - 518
+  - 334
+  - 74
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-h2
+  role: h2
+  canonical_block: 5
+  expect: XVe siècle
+  bbox_px:
+  - 72
+  - 612
+  - 300
+  - 54
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-p3
+  role: p3
+  canonical_block: 6
+  expect: Au XVe siècle
+  bbox_px:
+  - 42
+  - 668
+  - 334
+  - 116
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-h3
+  role: h3
+  canonical_block: 7
+  expect: '1629 : L''ère'
+  bbox_px:
+  - 72
+  - 798
+  - 300
+  - 26
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-p4
+  role: p4
+  canonical_block: 8
+  expect: En 1629
+  bbox_px:
+  - 42
+  - 830
+  - 334
+  - 114
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-carte
+  role: carte
+  canonical_block: 9
+  expect: CARTE
+  bbox_px:
+  - 191
+  - 1108
+  - 120
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-localisation
+  role: localisation
+  canonical_block: 10
+  expect: LOCALISATION
+  bbox_px:
+  - 494
+  - 1113
+  - 180
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-lat
+  role: lat
+  canonical_block: 11
+  expect: 'Lat:'
+  bbox_px:
+  - 470
+  - 1146
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-lng
+  role: lng
+  canonical_block: 12
+  expect: 'Lng:'
+  bbox_px:
+  - 470
+  - 1168
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-google_maps
+  role: google_maps
+  canonical_block: 13
+  expect: GOOGLE MAPS
+  bbox_px:
+  - 772
+  - 1113
+  - 170
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-scan
+  role: scan
+  canonical_block: 14
+  expect: Scannez pour y aller
+  bbox_px:
+  - 745
+  - 1278
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-mappe_sarde
+  role: mappe_sarde
+  canonical_block: 15
+  expect: MAPPE SARDE
+  bbox_px:
+  - 105
+  - 1316
+  - 860
+  - 24
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-box_title
+  role: box_title
+  canonical_block: 16
+  expect: AUJOURD'HUI
+  bbox_px:
+  - 330
+  - 1366
+  - 270
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-b1
+  role: b1
+  canonical_block: 17
+  expect: • Gîtes
+  bbox_px:
+  - 100
+  - 1405
+  - 470
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-b2
+  role: b2
+  canonical_block: 18
+  expect: • Le plus vieux
+  bbox_px:
+  - 100
+  - 1440
+  - 470
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-b3
+  role: b3
+  canonical_block: 19
+  expect: • Située
+  bbox_px:
+  - 100
+  - 1474
+  - 470
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/08.yaml:canonical_text
+functional_objects: []
+structural_frames:
+- id: P08-FR01
+  kind: rect
+  bbox_px:
+  - 30
+  - 1098
+  - 962
+  - 208
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P08-FR02
+  kind: line
+  bbox_px:
+  - - 410
+    - 1098
+  - - 410
+    - 1306
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P08-FR03
+  kind: line
+  bbox_px:
+  - - 712
+    - 1098
+  - - 712
+    - 1306
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P08-FR04
+  kind: rect
+  bbox_px:
+  - 30
+  - 1306
+  - 962
+  - 34
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P08-FR05
+  kind: rect
+  bbox_px:
+  - 30
+  - 1352
+  - 962
+  - 190
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant
+  - fragment: heraldry_captioned
+    description: légende des armoiries
+  - fragment: hero_captioned
+    description: callouts « Magnolia centenaire dans les jardins suspendus », « Maison-Forte du Châtelet, centre du village
+      de Saint-Étienne-de-Cuines »
+  - fragment: panorama_captioned
+    description: libellés « Le Châtelet », « Système défensif des seigneurs de La Chambre », « Le Cruet »
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  canonical_text_not_visible_in_raster: []
+completeness_gate:
+  status: INSPECTED_PENDING_HUMAN_REVIEW
+  native_raster_dimensions_recorded: false
+  all_objects_have_sha256: false
+  all_editorial_text_composed_live: true
+  qr_accounted_for: false
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: null

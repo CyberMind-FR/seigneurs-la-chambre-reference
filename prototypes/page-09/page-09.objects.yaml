@@ -1,0 +1,630 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 9
+title: La Maison-Forte de Gruyère
+status: INSPECTED_PENDING_HUMAN_REVIEW
+generated_from:
+  composition: prototypes/page-09/composition.yaml
+  composition_run: null
+canonical_reference:
+  path: assets/page-09.jpg
+  sha256: d54cab494ac8f931d8cb9dd5953d7f171a0c0d6c0b7abd7a73cc32e7f7de1aed
+  dimensions_px:
+  - null
+  - null
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/09.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 0
+  - 395
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 395
+  - 0
+  - 505
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 900
+  - 962
+  - 300
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1210
+  - 962
+  - 36
+- id: R05
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1255
+  - 962
+  - 262
+- id: R06
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P09-O-running_head_raster
+  visual_description: running head raster
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 214
+  - 26
+  - 632
+  - 34
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-heraldry_captioned
+  visual_description: heraldry captioned
+  object_class: composite
+  source_bbox_px:
+  - 36
+  - 60
+  - 145
+  - 265
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-gruyere_seal
+  visual_description: sceau « GRUYÈRE SUISSE » (texte intrinsèque)
+  object_class: heraldry
+  source_bbox_px:
+  - 889
+  - 117
+  - 110
+  - 115
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 300
+  - 200
+  - 430
+  - 30
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-hero
+  visual_description: hero
+  object_class: illustration
+  source_bbox_px:
+  - 236
+  - 232
+  - 680
+  - 650
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-magnolia_captioned
+  visual_description: magnolia + légende « Magnolia séculaire ombrageant la demeure »
+  object_class: composite
+  source_bbox_px:
+  - 788
+  - 232
+  - 200
+  - 252
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-paragraph_divider
+  visual_description: paragraph divider
+  object_class: ornament
+  source_bbox_px:
+  - 88
+  - 599
+  - 74
+  - 16
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-map_document
+  visual_description: map document
+  object_class: documentary_map
+  source_bbox_px:
+  - 40
+  - 940
+  - 362
+  - 232
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-carte_icon
+  visual_description: carte icon
+  object_class: icon
+  source_bbox_px:
+  - 165
+  - 917
+  - 25
+  - 23
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-pin_icon
+  visual_description: pin icon
+  object_class: icon
+  source_bbox_px:
+  - 466
+  - 916
+  - 21
+  - 28
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-phone_icon
+  visual_description: phone icon
+  object_class: icon
+  source_bbox_px:
+  - 758
+  - 916
+  - 22
+  - 28
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-localization_vignette
+  visual_description: localization vignette
+  object_class: illustration
+  source_bbox_px:
+  - 415
+  - 1055
+  - 285
+  - 140
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-mappe_icon
+  visual_description: mappe icon
+  object_class: icon
+  source_bbox_px:
+  - 53
+  - 1223
+  - 25
+  - 27
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-info_icons
+  visual_description: info icons
+  object_class: icon
+  source_bbox_px:
+  - 47
+  - 1328
+  - 40
+  - 127
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P09-O-architecture_vignette
+  visual_description: architecture vignette
+  object_class: illustration
+  source_bbox_px:
+  - 332
+  - 1266
+  - 686
+  - 246
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-09.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+text_zones:
+- id: P09-T-title
+  role: title
+  canonical_block: 0
+  expect: La Maison Forte de Gruyère
+  bbox_px:
+  - 200
+  - 72
+  - 690
+  - 72
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Saint-Étienne-de-Cuines
+  bbox_px:
+  - 230
+  - 150
+  - 600
+  - 38
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-p1
+  role: p1
+  canonical_block: 2
+  expect: Tour ronde imposante
+  bbox_px:
+  - 35
+  - 395
+  - 198
+  - 196
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-p2
+  role: p2
+  canonical_block: 3
+  expect: En 1477
+  bbox_px:
+  - 35
+  - 640
+  - 198
+  - 208
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-carte
+  role: carte
+  canonical_block: 4
+  expect: CARTE
+  bbox_px:
+  - 193
+  - 916
+  - 130
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-localisation
+  role: localisation
+  canonical_block: 5
+  expect: LOCALISATION
+  bbox_px:
+  - 492
+  - 918
+  - 180
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-lat
+  role: lat
+  canonical_block: 6
+  expect: 'Lat:'
+  bbox_px:
+  - 470
+  - 955
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-lng
+  role: lng
+  canonical_block: 7
+  expect: 'Lng:'
+  bbox_px:
+  - 470
+  - 980
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-google_maps
+  role: google_maps
+  canonical_block: 8
+  expect: GOOGLE MAPS
+  bbox_px:
+  - 784
+  - 918
+  - 170
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-scan
+  role: scan
+  canonical_block: 9
+  expect: Scannez pour y aller
+  bbox_px:
+  - 755
+  - 1145
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-mappe_sarde
+  role: mappe_sarde
+  canonical_block: 10
+  expect: MAPPE SARDE
+  bbox_px:
+  - 90
+  - 1224
+  - 880
+  - 24
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-box_title
+  role: box_title
+  canonical_block: 11
+  expect: ARCHITECTURE
+  bbox_px:
+  - 100
+  - 1294
+  - 220
+  - 24
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-b1
+  role: b1
+  canonical_block: 12
+  expect: • Tour ronde
+  bbox_px:
+  - 100
+  - 1340
+  - 225
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-b2
+  role: b2
+  canonical_block: 13
+  expect: • Magnolia
+  bbox_px:
+  - 100
+  - 1385
+  - 225
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-b3
+  role: b3
+  canonical_block: 14
+  expect: • Propriété
+  bbox_px:
+  - 100
+  - 1428
+  - 225
+  - 22
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/09.yaml:canonical_text
+functional_objects: []
+structural_frames:
+- id: P09-FR01
+  kind: rect
+  bbox_px:
+  - 30
+  - 900
+  - 962
+  - 300
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P09-FR02
+  kind: line
+  bbox_px:
+  - - 405
+    - 900
+  - - 405
+    - 1200
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P09-FR03
+  kind: line
+  bbox_px:
+  - - 720
+    - 900
+  - - 720
+    - 1200
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P09-FR04
+  kind: rect
+  bbox_px:
+  - 30
+  - 1210
+  - 962
+  - 36
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P09-FR05
+  kind: rect
+  bbox_px:
+  - 30
+  - 1255
+  - 962
+  - 262
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant
+  - fragment: heraldry_captioned
+    description: légende des armoiries
+  - fragment: gruyere_seal
+    description: sceau GRUYÈRE SUISSE (texte intrinsèque)
+  - fragment: magnolia_captioned
+    description: légende « Magnolia séculaire ombrageant la demeure »
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  canonical_text_not_visible_in_raster: []
+  title_field_mismatch: pages/09.yaml:title = « La Maison-Forte de Gruyère » (trait d'union, comme le raster) alors que canonical_text
+    commence par « La Maison Forte de Gruyère » ; composé selon canonical_text, à arbitrer
+  omitted_ornaments:
+  - 'croix ✠ en tête des deux paragraphes (inline dans le raster) non reproduites : pas de retour à la ligne suspendu dans
+    la couche texte'
+completeness_gate:
+  status: INSPECTED_PENDING_HUMAN_REVIEW
+  native_raster_dimensions_recorded: false
+  all_objects_have_sha256: false
+  all_editorial_text_composed_live: true
+  qr_accounted_for: false
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: null

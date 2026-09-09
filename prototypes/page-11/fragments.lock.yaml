@@ -1,0 +1,103 @@
+schema_version: 1
+page: 11
+source: assets/page-11.jpg
+source_sha256: d4090803bb0c287fe6bb6a7044a77451b47b688de891a52320918f0ef48b0bc8
+fragments:
+  running_head_raster:
+    sha256: 283eaa5b494fe76c1bdf4f722c12ba1c28a1e3fad5c732ac6bfdfaa66b895adb
+    bbox_px:
+      x: 236
+      y: 22
+      w: 570
+      h: 28
+  heraldry_captioned:
+    sha256: 4d12f2d55cab8d2b3d34c2e443a2a41436938e7275432683a56d44cd6b975efb
+    bbox_px:
+      x: 36
+      y: 45
+      w: 160
+      h: 252
+  title_ornament:
+    sha256: eaf7b660945e241d82b35a56e3cea2fcb61297a78bc7640b7e4c8b314244b221
+    bbox_px:
+      x: 300
+      y: 190
+      w: 470
+      h: 30
+  callout_box_captioned:
+    sha256: 7771222bc6c0eba4d26f93027bd451c6ec91b91a9ffd0c1aedbcdafbd5df1d3f
+    bbox_px:
+      x: 888
+      y: 203
+      w: 140
+      h: 148
+  hero:
+    sha256: 8ce6d8818721a66e5228853cd5a0280c108e674dcd606f0cc0b45f2ac76c9be3
+    bbox_px:
+      x: 432
+      y: 219
+      w: 600
+      h: 596
+  tower_ladder_captioned:
+    sha256: 1abd4366a1cda3177dd9f4a4e586e22e054e420d7e3136458ebe5f987af94bc5
+    bbox_px:
+      x: 40
+      y: 755
+      w: 345
+      h: 300
+  valley_box_captioned:
+    sha256: fb8c13cc3cdce7787b8d36a529af6260659f31120b9101e174a1810e47cd584e
+    bbox_px:
+      x: 410
+      y: 815
+      w: 614
+      h: 240
+  map_document:
+    sha256: 5756eb1cd73461be4a079b6bb75cba11a51eda91fa3e7052dab3feaf2e544a5c
+    bbox_px:
+      x: 40
+      y: 1076
+      w: 360
+      h: 184
+  pin_icon:
+    sha256: 23a4c6bcd823ada17ba984583c8f43a122983399a93f9712e8c15c696aea4ff4
+    bbox_px:
+      x: 461
+      y: 1078
+      w: 20
+      h: 26
+  phone_icon:
+    sha256: 625d4765e4ad26cda22507077a78ce4964b81834b7bfcd13a2abc93a5e8e7d43
+    bbox_px:
+      x: 775
+      y: 1078
+      w: 15
+      h: 25
+  localization_vignette:
+    sha256: 3d503c57ff32d73832a8c0660ec7f54caddc95b1b74448a512cb3812f2563289
+    bbox_px:
+      x: 425
+      y: 1160
+      w: 265
+      h: 105
+  mappe_icon:
+    sha256: fab92d0741271cbfd2ff586cdd25f65fbdc27c2f886a8c50d7d872b3f4665b48
+    bbox_px:
+      x: 58
+      y: 1270
+      w: 29
+      h: 27
+  info_icons:
+    sha256: c72d7f5c223f9d35382be1e7b875ad6402815e2730dd2f129aa137279bbed215
+    bbox_px:
+      x: 56
+      y: 1336
+      w: 30
+      h: 92
+  bottom_vignette:
+    sha256: 1bf265c9699ef797fd8f33943febf858d59e616998ec719d77f9d860e99746d5
+    bbox_px:
+      x: 495
+      y: 1320
+      w: 510
+      h: 140

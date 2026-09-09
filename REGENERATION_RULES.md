@@ -33,6 +33,29 @@ Chaque fragment doit :
 
 Le détourage, le masquage de l'ancien texte, la restauration locale du fond autour d'un fragment et la correction colorimétrique non destructive sont autorisés. Une génération libre de remplacement n'est pas la méthode par défaut.
 
+### Compositeur générique et traitements admis (2026-09-09)
+La composition v3 est exécutée par `scripts/layered_compose.py` à partir de
+`prototypes/page-NN/composition.yaml` : une page se reconstruit sans toucher au code métier.
+Traitements de fragment admis, tous déclarés dans le YAML et journalisés dans `fragments.json` :
+- `crop_only` : découpe rectangulaire ;
+- `crop_grow_to_clean_edge` : élargissement borné (`max_grow_px`) d'un bord qui coupe un trait ;
+- `mask_px` : masquage local, couleur du papier mesurée, d'un résidu de texte raster ou d'un objet
+  voisin inclus dans le crop (jamais pour effacer un détail documentaire).
+Contrôles bloquants : couche texte exacte, QR décodé, SHA source et fragments, texte dans une zone
+QR, **collision d'encre entre texte vivant et fragment**. Contrôles signalés : bord de crop
+traversant de l'encre, débordement de bloc, gate de résolution.
+
+### Gates de résolution (décision du 2026-09-09)
+Mesurés à la **taille de placement finale**, identiques pour tous les formats de sortie (A5, A2, A1) :
+- **300 ppi** pour les rasters en demi-teintes (illustrations, cartes, photos, lavis) ;
+- **1200 ppi** pour les rasters au trait (icônes, ornements, croix, marques bitonales).
+Le texte et les QR sont vectoriels (couche texte réelle, SVG déterministes) et ne relèvent pas de ces
+gates. Chaque fragment déclare (ou hérite de son rôle) `raster_kind: continuous_tone | line_art`.
+Ces gates remplacent les seuils 300 A5 / 180 A2 / 150 A1 de `assets/ASSET_SPEC.md` §2 (document
+validé en Phase A : sa modification exige une nouvelle validation humaine, il n'est donc pas réécrit ici).
+Un raster sous le gate n'est jamais « récupéré » par upscale : source HD, réduction de placement,
+validation explicite d'un seuil inférieur, ou vectorisation sans dérive.
+
 ## Politique de trame de fond
 Le fond de page devient un actif indépendant et reproductible.
 Il doit respecter `style.yaml` et le langage SpiritualCept : papier blanc/ivoire très clair, grain discret, contraste d'impression élevé, aucune information documentaire encodée dans la texture.

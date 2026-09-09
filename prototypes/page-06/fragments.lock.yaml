@@ -1,0 +1,138 @@
+schema_version: 1
+page: 6
+source: assets/page-06.jpg
+source_sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031
+fragments:
+  heraldry_captioned:
+    sha256: 037e178e776637d874a1fec79beb4520c5c8c4682b72b61b8f13af2a5933de0e
+    bbox_px:
+      x: 40
+      y: 30
+      w: 135
+      h: 252
+  sky_patch_top_right:
+    sha256: 758a4ccce7d18fc063e156d3e163ab6b05d8f87e98c38ed959d1ea737e3de72c
+    bbox_px:
+      x: 852
+      y: 36
+      w: 148
+      h: 104
+  hero_captioned:
+    sha256: d504c5619ddf48d019675f831dbe159a727cc05ee54c6df173b581655e5dd542
+    bbox_px:
+      x: 481
+      y: 140
+      w: 520
+      h: 650
+  title_ornament:
+    sha256: 7b09115f7220b5934ea44e62ecf8b861b354bea939942fccc0e5cedbbacea89d
+    bbox_px:
+      x: 276
+      y: 190
+      w: 433
+      h: 30
+  cross_h1:
+    sha256: 1a32002f19e59153c60f2bd677ec8cedbb009a0d1ee87df32578c5282e6e57eb
+    bbox_px:
+      x: 40
+      y: 302
+      w: 24
+      h: 26
+  cross_h2:
+    sha256: 6b88dd7633380c2632242e3c8cedd5e4abffb2ee5885ddae5d8ef1b287b6bf04
+    bbox_px:
+      x: 40
+      y: 676
+      w: 24
+      h: 26
+  cross_h3:
+    sha256: 48e29ac0bc18728b5f6850585d39534f61c7adfae0725e27b5207415cb3da6ea
+    bbox_px:
+      x: 40
+      y: 900
+      w: 24
+      h: 26
+  du_pont_blason_captioned:
+    sha256: ffad1f0e39b315995089712a4d50450f92bcb2f26e668aa44b5ea5ac445263e7
+    bbox_px:
+      x: 526
+      y: 678
+      w: 146
+      h: 224
+  berthollet_portrait_captioned:
+    sha256: 3613d2e7489f54ccba6412b0c9dea983faa3b951080eb74f93703b48032861c0
+    bbox_px:
+      x: 501
+      y: 910
+      w: 181
+      h: 212
+  vestiges_box_captioned:
+    sha256: 30e98af69158821c5c0bad3e01c5fd4497b9e0a9dc3e5ac416c6426fbea83004
+    bbox_px:
+      x: 700
+      y: 795
+      w: 290
+      h: 318
+  map_document:
+    sha256: 3fde6dcf95b20079013b829ca2d72be24760bc1ef5bdffcf47285f3cd7a35109
+    bbox_px:
+      x: 40
+      y: 1145
+      w: 359
+      h: 193
+  localization_vignette:
+    sha256: 5701824f9b3872687087b9e75a550bfbd3a82ea989a947d509d03859c8b50e6c
+    bbox_px:
+      x: 427
+      y: 1228
+      w: 259
+      h: 114
+  pin_icon:
+    sha256: 6c257a19a63d90bc6681bb54ee2ccdd62281c47400029d5256d729e3f3aeefb6
+    bbox_px:
+      x: 473
+      y: 1148
+      w: 19
+      h: 26
+  phone_icon:
+    sha256: 8f2f1108656ba1f3bd1011446e2bd0d2f5d95540f9e6803e185482d7ca1a2c31
+    bbox_px:
+      x: 754
+      y: 1148
+      w: 14
+      h: 24
+  mappe_icon:
+    sha256: 2cd27bf860c1d169043d939091ff6baff56daa5fca18331dc8934a69c6947019
+    bbox_px:
+      x: 64
+      y: 1356
+      w: 28
+      h: 28
+  monk_bottom_left:
+    sha256: d062a35d2ed1c78c5005d6de328d0f98d9af824caa020087b9c511066e123ace
+    bbox_px:
+      x: 40
+      y: 1385
+      w: 140
+      h: 150
+  fleuron_left:
+    sha256: e564881d680b9632648050c4b4f49599d12d5cd82a8989de2c8c4770f3cf4d7b
+    bbox_px:
+      x: 180
+      y: 1430
+      w: 53
+      h: 40
+  fleuron_right:
+    sha256: dafaf4b2479074cc2271b6bdfaf71d074cfeb4598d5a5559da940fe6ef089be8
+    bbox_px:
+      x: 790
+      y: 1430
+      w: 80
+      h: 40
+  ruins_bottom_right:
+    sha256: 38e2c673d94315fea377b931df450e6a04615163c042d5a4b6394d9d1b9a8fac
+    bbox_px:
+      x: 840
+      y: 1385
+      w: 160
+      h: 150

@@ -23,6 +23,16 @@ Le texte est repris exclusivement depuis `pages/03.yaml:canonical_text`. Le QR e
 5. que le résultat reste visuellement fidèle à la page canonique ;
 6. que les fragments raster gardent une résolution suffisante pour l'impression cible.
 
+## Depuis le 2026-09-09
+Le prototype est porté dans le compositeur générique : `composition.yaml` (géométrie, fragments,
+styles, blocs, QR, validations) est la définition de référence de la page, exécutée par
+`scripts/layered_compose.py 3`. `fragments.lock.yaml` verrouille les SHA des fragments et
+`page-03.objects.yaml` est dérivé par `scripts/layered_inventory.py`. Les scripts
+`scripts/prototype_page03_*.py` et `fragment-boxes.yaml` restent comme témoins du run `34259978419`.
+Deux corrections de revue sont intégrées : le fragment du moine ne contient plus de résidu du titre
+et sa légende « Spiritualité franciscaine » est un fragment mesuré séparément ; le titre
+« VISITE DU SITE » est composé à sa position canonique sans recouvrir le croquis.
+
 ## Fichiers
 
 - `layers.yaml` : contrat de couches et registre du prototype ;

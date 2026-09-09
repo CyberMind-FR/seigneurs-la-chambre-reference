@@ -1,0 +1,83 @@
+# Layered v3 composition — page 09 — La Maison-Forte de Gruyère (site-page family)
+schema_version: 1
+page: 9
+title: La Maison-Forte de Gruyère
+family: site
+status: INSPECTED_PENDING_HUMAN_REVIEW
+source: {path: assets/page-09.jpg, sha256: d54cab494ac8f931d8cb9dd5953d7f171a0c0d6c0b7abd7a73cc32e7f7de1aed}
+canonical_text: {path: pages/09.yaml, key: canonical_text, expected_blocks: 15}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles: {}
+
+fragments:
+  - {id: running_head_raster,   role: canonical_raster_text_absent_from_yaml, status: INSPECTED, bbox_px: {x: 214, y: 26, w: 632, h: 34}, treatment: crop_only}
+  - {id: heraldry_captioned,    role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 36, y: 60, w: 145, h: 265}, treatment: crop_only}
+  - {id: gruyere_seal,          role: heraldry, status: INSPECTED, bbox_px: {x: 889, y: 117, w: 110, h: 115}, treatment: crop_only, note: "sceau « GRUYÈRE SUISSE » (texte intrinsèque)"}
+  - {id: title_ornament,        role: ornament, status: INSPECTED, bbox_px: {x: 300, y: 200, w: 430, h: 30}, treatment: crop_only}
+  - {id: hero,                  role: documentary_illustration, status: INSPECTED, bbox_px: {x: 236, y: 232, w: 680, h: 650}, treatment: crop_only}
+  - {id: magnolia_captioned,    role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 788, y: 232, w: 200, h: 252}, treatment: crop_only, note: "magnolia + légende « Magnolia séculaire ombrageant la demeure »"}
+  - {id: paragraph_divider,     role: ornament, status: INSPECTED, bbox_px: {x: 88, y: 599, w: 74, h: 16}, treatment: crop_only}
+  - {id: map_document,          role: documentary_map, status: INSPECTED, bbox_px: {x: 40, y: 940, w: 362, h: 232}, treatment: crop_only}
+  - {id: carte_icon, role: icon, status: INSPECTED, bbox_px: {x: 165, y: 917, w: 25, h: 23}, treatment: crop_only}
+  - {id: pin_icon,   role: icon, status: INSPECTED, bbox_px: {x: 466, y: 916, w: 21, h: 28}, treatment: crop_only}
+  - {id: phone_icon, role: icon, status: INSPECTED, bbox_px: {x: 758, y: 916, w: 22, h: 28}, treatment: crop_only}
+  - {id: localization_vignette, role: documentary_illustration, status: INSPECTED, bbox_px: {x: 415, y: 1055, w: 285, h: 140}, treatment: crop_only}
+  - {id: mappe_icon, role: icon, status: INSPECTED, bbox_px: {x: 53, y: 1223, w: 25, h: 27}, treatment: crop_only}
+  - {id: info_icons, role: icon, status: INSPECTED, bbox_px: {x: 47, y: 1328, w: 40, h: 127}, treatment: crop_only}
+  - {id: architecture_vignette, role: documentary_illustration, status: INSPECTED, bbox_px: {x: 332, y: 1266, w: 686, h: 246}, treatment: crop_only}
+
+vectors:
+  - {kind: rect, bbox_px: [30, 900, 962, 300], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [405, 900], to: [405, 1200], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [720, 900], to: [720, 1200], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1210, 962, 36], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1255, 962, 262], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,        block: 0,  expect: "La Maison Forte de Gruyère",  bbox_px: [200, 72, 690, 72],   style: title}
+  - {key: subtitle,     block: 1,  expect: "Saint-Étienne-de-Cuines",     bbox_px: [230, 150, 600, 38],  style: subtitle}
+  - {key: p1,           block: 2,  expect: "Tour ronde imposante",        bbox_px: [35, 395, 198, 196],  style: body}
+  - {key: p2,           block: 3,  expect: "En 1477",                     bbox_px: [35, 640, 198, 208],  style: body}
+  - {key: carte,        block: 4,  expect: "CARTE",                       bbox_px: [193, 916, 130, 22],  style: small_bold}
+  - {key: localisation, block: 5,  expect: "LOCALISATION",                bbox_px: [492, 918, 180, 22],  style: small_bold}
+  - {key: lat,          block: 6,  expect: "Lat:",                        bbox_px: [470, 955, 180, 20],  style: small}
+  - {key: lng,          block: 7,  expect: "Lng:",                        bbox_px: [470, 980, 180, 20],  style: small}
+  - {key: google_maps,  block: 8,  expect: "GOOGLE MAPS",                 bbox_px: [784, 918, 170, 22],  style: small_bold}
+  - {key: scan,         block: 9,  expect: "Scannez pour y aller",        bbox_px: [755, 1145, 180, 20], style: tiny}
+  - {key: mappe_sarde,  block: 10, expect: "MAPPE SARDE",                 bbox_px: [90, 1224, 880, 24],  style: tiny}
+  - {key: box_title,    block: 11, expect: "ARCHITECTURE",                bbox_px: [100, 1294, 220, 24], style: small_bold}
+  - {key: b1,           block: 12, expect: "• Tour ronde",                bbox_px: [100, 1340, 225, 22], style: tiny}
+  - {key: b2,           block: 13, expect: "• Magnolia",                  bbox_px: [100, 1385, 225, 22], style: tiny}
+  - {key: b3,           block: 14, expect: "• Propriété",                 bbox_px: [100, 1428, 225, 22], style: tiny}
+
+qr:
+  - {id: google_maps, svg: assets/qr-svg/page-09-google-maps.svg, placement: reference_canvas}
+
+discrepancies:
+  raster_text_absent_from_canon:
+    - {fragment: running_head_raster, description: "bandeau courant"}
+    - {fragment: heraldry_captioned, description: "légende des armoiries"}
+    - {fragment: gruyere_seal, description: "sceau GRUYÈRE SUISSE (texte intrinsèque)"}
+    - {fragment: magnolia_captioned, description: "légende « Magnolia séculaire ombrageant la demeure »"}
+    - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
+  canonical_text_not_visible_in_raster: []
+  title_field_mismatch: "pages/09.yaml:title = « La Maison-Forte de Gruyère » (trait d'union, comme le raster) alors que canonical_text commence par « La Maison Forte de Gruyère » ; composé selon canonical_text, à arbitrer"
+  omitted_ornaments:
+    - "croix ✠ en tête des deux paragraphes (inline dans le raster) non reproduites : pas de retour à la ligne suspendu dans la couche texte"
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED, INSPECTED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn

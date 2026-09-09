@@ -1,0 +1,103 @@
+# Layered v3 composition — page 03 — Le Couvent des Cordeliers
+# Port of the validated prototype (scripts/prototype_page03_*.py, run 34259978419) to the
+# generic YAML-driven composer (scripts/layered_compose.py). Geometry is expressed in
+# canonical-raster pixels (1024x1536); text comes only from pages/03.yaml:canonical_text.
+schema_version: 1
+page: 3
+title: Le Couvent des Cordeliers
+status: PROTOTYPE_PORTED_TO_GENERIC_COMPOSER
+source:
+  path: assets/page-03.jpg
+  sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
+canonical_text:
+  path: pages/03.yaml
+  key: canonical_text
+  expected_blocks: 25
+qr_registry: qr_registry.yaml
+canvas:
+  page_size: A5
+  fit: contain
+  background: "#fffdf7"
+  qr_reference_canvas: [1920, 2880]
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles:
+  small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
+
+# Fragments reviewed in prototypes/page-03/fragment-boxes.yaml (run 34251564059), re-cut after
+# the review of the first generic proof (2026-09-09):
+#  * franciscan_monk_captioned contained raster residue of the canonical title/subtitle
+#    ("rs", "bre") and its left edge clipped the caption "franciscaine": split into the figure
+#    (ink starts x=840, title residue ends x=835) and a separately measured caption fragment;
+#  * portal_gothique: the top edge cut the arch (ink from y=10) and the right edge touched the "L"
+#    of the raster title (x>=207);
+#  * site_visit_illustration: the canonical heading "VISITE DU SITE" sits on the sky of the
+#    drawing; the crop now keeps the mountain tops (ink from y=1355) and masks the old raster
+#    heading locally, the live heading is composed at the canonical position.
+# Edge-ink warnings that remain concern the page frame lines adjoining the crops.
+fragments:
+  - {id: portal_gothique_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 27,  y: 10,   w: 180, h: 246}, treatment: crop_only}
+  - {id: cloister_baroque_captioned,  role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 30,  y: 260,  w: 180, h: 262}, treatment: crop_only}
+  - {id: salle_capitulaire_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 30,  y: 528,  w: 181, h: 264}, treatment: crop_only}
+  - {id: franciscan_monk,             role: documentary_illustration,                               status: APPROVED, bbox_px: {x: 846, y: 86,   w: 134, h: 226}, treatment: crop_only}
+  - {id: franciscan_caption_raster,   role: canonical_raster_caption_absent_from_yaml,              status: APPROVED, bbox_px: {x: 779, y: 160,  w: 92,  h: 54},  treatment: crop_only, note: "caption « Spiritualité franciscaine » + arrow; absent from pages/03.yaml, kept raster, not OCRed"}
+  - {id: valley_cruet_captioned,      role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 744, y: 265,  w: 252, h: 264}, treatment: crop_only}
+  - {id: nave_captioned,              role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 787, y: 536,  w: 204, h: 286}, treatment: crop_only}
+  - {id: portal_detail,               role: documentary_detail,                                     status: APPROVED, bbox_px: {x: 638, y: 836,  w: 114, h: 194}, treatment: crop_only}
+  - {id: lintel_accolade_captioned,   role: documentary_detail_with_canonical_raster_caption,       status: APPROVED, bbox_px: {x: 787, y: 821,  w: 205, h: 221}, treatment: crop_only}
+  - {id: map_document,                role: documentary_map,                                        status: APPROVED, bbox_px: {x: 39,  y: 1092, w: 360, h: 197}, treatment: crop_only, note: intrinsic map labels remain raster; heading CARTE is live text}
+  - {id: localization_illustration,   role: documentary_illustration,                               status: APPROVED, bbox_px: {x: 421, y: 1180, w: 240, h: 109}, treatment: crop_only}
+  - {id: site_visit_illustration,     role: documentary_illustration,                               status: APPROVED, bbox_px: {x: 460, y: 1354, w: 428, h: 158}, treatment: crop_only, mask_px: [[460, 1354, 90, 15]], note: old raster heading masked with paper colour}
+
+# Simple vector scaffolding (frames of the map/location/QR band and of the visit box, title rule).
+vectors:
+  - {kind: rect, bbox_px: [35, 1058, 953, 272], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [35, 1332, 860, 185], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [400, 1058, 276, 272], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [675, 1058, 313, 272], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [335, 165], to: [685, 165], stroke: "#9a4938", width: 0.45}
+
+# Live text: every canonical block is assigned exactly once (validated), boxes measured on the reference.
+text_blocks:
+  - {key: title,           block: 0,  expect: "Le Couvent des Cordeliers",          bbox_px: [194, 34, 650, 72],   style: title}
+  - {key: subtitle,        block: 1,  expect: "Le testament spirituel",              bbox_px: [232, 110, 595, 42],  style: subtitle}
+  - {key: h1,              block: 2,  expect: "La vision d'un seigneur",             bbox_px: [226, 190, 505, 34],  style: heading}
+  - {key: vision_p1,       block: 3,  expect: "En cette année 1365",                 bbox_px: [226, 224, 517, 92],  style: body}
+  - {key: vision_p2,       block: 4,  expect: "Mais Jean II sait",                   bbox_px: [226, 321, 517, 86],  style: body}
+  - {key: vision_p3,       block: 5,  expect: "Ce n'est pas un caprice",             bbox_px: [226, 410, 517, 88],  style: body}
+  - {key: h2,              block: 6,  expect: "La nécropole des seigneurs",          bbox_px: [226, 531, 520, 34],  style: heading}
+  - {key: necropolis_p1,   block: 7,  expect: "Le Couvent des Cordeliers n'est pas", bbox_px: [226, 568, 550, 64],  style: body}
+  - {key: necropolis_p2,   block: 8,  expect: "L'église conventuelle",               bbox_px: [226, 637, 550, 87],  style: body}
+  - {key: necropolis_p3,   block: 9,  expect: "Mais les Cordeliers",                 bbox_px: [226, 728, 550, 74],  style: body}
+  - {key: h3,              block: 10, expect: "Un patrimoine architectural",         bbox_px: [59, 824, 545, 34],   style: heading}
+  - {key: architecture_p1, block: 11, expect: "Aujourd'hui encore",                  bbox_px: [59, 858, 545, 88],   style: body}
+  - {key: architecture_p2, block: 12, expect: "L'art flamboyant",                    bbox_px: [59, 951, 545, 78],   style: body}
+  - {key: carte,           block: 13, expect: "CARTE",                               bbox_px: [105, 1064, 185, 28], style: small_bold}
+  - {key: localisation,    block: 14, expect: "LOCALISATION",                        bbox_px: [457, 1064, 204, 30], style: small_bold}
+  - {key: lat,             block: 15, expect: "Lat:",                                bbox_px: [462, 1104, 210, 25], style: small}
+  - {key: lng,             block: 16, expect: "Lng:",                                bbox_px: [462, 1128, 210, 25], style: small}
+  - {key: google_maps,     block: 17, expect: "GOOGLE MAPS",                         bbox_px: [758, 1066, 207, 30], style: small_bold}
+  - {key: scan,            block: 18, expect: "Scannez pour y aller",                bbox_px: [757, 1254, 205, 24], style: tiny}
+  - {key: mappe_sarde,     block: 19, expect: "MAPPE SARDE",                         bbox_px: [83, 1294, 840, 26],  style: tiny}
+  - {key: visite,          block: 20, expect: "VISITE DU SITE",                      bbox_px: [370, 1348, 290, 22], style: small_bold_center}
+  - {key: adresse,         block: 21, expect: "• Adresse",                           bbox_px: [96, 1370, 375, 26],  style: tiny}
+  - {key: elements,        block: 22, expect: "• Éléments visibles",                 bbox_px: [96, 1400, 375, 42],  style: tiny}
+  - {key: statut,          block: 23, expect: "• Statut",                            bbox_px: [96, 1446, 375, 26],  style: tiny}
+  - {key: contact,         block: 24, expect: "• Contact",                           bbox_px: [96, 1478, 375, 26],  style: tiny}
+
+qr:
+  - {id: google_maps, svg: assets/qr-svg/page-03-google-maps.svg, placement: reference_canvas}
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn

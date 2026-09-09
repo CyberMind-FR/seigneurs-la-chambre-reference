@@ -1,0 +1,722 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 6
+title: La Tour de Burgin
+status: INSPECTED_PENDING_HUMAN_REVIEW
+generated_from:
+  composition: prototypes/page-06/composition.yaml
+  composition_run: null
+canonical_reference:
+  path: assets/page-06.jpg
+  sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031
+  dimensions_px:
+  - null
+  - null
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/06.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 0
+  - 298
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 298
+  - 0
+  - 834
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1132
+  - 962
+  - 208
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 30
+  - 1340
+  - 962
+  - 34
+- id: R05
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P06-O-heraldry_captioned
+  visual_description: heraldry captioned
+  object_class: composite
+  source_bbox_px:
+  - 40
+  - 30
+  - 135
+  - 252
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-sky_patch_top_right
+  visual_description: ciel de la vue principale qui remonte à droite du titre
+  object_class: illustration
+  source_bbox_px:
+  - 852
+  - 36
+  - 148
+  - 104
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-hero_captioned
+  visual_description: tour + paysage + callouts « Manoir de Châtel-André », « Emplacement de la Tour de Burgin » ; résidus
+    raster du sous-titre (ciel) et des fins de lignes du paragraphe 3 (herbe) masqués
+  object_class: composite
+  source_bbox_px:
+  - 481
+  - 140
+  - 520
+  - 650
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 276
+  - 190
+  - 433
+  - 30
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-cross_h1
+  visual_description: cross h1
+  object_class: ornament
+  source_bbox_px:
+  - 40
+  - 302
+  - 24
+  - 26
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-cross_h2
+  visual_description: cross h2
+  object_class: ornament
+  source_bbox_px:
+  - 40
+  - 676
+  - 24
+  - 26
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-cross_h3
+  visual_description: cross h3
+  object_class: ornament
+  source_bbox_px:
+  - 40
+  - 900
+  - 24
+  - 26
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-du_pont_blason_captioned
+  visual_description: armoiries DU PONT + cartouche raster
+  object_class: composite
+  source_bbox_px:
+  - 526
+  - 678
+  - 146
+  - 224
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-berthollet_portrait_captioned
+  visual_description: berthollet portrait captioned
+  object_class: composite
+  source_bbox_px:
+  - 501
+  - 910
+  - 181
+  - 212
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-vestiges_box_captioned
+  visual_description: encadré « Vestiges aujourd'hui » + citation Chapier (raster, absents du canon)
+  object_class: composite
+  source_bbox_px:
+  - 700
+  - 795
+  - 290
+  - 318
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-map_document
+  visual_description: carte + rose des vents + icône ; ancien titre CARTE masqué
+  object_class: documentary_map
+  source_bbox_px:
+  - 40
+  - 1145
+  - 359
+  - 193
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-localization_vignette
+  visual_description: localization vignette
+  object_class: illustration
+  source_bbox_px:
+  - 427
+  - 1228
+  - 259
+  - 114
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-pin_icon
+  visual_description: pin icon
+  object_class: icon
+  source_bbox_px:
+  - 473
+  - 1148
+  - 19
+  - 26
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-phone_icon
+  visual_description: phone icon
+  object_class: icon
+  source_bbox_px:
+  - 754
+  - 1148
+  - 14
+  - 24
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-mappe_icon
+  visual_description: mappe icon
+  object_class: icon
+  source_bbox_px:
+  - 64
+  - 1356
+  - 28
+  - 28
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-monk_bottom_left
+  visual_description: monk bottom left
+  object_class: illustration
+  source_bbox_px:
+  - 40
+  - 1385
+  - 140
+  - 150
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-fleuron_left
+  visual_description: fleuron left
+  object_class: ornament
+  source_bbox_px:
+  - 180
+  - 1430
+  - 53
+  - 40
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-fleuron_right
+  visual_description: fleuron right
+  object_class: ornament
+  source_bbox_px:
+  - 790
+  - 1430
+  - 80
+  - 40
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+- id: P06-O-ruins_bottom_right
+  visual_description: ruins bottom right
+  object_class: illustration
+  source_bbox_px:
+  - 840
+  - 1385
+  - 160
+  - 150
+  parent_region: R05
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-06.jpg
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
+  review_status: INSPECTED
+text_zones:
+- id: P06-T-title
+  role: title
+  canonical_block: 0
+  expect: La Tour de Burgin
+  bbox_px:
+  - 200
+  - 40
+  - 660
+  - 76
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Une demeure nobiliaire
+  bbox_px:
+  - 230
+  - 128
+  - 580
+  - 40
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-h1
+  role: h1
+  canonical_block: 2
+  expect: Une tour engloutie
+  bbox_px:
+  - 72
+  - 298
+  - 410
+  - 30
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-p1
+  role: p1
+  canonical_block: 3
+  expect: En contrebas
+  bbox_px:
+  - 42
+  - 336
+  - 438
+  - 122
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-p2
+  role: p2
+  canonical_block: 4
+  expect: Construite à la même
+  bbox_px:
+  - 42
+  - 467
+  - 438
+  - 162
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-h2
+  role: h2
+  canonical_block: 5
+  expect: Les nobles Du Pont
+  bbox_px:
+  - 72
+  - 672
+  - 420
+  - 30
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-p3
+  role: p3
+  canonical_block: 6
+  expect: Sur les origines
+  bbox_px:
+  - 42
+  - 710
+  - 434
+  - 152
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-h3
+  role: h3
+  canonical_block: 7
+  expect: Jean Truchet
+  bbox_px:
+  - 72
+  - 897
+  - 420
+  - 30
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-p4
+  role: p4
+  canonical_block: 8
+  expect: Au début du XVIIIe
+  bbox_px:
+  - 42
+  - 935
+  - 448
+  - 150
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-carte
+  role: carte
+  canonical_block: 9
+  expect: CARTE
+  bbox_px:
+  - 220
+  - 1144
+  - 120
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-localisation
+  role: localisation
+  canonical_block: 10
+  expect: LOCALISATION
+  bbox_px:
+  - 498
+  - 1147
+  - 180
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-lat
+  role: lat
+  canonical_block: 11
+  expect: 'Lat:'
+  bbox_px:
+  - 480
+  - 1180
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-lng
+  role: lng
+  canonical_block: 12
+  expect: 'Lng:'
+  bbox_px:
+  - 480
+  - 1202
+  - 180
+  - 20
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-google_maps
+  role: google_maps
+  canonical_block: 13
+  expect: GOOGLE MAPS
+  bbox_px:
+  - 776
+  - 1147
+  - 170
+  - 22
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-scan
+  role: scan
+  canonical_block: 14
+  expect: Scannez pour y aller
+  bbox_px:
+  - 755
+  - 1322
+  - 180
+  - 16
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-mappe_sarde
+  role: mappe_sarde
+  canonical_block: 15
+  expect: MAPPE SARDE
+  bbox_px:
+  - 105
+  - 1355
+  - 860
+  - 24
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-quote
+  role: quote
+  canonical_block: 16
+  expect: « La Tour de Burgin
+  bbox_px:
+  - 250
+  - 1400
+  - 520
+  - 125
+  parent_region: R05
+  layer_target: text_layer
+  compose_as: live_text
+  style: quote
+  authority: pages/06.yaml:canonical_text
+functional_objects: []
+structural_frames:
+- id: P06-FR01
+  kind: rect
+  bbox_px:
+  - 30
+  - 1132
+  - 962
+  - 208
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P06-FR02
+  kind: line
+  bbox_px:
+  - - 413
+    - 1132
+  - - 413
+    - 1340
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P06-FR03
+  kind: line
+  bbox_px:
+  - - 705
+    - 1132
+  - - 705
+    - 1340
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P06-FR04
+  kind: rect
+  bbox_px:
+  - 30
+  - 1340
+  - 962
+  - 34
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  raster_text_absent_from_canon:
+  - fragment: heraldry_captioned
+    description: légende des armoiries (voir blasonnement officiel p.2)
+  - fragment: hero_captioned
+    description: callouts « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin »
+  - fragment: du_pont_blason_captioned
+    description: cartouche « DU PONT »
+  - fragment: berthollet_portrait_captioned
+    description: légende « Claude-Louis Berthollet 1748-1822 »
+  - fragment: vestiges_box_captioned
+    description: titre « Vestiges aujourd'hui » et citation « Réduits à fort peu de choses » (Georges Chapier, 1957)
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  canonical_text_not_visible_in_raster: []
+  paragraph_structure:
+  - block: 8
+    description: le raster coupe le bloc canonique 8 en deux paragraphes (« …vallée. » / « Jean Truchet devint… ») ; le canon
+      est composé en un seul bloc
+  raster_typography:
+  - titre en petites capitales dans le raster ; composé en Times-Bold (fonte non encore verrouillée, ASSET_SPEC §7)
+completeness_gate:
+  status: INSPECTED_PENDING_HUMAN_REVIEW
+  native_raster_dimensions_recorded: false
+  all_objects_have_sha256: false
+  all_editorial_text_composed_live: true
+  qr_accounted_for: false
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: null

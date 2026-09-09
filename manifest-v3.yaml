@@ -1042,3 +1042,73 @@ phase_b_lot_2:
     page_10_castle_reconstruction_svg: produced_pending_geometry_review
     page_10_plan_documentary_trace_svg: blocked_rights
     association_logo_svg: blocked_source_missing
+
+layered_compositions:
+  status: site_family_composed_pending_human_review
+  composer: scripts/layered_compose.py
+  measurement: scripts/layered_measure.py
+  inventory: scripts/layered_inventory.py
+  validation: scripts/validate_layered.py
+  shared_text_styles: prototypes/_shared/text-styles.yaml
+  pipeline: background -> raster_fragments -> documentary_vectors -> text_layer -> functional_overlay
+  pages:
+  - page: 3
+    composition: prototypes/page-03/composition.yaml
+    composition_sha256: b64cec34f82852d45e0872311a4a4e7b335de3528803e0851642f710da6ab297
+    fragment_lock: prototypes/page-03/fragments.lock.yaml
+    status: PROTOTYPE_PORTED_TO_GENERIC_COMPOSER
+    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    effective_ppi_a5: 185.78
+  - page: 5
+    composition: prototypes/page-05/composition.yaml
+    composition_sha256: ef764ef7c502ef787a3676b4b86507b6adbbef0041a3af95d741f5dc9eec6948
+    fragment_lock: prototypes/page-05/fragments.lock.yaml
+    status: INSPECTED_PENDING_HUMAN_REVIEW
+    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    effective_ppi_a5: 185.78
+  - page: 6
+    composition: prototypes/page-06/composition.yaml
+    composition_sha256: ee8354261e6684263d5d78baa48751b7c801c7af2dd03053d27d3d9a2232ed20
+    fragment_lock: prototypes/page-06/fragments.lock.yaml
+    status: INSPECTED_PENDING_HUMAN_REVIEW
+    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    effective_ppi_a5: 185.78
+  - page: 7
+    composition: prototypes/page-07/composition.yaml
+    composition_sha256: 331323f7f148180acf28d001b92c7e5fdd0fa629bd58c0a615657fbd641e4e8f
+    fragment_lock: prototypes/page-07/fragments.lock.yaml
+    status: INSPECTED_PENDING_HUMAN_REVIEW
+    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    effective_ppi_a5: 185.78
+  - page: 8
+    composition: prototypes/page-08/composition.yaml
+    composition_sha256: 26cdd2b967830eab1eedff53d76058bcd628e733e13ff5713b23637947a6698a
+    fragment_lock: prototypes/page-08/fragments.lock.yaml
+    status: INSPECTED_PENDING_HUMAN_REVIEW
+    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    effective_ppi_a5: 185.78
+  - page: 9
+    composition: prototypes/page-09/composition.yaml
+    composition_sha256: c4e7659415dab3cbf9836baf42a664e5bb717acfbe2abaf87886f47a829c553a
+    fragment_lock: prototypes/page-09/fragments.lock.yaml
+    status: INSPECTED_PENDING_HUMAN_REVIEW
+    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    effective_ppi_a5: 185.78
+  - page: 11
+    composition: prototypes/page-11/composition.yaml
+    composition_sha256: 8bd82a0f0cccb15f2cca07ba20870bbae98c84da5f2b84793a6c4eb58795929b
+    fragment_lock: prototypes/page-11/fragments.lock.yaml
+    status: INSPECTED_PENDING_HUMAN_REVIEW
+    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    effective_ppi_a5: 181.06
+  - page: 12
+    composition: prototypes/page-12/composition.yaml
+    composition_sha256: 150f55f60074a007d3ed857e14f626737207fe3c37e8a190fff8ff1e384b4f0b
+    fragment_lock: prototypes/page-12/fragments.lock.yaml
+    status: INSPECTED_PENDING_HUMAN_REVIEW
+    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    effective_ppi_a5: 181.06
+  excluded:
+  - {page: 4, reason: PAGE_04_EDITORIAL_ARBITRATION_REQUIRED}
+  - {page: 10, reason: geometry lock (plan réel) — treated separately after the site family}
+  - {pages: [1, 2, 13, 14, 15, 16], reason: specific structures — after the site family}

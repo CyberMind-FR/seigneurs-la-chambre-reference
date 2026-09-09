@@ -5,3 +5,4 @@ opencv-python-headless>=4.10,<5
 PyMuPDF>=1.24,<2
 segno==1.6.6
 CairoSVG==2.9.1
+svglib>=2.0,<3

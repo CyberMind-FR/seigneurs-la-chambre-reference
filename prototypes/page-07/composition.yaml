@@ -1,0 +1,97 @@
+# Layered v3 composition — page 07 — La Tour de Châtel-André (site-page family)
+schema_version: 1
+page: 7
+title: La Tour de Châtel-André
+family: site
+status: INSPECTED_PENDING_HUMAN_REVIEW
+source: {path: assets/page-07.jpg, sha256: 53440127c11ca72289c1c59ebf51cf1ef037972d1754b8794dada88c85c39c3e}
+canonical_text: {path: pages/07.yaml, key: canonical_text, expected_blocks: 21}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles:
+  small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
+
+fragments:
+  - {id: running_head_raster,      role: canonical_raster_text_absent_from_yaml, status: INSPECTED, bbox_px: {x: 214, y: 26,   w: 632, h: 36},  treatment: crop_only}
+  - {id: heraldry_captioned,       role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 36,  y: 42,   w: 138, h: 276}, treatment: crop_only}
+  - {id: compass_rose_top_right,   role: ornament,                                status: INSPECTED, bbox_px: {x: 880, y: 38,   w: 114, h: 127}, treatment: crop_only}
+  - {id: title_ornament,           role: ornament,                                status: INSPECTED, bbox_px: {x: 298, y: 193,  w: 425, h: 31},  treatment: crop_only}
+  - {id: hero_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 580, y: 175, w: 421, h: 405}, treatment: crop_only, mask_px: [[580, 175, 165, 14]], note: "donjon + légende « Donjon de Châtel-André (XIIe siècle) » ; résidu raster du sous-titre masqué (ciel)"}
+  - {id: cross_h1,                 role: ornament, status: INSPECTED, bbox_px: {x: 198, y: 236, w: 22, h: 22}, treatment: crop_only}
+  - {id: valley_panorama,          role: documentary_illustration, status: INSPECTED, bbox_px: {x: 47,  y: 387,  w: 503, h: 186}, treatment: crop_only}
+  - {id: cross_h2,                 role: ornament, status: INSPECTED, bbox_px: {x: 198, y: 606, w: 22, h: 22}, treatment: crop_only}
+  - {id: vassal_scene_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 26,  y: 608,  w: 158, h: 290}, treatment: crop_only, note: "scène d'hommage + légende « Le vassal rend hommage à son suzerain »"}
+  - {id: defensive_box_captioned,  role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 575, y: 607,  w: 422, h: 265}, treatment: crop_only, note: "encadré « Un système défensif complémentaire » avec toponymes raster"}
+  - {id: cross_h3,                 role: ornament, status: INSPECTED, bbox_px: {x: 58,  y: 922, w: 22, h: 22}, treatment: crop_only}
+  - {id: battle_scene_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 495, y: 895,  w: 495, h: 176}, treatment: crop_only, note: "scène de 1598 + légende « Reprise de la tour par les troupes savoyardes (1598) »"}
+  - {id: map_document,             role: documentary_map, status: INSPECTED, bbox_px: {x: 40,  y: 1118, w: 368, h: 182}, treatment: crop_only}
+  - {id: carte_icon,               role: icon, status: INSPECTED, bbox_px: {x: 155, y: 1094, w: 22, h: 26}, treatment: crop_only}
+  - {id: pin_icon,                 role: icon, status: INSPECTED, bbox_px: {x: 472, y: 1093, w: 20, h: 27}, treatment: crop_only}
+  - {id: phone_icon,               role: icon, status: INSPECTED, bbox_px: {x: 752, y: 1093, w: 18, h: 29}, treatment: crop_only}
+  - {id: localization_vignette,    role: documentary_illustration, status: INSPECTED, bbox_px: {x: 435, y: 1186, w: 235, h: 106}, treatment: crop_only}
+  - {id: mappe_icon,               role: icon, status: INSPECTED, bbox_px: {x: 58,  y: 1311, w: 30, h: 27}, treatment: crop_only}
+  - {id: mh_icon,                  role: icon, status: INSPECTED, bbox_px: {x: 314, y: 1360, w: 24, h: 24}, treatment: crop_only}
+  - {id: info_icons,               role: icon, status: INSPECTED, bbox_px: {x: 50,  y: 1392, w: 45, h: 130}, treatment: crop_only}
+  - {id: bottom_vignette,          role: documentary_illustration, status: INSPECTED, bbox_px: {x: 495, y: 1360, w: 390, h: 150}, treatment: crop_only, mask_px: [[495, 1360, 102, 26], [495, 1392, 100, 22]], note: "résidus raster du titre MONUMENT HISTORIQUE et de la fin de la 1re puce masqués (ciel)"}
+  - {id: mh_seal,                  role: ornament, status: INSPECTED, bbox_px: {x: 872, y: 1372, w: 111, h: 117}, treatment: crop_only, note: "sceau « MONUMENT HISTORIQUE » (texte intrinsèque à l'ornement)"}
+
+vectors:
+  - {kind: rect, bbox_px: [30, 1080, 962, 220], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [420, 1080], to: [420, 1300], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [735, 1080], to: [735, 1300], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1300, 962, 34], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1345, 962, 180], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,        block: 0,  expect: "La Tour de Châtel-André",     bbox_px: [200, 68, 660, 76],   style: title}
+  - {key: subtitle,     block: 1,  expect: "Sentinelle des vassaux",      bbox_px: [230, 146, 580, 40],  style: subtitle}
+  - {key: h1,           block: 2,  expect: "Sentinelle sur la vallée",    bbox_px: [222, 232, 330, 26],  style: heading}
+  - {key: p1,           block: 3,  expect: "Levez les yeux",              bbox_px: [196, 262, 378, 120], style: body}
+  - {key: h2,           block: 4,  expect: "Tour des vassaux",            bbox_px: [222, 602, 340, 26],  style: heading}
+  - {key: p2,           block: 5,  expect: "Contrairement aux châteaux",  bbox_px: [196, 632, 360, 142], style: body}
+  - {key: p3,           block: 6,  expect: "On connaît les noms",         bbox_px: [196, 778, 360, 84],  style: body}
+  - {key: h3,           block: 7,  expect: "1598 : Prise",                bbox_px: [82, 918, 400, 26],   style: heading}
+  - {key: p4,           block: 8,  expect: "Créqui, capitaine",           bbox_px: [58, 948, 432, 112],  style: body}
+  - {key: carte,        block: 9,  expect: "CARTE",                       bbox_px: [183, 1094, 130, 20], style: small_bold}
+  - {key: localisation, block: 10, expect: "LOCALISATION",                bbox_px: [498, 1095, 180, 22], style: small_bold}
+  - {key: lat,          block: 11, expect: "Lat:",                        bbox_px: [478, 1128, 180, 20], style: small}
+  - {key: lng,          block: 12, expect: "Lng:",                        bbox_px: [478, 1150, 180, 20], style: small}
+  - {key: google_maps,  block: 13, expect: "GOOGLE MAPS",                 bbox_px: [776, 1095, 170, 22], style: small_bold}
+  - {key: scan,         block: 14, expect: "Scannez pour y aller",        bbox_px: [752, 1268, 180, 20], style: tiny}
+  - {key: mappe_sarde,  block: 15, expect: "MAPPE SARDE",                 bbox_px: [100, 1311, 870, 24], style: tiny}
+  - {key: box_title,    block: 16, expect: "MONUMENT HISTORIQUE",         bbox_px: [342, 1362, 258, 22], style: small_bold_center}
+  - {key: b1,           block: 17, expect: "• Classé",                    bbox_px: [98, 1396, 392, 22],  style: tiny}
+  - {key: b2,           block: 18, expect: "• Donjon",                    bbox_px: [98, 1425, 392, 22],  style: tiny}
+  - {key: b3,           block: 19, expect: "• Vue magnifique",            bbox_px: [98, 1455, 392, 22],  style: tiny}
+  - {key: b4,           block: 20, expect: "• Hameau du Perrel",          bbox_px: [98, 1484, 392, 22],  style: tiny}
+
+qr:
+  - {id: google_maps, svg: assets/qr-svg/page-07-google-maps.svg, placement: reference_canvas}
+
+discrepancies:
+  raster_text_absent_from_canon:
+    - {fragment: running_head_raster, description: "bandeau courant « Les Seigneurs de La Chambre et leur patrimoine en Maurienne »"}
+    - {fragment: heraldry_captioned, description: "légende des armoiries (voir blasonnement officiel p.2)"}
+    - {fragment: hero_captioned, description: "légende « Donjon de Châtel-André (XIIe siècle) »"}
+    - {fragment: vassal_scene_captioned, description: "légende « Le vassal rend hommage à son suzerain »"}
+    - {fragment: defensive_box_captioned, description: "titre « Un système défensif complémentaire » et toponymes (Le Cruet, Châtel-André, Route du Mont-Cenis, La Chambre, Vallée des Villards)"}
+    - {fragment: battle_scene_captioned, description: "légende « Reprise de la tour par les troupes savoyardes (1598) »"}
+    - {fragment: mh_seal, description: "sceau MONUMENT HISTORIQUE (texte intrinsèque)"}
+    - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
+  canonical_text_not_visible_in_raster: []
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED, INSPECTED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn
