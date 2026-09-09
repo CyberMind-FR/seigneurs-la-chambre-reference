@@ -35,6 +35,9 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT, TA_RIGHT
 from reportlab.lib.pagesizes import A1, A2, A4, A5
 from reportlab.lib.styles import ParagraphStyle
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.pdfmetrics import stringWidth
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph
 from reportlab.graphics import renderPDF
@@ -176,13 +179,24 @@ class Composer:
             merged[k] = base
         self.style_defaults = defaults
         self.style_specs = merged
+        # Optional TrueType fonts (Unicode glyphs the PDF base-14 fonts lack, e.g. U+1D49).
+        for name, path in {**(shared.get("fonts") or {}), **(self.spec.get("fonts") or {})}.items():
+            if name in pdfmetrics.getRegisteredFontNames():
+                continue
+            candidates = path if isinstance(path, list) else [path]
+            found = next((c for c in candidates if Path(c).exists()), None)
+            if not found:
+                raise SystemExit(f"font {name!r}: none of {candidates} exists on this machine")
+            pdfmetrics.registerFont(TTFont(name, found))
+            self.report.setdefault("fonts", {})[name] = found
 
     def make_style(self, name, size=None):
         s = self.style_specs[name]
         size = size or float(s["size"])
         leading = float(s.get("leading", size * 1.12)) * (size / float(s["size"]))
         return ParagraphStyle(name, fontName=s.get("font", "Times-Roman"), fontSize=size, leading=leading,
-                              textColor=colors.HexColor(s.get("color", "#2f241e")), alignment=ALIGN[s.get("align", "left")])
+                              textColor=colors.HexColor(s.get("color", "#2f241e")), alignment=ALIGN[s.get("align", "left")],
+                              splitLongWords=0, embeddedHyphenation=1)
 
     # ---- fragments
     def edge_ink(self, x, y, w, h):
@@ -241,12 +255,27 @@ class Composer:
             masks = []
             for m in f.get("mask_px", []) or []:
                 # Deterministic local masking of old raster text / neighbouring objects inside the
-                # crop, filled with the measured paper colour (REGENERATION_RULES: masquage de
-                # l'ancien texte, restauration locale du fond). Recorded in fragments.json.
+                # crop (REGENERATION_RULES: masquage de l'ancien texte, restauration locale du fond).
+                # Fill: measured paper colour (default), the median colour of the mask border ring
+                # (`mask_fill: border_median`, e.g. text inside a coloured banner) or a hex colour.
                 mx, my, mw, mh = bbox_tuple(m)
-                fill = tuple(int(round(v)) for v in self.bg)
+                mode = f.get("mask_fill", "paper")
+                if mode == "paper":
+                    fill = tuple(int(round(v)) for v in self.bg)
+                elif mode == "border_median":
+                    ring = 3
+                    y0, y1 = max(0, my - ring), min(self.img.height, my + mh + ring)
+                    x0, x1 = max(0, mx - ring), min(self.img.width, mx + mw + ring)
+                    region = self.rgb[y0:y1, x0:x1].astype(np.float32)
+                    inner = np.zeros(region.shape[:2], dtype=bool)
+                    inner[my - y0:my - y0 + mh, mx - x0:mx - x0 + mw] = True
+                    fill = tuple(int(round(v)) for v in np.median(region[~inner], axis=0))
+                elif isinstance(mode, str) and mode.startswith("#"):
+                    fill = tuple(int(mode[i:i + 2], 16) for i in (1, 3, 5))
+                else:
+                    raise SystemExit(f"fragment {f['id']}: unknown mask_fill {mode!r}")
                 ImageDraw.Draw(crop).rectangle((mx - x, my - y, mx - x + mw - 1, my - y + mh - 1), fill=fill)
-                masks.append({"x": mx, "y": my, "w": mw, "h": mh, "fill_rgb": list(fill)})
+                masks.append({"x": mx, "y": my, "w": mw, "h": mh, "fill_rgb": list(fill), "fill_mode": mode})
             crop.save(path)
             dest = bbox_tuple(f["dest_bbox_px"]) if f.get("dest_bbox_px") else (x, y, w, h)
             dx, dy, dw, dh = self.geom.box(*dest)
@@ -323,11 +352,15 @@ class Composer:
         min_size = float(spec.get("min_size", self.style_defaults.get("min_size", 4.6)))
         step = float(spec.get("shrink_step", self.style_defaults.get("shrink_step", 0.2)))
         size = float(spec["size"])
+        font = spec.get("font", "Times-Roman")
+        tokens = [t for part in text.split() for t in re.split(r"(?<=-)", part) if t]
         while True:
             style = self.make_style(style_name, size)
             p = Paragraph(escape(text), style)
             _, ah = p.wrap(w_pt, 10000)
-            if ah <= h_pt + 0.01 or fit != "shrink" or size - step < min_size:
+            widest = max((stringWidth(t, font, size) for t in tokens), default=0)
+            fits = ah <= h_pt + 0.01 and widest <= w_pt + 0.01
+            if fits or fit != "shrink" or size - step < min_size:
                 return p, size, ah
             size = round(size - step, 3)
 
@@ -519,15 +552,22 @@ class Composer:
                     self.issues.append((mode, "text_qr_overlap", f"text {t['key']} enters the quiet zone of QR {q['id']}"))
         return out
 
-    def decode_qr(self, page, q, zoom=4):
+    def decode_qr(self, page, q):
+        """Decode the QR from the final rendered PDF; several control windows and zooms are tried
+        (neighbouring labels or QR codes can confuse the detector), the first exact match wins."""
         b = q["bbox_px"]
-        margin = max(8, b["w"] // 4)
-        x, y, w, h = self.geom.box(b["x"] - margin, b["y"] - margin, b["w"] + 2 * margin, b["h"] + 2 * margin)
-        clip = fitz.Rect(x, self.page_h - (y + h), x + w, self.page_h - y)
-        pix = page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), clip=clip, alpha=False)
-        arr = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)[:, :, :3]
-        decoded, _, _ = cv2.QRCodeDetector().detectAndDecode(cv2.cvtColor(arr, cv2.COLOR_RGB2BGR))
-        return decoded
+        last = ""
+        for margin_div, zoom in ((8, 4), (4, 4), (8, 6), (2, 4), (16, 8)):
+            margin = max(4, b["w"] // margin_div)
+            x, y, w, h = self.geom.box(b["x"] - margin, b["y"] - margin, b["w"] + 2 * margin, b["h"] + 2 * margin)
+            clip = fitz.Rect(x, self.page_h - (y + h), x + w, self.page_h - y)
+            pix = page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), clip=clip, alpha=False)
+            arr = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)[:, :, :3]
+            decoded, _, _ = cv2.QRCodeDetector().detectAndDecode(cv2.cvtColor(arr, cv2.COLOR_RGB2BGR))
+            if decoded == q["payload"]:
+                return decoded
+            last = decoded or last
+        return last
 
     def validate(self):
         val = self.spec.get("validation", {})
@@ -536,7 +576,10 @@ class Composer:
             raise SystemExit("proof must have exactly one page")
         page = doc[0]
         text = normalize_ws(page.get_text("text"))
-        missing = [b for b in self.blocks if normalize_ws(b) not in text]
+        # A line break placed after a hyphen that exists in the canon ("Notre-Dame-\ndu-Cruet") is a
+        # legitimate typographic break, not a text change: compare against both readings.
+        text_joined = re.sub(r"(?<=\S-) (?=\S)", "", text)
+        missing = [b for b in self.blocks if normalize_ws(b) not in text and normalize_ws(b) not in text_joined]
         # Control render at 300 dpi (print gate for continuous tone).
         pix = page.get_pixmap(matrix=fitz.Matrix(300 / 72, 300 / 72), alpha=False)
         render = self.out / f"page-{self.page:02d}-layered-proof-render.png"

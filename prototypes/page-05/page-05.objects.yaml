@@ -5,7 +5,7 @@ title: Le Château Joli
 status: APPROVED
 generated_from:
   composition: prototypes/page-05/composition.yaml
-  composition_run: 13b298b3c693572166e58a306cc100f32a239dd75db4eff22f679db9c78f9d40
+  composition_run: 35a8e916496a13673ca0a77d5a89e8bb20e2a5f1b9f7d6d3f8ca213388f76ad2
 canonical_reference:
   path: assets/page-05.jpg
   sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
@@ -144,6 +144,7 @@ objects:
     - 255
     - 253
     - 248
+    fill_mode: paper
   - x: 578
     y: 150
     w: 252
@@ -152,6 +153,7 @@ objects:
     - 255
     - 253
     - 248
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
   sha256: e79b10ac8160d4a0720a7134367edeb62cd5bb766b8e854d932eb6edd05bf14d
@@ -222,6 +224,7 @@ objects:
     - 255
     - 253
     - 248
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
   sha256: a074c192fed769974f2cdf5e0d419e73f1e4bcf27e04027472802b199fb666d6
@@ -357,6 +360,7 @@ objects:
     - 255
     - 253
     - 248
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
   sha256: 6e8fe56714720b5158f87c6dba5dc3878dae3c1124961c4d9b34d80d5c3139bf
@@ -730,6 +734,7 @@ discrepancies:
   canonical_text_not_visible_in_raster: []
 completeness_gate:
   status: PASS
+  blocked_fragments: []
   native_raster_dimensions_recorded: true
   all_objects_have_sha256: true
   all_editorial_text_composed_live: true

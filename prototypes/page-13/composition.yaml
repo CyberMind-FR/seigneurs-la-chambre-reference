@@ -1,0 +1,96 @@
+# Layered v3 composition — page 13 — Un patrimoine à préserver (synthèse, six QR, raster 1055x1491)
+schema_version: 1
+page: 13
+title: Un patrimoine à préserver
+family: synthesis
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
+source: {path: assets/page-13.jpg, sha256: 9e98524888c952e4231a63df5a2da4b3d14a145683f0522090c0fa878f1a13b0}
+canonical_text: {path: pages/13.yaml, key: canonical_text, expected_blocks: 20}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles: {}
+
+fragments:
+  - {id: running_head_raster,   role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 230, y: 22, w: 596, h: 30}, treatment: crop_only}
+  - {id: heraldry_captioned,    role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 36, y: 40, w: 132, h: 250}, treatment: crop_only}
+  - {id: statue,                role: documentary_illustration, status: APPROVED, bbox_px: {x: 817, y: 45, w: 221, h: 375}, treatment: crop_only, mask_px: [[817, 62, 50, 70]], note: "résidu raster de la fin du titre masqué"}
+  - {id: title_ornament,        role: ornament, status: APPROVED, bbox_px: {x: 298, y: 138, w: 424, h: 30}, treatment: crop_only}
+  - {id: left_mountains_vignette, role: documentary_illustration, status: APPROVED, bbox_px: {x: 25, y: 325, w: 182, h: 80}, treatment: crop_only}
+  - {id: map_composite,         role: documentary_map, status: APPROVED, bbox_px: {x: 25, y: 430, w: 1015, h: 512}, treatment: crop_only,
+     mask_px: [[268, 426, 500, 28], [70, 438, 120, 20], [70, 462, 160, 38], [70, 636, 112, 26], [70, 659, 72, 20], [58, 681, 66, 42], [58, 808, 60, 92], [118, 808, 40, 50], [118, 855, 44, 42], [158, 808, 24, 17], [880, 459, 116, 27], [880, 488, 84, 20], [882, 513, 97, 18], [882, 532, 65, 16], [882, 551, 65, 20], [880, 750, 106, 26], [880, 774, 118, 20], [882, 799, 117, 19]],
+     note: "carte panoramique + cinq vignettes de sites + repères numérotés (intrinsèques) ; le titre CARTE DES 10 SITES et les cinq libellés raster (formulation différente du canon) sont masqués et recomposés en texte vivant depuis le canon"}
+  - {id: drop_cap_c,            role: ornament, status: APPROVED, bbox_px: {x: 55, y: 954, w: 65, h: 70}, treatment: crop_only, note: "lettrine C (intrinsèque à l'ornement)"}
+  - {id: association_cartouche, role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 702, y: 950, w: 314, h: 108}, treatment: crop_only, note: "motif de cloître + « LES AMIS DU COUVENT DES CORDELIERS DE LA CHAMBRE » (raster, absent du canon)"}
+  - {id: fleuron_left,  role: ornament, status: APPROVED, bbox_px: {x: 205, y: 1081, w: 115, h: 24}, treatment: crop_only}
+  - {id: fleuron_right, role: ornament, status: APPROVED, bbox_px: {x: 700, y: 1081, w: 115, h: 24}, treatment: crop_only}
+  - {id: picto_association, role: icon, status: APPROVED, bbox_px: {x: 70, y: 1116, w: 58, h: 44}, treatment: crop_only}
+  - {id: picto_videos,      role: icon, status: APPROVED, bbox_px: {x: 242, y: 1117, w: 57, h: 43}, treatment: crop_only}
+  - {id: picto_virtual,     role: icon, status: APPROVED, bbox_px: {x: 400, y: 1118, w: 70, h: 42}, treatment: crop_only}
+  - {id: picto_fondation,   role: icon, status: APPROVED, bbox_px: {x: 577, y: 1113, w: 60, h: 47}, treatment: crop_only, mask_px: [[577, 1113, 60, 6]], note: "résidu raster du titre RESSOURCES NUMÉRIQUES masqué"}
+  - {id: picto_commune,     role: icon, status: APPROVED, bbox_px: {x: 752, y: 1117, w: 59, h: 44}, treatment: crop_only}
+  - {id: picto_documents,   role: icon, status: APPROVED, bbox_px: {x: 919, y: 1117, w: 60, h: 44}, treatment: crop_only}
+  - {id: bottom_band,       role: documentary_illustration, status: APPROVED, bbox_px: {x: 25, y: 1328, w: 1015, h: 163}, treatment: crop_only, mask_px: [[200, 1338, 560, 26]], note: "panorama + main/smartphone + ampoule ; ancien texte CONSEIL masqué (ciel) et recomposé"}
+
+vectors:
+  - {kind: rect, bbox_px: [40, 945, 990, 115], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,        block: 0,  expect: "Un patrimoine à préserver", bbox_px: [190, 66, 650, 70],   style: title}
+  - {key: p1,           block: 1,  expect: "De 1030 à 1454",            bbox_px: [205, 180, 605, 100],  style: body_large}
+  - {key: p2,           block: 2,  expect: "Leur nom résonne",          bbox_px: [205, 292, 605, 105],  style: body_large}
+  - {key: h_carte,      block: 3,  expect: "CARTE DES 10 SITES",        bbox_px: [270, 424, 500, 28],   style: heading_center}
+  - {key: s1,           block: 4,  expect: "• La Chambre",              bbox_px: [70, 440, 160, 56],    style: tiny}
+  - {key: s2,           block: 5,  expect: "• Notre-Dame-du-Cruet",     bbox_px: [66, 638, 58, 88],     style: tiny}
+  - {key: s3,           block: 6,  expect: "• Sainte-Marie-de-Cuines",  bbox_px: [66, 810, 54, 92],     style: tiny}
+  - {key: s4,           block: 7,  expect: "• Saint-Étienne-de-Cuines", bbox_px: [882, 462, 118, 82],   style: tiny}
+  - {key: s5,           block: 8,  expect: "• Saint-Rémy-de-Maurienne", bbox_px: [882, 754, 150, 56],   style: tiny}
+  - {key: p3,           block: 9,  expect: "Ce patrimoine est fragile", bbox_px: [125, 960, 565, 92],   style: body_large}
+  - {key: h_online,     block: 10, expect: "Découvrez en ligne",        bbox_px: [325, 1076, 370, 28],  style: heading_center}
+  - {key: h_resources,  block: 11, expect: "Ressources numériques",     bbox_px: [325, 1104, 370, 18],  style: small_bold_center}
+  - {key: l1,           block: 12, expect: "SITE ASSOCIATION",          bbox_px: [22, 1170, 160, 32],   style: tiny_center}
+  - {key: l2,           block: 13, expect: "VIDÉOS / YOUTUBE",          bbox_px: [184, 1170, 160, 32],  style: tiny_center}
+  - {key: l3,           block: 14, expect: "VISITE VIRTUELLE",          bbox_px: [351, 1170, 160, 32],  style: tiny_center}
+  - {key: l4,           block: 15, expect: "FONDATION",                 bbox_px: [529, 1170, 160, 32],  style: tiny_center}
+  - {key: l5,           block: 16, expect: "PATRIMOINE COMMUNE",        bbox_px: [703, 1170, 160, 32],  style: tiny_center}
+  - {key: l6,           block: 17, expect: "DOCUMENTS",                 bbox_px: [861, 1170, 160, 32],  style: tiny_center}
+  - {key: conseil,      block: 18, expect: "CONSEIL",                   bbox_px: [200, 1341, 75, 16],   style: small_bold}
+  - {key: conseil_text, block: 19, expect: "Scannez les QR codes",      bbox_px: [280, 1341, 490, 16],  style: tiny}
+
+qr:
+  - {id: association,   svg: assets/qr-svg/page-13-01-association.svg,   placement: reference_canvas}
+  - {id: videos,        svg: assets/qr-svg/page-13-02-videos.svg,        placement: reference_canvas}
+  - {id: virtual_visit, svg: assets/qr-svg/page-13-03-virtual_visit.svg, placement: reference_canvas}
+  - {id: fondation,     svg: assets/qr-svg/page-13-04-fondation.svg,     placement: reference_canvas}
+  - {id: commune,       svg: assets/qr-svg/page-13-05-commune.svg,       placement: reference_canvas}
+  - {id: documents,     svg: assets/qr-svg/page-13-06-documents.svg,     placement: reference_canvas}
+
+discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon prévaut ; les textes raster absents du canon restent dans leurs fragments"}
+  raster_text_absent_from_canon:
+    - {fragment: running_head_raster, description: "bandeau courant"}
+    - {fragment: heraldry_captioned, description: "légende des armoiries"}
+    - {fragment: map_composite, description: "toponyme « La Maurienne » et repères numérotés (intrinsèques à la carte)"}
+    - {fragment: association_cartouche, description: "« LES AMIS DU COUVENT DES CORDELIERS DE LA CHAMBRE »"}
+  canonical_text_differs_from_raster:
+    - "les cinq libellés de sites autour de la carte sont formulés différemment dans le raster (« Couvent des Cordeliers / Maison de La Tour »…) : masqués, les puces canoniques sont composées à leur place"
+    - "les libellés des ressources du raster ne portent pas les domaines (résidus « r », « fo », « g », « fr ») : les blocs canoniques complets (libellé : domaine) sont composés"
+    - "« la Maurienne fut d'abord chambrienne. » est en rouge centré dans le raster ; fin du bloc 2 dans le canon, composé en corps"
+  canonical_text_not_visible_in_raster: []
+  section_5_asset_spec: "P13-Z02 (carte + vignettes) et P13-Z06 (panorama/téléphone) sont repris comme fragments canoniques ; P13-Z04 six pictogrammes raster ; P13-Z05 six QR SVG du registre"
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}

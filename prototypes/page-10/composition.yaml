@@ -1,0 +1,104 @@
+# Layered v3 composition — page 10 — Le Château de Notre-Dame-du-Cruet (raster 1055x1491)
+# Geometry lock: assets/reference/page-10-plan-reel.jpg stays the geometric authority. No new
+# reconstruction is produced: the plan and the views are fragments of the validated canonical page
+# (REGENERATION_RULES: prefer the canonical illustration over a new speculative volumetry).
+schema_version: 1
+page: 10
+title: Le Château de Notre-Dame-du-Cruet
+family: site
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09 (« Go, page 10 puis 13 à 16 »)
+source: {path: assets/page-10.jpg, sha256: 8aadbcf5cda05bec84012f52c636d8499bb5d052010bc5df998aaac3a5c13bae}
+canonical_text: {path: pages/10.yaml, key: canonical_text, expected_blocks: 26}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles:
+  small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
+
+fragments:
+  - {id: running_head_raster,    role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 234, y: 16, w: 590, h: 36}, treatment: crop_only}
+  - {id: heraldry_captioned,     role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 36, y: 40, w: 128, h: 205}, treatment: crop_only}
+  - {id: marian_figure_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 880, y: 50, w: 160, h: 300}, treatment: crop_only, note: "figure mariale + légende « Notre-Dame-du-Cruet, protectrice du château et de la vallée »"}
+  - {id: title_ornament,         role: ornament, status: APPROVED, bbox_px: {x: 298, y: 176, w: 443, h: 28}, treatment: crop_only}
+  - {id: hero,                   role: documentary_illustration, status: APPROVED, bbox_px: {x: 500, y: 185, w: 540, h: 322}, treatment: crop_only, note: "vue principale des ruines (illustration canonique validée, pas de nouvelle reconstitution)"}
+  - {id: cross_h1, role: ornament, status: APPROVED, bbox_px: {x: 163, y: 226, w: 20, h: 17}, treatment: crop_only}
+  - {id: cross_h2, role: ornament, status: APPROVED, bbox_px: {x: 50, y: 448, w: 19, h: 22}, treatment: crop_only}
+  - {id: plan_box_captioned,     role: documentary_map, status: APPROVED, bbox_px: {x: 515, y: 507, w: 522, h: 300}, treatment: crop_only, note: "encadré « Plan du château (XIe-XVe siècle) » : plan canonique avec ses libellés intrinsèques (Tour de guet, Basse cour, Porte d'entrée, Tour porte, Tour ronde, Tour carrée, Cour haute, Logis, Donjon, Fossé) conformes au plan réel"}
+  - {id: cross_h3, role: ornament, status: APPROVED, bbox_px: {x: 50, y: 673, w: 21, h: 20}, treatment: crop_only}
+  - {id: chronology_box_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 515, y: 814, w: 522, h: 258}, treatment: crop_only, note: "encadré « Chronologie du château » : pictogrammes + dates + libellés raster absents du canon"}
+  - {id: cross_h4, role: ornament, status: APPROVED, bbox_px: {x: 50, y: 856, w: 19, h: 22}, treatment: crop_only}
+  - {id: map_document,           role: documentary_map, status: APPROVED, bbox_px: {x: 40, y: 1086, w: 362, h: 178}, treatment: crop_only, mask_px: [[178, 1088, 62, 20]], note: "ancien titre CARTE masqué ; icône conservée"}
+  - {id: pin_icon,   role: icon, status: APPROVED, bbox_px: {x: 462, y: 1088, w: 17, h: 22}, treatment: crop_only}
+  - {id: phone_icon, role: icon, status: APPROVED, bbox_px: {x: 773, y: 1088, w: 19, h: 23}, treatment: crop_only}
+  - {id: localization_vignette,  role: documentary_illustration, status: APPROVED, bbox_px: {x: 415, y: 1160, w: 255, h: 100}, treatment: crop_only}
+  - {id: mappe_icon, role: icon, status: APPROVED, bbox_px: {x: 58, y: 1264, w: 34, h: 28}, treatment: crop_only}
+  - {id: info_icons, role: icon, status: APPROVED, bbox_px: {x: 48, y: 1323, w: 30, h: 112}, treatment: crop_only}
+  - {id: bottom_panorama,        role: documentary_illustration, status: APPROVED, bbox_px: {x: 520, y: 1310, w: 500, h: 160}, treatment: crop_only, mask_px: [[520, 1310, 75, 14]], note: "résidu raster de la fin du titre EN SAVOIR PLUS masqué (ciel)"}
+
+vectors:
+  - {kind: rect, bbox_px: [30, 1075, 1010, 185], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [405, 1075], to: [405, 1260], stroke: "#715240", width: 0.45}
+  - {kind: line, from: [725, 1075], to: [725, 1260], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1260, 1010, 34], stroke: "#715240", width: 0.45}
+  - {kind: rect, bbox_px: [30, 1298, 1010, 175], stroke: "#715240", width: 0.45}
+
+text_blocks:
+  - {key: title,        block: 0,  expect: "Le Château de Notre-Dame-du-Cruet", bbox_px: [190, 66, 720, 70], style: title}
+  - {key: subtitle,     block: 1,  expect: "Forteresse des seigneurs",  bbox_px: [215, 128, 600, 38],  style: subtitle}
+  - {key: h1,           block: 2,  expect: "Sentinelle de pierre",      bbox_px: [190, 225, 320, 26],  style: heading}
+  - {key: p1,           block: 3,  expect: "Imaginez-vous",             bbox_px: [135, 255, 362, 106], style: body}
+  - {key: p2,           block: 4,  expect: "Le Château de Notre-Dame-Du-Cruet devient", bbox_px: [135, 362, 362, 74], style: body}
+  - {key: h2,           block: 5,  expect: "Guillaume Ier",             bbox_px: [78, 447, 400, 28],   style: heading}
+  - {key: p3,           block: 6,  expect: "Vers 1090-1100",            bbox_px: [52, 482, 425, 112],  style: body}
+  - {key: p4,           block: 7,  expect: "Le château se déploie",     bbox_px: [52, 596, 425, 74],   style: body}
+  - {key: h3,           block: 8,  expect: "1472 : Le dernier éclat",   bbox_px: [78, 672, 400, 28],   style: heading}
+  - {key: p5,           block: 9,  expect: "Le 25 mars 1472",           bbox_px: [52, 706, 425, 100],  style: body}
+  - {key: p6,           block: 10, expect: "En 1491",                   bbox_px: [52, 808, 425, 46],   style: body}
+  - {key: h4,           block: 11, expect: "1536 : La fin",             bbox_px: [78, 856, 400, 28],   style: heading}
+  - {key: p7,           block: 12, expect: "Le coup fatal",             bbox_px: [52, 890, 425, 74],   style: body}
+  - {key: p8,           block: 13, expect: "Ironie de l'histoire",      bbox_px: [52, 966, 425, 66],   style: body}
+  - {key: carte,        block: 14, expect: "CARTE",                     bbox_px: [181, 1087, 120, 20], style: small_bold}
+  - {key: localisation, block: 15, expect: "LOCALISATION",              bbox_px: [485, 1089, 180, 22], style: small_bold}
+  - {key: lat,          block: 16, expect: "Lat:",                      bbox_px: [470, 1120, 180, 20], style: small}
+  - {key: lng,          block: 17, expect: "Lng:",                      bbox_px: [470, 1142, 180, 20], style: small}
+  - {key: google_maps,  block: 18, expect: "GOOGLE MAPS",               bbox_px: [797, 1089, 170, 22], style: small_bold}
+  - {key: scan,         block: 19, expect: "Scannez pour y aller",      bbox_px: [780, 1234, 180, 16], style: tiny}
+  - {key: mappe_sarde,  block: 20, expect: "MAPPE SARDE",               bbox_px: [100, 1264, 880, 24], style: tiny}
+  - {key: box_title,    block: 21, expect: "EN SAVOIR PLUS",            bbox_px: [340, 1304, 300, 22], style: small_bold_center}
+  - {key: b1,           block: 22, expect: "• Les ruines",              bbox_px: [100, 1328, 410, 20], style: tiny}
+  - {key: b2,           block: 23, expect: "• Distance",                bbox_px: [100, 1354, 410, 20], style: tiny}
+  - {key: b3,           block: 24, expect: "• Point de vue",            bbox_px: [100, 1380, 410, 20], style: tiny}
+  - {key: b4,           block: 25, expect: "• Édifié",                  bbox_px: [100, 1406, 410, 20], style: tiny}
+
+qr:
+  - {id: google_maps, svg: assets/qr-svg/page-10-google-maps.svg, placement: reference_canvas}
+
+discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon prévaut ; les textes raster absents du canon restent dans leurs fragments"}
+  raster_text_absent_from_canon:
+    - {fragment: running_head_raster, description: "bandeau courant"}
+    - {fragment: heraldry_captioned, description: "légende des armoiries"}
+    - {fragment: marian_figure_captioned, description: "légende « Notre-Dame-du-Cruet, protectrice du château et de la vallée »"}
+    - {fragment: plan_box_captioned, description: "titre « Plan du château (XIe-XVe siècle) » et libellés du plan (intrinsèques au document)"}
+    - {fragment: chronology_box_captioned, description: "titre « Chronologie du château », dates et libellés des cinq événements"}
+    - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
+  canonical_text_differs_from_raster:
+    - "le raster porte « Imposéeevause au XIe siècle » (défaut) là où le canon dit « Imaginez-vous au XIe siècle » : le canon prévaut"
+    - "le raster porte « Paroisse de Notre-Dame-du-Cunet » (défaut) là où le canon dit « Notre-Dame-du-Cruet » : le canon prévaut"
+  canonical_text_not_visible_in_raster: []
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}

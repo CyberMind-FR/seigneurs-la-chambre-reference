@@ -139,7 +139,8 @@ def main():
                    "layer_target": "documentary_vector", "extraction_action": "layout_vector"}
                   for i, v in enumerate(comp.get("vectors", []) or [], 1)]
 
-    fragments_ok = all(o["sha256"] for o in objects)
+    blocked = [o["id"] for o in objects if str(o["review_status"]).startswith("BLOCKED")]
+    fragments_ok = all(o["sha256"] for o in objects if o["id"] not in blocked)
     inventory = {
         "schema_version": 2,
         "project": "Les Seigneurs de La Chambre",
@@ -163,7 +164,10 @@ def main():
         "structural_frames": frames_out,
         "discrepancies": comp.get("discrepancies", {}),
         "completeness_gate": {
-            "status": "INSPECTED_PENDING_HUMAN_REVIEW" if comp.get("status", "").startswith("INSPECTED") else "PASS" if fragments_ok else "BLOCKED",
+            "status": ("INSPECTED_PENDING_HUMAN_REVIEW" if comp.get("status", "").startswith("INSPECTED")
+                       else "PASS_WITH_BLOCKED_RIGHTS_FRAGMENTS" if fragments_ok and blocked
+                       else "PASS" if fragments_ok else "BLOCKED"),
+            "blocked_fragments": blocked,
             "native_raster_dimensions_recorded": src_w is not None,
             "all_objects_have_sha256": fragments_ok,
             "all_editorial_text_composed_live": True,

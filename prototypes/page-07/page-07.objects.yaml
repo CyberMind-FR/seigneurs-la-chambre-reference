@@ -5,7 +5,7 @@ title: La Tour de Châtel-André
 status: APPROVED
 generated_from:
   composition: prototypes/page-07/composition.yaml
-  composition_run: b160c387fc0389f7708e7af46a873347dbb9c794a4e090ede4d25a8bad37daeb
+  composition_run: 436eed06de4a9689f8f4cd3608c7f144de0e891ef4d691d75f9a74d9a07fec61
 canonical_reference:
   path: assets/page-07.jpg
   sha256: 53440127c11ca72289c1c59ebf51cf1ef037972d1754b8794dada88c85c39c3e
@@ -162,6 +162,7 @@ objects:
     - 255
     - 252
     - 244
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-07.jpg
   sha256: e962ea3369edeeaec335cc713dc6612856282297f942a3db519c0804c6c0cdf6
@@ -497,6 +498,7 @@ objects:
     - 255
     - 252
     - 244
+    fill_mode: paper
   - x: 495
     y: 1392
     w: 100
@@ -505,6 +507,7 @@ objects:
     - 255
     - 252
     - 244
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-07.jpg
   sha256: 828cd671984b4cba4835f1e53c9ff18b61dbaa70aa9ccbd30573e31ea3346204
@@ -917,6 +920,7 @@ discrepancies:
   canonical_text_not_visible_in_raster: []
 completeness_gate:
   status: PASS
+  blocked_fragments: []
   native_raster_dimensions_recorded: true
   all_objects_have_sha256: true
   all_editorial_text_composed_live: true

@@ -1,0 +1,69 @@
+# Layered v3 composition — page 16 — Merci / remerciements (raster 768x1024, 131.8 ppi at A5)
+# The official association logo (P16-Z01) is still BLOCKED_SOURCE_ASSET as a vector asset; the
+# logo visible in the canonical page is reused as a raster fragment (validated visual), flagged.
+schema_version: 1
+page: 16
+title: Remerciements
+family: final
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
+source: {path: assets/page-16.jpg, sha256: 3faf93d696748d4b4d9fc7bf1eb8cf0b93bd09758e2913d1e7b74ec33b273331}
+canonical_text: {path: pages/16.yaml, key: canonical_text, expected_blocks: 11}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles: {}
+
+fragments:
+  - {id: corner_tl, role: ornament, status: APPROVED, bbox_px: {x: 12, y: 8, w: 45, h: 45}, treatment: crop_only}
+  - {id: corner_tr, role: ornament, status: APPROVED, bbox_px: {x: 710, y: 8, w: 45, h: 45}, treatment: crop_only}
+  - {id: corner_bl, role: ornament, status: APPROVED, bbox_px: {x: 12, y: 970, w: 45, h: 45}, treatment: crop_only}
+  - {id: corner_br, role: ornament, status: APPROVED, bbox_px: {x: 710, y: 970, w: 45, h: 45}, treatment: crop_only}
+  - {id: title_ornament, role: ornament, status: APPROVED, bbox_px: {x: 222, y: 83, w: 333, h: 32}, treatment: crop_only}
+  - {id: logo_raster, role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 227, y: 393, w: 316, h: 222}, treatment: crop_only, note: "logo de l'association tel que présent dans la page canonique (texte intrinsèque « Amis du Couvent des Cordeliers De La Chambre. ») ; l'actif vectoriel officiel reste BLOCKED_SOURCE_ASSET"}
+  - {id: landscape, role: documentary_illustration, status: APPROVED, bbox_px: {x: 18, y: 553, w: 734, h: 347}, treatment: crop_only, note: "paysage + fleuron bas (intrinsèque)"}
+  - {id: qr_caption_raster, role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 644, y: 901, w: 109, h: 80}, treatment: crop_only, note: "« En savoir plus sur l'association et nos actions » (raster, absent du canon)"}
+
+vectors:
+  - {kind: rect, bbox_px: [24, 24, 720, 976], stroke: "#4a3a2a", width: 0.9}
+  - {kind: rect, bbox_px: [30, 30, 708, 964], stroke: "#4a3a2a", width: 0.35}
+
+text_blocks:
+  - {key: title,   block: 0,  expect: "Merci",                       bbox_px: [200, 28, 368, 60],  style: merci_title}
+  - {key: l1,      block: 1,  expect: "Nous remercions",             bbox_px: [60, 130, 648, 24],  style: merci_body}
+  - {key: l2,      block: 2,  expect: "leurs témoignages",           bbox_px: [60, 155, 648, 24],  style: merci_body}
+  - {key: l3,      block: 3,  expect: "la mémoire des seigneurs",    bbox_px: [60, 180, 648, 24],  style: merci_body}
+  - {key: l4,      block: 4,  expect: "Ce parcours patrimonial",     bbox_px: [60, 228, 648, 24],  style: merci_body}
+  - {key: l5,      block: 5,  expect: "de transmettre",              bbox_px: [60, 253, 648, 24],  style: merci_body}
+  - {key: l6,      block: 6,  expect: "À toutes et à tous",          bbox_px: [200, 308, 368, 24], style: merci_italic}
+  - {key: l7,      block: 7,  expect: "merci !",                     bbox_px: [200, 336, 368, 24], style: merci_italic}
+  - {key: assoc,   block: 8,  expect: "Les Amis du Couvent",         bbox_px: [150, 618, 468, 20], style: small_bold_center}
+  - {key: site,    block: 9,  expect: "www.couventdelachambre.fr",   bbox_px: [40, 955, 300, 22],  style: small_bold}
+  - {key: motto,   block: 10, expect: "Découvrir • Partager",        bbox_px: [200, 905, 368, 24], style: merci_italic}
+
+qr:
+  - {id: association, svg: assets/qr-svg/page-13-01-association.svg, placement: reference_canvas}
+
+discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon prévaut ; les textes raster absents du canon restent dans leurs fragments"}
+  raster_text_absent_from_canon:
+    - {fragment: logo_raster, description: "texte intrinsèque du logo"}
+    - {fragment: qr_caption_raster, description: "« En savoir plus sur l'association et nos actions »"}
+  canonical_text_not_visible_in_raster:
+    - "bloc 8 « Les Amis du Couvent des Cordeliers de La Chambre » n'apparaît qu'à travers le logo dans le raster ; composé sous le logo"
+  resolution: "raster canonique 768x1024 = 131,8 ppi en A5, sous la dérogation (180) : blocage rapporté, aucun upscale"
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}

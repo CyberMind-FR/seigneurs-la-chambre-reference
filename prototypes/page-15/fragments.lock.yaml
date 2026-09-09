@@ -1,0 +1,194 @@
+schema_version: 1
+page: 15
+source: assets/page-15.jpg
+source_sha256: e2b31837f4393bbb3ccc0db4e0c523a91aa9237c165184aa7e959d555117606d
+fragments:
+  heraldry:
+    sha256: 7311501e48be75ca392d734aaa6ada5fb068fa404d4ee239eab9704c83f82412
+    bbox_px:
+      x: 35
+      y: 28
+      w: 170
+      h: 232
+  statue_top_right:
+    sha256: da7dc1d06e1cf3cb81a7358c87fac3043d8ae65fe649d0120b8b3eef988bcc14
+    bbox_px:
+      x: 878
+      y: 25
+      w: 162
+      h: 310
+  mountains_right:
+    sha256: dc95b033b9368b74a755ea24dc370b17a35e54f96e18b6c4e17560ceeab8586b
+    bbox_px:
+      x: 738
+      y: 150
+      w: 302
+      h: 142
+  title_ornament:
+    sha256: c27ab977d320acfef28467deb4d5b9ae67a2da134b456e418ebf5897e1160d65
+    bbox_px:
+      x: 298
+      y: 260
+      w: 460
+      h: 34
+  banner_10_sites:
+    sha256: adf76b02ce618ea21715cff3eb05328a2ecaa64271da6b5ab16158396416d9c8
+    bbox_px:
+      x: 88
+      y: 298
+      w: 785
+      h: 62
+  banner_la_chambre:
+    sha256: 1ab2e8c680bfb07dfbcef9d5c5f4fbb747674e8c72d3451cf79c1d242ea32978
+    bbox_px:
+      x: 40
+      y: 373
+      w: 297
+      h: 48
+  banner_ste_marie:
+    sha256: 98f156e2321a39f8fb422068019a0cd3cc2297a19312cb29fc19cfb6cc7a4fec
+    bbox_px:
+      x: 40
+      y: 518
+      w: 392
+      h: 48
+  banner_st_etienne:
+    sha256: c0d868a32373629b16113d95f48cf20f35ef6cd9a8a881564a82f746810c0696
+    bbox_px:
+      x: 40
+      y: 658
+      w: 392
+      h: 48
+  banner_nd_cruet:
+    sha256: 117122dda53b8c11623613482b75498fef5c1ac164632d0a7e3745dc09213a23
+    bbox_px:
+      x: 40
+      y: 813
+      w: 392
+      h: 48
+  banner_st_remy:
+    sha256: 126757a0e19256e02c2b71d6623c667f81cd47613dca03241f5962dce8b5b64d
+    bbox_px:
+      x: 40
+      y: 963
+      w: 397
+      h: 48
+  site_01:
+    sha256: a7154bdda688db51ca9b4cb6d83b349b602b9182d59e0a549496dbf52e9ea633
+    bbox_px:
+      x: 440
+      y: 363
+      w: 283
+      h: 137
+  site_02:
+    sha256: e0331aa5c19312d7492413152096f8247c5c77a53732b8fa03afd6e124af0b0e
+    bbox_px:
+      x: 735
+      y: 363
+      w: 296
+      h: 137
+  site_03:
+    sha256: 5178add93cc1513bc7770b18311d382bef2e826d3941bf56555fb33023936094
+    bbox_px:
+      x: 440
+      y: 508
+      w: 290
+      h: 137
+  site_04:
+    sha256: a2c572b9ca5e76129a85d61bab0f9c92f1ae2dc7eb5c5b6fe939eb6000ef4a61
+    bbox_px:
+      x: 735
+      y: 508
+      w: 297
+      h: 137
+  site_05:
+    sha256: 6e6cb8a299b25bd479bb185d0f5c2d1b4a77b61aa65104e92924c2b6ca9e383a
+    bbox_px:
+      x: 441
+      y: 648
+      w: 206
+      h: 147
+  site_06:
+    sha256: 269035a0f177fbce4f4f14ee4a365246e45a76eac9b2ba613cebfa06b094987b
+    bbox_px:
+      x: 640
+      y: 648
+      w: 202
+      h: 147
+  site_07:
+    sha256: 2f27a011efc97f1bc2cdaa6b938063a5e5f2b40c4fec5f287d3ac1a1caaedbe5
+    bbox_px:
+      x: 830
+      y: 648
+      w: 207
+      h: 147
+  site_08:
+    sha256: 1b3eb2dd2f6d1ad63ba2e250a8e3e186043ce34324349f69ddc237eb1eaeef32
+    bbox_px:
+      x: 441
+      y: 808
+      w: 301
+      h: 137
+  site_09:
+    sha256: 446b847d003ab4a6a0688ee4289eec37c286964831df0eefaf0b98e593b3922b
+    bbox_px:
+      x: 735
+      y: 808
+      w: 302
+      h: 137
+  site_10:
+    sha256: 0056e30e9654f4cb6fbceee6d1bb31bbbb0dab05f488a325a69dcd880b637004
+    bbox_px:
+      x: 440
+      y: 958
+      w: 597
+      h: 122
+  cloister_arch_left:
+    sha256: 1ed40427529fb92950b0a38bd6be6eb0dc50d73d5e94b709dd9b3db5317c862a
+    bbox_px:
+      x: 47
+      y: 1093
+      w: 157
+      h: 147
+  contact_icons:
+    sha256: 30c56d9df68f79c7af88ab3875f5457c294017b87c4f736a5ec27e3f3eb1faa9
+    bbox_px:
+      x: 221
+      y: 1161
+      w: 29
+      h: 80
+  cloister_right:
+    sha256: 70c454a12bda1d2a89c022e226a9d008e77beea050ee0e57b0ab71a218cab220
+    bbox_px:
+      x: 748
+      y: 1093
+      w: 270
+      h: 152
+  dark_band:
+    sha256: c3081400faa2c8394f119b8bd92132d51c8ac211d50ad39f6dec94e6ad2110ef
+    bbox_px:
+      x: 38
+      y: 1243
+      w: 980
+      h: 37
+  seal_left:
+    sha256: 6891594a649da5bfdb135c1ee979cc7cc9b92041ceb14cc42ceef1e254fd936d
+    bbox_px:
+      x: 43
+      y: 1298
+      w: 119
+      h: 119
+  prix_fleuron:
+    sha256: 93440cd8ec832aacf1ea51c95486091b36d3911d7bbbcdaffa855edf3ab0f0f5
+    bbox_px:
+      x: 888
+      y: 1408
+      w: 64
+      h: 27
+  bottom_ornament:
+    sha256: bee60d0eb690a43242757f1f6198c8ac2f88252519a3e3930ffc2161605831dd
+    bbox_px:
+      x: 298
+      y: 1428
+      w: 455
+      h: 52

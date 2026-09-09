@@ -93,6 +93,23 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
 - `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
   committées).
 
+## État au 2026-09-09 (soir) : pages 10 et 13–16 composées et validées
+
+Rapport : `docs/migration-text-layer/PHASE_B_PAGES_10_13_16.md`. 15 pages sur 16 sont
+composées (03, 05–16) ; restent 01, 02 et la page 04 (verrou). Page 16 : 131,8 ppi, sous la
+dérogation A5 → blocage rapporté. Page 14 : couvertures d'ouvrages non extraites (droits).
+
+### Points éditoriaux ouverts (remarques du propriétaire, 2026-09-09)
+- **Mention sur les illustrations** : échelle des plans non respectée, vues artistiques non
+  nécessairement réalistes (pas d'archive d'époque), état actuel des ruines de certains sites.
+  À rédiger, inscrire au canon (`pages/NN.yaml` + `corrections.yaml`) puis composer. Une
+  proposition de formulation figure dans le rapport (PROPOSITION, hors canon).
+- **Armoiries réelles des communes** : rechercher les blasons officiels et remplacer, quand la
+  source et les droits sont établis, les armoiries de La Chambre en tête des pages de sites par
+  celles de la commune (Sainte-Marie-de-Cuines 05–06, Saint-Étienne-de-Cuines 07–09,
+  Notre-Dame-du-Cruet 10–11, Saint-Rémy-de-Maurienne 12, La Chambre 03–04). Gate provenance /
+  droits / SHA avant production ; rendu SVG d'après blasonnement officiel de préférence.
+
 ## Industrialisation active : famille des pages « site »
 Le prototype page 03 devient le modèle technique de la famille de pages patrimoniales.
 
@@ -192,8 +209,9 @@ Chaque fragment raster produit doit enregistrer : page source, zone/bounding box
 4. ~~produire un proof multicouche par page de la famille~~ — fait ;
 5. ~~reporter automatiquement texte, QR, SHA et ppi~~ — fait ;
 6. ~~arbitrer les écarts texte visible ↔ canon et le gate de résolution~~ — validé le 2026-09-09 (canon prévaut ; dérogation A5) ;
-7. traiter ensuite page 10, puis les structures spécifiques 13–16 ;
-8. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
+7. ~~traiter ensuite page 10, puis les structures spécifiques 13–16~~ — fait et validé le 2026-09-09 ;
+8. composer les pages 01 et 02 ; arbitrer la mention illustrations et les armoiries communales ;
+9. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
 
 ## Validation
 Après modification d’une référence historique : `make sync && make validate`.

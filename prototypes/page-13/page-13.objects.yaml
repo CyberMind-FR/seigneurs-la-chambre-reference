@@ -1,0 +1,995 @@
+schema_version: 2
+project: Les Seigneurs de La Chambre
+page: 13
+title: Un patrimoine à préserver
+status: APPROVED
+generated_from:
+  composition: prototypes/page-13/composition.yaml
+  composition_run: b3c92ec6d8a4b3697f3e7cf69b84f8ca9e3e36e9f229b65270c668555c5c88c2
+canonical_reference:
+  path: assets/page-13.jpg
+  sha256: 9e98524888c952e4231a63df5a2da4b3d14a145683f0522090c0fa878f1a13b0
+  dimensions_px:
+  - 1055
+  - 1491
+principle:
+  hierarchy: page -> regions -> objects -> subobjects -> layers
+  asset_spec_role: macro_layout_reference_only
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/13.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
+regions:
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 1055
+  - 0
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 0
+  - 1055
+  - 945
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 40
+  - 945
+  - 990
+  - 115
+- id: R04
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P13-O-running_head_raster
+  visual_description: running head raster
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 230
+  - 22
+  - 596
+  - 30
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 6a4e4d744ad1a6183b7f4907685211a08d02aa5c41e1958e7eda468feb8efc86
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  review_status: APPROVED
+- id: P13-O-heraldry_captioned
+  visual_description: heraldry captioned
+  object_class: composite
+  source_bbox_px:
+  - 36
+  - 40
+  - 132
+  - 250
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 15905bd30b74fc56c3ff1e7d803e5fbe79175f9bce42efb3b5d8ba5263e09821
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P13-O-statue
+  visual_description: résidu raster de la fin du titre masqué
+  object_class: illustration
+  source_bbox_px:
+  - 817
+  - 45
+  - 221
+  - 375
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 817
+    y: 62
+    w: 50
+    h: 70
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: c3d3fc07caa99f19d44f31662419081e97a335200e05a0bedef2eb103d315012
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P13-O-title_ornament
+  visual_description: title ornament
+  object_class: ornament
+  source_bbox_px:
+  - 298
+  - 138
+  - 424
+  - 30
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 9c89d0dd0bd5ef9a2a52203fef33aeba25a9464f03d8e9e0d5d852d943832983
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P13-O-left_mountains_vignette
+  visual_description: left mountains vignette
+  object_class: illustration
+  source_bbox_px:
+  - 25
+  - 325
+  - 182
+  - 80
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 403e4aff67760e6da6d28867bbedff09f06702ef69c267c8776120489e845198
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+- id: P13-O-map_composite
+  visual_description: carte panoramique + cinq vignettes de sites + repères numérotés (intrinsèques) ; le titre CARTE DES
+    10 SITES et les cinq libellés raster (formulation différente du canon) sont masqués et recomposés en texte vivant depuis
+    le canon
+  object_class: documentary_map
+  source_bbox_px:
+  - 25
+  - 430
+  - 1015
+  - 512
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px:
+  - x: 268
+    y: 426
+    w: 500
+    h: 28
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 70
+    y: 438
+    w: 120
+    h: 20
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 70
+    y: 462
+    w: 160
+    h: 38
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 70
+    y: 636
+    w: 112
+    h: 26
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 70
+    y: 659
+    w: 72
+    h: 20
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 58
+    y: 681
+    w: 66
+    h: 42
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 58
+    y: 808
+    w: 60
+    h: 92
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 118
+    y: 808
+    w: 40
+    h: 50
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 118
+    y: 855
+    w: 44
+    h: 42
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 158
+    y: 808
+    w: 24
+    h: 17
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 880
+    y: 459
+    w: 116
+    h: 27
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 880
+    y: 488
+    w: 84
+    h: 20
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 882
+    y: 513
+    w: 97
+    h: 18
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 882
+    y: 532
+    w: 65
+    h: 16
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 882
+    y: 551
+    w: 65
+    h: 20
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 880
+    y: 750
+    w: 106
+    h: 26
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 880
+    y: 774
+    w: 118
+    h: 20
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  - x: 882
+    y: 799
+    w: 117
+    h: 19
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: b09023ddf0a83ce42490788909e1f6400e5e7cdbe537d2172dabbb165b8c22f3
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P13-O-drop_cap_c
+  visual_description: lettrine C (intrinsèque à l'ornement)
+  object_class: ornament
+  source_bbox_px:
+  - 55
+  - 954
+  - 65
+  - 70
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 8ae67f1426db5b8aa2c0e910497f9611b6e51c554886deadd31e10021f033ad1
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P13-O-association_cartouche
+  visual_description: motif de cloître + « LES AMIS DU COUVENT DES CORDELIERS DE LA CHAMBRE » (raster, absent du canon)
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 702
+  - 950
+  - 314
+  - 108
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: a020b353971fe4016df177509e9212ac2363266ef7c3402a4e3b324acfe11c8c
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+- id: P13-O-fleuron_left
+  visual_description: fleuron left
+  object_class: ornament
+  source_bbox_px:
+  - 205
+  - 1081
+  - 115
+  - 24
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: a6bdc0fd7d928b4c8979f14da2fd56a960dba2e2115f3a1e2da0a1de14804ded
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+- id: P13-O-fleuron_right
+  visual_description: fleuron right
+  object_class: ornament
+  source_bbox_px:
+  - 700
+  - 1081
+  - 115
+  - 24
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 0bd43499ac11cc4cea6c3b779812d9a50d7b66dd35e39db30d9a96cfd6fd8586
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+- id: P13-O-picto_association
+  visual_description: picto association
+  object_class: icon
+  source_bbox_px:
+  - 70
+  - 1116
+  - 58
+  - 44
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 6967cebf400ab5a469648bd9f836985e27f20cd8cf51ddd1ddcdf9a05efadc76
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P13-O-picto_videos
+  visual_description: picto videos
+  object_class: icon
+  source_bbox_px:
+  - 242
+  - 1117
+  - 57
+  - 43
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: e8de6fcb9b423403132844618c6b6ba86fb83e1db47ed891014d2b232e86ef4e
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P13-O-picto_virtual
+  visual_description: picto virtual
+  object_class: icon
+  source_bbox_px:
+  - 400
+  - 1118
+  - 70
+  - 42
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 252e492263e107aab8945acc4c44de70861e97a5a82ec3b451397db7a88abea8
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P13-O-picto_fondation
+  visual_description: résidu raster du titre RESSOURCES NUMÉRIQUES masqué
+  object_class: icon
+  source_bbox_px:
+  - 577
+  - 1113
+  - 60
+  - 47
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 577
+    y: 1113
+    w: 60
+    h: 6
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 6a05ea8e1902fdeb2678209b6712f815ad3c0043bff8b85bebf1a44a00977332
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P13-O-picto_commune
+  visual_description: picto commune
+  object_class: icon
+  source_bbox_px:
+  - 752
+  - 1117
+  - 59
+  - 44
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: d18d14cc2880f6e0d9d8b9a1222d484f7e9b878c55433cbfd4a5fcec4bc8b5d6
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P13-O-picto_documents
+  visual_description: picto documents
+  object_class: icon
+  source_bbox_px:
+  - 919
+  - 1117
+  - 60
+  - 44
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: d2d1911c4b42461bf1a8a6d4b5a31dafd4f8d6a74dbaf438f853e6cfb0ea1295
+  effective_ppi_a5: 181.06
+  dirty_edges: []
+  review_status: APPROVED
+- id: P13-O-bottom_band
+  visual_description: panorama + main/smartphone + ampoule ; ancien texte CONSEIL masqué (ciel) et recomposé
+  object_class: illustration
+  source_bbox_px:
+  - 25
+  - 1328
+  - 1015
+  - 163
+  parent_region: R04
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 200
+    y: 1338
+    w: 560
+    h: 26
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: paper
+  provenance: canonical_pages
+  source_ref: assets/page-13.jpg
+  sha256: 051a2c1a3934856366e8fd7995e613350fe3d6e945ab33f2f419db49182004d7
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+text_zones:
+- id: P13-T-title
+  role: title
+  canonical_block: 0
+  expect: Un patrimoine à préserver
+  bbox_px:
+  - 190
+  - 66
+  - 650
+  - 70
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-p1
+  role: p1
+  canonical_block: 1
+  expect: De 1030 à 1454
+  bbox_px:
+  - 205
+  - 180
+  - 605
+  - 100
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-p2
+  role: p2
+  canonical_block: 2
+  expect: Leur nom résonne
+  bbox_px:
+  - 205
+  - 292
+  - 605
+  - 105
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-h_carte
+  role: h_carte
+  canonical_block: 3
+  expect: CARTE DES 10 SITES
+  bbox_px:
+  - 270
+  - 424
+  - 500
+  - 28
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading_center
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-s1
+  role: s1
+  canonical_block: 4
+  expect: • La Chambre
+  bbox_px:
+  - 70
+  - 440
+  - 160
+  - 56
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-s2
+  role: s2
+  canonical_block: 5
+  expect: • Notre-Dame-du-Cruet
+  bbox_px:
+  - 66
+  - 638
+  - 58
+  - 88
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-s3
+  role: s3
+  canonical_block: 6
+  expect: • Sainte-Marie-de-Cuines
+  bbox_px:
+  - 66
+  - 810
+  - 54
+  - 92
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-s4
+  role: s4
+  canonical_block: 7
+  expect: • Saint-Étienne-de-Cuines
+  bbox_px:
+  - 882
+  - 462
+  - 118
+  - 82
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-s5
+  role: s5
+  canonical_block: 8
+  expect: • Saint-Rémy-de-Maurienne
+  bbox_px:
+  - 882
+  - 754
+  - 150
+  - 56
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-p3
+  role: p3
+  canonical_block: 9
+  expect: Ce patrimoine est fragile
+  bbox_px:
+  - 125
+  - 960
+  - 565
+  - 92
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: body_large
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-h_online
+  role: h_online
+  canonical_block: 10
+  expect: Découvrez en ligne
+  bbox_px:
+  - 325
+  - 1076
+  - 370
+  - 28
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading_center
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-h_resources
+  role: h_resources
+  canonical_block: 11
+  expect: Ressources numériques
+  bbox_px:
+  - 325
+  - 1104
+  - 370
+  - 18
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-l1
+  role: l1
+  canonical_block: 12
+  expect: SITE ASSOCIATION
+  bbox_px:
+  - 22
+  - 1170
+  - 160
+  - 32
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny_center
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-l2
+  role: l2
+  canonical_block: 13
+  expect: VIDÉOS / YOUTUBE
+  bbox_px:
+  - 184
+  - 1170
+  - 160
+  - 32
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny_center
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-l3
+  role: l3
+  canonical_block: 14
+  expect: VISITE VIRTUELLE
+  bbox_px:
+  - 351
+  - 1170
+  - 160
+  - 32
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny_center
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-l4
+  role: l4
+  canonical_block: 15
+  expect: FONDATION
+  bbox_px:
+  - 529
+  - 1170
+  - 160
+  - 32
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny_center
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-l5
+  role: l5
+  canonical_block: 16
+  expect: PATRIMOINE COMMUNE
+  bbox_px:
+  - 703
+  - 1170
+  - 160
+  - 32
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny_center
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-l6
+  role: l6
+  canonical_block: 17
+  expect: DOCUMENTS
+  bbox_px:
+  - 861
+  - 1170
+  - 160
+  - 32
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny_center
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-conseil
+  role: conseil
+  canonical_block: 18
+  expect: CONSEIL
+  bbox_px:
+  - 200
+  - 1341
+  - 75
+  - 16
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/13.yaml:canonical_text
+- id: P13-T-conseil_text
+  role: conseil_text
+  canonical_block: 19
+  expect: Scannez les QR codes
+  bbox_px:
+  - 280
+  - 1341
+  - 490
+  - 16
+  parent_region: R04
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/13.yaml:canonical_text
+functional_objects:
+- id: P13-F-association
+  object_class: qr
+  source_bbox_px:
+  - 42
+  - 1205
+  - 120
+  - 120
+  parent_region: R04
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-13-01-association.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+- id: P13-F-videos
+  object_class: qr
+  source_bbox_px:
+  - 204
+  - 1205
+  - 120
+  - 120
+  parent_region: R04
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-13-02-videos.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+- id: P13-F-virtual_visit
+  object_class: qr
+  source_bbox_px:
+  - 371
+  - 1205
+  - 120
+  - 120
+  parent_region: R04
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-13-03-virtual_visit.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+- id: P13-F-fondation
+  object_class: qr
+  source_bbox_px:
+  - 549
+  - 1205
+  - 120
+  - 120
+  parent_region: R04
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-13-04-fondation.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+- id: P13-F-commune
+  object_class: qr
+  source_bbox_px:
+  - 723
+  - 1205
+  - 120
+  - 120
+  parent_region: R04
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-13-05-commune.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+- id: P13-F-documents
+  object_class: qr
+  source_bbox_px:
+  - 881
+  - 1205
+  - 120
+  - 120
+  parent_region: R04
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-13-06-documents.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+structural_frames:
+- id: P13-FR01
+  kind: rect
+  bbox_px:
+  - 40
+  - 945
+  - 990
+  - 115
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon prévaut ; les textes raster absents du canon restent dans leurs fragments
+  raster_text_absent_from_canon:
+  - fragment: running_head_raster
+    description: bandeau courant
+  - fragment: heraldry_captioned
+    description: légende des armoiries
+  - fragment: map_composite
+    description: toponyme « La Maurienne » et repères numérotés (intrinsèques à la carte)
+  - fragment: association_cartouche
+    description: « LES AMIS DU COUVENT DES CORDELIERS DE LA CHAMBRE »
+  canonical_text_differs_from_raster:
+  - 'les cinq libellés de sites autour de la carte sont formulés différemment dans le raster (« Couvent des Cordeliers / Maison
+    de La Tour »…) : masqués, les puces canoniques sont composées à leur place'
+  - 'les libellés des ressources du raster ne portent pas les domaines (résidus « r », « fo », « g », « fr ») : les blocs
+    canoniques complets (libellé : domaine) sont composés'
+  - « la Maurienne fut d'abord chambrienne. » est en rouge centré dans le raster ; fin du bloc 2 dans le canon, composé en
+    corps
+  canonical_text_not_visible_in_raster: []
+  section_5_asset_spec: P13-Z02 (carte + vignettes) et P13-Z06 (panorama/téléphone) sont repris comme fragments canoniques
+    ; P13-Z04 six pictogrammes raster ; P13-Z05 six QR SVG du registre
+completeness_gate:
+  status: PASS
+  blocked_fragments: []
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER

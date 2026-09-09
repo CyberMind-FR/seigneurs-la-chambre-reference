@@ -1014,7 +1014,9 @@ qr:
   light: '#FFFFFF'
   quiet_zone_modules: 4
   exact_payload_lock: true
-fonts: {}
+fonts:
+  base14: [Times-Roman, Times-Bold, Times-Italic]  # provisional, project font still to lock (ASSET_SPEC §7)
+  DejaVuSerif: {use: 'page 15 subtitle (U+1D49)', licence: 'DejaVu Fonts License (Bitstream Vera derivative)', source: system fonts-dejavu-core}
 build_contract:
   text_source: pages/NN.yaml:canonical_text
   illustrations_must_be_text_free: true
@@ -1108,7 +1110,42 @@ layered_compositions:
     status: APPROVED
     methodology_gate: PASS_WITH_RESOLUTION_WAIVER
     effective_ppi_a5: 181.06
+  - page: 10
+    composition: prototypes/page-10/composition.yaml
+    composition_sha256: 4b1557205a4f16fadbab4b6201090e3e55ab43099a2b873ef42ddc4a4e8c7228
+    fragment_lock: prototypes/page-10/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+    effective_ppi_a5: 181.06
+  - page: 13
+    composition: prototypes/page-13/composition.yaml
+    composition_sha256: 293de2a12f416902766150d168801f9cb5cf2e356c2e0de1e2057129d98c8479
+    fragment_lock: prototypes/page-13/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+    effective_ppi_a5: 181.06
+  - page: 14
+    composition: prototypes/page-14/composition.yaml
+    composition_sha256: 564e32f54dc668bfce7d03182588ab3a5b015bb10e199e416dea203b076f30ad
+    fragment_lock: prototypes/page-14/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+    effective_ppi_a5: 181.06
+  - page: 15
+    composition: prototypes/page-15/composition.yaml
+    composition_sha256: 35f527bee0a16ba653dfa54ec5d9782a1590eb26e7346cf44339b45aca3d25a6
+    fragment_lock: prototypes/page-15/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+    effective_ppi_a5: 181.06
+  - page: 16
+    composition: prototypes/page-16/composition.yaml
+    composition_sha256: 4af68cf66d445692ac72f788e2522f3cc34e4b7e47db0f15444318d679a24d19
+    fragment_lock: prototypes/page-16/fragments.lock.yaml
+    status: APPROVED
+    methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+    effective_ppi_a5: 131.81
   excluded:
   - {page: 4, reason: PAGE_04_EDITORIAL_ARBITRATION_REQUIRED}
-  - {page: 10, reason: geometry lock (plan réel) — treated separately after the site family}
-  - {pages: [1, 2, 13, 14, 15, 16], reason: specific structures — after the site family}
+  - {pages: [1, 2], reason: cover and dynasty page — not yet composed}
+  status_note: pages 10 and 13-16 composed and validated on 2026-09-09 (gkerma)
