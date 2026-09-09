@@ -93,6 +93,21 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
 - `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
   committées).
 
+## État au 2026-09-09 : 35 légendes raster inscrites au canon — version 3.0.0
+
+Enregistrement : `docs/migration-text-layer/CANON_AMENDMENT_CAPTIONS_2026_09_09.md`,
+`corrections.yaml:captions_inscribed_2026_09_09`.
+
+- 68 blocs ajoutés en fin de `canonical_text` sur 11 pages (indexation existante inchangée),
+  composés en couche texte (`text_blocks[].caption_of`, styles `caption*`), texte raster masqué
+  (`mask_px: [{box, fill}]`, remplissage par masque). Transcriptions à relire (doublon « Le Bugeon »
+  p11, ponctuation p03, flèches p07, graphies).
+- Les 35 fragments passent en voie HD `prompt_image` sans `caption_resolution`.
+- `build-config.yaml:v3.version` = `3.0.0` ; tag `v3.0.0` à poser sur le commit de merge pour
+  publier les artifacts (workflow `build-release.yml`, déclenché par `push: tags: ['v*']`).
+- Restent hors canon : 11 légendes d'armoiries, bandeaux, pieds de page, cartouche association,
+  logo, encadré chronologie p10.
+
 ## État au 2026-09-09 : Phase C — circuit de régénération HD des croquis par prompts
 
 Rapport : `docs/migration-text-layer/PHASE_C_HD_REGENERATION.md`. Contrat : `assets/hd/README.md`.
@@ -265,8 +280,9 @@ Chaque fragment raster produit doit enregistrer : page source, zone/bounding box
 11. ~~outiller la régénération HD des croquis~~ — fait (Phase C) ; générer dans ChatGPT, déposer,
     `make hd-ingest`, revue, `APPROVED`, puis désactiver l'upscale provisoire page par page quand
     tous les fragments d'une page ont une source HD (ordre conseillé : 13, 14, 15, 16, puis sites) ;
-11b. arbitrer l'inscription au canon des 35 légendes raster (`assets/hd/briefs.yaml`) et les droits
-    des images générées ; décider Git LFS pour `assets/hd/` ;
+11b. ~~inscrire au canon les 35 légendes raster~~ — fait le 2026-09-09 (à relire) ; déclarer les droits
+    des images générées ; décider Git LFS pour `assets/hd/` ; légendes d'armoiries (11) à traiter
+    avec la voie SVG ;
 12. confirmer le nom de l'association sur le site officiel ; régénérer les rasters qui portent
     encore « Les Amis… » ; arbitrer mention illustrations, armoiries communales, citation de
     couverture, droits (couvertures p14, logo p16).

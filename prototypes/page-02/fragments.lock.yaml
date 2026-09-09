@@ -34,7 +34,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   village_captioned:
-    sha256: 9a53b7edfdb3ab4b5981b2c7c5dff88d299d0b7d84178b864c4d7e2dac3abced
+    sha256: 3506520bbb8a82d372fa3e5cf5d614ba503cc15dfb4ffbc81f681a163f69f398
     bbox_px:
       x: 655
       y: 105
@@ -54,7 +54,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   bishop_captioned:
-    sha256: aecd0f44bc69dcd3cbb7b947ca13113bdf4dee006dec026923563095ee13f8cd
+    sha256: 4dfdd2ce5d1ce92831381cfe4c6d94e024788f5173682d54d43c2e38bf528ae8
     bbox_px:
       x: 35
       y: 452
@@ -74,7 +74,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   seal_vicomte_captioned:
-    sha256: 4f985b3e9e9fb61d892c7fb74e1b99531d4a975bb0eb7837106359971c4a12f9
+    sha256: 95003d85dce8fca9c9a4e02c0c7e543a29f87bbb5d5b3e880c13f93cd80bfc19
     bbox_px:
       x: 41
       y: 735
@@ -94,7 +94,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   knight_captioned:
-    sha256: d7d6c4d8fbd0bbccc036d0820e49adc764fd08f23fc92a12ae496d547af981e0
+    sha256: 462d0e3415a5077f5a7f48668174e4f44fe6a7cdbfe1e706d71d9ba5fc75fa9f
     bbox_px:
       x: 25
       y: 885
@@ -124,7 +124,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   equestrian_seal_captioned:
-    sha256: e11c72efbeff2df2a47dc7ba2d6f58c2c521f8dcf2efc201d7ec160d3bd7cd2c
+    sha256: 927d1a7af0de57e2fd9a9bc496043d903546c7b5d9594c09413ee08e6d929baf
     bbox_px:
       x: 795
       y: 551
@@ -134,7 +134,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   testament_captioned:
-    sha256: 66559fd895708bd8bae3c70aa6246728ae4f7a4518a4b831770cdaca7ce60472
+    sha256: 6670835214297caae285402bc8685bea9fae476d226af41d918f453de27801c0
     bbox_px:
       x: 771
       y: 740
@@ -144,7 +144,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   monk_church_captioned:
-    sha256: 4aa4bfdb634d30936f12f05d9ec25ae20657d148677e6e077095cea926a0d309
+    sha256: 4bb3d4ad8bf16622e506aa9a148e438a1566f35f34c619cc4dd806a98453254b
     bbox_px:
       x: 765
       y: 925
@@ -154,7 +154,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   louis_medallion_captioned:
-    sha256: 208f5b5d300c25c193d6560ca2b1af262a7d731f136504ab621e5dd1c9c35e0c
+    sha256: 900604af8958893fb18a600b5c73605e4685a9aa2b9107def2c71197f761e199
     bbox_px:
       x: 775
       y: 1113

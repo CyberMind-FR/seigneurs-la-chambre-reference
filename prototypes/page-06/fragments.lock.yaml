@@ -24,7 +24,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   hero_captioned:
-    sha256: c51800caeb09e1b3aa7e133ccd7c89fa301fb27f0e83ea43305837e43b80c659
+    sha256: 8b41af386862ddd96675492f2d57ee7e86852557b41c558d9f62871521a5cac9
     bbox_px:
       x: 481
       y: 140
@@ -84,7 +84,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   berthollet_portrait_captioned:
-    sha256: d483c6b99c7f774c40048ba65f0f014538ba0872be3630f83594cecd5a572f51
+    sha256: 5cecf34cbea23f1b39eaea08b204a6aa4d13855bad0845b3c8a025c2c9a78c5c
     bbox_px:
       x: 501
       y: 910
@@ -94,7 +94,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   vestiges_box_captioned:
-    sha256: b4b41948af4d081a1068fb5aa501f358caef9b8ef5dbfa8e2cee401d4dcd2e81
+    sha256: 6c40b583352db47c33a27aa16f5e9dd4df1f88ba41723cbbf967601e2d3e3d64
     bbox_px:
       x: 700
       y: 795

@@ -5,7 +5,7 @@ title: La Maison-Forte de Gruyère
 status: APPROVED
 generated_from:
   composition: prototypes/page-09/composition.yaml
-  composition_run: 998847c89f78458c175728ba9f7f4d0fc63c5ef225ec2b3db85d1a408ae28da8
+  composition_run: 1c1888ca15d5952ce0bd4bd95c1b1c7d895b1a19ad3b6a22c8d0a88d84abbeab
 canonical_reference:
   path: assets/page-09.jpg
   sha256: d54cab494ac8f931d8cb9dd5953d7f171a0c0d6c0b7abd7a73cc32e7f7de1aed
@@ -173,10 +173,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 867
+    y: 416
+    w: 120
+    h: 66
+    fill_rgb:
+    - 255
+    - 251
+    - 241
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-09.jpg
-  sha256: 7df039b2cfdf5fad35f146d1c35e58657cc8af2b1e76099f7561f4b2270214ff
+  sha256: 6488232eb74394a3d5f653c870e095e75927a5f9f50af54631ef2e69c2b6c77c
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -579,6 +588,20 @@ text_zones:
   compose_as: live_text
   style: tiny
   authority: pages/09.yaml:canonical_text
+- id: P09-T-cap_magnolia
+  role: cap_magnolia
+  canonical_block: 15
+  expect: Magnolia séculaire ombrageant
+  bbox_px:
+  - 867
+  - 416
+  - 120
+  - 66
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_right
+  authority: pages/09.yaml:canonical_text
 functional_objects:
 - id: P09-F-google_maps
   object_class: qr
@@ -652,10 +675,11 @@ discrepancies:
     description: légende des armoiries
   - fragment: gruyere_seal
     description: sceau GRUYÈRE SUISSE (texte intrinsèque)
-  - fragment: magnolia_captioned
-    description: légende « Magnolia séculaire ombrageant la demeure »
   - fragment: map_document
     description: toponymes intrinsèques de la carte
+  raster_text_inscribed_in_canon_2026_09_09:
+  - fragment: magnolia_captioned
+    description: légende « Magnolia séculaire ombrageant la demeure »
   canonical_text_not_visible_in_raster: []
   title_field_mismatch: pages/09.yaml:title = « La Maison-Forte de Gruyère » (trait d'union, comme le raster) alors que canonical_text
     commence par « La Maison Forte de Gruyère » ; composé selon canonical_text, à arbitrer

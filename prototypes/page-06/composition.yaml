@@ -5,7 +5,7 @@ title: La Tour de Burgin
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-06.jpg, sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031}
-canonical_text: {path: pages/06.yaml, key: canonical_text, expected_blocks: 17}
+canonical_text: {path: pages/06.yaml, key: canonical_text, expected_blocks: 22}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
@@ -16,14 +16,14 @@ text_styles:
 fragments:
   - {id: heraldry_captioned,       role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 40,  y: 30,   w: 135, h: 252}, treatment: crop_only}
   - {id: sky_patch_top_right,      role: documentary_illustration,                status: APPROVED, bbox_px: {x: 852, y: 36,   w: 148, h: 104}, treatment: crop_only, note: "ciel de la vue principale qui remonte à droite du titre"}
-  - {id: hero_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 481, y: 140, w: 520, h: 650}, treatment: crop_only, mask_px: [[481, 140, 313, 27], [481, 712, 45, 50]], note: "tour + paysage + callouts « Manoir de Châtel-André », « Emplacement de la Tour de Burgin » ; résidus raster du sous-titre (ciel) et des fins de lignes du paragraphe 3 (herbe) masqués"}
+  - {id: hero_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 481, y: 140, w: 520, h: 650}, treatment: crop_only, mask_px: [[481, 140, 313, 27], [481, 712, 45, 50], {box: [861, 389, 93, 42], fill: paper}, {box: [886, 588, 102, 62], fill: paper}], note: "tour + paysage + callouts « Manoir de Châtel-André », « Emplacement de la Tour de Burgin » ; résidus raster du sous-titre (ciel) et des fins de lignes du paragraphe 3 (herbe) masqués"}
   - {id: title_ornament,           role: ornament,                                status: APPROVED, bbox_px: {x: 276, y: 190,  w: 433, h: 30},  treatment: crop_only}
   - {id: cross_h1,                 role: ornament,                                status: APPROVED, bbox_px: {x: 40,  y: 302,  w: 24,  h: 26},  treatment: crop_only}
   - {id: cross_h2,                 role: ornament,                                status: APPROVED, bbox_px: {x: 40,  y: 676,  w: 24,  h: 26},  treatment: crop_only}
   - {id: cross_h3,                 role: ornament,                                status: APPROVED, bbox_px: {x: 40,  y: 900,  w: 24,  h: 26},  treatment: crop_only}
   - {id: du_pont_blason_captioned, role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 526, y: 678,  w: 146, h: 224}, treatment: crop_only, note: "armoiries DU PONT + cartouche raster"}
-  - {id: berthollet_portrait_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 501, y: 910, w: 181, h: 212}, treatment: crop_only}
-  - {id: vestiges_box_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 700, y: 795, w: 290, h: 318}, treatment: crop_only, note: "encadré « Vestiges aujourd'hui » + citation Chapier (raster, absents du canon)"}
+  - {id: berthollet_portrait_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 501, y: 910, w: 181, h: 212}, treatment: crop_only, mask_px: [{box: [509, 1078, 169, 40], fill: paper}]}
+  - {id: vestiges_box_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 700, y: 795, w: 290, h: 318}, treatment: crop_only, mask_px: [{box: [755, 814, 172, 26], fill: paper}, {box: [732, 1049, 220, 44], fill: paper}], note: "encadré « Vestiges aujourd'hui » + citation Chapier (raster, absents du canon)"}
   - {id: map_document,             role: documentary_map,                         status: APPROVED, bbox_px: {x: 40,  y: 1145, w: 359, h: 193}, treatment: crop_only, mask_px: [[218, 1145, 64, 20]], note: "carte + rose des vents + icône ; ancien titre CARTE masqué"}
   - {id: localization_vignette,    role: documentary_illustration,                status: APPROVED, bbox_px: {x: 427, y: 1228, w: 259, h: 114}, treatment: crop_only}
   - {id: pin_icon,                 role: icon, status: APPROVED, bbox_px: {x: 473, y: 1148, w: 19, h: 26}, treatment: crop_only}
@@ -58,6 +58,12 @@ text_blocks:
   - {key: scan,         block: 14, expect: "Scannez pour y aller",       bbox_px: [755, 1322, 180, 16], style: tiny}
   - {key: mappe_sarde,  block: 15, expect: "MAPPE SARDE",                bbox_px: [105, 1355, 860, 24], style: tiny}
   - {key: quote,        block: 16, expect: "« La Tour de Burgin",        bbox_px: [250, 1400, 520, 125], style: quote}
+  # Légendes raster inscrites au canon le 2026-09-09 (ordre du propriétaire) — composées en couche texte, raster masqué.
+  - {key: cap_hero_1, block: 17, expect: "Manoir de Châtel-André", bbox_px: [861, 389, 93, 42], style: caption, caption_of: hero_captioned}
+  - {key: cap_hero_2, block: 18, expect: "Emplacement de la", bbox_px: [886, 588, 102, 62], style: caption, caption_of: hero_captioned}
+  - {key: cap_berthollet, block: 19, expect: "Claude-Louis Berthollet 1748-1822", bbox_px: [509, 1078, 169, 40], style: caption_plain, caption_of: berthollet_portrait_captioned}
+  - {key: cap_vestiges_1, block: 20, expect: "Vestiges aujourd'hui", bbox_px: [755, 814, 172, 26], style: caption_title_red, caption_of: vestiges_box_captioned}
+  - {key: cap_vestiges_2, block: 21, expect: "« Réduits à", bbox_px: [732, 1049, 220, 44], style: caption, caption_of: vestiges_box_captioned}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-06-google-maps.svg, placement: reference_canvas}
@@ -66,11 +72,12 @@ discrepancies:
   arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés"}
   raster_text_absent_from_canon:
     - {fragment: heraldry_captioned, description: "légende des armoiries (voir blasonnement officiel p.2)"}
-    - {fragment: hero_captioned, description: "callouts « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin »"}
     - {fragment: du_pont_blason_captioned, description: "cartouche « DU PONT »"}
+    - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
+  raster_text_inscribed_in_canon_2026_09_09:
+    - {fragment: hero_captioned, description: "callouts « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin »"}
     - {fragment: berthollet_portrait_captioned, description: "légende « Claude-Louis Berthollet 1748-1822 »"}
     - {fragment: vestiges_box_captioned, description: "titre « Vestiges aujourd'hui » et citation « Réduits à fort peu de choses » (Georges Chapier, 1957)"}
-    - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
   canonical_text_not_visible_in_raster: []
   paragraph_structure:
     - {block: 8, description: "le raster coupe le bloc canonique 8 en deux paragraphes (« …vallée. » / « Jean Truchet devint… ») ; le canon est composé en un seul bloc"}

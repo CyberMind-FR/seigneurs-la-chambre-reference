@@ -114,3 +114,246 @@ association_name_2026_09_09:
   - build-config.yaml (libellé page 16, auteur des métadonnées PDF)
   raster_note: Les éléments raster conservés (pieds de page des pages 01 et 02, cartouche de la page 13, bandeaux, logo) portent encore l'ancienne forme « Les Amis… » ; à régénérer avec les croquis.
   rule: Le texte vivant des PDF ne doit plus contenir « Les Amis du Couvent des Cordeliers » (contrôle scripts/validate_built_layered.py).
+captions_inscribed_2026_09_09:
+  status: canonical_amendment
+  reason: 'Ordre du propriétaire (2026-09-09) : « Go, inscris les 35 légendes au canon ». Les légendes, callouts et cartouches
+    raster des 35 illustrations régénérables (rôle *_with_canonical_raster_caption) deviennent des blocs de canonical_text
+    composés en couche texte ; le texte raster correspondant est masqué dans les fragments.'
+  method: Transcription visuelle à agrandissement ×3 par fragment (jamais OCR comme autorité) ; blocs ajoutés en fin de canonical_text
+    (indexation existante inchangée) ; composition avec caption_of + masques déclarés ; à relire par le propriétaire.
+  scope: 35 fragments, 68 blocs, 11 pages (01, 02, 03, 05, 06, 07, 08, 09, 10, 11, 12). Les 11 légendes d'armoiries (heraldry_with_canonical_raster_caption)
+    et les textes raster hors illustration (bandeaux, pieds de page, cartouche association, logo, encadré chronologie p10)
+    ne sont pas concernés.
+  transcription_notes:
+  - 'Graphies conservées telles que visibles : « coeur » (p02, sans ligature), « Ier » et « XIVe » sans exposant, « Tour &
+    Maison de La Tour » (esperluette).'
+  - 'p03 nave : deux lignes sans ponctuation dans le raster → deux blocs (« Nef unique de 25 m », « Riche et pauvre, côte
+    à côte »).'
+  - 'p07 encadré défensif : les flèches typographiques ← et → visibles dans le raster sont conservées dans les blocs « ← Route
+    du Mont-Cenis » et « Vallée des Villards → ».'
+  - 'p11 encadré vallée : le raster porte deux fois « Le Bugeon » ; les deux occurrences sont inscrites (doublon probable,
+    à arbitrer).'
+  - 'p12 bandeau réseau : chaque cartouche donne un bloc commune (capitales) et un ou deux blocs de sites, selon les lignes
+    du raster.'
+  - 'p02 : la légende « Couvent des Cordeliers, fondation de 1365 » chevauche deux fragments (monk_church, louis_medallion)
+    ; masquée dans les deux.'
+  composition: 'prototypes/page-NN/composition.yaml : text_blocks avec caption_of: <fragment>, styles caption* (prototypes/_shared/text-styles.yaml),
+    masques {box, fill} par fragment ; allow_ink_overlap sur trois légendes posées sur un lavis masqué (p10 marian, p11 Le
+    Bugeon ×2).'
+  record: docs/migration-text-layer/CANON_AMENDMENT_CAPTIONS_2026_09_09.md
+  pages:
+    page_01:
+    - fragment: church_captioned
+      key: cap_church
+      text: Église Notre-Dame-du-Cruet XIVe siècle
+    - fragment: mountains_captioned
+      key: cap_mountains
+      text: Maurienne Terre de passage et de seigneuries
+    - fragment: seal_captioned
+      key: cap_seal
+      text: Sceau d'un seigneur de La Chambre XIIIe siècle
+    - fragment: maison_forte_captioned
+      key: cap_maison_forte
+      text: Maison forte de La Tour
+    page_02:
+    - fragment: village_captioned
+      key: cap_village
+      text: La Chambre, capitale et coeur de la seigneurie.
+    - fragment: bishop_captioned
+      key: cap_bishop
+      text: L'évêque-comte, maître spirituel et temporel de la Maurienne.
+    - fragment: seal_vicomte_captioned
+      key: cap_seal_vicomte
+      text: Sceau d'un vicomte de La Chambre (XIIIe siècle)
+    - fragment: knight_captioned
+      key: cap_knight
+      text: Une lignée chevaleresque, au service de la vallée et de l'Église.
+    - fragment: equestrian_seal_captioned
+      key: cap_equestrian_seal
+      text: Sceau équestre (XIIe siècle)
+    - fragment: testament_captioned
+      key: cap_testament
+      text: Testament de Pierre de La Chambre (1261)
+    - fragment: monk_church_captioned
+      key: cap_monk_church
+      text: Couvent des Cordeliers, fondation de 1365
+    - fragment: louis_medallion_captioned
+      key: cap_louis
+      text: Louis Ier de Savoie (1402-1465)
+    page_03:
+    - fragment: portal_gothique_captioned
+      key: cap_portal
+      text: Portail gothique en albâtre blanc (fin XIVe siècle)
+    - fragment: cloister_baroque_captioned
+      key: cap_cloister
+      text: Cloître baroque (1744)
+    - fragment: salle_capitulaire_captioned
+      key: cap_salle
+      text: Voûtes d'ogives de la salle capitulaire (fin XIVe siècle)
+    - fragment: valley_cruet_captioned
+      key: cap_valley
+      text: Vue depuis le Cruet sur la vallée de La Chambre
+    - fragment: nave_captioned
+      key: cap_nave_1
+      text: Nef unique de 25 m
+    - fragment: nave_captioned
+      key: cap_nave_2
+      text: Riche et pauvre, côte à côte
+    - fragment: lintel_accolade_captioned
+      key: cap_lintel
+      text: Linteau en accolade (art flamboyant, XVe siècle)
+    page_05:
+    - fragment: hero_captioned
+      key: cap_hero_1
+      text: 'Face à face : Château Joli et Château du Cruet'
+    - fragment: hero_captioned
+      key: cap_hero_2
+      text: Le Château Joli domine la vallée de l'Arc et les Villards du sud.
+    - fragment: poype_captioned
+      key: cap_poype_1
+      text: Tour maîtresse (XIIIe siècle)
+    - fragment: poype_captioned
+      key: cap_poype_2
+      text: Motte primitive (antérieure au XIe s.)
+    - fragment: poype_captioned
+      key: cap_poype_3
+      text: Fossé naturel
+    - fragment: poype_captioned
+      key: cap_poype_4
+      text: Enceinte médiévale
+    - fragment: poype_captioned
+      key: cap_poype_5
+      text: POYPE FÉODALE
+    - fragment: poype_captioned
+      key: cap_poype_6
+      text: Éperon rocheux facile à défendre, dominant tous les accès.
+    - fragment: princess_captioned
+      key: cap_princess
+      text: Agnès de Savoie-Achaïe (v. 1320-v. 1385) épouse de Jean II de La Chambre (v. 1325-v. 1370)
+    page_06:
+    - fragment: hero_captioned
+      key: cap_hero_1
+      text: Manoir de Châtel-André
+    - fragment: hero_captioned
+      key: cap_hero_2
+      text: Emplacement de la Tour de Burgin
+    - fragment: berthollet_portrait_captioned
+      key: cap_berthollet
+      text: Claude-Louis Berthollet 1748-1822
+    - fragment: vestiges_box_captioned
+      key: cap_vestiges_1
+      text: Vestiges aujourd'hui
+    - fragment: vestiges_box_captioned
+      key: cap_vestiges_2
+      text: « Réduits à fort peu de choses » (Georges Chapier, 1957)
+    page_07:
+    - fragment: hero_captioned
+      key: cap_hero
+      text: Donjon de Châtel-André (XIIe siècle)
+    - fragment: vassal_scene_captioned
+      key: cap_vassal
+      text: Le vassal rend hommage à son suzerain
+    - fragment: defensive_box_captioned
+      key: cap_def_1
+      text: Un système défensif complémentaire
+    - fragment: defensive_box_captioned
+      key: cap_def_2
+      text: Le Cruet
+    - fragment: defensive_box_captioned
+      key: cap_def_3
+      text: Châtel-André
+    - fragment: defensive_box_captioned
+      key: cap_def_4
+      text: ← Route du Mont-Cenis
+    - fragment: defensive_box_captioned
+      key: cap_def_5
+      text: La Chambre
+    - fragment: defensive_box_captioned
+      key: cap_def_6
+      text: Vallée des Villards →
+    - fragment: battle_scene_captioned
+      key: cap_battle
+      text: Reprise de la tour par les troupes savoyardes (1598)
+    page_08:
+    - fragment: hero_captioned
+      key: cap_hero_1
+      text: Magnolia centenaire dans les jardins suspendus
+    - fragment: hero_captioned
+      key: cap_hero_2
+      text: Maison-Forte du Châtelet, centre du village de Saint-Étienne-de-Cuines
+    - fragment: panorama_captioned
+      key: cap_pano_1
+      text: Le Châtelet
+    - fragment: panorama_captioned
+      key: cap_pano_2
+      text: Système défensif des seigneurs de La Chambre
+    - fragment: panorama_captioned
+      key: cap_pano_3
+      text: Le Cruet
+    page_09:
+    - fragment: magnolia_captioned
+      key: cap_magnolia
+      text: Magnolia séculaire ombrageant la demeure
+    page_10:
+    - fragment: marian_figure_captioned
+      key: cap_marian
+      text: Notre-Dame-du-Cruet, protectrice du château et de la vallée
+    page_11:
+    - fragment: tower_ladder_captioned
+      key: cap_ladder_1
+      text: Porte d'accès au 1er étage
+    - fragment: tower_ladder_captioned
+      key: cap_ladder_2
+      text: Échelle amovible (retirée en cas d'attaque)
+    - fragment: tower_ladder_captioned
+      key: cap_ladder_3
+      text: Entrée au rez-de-chaussée
+    - fragment: valley_box_captioned
+      key: cap_valley_1
+      text: Vue sur la vallée du Bugeon
+    - fragment: valley_box_captioned
+      key: cap_valley_2
+      text: Le Cruet
+    - fragment: valley_box_captioned
+      key: cap_valley_3
+      text: Le Bugeon
+    - fragment: valley_box_captioned
+      key: cap_valley_4
+      text: Le Bugeon
+    page_12:
+    - fragment: network_panorama_captioned
+      key: cap_net_title
+      text: RÉSEAU DES FORTERESSES DES SEIGNEURS DE LA CHAMBRE
+    - fragment: network_panorama_captioned
+      key: cap_net_1a
+      text: NOTRE-DAME-DU-CRUET
+    - fragment: network_panorama_captioned
+      key: cap_net_1b
+      text: Château
+    - fragment: network_panorama_captioned
+      key: cap_net_2a
+      text: LA CHAMBRE
+    - fragment: network_panorama_captioned
+      key: cap_net_2b
+      text: Tour & Maison de La Tour
+    - fragment: network_panorama_captioned
+      key: cap_net_3a
+      text: SAINTE-MARIE-DE-CUINES
+    - fragment: network_panorama_captioned
+      key: cap_net_3b
+      text: Château Joli
+    - fragment: network_panorama_captioned
+      key: cap_net_4a
+      text: SAINT-ÉTIENNE-DE-CUINES
+    - fragment: network_panorama_captioned
+      key: cap_net_4b
+      text: Châtel-André
+    - fragment: network_panorama_captioned
+      key: cap_net_4c
+      text: Châtelet, Gruyère
+    - fragment: network_panorama_captioned
+      key: cap_net_5a
+      text: SAINT-RÉMY-DE-MAURIENNE
+    - fragment: network_panorama_captioned
+      key: cap_net_5b
+      text: La Landonnière

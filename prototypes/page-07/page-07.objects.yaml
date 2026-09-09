@@ -5,7 +5,7 @@ title: La Tour de Châtel-André
 status: APPROVED
 generated_from:
   composition: prototypes/page-07/composition.yaml
-  composition_run: e06a1e72a1c7c0d24506ff9b67209697662b6d61d314cd5f75bf0bfdac09dafb
+  composition_run: f6431b0cf13e88b169ccda6fff1944e3a6caf4c613f470b4098cfc1bbb9f421c
 canonical_reference:
   path: assets/page-07.jpg
   sha256: 53440127c11ca72289c1c59ebf51cf1ef037972d1754b8794dada88c85c39c3e
@@ -163,9 +163,18 @@ objects:
     - 252
     - 244
     fill_mode: paper
+  - x: 914
+    y: 242
+    w: 86
+    h: 70
+    fill_rgb:
+    - 255
+    - 252
+    - 243
+    fill_mode: border_median
   provenance: canonical_pages
   source_ref: assets/page-07.jpg
-  sha256: 4eb05aec88c4d72c3b967d3ae07024c3f1c38b323b74022ee941f67df03b1b62
+  sha256: 04e7ac4e39e41ff54bf5b705be305f0b92d3a2abb57c0173e77591a21a2e7e52
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -247,10 +256,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 31
+    y: 828
+    w: 148
+    h: 42
+    fill_rgb:
+    - 255
+    - 252
+    - 244
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-07.jpg
-  sha256: c1915bb34ecabe48008c12dc1be4d840945fc231412a24a6a334b87309c27285
+  sha256: 902205c0f5a2cd1c3d7e87f09ae4b546f3c7b97bd1928975c3a980aeddf29cc8
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -268,10 +286,64 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 659
+    y: 624
+    w: 250
+    h: 24
+    fill_rgb:
+    - 255
+    - 252
+    - 244
+    fill_mode: paper
+  - x: 599
+    y: 657
+    w: 56
+    h: 20
+    fill_rgb:
+    - 255
+    - 255
+    - 253
+    fill_mode: border_median
+  - x: 877
+    y: 662
+    w: 82
+    h: 22
+    fill_rgb:
+    - 255
+    - 254
+    - 250
+    fill_mode: border_median
+  - x: 580
+    y: 837
+    w: 148
+    h: 22
+    fill_rgb:
+    - 255
+    - 252
+    - 244
+    fill_mode: paper
+  - x: 742
+    y: 834
+    w: 74
+    h: 22
+    fill_rgb:
+    - 255
+    - 252
+    - 244
+    fill_mode: paper
+  - x: 850
+    y: 837
+    w: 134
+    h: 22
+    fill_rgb:
+    - 255
+    - 252
+    - 244
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-07.jpg
-  sha256: 4cf99aa5bbf40d6a43abdcceb66995ec5cb1c15bf0cdf10eb7187aa6ef45a170
+  sha256: 9595fa2d2a784d8dbc193be06336fce5095a0af6a9d84501f6d6d6fae40a1ff3
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -309,10 +381,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 879
+    y: 935
+    w: 111
+    h: 94
+    fill_rgb:
+    - 255
+    - 252
+    - 244
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-07.jpg
-  sha256: 3a5923ece1ba1ffa20ba2eb60898b5711f4c05b33608ee031fab10f343b8ddc3
+  sha256: 5208b983116f1ef1c2fdfdc427d775a40df0f6b567efa3e4e8e7164516ae4f7a
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -833,6 +914,132 @@ text_zones:
   compose_as: live_text
   style: tiny
   authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_hero
+  role: cap_hero
+  canonical_block: 21
+  expect: Donjon de Châtel-André
+  bbox_px:
+  - 914
+  - 242
+  - 86
+  - 70
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_vassal
+  role: cap_vassal
+  canonical_block: 22
+  expect: Le vassal rend
+  bbox_px:
+  - 31
+  - 828
+  - 148
+  - 42
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_def_1
+  role: cap_def_1
+  canonical_block: 23
+  expect: Un système défensif
+  bbox_px:
+  - 659
+  - 624
+  - 250
+  - 24
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_large
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_def_2
+  role: cap_def_2
+  canonical_block: 24
+  expect: Le Cruet
+  bbox_px:
+  - 599
+  - 657
+  - 56
+  - 20
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_def_3
+  role: cap_def_3
+  canonical_block: 25
+  expect: Châtel-André
+  bbox_px:
+  - 877
+  - 662
+  - 82
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_def_4
+  role: cap_def_4
+  canonical_block: 26
+  expect: ← Route du
+  bbox_px:
+  - 580
+  - 837
+  - 148
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_def_5
+  role: cap_def_5
+  canonical_block: 27
+  expect: La Chambre
+  bbox_px:
+  - 742
+  - 834
+  - 74
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_plain
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_def_6
+  role: cap_def_6
+  canonical_block: 28
+  expect: Vallée des Villards
+  bbox_px:
+  - 850
+  - 837
+  - 134
+  - 22
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_battle
+  role: cap_battle
+  canonical_block: 29
+  expect: Reprise de la
+  bbox_px:
+  - 879
+  - 935
+  - 111
+  - 94
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/07.yaml:canonical_text
 functional_objects:
 - id: P07-F-google_maps
   object_class: qr
@@ -904,6 +1111,11 @@ discrepancies:
     description: bandeau courant « Les Seigneurs de La Chambre et leur patrimoine en Maurienne »
   - fragment: heraldry_captioned
     description: légende des armoiries (voir blasonnement officiel p.2)
+  - fragment: mh_seal
+    description: sceau MONUMENT HISTORIQUE (texte intrinsèque)
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  raster_text_inscribed_in_canon_2026_09_09:
   - fragment: hero_captioned
     description: légende « Donjon de Châtel-André (XIIe siècle) »
   - fragment: vassal_scene_captioned
@@ -913,10 +1125,6 @@ discrepancies:
       Chambre, Vallée des Villards)
   - fragment: battle_scene_captioned
     description: légende « Reprise de la tour par les troupes savoyardes (1598) »
-  - fragment: mh_seal
-    description: sceau MONUMENT HISTORIQUE (texte intrinsèque)
-  - fragment: map_document
-    description: toponymes intrinsèques de la carte
   canonical_text_not_visible_in_raster: []
 completeness_gate:
   status: PASS

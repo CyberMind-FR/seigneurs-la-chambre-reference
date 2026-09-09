@@ -276,8 +276,12 @@ class Composer:
                 # crop (REGENERATION_RULES: masquage de l'ancien texte, restauration locale du fond).
                 # Fill: measured paper colour (default), the median colour of the mask border ring
                 # (`mask_fill: border_median`, e.g. text inside a coloured banner) or a hex colour.
-                mx, my, mw, mh = bbox_tuple(m)
-                mode = f.get("mask_fill", "paper")
+                if isinstance(m, dict) and "box" in m:  # per-mask fill override
+                    mx, my, mw, mh = bbox_tuple(m["box"])
+                    mode = m.get("fill", f.get("mask_fill", "paper"))
+                else:
+                    mx, my, mw, mh = bbox_tuple(m)
+                    mode = f.get("mask_fill", "paper")
                 if mode == "paper":
                     fill = tuple(int(round(v)) for v in self.bg)
                 elif mode == "border_median":
@@ -639,7 +643,12 @@ class Composer:
             return x0, y0, int(w * zoom) + 1, int(h * zoom) + 1
 
         out = []
+        # Blocks declared `allow_ink_overlap: true` sit on a masked wash whose non-paper fill
+        # (mask_fill: border_median) the ink mask cannot distinguish from drawing ink.
+        exempt = {tb["key"] for tb in self.spec.get("text_blocks", []) if tb.get("allow_ink_overlap")}
         for t in self.text_drawn:
+            if t.get("key") in exempt:
+                continue
             d = t["drawn_px"]
             x0, y0, w, h = render_rect(d["x"], d["y"], d["w"], d["h"])
             region = both[y0:y0 + h, x0:x0 + w]

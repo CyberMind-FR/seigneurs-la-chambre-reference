@@ -54,7 +54,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   hero_captioned:
-    sha256: 0ae73f4d230843965eb48410b33eac77fa968f364ccecc86db52693200f1085d
+    sha256: 444af177464d61a32117d5596c948c5e92fee9abc7e17b51f4a5278999e5cf6d
     bbox_px:
       x: 380
       y: 255
@@ -94,7 +94,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   panorama_captioned:
-    sha256: 1b4cb512d3e38155965516ddce367c4eb00e437ef13a87577b65e008aca8e511
+    sha256: 1da3ba03bacca95c111ac0687e2ff7355d193926a711a5f85faad21aa64a8f45
     bbox_px:
       x: 40
       y: 955

@@ -54,7 +54,7 @@ fragments:
     upscale_factor: 1.66
     upscale_provisional: true
   tower_ladder_captioned:
-    sha256: 8d8c72b12023bbb916bac6e81ecf153629f384f577348753f07ba22867a926b8
+    sha256: 1ed4851cb1277f3f52f5692b3989916335649cbdde3216e9ba02403b20afd003
     bbox_px:
       x: 40
       y: 755
@@ -64,7 +64,7 @@ fragments:
     upscale_factor: 1.66
     upscale_provisional: true
   valley_box_captioned:
-    sha256: 5137de962bab418c49c262676383cfc79a0e287574272b96dc18df153c514b14
+    sha256: edd13d83d133670b874ddbd49c17bc9ac97d6156e1d5f2af88f16f2d067a6b3b
     bbox_px:
       x: 410
       y: 815

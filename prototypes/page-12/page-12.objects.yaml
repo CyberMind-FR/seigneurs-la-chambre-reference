@@ -5,7 +5,7 @@ title: La Maison Forte de La Landonnière
 status: APPROVED
 generated_from:
   composition: prototypes/page-12/composition.yaml
-  composition_run: 5523bf931f2736fc9ec3a0a419009623cae65c0dd87238e0287461b67ce972b0
+  composition_run: 1f78d7a69aa0a55f679a710bb871983b305642d5d81eaca431b36b5c5a4325ce
 canonical_reference:
   path: assets/page-12.jpg
   sha256: 0afd9e2eb552b9fff7339a03817205f511b83ae7614884437812463123e61638
@@ -299,10 +299,64 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 286
+    y: 903
+    w: 484
+    h: 20
+    fill_rgb:
+    - 255
+    - 254
+    - 252
+    fill_mode: border_median
+  - x: 70
+    y: 1012
+    w: 94
+    h: 46
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 248
+    y: 1019
+    w: 97
+    h: 47
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 430
+    y: 1017
+    w: 96
+    h: 46
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 658
+    y: 1017
+    w: 112
+    h: 56
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
+  - x: 879
+    y: 1019
+    w: 107
+    h: 49
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: c89ec3c3b1ade7e6c358d98d358ee0e5ee49a0a23bbc3c72b82ab7c15d280f0a
+  sha256: 57c37229f62d6eab5ad905012f34551ed3df6b8095ac11b23c4a2e2b6cd12e26
   effective_ppi_a5: 300.56
   dirty_edges:
   - bottom
@@ -767,6 +821,174 @@ text_zones:
   compose_as: live_text
   style: tiny
   authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_title
+  role: cap_net_title
+  canonical_block: 21
+  expect: RÉSEAU DES FORTERESSES
+  bbox_px:
+  - 286
+  - 903
+  - 484
+  - 20
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_title_red
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_1a
+  role: cap_net_1a
+  canonical_block: 22
+  expect: NOTRE-DAME-DU-CRUET
+  bbox_px:
+  - 70
+  - 1012
+  - 94
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_caps
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_1b
+  role: cap_net_1b
+  canonical_block: 23
+  expect: Château
+  bbox_px:
+  - 70
+  - 1038
+  - 94
+  - 20
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_2a
+  role: cap_net_2a
+  canonical_block: 24
+  expect: LA CHAMBRE
+  bbox_px:
+  - 248
+  - 1019
+  - 97
+  - 14
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_caps
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_2b
+  role: cap_net_2b
+  canonical_block: 25
+  expect: Tour & Maison
+  bbox_px:
+  - 248
+  - 1033
+  - 97
+  - 33
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_3a
+  role: cap_net_3a
+  canonical_block: 26
+  expect: SAINTE-MARIE-DE-CUINES
+  bbox_px:
+  - 430
+  - 1017
+  - 96
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_caps
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_3b
+  role: cap_net_3b
+  canonical_block: 27
+  expect: Château Joli
+  bbox_px:
+  - 430
+  - 1043
+  - 96
+  - 20
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_4a
+  role: cap_net_4a
+  canonical_block: 28
+  expect: SAINT-ÉTIENNE-DE-CUINES
+  bbox_px:
+  - 658
+  - 1017
+  - 112
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_caps
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_4b
+  role: cap_net_4b
+  canonical_block: 29
+  expect: Châtel-André
+  bbox_px:
+  - 658
+  - 1043
+  - 112
+  - 15
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_4c
+  role: cap_net_4c
+  canonical_block: 30
+  expect: Châtelet, Gruyère
+  bbox_px:
+  - 658
+  - 1058
+  - 112
+  - 15
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_5a
+  role: cap_net_5a
+  canonical_block: 31
+  expect: SAINT-RÉMY-DE-MAURIENNE
+  bbox_px:
+  - 879
+  - 1019
+  - 107
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_caps
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_net_5b
+  role: cap_net_5b
+  canonical_block: 32
+  expect: La Landonnière
+  bbox_px:
+  - 879
+  - 1045
+  - 107
+  - 23
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/12.yaml:canonical_text
 functional_objects:
 - id: P12-F-google_maps
   object_class: qr
@@ -838,12 +1060,13 @@ discrepancies:
     description: bandeau courant
   - fragment: heraldry_captioned
     description: légende des armoiries
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  raster_text_inscribed_in_canon_2026_09_09:
   - fragment: network_panorama_captioned
     description: titre « RÉSEAU DES FORTERESSES DES SEIGNEURS DE LA CHAMBRE » et cartouches (Notre-Dame-du-Cruet Château,
       La Chambre Tour & Maison de La Tour, Sainte-Marie-de-Cuines Château Joli, Saint-Étienne-de-Cuines Châtel-André Châtelet
       Gruyère, Saint-Rémy-de-Maurienne La Landonnière)
-  - fragment: map_document
-    description: toponymes intrinsèques de la carte
   canonical_text_differs_from_raster:
   - le raster coupe le bloc 6 en trois paragraphes ; composé en un bloc à gauche du médaillon
   - 'le raster montre « Scannez pour y aller » superposé au QR (défaut de l''ancienne page) : disparaît'
