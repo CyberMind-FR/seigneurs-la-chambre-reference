@@ -78,8 +78,12 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
 - Pages 03, 05, 06, 07, 08, 09, 11, 12 : proofs multicouches produits, couche texte exacte,
   QR décodés, SHA des fragments verrouillés (`fragments.lock.yaml`), 0 collision texte/croquis,
   gate `PASS_WITH_RESOLUTION_BLOCKER` (181–186 ppi à la taille A5 contre 300 ppi demi-teintes /
-  1200 ppi trait, gates identiques pour tous les formats depuis le 2026-09-09). Crops `INSPECTED`,
-  revue humaine attendue.
+  1200 ppi trait, gates identiques pour tous les formats depuis le 2026-09-09).
+- **Validation du 2026-09-09 (gkerma)** : crops `APPROVED` sur les 8 pages, écarts texte ↔ canon
+  arbitrés (le canon prévaut, légendes raster conservées dans leurs fragments), dérogation de
+  résolution explicite pour la sortie A5 (≥ 180 ppi accepté ; 300/1200 restent la cible et
+  bloquent A2/A1) → gate `PASS_WITH_RESOLUTION_WAIVER`. Détail :
+  `docs/migration-text-layer/PHASE_B_SITE_FAMILY_VALIDATION.md`.
 - Contrôles ajoutés après revue du 2026-09-09 : collision d'encre texte/fragment (rendus
   monocouche), bord de crop traversant un trait, texte dans une zone QR, masque local couleur
   papier des résidus de texte raster (traitement déclaré et journalisé par fragment).
@@ -183,11 +187,11 @@ Chaque fragment raster produit doit enregistrer : page source, zone/bounding box
 
 ## Priorité d’exécution
 1. ~~mesurer en CI les pages 05, 06, 07, 08, 09, 11 et 12~~ — fait (`layered-site-compose.yml`) ;
-2. revoir visuellement les diagnostics et approuver les crops sémantiques (`INSPECTED` → `APPROVED`) ;
+2. ~~revoir visuellement les diagnostics et approuver les crops sémantiques~~ — validé le 2026-09-09 ;
 3. ~~généraliser le compositeur page 03 en compositeur piloté par YAML~~ — fait ;
 4. ~~produire un proof multicouche par page de la famille~~ — fait ;
 5. ~~reporter automatiquement texte, QR, SHA et ppi~~ — fait ;
-6. arbitrer les écarts texte visible ↔ canon et le gate de résolution ;
+6. ~~arbitrer les écarts texte visible ↔ canon et le gate de résolution~~ — validé le 2026-09-09 (canon prévaut ; dérogation A5) ;
 7. traiter ensuite page 10, puis les structures spécifiques 13–16 ;
 8. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
 

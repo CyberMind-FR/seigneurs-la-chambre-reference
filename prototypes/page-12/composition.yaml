@@ -3,7 +3,7 @@ schema_version: 1
 page: 12
 title: La Maison Forte de La Landonnière
 family: site
-status: INSPECTED_PENDING_HUMAN_REVIEW
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-12.jpg, sha256: 0afd9e2eb552b9fff7339a03817205f511b83ae7614884437812463123e61638}
 canonical_text: {path: pages/12.yaml, key: canonical_text, expected_blocks: 21}
 qr_registry: qr_registry.yaml
@@ -14,24 +14,24 @@ text_styles:
   small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
 
 fragments:
-  - {id: running_head_raster,   role: canonical_raster_text_absent_from_yaml, status: INSPECTED, bbox_px: {x: 262, y: 24, w: 532, h: 26}, treatment: crop_only}
-  - {id: heraldry_captioned,    role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 30, y: 45, w: 140, h: 232}, treatment: crop_only}
-  - {id: statue,                role: documentary_illustration, status: INSPECTED, bbox_px: {x: 878, y: 22, w: 154, h: 296}, treatment: crop_only, mask_px: [[878, 72, 10, 62]], note: "résidu raster de la fin du titre masqué"}
-  - {id: title_ornament,        role: ornament, status: INSPECTED, bbox_px: {x: 306, y: 190, w: 448, h: 26}, treatment: crop_only}
-  - {id: hero,                  role: documentary_illustration, status: INSPECTED, bbox_px: {x: 420, y: 185, w: 612, h: 465}, treatment: crop_only}
-  - {id: cross_h1, role: ornament, status: INSPECTED, bbox_px: {x: 36, y: 294, w: 22, h: 22}, treatment: crop_only}
-  - {id: cross_h2, role: ornament, status: INSPECTED, bbox_px: {x: 36, y: 634, w: 22, h: 22}, treatment: crop_only}
-  - {id: cross_h3, role: ornament, status: INSPECTED, bbox_px: {x: 438, y: 659, w: 22, h: 22}, treatment: crop_only}
-  - {id: chapel,                role: documentary_illustration, status: INSPECTED, bbox_px: {x: 775, y: 655, w: 257, h: 238}, treatment: crop_only}
-  - {id: portrait_medallion,    role: documentary_illustration, status: INSPECTED, bbox_px: {x: 301, y: 773, w: 120, h: 116}, treatment: crop_only, mask_px: [[301, 773, 40, 16]], note: "résidu raster « ne. » de la fin d'une ligne masqué (fond)"}
-  - {id: network_panorama_captioned, role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 31, y: 896, w: 993, h: 194}, treatment: crop_only, note: "bandeau « RÉSEAU DES FORTERESSES DES SEIGNEURS DE LA CHAMBRE » avec cartouches toponymiques raster"}
-  - {id: map_document,          role: documentary_map, status: INSPECTED, bbox_px: {x: 40, y: 1106, w: 350, h: 170}, treatment: crop_only, mask_px: [[201, 1109, 60, 17]], note: "ancien titre CARTE masqué ; icône conservée"}
-  - {id: pin_icon,   role: icon, status: INSPECTED, bbox_px: {x: 466, y: 1106, w: 20, h: 26}, treatment: crop_only}
-  - {id: phone_icon, role: icon, status: INSPECTED, bbox_px: {x: 772, y: 1106, w: 17, h: 25}, treatment: crop_only}
-  - {id: localization_vignette, role: documentary_illustration, status: INSPECTED, bbox_px: {x: 425, y: 1195, w: 262, h: 85}, treatment: crop_only}
-  - {id: mappe_icon, role: icon, status: INSPECTED, bbox_px: {x: 58, y: 1288, w: 34, h: 29}, treatment: crop_only}
-  - {id: info_icons, role: icon, status: INSPECTED, bbox_px: {x: 56, y: 1347, w: 26, h: 104}, treatment: crop_only}
-  - {id: bottom_vignette,       role: documentary_illustration, status: INSPECTED, bbox_px: {x: 590, y: 1330, w: 442, h: 160}, treatment: crop_only, mask_px: [[590, 1330, 32, 18]], note: "résidu raster « LOIN » du titre masqué (ciel)"}
+  - {id: running_head_raster,   role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 262, y: 24, w: 532, h: 26}, treatment: crop_only}
+  - {id: heraldry_captioned,    role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 30, y: 45, w: 140, h: 232}, treatment: crop_only}
+  - {id: statue,                role: documentary_illustration, status: APPROVED, bbox_px: {x: 878, y: 22, w: 154, h: 296}, treatment: crop_only, mask_px: [[878, 72, 10, 62]], note: "résidu raster de la fin du titre masqué"}
+  - {id: title_ornament,        role: ornament, status: APPROVED, bbox_px: {x: 306, y: 190, w: 448, h: 26}, treatment: crop_only}
+  - {id: hero,                  role: documentary_illustration, status: APPROVED, bbox_px: {x: 420, y: 185, w: 612, h: 465}, treatment: crop_only}
+  - {id: cross_h1, role: ornament, status: APPROVED, bbox_px: {x: 36, y: 294, w: 22, h: 22}, treatment: crop_only}
+  - {id: cross_h2, role: ornament, status: APPROVED, bbox_px: {x: 36, y: 634, w: 22, h: 22}, treatment: crop_only}
+  - {id: cross_h3, role: ornament, status: APPROVED, bbox_px: {x: 438, y: 659, w: 22, h: 22}, treatment: crop_only}
+  - {id: chapel,                role: documentary_illustration, status: APPROVED, bbox_px: {x: 775, y: 655, w: 257, h: 238}, treatment: crop_only}
+  - {id: portrait_medallion,    role: documentary_illustration, status: APPROVED, bbox_px: {x: 301, y: 773, w: 120, h: 116}, treatment: crop_only, mask_px: [[301, 773, 40, 16]], note: "résidu raster « ne. » de la fin d'une ligne masqué (fond)"}
+  - {id: network_panorama_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 31, y: 896, w: 993, h: 194}, treatment: crop_only, note: "bandeau « RÉSEAU DES FORTERESSES DES SEIGNEURS DE LA CHAMBRE » avec cartouches toponymiques raster"}
+  - {id: map_document,          role: documentary_map, status: APPROVED, bbox_px: {x: 40, y: 1106, w: 350, h: 170}, treatment: crop_only, mask_px: [[201, 1109, 60, 17]], note: "ancien titre CARTE masqué ; icône conservée"}
+  - {id: pin_icon,   role: icon, status: APPROVED, bbox_px: {x: 466, y: 1106, w: 20, h: 26}, treatment: crop_only}
+  - {id: phone_icon, role: icon, status: APPROVED, bbox_px: {x: 772, y: 1106, w: 17, h: 25}, treatment: crop_only}
+  - {id: localization_vignette, role: documentary_illustration, status: APPROVED, bbox_px: {x: 425, y: 1195, w: 262, h: 85}, treatment: crop_only}
+  - {id: mappe_icon, role: icon, status: APPROVED, bbox_px: {x: 58, y: 1288, w: 34, h: 29}, treatment: crop_only}
+  - {id: info_icons, role: icon, status: APPROVED, bbox_px: {x: 56, y: 1347, w: 26, h: 104}, treatment: crop_only}
+  - {id: bottom_vignette,       role: documentary_illustration, status: APPROVED, bbox_px: {x: 590, y: 1330, w: 442, h: 160}, treatment: crop_only, mask_px: [[590, 1330, 32, 18]], note: "résidu raster « LOIN » du titre masqué (ciel)"}
 
 vectors:
   - {kind: rect, bbox_px: [30, 1095, 995, 190], stroke: "#715240", width: 0.45}
@@ -67,6 +67,7 @@ qr:
   - {id: google_maps, svg: assets/qr-svg/page-12-google-maps.svg, placement: reference_canvas}
 
 discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés"}
   raster_text_absent_from_canon:
     - {fragment: running_head_raster, description: "bandeau courant"}
     - {fragment: heraldry_captioned, description: "légende des armoiries"}
@@ -83,10 +84,14 @@ validation:
   qr_exact_decode: true
   fragment_sha256: true
   min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
-  accept_fragment_statuses: [APPROVED, INSPECTED]
+  accept_fragment_statuses: [APPROVED]
   edge_ink_epsilon: 0.02
   fragment_edge_ink: warn
   text_ink_collision: fail
   text_ink_collision_min_px: 40
   text_overflow: warn
   fragment_lock: warn
+  # Dérogation explicite de résolution (décision du propriétaire du projet, 2026-09-09) :
+  # les rasters canoniques (181–186 ppi à la taille A5) sont acceptés pour la sortie A5 ;
+  # les gates 300/1200 restent la cible et restent bloquants pour A2/A1.
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}

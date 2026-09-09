@@ -2,16 +2,16 @@ schema_version: 2
 project: Les Seigneurs de La Chambre
 page: 12
 title: La Maison Forte de La Landonnière
-status: INSPECTED_PENDING_HUMAN_REVIEW
+status: APPROVED
 generated_from:
   composition: prototypes/page-12/composition.yaml
-  composition_run: null
+  composition_run: b77ae8f512b374922ec190a5a00c1c20372979ae960ebb29ecb568c758f67e8b
 canonical_reference:
   path: assets/page-12.jpg
   sha256: 0afd9e2eb552b9fff7339a03817205f511b83ae7614884437812463123e61638
   dimensions_px:
-  - null
-  - null
+  - 1055
+  - 1491
 principle:
   hierarchy: page -> regions -> objects -> subobjects -> layers
   asset_spec_role: macro_layout_reference_only
@@ -25,14 +25,14 @@ regions:
   bbox_px:
   - 0
   - 0
-  - 0
+  - 1055
   - 290
 - id: R02
   role: narrative
   bbox_px:
   - 0
   - 290
-  - 0
+  - 1055
   - 805
 - id: R03
   role: structural_frame_band
@@ -67,17 +67,17 @@ objects:
   - 24
   - 532
   - 26
-  parent_region: R06
+  parent_region: R01
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
+  sha256: 5dce1c2f400d46009cba477a26c8d6544640f3897b201a34db3e1c44d56850d3
+  effective_ppi_a5: 181.06
   dirty_edges: []
-  review_status: INSPECTED
+  review_status: APPROVED
 - id: P12-O-heraldry_captioned
   visual_description: heraldry captioned
   object_class: composite
@@ -86,17 +86,18 @@ objects:
   - 45
   - 140
   - 232
-  parent_region: R06
+  parent_region: R01
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 3057c37b2c32010e8c41e987a981ae06955e289d3ada89d592d024324538e65d
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - top
+  review_status: APPROVED
 - id: P12-O-statue
   visual_description: résidu raster de la fin du titre masqué
   object_class: illustration
@@ -105,17 +106,29 @@ objects:
   - 22
   - 154
   - 296
-  parent_region: R06
+  parent_region: R01
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 878
+    y: 72
+    w: 10
+    h: 62
+    fill_rgb:
+    - 255
+    - 253
+    - 249
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 798e39029eca3fa96efcdb4d72a132d3fe4a8200abbd7182ad8a086e9b20b5ed
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
 - id: P12-O-title_ornament
   visual_description: title ornament
   object_class: ornament
@@ -124,17 +137,20 @@ objects:
   - 190
   - 448
   - 26
-  parent_region: R06
+  parent_region: R01
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: c09f9c9f2f89911aa9751c9e13f8a29e53bf44dc6786847ade958c3afb508e64
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
 - id: P12-O-hero
   visual_description: hero
   object_class: illustration
@@ -143,17 +159,20 @@ objects:
   - 185
   - 612
   - 465
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 061265c7a7b39d91cc22256a4e59cfd1525890afc92e38191112240c49fe2dd1
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
 - id: P12-O-cross_h1
   visual_description: cross h1
   object_class: ornament
@@ -162,17 +181,19 @@ objects:
   - 294
   - 22
   - 22
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 0ef2afa9ea74aafb4757c331926810d44e7775b7e69b60d664daee2162b283da
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
 - id: P12-O-cross_h2
   visual_description: cross h2
   object_class: ornament
@@ -181,17 +202,19 @@ objects:
   - 634
   - 22
   - 22
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 7188008b4bf4b904bd9f72917d552ce7a96f16a6698c7801a22727a2667b7adf
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
 - id: P12-O-cross_h3
   visual_description: cross h3
   object_class: ornament
@@ -200,17 +223,19 @@ objects:
   - 659
   - 22
   - 22
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: 2e090ee4cb4eee233936a1b4b2834bc5dfcbd4dc0793f501773a0db68b3f15a6
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
 - id: P12-O-chapel
   visual_description: chapel
   object_class: illustration
@@ -219,17 +244,19 @@ objects:
   - 655
   - 257
   - 238
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: c623e79c94bdbc85de45dfe3243fa818e108bdc6fff9495e4552bf6464eb2ebf
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  review_status: APPROVED
 - id: P12-O-portrait_medallion
   visual_description: résidu raster « ne. » de la fin d'une ligne masqué (fond)
   object_class: illustration
@@ -238,17 +265,26 @@ objects:
   - 773
   - 120
   - 116
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 301
+    y: 773
+    w: 40
+    h: 16
+    fill_rgb:
+    - 255
+    - 253
+    - 249
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: b1857cb71e646c80f6eb289cbfd6151f0154945562433e9c48cc002c0a1ea99e
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  review_status: APPROVED
 - id: P12-O-network_panorama_captioned
   visual_description: bandeau « RÉSEAU DES FORTERESSES DES SEIGNEURS DE LA CHAMBRE » avec cartouches toponymiques raster
   object_class: composite
@@ -257,17 +293,21 @@ objects:
   - 896
   - 993
   - 194
-  parent_region: R06
+  parent_region: R02
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: c654f78ca9abef1cf4ac0f3a95dc9109dd89a47f746981ef26e7998a3debeb3c
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
 - id: P12-O-map_document
   visual_description: ancien titre CARTE masqué ; icône conservée
   object_class: documentary_map
@@ -280,13 +320,21 @@ objects:
   layer_target: raster_fragment
   text_relationship: intrinsic_document_text
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 201
+    y: 1109
+    w: 60
+    h: 17
+    fill_rgb:
+    - 255
+    - 253
+    - 249
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
+  sha256: 8727af0eddd579c9e61d38786b2035f62422ef4eba44b5a963324d0834a3857c
+  effective_ppi_a5: 181.06
   dirty_edges: []
-  review_status: INSPECTED
+  review_status: APPROVED
 - id: P12-O-pin_icon
   visual_description: pin icon
   object_class: icon
@@ -302,10 +350,11 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: f7fb83766cf06ac3fc13192445a97ea48cd8f524c1aa9f73f3070a91a3d3172a
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - top
+  review_status: APPROVED
 - id: P12-O-phone_icon
   visual_description: phone icon
   object_class: icon
@@ -321,10 +370,10 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
+  sha256: 8ae7af55a6784129848258b6480f9023d41d7507ca2d90006e80a8db8bfb7a6d
+  effective_ppi_a5: 181.06
   dirty_edges: []
-  review_status: INSPECTED
+  review_status: APPROVED
 - id: P12-O-localization_vignette
   visual_description: localization vignette
   object_class: illustration
@@ -340,10 +389,13 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: cee6fefe6362dbb09ad9bb01a9811461b72d6a76068fec1ecf89865968f053cd
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
 - id: P12-O-mappe_icon
   visual_description: mappe icon
   object_class: icon
@@ -359,10 +411,13 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: bf6384de8e135d51651aa2d75f34dbcf22b4672f68cac28cd9edf885f41866a2
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - left
+  - right
+  - top
+  review_status: APPROVED
 - id: P12-O-info_icons
   visual_description: info icons
   object_class: icon
@@ -378,10 +433,10 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
+  sha256: 7264f317e5933261265cab97f829b6210aac25209808e7398538f36aa8e2ec83
+  effective_ppi_a5: 181.06
   dirty_edges: []
-  review_status: INSPECTED
+  review_status: APPROVED
 - id: P12-O-bottom_vignette
   visual_description: résidu raster « LOIN » du titre masqué (ciel)
   object_class: illustration
@@ -394,13 +449,25 @@ objects:
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 590
+    y: 1330
+    w: 32
+    h: 18
+    fill_rgb:
+    - 255
+    - 253
+    - 249
   provenance: canonical_pages
   source_ref: assets/page-12.jpg
-  sha256: null
-  effective_ppi_a5: null
-  dirty_edges: []
-  review_status: INSPECTED
+  sha256: ddc85c3773fceea843996f5d4f261ea8a6be7c2f00e766c0ef3d5be8ff9eac9e
+  effective_ppi_a5: 181.06
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
 text_zones:
 - id: P12-T-title
   role: title
@@ -411,7 +478,7 @@ text_zones:
   - 66
   - 700
   - 70
-  parent_region: R06
+  parent_region: R01
   layer_target: text_layer
   compose_as: live_text
   style: title
@@ -425,7 +492,7 @@ text_zones:
   - 143
   - 600
   - 38
-  parent_region: R06
+  parent_region: R01
   layer_target: text_layer
   compose_as: live_text
   style: subtitle
@@ -439,7 +506,7 @@ text_zones:
   - 290
   - 350
   - 52
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -453,7 +520,7 @@ text_zones:
   - 345
   - 378
   - 92
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -467,7 +534,7 @@ text_zones:
   - 445
   - 378
   - 142
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -481,7 +548,7 @@ text_zones:
   - 630
   - 350
   - 52
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -495,7 +562,7 @@ text_zones:
   - 684
   - 266
   - 206
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -509,7 +576,7 @@ text_zones:
   - 655
   - 300
   - 26
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -523,7 +590,7 @@ text_zones:
   - 690
   - 332
   - 160
-  parent_region: R06
+  parent_region: R02
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -696,7 +763,20 @@ text_zones:
   compose_as: live_text
   style: tiny
   authority: pages/12.yaml:canonical_text
-functional_objects: []
+functional_objects:
+- id: P12-F-google_maps
+  object_class: qr
+  source_bbox_px:
+  - 797
+  - 1138
+  - 131
+  - 123
+  parent_region: R03
+  layer_target: functional_overlay
+  extraction_action: do_not_extract_use_deterministic_svg
+  asset: assets/qr-svg/page-12-google-maps.svg
+  payload_authority: qr_registry.yaml
+  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
 structural_frames:
 - id: P12-FR01
   kind: rect
@@ -744,6 +824,11 @@ structural_frames:
   layer_target: documentary_vector
   extraction_action: layout_vector
 discrepancies:
+  arbitration:
+    status: VALIDATED
+    by: gkerma
+    date: '2026-09-09'
+    decision: le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés
   raster_text_absent_from_canon:
   - fragment: running_head_raster
     description: bandeau courant
@@ -760,10 +845,10 @@ discrepancies:
   - 'le raster montre « Scannez pour y aller » superposé au QR (défaut de l''ancienne page) : disparaît'
   canonical_text_not_visible_in_raster: []
 completeness_gate:
-  status: INSPECTED_PENDING_HUMAN_REVIEW
-  native_raster_dimensions_recorded: false
-  all_objects_have_sha256: false
+  status: PASS
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
   all_editorial_text_composed_live: true
-  qr_accounted_for: false
+  qr_accounted_for: true
   second_visual_sweep_by_human: pending
-  last_methodology_gate: null
+  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER

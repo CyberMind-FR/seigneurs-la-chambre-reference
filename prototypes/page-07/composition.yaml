@@ -3,7 +3,7 @@ schema_version: 1
 page: 7
 title: La Tour de Châtel-André
 family: site
-status: INSPECTED_PENDING_HUMAN_REVIEW
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-07.jpg, sha256: 53440127c11ca72289c1c59ebf51cf1ef037972d1754b8794dada88c85c39c3e}
 canonical_text: {path: pages/07.yaml, key: canonical_text, expected_blocks: 21}
 qr_registry: qr_registry.yaml
@@ -14,28 +14,28 @@ text_styles:
   small_bold_center: {font: Times-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
 
 fragments:
-  - {id: running_head_raster,      role: canonical_raster_text_absent_from_yaml, status: INSPECTED, bbox_px: {x: 214, y: 26,   w: 632, h: 36},  treatment: crop_only}
-  - {id: heraldry_captioned,       role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 36,  y: 42,   w: 138, h: 276}, treatment: crop_only}
-  - {id: compass_rose_top_right,   role: ornament,                                status: INSPECTED, bbox_px: {x: 880, y: 38,   w: 114, h: 127}, treatment: crop_only}
-  - {id: title_ornament,           role: ornament,                                status: INSPECTED, bbox_px: {x: 298, y: 193,  w: 425, h: 31},  treatment: crop_only}
-  - {id: hero_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 580, y: 175, w: 421, h: 405}, treatment: crop_only, mask_px: [[580, 175, 165, 14]], note: "donjon + légende « Donjon de Châtel-André (XIIe siècle) » ; résidu raster du sous-titre masqué (ciel)"}
-  - {id: cross_h1,                 role: ornament, status: INSPECTED, bbox_px: {x: 198, y: 236, w: 22, h: 22}, treatment: crop_only}
-  - {id: valley_panorama,          role: documentary_illustration, status: INSPECTED, bbox_px: {x: 47,  y: 387,  w: 503, h: 186}, treatment: crop_only}
-  - {id: cross_h2,                 role: ornament, status: INSPECTED, bbox_px: {x: 198, y: 606, w: 22, h: 22}, treatment: crop_only}
-  - {id: vassal_scene_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 26,  y: 608,  w: 158, h: 290}, treatment: crop_only, note: "scène d'hommage + légende « Le vassal rend hommage à son suzerain »"}
-  - {id: defensive_box_captioned,  role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 575, y: 607,  w: 422, h: 265}, treatment: crop_only, note: "encadré « Un système défensif complémentaire » avec toponymes raster"}
-  - {id: cross_h3,                 role: ornament, status: INSPECTED, bbox_px: {x: 58,  y: 922, w: 22, h: 22}, treatment: crop_only}
-  - {id: battle_scene_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 495, y: 895,  w: 495, h: 176}, treatment: crop_only, note: "scène de 1598 + légende « Reprise de la tour par les troupes savoyardes (1598) »"}
-  - {id: map_document,             role: documentary_map, status: INSPECTED, bbox_px: {x: 40,  y: 1118, w: 368, h: 182}, treatment: crop_only}
-  - {id: carte_icon,               role: icon, status: INSPECTED, bbox_px: {x: 155, y: 1094, w: 22, h: 26}, treatment: crop_only}
-  - {id: pin_icon,                 role: icon, status: INSPECTED, bbox_px: {x: 472, y: 1093, w: 20, h: 27}, treatment: crop_only}
-  - {id: phone_icon,               role: icon, status: INSPECTED, bbox_px: {x: 752, y: 1093, w: 18, h: 29}, treatment: crop_only}
-  - {id: localization_vignette,    role: documentary_illustration, status: INSPECTED, bbox_px: {x: 435, y: 1186, w: 235, h: 106}, treatment: crop_only}
-  - {id: mappe_icon,               role: icon, status: INSPECTED, bbox_px: {x: 58,  y: 1311, w: 30, h: 27}, treatment: crop_only}
-  - {id: mh_icon,                  role: icon, status: INSPECTED, bbox_px: {x: 314, y: 1360, w: 24, h: 24}, treatment: crop_only}
-  - {id: info_icons,               role: icon, status: INSPECTED, bbox_px: {x: 50,  y: 1392, w: 45, h: 130}, treatment: crop_only}
-  - {id: bottom_vignette,          role: documentary_illustration, status: INSPECTED, bbox_px: {x: 495, y: 1360, w: 390, h: 150}, treatment: crop_only, mask_px: [[495, 1360, 102, 26], [495, 1392, 100, 22]], note: "résidus raster du titre MONUMENT HISTORIQUE et de la fin de la 1re puce masqués (ciel)"}
-  - {id: mh_seal,                  role: ornament, status: INSPECTED, bbox_px: {x: 872, y: 1372, w: 111, h: 117}, treatment: crop_only, note: "sceau « MONUMENT HISTORIQUE » (texte intrinsèque à l'ornement)"}
+  - {id: running_head_raster,      role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 214, y: 26,   w: 632, h: 36},  treatment: crop_only}
+  - {id: heraldry_captioned,       role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 36,  y: 42,   w: 138, h: 276}, treatment: crop_only}
+  - {id: compass_rose_top_right,   role: ornament,                                status: APPROVED, bbox_px: {x: 880, y: 38,   w: 114, h: 127}, treatment: crop_only}
+  - {id: title_ornament,           role: ornament,                                status: APPROVED, bbox_px: {x: 298, y: 193,  w: 425, h: 31},  treatment: crop_only}
+  - {id: hero_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 580, y: 175, w: 421, h: 405}, treatment: crop_only, mask_px: [[580, 175, 165, 14]], note: "donjon + légende « Donjon de Châtel-André (XIIe siècle) » ; résidu raster du sous-titre masqué (ciel)"}
+  - {id: cross_h1,                 role: ornament, status: APPROVED, bbox_px: {x: 198, y: 236, w: 22, h: 22}, treatment: crop_only}
+  - {id: valley_panorama,          role: documentary_illustration, status: APPROVED, bbox_px: {x: 47,  y: 387,  w: 503, h: 186}, treatment: crop_only}
+  - {id: cross_h2,                 role: ornament, status: APPROVED, bbox_px: {x: 198, y: 606, w: 22, h: 22}, treatment: crop_only}
+  - {id: vassal_scene_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 26,  y: 608,  w: 158, h: 290}, treatment: crop_only, note: "scène d'hommage + légende « Le vassal rend hommage à son suzerain »"}
+  - {id: defensive_box_captioned,  role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 575, y: 607,  w: 422, h: 265}, treatment: crop_only, note: "encadré « Un système défensif complémentaire » avec toponymes raster"}
+  - {id: cross_h3,                 role: ornament, status: APPROVED, bbox_px: {x: 58,  y: 922, w: 22, h: 22}, treatment: crop_only}
+  - {id: battle_scene_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 495, y: 895,  w: 495, h: 176}, treatment: crop_only, note: "scène de 1598 + légende « Reprise de la tour par les troupes savoyardes (1598) »"}
+  - {id: map_document,             role: documentary_map, status: APPROVED, bbox_px: {x: 40,  y: 1118, w: 368, h: 182}, treatment: crop_only}
+  - {id: carte_icon,               role: icon, status: APPROVED, bbox_px: {x: 155, y: 1094, w: 22, h: 26}, treatment: crop_only}
+  - {id: pin_icon,                 role: icon, status: APPROVED, bbox_px: {x: 472, y: 1093, w: 20, h: 27}, treatment: crop_only}
+  - {id: phone_icon,               role: icon, status: APPROVED, bbox_px: {x: 752, y: 1093, w: 18, h: 29}, treatment: crop_only}
+  - {id: localization_vignette,    role: documentary_illustration, status: APPROVED, bbox_px: {x: 435, y: 1186, w: 235, h: 106}, treatment: crop_only}
+  - {id: mappe_icon,               role: icon, status: APPROVED, bbox_px: {x: 58,  y: 1311, w: 30, h: 27}, treatment: crop_only}
+  - {id: mh_icon,                  role: icon, status: APPROVED, bbox_px: {x: 314, y: 1360, w: 24, h: 24}, treatment: crop_only}
+  - {id: info_icons,               role: icon, status: APPROVED, bbox_px: {x: 50,  y: 1392, w: 45, h: 130}, treatment: crop_only}
+  - {id: bottom_vignette,          role: documentary_illustration, status: APPROVED, bbox_px: {x: 495, y: 1360, w: 390, h: 150}, treatment: crop_only, mask_px: [[495, 1360, 102, 26], [495, 1392, 100, 22]], note: "résidus raster du titre MONUMENT HISTORIQUE et de la fin de la 1re puce masqués (ciel)"}
+  - {id: mh_seal,                  role: ornament, status: APPROVED, bbox_px: {x: 872, y: 1372, w: 111, h: 117}, treatment: crop_only, note: "sceau « MONUMENT HISTORIQUE » (texte intrinsèque à l'ornement)"}
 
 vectors:
   - {kind: rect, bbox_px: [30, 1080, 962, 220], stroke: "#715240", width: 0.45}
@@ -71,6 +71,7 @@ qr:
   - {id: google_maps, svg: assets/qr-svg/page-07-google-maps.svg, placement: reference_canvas}
 
 discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés"}
   raster_text_absent_from_canon:
     - {fragment: running_head_raster, description: "bandeau courant « Les Seigneurs de La Chambre et leur patrimoine en Maurienne »"}
     - {fragment: heraldry_captioned, description: "légende des armoiries (voir blasonnement officiel p.2)"}
@@ -88,10 +89,14 @@ validation:
   qr_exact_decode: true
   fragment_sha256: true
   min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
-  accept_fragment_statuses: [APPROVED, INSPECTED]
+  accept_fragment_statuses: [APPROVED]
   edge_ink_epsilon: 0.02
   fragment_edge_ink: warn
   text_ink_collision: fail
   text_ink_collision_min_px: 40
   text_overflow: warn
   fragment_lock: warn
+  # Dérogation explicite de résolution (décision du propriétaire du projet, 2026-09-09) :
+  # les rasters canoniques (181–186 ppi à la taille A5) sont acceptés pour la sortie A5 ;
+  # les gates 300/1200 restent la cible et restent bloquants pour A2/A1.
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}

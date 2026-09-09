@@ -2,7 +2,9 @@
 
 ## Statut
 
-**SITE_FAMILY_COMPOSED — PASS_WITH_RESOLUTION_BLOCKER — revue humaine des crops en attente.**
+**SITE_FAMILY_COMPOSED — VALIDÉ le 2026-09-09 (gkerma) — PASS_WITH_RESOLUTION_WAIVER (A5).**
+
+Validation humaine enregistrée dans `PHASE_B_SITE_FAMILY_VALIDATION.md` : crops approuvés, écarts texte arbitrés, dérogation de résolution A5.
 
 Date : 2026-09-09. Branche de travail : dérivée de `release/v3.0-phase-b` (`b362e98`).
 

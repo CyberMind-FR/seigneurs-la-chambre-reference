@@ -468,7 +468,7 @@ layered_compositions:
     fragment_lock: prototypes/page-03/fragments.lock.yaml
     source_refs: [canonical_pages, canonical_page_specs, qr_registry]
     rights_status: PROJECT_INTERNAL
-    status: PROTOTYPE_PORTED_TO_GENERIC_COMPOSER
+    status: APPROVED
     fragment_count: 12
     canonical_text_blocks: 25
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
@@ -480,15 +480,15 @@ layered_compositions:
       effective_ppi_a5: 185.78
       resolution_gate_300_continuous_tone: fail
       resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
-      human_review: done
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      human_review: done (gkerma, 2026-09-09)
   page_05:
     composition: prototypes/page-05/composition.yaml
     inventory: prototypes/page-05/page-05.objects.yaml
     fragment_lock: prototypes/page-05/fragments.lock.yaml
     source_refs: [canonical_pages, canonical_page_specs, qr_registry]
     rights_status: PROJECT_INTERNAL
-    status: INSPECTED_PENDING_HUMAN_REVIEW
+    status: APPROVED
     fragment_count: 13
     canonical_text_blocks: 20
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
@@ -500,15 +500,15 @@ layered_compositions:
       effective_ppi_a5: 185.78
       resolution_gate_300_continuous_tone: fail
       resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
-      human_review: pending
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      human_review: done (gkerma, 2026-09-09)
   page_06:
     composition: prototypes/page-06/composition.yaml
     inventory: prototypes/page-06/page-06.objects.yaml
     fragment_lock: prototypes/page-06/fragments.lock.yaml
     source_refs: [canonical_pages, canonical_page_specs, qr_registry]
     rights_status: PROJECT_INTERNAL
-    status: INSPECTED_PENDING_HUMAN_REVIEW
+    status: APPROVED
     fragment_count: 19
     canonical_text_blocks: 17
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
@@ -520,15 +520,15 @@ layered_compositions:
       effective_ppi_a5: 185.78
       resolution_gate_300_continuous_tone: fail
       resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
-      human_review: pending
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      human_review: done (gkerma, 2026-09-09)
   page_07:
     composition: prototypes/page-07/composition.yaml
     inventory: prototypes/page-07/page-07.objects.yaml
     fragment_lock: prototypes/page-07/fragments.lock.yaml
     source_refs: [canonical_pages, canonical_page_specs, qr_registry]
     rights_status: PROJECT_INTERNAL
-    status: INSPECTED_PENDING_HUMAN_REVIEW
+    status: APPROVED
     fragment_count: 22
     canonical_text_blocks: 21
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
@@ -540,15 +540,15 @@ layered_compositions:
       effective_ppi_a5: 185.78
       resolution_gate_300_continuous_tone: fail
       resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
-      human_review: pending
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      human_review: done (gkerma, 2026-09-09)
   page_08:
     composition: prototypes/page-08/composition.yaml
     inventory: prototypes/page-08/page-08.objects.yaml
     fragment_lock: prototypes/page-08/fragments.lock.yaml
     source_refs: [canonical_pages, canonical_page_specs, qr_registry]
     rights_status: PROJECT_INTERNAL
-    status: INSPECTED_PENDING_HUMAN_REVIEW
+    status: APPROVED
     fragment_count: 17
     canonical_text_blocks: 20
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
@@ -560,15 +560,15 @@ layered_compositions:
       effective_ppi_a5: 185.78
       resolution_gate_300_continuous_tone: fail
       resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
-      human_review: pending
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      human_review: done (gkerma, 2026-09-09)
   page_09:
     composition: prototypes/page-09/composition.yaml
     inventory: prototypes/page-09/page-09.objects.yaml
     fragment_lock: prototypes/page-09/fragments.lock.yaml
     source_refs: [canonical_pages, canonical_page_specs, qr_registry]
     rights_status: PROJECT_INTERNAL
-    status: INSPECTED_PENDING_HUMAN_REVIEW
+    status: APPROVED
     fragment_count: 15
     canonical_text_blocks: 15
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
@@ -580,15 +580,15 @@ layered_compositions:
       effective_ppi_a5: 185.78
       resolution_gate_300_continuous_tone: fail
       resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
-      human_review: pending
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      human_review: done (gkerma, 2026-09-09)
   page_11:
     composition: prototypes/page-11/composition.yaml
     inventory: prototypes/page-11/page-11.objects.yaml
     fragment_lock: prototypes/page-11/fragments.lock.yaml
     source_refs: [canonical_pages, canonical_page_specs, qr_registry]
     rights_status: PROJECT_INTERNAL
-    status: INSPECTED_PENDING_HUMAN_REVIEW
+    status: APPROVED
     fragment_count: 14
     canonical_text_blocks: 15
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
@@ -600,15 +600,15 @@ layered_compositions:
       effective_ppi_a5: 181.06
       resolution_gate_300_continuous_tone: fail
       resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
-      human_review: pending
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      human_review: done (gkerma, 2026-09-09)
   page_12:
     composition: prototypes/page-12/composition.yaml
     inventory: prototypes/page-12/page-12.objects.yaml
     fragment_lock: prototypes/page-12/fragments.lock.yaml
     source_refs: [canonical_pages, canonical_page_specs, qr_registry]
     rights_status: PROJECT_INTERNAL
-    status: INSPECTED_PENDING_HUMAN_REVIEW
+    status: APPROVED
     fragment_count: 18
     canonical_text_blocks: 21
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
@@ -620,5 +620,5 @@ layered_compositions:
       effective_ppi_a5: 181.06
       resolution_gate_300_continuous_tone: fail
       resolution_gate_1200_line_art: fail
-      methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
-      human_review: pending
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER  # A5 waiver approved 2026-09-09; 300/1200 gates remain the target
+      human_review: done (gkerma, 2026-09-09)

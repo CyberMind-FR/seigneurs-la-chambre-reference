@@ -3,7 +3,7 @@ schema_version: 1
 page: 6
 title: La Tour de Burgin
 family: site
-status: INSPECTED_PENDING_HUMAN_REVIEW
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-06.jpg, sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031}
 canonical_text: {path: pages/06.yaml, key: canonical_text, expected_blocks: 17}
 qr_registry: qr_registry.yaml
@@ -14,25 +14,25 @@ text_styles:
   title: {size: 22.0, leading: 22.5}
 
 fragments:
-  - {id: heraldry_captioned,       role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 40,  y: 30,   w: 135, h: 252}, treatment: crop_only}
-  - {id: sky_patch_top_right,      role: documentary_illustration,                status: INSPECTED, bbox_px: {x: 852, y: 36,   w: 148, h: 104}, treatment: crop_only, note: "ciel de la vue principale qui remonte à droite du titre"}
-  - {id: hero_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 481, y: 140, w: 520, h: 650}, treatment: crop_only, mask_px: [[481, 140, 313, 27], [481, 712, 45, 50]], note: "tour + paysage + callouts « Manoir de Châtel-André », « Emplacement de la Tour de Burgin » ; résidus raster du sous-titre (ciel) et des fins de lignes du paragraphe 3 (herbe) masqués"}
-  - {id: title_ornament,           role: ornament,                                status: INSPECTED, bbox_px: {x: 276, y: 190,  w: 433, h: 30},  treatment: crop_only}
-  - {id: cross_h1,                 role: ornament,                                status: INSPECTED, bbox_px: {x: 40,  y: 302,  w: 24,  h: 26},  treatment: crop_only}
-  - {id: cross_h2,                 role: ornament,                                status: INSPECTED, bbox_px: {x: 40,  y: 676,  w: 24,  h: 26},  treatment: crop_only}
-  - {id: cross_h3,                 role: ornament,                                status: INSPECTED, bbox_px: {x: 40,  y: 900,  w: 24,  h: 26},  treatment: crop_only}
-  - {id: du_pont_blason_captioned, role: heraldry_with_canonical_raster_caption,  status: INSPECTED, bbox_px: {x: 526, y: 678,  w: 146, h: 224}, treatment: crop_only, note: "armoiries DU PONT + cartouche raster"}
-  - {id: berthollet_portrait_captioned, role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 501, y: 910, w: 181, h: 212}, treatment: crop_only}
-  - {id: vestiges_box_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: INSPECTED, bbox_px: {x: 700, y: 795, w: 290, h: 318}, treatment: crop_only, note: "encadré « Vestiges aujourd'hui » + citation Chapier (raster, absents du canon)"}
-  - {id: map_document,             role: documentary_map,                         status: INSPECTED, bbox_px: {x: 40,  y: 1145, w: 359, h: 193}, treatment: crop_only, mask_px: [[218, 1145, 64, 20]], note: "carte + rose des vents + icône ; ancien titre CARTE masqué"}
-  - {id: localization_vignette,    role: documentary_illustration,                status: INSPECTED, bbox_px: {x: 427, y: 1228, w: 259, h: 114}, treatment: crop_only}
-  - {id: pin_icon,                 role: icon, status: INSPECTED, bbox_px: {x: 473, y: 1148, w: 19, h: 26}, treatment: crop_only}
-  - {id: phone_icon,               role: icon, status: INSPECTED, bbox_px: {x: 754, y: 1148, w: 14, h: 24}, treatment: crop_only}
-  - {id: mappe_icon,               role: icon, status: INSPECTED, bbox_px: {x: 64,  y: 1356, w: 28, h: 28}, treatment: crop_only}
-  - {id: monk_bottom_left,         role: documentary_illustration, status: INSPECTED, bbox_px: {x: 40,  y: 1385, w: 140, h: 150}, treatment: crop_only}
-  - {id: fleuron_left,             role: ornament, status: INSPECTED, bbox_px: {x: 180, y: 1430, w: 53,  h: 40},  treatment: crop_only}
-  - {id: fleuron_right,            role: ornament, status: INSPECTED, bbox_px: {x: 790, y: 1430, w: 80,  h: 40},  treatment: crop_only}
-  - {id: ruins_bottom_right,       role: documentary_illustration, status: INSPECTED, bbox_px: {x: 840, y: 1385, w: 160, h: 150}, treatment: crop_only}
+  - {id: heraldry_captioned,       role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 40,  y: 30,   w: 135, h: 252}, treatment: crop_only}
+  - {id: sky_patch_top_right,      role: documentary_illustration,                status: APPROVED, bbox_px: {x: 852, y: 36,   w: 148, h: 104}, treatment: crop_only, note: "ciel de la vue principale qui remonte à droite du titre"}
+  - {id: hero_captioned,           role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 481, y: 140, w: 520, h: 650}, treatment: crop_only, mask_px: [[481, 140, 313, 27], [481, 712, 45, 50]], note: "tour + paysage + callouts « Manoir de Châtel-André », « Emplacement de la Tour de Burgin » ; résidus raster du sous-titre (ciel) et des fins de lignes du paragraphe 3 (herbe) masqués"}
+  - {id: title_ornament,           role: ornament,                                status: APPROVED, bbox_px: {x: 276, y: 190,  w: 433, h: 30},  treatment: crop_only}
+  - {id: cross_h1,                 role: ornament,                                status: APPROVED, bbox_px: {x: 40,  y: 302,  w: 24,  h: 26},  treatment: crop_only}
+  - {id: cross_h2,                 role: ornament,                                status: APPROVED, bbox_px: {x: 40,  y: 676,  w: 24,  h: 26},  treatment: crop_only}
+  - {id: cross_h3,                 role: ornament,                                status: APPROVED, bbox_px: {x: 40,  y: 900,  w: 24,  h: 26},  treatment: crop_only}
+  - {id: du_pont_blason_captioned, role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 526, y: 678,  w: 146, h: 224}, treatment: crop_only, note: "armoiries DU PONT + cartouche raster"}
+  - {id: berthollet_portrait_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 501, y: 910, w: 181, h: 212}, treatment: crop_only}
+  - {id: vestiges_box_captioned,   role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 700, y: 795, w: 290, h: 318}, treatment: crop_only, note: "encadré « Vestiges aujourd'hui » + citation Chapier (raster, absents du canon)"}
+  - {id: map_document,             role: documentary_map,                         status: APPROVED, bbox_px: {x: 40,  y: 1145, w: 359, h: 193}, treatment: crop_only, mask_px: [[218, 1145, 64, 20]], note: "carte + rose des vents + icône ; ancien titre CARTE masqué"}
+  - {id: localization_vignette,    role: documentary_illustration,                status: APPROVED, bbox_px: {x: 427, y: 1228, w: 259, h: 114}, treatment: crop_only}
+  - {id: pin_icon,                 role: icon, status: APPROVED, bbox_px: {x: 473, y: 1148, w: 19, h: 26}, treatment: crop_only}
+  - {id: phone_icon,               role: icon, status: APPROVED, bbox_px: {x: 754, y: 1148, w: 14, h: 24}, treatment: crop_only}
+  - {id: mappe_icon,               role: icon, status: APPROVED, bbox_px: {x: 64,  y: 1356, w: 28, h: 28}, treatment: crop_only}
+  - {id: monk_bottom_left,         role: documentary_illustration, status: APPROVED, bbox_px: {x: 40,  y: 1385, w: 140, h: 150}, treatment: crop_only}
+  - {id: fleuron_left,             role: ornament, status: APPROVED, bbox_px: {x: 180, y: 1430, w: 53,  h: 40},  treatment: crop_only}
+  - {id: fleuron_right,            role: ornament, status: APPROVED, bbox_px: {x: 790, y: 1430, w: 80,  h: 40},  treatment: crop_only}
+  - {id: ruins_bottom_right,       role: documentary_illustration, status: APPROVED, bbox_px: {x: 840, y: 1385, w: 160, h: 150}, treatment: crop_only}
 
 vectors:
   - {kind: rect, bbox_px: [30, 1132, 962, 208], stroke: "#715240", width: 0.45}
@@ -63,6 +63,7 @@ qr:
   - {id: google_maps, svg: assets/qr-svg/page-06-google-maps.svg, placement: reference_canvas}
 
 discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon (pages/NN.yaml) prévaut ; les textes raster absents du canon restent dans leurs fragments, non retypés"}
   raster_text_absent_from_canon:
     - {fragment: heraldry_captioned, description: "légende des armoiries (voir blasonnement officiel p.2)"}
     - {fragment: hero_captioned, description: "callouts « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin »"}
@@ -82,10 +83,14 @@ validation:
   qr_exact_decode: true
   fragment_sha256: true
   min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
-  accept_fragment_statuses: [APPROVED, INSPECTED]
+  accept_fragment_statuses: [APPROVED]
   edge_ink_epsilon: 0.02
   fragment_edge_ink: warn
   text_ink_collision: fail
   text_ink_collision_min_px: 40
   text_overflow: warn
   fragment_lock: warn
+  # Dérogation explicite de résolution (décision du propriétaire du projet, 2026-09-09) :
+  # les rasters canoniques (181–186 ppi à la taille A5) sont acceptés pour la sortie A5 ;
+  # les gates 300/1200 restent la cible et restent bloquants pour A2/A1.
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
