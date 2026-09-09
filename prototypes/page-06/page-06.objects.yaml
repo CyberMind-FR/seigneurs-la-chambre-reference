@@ -5,13 +5,13 @@ title: La Tour de Burgin
 status: INSPECTED_PENDING_HUMAN_REVIEW
 generated_from:
   composition: prototypes/page-06/composition.yaml
-  composition_run: a17f8e76cc02598585ad12d419808bb59935550565efebf3e9723fba44f56a7d
+  composition_run: null
 canonical_reference:
   path: assets/page-06.jpg
   sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031
   dimensions_px:
-  - 1024
-  - 1536
+  - null
+  - null
 principle:
   hierarchy: page -> regions -> objects -> subobjects -> layers
   asset_spec_role: macro_layout_reference_only
@@ -25,14 +25,14 @@ regions:
   bbox_px:
   - 0
   - 0
-  - 1024
+  - 0
   - 298
 - id: R02
   role: narrative
   bbox_px:
   - 0
   - 298
-  - 1024
+  - 0
   - 834
 - id: R03
   role: structural_frame_band
@@ -60,17 +60,16 @@ objects:
   - 30
   - 135
   - 252
-  parent_region: R01
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 037e178e776637d874a1fec79beb4520c5c8c4682b72b61b8f13af2a5933de0e
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-sky_patch_top_right
   visual_description: ciel de la vue principale qui remonte à droite du titre
@@ -80,19 +79,16 @@ objects:
   - 36
   - 148
   - 104
-  parent_region: R01
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 758a4ccce7d18fc063e156d3e163ab6b05d8f87e98c38ed959d1ea737e3de72c
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-hero_captioned
   visual_description: tour + paysage + callouts « Manoir de Châtel-André », « Emplacement de la Tour de Burgin » ; résidus
@@ -103,36 +99,16 @@ objects:
   - 140
   - 520
   - 650
-  parent_region: R02
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px:
-  - x: 481
-    y: 140
-    w: 313
-    h: 27
-    fill_rgb:
-    - 255
-    - 253
-    - 246
-  - x: 481
-    y: 712
-    w: 45
-    h: 50
-    fill_rgb:
-    - 255
-    - 253
-    - 246
+  masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: d504c5619ddf48d019675f831dbe159a727cc05ee54c6df173b581655e5dd542
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-title_ornament
   visual_description: title ornament
@@ -142,20 +118,16 @@ objects:
   - 190
   - 433
   - 30
-  parent_region: R01
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 7b09115f7220b5934ea44e62ecf8b861b354bea939942fccc0e5cedbbacea89d
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-cross_h1
   visual_description: cross h1
@@ -165,17 +137,16 @@ objects:
   - 302
   - 24
   - 26
-  parent_region: R02
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 1a32002f19e59153c60f2bd677ec8cedbb009a0d1ee87df32578c5282e6e57eb
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-cross_h2
   visual_description: cross h2
@@ -185,18 +156,16 @@ objects:
   - 676
   - 24
   - 26
-  parent_region: R02
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 6b88dd7633380c2632242e3c8cedd5e4abffb2ee5885ddae5d8ef1b287b6bf04
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - left
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-cross_h3
   visual_description: cross h3
@@ -206,18 +175,16 @@ objects:
   - 900
   - 24
   - 26
-  parent_region: R02
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 48e29ac0bc18728b5f6850585d39534f61c7adfae0725e27b5207415cb3da6ea
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - left
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-du_pont_blason_captioned
   visual_description: armoiries DU PONT + cartouche raster
@@ -227,18 +194,16 @@ objects:
   - 678
   - 146
   - 224
-  parent_region: R02
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: ffad1f0e39b315995089712a4d50450f92bcb2f26e668aa44b5ea5ac445263e7
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-berthollet_portrait_captioned
   visual_description: berthollet portrait captioned
@@ -248,17 +213,16 @@ objects:
   - 910
   - 181
   - 212
-  parent_region: R02
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 3613d2e7489f54ccba6412b0c9dea983faa3b951080eb74f93703b48032861c0
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-vestiges_box_captioned
   visual_description: encadré « Vestiges aujourd'hui » + citation Chapier (raster, absents du canon)
@@ -268,15 +232,15 @@ objects:
   - 795
   - 290
   - 318
-  parent_region: R02
+  parent_region: R05
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 30e98af69158821c5c0bad3e01c5fd4497b9e0a9dc3e5ac416c6426fbea83004
-  effective_ppi_a5: 185.78
+  sha256: null
+  effective_ppi_a5: null
   dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-map_document
@@ -291,23 +255,12 @@ objects:
   layer_target: raster_fragment
   text_relationship: intrinsic_document_text
   extraction_action: crop_only
-  masks_px:
-  - x: 218
-    y: 1145
-    w: 64
-    h: 20
-    fill_rgb:
-    - 255
-    - 253
-    - 246
+  masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 3fde6dcf95b20079013b829ca2d72be24760bc1ef5bdffcf47285f3cd7a35109
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-localization_vignette
   visual_description: localization vignette
@@ -324,8 +277,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 5701824f9b3872687087b9e75a550bfbd3a82ea989a947d509d03859c8b50e6c
-  effective_ppi_a5: 185.78
+  sha256: null
+  effective_ppi_a5: null
   dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-pin_icon
@@ -343,11 +296,9 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 6c257a19a63d90bc6681bb54ee2ccdd62281c47400029d5256d729e3f3aeefb6
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-phone_icon
   visual_description: phone icon
@@ -364,11 +315,9 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 8f2f1108656ba1f3bd1011446e2bd0d2f5d95540f9e6803e185482d7ca1a2c31
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-mappe_icon
   visual_description: mappe icon
@@ -385,8 +334,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 2cd27bf860c1d169043d939091ff6baff56daa5fca18331dc8934a69c6947019
-  effective_ppi_a5: 185.78
+  sha256: null
+  effective_ppi_a5: null
   dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-monk_bottom_left
@@ -404,12 +353,9 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: d062a35d2ed1c78c5005d6de328d0f98d9af824caa020087b9c511066e123ace
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
-  - right
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-fleuron_left
   visual_description: fleuron left
@@ -426,13 +372,9 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: e564881d680b9632648050c4b4f49599d12d5cd82a8989de2c8c4770f3cf4d7b
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-fleuron_right
   visual_description: fleuron right
@@ -449,13 +391,9 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: dafaf4b2479074cc2271b6bdfaf71d074cfeb4598d5a5559da940fe6ef089be8
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P06-O-ruins_bottom_right
   visual_description: ruins bottom right
@@ -472,13 +410,9 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: 38e2c673d94315fea377b931df450e6a04615163c042d5a4b6394d9d1b9a8fac
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 text_zones:
 - id: P06-T-title
@@ -490,7 +424,7 @@ text_zones:
   - 40
   - 660
   - 76
-  parent_region: R01
+  parent_region: R05
   layer_target: text_layer
   compose_as: live_text
   style: title
@@ -504,7 +438,7 @@ text_zones:
   - 128
   - 580
   - 40
-  parent_region: R01
+  parent_region: R05
   layer_target: text_layer
   compose_as: live_text
   style: subtitle
@@ -518,7 +452,7 @@ text_zones:
   - 298
   - 410
   - 30
-  parent_region: R02
+  parent_region: R05
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -532,7 +466,7 @@ text_zones:
   - 336
   - 438
   - 122
-  parent_region: R02
+  parent_region: R05
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -546,7 +480,7 @@ text_zones:
   - 467
   - 438
   - 162
-  parent_region: R02
+  parent_region: R05
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -560,7 +494,7 @@ text_zones:
   - 672
   - 420
   - 30
-  parent_region: R02
+  parent_region: R05
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -574,7 +508,7 @@ text_zones:
   - 710
   - 434
   - 152
-  parent_region: R02
+  parent_region: R05
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -588,7 +522,7 @@ text_zones:
   - 897
   - 420
   - 30
-  parent_region: R02
+  parent_region: R05
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -602,7 +536,7 @@ text_zones:
   - 935
   - 448
   - 150
-  parent_region: R02
+  parent_region: R05
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -719,20 +653,7 @@ text_zones:
   compose_as: live_text
   style: quote
   authority: pages/06.yaml:canonical_text
-functional_objects:
-- id: P06-F-google_maps
-  object_class: qr
-  source_bbox_px:
-  - 772
-  - 1180
-  - 137
-  - 137
-  parent_region: R03
-  layer_target: functional_overlay
-  extraction_action: do_not_extract_use_deterministic_svg
-  asset: assets/qr-svg/page-06-google-maps.svg
-  payload_authority: qr_registry.yaml
-  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+functional_objects: []
 structural_frames:
 - id: P06-FR01
   kind: rect
@@ -793,9 +714,9 @@ discrepancies:
   - titre en petites capitales dans le raster ; composé en Times-Bold (fonte non encore verrouillée, ASSET_SPEC §7)
 completeness_gate:
   status: INSPECTED_PENDING_HUMAN_REVIEW
-  native_raster_dimensions_recorded: true
-  all_objects_have_sha256: true
+  native_raster_dimensions_recorded: false
+  all_objects_have_sha256: false
   all_editorial_text_composed_live: true
-  qr_accounted_for: true
+  qr_accounted_for: false
   second_visual_sweep_by_human: pending
-  last_methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+  last_methodology_gate: null

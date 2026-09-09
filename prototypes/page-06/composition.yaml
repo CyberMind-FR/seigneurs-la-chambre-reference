@@ -81,7 +81,7 @@ validation:
   all_blocks_assigned: true
   qr_exact_decode: true
   fragment_sha256: true
-  min_effective_ppi: {A5: 300, A2: 180, A1: 150}
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
   accept_fragment_statuses: [APPROVED, INSPECTED]
   edge_ink_epsilon: 0.02
   fragment_edge_ink: warn

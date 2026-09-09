@@ -31,9 +31,11 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Print gates (ppi) at contain-fit on each page size, from REGENERATION_RULES / build-config.
+# Print gates (ppi) at the final placement size, identical for every output format
+# (decision of 2026-09-09): 300 ppi for continuous-tone rasters (illustrations, maps, photos),
+# 1200 ppi for line-art rasters (icons, ornaments, crosses, bitonal marks). QR and text are vector.
 PAGE_SIZES_MM = {"A5": (148.0, 210.0), "A2": (420.0, 594.0), "A1": (594.0, 841.0)}
-PPI_GATES = {"A5": 300.0, "A2": 180.0, "A1": 150.0}
+PPI_GATES = {"continuous_tone": 300.0, "line_art": 1200.0}
 
 
 def sha256(path):
@@ -52,8 +54,10 @@ def effective_ppi(width_px, height_px):
         ppi = 25.4 / scale_mm_per_px
         out[name] = {
             "effective_ppi": round(ppi, 2),
-            "gate_ppi": PPI_GATES[name],
-            "pass": ppi >= PPI_GATES[name],
+            "gate_continuous_tone_ppi": PPI_GATES["continuous_tone"],
+            "pass_continuous_tone": ppi >= PPI_GATES["continuous_tone"],
+            "gate_line_art_ppi": PPI_GATES["line_art"],
+            "pass_line_art": ppi >= PPI_GATES["line_art"],
             "placed_size_mm": [round(width_px * scale_mm_per_px, 2), round(height_px * scale_mm_per_px, 2)],
         }
     return out
@@ -239,7 +243,8 @@ def measure_page(page, out_root=None):
         "graphic_candidates": len(graphic),
         "text_candidates": len(text),
         "a5_effective_ppi": report["resolution"]["A5"]["effective_ppi"],
-        "a5_gate": report["resolution"]["A5"]["pass"],
+        "a5_gate_300": report["resolution"]["A5"]["pass_continuous_tone"],
+        "a5_gate_1200_line_art": report["resolution"]["A5"]["pass_line_art"],
         "qr_count": len(qr_entries),
         "status": report["status"],
     }, ensure_ascii=False))

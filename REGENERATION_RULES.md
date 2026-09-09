@@ -45,6 +45,17 @@ Contrôles bloquants : couche texte exacte, QR décodé, SHA source et fragments
 QR, **collision d'encre entre texte vivant et fragment**. Contrôles signalés : bord de crop
 traversant de l'encre, débordement de bloc, gate de résolution.
 
+### Gates de résolution (décision du 2026-09-09)
+Mesurés à la **taille de placement finale**, identiques pour tous les formats de sortie (A5, A2, A1) :
+- **300 ppi** pour les rasters en demi-teintes (illustrations, cartes, photos, lavis) ;
+- **1200 ppi** pour les rasters au trait (icônes, ornements, croix, marques bitonales).
+Le texte et les QR sont vectoriels (couche texte réelle, SVG déterministes) et ne relèvent pas de ces
+gates. Chaque fragment déclare (ou hérite de son rôle) `raster_kind: continuous_tone | line_art`.
+Ces gates remplacent les seuils 300 A5 / 180 A2 / 150 A1 de `assets/ASSET_SPEC.md` §2 (document
+validé en Phase A : sa modification exige une nouvelle validation humaine, il n'est donc pas réécrit ici).
+Un raster sous le gate n'est jamais « récupéré » par upscale : source HD, réduction de placement,
+validation explicite d'un seuil inférieur, ou vectorisation sans dérive.
+
 ## Politique de trame de fond
 Le fond de page devient un actif indépendant et reproductible.
 Il doit respecter `style.yaml` et le langage SpiritualCept : papier blanc/ivoire très clair, grain discret, contraste d'impression élevé, aucune information documentaire encodée dans la texture.

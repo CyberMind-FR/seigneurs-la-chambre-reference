@@ -50,6 +50,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE_SIZES = {"A5": A5, "A4": A4, "A2": A2, "A1": A1}
 ALIGN = {"left": TA_LEFT, "center": TA_CENTER, "right": TA_RIGHT, "justify": TA_JUSTIFY}
 INK_THRESHOLD = 45.0
+# Resolution gates at final placement size, every output format (decision 2026-09-09).
+DEFAULT_PPI_GATES = {"continuous_tone": 300.0, "line_art": 1200.0}
+LINE_ART_ROLES = {"icon", "ornament"}
 
 
 # ----------------------------------------------------------------------------- helpers
@@ -248,8 +251,11 @@ class Composer:
             dest = bbox_tuple(f["dest_bbox_px"]) if f.get("dest_bbox_px") else (x, y, w, h)
             dx, dy, dw, dh = self.geom.box(*dest)
             ppi = self.geom.ppi_for(w, dw)
+            kind = f.get("raster_kind") or ("line_art" if f.get("role") in LINE_ART_ROLES else "continuous_tone")
+            if kind not in DEFAULT_PPI_GATES:
+                raise SystemExit(f"fragment {f['id']}: unknown raster_kind {kind!r}")
             rec = {
-                "id": f["id"], "role": f.get("role"), "status": f.get("status"),
+                "id": f["id"], "role": f.get("role"), "status": f.get("status"), "raster_kind": kind,
                 "path": str(path.relative_to(ROOT)), "sha256": sha256(path),
                 "treatment": treatment,
                 "requested_bbox_px": dict(zip("xywh", bbox_tuple(f["bbox_px"]))),
@@ -531,7 +537,8 @@ class Composer:
         page = doc[0]
         text = normalize_ws(page.get_text("text"))
         missing = [b for b in self.blocks if normalize_ws(b) not in text]
-        pix = page.get_pixmap(matrix=fitz.Matrix(4, 4), alpha=False)
+        # Control render at 300 dpi (print gate for continuous tone).
+        pix = page.get_pixmap(matrix=fitz.Matrix(300 / 72, 300 / 72), alpha=False)
         render = self.out / f"page-{self.page:02d}-layered-proof-render.png"
         pix.save(render)
         qr_results = []
@@ -540,9 +547,19 @@ class Composer:
             qr_results.append({"id": q["id"], "expected": q["payload"], "decoded": decoded, "pass": decoded == q["payload"]})
         collisions = self.text_collisions()
         qr_overlaps = self.text_qr_overlaps()
-        gates = val.get("min_effective_ppi", {"A5": 300})
-        gate = float(gates.get(self.page_size_name, 300))
+        gates = dict(DEFAULT_PPI_GATES)
+        for k, v in (val.get("min_effective_ppi") or {}).items():
+            if k in gates:
+                gates[k] = float(v)
         ppi_min = min([f["effective_ppi"] for f in self.fragments], default=self.report["source_effective_ppi"])
+        by_kind = {}
+        for kind, gate_ppi in gates.items():
+            kind_ppi = [f["effective_ppi"] for f in self.fragments if f["raster_kind"] == kind]
+            by_kind[kind] = {"gate_ppi": gate_ppi, "fragment_count": len(kind_ppi),
+                             "effective_ppi_min": round(min(kind_ppi), 2) if kind_ppi else None,
+                             "pass": (min(kind_ppi) >= gate_ppi) if kind_ppi else True,
+                             "failing_fragments": [f["id"] for f in self.fragments if f["raster_kind"] == kind and f["effective_ppi"] < gate_ppi]}
+        resolution_pass = all(k["pass"] for k in by_kind.values())
         frag_sha_pass = all((ROOT / f["path"]).exists() and sha256(ROOT / f["path"]) == f["sha256"] for f in self.fragments)
         lock = self.lock_check()
         fails = [i for i in self.issues if i[0] == "fail"]
@@ -551,7 +568,7 @@ class Composer:
         review = "PENDING_HUMAN_REVIEW" if any(f["status"] != "APPROVED" for f in self.fragments) else "REVIEWED"
         if not (text_pass and qr_pass and frag_sha_pass) or fails:
             gate_status = "FAIL"
-        elif ppi_min < gate:
+        elif not resolution_pass:
             gate_status = "PASS_WITH_RESOLUTION_BLOCKER"
         else:
             gate_status = "PASS"
@@ -564,7 +581,8 @@ class Composer:
             "fragment_count": len(self.fragments), "fragment_sha_pass": frag_sha_pass,
             "fragments_skipped": self.skipped_fragments,
             "fragment_effective_ppi_min": round(ppi_min, 2),
-            "resolution_gate": {"page_size": self.page_size_name, "gate_ppi": gate, "pass": ppi_min >= gate},
+            "resolution_gate": {"page_size": self.page_size_name, "rule": "final placement size, every output format",
+                                "by_raster_kind": by_kind, "pass": resolution_pass},
             "text_ink_collisions": collisions,
             "text_qr_overlaps": qr_overlaps,
             "dirty_fragment_edges": [{"id": f["id"], "edges": f["dirty_edges"], "grown_px": f["grown_px"]} for f in self.fragments if f["dirty_edges"]],

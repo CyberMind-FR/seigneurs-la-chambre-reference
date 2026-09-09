@@ -57,7 +57,7 @@ Résultats :
 Rapport : `docs/migration-text-layer/PHASE_B_PAGE03_LAYERED_PROTOTYPE.md`.
 
 ### Gate de résolution découvert
-La page 03 canonique mesure seulement `1024 × 1536 px`. À l’échelle A5 du prototype, les fragments représentent environ **185,78 ppi**, sous le gate A5 de 300 ppi.
+La page 03 canonique mesure seulement `1024 × 1536 px`. À l’échelle A5 du prototype, les fragments représentent environ **185,78 ppi**, sous le gate de 300 ppi (demi-teintes) — et très loin du gate de 1200 ppi pour les rasters au trait. Depuis le 2026-09-09 ces deux gates s'appliquent à la taille de placement finale de **tous** les formats (A5, A2, A1), sans seuil réduit pour les grands formats.
 
 Ce problème est un gate de qualité des actifs, pas un échec de la méthode de composition. Ne jamais le masquer par un upscale présenté comme récupération de détail.
 
@@ -77,7 +77,9 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
   restent comme témoins historiques.
 - Pages 03, 05, 06, 07, 08, 09, 11, 12 : proofs multicouches produits, couche texte exacte,
   QR décodés, SHA des fragments verrouillés (`fragments.lock.yaml`), 0 collision texte/croquis,
-  gate `PASS_WITH_RESOLUTION_BLOCKER` (181–186 ppi A5). Crops `INSPECTED`, revue humaine attendue.
+  gate `PASS_WITH_RESOLUTION_BLOCKER` (181–186 ppi à la taille A5 contre 300 ppi demi-teintes /
+  1200 ppi trait, gates identiques pour tous les formats depuis le 2026-09-09). Crops `INSPECTED`,
+  revue humaine attendue.
 - Contrôles ajoutés après revue du 2026-09-09 : collision d'encre texte/fragment (rendus
   monocouche), bord de crop traversant un trait, texte dans une zone QR, masque local couleur
   papier des résidus de texte raster (traitement déclaré et journalisé par fragment).

@@ -5,13 +5,13 @@ title: Le Château Joli
 status: INSPECTED_PENDING_HUMAN_REVIEW
 generated_from:
   composition: prototypes/page-05/composition.yaml
-  composition_run: 2b428028c6d3951adbdffea3789c4ae4357328e51da99a8632fb3fad59768ee9
+  composition_run: null
 canonical_reference:
   path: assets/page-05.jpg
   sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
   dimensions_px:
-  - 1024
-  - 1536
+  - null
+  - null
 principle:
   hierarchy: page -> regions -> objects -> subobjects -> layers
   asset_spec_role: macro_layout_reference_only
@@ -25,14 +25,14 @@ regions:
   bbox_px:
   - 0
   - 0
-  - 1024
+  - 0
   - 250
 - id: R02
   role: narrative
   bbox_px:
   - 0
   - 250
-  - 1024
+  - 0
   - 782
 - id: R03
   role: structural_frame_band
@@ -67,17 +67,16 @@ objects:
   - 32
   - 632
   - 36
-  parent_region: R01
+  parent_region: R06
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: d5ed95a090181c80a93e65a6137a3c570ad837bf8e377b7db88c3601f652eed5
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-heraldry_captioned
   visual_description: armoiries + légende « Armes des La Chambre (voir blasonnement officiel p.2) »
@@ -87,19 +86,16 @@ objects:
   - 60
   - 158
   - 266
-  parent_region: R01
+  parent_region: R06
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: b710dd7abe42456802d7064926d1fdbee7e31fbff89c0c522dfcbc3d608df20e
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-title_ornament
   visual_description: title ornament
@@ -109,18 +105,16 @@ objects:
   - 194
   - 432
   - 34
-  parent_region: R01
+  parent_region: R06
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 5f59b03476f2127c8738d96ec90af54553ee17b2d4084c3f25c9ce4e72aa7dbb
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-hero_captioned
   visual_description: vue Château Joli / Cruet + callouts « Face à face… », « Le Château Joli domine… » ; résidus raster du
@@ -131,34 +125,16 @@ objects:
   - 72
   - 421
   - 474
-  parent_region: R02
+  parent_region: R06
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px:
-  - x: 578
-    y: 72
-    w: 145
-    h: 78
-    fill_rgb:
-    - 255
-    - 253
-    - 248
-  - x: 578
-    y: 150
-    w: 252
-    h: 38
-    fill_rgb:
-    - 255
-    - 253
-    - 248
+  masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: e79b10ac8160d4a0720a7134367edeb62cd5bb766b8e854d932eb6edd05bf14d
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - left
-  - right
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-poype_captioned
   visual_description: poype annotée (Tour maîtresse, Motte primitive, Fossé naturel, Enceinte médiévale, cartouche POYPE FÉODALE)
@@ -168,17 +144,16 @@ objects:
   - 704
   - 427
   - 318
-  parent_region: R02
+  parent_region: R06
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: a25c8d0ea6a082aed7e3c70bb14e109088821cfffc5213fc0a70d4cb71c7c8a9
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - right
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-princess_captioned
   visual_description: Agnès de Savoie-Achaïe + légende raster
@@ -188,18 +163,16 @@ objects:
   - 727
   - 518
   - 300
-  parent_region: R02
+  parent_region: R06
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 3d294a4592e9864b56612e981d85407c9f7c41c06934f359e58becffb62abe1b
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - left
-  - right
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-map_document
   visual_description: carte + rose des vents + icône ; ancien titre raster CARTE masqué, titre vivant recomposé
@@ -213,23 +186,12 @@ objects:
   layer_target: raster_fragment
   text_relationship: intrinsic_document_text
   extraction_action: crop_only
-  masks_px:
-  - x: 189
-    y: 1043
-    w: 62
-    h: 18
-    fill_rgb:
-    - 255
-    - 253
-    - 248
+  masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: a074c192fed769974f2cdf5e0d419e73f1e4bcf27e04027472802b199fb666d6
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-localization_vignette
   visual_description: localization vignette
@@ -246,13 +208,9 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 4da4c48cafbf722432899302dc061ac56d3c34af1528742ff06ce7545bf9238c
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-pin_icon
   visual_description: pin icon
@@ -269,8 +227,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 1a45ebef77a8db61dd4a4713be472e0e95642893db50bb01dc6572716898688c
-  effective_ppi_a5: 185.78
+  sha256: null
+  effective_ppi_a5: null
   dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-phone_icon
@@ -288,8 +246,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 322fdac7bcce5d1cca48852de3f34c9a5e1c2f692aaa4ace1c54e52ce097a4f5
-  effective_ppi_a5: 185.78
+  sha256: null
+  effective_ppi_a5: null
   dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-mappe_icon
@@ -307,13 +265,9 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 08af0aa98249c493bec0d7bb9b9f4639ec5197e63164937d12ff8e7cce675bae
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-info_icons
   visual_description: info icons
@@ -330,11 +284,9 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: c55f1b62f6d1aad3206f48e0473d3c64900605154cac80f9935a412a93f787a4
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 - id: P05-O-ruins_vignette
   visual_description: résidu raster de la fin de la 1re puce (« du Mont ») masqué (ciel)
@@ -348,24 +300,12 @@ objects:
   layer_target: raster_fragment
   text_relationship: none
   extraction_action: crop_only
-  masks_px:
-  - x: 575
-    y: 1345
-    w: 95
-    h: 22
-    fill_rgb:
-    - 255
-    - 253
-    - 248
+  masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 6e8fe56714720b5158f87c6dba5dc3878dae3c1124961c4d9b34d80d5c3139bf
-  effective_ppi_a5: 185.78
-  dirty_edges:
-  - bottom
-  - left
-  - right
-  - top
+  sha256: null
+  effective_ppi_a5: null
+  dirty_edges: []
   review_status: INSPECTED
 text_zones:
 - id: P05-T-title
@@ -377,7 +317,7 @@ text_zones:
   - 74
   - 640
   - 76
-  parent_region: R01
+  parent_region: R06
   layer_target: text_layer
   compose_as: live_text
   style: title
@@ -391,7 +331,7 @@ text_zones:
   - 154
   - 660
   - 40
-  parent_region: R01
+  parent_region: R06
   layer_target: text_layer
   compose_as: live_text
   style: subtitle
@@ -405,7 +345,7 @@ text_zones:
   - 250
   - 386
   - 28
-  parent_region: R02
+  parent_region: R06
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -419,7 +359,7 @@ text_zones:
   - 282
   - 386
   - 126
-  parent_region: R02
+  parent_region: R06
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -433,7 +373,7 @@ text_zones:
   - 417
   - 386
   - 104
-  parent_region: R02
+  parent_region: R06
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -447,7 +387,7 @@ text_zones:
   - 556
   - 400
   - 26
-  parent_region: R02
+  parent_region: R06
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -461,7 +401,7 @@ text_zones:
   - 586
   - 400
   - 108
-  parent_region: R02
+  parent_region: R06
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -475,7 +415,7 @@ text_zones:
   - 568
   - 440
   - 26
-  parent_region: R02
+  parent_region: R06
   layer_target: text_layer
   compose_as: live_text
   style: heading
@@ -489,7 +429,7 @@ text_zones:
   - 604
   - 446
   - 104
-  parent_region: R02
+  parent_region: R06
   layer_target: text_layer
   compose_as: live_text
   style: body
@@ -648,20 +588,7 @@ text_zones:
   compose_as: live_text
   style: tiny
   authority: pages/05.yaml:canonical_text
-functional_objects:
-- id: P05-F-google_maps
-  object_class: qr
-  source_bbox_px:
-  - 785
-  - 1079
-  - 126
-  - 126
-  parent_region: R03
-  layer_target: functional_overlay
-  extraction_action: do_not_extract_use_deterministic_svg
-  asset: assets/qr-svg/page-05-google-maps.svg
-  payload_authority: qr_registry.yaml
-  review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
+functional_objects: []
 structural_frames:
 - id: P05-FR01
   kind: rect
@@ -725,9 +652,9 @@ discrepancies:
   canonical_text_not_visible_in_raster: []
 completeness_gate:
   status: INSPECTED_PENDING_HUMAN_REVIEW
-  native_raster_dimensions_recorded: true
-  all_objects_have_sha256: true
+  native_raster_dimensions_recorded: false
+  all_objects_have_sha256: false
   all_editorial_text_composed_live: true
-  qr_accounted_for: true
+  qr_accounted_for: false
   second_visual_sweep_by_human: pending
-  last_methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+  last_methodology_gate: null

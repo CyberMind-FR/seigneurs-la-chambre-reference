@@ -69,20 +69,28 @@ effet sur la lisibilité ; les cas de résidus de texte raster ont été traité
 
 ## 4. Blocage de résolution (gate séparé, non masqué)
 
-| Page | Raster canonique | ppi A5 (gate 300) | ppi A2 (gate 180) | ppi A1 (gate 150) |
-|---|---|---:|---:|---:|
-| 03 | 1024 × 1536 | 185.78 | 65.68 | 46.39 |
-| 05 | 1024 × 1536 | 185.78 | 65.68 | 46.39 |
-| 06 | 1024 × 1536 | 185.78 | 65.68 | 46.39 |
-| 07 | 1024 × 1536 | 185.78 | 65.68 | 46.39 |
-| 08 | 1024 × 1536 | 185.78 | 65.68 | 46.39 |
-| 09 | 1024 × 1536 | 185.78 | 65.68 | 46.39 |
-| 11 | 1055 × 1491 | 181.06 | 63.8 | 45.11 |
-| 12 | 1055 × 1491 | 181.06 | 63.8 | 45.11 |
+Gates (décision du 2026-09-09, à la taille de placement finale, **tous formats**) : **300 ppi** pour
+les rasters en demi-teintes, **1200 ppi** pour les rasters au trait (icônes, ornements, croix).
+Texte et QR sont vectoriels et hors gate. Chaque fragment porte `raster_kind` (hérité du rôle).
 
-Toute la famille est sous le gate A5 et très loin des gates A2/A1 : le blocage identifié sur la page 03
-est **générique**. Aucun upscale n'a été appliqué. Voies légitimes inchangées : sources HD, réduction de
-la taille de placement, validation explicite d'un seuil inférieur, vectorisation sans dérive.
+| Page | Raster canonique | ppi effectif A5 | ppi A2 | ppi A1 | fragments demi-teintes (gate 300) | fragments trait (gate 1200) — ppi min |
+|---|---|---:|---:|---:|---:|---|
+| 03 | 1024 × 1536 | 185.78 | 65.68 | 46.39 | 12 | 0 (—) |
+| 05 | 1024 × 1536 | 185.78 | 65.68 | 46.39 | 8 | 5 (185.78) |
+| 06 | 1024 × 1536 | 185.78 | 65.68 | 46.39 | 10 | 9 (185.78) |
+| 07 | 1024 × 1536 | 185.78 | 65.68 | 46.39 | 10 | 12 (185.78) |
+| 08 | 1024 × 1536 | 185.78 | 65.68 | 46.39 | 9 | 8 (185.78) |
+| 09 | 1024 × 1536 | 185.78 | 65.68 | 46.39 | 8 | 7 (185.78) |
+| 11 | 1055 × 1491 | 181.06 | 63.8 | 45.11 | 9 | 5 (181.06) |
+| 12 | 1055 × 1491 | 181.06 | 63.8 | 45.11 | 10 | 8 (181.06) |
+
+Toute la famille est sous le gate 300 en A5 et très loin des gates pour A2/A1 et pour le trait : le
+blocage identifié sur la page 03 est **générique**. Aucun upscale n'a été appliqué. Voies légitimes
+inchangées : sources HD (raster 300 / 1200 ppi à la taille finale), réduction de la taille de
+placement, validation explicite d'un seuil inférieur, vectorisation sans dérive (candidats évidents :
+icônes, croix, filets, ornements — déjà `line_art`). Les seuils 300 A5 / 180 A2 / 150 A1 de
+`assets/ASSET_SPEC.md` §2 sont remplacés par cette règle ; ce document validé en Phase A devra être
+revalidé avec les nouveaux gates.
 
 ## 5. Écarts texte visible ↔ canon (signalés, jamais corrigés silencieusement)
 

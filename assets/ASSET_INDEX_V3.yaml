@@ -460,6 +460,7 @@ lot_2_progress:
 # Each page is rebuilt from prototypes/page-NN/composition.yaml by scripts/layered_compose.py;
 # raster fragments are cut from the canonical page (source_refs: canonical_pages) and locked by
 # SHA-256 in prototypes/page-NN/fragments.lock.yaml. Proof PDFs live in dist/ and are never committed.
+# Resolution gates (2026-09-09): 300 ppi continuous tone / 1200 ppi line art at final size, every format.
 layered_compositions:
   page_03:
     composition: prototypes/page-03/composition.yaml
@@ -477,7 +478,8 @@ layered_compositions:
       fragment_sha256: pass
       text_ink_collision: pass
       effective_ppi_a5: 185.78
-      resolution_gate_a5_300: fail
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
       human_review: done
   page_05:
@@ -496,7 +498,8 @@ layered_compositions:
       fragment_sha256: pass
       text_ink_collision: pass
       effective_ppi_a5: 185.78
-      resolution_gate_a5_300: fail
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
       human_review: pending
   page_06:
@@ -515,7 +518,8 @@ layered_compositions:
       fragment_sha256: pass
       text_ink_collision: pass
       effective_ppi_a5: 185.78
-      resolution_gate_a5_300: fail
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
       human_review: pending
   page_07:
@@ -534,7 +538,8 @@ layered_compositions:
       fragment_sha256: pass
       text_ink_collision: pass
       effective_ppi_a5: 185.78
-      resolution_gate_a5_300: fail
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
       human_review: pending
   page_08:
@@ -553,7 +558,8 @@ layered_compositions:
       fragment_sha256: pass
       text_ink_collision: pass
       effective_ppi_a5: 185.78
-      resolution_gate_a5_300: fail
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
       human_review: pending
   page_09:
@@ -572,7 +578,8 @@ layered_compositions:
       fragment_sha256: pass
       text_ink_collision: pass
       effective_ppi_a5: 185.78
-      resolution_gate_a5_300: fail
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
       human_review: pending
   page_11:
@@ -591,7 +598,8 @@ layered_compositions:
       fragment_sha256: pass
       text_ink_collision: pass
       effective_ppi_a5: 181.06
-      resolution_gate_a5_300: fail
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
       human_review: pending
   page_12:
@@ -610,6 +618,7 @@ layered_compositions:
       fragment_sha256: pass
       text_ink_collision: pass
       effective_ppi_a5: 181.06
-      resolution_gate_a5_300: fail
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
       human_review: pending
