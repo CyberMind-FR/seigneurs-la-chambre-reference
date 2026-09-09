@@ -69,32 +69,55 @@ jobs:
             git tag -a "${RELEASE_TAG}" "${GITHUB_SHA}" -m "Release ${RELEASE_TAG}"
             git push origin "refs/tags/${RELEASE_TAG}"
           fi
-      - name: Upload PDF build artifact
+      - name: Upload v3 print PDFs (livret multicouche — livrable)
         uses: actions/upload-artifact@v4
         with:
-          name: seigneurs-la-chambre-print-pdfs-${{ github.run_number }}
+          name: seigneurs-la-chambre-v3-print-pdfs-${{ github.run_number }}
           path: |
-            dist/*.pdf
-            dist/*.zip
-            dist/SHA256SUMS.txt
+            dist/Seigneurs_La_Chambre_v3_*.pdf
+            dist/Seigneurs_La_Chambre_v3_Print_PDFs.zip
             dist/SHA256SUMS-v3.txt
-            dist/build-report.json
             dist/build-report-v3.json
           if-no-files-found: error
           retention-days: 30
-      - name: Publish GitHub Release
+      - name: Upload v2 legacy raster PDFs (contrôle de régression, non publiés)
+        uses: actions/upload-artifact@v4
+        with:
+          name: seigneurs-la-chambre-v2-legacy-raster-${{ github.run_number }}
+          path: |
+            dist/Seigneurs_La_Chambre_*_100pct_Colorise.pdf
+            dist/Seigneurs_La_Chambre_Print_PDFs.zip
+            dist/SHA256SUMS.txt
+            dist/build-report.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Publish GitHub Release (v3 layered booklet only)
         if: steps.release.outputs.publish == 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.release.outputs.tag }}
           target_commitish: ${{ github.sha }}
           generate_release_notes: true
-          name: Les Seigneurs de La Chambre ${{ steps.release.outputs.tag }}
+          name: Les Seigneurs de La Chambre ${{ steps.release.outputs.tag }} — livret v3 multicouche
+          body: |
+            ## Livrables v3 (composition multicouche : couche texte réelle, QR déterministes, fragments verrouillés)
+
+            | Fichier | Contenu |
+            |---|---|
+            | `Seigneurs_La_Chambre_v3_16_pages_A5.pdf` | 16 pages A5 séquentielles |
+            | `Seigneurs_La_Chambre_v3_Livret_A4_Impose_RectoVerso.pdf` | 8 feuilles A4 imposées recto-verso |
+            | `Seigneurs_La_Chambre_v3_Panneaux_A2_16p.pdf` | 16 panneaux A2 |
+            | `Seigneurs_La_Chambre_v3_Panneaux_A1_16p.pdf` | 16 panneaux A1 |
+            | `Seigneurs_La_Chambre_v3_Print_PDFs.zip` | les quatre PDF + rapport |
+            | `SHA256SUMS-v3.txt`, `build-report-v3.json` | sommes de contrôle, méthode et gates par page |
+
+            Page 04 en repli raster (verrou éditorial) ; fragments raster en agrandissement provisoire déclaré
+            jusqu'aux sources HD. Les anciens PDF raster v2 (`*_100pct_Colorise.pdf`) ne sont plus publiés :
+            ils restent disponibles comme artefact de workflow « v2-legacy-raster » à titre de contrôle.
+
           files: |
-            dist/*.pdf
-            dist/*.zip
-            dist/SHA256SUMS.txt
+            dist/Seigneurs_La_Chambre_v3_*.pdf
+            dist/Seigneurs_La_Chambre_v3_Print_PDFs.zip
             dist/SHA256SUMS-v3.txt
-            dist/build-report.json
             dist/build-report-v3.json
           fail_on_unmatched_files: true

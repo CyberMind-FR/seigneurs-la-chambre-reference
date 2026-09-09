@@ -93,6 +93,18 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
 - `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
   committées).
 
+## État au 2026-09-09 : release v3.0.0 publiée — correctif de publication (v3.0.1)
+
+- `v3.0.0` publiée par `workflow_dispatch` (`release_tag`) sur `main` `8db3a9c` : le push direct
+  d'un tag est refusé depuis l'environnement de travail (HTTP 403), la voie `workflow_dispatch`
+  du workflow est la voie normale.
+- Défaut constaté : la release mélangeait les PDF v3 (`Seigneurs_La_Chambre_v3_*.pdf`) et les
+  anciens PDF raster v2 (`*_100pct_Colorise.pdf`), classés en premier. Correctif dans
+  `build-release.yml` : la release ne publie plus que les livrables v3 avec un descriptif ; les
+  PDF v2 restent un artefact de workflow « v2-legacy-raster » (contrôle de régression) ;
+  `build-config.yaml:v3.version` = `3.0.1`. À publier : `workflow_dispatch` sur `main` avec
+  `release_tag=v3.0.1` ; la release `v3.0.0` peut être supprimée ou conservée (décision propriétaire).
+
 ## État au 2026-09-09 : 35 légendes raster inscrites au canon — version 3.0.0
 
 Enregistrement : `docs/migration-text-layer/CANON_AMENDMENT_CAPTIONS_2026_09_09.md`,
