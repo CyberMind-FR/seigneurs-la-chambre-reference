@@ -1,0 +1,89 @@
+schema_version: 1
+page: 3
+source: assets/page-03.jpg
+source_sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
+fragments:
+  portal_gothique_captioned:
+    sha256: 2720e09fa778cef46f5ca95377588c37612e65d5a8c3d463391659df6a00b98f
+    bbox_px:
+      x: 27
+      y: 10
+      w: 180
+      h: 246
+  cloister_baroque_captioned:
+    sha256: efd46de0eed0fd72d527557c79e1f6457a7458ce0f28d2b0aeb45dc458a94093
+    bbox_px:
+      x: 30
+      y: 260
+      w: 180
+      h: 262
+  salle_capitulaire_captioned:
+    sha256: 132029a0992361453741b7f2c3fa6c9774a3e4ff3314d1ad3aa2bc32d219527e
+    bbox_px:
+      x: 30
+      y: 528
+      w: 181
+      h: 264
+  franciscan_monk:
+    sha256: 6b946de6343a4c1bce90e6751fd40bf49229c10a35ce95b5f754ccd27f4116c0
+    bbox_px:
+      x: 846
+      y: 86
+      w: 134
+      h: 226
+  franciscan_caption_raster:
+    sha256: 2797adc07f0434844c765f37f701ca8796e906ae74290d5af8a50dca58919cfe
+    bbox_px:
+      x: 779
+      y: 160
+      w: 92
+      h: 54
+  valley_cruet_captioned:
+    sha256: d44f8e07c05945b672e5ddf07568fee0587fa686986f383304f6e22bdda5d5c5
+    bbox_px:
+      x: 744
+      y: 265
+      w: 252
+      h: 264
+  nave_captioned:
+    sha256: a8f0962f3939616bd9e2317921df7bbe051fd7130e14d79fe7ecab2aa4a895f6
+    bbox_px:
+      x: 787
+      y: 536
+      w: 204
+      h: 286
+  portal_detail:
+    sha256: 02eb3bc2461cc76eb4dd2895ba46d55bdfbc234318e04d18f8ffc7fbfb6649cf
+    bbox_px:
+      x: 638
+      y: 836
+      w: 114
+      h: 194
+  lintel_accolade_captioned:
+    sha256: e210dfe506d7b89f6dae1eb2e54c05aafd7efa71bed19fa89a50b666493f990a
+    bbox_px:
+      x: 787
+      y: 821
+      w: 205
+      h: 221
+  map_document:
+    sha256: f62fc0f95073bc0bb6efd77e8142afa0c9494a0c6e94b2b8b402c9b9731a5309
+    bbox_px:
+      x: 39
+      y: 1092
+      w: 360
+      h: 197
+  localization_illustration:
+    sha256: 80676da65f8aeab04ec9e6f0c8533c05137598b02abe2a048bb09ccf8c42fc4e
+    bbox_px:
+      x: 421
+      y: 1180
+      w: 240
+      h: 109
+  site_visit_illustration:
+    sha256: 9626b5ee87c6a62cbc4c83a9d8c7f011f0ef1cd2aaf009ee48f0f05dbbfaa485
+    bbox_px:
+      x: 460
+      y: 1354
+      w: 428
+      h: 158

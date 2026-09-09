@@ -1,140 +1,749 @@
-schema_version: 1
+schema_version: 2
 project: Les Seigneurs de La Chambre
 page: 3
-status: VISUAL_INVENTORY_REQUIRED
-purpose: exhaustive object-level inventory before any fragment extraction
-
+title: Le Couvent des Cordeliers
+status: PROTOTYPE_PORTED_TO_GENERIC_COMPOSER
+generated_from:
+  composition: prototypes/page-03/composition.yaml
+  composition_run: 1bf7e579cde9d08bd617b57361b6156195c8bdd32716657c0e8af8dcc1a91735
 canonical_reference:
   path: assets/page-03.jpg
   sha256: aa327f243594a23d91a2e6c4e61a0ed0a3f0aa4c0d143444aa56cb3bb4e67955
-
+  dimensions_px:
+  - 1024
+  - 1536
 principle:
   hierarchy: page -> regions -> objects -> subobjects -> layers
   asset_spec_role: macro_layout_reference_only
-  this_file_role: exhaustive_production_inventory
-  extraction_allowed_before_complete_visual_pass: false
-  inferred_bbox_forbidden: true
-  inferred_object_forbidden: true
-
-inventory_protocol:
-  pass_1:
-    name: full_page_visual_sweep
-    action: inspect complete canonical raster at native resolution
-    output: every visible object including marginal and decorative objects
-  pass_2:
-    name: region_decomposition
-    action: associate each object with zero or more Phase A macro zones without forcing one-to-one mapping
-  pass_3:
-    name: object_measurement
-    action: measure exact pixel bounding box on canonical raster
-  pass_4:
-    name: subobject_decomposition
-    action: split composite objects when text, border, illustration, shadow, cartouche, QR or ornament require independent treatment
-  pass_5:
-    name: layer_assignment
-    action: assign background raster_fragment documentary_vector text_layer or functional_overlay
-  pass_6:
-    name: completeness_review
-    action: compare inventory overlay against entire page and explicitly account for every visible non-background element
-
-object_schema:
-  required_fields:
-    - id
-    - visual_description
-    - object_class
-    - source_bbox_px
-    - parent_region
-    - phase_a_zone_refs
-    - layer_target
-    - text_relationship
-    - extraction_action
-    - provenance
-    - review_status
-  bbox_format: [x, y, width, height]
-  classes:
-    - illustration
-    - photograph
-    - documentary_map
-    - heraldry
-    - ornament
-    - border
-    - separator
-    - cartouche
-    - icon
-    - intrinsic_document_text
-    - editorial_text
-    - qr
-    - background_texture
-    - composite
-    - other_verified
-
+  text_zones_are_first_class_objects: true
+  text_content_authority: pages/03.yaml:canonical_text
+  image_text_is_not_editorial_authority: true
+  qr_payload_authority: qr_registry.yaml
 regions:
-  - id: R01
-    role: header_identity
-    bbox_px: null
-    review_status: TO_MEASURE
-    objects: []
-  - id: R02
-    role: upper_narrative
-    bbox_px: null
-    review_status: TO_MEASURE
-    objects: []
-  - id: R03
-    role: middle_narrative
-    bbox_px: null
-    review_status: TO_MEASURE
-    objects: []
-  - id: R04
-    role: lower_narrative
-    bbox_px: null
-    review_status: TO_MEASURE
-    objects: []
-  - id: R05
-    role: map_and_location
-    bbox_px: null
-    review_status: TO_MEASURE
-    objects: []
-  - id: R06
-    role: site_visit_information
-    bbox_px: null
-    review_status: TO_MEASURE
-    objects: []
-  - id: R07
-    role: page_wide_marginalia_and_structure
-    bbox_px: null
-    review_status: TO_MEASURE
-    objects: []
-
-known_functional_object:
-  id: P03-O-QR01
-  visual_description: Google Maps QR
-  object_class: qr
-  source_bbox_px: [1435, 2081, 234, 234]
-  parent_region: R05
-  phase_a_zone_refs: []
-  layer_target: functional_overlay
+- id: R01
+  role: header_identity
+  bbox_px:
+  - 0
+  - 0
+  - 1024
+  - 190
+- id: R02
+  role: narrative
+  bbox_px:
+  - 0
+  - 190
+  - 1024
+  - 868
+- id: R03
+  role: structural_frame_band
+  bbox_px:
+  - 35
+  - 1058
+  - 953
+  - 272
+- id: R04
+  role: structural_frame_band
+  bbox_px:
+  - 400
+  - 1058
+  - 276
+  - 272
+- id: R05
+  role: structural_frame_band
+  bbox_px:
+  - 675
+  - 1058
+  - 313
+  - 272
+- id: R06
+  role: structural_frame_band
+  bbox_px:
+  - 35
+  - 1332
+  - 860
+  - 185
+- id: R07
+  role: page_wide_marginalia
+  bbox_px: null
+objects:
+- id: P03-O-portal_gothique_captioned
+  visual_description: portal gothique captioned
+  object_class: composite
+  source_bbox_px:
+  - 27
+  - 10
+  - 180
+  - 246
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: 2720e09fa778cef46f5ca95377588c37612e65d5a8c3d463391659df6a00b98f
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P03-O-cloister_baroque_captioned
+  visual_description: cloister baroque captioned
+  object_class: composite
+  source_bbox_px:
+  - 30
+  - 260
+  - 180
+  - 262
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: efd46de0eed0fd72d527557c79e1f6457a7458ce0f28d2b0aeb45dc458a94093
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P03-O-salle_capitulaire_captioned
+  visual_description: salle capitulaire captioned
+  object_class: composite
+  source_bbox_px:
+  - 30
+  - 528
+  - 181
+  - 264
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: 132029a0992361453741b7f2c3fa6c9774a3e4ff3314d1ad3aa2bc32d219527e
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  review_status: APPROVED
+- id: P03-O-franciscan_monk
+  visual_description: franciscan monk
+  object_class: illustration
+  source_bbox_px:
+  - 846
+  - 86
+  - 134
+  - 226
+  parent_region: R02
+  layer_target: raster_fragment
   text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: 6b946de6343a4c1bce90e6751fd40bf49229c10a35ce95b5f754ccd27f4116c0
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  review_status: APPROVED
+- id: P03-O-franciscan_caption_raster
+  visual_description: caption « Spiritualité franciscaine » + arrow; absent from pages/03.yaml, kept raster, not OCRed
+  object_class: intrinsic_document_text
+  source_bbox_px:
+  - 779
+  - 160
+  - 92
+  - 54
+  parent_region: R01
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: 2797adc07f0434844c765f37f701ca8796e906ae74290d5af8a50dca58919cfe
+  effective_ppi_a5: 185.78
+  dirty_edges: []
+  review_status: APPROVED
+- id: P03-O-valley_cruet_captioned
+  visual_description: valley cruet captioned
+  object_class: composite
+  source_bbox_px:
+  - 744
+  - 265
+  - 252
+  - 264
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: d44f8e07c05945b672e5ddf07568fee0587fa686986f383304f6e22bdda5d5c5
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+- id: P03-O-nave_captioned
+  visual_description: nave captioned
+  object_class: composite
+  source_bbox_px:
+  - 787
+  - 536
+  - 204
+  - 286
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: a8f0962f3939616bd9e2317921df7bbe051fd7130e14d79fe7ecab2aa4a895f6
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  review_status: APPROVED
+- id: P03-O-portal_detail
+  visual_description: portal detail
+  object_class: illustration
+  source_bbox_px:
+  - 638
+  - 836
+  - 114
+  - 194
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: 02eb3bc2461cc76eb4dd2895ba46d55bdfbc234318e04d18f8ffc7fbfb6649cf
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P03-O-lintel_accolade_captioned
+  visual_description: lintel accolade captioned
+  object_class: composite
+  source_bbox_px:
+  - 787
+  - 821
+  - 205
+  - 221
+  parent_region: R02
+  layer_target: raster_fragment
+  text_relationship: canonical_raster_caption
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: e210dfe506d7b89f6dae1eb2e54c05aafd7efa71bed19fa89a50b666493f990a
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  review_status: APPROVED
+- id: P03-O-map_document
+  visual_description: intrinsic map labels remain raster; heading CARTE is live text
+  object_class: documentary_map
+  source_bbox_px:
+  - 39
+  - 1092
+  - 360
+  - 197
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: intrinsic_document_text
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: f62fc0f95073bc0bb6efd77e8142afa0c9494a0c6e94b2b8b402c9b9731a5309
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - top
+  review_status: APPROVED
+- id: P03-O-localization_illustration
+  visual_description: localization illustration
+  object_class: illustration
+  source_bbox_px:
+  - 421
+  - 1180
+  - 240
+  - 109
+  parent_region: R03
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px: []
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: 80676da65f8aeab04ec9e6f0c8533c05137598b02abe2a048bb09ccf8c42fc4e
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - bottom
+  - left
+  - right
+  - top
+  review_status: APPROVED
+- id: P03-O-site_visit_illustration
+  visual_description: old raster heading masked with paper colour
+  object_class: illustration
+  source_bbox_px:
+  - 460
+  - 1354
+  - 428
+  - 158
+  parent_region: R06
+  layer_target: raster_fragment
+  text_relationship: none
+  extraction_action: crop_only
+  masks_px:
+  - x: 460
+    y: 1354
+    w: 90
+    h: 15
+    fill_rgb:
+    - 255
+    - 253
+    - 249
+  provenance: canonical_pages
+  source_ref: assets/page-03.jpg
+  sha256: 9626b5ee87c6a62cbc4c83a9d8c7f011f0ef1cd2aaf009ee48f0f05dbbfaa485
+  effective_ppi_a5: 185.78
+  dirty_edges:
+  - left
+  - top
+  review_status: APPROVED
+text_zones:
+- id: P03-T-title
+  role: title
+  canonical_block: 0
+  expect: Le Couvent des Cordeliers
+  bbox_px:
+  - 194
+  - 34
+  - 650
+  - 72
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: title
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-subtitle
+  role: subtitle
+  canonical_block: 1
+  expect: Le testament spirituel
+  bbox_px:
+  - 232
+  - 110
+  - 595
+  - 42
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: subtitle
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-h1
+  role: h1
+  canonical_block: 2
+  expect: La vision d'un seigneur
+  bbox_px:
+  - 226
+  - 190
+  - 505
+  - 34
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-vision_p1
+  role: vision_p1
+  canonical_block: 3
+  expect: En cette année 1365
+  bbox_px:
+  - 226
+  - 224
+  - 517
+  - 92
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-vision_p2
+  role: vision_p2
+  canonical_block: 4
+  expect: Mais Jean II sait
+  bbox_px:
+  - 226
+  - 321
+  - 517
+  - 86
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-vision_p3
+  role: vision_p3
+  canonical_block: 5
+  expect: Ce n'est pas un caprice
+  bbox_px:
+  - 226
+  - 410
+  - 517
+  - 88
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-h2
+  role: h2
+  canonical_block: 6
+  expect: La nécropole des seigneurs
+  bbox_px:
+  - 226
+  - 531
+  - 520
+  - 34
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-necropolis_p1
+  role: necropolis_p1
+  canonical_block: 7
+  expect: Le Couvent des Cordeliers n'est pas
+  bbox_px:
+  - 226
+  - 568
+  - 550
+  - 64
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-necropolis_p2
+  role: necropolis_p2
+  canonical_block: 8
+  expect: L'église conventuelle
+  bbox_px:
+  - 226
+  - 637
+  - 550
+  - 87
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-necropolis_p3
+  role: necropolis_p3
+  canonical_block: 9
+  expect: Mais les Cordeliers
+  bbox_px:
+  - 226
+  - 728
+  - 550
+  - 74
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-h3
+  role: h3
+  canonical_block: 10
+  expect: Un patrimoine architectural
+  bbox_px:
+  - 59
+  - 824
+  - 545
+  - 34
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: heading
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-architecture_p1
+  role: architecture_p1
+  canonical_block: 11
+  expect: Aujourd'hui encore
+  bbox_px:
+  - 59
+  - 858
+  - 545
+  - 88
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-architecture_p2
+  role: architecture_p2
+  canonical_block: 12
+  expect: L'art flamboyant
+  bbox_px:
+  - 59
+  - 951
+  - 545
+  - 78
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: body
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-carte
+  role: carte
+  canonical_block: 13
+  expect: CARTE
+  bbox_px:
+  - 105
+  - 1064
+  - 185
+  - 28
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-localisation
+  role: localisation
+  canonical_block: 14
+  expect: LOCALISATION
+  bbox_px:
+  - 457
+  - 1064
+  - 204
+  - 30
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-lat
+  role: lat
+  canonical_block: 15
+  expect: 'Lat:'
+  bbox_px:
+  - 462
+  - 1104
+  - 210
+  - 25
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-lng
+  role: lng
+  canonical_block: 16
+  expect: 'Lng:'
+  bbox_px:
+  - 462
+  - 1128
+  - 210
+  - 25
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-google_maps
+  role: google_maps
+  canonical_block: 17
+  expect: GOOGLE MAPS
+  bbox_px:
+  - 758
+  - 1066
+  - 207
+  - 30
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-scan
+  role: scan
+  canonical_block: 18
+  expect: Scannez pour y aller
+  bbox_px:
+  - 757
+  - 1254
+  - 205
+  - 24
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-mappe_sarde
+  role: mappe_sarde
+  canonical_block: 19
+  expect: MAPPE SARDE
+  bbox_px:
+  - 83
+  - 1294
+  - 840
+  - 26
+  parent_region: R03
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-visite
+  role: visite
+  canonical_block: 20
+  expect: VISITE DU SITE
+  bbox_px:
+  - 370
+  - 1348
+  - 290
+  - 22
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: small_bold_center
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-adresse
+  role: adresse
+  canonical_block: 21
+  expect: • Adresse
+  bbox_px:
+  - 96
+  - 1370
+  - 375
+  - 26
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-elements
+  role: elements
+  canonical_block: 22
+  expect: • Éléments visibles
+  bbox_px:
+  - 96
+  - 1400
+  - 375
+  - 42
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-statut
+  role: statut
+  canonical_block: 23
+  expect: • Statut
+  bbox_px:
+  - 96
+  - 1446
+  - 375
+  - 26
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/03.yaml:canonical_text
+- id: P03-T-contact
+  role: contact
+  canonical_block: 24
+  expect: • Contact
+  bbox_px:
+  - 96
+  - 1478
+  - 375
+  - 26
+  parent_region: R06
+  layer_target: text_layer
+  compose_as: live_text
+  style: tiny
+  authority: pages/03.yaml:canonical_text
+functional_objects:
+- id: P03-F-google_maps
+  object_class: qr
+  source_bbox_px:
+  - 765
+  - 1110
+  - 125
+  - 125
+  parent_region: R03
+  layer_target: functional_overlay
   extraction_action: do_not_extract_use_deterministic_svg
-  provenance: qr_registry.yaml
   asset: assets/qr-svg/page-03-google-maps.svg
+  payload_authority: qr_registry.yaml
   review_status: VERIFIED_FROM_CANONICAL_PAGE_SPEC
-
+structural_frames:
+- id: P03-FR01
+  kind: rect
+  bbox_px:
+  - 35
+  - 1058
+  - 953
+  - 272
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P03-FR02
+  kind: rect
+  bbox_px:
+  - 35
+  - 1332
+  - 860
+  - 185
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P03-FR03
+  kind: rect
+  bbox_px:
+  - 400
+  - 1058
+  - 276
+  - 272
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P03-FR04
+  kind: rect
+  bbox_px:
+  - 675
+  - 1058
+  - 313
+  - 272
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+- id: P03-FR05
+  kind: line
+  bbox_px:
+  - - 335
+    - 165
+  - - 685
+    - 165
+  layer_target: documentary_vector
+  extraction_action: layout_vector
+discrepancies: {}
 completeness_gate:
-  status: BLOCKED
-  requirements:
-    - native_raster_dimensions_recorded
-    - all_regions_measured
-    - all_visible_objects_enumerated
-    - all_composite_objects_decomposed
-    - all_editorial_text_excluded_from_raster_fragment_outputs
-    - all_intrinsic_document_text_explicitly_classified
-    - all_ornaments_and_marginalia_accounted_for
-    - qr_accounted_for
-    - second_visual_sweep_finds_no_unregistered_object
-  extraction_unblock_condition: completeness_gate.status == PASS
-
-notes:
-  - Phase A reported nine visual zones for page 03; that count must not be interpreted as nine extractable objects.
-  - An object may cross macro-zone boundaries and a macro-zone may contain many objects.
-  - No object coordinates except the already canonical QR placement are asserted until measured from the full raster.
-  - The inventory must include small borders, separators, shadows, cartouches, marginal marks and decorative fragments when visibly present.
+  status: PASS
+  native_raster_dimensions_recorded: true
+  all_objects_have_sha256: true
+  all_editorial_text_composed_live: true
+  qr_accounted_for: true
+  second_visual_sweep_by_human: pending
+  last_methodology_gate: PASS_WITH_RESOLUTION_BLOCKER

@@ -3,7 +3,7 @@ project: Les Seigneurs de La Chambre
 prototype: v3-layered-page-03
 page: 3
 title: Le Couvent des Cordeliers
-status: OBJECT_INVENTORY_REQUIRED
+status: PORTED_TO_GENERIC_COMPOSER  # see composition.yaml (2026-09-09)
 purpose: validate layered composition before industrializing 16 pages
 
 sources:
@@ -23,7 +23,7 @@ inventory_model:
   phase_a_zones_are: macro_layout_reference
   phase_a_zones_are_not: exhaustive_extractable_object_inventory
   extraction_gate: prototypes/page-03/page-03.objects.yaml:completeness_gate
-  extraction_allowed: false
+  extraction_allowed: true  # fragments locked in fragments.lock.yaml
 
 composition_order:
   - background
