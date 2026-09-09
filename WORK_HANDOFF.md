@@ -93,6 +93,12 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
 - `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
   committées).
 
+## État au 2026-09-09 (nuit) : pages 01 et 02 composées et validées — 15/16 pages
+
+Rapport : `docs/migration-text-layer/PHASE_B_PAGES_01_02.md`. Seule la page 04 reste hors
+production (verrou éditorial). La citation de couverture (blocs 8–9 du canon, absente du raster)
+est composée entre la ligne Commission et la frise : emplacement à arbitrer.
+
 ## État au 2026-09-09 (soir) : pages 10 et 13–16 composées et validées
 
 Rapport : `docs/migration-text-layer/PHASE_B_PAGES_10_13_16.md`. 15 pages sur 16 sont
@@ -210,7 +216,7 @@ Chaque fragment raster produit doit enregistrer : page source, zone/bounding box
 5. ~~reporter automatiquement texte, QR, SHA et ppi~~ — fait ;
 6. ~~arbitrer les écarts texte visible ↔ canon et le gate de résolution~~ — validé le 2026-09-09 (canon prévaut ; dérogation A5) ;
 7. ~~traiter ensuite page 10, puis les structures spécifiques 13–16~~ — fait et validé le 2026-09-09 ;
-8. composer les pages 01 et 02 ; arbitrer la mention illustrations et les armoiries communales ;
+8. ~~composer les pages 01 et 02~~ — fait et validé le 2026-09-09 ; arbitrer la mention illustrations et les armoiries communales ;
 9. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
 
 ## Validation

@@ -1,0 +1,124 @@
+schema_version: 1
+page: 1
+source: assets/page-01.jpg
+source_sha256: 7b3058fe609f08f59d6fead46bb7d5d7e544de568b57187219fc55ee70ecbb8b
+fragments:
+  running_head_raster:
+    sha256: 79525a8a1a38730a42e7ab5ccb45df72a33e8f0731985da5addc00a0de3113eb
+    bbox_px:
+      x: 258
+      y: 54
+      w: 508
+      h: 30
+  church_captioned:
+    sha256: 36edcc243c73bb5c7265204ad10f42ac18c3c94f33031ed31ec44d7c11b3a1a8
+    bbox_px:
+      x: 25
+      y: 98
+      w: 278
+      h: 325
+  shield:
+    sha256: d05f2444d424a0b1c456948b5b48dd60e2e735415577695dd51c1d57d41867cd
+    bbox_px:
+      x: 378
+      y: 175
+      w: 290
+      h: 278
+  mountains_captioned:
+    sha256: 91d33a91f3825633916423d5802c1b4734407acd9fbadf5931360b798ae839ec
+    bbox_px:
+      x: 655
+      y: 92
+      w: 312
+      h: 280
+  sword_ornament:
+    sha256: c0cb6a66c0885f92e6bb06b926622b02152a1fb63bee32a7c477606a23dfaf42
+    bbox_px:
+      x: 887
+      y: 262
+      w: 88
+      h: 256
+  compass_small:
+    sha256: 68b59a5bbddcbc49b0a4dc0ca4aa316999522b02bab3655379df98a6b5fc8167
+    bbox_px:
+      x: 50
+      y: 450
+      w: 60
+      h: 66
+  seal_captioned:
+    sha256: 043767ba4b10cfdedee159a16dff03127a2963fdd32a4c30684cab6208e7c417
+    bbox_px:
+      x: 35
+      y: 620
+      w: 232
+      h: 398
+  title_ornament:
+    sha256: 772f88f0fba41ee151e043050bc2a4f880ed7f4c0cb878f2d0e508eb25893477
+    bbox_px:
+      x: 254
+      y: 688
+      w: 516
+      h: 40
+  ornament_2:
+    sha256: 0888dd7c01b08416d91ec4fc1e56d6ab7b5b34e413f62e9fcf8bb025062658eb
+    bbox_px:
+      x: 291
+      y: 870
+      w: 492
+      h: 36
+  maison_forte_captioned:
+    sha256: f114457f6d61b6a97209f62f8d43528ad234867198a866261b945daee5e8f201
+    bbox_px:
+      x: 745
+      y: 725
+      w: 255
+      h: 340
+  castle_bottom_left:
+    sha256: 60081cd31a0892f2880f8587da43e5cdf78a4d1c9f5372a786caece9dfac5c50
+    bbox_px:
+      x: 25
+      y: 993
+      w: 390
+      h: 282
+  compass_rose:
+    sha256: aac0d66fcb9e712f9c54fcf5f686180bcd2f9977ee5279a5847b4e92c798c0d7
+    bbox_px:
+      x: 835
+      y: 1086
+      w: 150
+      h: 160
+  fidem_servare_raster:
+    sha256: fbaa32d84dc0c1fd38c0c8f24d0e827cc242138c54858bee271743ec7fdd2589
+    bbox_px:
+      x: 679
+      y: 1196
+      w: 140
+      h: 62
+  timeline_and_logo:
+    sha256: 3e4629673b083080364c61fa9cb239d228befc07fc19bbb78e733ad1bc95a346
+    bbox_px:
+      x: 175
+      y: 1240
+      w: 690
+      h: 225
+  compass_instrument:
+    sha256: e0e72d242a98e2e297fb55254276de3286c0523ac1f05d556f12c235a6b4d485
+    bbox_px:
+      x: 15
+      y: 1235
+      w: 190
+      h: 240
+  quill_book:
+    sha256: 1f673b68d52ea8dca90f11b6bf20de2d730686e53ccd520262b71f2d58f83fc7
+    bbox_px:
+      x: 775
+      y: 1235
+      w: 240
+      h: 230
+  footer_raster:
+    sha256: 9de4e9a513b9040cef73ace41ce9b961b044e0f06634b80b328a971611d7e5f4
+    bbox_px:
+      x: 288
+      y: 1476
+      w: 450
+      h: 22

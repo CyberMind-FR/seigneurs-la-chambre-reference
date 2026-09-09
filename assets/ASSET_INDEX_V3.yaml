@@ -724,3 +724,43 @@ layered_compositions:
       methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
       human_review: done (gkerma, 2026-09-09)
     note: raster 768x1024 (131.8 ppi at A5) is below the approved A5 waiver (180 ppi) - resolution blocker reported, no upscale
+  page_01:
+    composition: prototypes/page-01/composition.yaml
+    inventory: prototypes/page-01/page-01.objects.yaml
+    fragment_lock: prototypes/page-01/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 17
+    canonical_text_blocks: 10
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: not_applicable
+      fragment_sha256: pass
+      text_ink_collision: pass
+      effective_ppi_a5: 185.78
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+      human_review: done (gkerma, 2026-09-09)
+  page_02:
+    composition: prototypes/page-02/composition.yaml
+    inventory: prototypes/page-02/page-02.objects.yaml
+    fragment_lock: prototypes/page-02/fragments.lock.yaml
+    source_refs: [canonical_pages, canonical_page_specs]
+    rights_status: PROJECT_INTERNAL
+    status: APPROVED
+    fragment_count: 20
+    canonical_text_blocks: 25
+    text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
+    validation:
+      text_layer: pass
+      qr_exact_decode: not_applicable
+      fragment_sha256: pass
+      text_ink_collision: pass
+      effective_ppi_a5: 185.78
+      resolution_gate_300_continuous_tone: fail
+      resolution_gate_1200_line_art: fail
+      methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+      human_review: done (gkerma, 2026-09-09)

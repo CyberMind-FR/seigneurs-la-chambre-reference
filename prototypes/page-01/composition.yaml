@@ -1,0 +1,77 @@
+# Layered v3 composition — page 01 — couverture (raster 1024x1536)
+schema_version: 1
+page: 1
+title: LES SEIGNEURS DE LA CHAMBRE
+family: cover
+status: APPROVED  # crops et composition validés par gkerma le 2026-09-09 (« Go, pages 01 et 02 »)
+source: {path: assets/page-01.jpg, sha256: 7b3058fe609f08f59d6fead46bb7d5d7e544de568b57187219fc55ee70ecbb8b}
+canonical_text: {path: pages/01.yaml, key: canonical_text, expected_blocks: 10}
+qr_registry: qr_registry.yaml
+canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
+layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+text_styles_from: prototypes/_shared/text-styles.yaml
+text_styles: {}
+
+fragments:
+  - {id: running_head_raster,     role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 258, y: 54, w: 508, h: 30}, treatment: crop_only}
+  - {id: church_captioned,        role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 25, y: 98, w: 278, h: 325}, treatment: crop_only, note: "église + légende « Église Notre-Dame-du-Cruet XIVe siècle »"}
+  - {id: shield,                  role: heraldry, status: APPROVED, bbox_px: {x: 378, y: 175, w: 290, h: 278}, treatment: crop_only, note: "armoiries avec repères de construction (ornement)"}
+  - {id: mountains_captioned,     role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 655, y: 92, w: 312, h: 280}, treatment: crop_only, note: "Maurienne + légende « Maurienne Terre de passage et de seigneuries »"}
+  - {id: sword_ornament,          role: ornament, status: APPROVED, bbox_px: {x: 887, y: 262, w: 88, h: 256}, treatment: crop_only}
+  - {id: compass_small,           role: ornament, status: APPROVED, bbox_px: {x: 50, y: 450, w: 60, h: 66}, treatment: crop_only}
+  - {id: seal_captioned,          role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 35, y: 620, w: 232, h: 398}, treatment: crop_only, mask_px: [[176, 622, 92, 44]], note: "sceau + ruban + légende « Sceau d'un seigneur de La Chambre XIIIe siècle » ; résidu raster du sous-titre masqué"}
+  - {id: title_ornament,          role: ornament, status: APPROVED, bbox_px: {x: 254, y: 688, w: 516, h: 40}, treatment: crop_only}
+  - {id: ornament_2,              role: ornament, status: APPROVED, bbox_px: {x: 291, y: 870, w: 492, h: 36}, treatment: crop_only}
+  - {id: maison_forte_captioned,  role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 745, y: 725, w: 255, h: 340}, treatment: crop_only, note: "maison forte + légende « Maison forte de La Tour »"}
+  - {id: castle_bottom_left,      role: documentary_illustration, status: APPROVED, bbox_px: {x: 25, y: 993, w: 390, h: 282}, treatment: crop_only, mask_px: [[320, 993, 95, 22], [270, 1060, 145, 55]], note: "résidus raster des lignes « Notre-Dame-du-Cruet — Décembre 2025 », « Association… », « Commission… » masqués (ciel)"}
+  - {id: compass_rose,            role: ornament, status: APPROVED, bbox_px: {x: 835, y: 1086, w: 150, h: 160}, treatment: crop_only}
+  - {id: fidem_servare_raster,    role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 679, y: 1196, w: 140, h: 62}, treatment: crop_only, note: "devise « Fidem servare et jus dicere » (raster, absente du canon)"}
+  - {id: timeline_and_logo,       role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 175, y: 1240, w: 690, h: 225}, treatment: crop_only, note: "frise chronologique (XIe–XVe s., libellés raster absents du canon) + logo de l'association (texte intrinsèque)"}
+  - {id: compass_instrument,      role: ornament, status: APPROVED, bbox_px: {x: 15, y: 1235, w: 190, h: 240}, treatment: crop_only}
+  - {id: quill_book,              role: ornament, status: APPROVED, bbox_px: {x: 775, y: 1235, w: 240, h: 230}, treatment: crop_only}
+  - {id: footer_raster,           role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 288, y: 1476, w: 450, h: 22}, treatment: crop_only, note: "pied de page « Les Amis du Couvent des Cordeliers de La Chambre — 1 — »"}
+
+vectors: []
+
+text_blocks:
+  - {key: title,      block: 0, expect: "LES SEIGNEURS DE LA CHAMBRE",     bbox_px: [70, 530, 890, 90],   style: title_caps}
+  - {key: subtitle,   block: 1, expect: "ET LEUR PATRIMOINE",              bbox_px: [150, 622, 730, 56],  style: subtitle_caps_red}
+  - {key: l2,         block: 2, expect: "Quatre siècles",                  bbox_px: [280, 750, 480, 45],  style: cover_italic}
+  - {key: l3,         block: 3, expect: "(XIe - XVe siècles)",             bbox_px: [280, 798, 480, 40],  style: cover_italic}
+  - {key: l4,         block: 4, expect: "Livret de l'exposition",          bbox_px: [300, 935, 430, 40],  style: cover_bold}
+  - {key: l5,         block: 5, expect: "Notre-Dame-du-Cruet — Décembre",  bbox_px: [300, 985, 430, 34],  style: cover_body}
+  - {key: l6,         block: 6, expect: "Association",                     bbox_px: [240, 1058, 540, 26], style: cover_small_italic}
+  - {key: l7,         block: 7, expect: "Commission",                      bbox_px: [240, 1088, 540, 26], style: cover_small_italic}
+  - {key: q1,         block: 8, expect: "« Le passé",                      bbox_px: [420, 1150, 260, 22], style: small_italic}
+  - {key: q2,         block: 9, expect: "il est sous nos pas",             bbox_px: [420, 1174, 260, 22], style: small_italic}
+
+qr: []
+
+discrepancies:
+  arbitration: {status: VALIDATED, by: gkerma, date: '2026-09-09', decision: "le canon prévaut ; les textes raster absents du canon restent dans leurs fragments"}
+  raster_text_absent_from_canon:
+    - {fragment: running_head_raster, description: "bandeau courant"}
+    - {fragment: church_captioned, description: "« Église Notre-Dame-du-Cruet XIVe siècle »"}
+    - {fragment: mountains_captioned, description: "« Maurienne Terre de passage et de seigneuries »"}
+    - {fragment: seal_captioned, description: "« Sceau d'un seigneur de La Chambre XIIIe siècle »"}
+    - {fragment: maison_forte_captioned, description: "« Maison forte de La Tour »"}
+    - {fragment: fidem_servare_raster, description: "devise « Fidem servare et jus dicere »"}
+    - {fragment: timeline_and_logo, description: "frise : XIe s. Origines Vicomtés épiscopales / XIIe-XIIIe s. Âge d'or Mariages et alliances / XIVe s. Fondations Couvent des Cordeliers / XVe s. Crépuscule Passage aux Seyssel ; texte intrinsèque du logo"}
+    - {fragment: footer_raster, description: "pied de page avec folio"}
+  canonical_text_not_visible_in_raster:
+    - "blocs 8–9 « Le passé n'est pas derrière nous, / il est sous nos pas. » : absents de la page canonique ; composés dans l'espace libre entre la ligne Commission et la frise (position à arbitrer)"
+
+validation:
+  canonical_text_exact: true
+  all_blocks_assigned: true
+  qr_exact_decode: true
+  fragment_sha256: true
+  min_effective_ppi: {continuous_tone: 300, line_art: 1200}  # at final placement size, every format
+  accept_fragment_statuses: [APPROVED]
+  edge_ink_epsilon: 0.02
+  fragment_edge_ink: warn
+  text_ink_collision: fail
+  text_ink_collision_min_px: 40
+  text_overflow: warn
+  fragment_lock: warn
+  resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}

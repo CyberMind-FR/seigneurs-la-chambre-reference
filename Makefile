@@ -3,7 +3,7 @@
 PYTHON ?= python3
 DIST ?= dist
 # Pages with a layered v3 composition (prototypes/page-NN/composition.yaml)
-LAYERED_PAGES ?= 3 5 6 7 8 9 10 11 12 13 14 15 16
+LAYERED_PAGES ?= 1 2 3 5 6 7 8 9 10 11 12 13 14 15 16
 
 help:
 	@echo "make sync                - synchronise les SHA des pages dans les manifests/YAML"

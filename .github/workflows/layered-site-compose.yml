@@ -21,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        page: ['03', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16']
+        page: ['01', '02', '03', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
