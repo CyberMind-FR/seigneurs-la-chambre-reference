@@ -34,7 +34,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   hero_captioned:
-    sha256: f34131637fa23e283021ad46cbd407c77d1d9ad6fbe3983e5e2b1a6ca4db090b
+    sha256: 50f5e533baf3748f670ba50044c00e1c410b7e61cfd11fccab16d357947afc17
     bbox_px:
       x: 578
       y: 72
@@ -44,7 +44,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   poype_captioned:
-    sha256: 2267f1017dab815336535e08f2a998b374b2308fcdade821a0c6de3b217e32db
+    sha256: 165745c8165167d5e9e48f21658eab55a13b7cb50de22eb558881438951fbbaf
     bbox_px:
       x: 33
       y: 704
@@ -54,7 +54,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   princess_captioned:
-    sha256: d3a559a9dc9a58577f392dbff04c8538da0c6e6680bb310ce9fc567e852e70bf
+    sha256: eb9c31a739868d81ac32aa4dab30d458c5ad2cc5b79a132dfb464d09368d45c3
     bbox_px:
       x: 480
       y: 727

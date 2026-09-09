@@ -14,7 +14,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   church_captioned:
-    sha256: 4ed30dd9d39302b623d789d6442f16e54c835f08c163a78866c6f8d9da2f54f3
+    sha256: fcaaf9f485f89f40a14856fb72b43e382069ff4a14cd25cf7b433a666eebbdae
     bbox_px:
       x: 25
       y: 98
@@ -34,7 +34,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   mountains_captioned:
-    sha256: c575f08a91804a8f765993fec393027d2393364e16edda9373b697d8bc7b6271
+    sha256: fea5e15fefcc986469adb6ab17597fb62c59af2bfe7a2111d242d05312af36b5
     bbox_px:
       x: 655
       y: 92
@@ -64,7 +64,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   seal_captioned:
-    sha256: 3a8dd600e730907f0a7c22d2af70823282712a83ba439a483e4e29f2ba2605f7
+    sha256: 9639b642806267b4d0fe0c99767f09cb7930437759a207121a853393e48d26cf
     bbox_px:
       x: 35
       y: 620
@@ -94,7 +94,7 @@ fragments:
     upscale_factor: 6.46
     upscale_provisional: true
   maison_forte_captioned:
-    sha256: 27fd1e55d7136b6fae981b7d04348ccdb63f595701f7ff5e0d0fa13a6c81b1b7
+    sha256: 50f1ac7c6cbf7d04dd4f8b45eeb5a1adb6ca2bb4a42009e874372c1495af441a
     bbox_px:
       x: 745
       y: 725

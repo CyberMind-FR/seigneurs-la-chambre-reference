@@ -10,13 +10,13 @@
 - Référence à joindre : `reference/page-01/church_captioned.png` (crop canonique 278×325 px)
 - Ratio L/H : 0.8554 — canevas natif conseillé : portrait 1024×1536 → recadrage centré 1024×1197 px
 - Gate 300.0 ppi (continuous_tone) — couverture au canevas natif : A5 ✔(≥449 px) A4 ✔(≥635 px) A2 ✔(≥898 px) A1 ✘(≥1270 px)
-- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)
+- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner
 
 ```text
 Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.
 Sujet : Façade d'église gothique de montagne avec rosace et portail en arc brisé, vue de trois quarts ; arbres et sommets enneigés à l'arrière-plan.
 Style : Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée : traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée, lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
-À ne pas reproduire : légende « Église Notre-Dame-du-Cruet XIVe siècle »; flèche; toute légende ou annotation présente dans l'image de référence. Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
+À ne pas reproduire : légende « Église Notre-Dame-du-Cruet XIVe siècle »; flèche; toute légende ou annotation présente dans l'image de référence (légende inscrite au canon et composée en couche texte). Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
 Format : portrait (plus haut que large), ratio largeur/hauteur ≈ 0.86. Le sujet doit rester entièrement dans le cadre avec une légère marge de papier crème uni sur les bords (l'image sera recadrée au centre à ce ratio exact, sans agrandissement). Produis la plus grande taille disponible (au minimum 1024×1536 px).
 ```
 
@@ -26,13 +26,13 @@ Format : portrait (plus haut que large), ratio largeur/hauteur ≈ 0.86. Le suje
 - Référence à joindre : `reference/page-01/mountains_captioned.png` (crop canonique 312×280 px)
 - Ratio L/H : 1.1143 — canevas natif conseillé : square 1024×1024 → recadrage centré 1024×918 px
 - Gate 300.0 ppi (continuous_tone) — couverture au canevas natif : A5 ✔(≥504 px) A4 ✔(≥713 px) A2 ✔(≥1008 px) A1 ✘(≥1426 px)
-- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)
+- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner
 
 ```text
 Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.
 Sujet : Massif alpin enneigé dominant des versants boisés de conifères, ciel clair.
 Style : Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée : traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée, lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
-À ne pas reproduire : légende « Maurienne Terre de passage et de seigneuries »; flèche; fleur de lys dorée en bas à droite; toute légende ou annotation présente dans l'image de référence. Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
+À ne pas reproduire : légende « Maurienne Terre de passage et de seigneuries »; flèche; fleur de lys dorée en bas à droite; toute légende ou annotation présente dans l'image de référence (légende inscrite au canon et composée en couche texte). Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
 Format : carré, ratio largeur/hauteur ≈ 1.11. Le sujet doit rester entièrement dans le cadre avec une légère marge de papier crème uni sur les bords (l'image sera recadrée au centre à ce ratio exact, sans agrandissement). Produis la plus grande taille disponible (au minimum 1024×1024 px).
 ```
 
@@ -42,13 +42,13 @@ Format : carré, ratio largeur/hauteur ≈ 1.11. Le sujet doit rester entièreme
 - Référence à joindre : `reference/page-01/seal_captioned.png` (crop canonique 232×398 px)
 - Ratio L/H : 0.5829 — canevas natif conseillé : portrait 1024×1536 → recadrage centré 895×1536 px
 - Gate 300.0 ppi (continuous_tone) — couverture au canevas natif : A5 ✔(≥375 px) A4 ✔(≥530 px) A2 ✔(≥750 px) A1 ✘(≥1060 px)
-- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)
+- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner
 
 ```text
 Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.
 Sujet : Sceau de cire rouge à figure debout (personnage en pied), suspendu à un ruban bleu et rouge, vu de face.
 Style : Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée : traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée, lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
-À ne pas reproduire : légende « Sceau d'un seigneur de La Chambre XIIIe siècle »; flèche; résidu du titre « ET L » en haut; toute légende ou annotation présente dans l'image de référence. Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
+À ne pas reproduire : légende « Sceau d'un seigneur de La Chambre XIIIe siècle »; flèche; résidu du titre « ET L » en haut; toute légende ou annotation présente dans l'image de référence (légende inscrite au canon et composée en couche texte). Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
 Format : portrait (plus haut que large), ratio largeur/hauteur ≈ 0.58. Le sujet doit rester entièrement dans le cadre avec une légère marge de papier crème uni sur les bords (l'image sera recadrée au centre à ce ratio exact, sans agrandissement). Produis la plus grande taille disponible (au minimum 1024×1536 px).
 Contrainte : La légende circulaire du sceau doit rester un simple décor (traits), sans lettres lisibles.
 ```
@@ -59,13 +59,13 @@ Contrainte : La légende circulaire du sceau doit rester un simple décor (trait
 - Référence à joindre : `reference/page-01/maison_forte_captioned.png` (crop canonique 255×340 px)
 - Ratio L/H : 0.7500 — canevas natif conseillé : portrait 1024×1536 → recadrage centré 1024×1365 px
 - Gate 300.0 ppi (continuous_tone) — couverture au canevas natif : A5 ✔(≥412 px) A4 ✔(≥583 px) A2 ✔(≥824 px) A1 ✘(≥1165 px)
-- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)
+- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner
 
 ```text
 Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.
 Sujet : Tour-maison forte en pierre à galerie de bois sous un toit à quatre pans, bâtiment annexe à toit de tuiles, arbres.
 Style : Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée : traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée, lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
-À ne pas reproduire : légende « Maison forte de La Tour »; flèche; toute légende ou annotation présente dans l'image de référence. Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
+À ne pas reproduire : légende « Maison forte de La Tour »; flèche; toute légende ou annotation présente dans l'image de référence (légende inscrite au canon et composée en couche texte). Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
 Format : portrait (plus haut que large), ratio largeur/hauteur ≈ 0.75. Le sujet doit rester entièrement dans le cadre avec une légère marge de papier crème uni sur les bords (l'image sera recadrée au centre à ce ratio exact, sans agrandissement). Produis la plus grande taille disponible (au minimum 1024×1536 px).
 ```
 

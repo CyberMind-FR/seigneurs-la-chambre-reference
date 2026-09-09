@@ -5,7 +5,7 @@ title: La Maison-Forte du Châtelet
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-08.jpg, sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927}
-canonical_text: {path: pages/08.yaml, key: canonical_text, expected_blocks: 20}
+canonical_text: {path: pages/08.yaml, key: canonical_text, expected_blocks: 25}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
@@ -19,11 +19,11 @@ fragments:
   - {id: title_ornament,        role: ornament, status: APPROVED, bbox_px: {x: 300, y: 195, w: 430, h: 30}, treatment: crop_only}
   - {id: magnolia_flower,       role: documentary_illustration, status: APPROVED, bbox_px: {x: 845, y: 120, w: 150, h: 182}, treatment: crop_only, mask_px: [[845, 120, 45, 16]], note: "résidu raster de la fin du titre masqué (fond)"}
   - {id: small_blason_square,   role: heraldry, status: APPROVED, bbox_px: {x: 755, y: 185, w: 90, h: 90}, treatment: crop_only}
-  - {id: hero_captioned,        role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 380, y: 255, w: 615, h: 650}, treatment: crop_only, note: "maison forte + callouts « Magnolia centenaire… », « Maison-Forte du Châtelet, centre du village… »"}
+  - {id: hero_captioned,        role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 380, y: 255, w: 615, h: 650}, treatment: crop_only, mask_px: [{box: [869, 287, 122, 64], fill: paper}, {box: [884, 387, 108, 102], fill: paper}], note: "maison forte + callouts « Magnolia centenaire… », « Maison-Forte du Châtelet, centre du village… »"}
   - {id: cross_h1, role: ornament, status: APPROVED, bbox_px: {x: 46, y: 346, w: 22, h: 22}, treatment: crop_only}
   - {id: cross_h2, role: ornament, status: APPROVED, bbox_px: {x: 46, y: 614, w: 22, h: 22}, treatment: crop_only}
   - {id: cross_h3, role: ornament, status: APPROVED, bbox_px: {x: 46, y: 800, w: 22, h: 22}, treatment: crop_only}
-  - {id: panorama_captioned,    role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 40, y: 955, w: 945, h: 140}, treatment: crop_only, note: "bandeau « Système défensif des seigneurs de La Chambre » (Le Châtelet / Le Cruet)"}
+  - {id: panorama_captioned,    role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 40, y: 955, w: 945, h: 140}, treatment: crop_only, mask_px: [{box: [155, 961, 78, 22], fill: border_median}, {box: [425, 959, 186, 44], fill: border_median}, {box: [837, 961, 60, 22], fill: border_median}], note: "bandeau « Système défensif des seigneurs de La Chambre » (Le Châtelet / Le Cruet)"}
   - {id: map_document,          role: documentary_map, status: APPROVED, bbox_px: {x: 40, y: 1105, w: 356, h: 195}, treatment: crop_only, mask_px: [[189, 1110, 60, 18]], note: "ancien titre CARTE masqué ; icône conservée"}
   - {id: pin_icon,   role: icon, status: APPROVED, bbox_px: {x: 468, y: 1110, w: 18, h: 28}, treatment: crop_only}
   - {id: phone_icon, role: icon, status: APPROVED, bbox_px: {x: 748, y: 1110, w: 16, h: 28}, treatment: crop_only}
@@ -60,6 +60,12 @@ text_blocks:
   - {key: b1,           block: 17, expect: "• Gîtes",                     bbox_px: [100, 1405, 470, 22], style: tiny}
   - {key: b2,           block: 18, expect: "• Le plus vieux",             bbox_px: [100, 1440, 470, 22], style: tiny}
   - {key: b3,           block: 19, expect: "• Située",                    bbox_px: [100, 1474, 470, 22], style: tiny}
+  # Légendes raster inscrites au canon le 2026-09-09 (ordre du propriétaire) — composées en couche texte, raster masqué.
+  - {key: cap_hero_1, block: 20, expect: "Magnolia centenaire dans", bbox_px: [869, 287, 122, 64], style: caption, caption_of: hero_captioned}
+  - {key: cap_hero_2, block: 21, expect: "Maison-Forte du Châtelet,", bbox_px: [884, 387, 108, 102], style: caption_left, caption_of: hero_captioned}
+  - {key: cap_pano_1, block: 22, expect: "Le Châtelet", bbox_px: [155, 961, 78, 22], style: caption, caption_of: panorama_captioned}
+  - {key: cap_pano_2, block: 23, expect: "Système défensif des", bbox_px: [425, 959, 186, 44], style: caption, caption_of: panorama_captioned}
+  - {key: cap_pano_3, block: 24, expect: "Le Cruet", bbox_px: [837, 961, 60, 22], style: caption, caption_of: panorama_captioned}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-08-google-maps.svg, placement: reference_canvas}
@@ -69,9 +75,10 @@ discrepancies:
   raster_text_absent_from_canon:
     - {fragment: running_head_raster, description: "bandeau courant"}
     - {fragment: heraldry_captioned, description: "légende des armoiries"}
+    - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
+  raster_text_inscribed_in_canon_2026_09_09:
     - {fragment: hero_captioned, description: "callouts « Magnolia centenaire dans les jardins suspendus », « Maison-Forte du Châtelet, centre du village de Saint-Étienne-de-Cuines »"}
     - {fragment: panorama_captioned, description: "libellés « Le Châtelet », « Système défensif des seigneurs de La Chambre », « Le Cruet »"}
-    - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
   canonical_text_not_visible_in_raster: []
 
 validation:

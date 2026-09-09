@@ -10,13 +10,13 @@
 - Référence à joindre : `reference/page-10/marian_figure_captioned.png` (crop canonique 160×300 px)
 - Ratio L/H : 0.5333 — canevas natif conseillé : portrait 1024×1536 → recadrage centré 819×1536 px
 - Gate 300.0 ppi (continuous_tone) — couverture au canevas natif : A5 ✔(≥266 px) A4 ✔(≥375 px) A2 ✔(≥531 px) A1 ✔(≥750 px)
-- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)
+- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner
 
 ```text
 Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.
 Sujet : Statue dorée de Vierge à l'Enfant sur un socle, montagnes derrière.
 Style : Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée : traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée, lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
-À ne pas reproduire : légende « Notre-Dame-du-Cruet; protectrice du château et de la vallée »; toute légende ou annotation présente dans l'image de référence. Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
+À ne pas reproduire : légende « Notre-Dame-du-Cruet; protectrice du château et de la vallée »; toute légende ou annotation présente dans l'image de référence (légende inscrite au canon et composée en couche texte). Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
 Format : portrait (plus haut que large), ratio largeur/hauteur ≈ 0.53. Le sujet doit rester entièrement dans le cadre avec une légère marge de papier crème uni sur les bords (l'image sera recadrée au centre à ce ratio exact, sans agrandissement). Produis la plus grande taille disponible (au minimum 1024×1536 px).
 ```
 

@@ -12,7 +12,7 @@ source:
 canonical_text:
   path: pages/05.yaml
   key: canonical_text
-  expected_blocks: 20
+  expected_blocks: 29
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
@@ -27,9 +27,9 @@ fragments:
   - {id: running_head_raster,     role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 214, y: 32,   w: 632, h: 36},  treatment: crop_only, note: "bandeau « Les Seigneurs de La Chambre et leur patrimoine en Maurienne » + fleurons"}
   - {id: heraldry_captioned,      role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 30,  y: 60,   w: 158, h: 266}, treatment: crop_only, note: "armoiries + légende « Armes des La Chambre (voir blasonnement officiel p.2) »"}
   - {id: title_ornament,          role: ornament,                                status: APPROVED, bbox_px: {x: 298, y: 194,  w: 432, h: 34},  treatment: crop_only}
-  - {id: hero_captioned,          role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 578, y: 72, w: 421, h: 474}, treatment: crop_only, mask_px: [[578, 72, 145, 78], [578, 150, 252, 38]], note: "vue Château Joli / Cruet + callouts « Face à face… », « Le Château Joli domine… » ; résidus raster du titre/sous-titre masqués (ciel)"}
-  - {id: poype_captioned,         role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 33,  y: 704,  w: 427, h: 318}, treatment: crop_only, note: "poype annotée (Tour maîtresse, Motte primitive, Fossé naturel, Enceinte médiévale, cartouche POYPE FÉODALE)"}
-  - {id: princess_captioned,      role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 480, y: 727,  w: 518, h: 300}, treatment: crop_only, note: "Agnès de Savoie-Achaïe + légende raster"}
+  - {id: hero_captioned,          role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 578, y: 72, w: 421, h: 474}, treatment: crop_only, mask_px: [[578, 72, 145, 78], [578, 150, 252, 38], {box: [757, 79, 218, 44], fill: paper}, {box: [882, 421, 108, 92], fill: paper}], note: "vue Château Joli / Cruet + callouts « Face à face… », « Le Château Joli domine… » ; résidus raster du titre/sous-titre masqués (ciel)"}
+  - {id: poype_captioned,         role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 33,  y: 704,  w: 427, h: 318}, treatment: crop_only, mask_px: [{box: [113, 709, 90, 42], fill: paper}, {box: [38, 789, 128, 39], fill: paper}, {box: [40, 869, 48, 40], fill: paper}, {box: [410, 854, 50, 40], fill: paper}, {box: [354, 722, 103, 100], fill: paper}], note: "poype annotée (Tour maîtresse, Motte primitive, Fossé naturel, Enceinte médiévale, cartouche POYPE FÉODALE)"}
+  - {id: princess_captioned,      role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 480, y: 727,  w: 518, h: 300}, treatment: crop_only, mask_px: [{box: [805, 746, 162, 118], fill: border_median}], note: "Agnès de Savoie-Achaïe + légende raster"}
   - {id: map_document,            role: documentary_map,                         status: APPROVED, bbox_px: {x: 40,  y: 1043, w: 369, h: 203}, treatment: crop_only, mask_px: [[189, 1043, 62, 18]], note: "carte + rose des vents + icône ; ancien titre raster CARTE masqué, titre vivant recomposé"}
   - {id: localization_vignette,   role: documentary_illustration,                status: APPROVED, bbox_px: {x: 452, y: 1140, w: 251, h: 113}, treatment: crop_only}
   - {id: pin_icon,                role: icon,                                    status: APPROVED, bbox_px: {x: 495, y: 1046, w: 19,  h: 26},  treatment: crop_only}
@@ -66,6 +66,16 @@ text_blocks:
   - {key: b1,           block: 17, expect: "• Ruines",                   bbox_px: [100, 1348, 470, 24],  style: tiny}
   - {key: b2,           block: 18, expect: "• Site en propriété",        bbox_px: [100, 1390, 470, 24],  style: tiny}
   - {key: b3,           block: 19, expect: "• Datation",                 bbox_px: [100, 1432, 470, 24],  style: tiny}
+  # Légendes raster inscrites au canon le 2026-09-09 (ordre du propriétaire) — composées en couche texte, raster masqué.
+  - {key: cap_hero_1, block: 20, expect: "Face à face", bbox_px: [757, 79, 218, 44], style: caption, caption_of: hero_captioned}
+  - {key: cap_hero_2, block: 21, expect: "Le Château Joli", bbox_px: [882, 421, 108, 92], style: caption_left, caption_of: hero_captioned}
+  - {key: cap_poype_1, block: 22, expect: "Tour maîtresse (XIIIe", bbox_px: [113, 709, 90, 42], style: caption_left, caption_of: poype_captioned}
+  - {key: cap_poype_2, block: 23, expect: "Motte primitive (antérieure", bbox_px: [38, 789, 128, 39], style: caption_left, caption_of: poype_captioned}
+  - {key: cap_poype_3, block: 24, expect: "Fossé naturel", bbox_px: [40, 869, 48, 40], style: caption_left, caption_of: poype_captioned}
+  - {key: cap_poype_4, block: 25, expect: "Enceinte médiévale", bbox_px: [410, 854, 50, 40], style: caption_left, caption_of: poype_captioned}
+  - {key: cap_poype_5, block: 26, expect: "POYPE FÉODALE", bbox_px: [356, 722, 101, 20], style: caption_caps_left, caption_of: poype_captioned}
+  - {key: cap_poype_6, block: 27, expect: "Éperon rocheux facile", bbox_px: [356, 742, 101, 80], style: caption_left, caption_of: poype_captioned}
+  - {key: cap_princess, block: 28, expect: "Agnès de Savoie-Achaïe", bbox_px: [805, 746, 162, 118], style: caption, caption_of: princess_captioned}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-05-google-maps.svg, placement: reference_canvas}
@@ -77,10 +87,11 @@ discrepancies:
   raster_text_absent_from_canon:
     - {fragment: running_head_raster, description: "bandeau courant « Les Seigneurs de La Chambre et leur patrimoine en Maurienne »"}
     - {fragment: heraldry_captioned, description: "légende des armoiries (voir blasonnement officiel p.2)"}
+    - {fragment: map_document, description: "toponymes intrinsèques de la carte (conservés comme document)"}
+  raster_text_inscribed_in_canon_2026_09_09:
     - {fragment: hero_captioned, description: "callouts de la vue principale (Face à face… / Le Château Joli domine…)"}
     - {fragment: poype_captioned, description: "annotations du croquis de la poype et cartouche POYPE FÉODALE"}
     - {fragment: princess_captioned, description: "légende du portrait d'Agnès de Savoie-Achaïe (dates)"}
-    - {fragment: map_document, description: "toponymes intrinsèques de la carte (conservés comme document)"}
   canonical_text_not_visible_in_raster: []
 
 validation:

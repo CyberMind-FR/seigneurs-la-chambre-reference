@@ -101,9 +101,14 @@ def build(briefs):
         page = comp["page"]
         page_briefs = briefs["pages"].get(page, {})
         entries = []
+        # captions already inscribed in the canon and composed as live text (text_blocks[].caption_of)
+        captioned_in_canon = {tb.get("caption_of") for tb in comp.get("text_blocks", []) if tb.get("caption_of")}
         for f in comp.get("fragments", []):
             role = f.get("role")
             route = ROUTES.get(role, "unknown")
+            caption_in_canon = False
+            if route == "prompt_image_caption_to_canon" and f["id"] in captioned_in_canon:
+                route, caption_in_canon = "prompt_image", True
             brief = page_briefs.get(f["id"])
             if role in PROMPT_ROLES:
                 if brief is None:
@@ -120,8 +125,9 @@ def build(briefs):
                 pid = f"P{page:02d}-{f['id']}"
                 orientation = {"portrait": "portrait (plus haut que large)", "landscape": "paysage (plus large que haut)", "square": "carré"}[name]
                 remove = list(brief.get("remove") or [])
-                if route == "prompt_image_caption_to_canon":
-                    remove.append("toute légende ou annotation présente dans l'image de référence")
+                if route == "prompt_image_caption_to_canon" or caption_in_canon:
+                    remove.append("toute légende ou annotation présente dans l'image de référence"
+                                  + (" (légende inscrite au canon et composée en couche texte)" if caption_in_canon else ""))
                 lines = [
                     "Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.",
                     f"Sujet : {brief['subject']}",
@@ -132,7 +138,8 @@ def build(briefs):
                 if brief.get("notes"):
                     lines.append(f"Contrainte : {brief['notes']}")
                 prompt = "\n".join(lines)
-                rec = {"id": f["id"], "role": role, "route": route, "prompt_id": pid, "prompt": prompt,
+                rec = {"id": f["id"], "role": role, "route": route, "caption_in_canon": caption_in_canon,
+                       "prompt_id": pid, "prompt": prompt,
                        "prompt_sha256": sha256_bytes(prompt.encode("utf-8")),
                        "expected_file": f"assets/hd/page-{page:02d}/{f['id']}.png",
                        "reference_crop": f"reference/page-{page:02d}/{f['id']}.png",
@@ -208,7 +215,9 @@ def render_page_md(page, entries, comp):
                 f"- Référence à joindre : `{e['reference_crop']}` (crop canonique {e['canonical_px'][0]}×{e['canonical_px'][1]} px)",
                 f"- Ratio L/H : {e['ratio']:.4f} — canevas natif conseillé : {e['native_canvas']} {e['native_px'][0]}×{e['native_px'][1]} → recadrage centré {e['crop_px_at_native'][0]}×{e['crop_px_at_native'][1]} px",
                 f"- Gate {e['gate_ppi']} ppi ({e['raster_kind']}) — couverture au canevas natif : {cov}",
-                ("- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)" if e["route"].endswith("caption_to_canon") else "- Sans légende raster"),
+                ("- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)" if e["route"].endswith("caption_to_canon")
+                 else "- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner" if e.get("caption_in_canon")
+                 else "- Sans légende raster"),
                 "", "```text", e["prompt"], "```", ""]
     out += ["## Fragments hors voie « prompt image »", "", "| Fragment | Rôle | Voie |", "|---|---|---|"]
     for e in others:

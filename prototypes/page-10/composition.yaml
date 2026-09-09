@@ -8,7 +8,7 @@ title: Le Château de Notre-Dame-du-Cruet
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09 (« Go, page 10 puis 13 à 16 »)
 source: {path: assets/page-10.jpg, sha256: 8aadbcf5cda05bec84012f52c636d8499bb5d052010bc5df998aaac3a5c13bae}
-canonical_text: {path: pages/10.yaml, key: canonical_text, expected_blocks: 26}
+canonical_text: {path: pages/10.yaml, key: canonical_text, expected_blocks: 27}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
@@ -19,9 +19,9 @@ text_styles:
 fragments:
   - {id: running_head_raster,    role: canonical_raster_text_absent_from_yaml, status: APPROVED, bbox_px: {x: 234, y: 16, w: 590, h: 36}, treatment: crop_only}
   - {id: heraldry_captioned,     role: heraldry_with_canonical_raster_caption,  status: APPROVED, bbox_px: {x: 36, y: 40, w: 128, h: 205}, treatment: crop_only}
-  - {id: marian_figure_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 880, y: 50, w: 160, h: 300}, treatment: crop_only, note: "figure mariale + légende « Notre-Dame-du-Cruet, protectrice du château et de la vallée »"}
+  - {id: marian_figure_captioned, role: documentary_illustration_with_canonical_raster_caption, status: APPROVED, bbox_px: {x: 880, y: 50, w: 160, h: 300}, treatment: crop_only, mask_px: [{box: [904, 292, 126, 56], fill: border_median}], note: "figure mariale + légende « Notre-Dame-du-Cruet, protectrice du château et de la vallée »"}
   - {id: title_ornament,         role: ornament, status: APPROVED, bbox_px: {x: 298, y: 176, w: 443, h: 28}, treatment: crop_only}
-  - {id: hero,                   role: documentary_illustration, status: APPROVED, bbox_px: {x: 500, y: 185, w: 540, h: 322}, treatment: crop_only, note: "vue principale des ruines (illustration canonique validée, pas de nouvelle reconstitution)"}
+  - {id: hero,                   role: documentary_illustration, status: APPROVED, bbox_px: {x: 500, y: 185, w: 540, h: 322}, treatment: crop_only, mask_px: [{box: [904, 292, 126, 56], fill: border_median}], note: "vue principale des ruines (illustration canonique validée, pas de nouvelle reconstitution)"}
   - {id: cross_h1, role: ornament, status: APPROVED, bbox_px: {x: 163, y: 226, w: 20, h: 17}, treatment: crop_only}
   - {id: cross_h2, role: ornament, status: APPROVED, bbox_px: {x: 50, y: 448, w: 19, h: 22}, treatment: crop_only}
   - {id: plan_box_captioned,     role: documentary_map, status: APPROVED, bbox_px: {x: 515, y: 507, w: 522, h: 300}, treatment: crop_only, note: "encadré « Plan du château (XIe-XVe siècle) » : plan canonique avec ses libellés intrinsèques (Tour de guet, Basse cour, Porte d'entrée, Tour porte, Tour ronde, Tour carrée, Cour haute, Logis, Donjon, Fossé) conformes au plan réel"}
@@ -70,6 +70,8 @@ text_blocks:
   - {key: b2,           block: 23, expect: "• Distance",                bbox_px: [100, 1354, 410, 20], style: tiny}
   - {key: b3,           block: 24, expect: "• Point de vue",            bbox_px: [100, 1380, 410, 20], style: tiny}
   - {key: b4,           block: 25, expect: "• Édifié",                  bbox_px: [100, 1406, 410, 20], style: tiny}
+  # Légendes raster inscrites au canon le 2026-09-09 (ordre du propriétaire) — composées en couche texte, raster masqué.
+  - {key: cap_marian, block: 26, expect: "Notre-Dame-du-Cruet, protectrice du", bbox_px: [904, 292, 126, 56], style: caption, caption_of: marian_figure_captioned, allow_ink_overlap: true}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-10-google-maps.svg, placement: reference_canvas}
@@ -79,10 +81,11 @@ discrepancies:
   raster_text_absent_from_canon:
     - {fragment: running_head_raster, description: "bandeau courant"}
     - {fragment: heraldry_captioned, description: "légende des armoiries"}
-    - {fragment: marian_figure_captioned, description: "légende « Notre-Dame-du-Cruet, protectrice du château et de la vallée »"}
     - {fragment: plan_box_captioned, description: "titre « Plan du château (XIe-XVe siècle) » et libellés du plan (intrinsèques au document)"}
     - {fragment: chronology_box_captioned, description: "titre « Chronologie du château », dates et libellés des cinq événements"}
     - {fragment: map_document, description: "toponymes intrinsèques de la carte"}
+  raster_text_inscribed_in_canon_2026_09_09:
+    - {fragment: marian_figure_captioned, description: "légende « Notre-Dame-du-Cruet, protectrice du château et de la vallée »"}
   canonical_text_differs_from_raster:
     - "le raster porte « Imposéeevause au XIe siècle » (défaut) là où le canon dit « Imaginez-vous au XIe siècle » : le canon prévaut"
     - "le raster porte « Paroisse de Notre-Dame-du-Cunet » (défaut) là où le canon dit « Notre-Dame-du-Cruet » : le canon prévaut"

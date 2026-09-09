@@ -470,7 +470,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 17
-    canonical_text_blocks: 10
+    canonical_text_blocks: 14
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -480,6 +480,7 @@ layered_compositions:
       source_ppi_a5: 185.78
       effective_ppi_a5_after_upscale: 300.97
       provisional_upscale_fragments: 17
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -492,7 +493,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 20
-    canonical_text_blocks: 25
+    canonical_text_blocks: 33
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -502,6 +503,7 @@ layered_compositions:
       source_ppi_a5: 185.78
       effective_ppi_a5_after_upscale: 300.97
       provisional_upscale_fragments: 20
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -514,7 +516,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 12
-    canonical_text_blocks: 25
+    canonical_text_blocks: 32
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -524,6 +526,7 @@ layered_compositions:
       source_ppi_a5: 185.78
       effective_ppi_a5_after_upscale: 300.97
       provisional_upscale_fragments: 12
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -536,7 +539,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 13
-    canonical_text_blocks: 20
+    canonical_text_blocks: 29
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -546,6 +549,7 @@ layered_compositions:
       source_ppi_a5: 185.78
       effective_ppi_a5_after_upscale: 300.97
       provisional_upscale_fragments: 13
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -558,7 +562,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 19
-    canonical_text_blocks: 17
+    canonical_text_blocks: 22
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -568,6 +572,7 @@ layered_compositions:
       source_ppi_a5: 185.78
       effective_ppi_a5_after_upscale: 300.97
       provisional_upscale_fragments: 19
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -580,7 +585,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 22
-    canonical_text_blocks: 21
+    canonical_text_blocks: 30
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -590,6 +595,7 @@ layered_compositions:
       source_ppi_a5: 185.78
       effective_ppi_a5_after_upscale: 300.97
       provisional_upscale_fragments: 22
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -602,7 +608,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 17
-    canonical_text_blocks: 20
+    canonical_text_blocks: 25
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -612,6 +618,7 @@ layered_compositions:
       source_ppi_a5: 185.78
       effective_ppi_a5_after_upscale: 300.97
       provisional_upscale_fragments: 17
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -624,7 +631,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 15
-    canonical_text_blocks: 15
+    canonical_text_blocks: 16
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -634,6 +641,7 @@ layered_compositions:
       source_ppi_a5: 185.78
       effective_ppi_a5_after_upscale: 300.97
       provisional_upscale_fragments: 15
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -646,7 +654,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 18
-    canonical_text_blocks: 26
+    canonical_text_blocks: 27
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -656,6 +664,7 @@ layered_compositions:
       source_ppi_a5: 181.06
       effective_ppi_a5_after_upscale: 300.56
       provisional_upscale_fragments: 18
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -668,7 +677,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 14
-    canonical_text_blocks: 15
+    canonical_text_blocks: 22
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -678,6 +687,7 @@ layered_compositions:
       source_ppi_a5: 181.06
       effective_ppi_a5_after_upscale: 300.56
       provisional_upscale_fragments: 14
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -690,7 +700,7 @@ layered_compositions:
     rights_status: PROJECT_INTERNAL
     status: APPROVED
     fragment_count: 18
-    canonical_text_blocks: 21
+    canonical_text_blocks: 33
     text_free_required: false  # fragments may carry canonical raster captions absent from the YAML (listed under discrepancies)
     validation:
       text_layer: pass
@@ -700,6 +710,7 @@ layered_compositions:
       source_ppi_a5: 181.06
       effective_ppi_a5_after_upscale: 300.56
       provisional_upscale_fragments: 18
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -722,6 +733,7 @@ layered_compositions:
       source_ppi_a5: 181.06
       effective_ppi_a5_after_upscale: 300.56
       provisional_upscale_fragments: 17
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -744,6 +756,7 @@ layered_compositions:
       source_ppi_a5: 181.06
       effective_ppi_a5_after_upscale: 300.56
       provisional_upscale_fragments: 14
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -767,6 +780,7 @@ layered_compositions:
       source_ppi_a5: 181.06
       effective_ppi_a5_after_upscale: 300.56
       provisional_upscale_fragments: 27
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: pass
       methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -789,6 +803,7 @@ layered_compositions:
       source_ppi_a5: 131.81
       effective_ppi_a5_after_upscale: 300.52
       provisional_upscale_fragments: 8
+      hd_regenerated_fragments: 0
       resolution_gate_300_continuous_tone: pass
       resolution_gate_1200_line_art: fail
       methodology_gate: PASS_WITH_RESOLUTION_WAIVER

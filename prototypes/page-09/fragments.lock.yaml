@@ -54,7 +54,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   magnolia_captioned:
-    sha256: 7df039b2cfdf5fad35f146d1c35e58657cc8af2b1e76099f7561f4b2270214ff
+    sha256: 6488232eb74394a3d5f653c870e095e75927a5f9f50af54631ef2e69c2b6c77c
     bbox_px:
       x: 788
       y: 232

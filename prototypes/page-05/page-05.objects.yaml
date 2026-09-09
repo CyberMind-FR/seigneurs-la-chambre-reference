@@ -5,7 +5,7 @@ title: Le Château Joli
 status: APPROVED
 generated_from:
   composition: prototypes/page-05/composition.yaml
-  composition_run: 48210a531b9b51da13a287860442eef5aded23cd3bc513822388eb21b4bbc86b
+  composition_run: 67887297bdc85eedb581b1eedcfb459354b59ef5809172d7f397f64dcbacb255
 canonical_reference:
   path: assets/page-05.jpg
   sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
@@ -154,9 +154,27 @@ objects:
     - 253
     - 248
     fill_mode: paper
+  - x: 757
+    y: 79
+    w: 218
+    h: 44
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  - x: 882
+    y: 421
+    w: 108
+    h: 92
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: f34131637fa23e283021ad46cbd407c77d1d9ad6fbe3983e5e2b1a6ca4db090b
+  sha256: 50f5e533baf3748f670ba50044c00e1c410b7e61cfd11fccab16d357947afc17
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -174,10 +192,55 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 113
+    y: 709
+    w: 90
+    h: 42
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  - x: 38
+    y: 789
+    w: 128
+    h: 39
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  - x: 40
+    y: 869
+    w: 48
+    h: 40
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  - x: 410
+    y: 854
+    w: 50
+    h: 40
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
+  - x: 354
+    y: 722
+    w: 103
+    h: 100
+    fill_rgb:
+    - 255
+    - 253
+    - 248
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 2267f1017dab815336535e08f2a998b374b2308fcdade821a0c6de3b217e32db
+  sha256: 165745c8165167d5e9e48f21658eab55a13b7cb50de22eb558881438951fbbaf
   effective_ppi_a5: 300.97
   dirty_edges:
   - right
@@ -194,10 +257,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 805
+    y: 746
+    w: 162
+    h: 118
+    fill_rgb:
+    - 255
+    - 255
+    - 255
+    fill_mode: border_median
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: d3a559a9dc9a58577f392dbff04c8538da0c6e6680bb310ce9fc567e852e70bf
+  sha256: eb9c31a739868d81ac32aa4dab30d458c5ad2cc5b79a132dfb464d09368d45c3
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -652,6 +724,132 @@ text_zones:
   compose_as: live_text
   style: tiny
   authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_hero_1
+  role: cap_hero_1
+  canonical_block: 20
+  expect: Face à face
+  bbox_px:
+  - 757
+  - 79
+  - 218
+  - 44
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_hero_2
+  role: cap_hero_2
+  canonical_block: 21
+  expect: Le Château Joli
+  bbox_px:
+  - 882
+  - 421
+  - 108
+  - 92
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_poype_1
+  role: cap_poype_1
+  canonical_block: 22
+  expect: Tour maîtresse (XIIIe
+  bbox_px:
+  - 113
+  - 709
+  - 90
+  - 42
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_poype_2
+  role: cap_poype_2
+  canonical_block: 23
+  expect: Motte primitive (antérieure
+  bbox_px:
+  - 38
+  - 789
+  - 128
+  - 39
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_poype_3
+  role: cap_poype_3
+  canonical_block: 24
+  expect: Fossé naturel
+  bbox_px:
+  - 40
+  - 869
+  - 48
+  - 40
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_poype_4
+  role: cap_poype_4
+  canonical_block: 25
+  expect: Enceinte médiévale
+  bbox_px:
+  - 410
+  - 854
+  - 50
+  - 40
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_poype_5
+  role: cap_poype_5
+  canonical_block: 26
+  expect: POYPE FÉODALE
+  bbox_px:
+  - 356
+  - 722
+  - 101
+  - 20
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_caps_left
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_poype_6
+  role: cap_poype_6
+  canonical_block: 27
+  expect: Éperon rocheux facile
+  bbox_px:
+  - 356
+  - 742
+  - 101
+  - 80
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_princess
+  role: cap_princess
+  canonical_block: 28
+  expect: Agnès de Savoie-Achaïe
+  bbox_px:
+  - 805
+  - 746
+  - 162
+  - 118
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/05.yaml:canonical_text
 functional_objects:
 - id: P05-F-google_maps
   object_class: qr
@@ -723,14 +921,15 @@ discrepancies:
     description: bandeau courant « Les Seigneurs de La Chambre et leur patrimoine en Maurienne »
   - fragment: heraldry_captioned
     description: légende des armoiries (voir blasonnement officiel p.2)
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte (conservés comme document)
+  raster_text_inscribed_in_canon_2026_09_09:
   - fragment: hero_captioned
     description: callouts de la vue principale (Face à face… / Le Château Joli domine…)
   - fragment: poype_captioned
     description: annotations du croquis de la poype et cartouche POYPE FÉODALE
   - fragment: princess_captioned
     description: légende du portrait d'Agnès de Savoie-Achaïe (dates)
-  - fragment: map_document
-    description: toponymes intrinsèques de la carte (conservés comme document)
   canonical_text_not_visible_in_raster: []
 completeness_gate:
   status: PASS

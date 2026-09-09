@@ -104,7 +104,7 @@ fragments:
     upscale_factor: 1.66
     upscale_provisional: true
   network_panorama_captioned:
-    sha256: c89ec3c3b1ade7e6c358d98d358ee0e5ee49a0a23bbc3c72b82ab7c15d280f0a
+    sha256: 57c37229f62d6eab5ad905012f34551ed3df6b8095ac11b23c4a2e2b6cd12e26
     bbox_px:
       x: 31
       y: 896

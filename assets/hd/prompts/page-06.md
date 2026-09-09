@@ -26,13 +26,13 @@ Format : paysage (plus large que haut), ratio largeur/hauteur ≈ 1.42. Le sujet
 - Référence à joindre : `reference/page-06/hero_captioned.png` (crop canonique 520×650 px)
 - Ratio L/H : 0.8000 — canevas natif conseillé : portrait 1024×1536 → recadrage centré 1024×1280 px
 - Gate 300.0 ppi (continuous_tone) — couverture au canevas natif : A5 ✔(≥840 px) A4 ✘(≥1188 px) A2 ✘(≥1680 px) A1 ✘(≥2376 px)
-- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)
+- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner
 
 ```text
 Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.
 Sujet : Tour ruinée en pierre au milieu de prairies et de murets, hameau avec clocher, manoir au loin, montagnes.
 Style : Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée : traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée, lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
-À ne pas reproduire : résidu du sous-titre; cartouches « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin »; flèches; ornements; résidu d'armoiries en bas à gauche; toute légende ou annotation présente dans l'image de référence. Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
+À ne pas reproduire : résidu du sous-titre; cartouches « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin »; flèches; ornements; résidu d'armoiries en bas à gauche; toute légende ou annotation présente dans l'image de référence (légende inscrite au canon et composée en couche texte). Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
 Format : portrait (plus haut que large), ratio largeur/hauteur ≈ 0.80. Le sujet doit rester entièrement dans le cadre avec une légère marge de papier crème uni sur les bords (l'image sera recadrée au centre à ce ratio exact, sans agrandissement). Produis la plus grande taille disponible (au minimum 1024×1536 px).
 ```
 
@@ -42,13 +42,13 @@ Format : portrait (plus haut que large), ratio largeur/hauteur ≈ 0.80. Le suje
 - Référence à joindre : `reference/page-06/berthollet_portrait_captioned.png` (crop canonique 181×212 px)
 - Ratio L/H : 0.8538 — canevas natif conseillé : portrait 1024×1536 → recadrage centré 1024×1199 px
 - Gate 300.0 ppi (continuous_tone) — couverture au canevas natif : A5 ✔(≥293 px) A4 ✔(≥414 px) A2 ✔(≥585 px) A1 ✔(≥827 px)
-- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)
+- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner
 
 ```text
 Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.
 Sujet : Portrait gravé d'un homme du XVIIIe siècle en perruque et jabot, buste de face, style gravure au trait.
 Style : Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée : traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée, lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
-À ne pas reproduire : cartouche « Claude-Louis Berthollet 1748-1822 »; toute légende ou annotation présente dans l'image de référence. Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
+À ne pas reproduire : cartouche « Claude-Louis Berthollet 1748-1822 »; toute légende ou annotation présente dans l'image de référence (légende inscrite au canon et composée en couche texte). Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
 Format : portrait (plus haut que large), ratio largeur/hauteur ≈ 0.85. Le sujet doit rester entièrement dans le cadre avec une légère marge de papier crème uni sur les bords (l'image sera recadrée au centre à ce ratio exact, sans agrandissement). Produis la plus grande taille disponible (au minimum 1024×1536 px).
 Contrainte : Reconstitution d'après l'iconographie classique du personnage ; ressemblance non garantie.
 ```
@@ -59,13 +59,13 @@ Contrainte : Reconstitution d'après l'iconographie classique du personnage ; re
 - Référence à joindre : `reference/page-06/vestiges_box_captioned.png` (crop canonique 290×318 px)
 - Ratio L/H : 0.9119 — canevas natif conseillé : square 1024×1024 → recadrage centré 933×1024 px
 - Gate 300.0 ppi (continuous_tone) — couverture au canevas natif : A5 ✔(≥469 px) A4 ✔(≥663 px) A2 ✘(≥937 px) A1 ✘(≥1325 px)
-- Légende raster : à inscrire au canon avant approbation (`caption_resolution`)
+- Légende raster : inscrite au canon (2026-09-09) et composée en couche texte — ne pas la dessiner
 
 ```text
 Redessine l'illustration jointe en haute définition, en conservant exactement le même sujet, le même point de vue, le même cadrage et la même composition (mêmes positions des éléments principaux). Ne rajoute aucun élément historique ou architectural absent de la référence.
 Sujet : Vestiges de murs en pierres sèches dans une prairie, arbres et montagnes.
 Style : Illustration à l'encre et à l'aquarelle, style carnet de voyage / gravure aquarellée : traits d'encre fins brun sépia, lavis d'aquarelle doux et lumineux, palette chaude et naturelle (ocre, beige parchemin, gris pierre, vert olive et vert mousse, bleus pâles pour les ciels et les sommets enneigés), fond de papier crème uni (#FFFDF7) sans texture marquée, lumière diffuse, pas de contours noirs épais, pas de rendu photographique ni 3D.
-À ne pas reproduire : cadre ornemental; titre « Vestiges aujourd'hui »; citation « Réduits à fort peu de choses » (Georges Chapier; 1957); toute légende ou annotation présente dans l'image de référence. Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
+À ne pas reproduire : cadre ornemental; titre « Vestiges aujourd'hui »; citation « Réduits à fort peu de choses » (Georges Chapier; 1957); toute légende ou annotation présente dans l'image de référence (légende inscrite au canon et composée en couche texte). Aucun texte, lettre, chiffre, signature, filigrane, logo, flèche, cartouche, cadre, bordure ornementale, bulle ou étiquette. Aucun personnage ou objet moderne (véhicule, câble, panneau) sauf indication contraire. Pas de texture de papier vieilli ni de taches. Pas de bordure ni de vignettage : le dessin s'estompe naturellement dans le papier crème.
 Format : carré, ratio largeur/hauteur ≈ 0.91. Le sujet doit rester entièrement dans le cadre avec une légère marge de papier crème uni sur les bords (l'image sera recadrée au centre à ce ratio exact, sans agrandissement). Produis la plus grande taille disponible (au minimum 1024×1024 px).
 ```
 

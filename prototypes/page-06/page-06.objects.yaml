@@ -5,7 +5,7 @@ title: La Tour de Burgin
 status: APPROVED
 generated_from:
   composition: prototypes/page-06/composition.yaml
-  composition_run: d7bebeef9a1061c8042839593ce816e27aa7a77ed49597d63f5875dcd898dfaa
+  composition_run: 9a2a20685974b6cd80166890ca8ff6d8afdda9fb36c7dce509da696f2d9ac151
 canonical_reference:
   path: assets/page-06.jpg
   sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031
@@ -126,9 +126,27 @@ objects:
     - 253
     - 246
     fill_mode: paper
+  - x: 861
+    y: 389
+    w: 93
+    h: 42
+    fill_rgb:
+    - 255
+    - 253
+    - 246
+    fill_mode: paper
+  - x: 886
+    y: 588
+    w: 102
+    h: 62
+    fill_rgb:
+    - 255
+    - 253
+    - 246
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: c51800caeb09e1b3aa7e133ccd7c89fa301fb27f0e83ea43305837e43b80c659
+  sha256: 8b41af386862ddd96675492f2d57ee7e86852557b41c558d9f62871521a5cac9
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -254,10 +272,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 509
+    y: 1078
+    w: 169
+    h: 40
+    fill_rgb:
+    - 255
+    - 253
+    - 246
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: d483c6b99c7f774c40048ba65f0f014538ba0872be3630f83594cecd5a572f51
+  sha256: 5cecf34cbea23f1b39eaea08b204a6aa4d13855bad0845b3c8a025c2c9a78c5c
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -274,10 +301,28 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 755
+    y: 814
+    w: 172
+    h: 26
+    fill_rgb:
+    - 255
+    - 253
+    - 246
+    fill_mode: paper
+  - x: 732
+    y: 1049
+    w: 220
+    h: 44
+    fill_rgb:
+    - 255
+    - 253
+    - 246
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-06.jpg
-  sha256: b4b41948af4d081a1068fb5aa501f358caef9b8ef5dbfa8e2cee401d4dcd2e81
+  sha256: 6c40b583352db47c33a27aa16f5e9dd4df1f88ba41723cbbf967601e2d3e3d64
   effective_ppi_a5: 300.97
   dirty_edges: []
   review_status: APPROVED
@@ -722,6 +767,76 @@ text_zones:
   compose_as: live_text
   style: quote
   authority: pages/06.yaml:canonical_text
+- id: P06-T-cap_hero_1
+  role: cap_hero_1
+  canonical_block: 17
+  expect: Manoir de Châtel-André
+  bbox_px:
+  - 861
+  - 389
+  - 93
+  - 42
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-cap_hero_2
+  role: cap_hero_2
+  canonical_block: 18
+  expect: Emplacement de la
+  bbox_px:
+  - 886
+  - 588
+  - 102
+  - 62
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-cap_berthollet
+  role: cap_berthollet
+  canonical_block: 19
+  expect: Claude-Louis Berthollet 1748-1822
+  bbox_px:
+  - 509
+  - 1078
+  - 169
+  - 40
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_plain
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-cap_vestiges_1
+  role: cap_vestiges_1
+  canonical_block: 20
+  expect: Vestiges aujourd'hui
+  bbox_px:
+  - 755
+  - 814
+  - 172
+  - 26
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_title_red
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-cap_vestiges_2
+  role: cap_vestiges_2
+  canonical_block: 21
+  expect: « Réduits à
+  bbox_px:
+  - 732
+  - 1049
+  - 220
+  - 44
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/06.yaml:canonical_text
 functional_objects:
 - id: P06-F-google_maps
   object_class: qr
@@ -782,16 +897,17 @@ discrepancies:
   raster_text_absent_from_canon:
   - fragment: heraldry_captioned
     description: légende des armoiries (voir blasonnement officiel p.2)
-  - fragment: hero_captioned
-    description: callouts « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin »
   - fragment: du_pont_blason_captioned
     description: cartouche « DU PONT »
+  - fragment: map_document
+    description: toponymes intrinsèques de la carte
+  raster_text_inscribed_in_canon_2026_09_09:
+  - fragment: hero_captioned
+    description: callouts « Manoir de Châtel-André » et « Emplacement de la Tour de Burgin »
   - fragment: berthollet_portrait_captioned
     description: légende « Claude-Louis Berthollet 1748-1822 »
   - fragment: vestiges_box_captioned
     description: titre « Vestiges aujourd'hui » et citation « Réduits à fort peu de choses » (Georges Chapier, 1957)
-  - fragment: map_document
-    description: toponymes intrinsèques de la carte
   canonical_text_not_visible_in_raster: []
   paragraph_structure:
   - block: 8

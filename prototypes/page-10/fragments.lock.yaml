@@ -24,7 +24,7 @@ fragments:
     upscale_factor: 1.66
     upscale_provisional: true
   marian_figure_captioned:
-    sha256: 6a0bea6a899bc44c128514bffd25d9cc15fee2e149d07cd2cdd8ded3a875c5c2
+    sha256: d0e54a8b167f9230dc4b1b395efa96d6287aaca3496be760811a5eda11f41ce9
     bbox_px:
       x: 880
       y: 50
@@ -44,7 +44,7 @@ fragments:
     upscale_factor: 6.63
     upscale_provisional: true
   hero:
-    sha256: c3448877fa4d53fbc78869f27999ebdfb1e7ebe3c5b9b4f728791913302d2822
+    sha256: b10b5b425a2f7e9f6dd6feb9326b09d2e75a80add976691567251e95d28d4528
     bbox_px:
       x: 500
       y: 185

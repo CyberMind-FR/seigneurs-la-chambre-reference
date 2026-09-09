@@ -5,7 +5,7 @@ title: LES SEIGNEURS DE LA CHAMBRE
 status: APPROVED
 generated_from:
   composition: prototypes/page-01/composition.yaml
-  composition_run: beb8dcce41f15761d12459eadac68648a3926d1720292579db55b3079794a997
+  composition_run: 8815cc18fcb0b286690bf2553ca88827febbd5f78b12a91d770663803c700a1c
 canonical_reference:
   path: assets/page-01.jpg
   sha256: 7b3058fe609f08f59d6fead46bb7d5d7e544de568b57187219fc55ee70ecbb8b
@@ -71,10 +71,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 66
+    y: 351
+    w: 142
+    h: 64
+    fill_rgb:
+    - 255
+    - 253
+    - 250
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-01.jpg
-  sha256: 4ed30dd9d39302b623d789d6442f16e54c835f08c163a78866c6f8d9da2f54f3
+  sha256: fcaaf9f485f89f40a14856fb72b43e382069ff4a14cd25cf7b433a666eebbdae
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -112,10 +121,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 750
+    y: 308
+    w: 108
+    h: 62
+    fill_rgb:
+    - 255
+    - 253
+    - 250
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-01.jpg
-  sha256: c575f08a91804a8f765993fec393027d2393364e16edda9373b697d8bc7b6271
+  sha256: fea5e15fefcc986469adb6ab17597fb62c59af2bfe7a2111d242d05312af36b5
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -186,9 +204,18 @@ objects:
     - 253
     - 250
     fill_mode: paper
+  - x: 170
+    y: 920
+    w: 82
+    h: 98
+    fill_rgb:
+    - 255
+    - 253
+    - 250
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-01.jpg
-  sha256: 3a8dd600e730907f0a7c22d2af70823282712a83ba439a483e4e29f2ba2605f7
+  sha256: 9639b642806267b4d0fe0c99767f09cb7930437759a207121a853393e48d26cf
   effective_ppi_a5: 300.97
   dirty_edges:
   - left
@@ -246,10 +273,19 @@ objects:
   layer_target: raster_fragment
   text_relationship: canonical_raster_caption
   extraction_action: crop_only
-  masks_px: []
+  masks_px:
+  - x: 866
+    y: 740
+    w: 82
+    h: 44
+    fill_rgb:
+    - 255
+    - 253
+    - 250
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-01.jpg
-  sha256: 27fd1e55d7136b6fae981b7d04348ccdb63f595701f7ff5e0d0fa13a6c81b1b7
+  sha256: 50f1ac7c6cbf7d04dd4f8b45eeb5a1adb6ca2bb4a42009e874372c1495af441a
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -568,6 +604,62 @@ text_zones:
   compose_as: live_text
   style: small_italic
   authority: pages/01.yaml:canonical_text
+- id: P01-T-cap_church
+  role: cap_church
+  canonical_block: 10
+  expect: Église Notre-Dame-du-Cruet XIVe
+  bbox_px:
+  - 66
+  - 351
+  - 142
+  - 64
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-cap_mountains
+  role: cap_mountains
+  canonical_block: 11
+  expect: Maurienne Terre de
+  bbox_px:
+  - 750
+  - 308
+  - 108
+  - 62
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-cap_seal
+  role: cap_seal
+  canonical_block: 12
+  expect: Sceau d'un seigneur
+  bbox_px:
+  - 170
+  - 920
+  - 82
+  - 86
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption_left
+  authority: pages/01.yaml:canonical_text
+- id: P01-T-cap_maison_forte
+  role: cap_maison_forte
+  canonical_block: 13
+  expect: Maison forte de
+  bbox_px:
+  - 866
+  - 740
+  - 82
+  - 44
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/01.yaml:canonical_text
 functional_objects: []
 structural_frames: []
 discrepancies:
@@ -579,6 +671,14 @@ discrepancies:
   raster_text_absent_from_canon:
   - fragment: running_head_raster
     description: bandeau courant
+  - fragment: fidem_servare_raster
+    description: devise « Fidem servare et jus dicere »
+  - fragment: timeline_and_logo
+    description: 'frise : XIe s. Origines Vicomtés épiscopales / XIIe-XIIIe s. Âge d''or Mariages et alliances / XIVe s. Fondations
+      Couvent des Cordeliers / XVe s. Crépuscule Passage aux Seyssel ; texte intrinsèque du logo'
+  - fragment: footer_raster
+    description: pied de page avec folio (ancienne forme « Les Amis du Couvent… », voir corrections.yaml:association_name_2026_09_09)
+  raster_text_inscribed_in_canon_2026_09_09:
   - fragment: church_captioned
     description: « Église Notre-Dame-du-Cruet XIVe siècle »
   - fragment: mountains_captioned
@@ -587,13 +687,6 @@ discrepancies:
     description: « Sceau d'un seigneur de La Chambre XIIIe siècle »
   - fragment: maison_forte_captioned
     description: « Maison forte de La Tour »
-  - fragment: fidem_servare_raster
-    description: devise « Fidem servare et jus dicere »
-  - fragment: timeline_and_logo
-    description: 'frise : XIe s. Origines Vicomtés épiscopales / XIIe-XIIIe s. Âge d''or Mariages et alliances / XIVe s. Fondations
-      Couvent des Cordeliers / XVe s. Crépuscule Passage aux Seyssel ; texte intrinsèque du logo'
-  - fragment: footer_raster
-    description: pied de page avec folio (ancienne forme « Les Amis du Couvent… », voir corrections.yaml:association_name_2026_09_09)
   canonical_text_not_visible_in_raster:
   - 'blocs 8–9 « Le passé n''est pas derrière nous, / il est sous nos pas. » : absents de la page canonique ; composés dans
     l''espace libre entre la ligne Commission et la frise (position à arbitrer)'
