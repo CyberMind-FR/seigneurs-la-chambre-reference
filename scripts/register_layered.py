@@ -62,6 +62,7 @@ def main():
                 f"      source_ppi_a5: {val.get('fragment_source_ppi_min', val['fragment_effective_ppi_min'])}",
                 f"      effective_ppi_a5_after_upscale: {val['fragment_effective_ppi_min']}",
                 f"      provisional_upscale_fragments: {len(ups.get('fragments', []))}",
+                f"      hd_regenerated_fragments: {sum(1 for f in lock['fragments'].values() if f.get('source') == 'hd')}",
                 f"      resolution_gate_300_continuous_tone: {'pass' if k['continuous_tone']['pass'] else 'fail'}",
                 f"      resolution_gate_1200_line_art: {'pass' if k['line_art']['pass'] else 'fail'}",
                 f"      methodology_gate: {val['methodology_gate']}",
