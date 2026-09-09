@@ -24,7 +24,7 @@ source:
     13: Un patrimoine à préserver
     14: L'Association
     15: LES SEIGNEURS DE LA CHAMBRE - dos
-    16: Remerciements - Les Amis du Couvent des Cordeliers de La Chambre
+    16: Remerciements - Amis du Couvent des Cordeliers de La Chambre
 render:
   background: '#FFFFFF'
   effective_ppi_min: 300
@@ -81,3 +81,24 @@ release:
   report: build-report.json
   github_artifact_name: seigneurs-la-chambre-print-pdfs
   release_on_tags: v*
+
+# v3 layered build (scripts/build_layered.py): pages with prototypes/page-NN/composition.yaml are
+# composed (live text, canonical fragments, deterministic QR SVG); pages without composition
+# fall back to the canonical raster + registry QR overlay (v2 method). Page 04 stays a raster
+# fallback while PAGE_04_EDITORIAL_ARBITRATION_REQUIRED holds.
+v3:
+  version: 3.0.0-rc1
+  fallback_raster_pages_allowed: [4]
+  outputs:
+    sequential_16: {filename: Seigneurs_La_Chambre_v3_16_pages_A5.pdf, page_size: A5}
+    imposed_a4: {filename: Seigneurs_La_Chambre_v3_Livret_A4_Impose_RectoVerso.pdf, page_size: A4-landscape}
+    panels_a2: {filename: Seigneurs_La_Chambre_v3_Panneaux_A2_16p.pdf, page_size: A2}
+    panels_a1: {filename: Seigneurs_La_Chambre_v3_Panneaux_A1_16p.pdf, page_size: A1}
+  release:
+    bundle: Seigneurs_La_Chambre_v3_Print_PDFs.zip
+    checksums: SHA256SUMS-v3.txt
+    report: build-report-v3.json
+  pdf_metadata:
+    title: Les Seigneurs de La Chambre et leur patrimoine en Maurienne
+    author: Amis du Couvent des Cordeliers de La Chambre
+    subject: Livret de l'exposition — Notre-Dame-du-Cruet — Décembre 2025

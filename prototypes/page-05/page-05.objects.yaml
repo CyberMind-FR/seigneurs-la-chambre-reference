@@ -5,7 +5,7 @@ title: Le Château Joli
 status: APPROVED
 generated_from:
   composition: prototypes/page-05/composition.yaml
-  composition_run: 35a8e916496a13673ca0a77d5a89e8bb20e2a5f1b9f7d6d3f8ca213388f76ad2
+  composition_run: 48210a531b9b51da13a287860442eef5aded23cd3bc513822388eb21b4bbc86b
 canonical_reference:
   path: assets/page-05.jpg
   sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
@@ -74,8 +74,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: d5ed95a090181c80a93e65a6137a3c570ad837bf8e377b7db88c3601f652eed5
-  effective_ppi_a5: 185.78
+  sha256: a81eeecaecce8bd3dedbf517223ee7f14e350e08ca8516ec9a40fe2eaef53e92
+  effective_ppi_a5: 300.97
   dirty_edges:
   - top
   review_status: APPROVED
@@ -94,8 +94,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: b710dd7abe42456802d7064926d1fdbee7e31fbff89c0c522dfcbc3d608df20e
-  effective_ppi_a5: 185.78
+  sha256: 769506fbf24e95d5fd128cb0bbeb7d63a5f2dd88ab1a854360ad4439a6bdbc37
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   - right
@@ -116,8 +116,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 5f59b03476f2127c8738d96ec90af54553ee17b2d4084c3f25c9ce4e72aa7dbb
-  effective_ppi_a5: 185.78
+  sha256: c73d97e5c7f4a2803a5450a9e062c16e30be4659062741af95d45ea0a24a1dd9
+  effective_ppi_a5: 1200.16
   dirty_edges:
   - bottom
   - left
@@ -156,8 +156,8 @@ objects:
     fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: e79b10ac8160d4a0720a7134367edeb62cd5bb766b8e854d932eb6edd05bf14d
-  effective_ppi_a5: 185.78
+  sha256: f34131637fa23e283021ad46cbd407c77d1d9ad6fbe3983e5e2b1a6ca4db090b
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   - right
@@ -177,8 +177,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: a25c8d0ea6a082aed7e3c70bb14e109088821cfffc5213fc0a70d4cb71c7c8a9
-  effective_ppi_a5: 185.78
+  sha256: 2267f1017dab815336535e08f2a998b374b2308fcdade821a0c6de3b217e32db
+  effective_ppi_a5: 300.97
   dirty_edges:
   - right
   review_status: APPROVED
@@ -197,8 +197,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 3d294a4592e9864b56612e981d85407c9f7c41c06934f359e58becffb62abe1b
-  effective_ppi_a5: 185.78
+  sha256: d3a559a9dc9a58577f392dbff04c8538da0c6e6680bb310ce9fc567e852e70bf
+  effective_ppi_a5: 300.97
   dirty_edges:
   - left
   - right
@@ -227,8 +227,8 @@ objects:
     fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: a074c192fed769974f2cdf5e0d419e73f1e4bcf27e04027472802b199fb666d6
-  effective_ppi_a5: 185.78
+  sha256: a81ea971098a571adf746d2026f4dbff316287a87c2f4fc087a58783f8c5ba3c
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - right
@@ -249,8 +249,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 4da4c48cafbf722432899302dc061ac56d3c34af1528742ff06ce7545bf9238c
-  effective_ppi_a5: 185.78
+  sha256: 2fa574e1ac313cd584a57fd89ff0ef67c608737e9087c24cb374bf744efdf8b2
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -272,8 +272,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 1a45ebef77a8db61dd4a4713be472e0e95642893db50bb01dc6572716898688c
-  effective_ppi_a5: 185.78
+  sha256: 2d86d6c797e66752720043388738ef7abef077de8dcd8f313e3ae8ba8e96a6cf
+  effective_ppi_a5: 1200.16
   dirty_edges: []
   review_status: APPROVED
 - id: P05-O-phone_icon
@@ -291,8 +291,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 322fdac7bcce5d1cca48852de3f34c9a5e1c2f692aaa4ace1c54e52ce097a4f5
-  effective_ppi_a5: 185.78
+  sha256: 7e385111d1899fe445b257dfda7506b27686ea66d438d40f162799f257f71729
+  effective_ppi_a5: 1200.16
   dirty_edges: []
   review_status: APPROVED
 - id: P05-O-mappe_icon
@@ -310,8 +310,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 08af0aa98249c493bec0d7bb9b9f4639ec5197e63164937d12ff8e7cce675bae
-  effective_ppi_a5: 185.78
+  sha256: beae763ee9064c8b8ac1ca9f0c1b836b71b94037118372dcd0c3cffc0ca42b98
+  effective_ppi_a5: 1200.16
   dirty_edges:
   - bottom
   - left
@@ -333,8 +333,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: c55f1b62f6d1aad3206f48e0473d3c64900605154cac80f9935a412a93f787a4
-  effective_ppi_a5: 185.78
+  sha256: 5c4a238e3c93e8621c5ae71a26c12a922aa5a8089f4fa858a1ffbd835e2283b2
+  effective_ppi_a5: 1200.16
   dirty_edges:
   - bottom
   - left
@@ -363,8 +363,8 @@ objects:
     fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-05.jpg
-  sha256: 6e8fe56714720b5158f87c6dba5dc3878dae3c1124961c4d9b34d80d5c3139bf
-  effective_ppi_a5: 185.78
+  sha256: 0bd92c56d485451ab359a93280fe79bad6865e5d9bbecf059a8e82aabc100891
+  effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
   - left
@@ -740,4 +740,4 @@ completeness_gate:
   all_editorial_text_composed_live: true
   qr_accounted_for: true
   second_visual_sweep_by_human: pending
-  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER
+  last_methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE

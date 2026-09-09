@@ -61,6 +61,19 @@ validé en Phase A : sa modification exige une nouvelle validation humaine, il n
 Un raster sous le gate n'est jamais « récupéré » par upscale : source HD, réduction de placement,
 validation explicite d'un seuil inférieur, ou vectorisation sans dérive.
 
+**Exception provisoire (décision du propriétaire, 2026-09-09, « upscale des croquis si nécessaire,
+on le régénérera ultérieurement »)** : un fragment sous le gate peut être ré-échantillonné (Lanczos,
+facteur ≤ 8) jusqu'au gate de sa classe pour la première version finalisée, à trois conditions :
+1. l'upscale est **déclaré** dans `composition.yaml` (`validation.upscale.enabled: true`, approbateur,
+   date, `max_factor`) et **journalisé** par fragment (`source_ppi`, `upscale_factor`,
+   `upscale_provisional: true` dans `fragments.json` et `fragments.lock.yaml`) ;
+2. la page porte le gate `PASS_WITH_PROVISIONAL_UPSCALE`, jamais `PASS` — un upscale n'est jamais
+   présenté comme de la haute définition ;
+3. les croquis concernés restent inscrits à régénérer en haute définition ; à la régénération,
+   `upscale.enabled` repasse à `false` et le gate doit redevenir `PASS` sans ré-échantillonnage.
+Quand le facteur maximal ne suffit pas (page 16, trait : 131,8 → 1054 ppi), la dérogation A5
+explicite s'applique (`PASS_WITH_RESOLUTION_WAIVER`).
+
 ## Politique de trame de fond
 Le fond de page devient un actif indépendant et reproductible.
 Il doit respecter `style.yaml` et le langage SpiritualCept : papier blanc/ivoire très clair, grain discret, contraste d'impression élevé, aucune information documentaire encodée dans la texture.
@@ -195,9 +208,12 @@ Commandes minimales :
 - `make sync`
 - `make validate`
 
-Après composition imprimable :
-- `make build`
-- validation du PDF final et de sa couche texte.
+Après composition imprimable, dans cet ordre (`make validate` refuse un checkout contenant `dist/`) :
+- `make clean && make validate`
+- `make build` (PDF v2, méthode raster) puis `make build-v3` (PDF v3 multicouches, qui enchaîne
+  `validate-build-v3` : 16 pages, QR redécodés, couche texte complète, polices toutes embarquées,
+  aucune chaîne interdite de `corrections.yaml`) ;
+- `make release` équivaut à `build` + `build-v3`.
 
 ## Style verrouillé
 Le langage graphique SpiritualCept reste un carnet de recherches historique / sketchbook documentaire : papier blanc neutre imprimable, encre brun-noir / sépia, gravure et graphite, titres rouge-brun, accents bleu/or héraldiques, ornements fins et forte lisibilité d'impression.

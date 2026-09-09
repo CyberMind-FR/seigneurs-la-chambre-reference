@@ -4,93 +4,132 @@ source: assets/page-05.jpg
 source_sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
 fragments:
   running_head_raster:
-    sha256: d5ed95a090181c80a93e65a6137a3c570ad837bf8e377b7db88c3601f652eed5
+    sha256: a81eeecaecce8bd3dedbf517223ee7f14e350e08ca8516ec9a40fe2eaef53e92
     bbox_px:
       x: 214
       y: 32
       w: 632
       h: 36
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   heraldry_captioned:
-    sha256: b710dd7abe42456802d7064926d1fdbee7e31fbff89c0c522dfcbc3d608df20e
+    sha256: 769506fbf24e95d5fd128cb0bbeb7d63a5f2dd88ab1a854360ad4439a6bdbc37
     bbox_px:
       x: 30
       y: 60
       w: 158
       h: 266
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   title_ornament:
-    sha256: 5f59b03476f2127c8738d96ec90af54553ee17b2d4084c3f25c9ce4e72aa7dbb
+    sha256: c73d97e5c7f4a2803a5450a9e062c16e30be4659062741af95d45ea0a24a1dd9
     bbox_px:
       x: 298
       y: 194
       w: 432
       h: 34
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   hero_captioned:
-    sha256: e79b10ac8160d4a0720a7134367edeb62cd5bb766b8e854d932eb6edd05bf14d
+    sha256: f34131637fa23e283021ad46cbd407c77d1d9ad6fbe3983e5e2b1a6ca4db090b
     bbox_px:
       x: 578
       y: 72
       w: 421
       h: 474
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   poype_captioned:
-    sha256: a25c8d0ea6a082aed7e3c70bb14e109088821cfffc5213fc0a70d4cb71c7c8a9
+    sha256: 2267f1017dab815336535e08f2a998b374b2308fcdade821a0c6de3b217e32db
     bbox_px:
       x: 33
       y: 704
       w: 427
       h: 318
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   princess_captioned:
-    sha256: 3d294a4592e9864b56612e981d85407c9f7c41c06934f359e58becffb62abe1b
+    sha256: d3a559a9dc9a58577f392dbff04c8538da0c6e6680bb310ce9fc567e852e70bf
     bbox_px:
       x: 480
       y: 727
       w: 518
       h: 300
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   map_document:
-    sha256: a074c192fed769974f2cdf5e0d419e73f1e4bcf27e04027472802b199fb666d6
+    sha256: a81ea971098a571adf746d2026f4dbff316287a87c2f4fc087a58783f8c5ba3c
     bbox_px:
       x: 40
       y: 1043
       w: 369
       h: 203
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   localization_vignette:
-    sha256: 4da4c48cafbf722432899302dc061ac56d3c34af1528742ff06ce7545bf9238c
+    sha256: 2fa574e1ac313cd584a57fd89ff0ef67c608737e9087c24cb374bf744efdf8b2
     bbox_px:
       x: 452
       y: 1140
       w: 251
       h: 113
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true
   pin_icon:
-    sha256: 1a45ebef77a8db61dd4a4713be472e0e95642893db50bb01dc6572716898688c
+    sha256: 2d86d6c797e66752720043388738ef7abef077de8dcd8f313e3ae8ba8e96a6cf
     bbox_px:
       x: 495
       y: 1046
       w: 19
       h: 26
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   phone_icon:
-    sha256: 322fdac7bcce5d1cca48852de3f34c9a5e1c2f692aaa4ace1c54e52ce097a4f5
+    sha256: 7e385111d1899fe445b257dfda7506b27686ea66d438d40f162799f257f71729
     bbox_px:
       x: 773
       y: 1045
       w: 17
       h: 27
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   mappe_icon:
-    sha256: 08af0aa98249c493bec0d7bb9b9f4639ec5197e63164937d12ff8e7cce675bae
+    sha256: beae763ee9064c8b8ac1ca9f0c1b836b71b94037118372dcd0c3cffc0ca42b98
     bbox_px:
       x: 60
       y: 1266
       w: 32
       h: 26
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   info_icons:
-    sha256: c55f1b62f6d1aad3206f48e0473d3c64900605154cac80f9935a412a93f787a4
+    sha256: 5c4a238e3c93e8621c5ae71a26c12a922aa5a8089f4fa858a1ffbd835e2283b2
     bbox_px:
       x: 40
       y: 1337
       w: 50
       h: 135
+    source_ppi: 185.78
+    upscale_factor: 6.46
+    upscale_provisional: true
   ruins_vignette:
-    sha256: 6e8fe56714720b5158f87c6dba5dc3878dae3c1124961c4d9b34d80d5c3139bf
+    sha256: 0bd92c56d485451ab359a93280fe79bad6865e5d9bbecf059a8e82aabc100891
     bbox_px:
       x: 575
       y: 1314
       w: 428
       h: 158
+    source_ppi: 185.78
+    upscale_factor: 1.62
+    upscale_provisional: true

@@ -1,4 +1,4 @@
-.PHONY: help sync qr-svg validate-qr-svg validate-phase-b-svg manifest-v3 validate validate-layered layered-measure layered-compose layered-inventory build validate-build clean
+.PHONY: help sync qr-svg validate-qr-svg validate-phase-b-svg manifest-v3 validate validate-layered layered-measure layered-compose layered-inventory layered-register build validate-build build-v3 validate-build-v3 release clean
 
 PYTHON ?= python3
 DIST ?= dist
@@ -18,6 +18,9 @@ help:
 	@echo "make validate-layered    - recompose et valide chaque page multicouche (texte, QR, SHA, ppi, collisions)"
 	@echo "make build               - construit les PDF puis valide les QR du PDF final"
 	@echo "make validate-build      - valide les QR réinjectés dans le PDF final"
+	@echo "make build-v3            - assemble les PDF v3 (compositions multicouches, page 04 en repli raster) puis les valide"
+	@echo "make validate-build-v3   - valide les PDF v3 (QR, couche texte, fontes embarquées, chaînes interdites)"
+	@echo "make release             - build v2 + build v3"
 
 sync:
 	$(PYTHON) scripts/sync_hashes.py
@@ -51,6 +54,9 @@ layered-compose:
 layered-inventory:
 	@for p in $(LAYERED_PAGES); do $(PYTHON) scripts/layered_inventory.py $$p || exit 1; done
 
+layered-register:
+	$(PYTHON) scripts/register_layered.py
+
 validate-layered:
 	$(PYTHON) scripts/validate_layered.py $(LAYERED_PAGES)
 
@@ -60,6 +66,15 @@ validate-build:
 build: validate
 	$(PYTHON) scripts/build_pdfs.py --config build-config.yaml --out $(DIST)
 	$(MAKE) validate-build
+
+build-v3:
+	$(PYTHON) scripts/build_layered.py --out $(DIST)
+	$(MAKE) validate-build-v3
+
+validate-build-v3:
+	$(PYTHON) scripts/validate_built_layered.py
+
+release: build build-v3
 
 clean:
 	rm -rf $(DIST) _verify-layered

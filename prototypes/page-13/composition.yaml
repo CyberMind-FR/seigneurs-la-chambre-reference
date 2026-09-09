@@ -72,7 +72,7 @@ discrepancies:
     - {fragment: running_head_raster, description: "bandeau courant"}
     - {fragment: heraldry_captioned, description: "légende des armoiries"}
     - {fragment: map_composite, description: "toponyme « La Maurienne » et repères numérotés (intrinsèques à la carte)"}
-    - {fragment: association_cartouche, description: "« LES AMIS DU COUVENT DES CORDELIERS DE LA CHAMBRE »"}
+    - {fragment: association_cartouche, description: "« LES AMIS DU COUVENT DES CORDELIERS DE LA CHAMBRE » (ancienne forme, voir corrections.yaml:association_name_2026_09_09)"}
   canonical_text_differs_from_raster:
     - "les cinq libellés de sites autour de la carte sont formulés différemment dans le raster (« Couvent des Cordeliers / Maison de La Tour »…) : masqués, les puces canoniques sont composées à leur place"
     - "les libellés des ressources du raster ne portent pas les domaines (résidus « r », « fo », « g », « fr ») : les blocs canoniques complets (libellé : domaine) sont composés"
@@ -94,3 +94,7 @@ validation:
   text_overflow: warn
   fragment_lock: warn
   resolution_waiver: {approved: true, approved_by: gkerma, date: '2026-09-09', page_sizes: [A5], min_ppi_accepted: 180}
+  # Upscale provisoire (décision gkerma, 2026-09-09 : « prendre en compte le dpi demandé… upscale des croquis
+  # si nécessaire ! On le régénérera ultérieurement ») : chaque fragment est rééchantillonné (Lanczos) jusqu'au
+  # gate de son type à la taille A5 ; journalisé par fragment (upscale_factor), jamais présenté comme source HD.
+  upscale: {enabled: true, approved_by: gkerma, date: '2026-09-09', max_factor: 8, note: "provisoire — croquis à régénérer en haute définition"}

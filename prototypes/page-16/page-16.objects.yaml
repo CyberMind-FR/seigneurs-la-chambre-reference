@@ -5,7 +5,7 @@ title: Remerciements
 status: APPROVED
 generated_from:
   composition: prototypes/page-16/composition.yaml
-  composition_run: bd54fee57174abd77a43d9034f9315be0d1819016a116a0ab6be892eff3275ee
+  composition_run: fd40fdde7c6c49316520ecc83fbdc312825906a9619f9507deac208a713d3810
 canonical_reference:
   path: assets/page-16.jpg
   sha256: 3faf93d696748d4b4d9fc7bf1eb8cf0b93bd09758e2913d1e7b74ec33b273331
@@ -67,8 +67,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-16.jpg
-  sha256: c089858ac1879953fc8c321ce7520c38dbec3e97225f1fd4e8a36284dc1df3fb
-  effective_ppi_a5: 131.81
+  sha256: a6a71d2f04e2c6e929d1950670942ef724eca2724903f42b81064079376b547e
+  effective_ppi_a5: 1054.44
   dirty_edges:
   - bottom
   - left
@@ -90,8 +90,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-16.jpg
-  sha256: 2a6635c46c9ff5df05de3d9552d4213f8f2abdb0ab6079e617d42a85a39618fa
-  effective_ppi_a5: 131.81
+  sha256: 6a61ff2d7999bd79d31bc3202814e3d608095ad699a96fa4c5b9f77714371b8f
+  effective_ppi_a5: 1054.44
   dirty_edges:
   - bottom
   - left
@@ -113,8 +113,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-16.jpg
-  sha256: 7ab047bc1a3e02cab98fdc9dfc63346d4318b497cd49ab0fd4f786e22be582ed
-  effective_ppi_a5: 131.81
+  sha256: 2ead0e206e256d80988c9778c93a18031cea01d82a777db8e9e761f42a92ba28
+  effective_ppi_a5: 1054.44
   dirty_edges:
   - bottom
   - left
@@ -136,8 +136,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-16.jpg
-  sha256: 97883906ce11acd5e86988f969004341bf6b0bde256ed5d3c4a17c422d427d34
-  effective_ppi_a5: 131.81
+  sha256: b586d23582f772b47fab959ff4c10821a806b1f07d38993c4944435ad8a3a6aa
+  effective_ppi_a5: 1054.44
   dirty_edges:
   - bottom
   - left
@@ -159,8 +159,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-16.jpg
-  sha256: 8f87cc16c2152b784aafb481e45ee33a25e96d68929f89c9dcf0589cda7308b1
-  effective_ppi_a5: 131.81
+  sha256: f9bd3b9648419b718c3c9c6d114470506cb88a8c0062c88e9192d468009e59ad
+  effective_ppi_a5: 1054.44
   dirty_edges:
   - left
   - right
@@ -181,8 +181,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-16.jpg
-  sha256: b31a22368145bbce5d21444687069bff4cd1d2fe495d12050fd4d7b6cde2649c
-  effective_ppi_a5: 131.81
+  sha256: 30c5d320d9a912a6b55b8ed590262f973b5cd2b7e983704b5c963a91dc068fdc
+  effective_ppi_a5: 300.52
   dirty_edges: []
   review_status: APPROVED
 - id: P16-O-landscape
@@ -200,8 +200,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-16.jpg
-  sha256: ea027e0b0ed15e1b5601378797f9b4a24358a63796139dfc8683308a22e4c1d0
-  effective_ppi_a5: 131.81
+  sha256: 64c2d3670158f638f8ef6e43aaca60e3317c94e091290ec87fac7edbf065faec
+  effective_ppi_a5: 300.52
   dirty_edges:
   - bottom
   - left
@@ -223,8 +223,8 @@ objects:
   masks_px: []
   provenance: canonical_pages
   source_ref: assets/page-16.jpg
-  sha256: 029604a0ffafde84e0263be6dc3652d6c23cff7ffb54c47309c162f44125c7ae
-  effective_ppi_a5: 131.81
+  sha256: 4f86fc681112f1408e80a8410e1c574aed97fcfcaca264c0c2e9d11b00084796
+  effective_ppi_a5: 300.52
   dirty_edges:
   - bottom
   - right
@@ -346,7 +346,7 @@ text_zones:
 - id: P16-T-assoc
   role: assoc
   canonical_block: 8
-  expect: Les Amis du Couvent
+  expect: Amis du Couvent
   bbox_px:
   - 150
   - 618
@@ -441,4 +441,4 @@ completeness_gate:
   all_editorial_text_composed_live: true
   qr_accounted_for: true
   second_visual_sweep_by_human: pending
-  last_methodology_gate: PASS_WITH_RESOLUTION_BLOCKER
+  last_methodology_gate: PASS_WITH_RESOLUTION_WAIVER

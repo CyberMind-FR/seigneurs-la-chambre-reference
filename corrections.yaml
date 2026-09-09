@@ -89,3 +89,28 @@ visual_global_2026_09_07:
   - Textes et encres renforcés pour l'impression.
   - Contenu, composition, illustrations et géométrie inchangés.
   rule: Traitement colorimétrique déterministe uniquement; réinjection de tous les QR après traitement.
+association_name_2026_09_09:
+  status: canonical_override
+  reason: Demande du propriétaire du projet (2026-09-09) de corriger le nom de l'association d'après le site officiel.
+  canonical: Amis du Couvent des Cordeliers de La Chambre
+  canonical_short: Amis du Couvent des Cordeliers
+  was: Les Amis du Couvent des Cordeliers de La Chambre
+  forbidden:
+  - Les Amis du Couvent des Cordeliers
+  verification:
+    date: '2026-09-09'
+    method: recherche web (le site officiel est inaccessible depuis l'environnement de travail, proxy sortant)
+    sources:
+    - 'Titre du site officiel : « Accueil - Association des Amis du couvent des cordeliers de La Chambre » (https://www.couventdelachambre.fr/)'
+    - 'Registre des associations : « AMIS DU COUVENT DES CORDELIERS DE LA CHAMBRE » (https://www.net1901.org/association/AMIS-DU-COUVENT-DES-CORDELIERS-DE-LA-CHAMBRE,783345.html)'
+    - 'Annuaire : « Amis Du Couvent Des Cordeliers De La Chambre » (https://www.pagesjaunes.fr/pros/58544030)'
+    pending: confirmer sur le site officiel la casse exacte (« couvent des cordeliers » en minuscules sur le site) ; la forme au singulier « Ami » n'est attestée par aucune source.
+  applied_to:
+  - pages/01.yaml (bloc Association « … »)
+  - pages/13.yaml (bloc « … » œuvre pour préserver…)
+  - pages/14.yaml (subtitle et bloc 1)
+  - pages/15.yaml (blocs 13 et 20)
+  - pages/16.yaml (bloc 8)
+  - build-config.yaml (libellé page 16, auteur des métadonnées PDF)
+  raster_note: Les éléments raster conservés (pieds de page des pages 01 et 02, cartouche de la page 13, bandeaux, logo) portent encore l'ancienne forme « Les Amis… » ; à régénérer avec les croquis.
+  rule: Le texte vivant des PDF ne doit plus contenir « Les Amis du Couvent des Cordeliers » (contrôle scripts/validate_built_layered.py).

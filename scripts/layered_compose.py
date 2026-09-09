@@ -39,15 +39,16 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.pdfmetrics import stringWidth
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
+from reportlab import rl_config
+
+# Binary Flate streams (no ASCII85 re-encoding, +25 % size for no gain); fragments stay lossless.
+rl_config.useA85 = 0
 from reportlab.platypus import Paragraph
-from reportlab.graphics import renderPDF
+from reportlab.graphics import renderPDF, shapes as rl_shapes
 from svglib.svglib import svg2rlg
 import yaml
 
-try:  # PyMuPDF renamed its module; support both.
-    import pymupdf as fitz
-except ImportError:  # pragma: no cover
-    import fitz
+import pymupdf as fitz  # PyMuPDF
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE_SIZES = {"A5": A5, "A4": A4, "A2": A2, "A1": A1}
@@ -189,12 +190,18 @@ class Composer:
                 raise SystemExit(f"font {name!r}: none of {candidates} exists on this machine")
             pdfmetrics.registerFont(TTFont(name, found))
             self.report.setdefault("fonts", {})[name] = found
+        # No non-embedded base-14 font may be referenced by the PDF (Helvetica preamble,
+        # Times-Roman initial state of the SVG renderer): point both defaults to an embedded TTF.
+        self.default_font = defaults.get("font", "LiberationSerif")
+        if self.default_font not in pdfmetrics.getRegisteredFontNames():
+            raise SystemExit(f"default font {self.default_font!r} is not a registered (embedded) TrueType font")
+        rl_shapes.STATE_DEFAULTS["fontName"] = self.default_font
 
     def make_style(self, name, size=None):
         s = self.style_specs[name]
         size = size or float(s["size"])
         leading = float(s.get("leading", size * 1.12)) * (size / float(s["size"]))
-        return ParagraphStyle(name, fontName=s.get("font", "Times-Roman"), fontSize=size, leading=leading,
+        return ParagraphStyle(name, fontName=s.get("font", self.default_font), fontSize=size, leading=leading,
                               textColor=colors.HexColor(s.get("color", "#2f241e")), alignment=ALIGN[s.get("align", "left")],
                               splitLongWords=0, embeddedHyphenation=1)
 
@@ -276,13 +283,27 @@ class Composer:
                     raise SystemExit(f"fragment {f['id']}: unknown mask_fill {mode!r}")
                 ImageDraw.Draw(crop).rectangle((mx - x, my - y, mx - x + mw - 1, my - y + mh - 1), fill=fill)
                 masks.append({"x": mx, "y": my, "w": mw, "h": mh, "fill_rgb": list(fill), "fill_mode": mode})
-            crop.save(path)
             dest = bbox_tuple(f["dest_bbox_px"]) if f.get("dest_bbox_px") else (x, y, w, h)
             dx, dy, dw, dh = self.geom.box(*dest)
-            ppi = self.geom.ppi_for(w, dw)
+            source_ppi = self.geom.ppi_for(w, dw)
             kind = f.get("raster_kind") or ("line_art" if f.get("role") in LINE_ART_ROLES else "continuous_tone")
             if kind not in DEFAULT_PPI_GATES:
                 raise SystemExit(f"fragment {f['id']}: unknown raster_kind {kind!r}")
+            # Provisional upscale (explicit project decision, never presented as HD recovery):
+            # resample the fragment so that its placed resolution reaches the gate of its kind.
+            ups = val.get("upscale") or {}
+            gates_cfg = dict(DEFAULT_PPI_GATES)
+            for gk, gv in (val.get("min_effective_ppi") or {}).items():
+                if gk in gates_cfg:
+                    gates_cfg[gk] = float(gv)
+            upscale_factor = 1.0
+            if ups.get("enabled") and source_ppi < gates_cfg[kind]:
+                upscale_factor = min(float(ups.get("max_factor", 8.0)), gates_cfg[kind] / source_ppi)
+                upscale_factor = float(np.ceil(upscale_factor * 100) / 100)
+                new_size = (int(round(crop.width * upscale_factor)), int(round(crop.height * upscale_factor)))
+                crop = crop.resize(new_size, Image.LANCZOS)
+            crop.save(path)
+            ppi = source_ppi * upscale_factor
             rec = {
                 "id": f["id"], "role": f.get("role"), "status": f.get("status"), "raster_kind": kind,
                 "path": str(path.relative_to(ROOT)), "sha256": sha256(path),
@@ -294,6 +315,10 @@ class Composer:
                 "dest_bbox_px": dict(zip("xywh", dest)),
                 "dest_pt": [round(dx, 2), round(dy, 2), round(dw, 2), round(dh, 2)],
                 "effective_ppi": round(ppi, 2),
+                "source_ppi": round(source_ppi, 2),
+                "upscale_factor": upscale_factor,
+                "upscale_provisional": upscale_factor > 1.0,
+                "output_px": [crop.width, crop.height],
                 "edge_ink_before": {k: round(v, 4) for k, v in before.items()},
                 "edge_ink_after": {k: round(v, 4) for k, v in after.items()},
                 "dirty_edges": dirty,
@@ -352,7 +377,7 @@ class Composer:
         min_size = float(spec.get("min_size", self.style_defaults.get("min_size", 4.6)))
         step = float(spec.get("shrink_step", self.style_defaults.get("shrink_step", 0.2)))
         size = float(spec["size"])
-        font = spec.get("font", "Times-Roman")
+        font = spec.get("font", "LiberationSerif")
         tokens = [t for part in text.split() for t in re.split(r"(?<=-)", part) if t]
         while True:
             style = self.make_style(style_name, size)
@@ -429,9 +454,10 @@ class Composer:
             self.draw_svg(c, ROOT / q["svg"], bbox_tuple(q["bbox_px"]))
 
     def render_layers(self, pdf, blocks, qrs, only=None, record_text=True):
-        c = canvas.Canvas(str(pdf), pagesize=(self.page_w, self.page_h), pageCompression=1)
+        c = canvas.Canvas(str(pdf), pagesize=(self.page_w, self.page_h), pageCompression=1,
+                          initialFontName=self.default_font, initialFontSize=10)
         c.setTitle(self.spec.get("pdf_title", f"Composition v3 multicouche - Page {self.page:02d}"))
-        c.setAuthor(self.spec.get("pdf_author", "Les Amis du Couvent des Cordeliers de La Chambre"))
+        c.setAuthor(self.spec.get("pdf_author", "Amis du Couvent des Cordeliers de La Chambre"))
         order = self.spec.get("layer_order", ["background", "raster_fragments", "documentary_vectors", "text_layer", "functional_overlay"])
         if order[-1] != "functional_overlay":
             raise SystemExit("functional_overlay (QR) must be the last layer")
@@ -617,8 +643,11 @@ class Composer:
         warns = [i for i in self.issues if i[0] != "fail"]
         text_pass, qr_pass = not missing, all(r["pass"] for r in qr_results)
         review = "PENDING_HUMAN_REVIEW" if any(f["status"] != "APPROVED" for f in self.fragments) else "REVIEWED"
+        upscaled = [f["id"] for f in self.fragments if f.get("upscale_provisional")]
         if not (text_pass and qr_pass and frag_sha_pass) or fails:
             gate_status = "FAIL"
+        elif resolution_pass and upscaled:
+            gate_status = "PASS_WITH_PROVISIONAL_UPSCALE"
         elif not resolution_pass and waiver_applies:
             gate_status = "PASS_WITH_RESOLUTION_WAIVER"
         elif not resolution_pass:
@@ -634,6 +663,10 @@ class Composer:
             "fragment_count": len(self.fragments), "fragment_sha_pass": frag_sha_pass,
             "fragments_skipped": self.skipped_fragments,
             "fragment_effective_ppi_min": round(ppi_min, 2),
+            "fragment_source_ppi_min": round(min([f["source_ppi"] for f in self.fragments], default=self.report["source_effective_ppi"]), 2),
+            "provisional_upscale": {"declared": bool(val.get("upscale", {}).get("enabled")), "fragments": upscaled,
+                                    "approved_by": (val.get("upscale") or {}).get("approved_by"), "date": (val.get("upscale") or {}).get("date"),
+                                    "note": (val.get("upscale") or {}).get("note")},
             "resolution_gate": {"page_size": self.page_size_name, "rule": "final placement size, every output format",
                                 "by_raster_kind": by_kind, "pass": resolution_pass, "waiver": waiver_report},
             "text_ink_collisions": collisions,
@@ -653,7 +686,13 @@ class Composer:
 
     def lock_check(self):
         lock_path = self.spec_path.parent / "fragments.lock.yaml"
-        current = {f["id"]: {"sha256": f["sha256"], "bbox_px": f["bbox_px"]} for f in self.fragments}
+        current = {}
+        for f in self.fragments:
+            entry = {"sha256": f["sha256"], "bbox_px": f["bbox_px"]}
+            if f.get("upscale_provisional"):  # provisional upscale is part of the audited identity
+                entry.update({"source_ppi": f["source_ppi"], "upscale_factor": f["upscale_factor"],
+                              "upscale_provisional": True})
+            current[f["id"]] = entry
         if self.write_lock:
             lock_path.write_text(yaml.safe_dump({
                 "schema_version": 1, "page": self.page, "source": self.report["source"],

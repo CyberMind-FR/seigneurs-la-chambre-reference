@@ -4,191 +4,272 @@ source: assets/page-15.jpg
 source_sha256: e2b31837f4393bbb3ccc0db4e0c523a91aa9237c165184aa7e959d555117606d
 fragments:
   heraldry:
-    sha256: 7311501e48be75ca392d734aaa6ada5fb068fa404d4ee239eab9704c83f82412
+    sha256: cc492be3f4193a47b13698420cfa2b154092b65f32bdd8f7dad4579047538010
     bbox_px:
       x: 35
       y: 28
       w: 170
       h: 232
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   statue_top_right:
-    sha256: da7dc1d06e1cf3cb81a7358c87fac3043d8ae65fe649d0120b8b3eef988bcc14
+    sha256: cc32b612d0761e1bf50eaa0158ef3b006ee2a33d0923b7de7dae8c180a0caff3
     bbox_px:
       x: 878
       y: 25
       w: 162
       h: 310
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   mountains_right:
-    sha256: dc95b033b9368b74a755ea24dc370b17a35e54f96e18b6c4e17560ceeab8586b
+    sha256: 9f5b59c7502c6fa88bac93c7d8ab4b2080e6243141fd4e62d3c0006b47cf5824
     bbox_px:
       x: 738
       y: 150
       w: 302
       h: 142
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   title_ornament:
-    sha256: c27ab977d320acfef28467deb4d5b9ae67a2da134b456e418ebf5897e1160d65
+    sha256: 11d71190645cd87ed25cbd3e26ce69ced5c38cdbabc19d03e7d31775106be5ed
     bbox_px:
       x: 298
       y: 260
       w: 460
       h: 34
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   banner_10_sites:
-    sha256: adf76b02ce618ea21715cff3eb05328a2ecaa64271da6b5ab16158396416d9c8
+    sha256: 863bfdf42fc59c4db2076fcba16c51ed9c80815d30c79d3576712817c3f72319
     bbox_px:
       x: 88
       y: 298
       w: 785
       h: 62
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   banner_la_chambre:
-    sha256: 1ab2e8c680bfb07dfbcef9d5c5f4fbb747674e8c72d3451cf79c1d242ea32978
+    sha256: 1a7766943795edec2be27730b970070d6fbb2d7c2527b221a15064dce3080a03
     bbox_px:
       x: 40
       y: 373
       w: 297
       h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   banner_ste_marie:
-    sha256: 98f156e2321a39f8fb422068019a0cd3cc2297a19312cb29fc19cfb6cc7a4fec
+    sha256: a7e6fc59166d5328a029c9ff2cb21ae267bed8aa27774ed47cfe336f6c3fe790
     bbox_px:
       x: 40
       y: 518
       w: 392
       h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   banner_st_etienne:
-    sha256: c0d868a32373629b16113d95f48cf20f35ef6cd9a8a881564a82f746810c0696
+    sha256: 160a76ee41d2572e87af5ccbaee7c3330ccd9fb00a730d55406f728f9b98a131
     bbox_px:
       x: 40
       y: 658
       w: 392
       h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   banner_nd_cruet:
-    sha256: 117122dda53b8c11623613482b75498fef5c1ac164632d0a7e3745dc09213a23
+    sha256: a6be058dd3c28bd5cdad888d4ce010808321df61de7d39e42869be6f207d6cdd
     bbox_px:
       x: 40
       y: 813
       w: 392
       h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   banner_st_remy:
-    sha256: 126757a0e19256e02c2b71d6623c667f81cd47613dca03241f5962dce8b5b64d
+    sha256: c7a7d3e25b8c0a0bac450199054a4095012ef23c464dffe77fc913c362bc4d9b
     bbox_px:
       x: 40
       y: 963
       w: 397
       h: 48
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   site_01:
-    sha256: a7154bdda688db51ca9b4cb6d83b349b602b9182d59e0a549496dbf52e9ea633
+    sha256: 7f7cf0caf9c497d49dc124946685968e1b09a0dca467a05b33d6e3c3affe31cb
     bbox_px:
       x: 440
       y: 363
       w: 283
       h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   site_02:
-    sha256: e0331aa5c19312d7492413152096f8247c5c77a53732b8fa03afd6e124af0b0e
+    sha256: 7d122c6fb2e026502d1b5a9a39c9205dba85c2ab6977652632d3cd3c6f32c949
     bbox_px:
       x: 735
       y: 363
       w: 296
       h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   site_03:
-    sha256: 5178add93cc1513bc7770b18311d382bef2e826d3941bf56555fb33023936094
+    sha256: d075133b04ae248edbbd98f29fc9f7f87f705a074a5a788cfad1e8b40c819906
     bbox_px:
       x: 440
       y: 508
       w: 290
       h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   site_04:
-    sha256: a2c572b9ca5e76129a85d61bab0f9c92f1ae2dc7eb5c5b6fe939eb6000ef4a61
+    sha256: bd6aa500ee677df899acecad4dd328095f614785b2864346182410d87dfcf7fc
     bbox_px:
       x: 735
       y: 508
       w: 297
       h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   site_05:
-    sha256: 6e6cb8a299b25bd479bb185d0f5c2d1b4a77b61aa65104e92924c2b6ca9e383a
+    sha256: 9366b6820e19e75df4fd13dafb7573834dc9712fb254e745f4f8dd9c1370afe7
     bbox_px:
       x: 441
       y: 648
       w: 206
       h: 147
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   site_06:
-    sha256: 269035a0f177fbce4f4f14ee4a365246e45a76eac9b2ba613cebfa06b094987b
+    sha256: 3889b9eae93d29f45c848bdcb8d077ebb057d3700ba9f421c187d9a935c1c354
     bbox_px:
       x: 640
       y: 648
       w: 202
       h: 147
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   site_07:
-    sha256: 2f27a011efc97f1bc2cdaa6b938063a5e5f2b40c4fec5f287d3ac1a1caaedbe5
+    sha256: eefa91f2a16c8ef4ee009edf0013475b3518aa8063b7aadb709462b14112e047
     bbox_px:
       x: 830
       y: 648
       w: 207
       h: 147
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   site_08:
-    sha256: 1b3eb2dd2f6d1ad63ba2e250a8e3e186043ce34324349f69ddc237eb1eaeef32
+    sha256: 098bdbb8fa8b22a9f53f0b7d7ee0178c21b647e33cf286e98c7ca122efacc84d
     bbox_px:
       x: 441
       y: 808
       w: 301
       h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   site_09:
-    sha256: 446b847d003ab4a6a0688ee4289eec37c286964831df0eefaf0b98e593b3922b
+    sha256: ebe154ae0691d9bdf3b37ef082252ab2b7161e47e5b6f4e853002c847acf3fea
     bbox_px:
       x: 735
       y: 808
       w: 302
       h: 137
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   site_10:
-    sha256: 0056e30e9654f4cb6fbceee6d1bb31bbbb0dab05f488a325a69dcd880b637004
+    sha256: bffedda065becde59fdf37f094221ba5b8826a2d14f9d227f8b2f3b38ff33017
     bbox_px:
       x: 440
       y: 958
       w: 597
       h: 122
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   cloister_arch_left:
-    sha256: 1ed40427529fb92950b0a38bd6be6eb0dc50d73d5e94b709dd9b3db5317c862a
+    sha256: b7ce51394634b920a4875494b52c593e591a7198389802236992224ae7246771
     bbox_px:
       x: 47
       y: 1093
       w: 157
       h: 147
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   contact_icons:
-    sha256: 30c56d9df68f79c7af88ab3875f5457c294017b87c4f736a5ec27e3f3eb1faa9
+    sha256: 1e957fdaa607367691585e42ffa76605ad797da2038fa3b76ace8b6d620d3fef
     bbox_px:
       x: 221
       y: 1161
       w: 29
       h: 80
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   cloister_right:
-    sha256: 70c454a12bda1d2a89c022e226a9d008e77beea050ee0e57b0ab71a218cab220
+    sha256: d425768253e4b3527d92cb324b6d63464d54d6ac22c7bfa68fc14972975db672
     bbox_px:
       x: 748
       y: 1093
       w: 270
       h: 152
+    source_ppi: 181.06
+    upscale_factor: 1.66
+    upscale_provisional: true
   dark_band:
-    sha256: c3081400faa2c8394f119b8bd92132d51c8ac211d50ad39f6dec94e6ad2110ef
+    sha256: 3e201683c3a70f9e8598cece8a4c1f88fe51904f246009e582be1b3fa0a9704e
     bbox_px:
       x: 38
       y: 1243
       w: 980
       h: 37
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   seal_left:
-    sha256: 6891594a649da5bfdb135c1ee979cc7cc9b92041ceb14cc42ceef1e254fd936d
+    sha256: 42ab3749df3b9f868e24632a9a6dac0672bd2f08197ed25503915afd7b1d4337
     bbox_px:
       x: 43
       y: 1298
       w: 119
       h: 119
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   prix_fleuron:
-    sha256: 93440cd8ec832aacf1ea51c95486091b36d3911d7bbbcdaffa855edf3ab0f0f5
+    sha256: f735ff8e8563296a716e290e0cd4d1f62f42cda84da14d300c18af2cb49a55fd
     bbox_px:
       x: 888
       y: 1408
       w: 64
       h: 27
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true
   bottom_ornament:
-    sha256: bee60d0eb690a43242757f1f6198c8ac2f88252519a3e3930ffc2161605831dd
+    sha256: 90d04130e70e70d41f47b7aa8a54c1a6f7c9770514b9b35282c23a4f1c16d3c3
     bbox_px:
       x: 298
       y: 1428
       w: 455
       h: 52
+    source_ppi: 181.06
+    upscale_factor: 6.63
+    upscale_provisional: true

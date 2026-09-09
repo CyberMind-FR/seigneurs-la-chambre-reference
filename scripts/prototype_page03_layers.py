@@ -11,7 +11,7 @@ from pathlib import Path
 import hashlib, json, re, sys
 
 import cv2
-import fitz
+import pymupdf as fitz
 import numpy as np
 from PIL import Image, ImageDraw
 from reportlab.lib import colors

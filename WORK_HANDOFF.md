@@ -93,6 +93,31 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
 - `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
   committées).
 
+## État au 2026-09-09 : première version finalisée v3.0.0-rc1 — livret complet 16 pages
+
+Rapport : `docs/migration-text-layer/V3_0_RC1.md`.
+
+- `make build-v3` (`scripts/build_layered.py`) assemble les 16 pages : 15 compositions multicouches
+  + page 04 en **fallback raster v2** (méthode inchangée, autorisée par
+  `build-config.yaml:v3.fallback_raster_pages_allowed`, verrou éditorial intact). Sorties :
+  `Seigneurs_La_Chambre_v3_16_pages_A5.pdf`, `..._v3_Livret_A4_Impose_RectoVerso.pdf`,
+  `..._v3_Panneaux_A2_16p.pdf`, `..._v3_Panneaux_A1_16p.pdf`, `build-report-v3.json`,
+  `SHA256SUMS-v3.txt`, `Seigneurs_La_Chambre_v3_Print_PDFs.zip` (jamais committés ; CI
+  `build-release.yml`).
+- `scripts/validate_built_layered.py` (`make validate-build-v3`) : 16 pages, tous les QR du registre
+  redécodés sur le PDF final, blocs canoniques présents, **polices toutes embarquées** (Liberation
+  Serif TTF ; plus aucune police base-14), aucune chaîne interdite de `corrections.yaml`.
+- **Upscale provisoire déclaré** (décision du propriétaire) : les fragments sous le gate sont
+  ré-échantillonnés jusqu'à 300/1200 ppi, journalisés par fragment, gate
+  `PASS_WITH_PROVISIONAL_UPSCALE` (page 16 : `PASS_WITH_RESOLUTION_WAIVER`). Les croquis restent à
+  régénérer en HD ; voir `REGENERATION_RULES.md` §Gates.
+- **Nom de l'association corrigé** dans le canon : « Amis du Couvent des Cordeliers de La Chambre »
+  (sans article ; forme au singulier « Ami » non attestée) — `corrections.yaml:association_name_2026_09_09`,
+  vérification sur le site officiel encore en attente (site inaccessible depuis l'environnement).
+  Les éléments raster (pieds de page 01/02, cartouche 13, logo) portent encore « Les Amis… ».
+- Registres régénérés par `make layered-register` (`assets/ASSET_INDEX_V3.yaml`, `manifest-v3.yaml`
+  section `layered_compositions`, statut `release_candidate`).
+
 ## État au 2026-09-09 (nuit) : pages 01 et 02 composées et validées — 15/16 pages
 
 Rapport : `docs/migration-text-layer/PHASE_B_PAGES_01_02.md`. Seule la page 04 reste hors
@@ -217,14 +242,21 @@ Chaque fragment raster produit doit enregistrer : page source, zone/bounding box
 6. ~~arbitrer les écarts texte visible ↔ canon et le gate de résolution~~ — validé le 2026-09-09 (canon prévaut ; dérogation A5) ;
 7. ~~traiter ensuite page 10, puis les structures spécifiques 13–16~~ — fait et validé le 2026-09-09 ;
 8. ~~composer les pages 01 et 02~~ — fait et validé le 2026-09-09 ; arbitrer la mention illustrations et les armoiries communales ;
-9. laisser page 04 hors production jusqu’à levée explicite du verrou éditorial.
+9. ~~assembler une première version finalisée (RC1)~~ — fait le 2026-09-09 (`make build-v3`) ;
+10. laisser page 04 hors recomposition jusqu’à levée explicite du verrou éditorial (fallback raster
+    v2 dans le livret v3 en attendant) ;
+11. régénérer les croquis en haute définition, puis désactiver l'upscale provisoire page par page ;
+12. confirmer le nom de l'association sur le site officiel ; régénérer les rasters qui portent
+    encore « Les Amis… » ; arbitrer mention illustrations, armoiries communales, citation de
+    couverture, droits (couvertures p14, logo p16).
 
 ## Validation
 Après modification d’une référence historique : `make sync && make validate`.
 
 Après production d’actifs v3 : enregistrer les SHA/provenances puis `make validate`.
 
-Après composition imprimable : `make build`, validation QR finale et contrôle de la couche texte.
+Après composition imprimable : `make clean && make validate && make build && make build-v3`
+(`make validate` refuse un checkout contenant `dist/` ; `build-v3` enchaîne `validate-build-v3`).
 
 ## Interdiction de reconstruction par archive
 Toujours partir du checkout Git courant. Aucun ancien ZIP ne devient source de vérité.

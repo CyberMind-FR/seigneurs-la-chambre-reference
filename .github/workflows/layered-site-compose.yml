@@ -29,6 +29,8 @@ jobs:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: requirements-build.txt
+      - name: Install fonts (Liberation Serif embedded in the v3 PDFs, DejaVu fallback)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-liberation fonts-dejavu-core
       - name: Install composition dependencies
         run: python -m pip install --disable-pip-version-check -r requirements-build.txt
       - name: Measure canonical page (diagnostics, no OCR)
