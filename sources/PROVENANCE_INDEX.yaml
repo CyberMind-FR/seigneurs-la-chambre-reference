@@ -255,3 +255,13 @@ hd_regenerated_illustrations:
   forbidden: [text_in_generated_image, upscale_of_hd_source, grid_modification, generation_of_heraldry_maps_plans_or_logos]
   control: scripts/hd_check.py (make hd-check, dans make validate)
 
+communal_arms:
+  status: BLOCKED_SOURCE_MISSING  # 2026-09-10 : aucune source accessible depuis l'environnement (proxy) ; 0 commune vérifiée
+  nature: document
+  registry: assets/heraldry/communes/COMMUNES.yaml
+  method: "SVG officiel (Wikimedia Commons ou mairie) rendu par cairosvg au gate trait ; blasonnement confirmé sur l'Armorial des communes de la Savoie ou armorialdefrance.fr"
+  rights: NOT_DOCUMENTED  # à relever sur la page Commons de chaque fichier (licence, auteur) ; attribution à prévoir dans le livret
+  confidence: high_when_verified
+  forbidden: [drawing_from_unconfirmed_blazon, generated_image, use_without_licence_and_author]
+  control: scripts/heraldry_check.py (make heraldry-check, dans make validate)
+

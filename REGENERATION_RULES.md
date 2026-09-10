@@ -74,6 +74,14 @@ facteur ≤ 8) jusqu'au gate de sa classe pour la première version finalisée, 
 Quand le facteur maximal ne suffit pas (page 16, trait : 131,8 → 1054 ppi), la dérogation A5
 explicite s'applique (`PASS_WITH_RESOLUTION_WAIVER`).
 
+### Armoiries communales (2026-09-10)
+Sur les pages de sites, les armes de La Chambre (haut gauche) sont remplacées par les armoiries
+officielles de la commune **uniquement** à partir d'un fichier SVG de source documentée (Commons ou
+mairie) avec licence, auteur, SHA-256, blasonnement confirmé et sa source, vérificateur et date
+(`assets/heraldry/communes/COMMUNES.yaml`, statut `VERIFIED`). Jamais de dessin à partir d'un
+blasonnement non confirmé, jamais de génération d'image. Tant qu'une entrée n'est pas vérifiée, le
+fragment seigneurial reste et la légende « Armoiries de <Commune> » n'est pas composée.
+
 ### Sources HD régénérées (Phase C, 2026-09-09)
 Une illustration peut être remplacée par une **reconstitution HD guidée par référence** (prompt +
 crop canonique, cf. `assets/hd/README.md`) aux conditions suivantes :
