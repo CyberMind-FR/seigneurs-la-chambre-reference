@@ -5,10 +5,13 @@ title: La Maison-Forte du Châtelet
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-08.jpg, sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927}
-canonical_text: {path: pages/08.yaml, key: canonical_text, expected_blocks: 25}
+canonical_text: {path: pages/08.yaml, key: canonical_text, expected_blocks: 26}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+# Armoiries communales (2026-09-10) : remplace le fragment des armes de La Chambre par le SVG officiel
+# dès que l'entrée du registre est VERIFIED ; sinon armes seigneuriales conservées, légende non composée.
+communal_arms: {commune: saint-etienne-de-cuines, replaces_fragment: heraldry_captioned, registry: assets/heraldry/communes/COMMUNES.yaml}
 text_styles_from: prototypes/_shared/text-styles.yaml
 text_styles:
   small_bold_center: {font: LiberationSerif-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
@@ -66,6 +69,7 @@ text_blocks:
   - {key: cap_pano_1, block: 22, expect: "Le Châtelet", bbox_px: [155, 961, 78, 22], style: caption, caption_of: panorama_captioned}
   - {key: cap_pano_2, block: 23, expect: "Système défensif des", bbox_px: [425, 959, 186, 44], style: caption, caption_of: panorama_captioned}
   - {key: cap_pano_3, block: 24, expect: "Le Cruet", bbox_px: [837, 961, 60, 22], style: caption, caption_of: panorama_captioned}
+  - {key: cap_arms, block: 25, expect: "Armoiries de", bbox_px: [36, 230, 145, 88], style: caption, requires_communal_arms: true}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-08-google-maps.svg, placement: reference_canvas}

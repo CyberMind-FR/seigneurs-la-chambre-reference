@@ -12,10 +12,13 @@ source:
 canonical_text:
   path: pages/05.yaml
   key: canonical_text
-  expected_blocks: 29
+  expected_blocks: 30
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+# Armoiries communales (2026-09-10) : remplace le fragment des armes de La Chambre par le SVG officiel
+# dès que l'entrée du registre est VERIFIED ; sinon armes seigneuriales conservées, légende non composée.
+communal_arms: {commune: sainte-marie-de-cuines, replaces_fragment: heraldry_captioned, registry: assets/heraldry/communes/COMMUNES.yaml}
 text_styles_from: prototypes/_shared/text-styles.yaml
 text_styles:
   small_bold_center: {font: LiberationSerif-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
@@ -76,6 +79,7 @@ text_blocks:
   - {key: cap_poype_5, block: 26, expect: "POYPE FÉODALE", bbox_px: [356, 722, 101, 20], style: caption_caps_left, caption_of: poype_captioned}
   - {key: cap_poype_6, block: 27, expect: "Éperon rocheux facile", bbox_px: [356, 742, 101, 80], style: caption_left, caption_of: poype_captioned}
   - {key: cap_princess, block: 28, expect: "Agnès de Savoie-Achaïe", bbox_px: [805, 746, 162, 118], style: caption, caption_of: princess_captioned}
+  - {key: cap_arms, block: 29, expect: "Armoiries de", bbox_px: [30, 236, 158, 90], style: caption, requires_communal_arms: true}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-05-google-maps.svg, placement: reference_canvas}

@@ -5,7 +5,7 @@ title: La Tour de Châtel-André
 status: APPROVED
 generated_from:
   composition: prototypes/page-07/composition.yaml
-  composition_run: f6431b0cf13e88b169ccda6fff1944e3a6caf4c613f470b4098cfc1bbb9f421c
+  composition_run: 3faaeba508f490feedaaf8bcfa0685c7ae40b0f846306a539b46ef5d072d0725
 canonical_reference:
   path: assets/page-07.jpg
   sha256: 53440127c11ca72289c1c59ebf51cf1ef037972d1754b8794dada88c85c39c3e
@@ -1034,6 +1034,20 @@ text_zones:
   - 879
   - 935
   - 111
+  - 94
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/07.yaml:canonical_text
+- id: P07-T-cap_arms
+  role: cap_arms
+  canonical_block: 30
+  expect: Armoiries de
+  bbox_px:
+  - 36
+  - 224
+  - 138
   - 94
   parent_region: R02
   layer_target: text_layer

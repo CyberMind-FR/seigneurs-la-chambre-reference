@@ -5,7 +5,7 @@ title: La Tour de Notre-Dame-du-Cruet
 status: APPROVED
 generated_from:
   composition: prototypes/page-11/composition.yaml
-  composition_run: 65136ea07b77ab76331923a687fb64ca2d597fc55044c746900cf2a9586be08d
+  composition_run: cdf5c3bc7d3b9b5e1f076aa6fbf65ecef1f4d2f9bf1ab66554b38bcf0a1656e6
 canonical_reference:
   path: assets/page-11.jpg
   sha256: d4090803bb0c287fe6bb6a7044a77451b47b688de891a52320918f0ef48b0bc8
@@ -753,6 +753,20 @@ text_zones:
   - 68
   - 18
   parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/11.yaml:canonical_text
+- id: P11-T-cap_arms
+  role: cap_arms
+  canonical_block: 22
+  expect: Armoiries de
+  bbox_px:
+  - 36
+  - 211
+  - 160
+  - 86
+  parent_region: R01
   layer_target: text_layer
   compose_as: live_text
   style: caption

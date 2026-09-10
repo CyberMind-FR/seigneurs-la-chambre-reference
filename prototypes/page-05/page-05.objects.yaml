@@ -5,7 +5,7 @@ title: Le Château Joli
 status: APPROVED
 generated_from:
   composition: prototypes/page-05/composition.yaml
-  composition_run: 67887297bdc85eedb581b1eedcfb459354b59ef5809172d7f397f64dcbacb255
+  composition_run: 15bf8e4bc9f0d3dbd6f4c011e9b87e48b2d258b5ef33dc8486cc3205ace4f1e7
 canonical_reference:
   path: assets/page-05.jpg
   sha256: 8c28325d76fd3ac0e3c0a0038bf9f73d9d95eb68efdd950d250aede760291530
@@ -845,6 +845,20 @@ text_zones:
   - 746
   - 162
   - 118
+  parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/05.yaml:canonical_text
+- id: P05-T-cap_arms
+  role: cap_arms
+  canonical_block: 29
+  expect: Armoiries de
+  bbox_px:
+  - 30
+  - 236
+  - 158
+  - 90
   parent_region: R02
   layer_target: text_layer
   compose_as: live_text

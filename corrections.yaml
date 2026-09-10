@@ -357,3 +357,21 @@ captions_inscribed_2026_09_09:
     - fragment: network_panorama_captioned
       key: cap_net_5b
       text: La Landonnière
+communal_arms_2026_09_10:
+  status: canonical_amendment_conditional
+  reason: 'Demande du propriétaire (2026-09-10) : remplacer, sur les pages des sites, les armes de La Chambre (haut gauche)
+    par les armoiries de la commune concernée, et documenter ces armoiries.'
+  scope: 'Pages 05–06 (Sainte-Marie-de-Cuines), 07–09 (Saint-Étienne-de-Cuines), 10–11 (Notre-Dame-du-Cruet), 12 (Saint-Rémy-de-Maurienne).
+    Pages 03–04 (La Chambre) sans fragment d''armoiries remplaçable (04 sous verrou). Pages 13–15 : armes seigneuriales conservées
+    (pages non communales).'
+  canonical_changes:
+  - Bloc conditionnel « Armoiries de <Commune> » ajouté en fin de canonical_text des pages 05 à 12 ; composé uniquement quand
+    l'entrée du registre est VERIFIED (text_blocks[].requires_communal_arms).
+  registry: assets/heraldry/communes/COMMUNES.yaml
+  gate: Aucune armoirie n'est composée sans fichier SVG officiel, SHA-256, licence, auteur, source, blasonnement sourcé, vérificateur
+    et date (scripts/heraldry_check.py, dans make validate). Les blasonnements rapportés par les extraits de recherche ne
+    sont pas des sources.
+  state_2026_09_10: 'Sources bloquées depuis l''environnement (Wikipédia, Commons, armorialdefrance, heraldry-wiki, sites
+    des mairies) : 0 commune vérifiée ; fichiers Commons identifiés pour La Chambre, Saint-Étienne-de-Cuines, Saint-Rémy-de-Maurienne
+    ; blasonnement rapporté pour Sainte-Marie-de-Cuines ; aucune armoirie trouvée pour Notre-Dame-du-Cruet.'
+  record: docs/migration-text-layer/COMMUNAL_ARMS.md
