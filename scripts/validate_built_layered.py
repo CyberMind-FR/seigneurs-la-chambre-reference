@@ -85,6 +85,13 @@ def main():
         comp = yaml.safe_load(comp_path.read_text(encoding="utf-8"))
         spec = yaml.safe_load((ROOT / comp["canonical_text"]["path"]).read_text(encoding="utf-8"))
         blocks = [normalize_ws(b) for b in re.split(r"\n+", spec[comp["canonical_text"].get("key", "canonical_text")]) if normalize_ws(b)]
+        # Conditional captions « Armoiries de … » are composed only once the commune's arms are VERIFIED.
+        arms = comp.get("communal_arms")
+        if arms:
+            reg = yaml.safe_load((ROOT / arms.get("registry", "assets/heraldry/communes/COMMUNES.yaml")).read_text(encoding="utf-8"))
+            if (reg.get("communes", {}).get(arms["commune"]) or {}).get("status") != "VERIFIED":
+                skip = {int(tb["block"]) for tb in comp.get("text_blocks", []) if tb.get("requires_communal_arms")}
+                blocks = [b for i, b in enumerate(blocks) if i not in skip]
         text = normalize_ws(doc[n - 1].get_text("text"))
         joined = re.sub(r"(?<=\S-) (?=\S)", "", text)
         missing = [b for b in blocks if b not in text and b not in joined]

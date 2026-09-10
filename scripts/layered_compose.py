@@ -141,6 +141,10 @@ class Composer:
         if self.hd and int(self.hd.get("page", page)) != page:
             raise SystemExit(f"hd-sources page mismatch: {self.hd.get('page')} != {page}")
         self.report["hd_sources"] = str(self.hd_path.relative_to(ROOT)) if self.hd else None
+        # Communal coat of arms (2026-09-10): `communal_arms:` names a registry entry; the raster arms
+        # fragment is replaced by the rendered official SVG only once that entry is VERIFIED.
+        self.arms_spec = self.spec.get("communal_arms")
+        self.arms = self.load_communal_arms() if self.arms_spec else None
 
     # ---- sources
     def load_sources(self):
@@ -255,6 +259,9 @@ class Composer:
             x, y, w, h = bbox_tuple(f["bbox_px"])
             if min(x, y, w, h) < 0 or x + w > self.img.width or y + h > self.img.height:
                 raise SystemExit(f"invalid bbox for fragment {f['id']}")
+            if self.arms and f["id"] == self.arms_spec["replaces_fragment"]:
+                produced.append(self.render_communal_arms(f, frag_dir))
+                continue
             hd = self.hd_entry(f["id"], val)
             if hd is not None:
                 produced.append(self.extract_hd_fragment(f, hd, frag_dir, val))
@@ -345,6 +352,71 @@ class Composer:
         self.fragments, self.skipped_fragments = produced, skipped
         (self.out / "fragments.json").write_text(json.dumps({"produced": produced, "skipped": skipped}, indent=2, ensure_ascii=False) + "\n")
         return produced
+
+    # ---- Communal arms (registry-gated replacement of the seigneurial arms fragment)
+    def load_communal_arms(self):
+        reg_path = ROOT / self.arms_spec.get("registry", "assets/heraldry/communes/COMMUNES.yaml")
+        registry = load_yaml(reg_path) if reg_path.exists() else {}
+        slug = self.arms_spec["commune"]
+        entry = (registry.get("communes") or {}).get(slug)
+        if entry is None:
+            raise SystemExit(f"communal_arms: commune {slug!r} absent from {reg_path}")
+        status = entry.get("status")
+        self.report["communal_arms"] = {"commune": slug, "name": entry.get("name"), "status": status, "active": False,
+                                        "replaces_fragment": self.arms_spec["replaces_fragment"]}
+        if status != "VERIFIED":
+            self.issues.append(("info", "communal_arms_pending",
+                                f"communal arms of {entry.get('name')} not verified ({status}) — seigneurial arms fragment kept, conditional caption not composed"))
+            return None
+        for k in ("svg", "sha256", "licence", "author", "source_url", "blazon", "blazon_source", "verified_by", "verified_on"):
+            if not entry.get(k):
+                raise SystemExit(f"communal_arms {slug}: VERIFIED entry lacks {k!r}")
+        svg = ROOT / entry["svg"]
+        if not svg.exists():
+            raise SystemExit(f"communal_arms {slug}: {entry['svg']} missing")
+        got = sha256(svg)
+        if got != entry["sha256"]:
+            raise SystemExit(f"communal_arms {slug}: SVG SHA mismatch ({got})")
+        if entry.get("rights") not in ("CLEARED", "PROJECT_INTERNAL", "ASSOCIATION_PROVIDED"):
+            raise SystemExit(f"communal_arms {slug}: rights {entry.get('rights')!r} not accepted")
+        self.report["communal_arms"].update({"active": True, "svg": entry["svg"], "svg_sha256": got,
+                                             "licence": entry["licence"], "author": entry["author"]})
+        return entry
+
+    def render_communal_arms(self, f, frag_dir):
+        """Render the verified commune SVG into the shield zone of the replaced fragment (line-art gate)."""
+        import cairosvg
+        x, y, w, h = bbox_tuple(f["bbox_px"])
+        if self.arms_spec.get("shield_bbox_px"):
+            sx, sy, sw, sh = bbox_tuple(self.arms_spec["shield_bbox_px"])
+        else:  # default: upper 64 % of the fragment, 76 % of its width, centred
+            sw, sh = int(round(w * 0.76)), int(round(h * 0.64))
+            sx, sy = x + (w - sw) // 2, y + int(round(h * 0.04))
+        dx, dy, dw, dh = self.geom.box(sx, sy, sw, sh)
+        gate = float((self.spec.get("validation", {}).get("min_effective_ppi") or {}).get("line_art", DEFAULT_PPI_GATES["line_art"]))
+        px_w = int(np.ceil(dw / 72.0 * gate * 1.02))  # a little above the line-art gate (rounding)
+        png = frag_dir / f"{f['id']}.png"
+        svg = ROOT / self.arms["svg"]
+        cairosvg.svg2png(url=str(svg), write_to=str(png), output_width=px_w)
+        im = Image.open(png).convert("RGBA")
+        # contain-fit inside the shield zone (SVG aspect may differ from the zone)
+        scale = min(dw / im.width, dh / im.height)
+        rw, rh = im.width * scale, im.height * scale
+        rx, ry = dx + (dw - rw) / 2, dy + (dh - rh) / 2
+        ppi = im.width / (rw / 72.0)
+        dest_px = {"x": sx + int(round((sw - rw / self.geom.scale) / 2)), "y": sy + int(round((sh - rh / self.geom.scale) / 2)),
+                   "w": int(round(rw / self.geom.scale)), "h": int(round(rh / self.geom.scale))}
+        return {
+            "id": f["id"], "role": "communal_arms_vector", "status": f.get("status"), "raster_kind": "line_art",
+            "source": "svg", "svg_path": self.arms["svg"], "svg_sha256": self.report["communal_arms"]["svg_sha256"],
+            "commune": self.arms_spec["commune"], "licence": self.arms["licence"], "author": self.arms["author"],
+            "path": str(png.relative_to(ROOT)), "sha256": sha256(png),
+            "treatment": "svg_render_contain", "requested_bbox_px": dict(zip("xywh", (x, y, w, h))),
+            "bbox_px": {"x": x, "y": y, "w": w, "h": h}, "grown_px": {"top": 0, "bottom": 0, "left": 0, "right": 0},
+            "masks_px": [], "dest_bbox_px": dest_px, "dest_pt": [round(rx, 2), round(ry, 2), round(rw, 2), round(rh, 2)],
+            "effective_ppi": round(ppi, 2), "source_ppi": round(ppi, 2), "upscale_factor": 1.0, "upscale_provisional": False,
+            "output_px": [im.width, im.height], "edge_ink_before": {}, "edge_ink_after": {}, "dirty_edges": [],
+        }
 
     # ---- Phase C: HD regenerated sources (never upscaled, never masked, centre-cropped to the grid ratio)
     def hd_entry(self, frag_id, val):
@@ -503,9 +575,12 @@ class Composer:
 
     def draw_text(self, c, blocks):
         val = self.spec.get("validation", {})
-        assigned, drawn = {}, []
+        assigned, drawn, conditional_skipped = {}, [], []
         for tb in self.spec.get("text_blocks", []):
             idx = int(tb["block"])
+            if tb.get("requires_communal_arms") and not self.arms:
+                conditional_skipped.append(idx)  # caption « Armoiries de … » only with verified arms
+                continue
             if idx in assigned:
                 raise SystemExit(f"canonical block {idx} assigned twice ({assigned[idx]} and {tb['key']})")
             if not 0 <= idx < len(blocks):
@@ -532,7 +607,8 @@ class Composer:
                 self.issues.append((val.get("text_overflow", "warn"), "text_overflow",
                                     f"text block {tb['key']} overflows its bbox ({ah:.1f}pt > {h:.1f}pt at {size}pt)"))
             drawn.append(rec)
-        missing = [i for i in range(len(blocks)) if i not in assigned]
+        missing = [i for i in range(len(blocks)) if i not in assigned and i not in conditional_skipped]
+        self.report["conditional_blocks_skipped"] = conditional_skipped
         if missing and val.get("all_blocks_assigned", True):
             raise SystemExit(f"canonical blocks not assigned to any text block: {missing}")
         self.text_drawn = drawn
@@ -723,7 +799,9 @@ class Composer:
         # A line break placed after a hyphen that exists in the canon ("Notre-Dame-\ndu-Cruet") is a
         # legitimate typographic break, not a text change: compare against both readings.
         text_joined = re.sub(r"(?<=\S-) (?=\S)", "", text)
-        missing = [b for b in self.blocks if normalize_ws(b) not in text and normalize_ws(b) not in text_joined]
+        skipped = set(self.report.get("conditional_blocks_skipped") or [])  # « Armoiries de … » while arms unverified
+        missing = [b for i, b in enumerate(self.blocks) if i not in skipped
+                   and normalize_ws(b) not in text and normalize_ws(b) not in text_joined]
         # Control render at 300 dpi (print gate for continuous tone).
         pix = page.get_pixmap(matrix=fitz.Matrix(300 / 72, 300 / 72), alpha=False)
         render = self.out / f"page-{self.page:02d}-layered-proof-render.png"
@@ -810,6 +888,8 @@ class Composer:
             if f.get("upscale_provisional"):  # provisional upscale is part of the audited identity
                 entry.update({"source_ppi": f["source_ppi"], "upscale_factor": f["upscale_factor"],
                               "upscale_provisional": True})
+            if f.get("source") == "svg":  # communal arms rendered from a verified SVG
+                entry.update({"source": "svg", "svg_path": f["svg_path"], "svg_sha256": f["svg_sha256"]})
             if f.get("source") == "hd":  # HD regenerated source (Phase C) is part of the audited identity
                 entry.update({"source": "hd", "hd_path": f["hd_path"], "hd_sha256": f["hd_sha256"]})
             current[f["id"]] = entry
