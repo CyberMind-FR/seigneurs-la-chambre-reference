@@ -256,11 +256,17 @@ hd_regenerated_illustrations:
   control: scripts/hd_check.py (make hd-check, dans make validate)
 
 communal_arms:
-  status: BLOCKED_SOURCE_MISSING  # 2026-09-10 : aucune source accessible depuis l'environnement (proxy) ; 0 commune vérifiée
+  status: VERIFIED_CREDITS_PENDING  # 2026-09-11 : 3 SVG Commons déposés par le propriétaire (PR #22) ; composition en attente du crédit CC BY-SA au canon ; 2 communes sans blason connu
   nature: document
   registry: assets/heraldry/communes/COMMUNES.yaml
+  owner_registry: assets/svg/blasons/REGISTRY.yaml  # provenance, licences, lignes de crédit, SHA-256 (chemin/SHA croisés par make heraldry-check)
+  assets:
+    la-chambre: assets/svg/blasons/73067-la-chambre.svg  # CC BY-SA 3.0, Spedona / Commons ; aucune page composée (03/04 sans fragment remplaçable)
+    saint-etienne-de-cuines: assets/svg/blasons/73231-saint-etienne-de-cuines.svg  # CC BY-SA 4.0, Chatsam / Commons ; pages 07-09
+    saint-remy-de-maurienne: assets/svg/blasons/73278-saint-remy-de-maurienne.svg  # CC BY-SA 3.0, Odejea / Commons ; page 12
   method: "SVG officiel (Wikimedia Commons ou mairie) rendu par cairosvg au gate trait ; blasonnement confirmé sur l'Armorial des communes de la Savoie ou armorialdefrance.fr"
-  rights: NOT_DOCUMENTED  # à relever sur la page Commons de chaque fichier (licence, auteur) ; attribution à prévoir dans le livret
+  rights: ATTRIBUTION_SHAREALIKE  # CC BY-SA : crédit auteur/source/licence obligatoire, inscrit au canon avant composition ; mention « Tous droits réservés » p15 à amender (décision propriétaire)
+  credit_gate: scripts/heraldry_check.py:credit_inscribed_in_canon (refus de composer sinon)
   confidence: high_when_verified
   forbidden: [drawing_from_unconfirmed_blazon, generated_image, use_without_licence_and_author]
   control: scripts/heraldry_check.py (make heraldry-check, dans make validate)

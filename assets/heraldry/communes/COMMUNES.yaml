@@ -1,61 +1,75 @@
 # Registre des armoiries communales des sites de l'exposition (demande du propriétaire, 2026-09-10).
 #
 # Règle : aucune armoirie n'est composée tant que l'entrée n'est pas VERIFIED — fichier présent,
-# SHA-256, licence, auteur, URL source, blasonnement et sa source, vérificateur et date. Le
-# compositeur (`communal_arms` dans prototypes/page-NN/composition.yaml) remplace alors le fragment
-# raster des armes de La Chambre par le rendu du SVG et compose la légende canonique
-# « Armoiries de <Commune> ». Sinon les armes de La Chambre restent en place et la légende
-# conditionnelle n'est pas composée (information `communal_arms_pending`).
+# SHA-256, licence, auteur, URL source, blasonnement et sa source, vérificateur et date, droits
+# acceptés et, pour une licence à attribution (CC BY-SA), ligne de crédit inscrite au canon
+# (pages/NN.yaml:canonical_text). Le compositeur (`communal_arms` dans
+# prototypes/page-NN/composition.yaml) remplace alors le fragment raster des armes de La Chambre
+# par le rendu du SVG et compose la légende canonique « Armoiries de <Commune> ». Sinon les armes
+# de La Chambre restent en place et la légende conditionnelle n'est pas composée.
 #
-# État de la recherche du 2026-09-10 : depuis l'environnement de travail, Wikipédia, Wikimedia
-# Commons (pages et serveur de fichiers), armorialdefrance.fr, heraldry-wiki, tchinggiz.org et les
-# sites des mairies sont bloqués par le proxy de sortie. Les éléments ci-dessous viennent des
-# extraits de recherche (titres de fichiers Commons réels ; blasonnements rapportés, NON vérifiés
-# sur la page source). Ils sont à confirmer depuis un poste non filtré avant tout usage.
-schema_version: 1
-status_enum: [VERIFIED, SOURCE_IDENTIFIED_UNVERIFIED, BLAZON_REPORTED_UNVERIFIED, NO_ARMS_FOUND, UNKNOWN]
-rights_enum: [CLEARED, PROJECT_INTERNAL, ASSOCIATION_PROVIDED, RESTRICTED, NOT_DOCUMENTED]
+# 2026-09-11 : le propriétaire a récupéré les SVG Commons depuis un poste non filtré et documenté
+# leur provenance dans assets/svg/blasons/REGISTRY.yaml (PR #22, commit bd5b2b9). Ce registre en
+# est la déclinaison technique ; scripts/heraldry_check.py vérifie que chemin et SHA-256 concordent
+# entre les deux (clé INSEE). Les trois dessins sont sous CC BY-SA : ils ne peuvent pas être
+# reproduits sans crédit ni couverts par la mention « © Tous droits réservés » de la page 15
+# (REGISTRY.yaml → droits.tension_a_resoudre). Statut VERIFIED_CREDITS_PENDING tant que la ligne
+# de crédit n'est pas inscrite au canon (décision éditoriale du propriétaire) ; ensuite VERIFIED.
+schema_version: 2
+owner_registry: assets/svg/blasons/REGISTRY.yaml
+status_enum: [VERIFIED, VERIFIED_CREDITS_PENDING, SOURCE_IDENTIFIED_UNVERIFIED, BLAZON_REPORTED_UNVERIFIED, NO_ARMS_FOUND, UNKNOWN]
+rights_enum: [CLEARED, PROJECT_INTERNAL, ASSOCIATION_PROVIDED, ATTRIBUTION_SHAREALIKE, RESTRICTED, NOT_DOCUMENTED]
+credits_rule:
+  applies_to_rights: [ATTRIBUTION_SHAREALIKE]
+  requirement: >-
+    La ligne credit_line doit figurer mot pour mot dans le canonical_text d'une page (mentions
+    légales page 15 ou colophon) avant que le dessin soit composé ; la mention globale
+    « © Tous droits réservés » doit exclure explicitement ces dessins (partage à l'identique).
+  control: scripts/heraldry_check.py (make heraldry-check) et scripts/layered_compose.py (refus de composer)
+  proposal: docs/migration-text-layer/COMMUNAL_ARMS.md §5 (texte à arbitrer par le propriétaire, jamais inscrit d'office)
 verification_procedure:
-  - Ouvrir la page Commons du fichier (colonne image_candidates.commons_page) ; relever licence, auteur, date.
-  - Télécharger le SVG (image_candidates.download_url, redirection vers upload.wikimedia.org) sous assets/heraldry/communes/<slug>.svg.
-  - "Confirmer le blasonnement sur fr.wikipedia.org « Armorial des communes de la Savoie » ou armorialdefrance.fr ; le recopier dans blazon avec blazon_source."
-  - "Renseigner svg, sha256 (sha256sum), licence, author, source_url, rights, verified_by, verified_on ; passer status à VERIFIED."
+  - "Ouvrir la page Commons du fichier ; relever licence, auteur, date ; télécharger le SVG."
+  - "Confirmer le blasonnement sur l'Armorial des communes de la Savoie ou armorialdefrance.fr ; le recopier dans blazon avec blazon_source."
+  - "Renseigner svg, sha256 (sha256sum), licence, author, source_url, rights, credit_line, verified_by, verified_on."
+  - "Licence à attribution : inscrire credit_line au canon (pages/15.yaml) puis passer status à VERIFIED ; sinon VERIFIED_CREDITS_PENDING."
   - "make heraldry-check, puis make layered-compose && make validate && make build-v3."
 communes:
   la-chambre:
     name: La Chambre
-    insee: "73067"          # à vérifier
+    insee: "73067"
     pages: [3, 4]
     sites: [Couvent des Cordeliers, Maison de La Tour]
-    status: SOURCE_IDENTIFIED_UNVERIFIED
+    status: VERIFIED_CREDITS_PENDING
     note: >-
       Les pages 03 et 04 n'ont pas de fragment d'armoiries à remplacer (page 04 sous verrou éditorial) ;
-      les armes seigneuriales « D'azur, semé de fleurs de lis d'or, à la bande de gueules brochant sur le
-      tout » (canon page 02, source Amédée de FORAS) y restent. À confirmer si les armoiries communales
-      reprennent le même blasonnement.
-    blazon: null
-    blazon_candidate: null
-    blazon_source: null
-    image_candidates:
-      - commons_file: Blason ville fr La Chambre (Savoie).svg
-        commons_page: https://commons.wikimedia.org/wiki/File:Blason_ville_fr_La_Chambre_(Savoie).svg
-        download_url: https://commons.wikimedia.org/wiki/Special:FilePath/Blason_ville_fr_La_Chambre_(Savoie).svg
-        note: titre de fichier attesté par les résultats de recherche ; page non consultée
+      les armes seigneuriales du canon page 02 (Amédée de FORAS) y restent. Blasonnement communal
+      identique au blasonnement seigneurial du canon (REGISTRY.yaml). Ne pas confondre avec
+      assets/svg/heraldry-la-chambre.svg (dessin maison, zones P01-Z01 / P02-Z01, sans contrainte de licence).
+    blazon: "D'azur, semé de fleurs de lis d'or, à la bande de gueules brochant sur le tout."
+    blazon_source: "Armorial des communes de la Savoie ; armorialdefrance.fr (ville=11673) ; la-chambre.fr (REGISTRY.yaml)"
+    official_status: "à déterminer (mairie)"
+    commons_file: "File:Blason ville fr La Chambre (Savoie).svg"
     wikidata: Q818036
-    svg: null
-    sha256: null
-    licence: null
-    author: null
-    source_url: null
-    rights: NOT_DOCUMENTED
-    verified_by: null
-    verified_on: null
+    svg: assets/svg/blasons/73067-la-chambre.svg
+    sha256: 74258f6edeee2add576aeecd2ccdd153ba1cd52f20c53e6108019d55a7e08137
+    licence: "CC BY-SA 3.0 (et 2.5, 2.0, 1.0) / GFDL, au choix"
+    licence_url: https://creativecommons.org/licenses/by-sa/3.0
+    author: "Spedona (Wikimedia Commons) — travail personnel"
+    source_url: "https://commons.wikimedia.org/wiki/File:Blason_ville_fr_La_Chambre_(Savoie).svg"
+    rights: ATTRIBUTION_SHAREALIKE
+    credit_line: "Blason de La Chambre — Spedona / Wikimedia Commons — CC BY-SA 3.0"
+    verified_by: "Gérald Kerma (propriétaire) — PR #22, commit bd5b2b9, assets/svg/blasons/REGISTRY.yaml"
+    verified_on: 2026-09-10
   sainte-marie-de-cuines:
     name: Sainte-Marie-de-Cuines
-    insee: "73237"          # à vérifier
+    insee: "73255"
     pages: [5, 6]
     sites: [Château Joli, Tour de Burgin]
     status: BLAZON_REPORTED_UNVERIFIED
+    note: >-
+      Registre du propriétaire (2026-09-10) : aucun blason connu — rien dans l'Armorial des communes de
+      la Savoie ni sur Wikimedia Commons ; à demander à la mairie. Le blasonnement ci-dessous vient
+      d'un extrait de recherche (tchinggiz.org) non consulté : il n'est pas une source.
     blazon: null
     blazon_candidate: "D'azur à la croix ancrée d'argent chargée en cœur d'une nef de sable et accompagnée au premier canton d'une fleur de lis d'or"
     motto_candidate: "Mari, caelo, terra, floreat Sancta Maria"
@@ -65,7 +79,7 @@ communes:
         note: extrait de recherche (page existante, non consultée)
       - url: https://www.stemariedecuines.fr/
         note: site officiel de la commune, non consulté
-    image_candidates: []    # aucun fichier Commons identifié par la recherche ; vérifier fr.wikipedia « Sainte-Marie-de-Cuines » §Héraldique
+    image_candidates: []
     svg: null
     sha256: null
     licence: null
@@ -76,42 +90,34 @@ communes:
     verified_on: null
   saint-etienne-de-cuines:
     name: Saint-Étienne-de-Cuines
-    insee: "73232"          # à vérifier
+    insee: "73231"
     pages: [7, 8, 9]
     sites: [Tour de Châtel-André, Maison-Forte du Châtelet, Maison Forte de Gruyère]
-    status: SOURCE_IDENTIFIED_UNVERIFIED
-    blazon: null
-    blazon_candidate: "D'or au lion de sable ; à la bande de gueules chargée de trois étoiles d'argent brochante"
-    blazon_source: null
-    blazon_candidate_sources:
-      - url: https://www.heraldry-wiki.com/heraldrywiki/wiki/Saint-%C3%89tienne-de-Cuines
-        note: extrait de recherche (page existante, non consultée)
-      - url: https://commons.wikimedia.org/wiki/Category:Or_a_bend_gules
-        note: le fichier Commons est classé « Or a bend gules »
-    image_candidates:
-      - commons_file: Blason ville fr Saint-Étienne-de-Cuines 73.svg
-        commons_page: https://commons.wikimedia.org/wiki/File:Blason_ville_fr_Saint-%C3%89tienne-de-Cuines_73.svg
-        download_url: https://commons.wikimedia.org/wiki/Special:FilePath/Blason_ville_fr_Saint-%C3%89tienne-de-Cuines_73.svg
-        note: titre de fichier attesté par les résultats de recherche ; page non consultée
-    svg: null
-    sha256: null
-    licence: null
-    author: null
-    source_url: null
-    rights: NOT_DOCUMENTED
-    verified_by: null
-    verified_on: null
+    status: VERIFIED_CREDITS_PENDING
+    blazon: "D'or au lion de sable ; à la bande de gueules chargée de trois étoiles d'argent brochante."
+    blazon_source: "Armorial des communes de la Savoie ; armorialdefrance.fr (ville=11912) (REGISTRY.yaml)"
+    official_status: "à déterminer (mairie)"
+    commons_file: "File:Blason ville fr Saint-Étienne-de-Cuines 73.svg"
+    svg: assets/svg/blasons/73231-saint-etienne-de-cuines.svg
+    sha256: 27617ab34a720817c040749275fc3578c2dc893dad34adaae76fb47be333affb
+    licence: "CC BY-SA 4.0"
+    licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    author: "Chatsam (Wikimedia Commons) — travail personnel, 2016"
+    source_url: "https://commons.wikimedia.org/wiki/File:Blason_ville_fr_Saint-%C3%89tienne-de-Cuines_73.svg"
+    rights: ATTRIBUTION_SHAREALIKE
+    credit_line: "Blason de Saint-Étienne-de-Cuines — Chatsam / Wikimedia Commons — CC BY-SA 4.0"
+    verified_by: "Gérald Kerma (propriétaire) — PR #22, commit bd5b2b9, assets/svg/blasons/REGISTRY.yaml"
+    verified_on: 2026-09-10
   notre-dame-du-cruet:
     name: Notre-Dame-du-Cruet
-    insee: "73189"          # à vérifier
+    insee: "73189"
     pages: [10, 11]
     sites: [Château de Notre-Dame-du-Cruet, Tour de Notre-Dame-du-Cruet]
     status: NO_ARMS_FOUND
     note: >-
-      Aucune armoirie trouvée : la commune n'apparaît pas dans l'« Armorial des communes de la Savoie »
-      (fr.wikipedia, d'après les extraits de recherche) ; aucun fichier Commons ; le site de la mairie
-      (https://www.notre-dame-du-cruet.fr/) n'a pas pu être consulté. Les armes de La Chambre restent
-      en place sur les pages 10 et 11 tant qu'aucune source n'est produite (mairie).
+      Aucune armoirie connue (registre du propriétaire, 2026-09-10 : rien dans l'Armorial des communes
+      de la Savoie ni sur Wikimedia Commons ; à demander à la mairie). Les armes de La Chambre restent
+      en place sur les pages 10 et 11 tant qu'aucune source n'est produite.
     blazon: null
     blazon_candidate: null
     blazon_source: null
@@ -126,25 +132,24 @@ communes:
     verified_on: null
   saint-remy-de-maurienne:
     name: Saint-Rémy-de-Maurienne
-    insee: "73265"          # à vérifier
+    insee: "73278"
     pages: [12]
     sites: [Maison Forte de La Landonnière]
-    status: SOURCE_IDENTIFIED_UNVERIFIED
-    blazon: null
-    blazon_candidate: "D'azur au sautoir d'or cantonné, en chef et en pointe, de deux étoiles et, aux flancs, de deux losanges, le tout du même"
-    blazon_candidate_note: extrait de recherche ; attribué aux armes de la famille de Passier, anciens seigneurs du lieu — à confirmer
-    blazon_source: null
-    image_candidates:
-      - commons_file: Blason ville fr Saint-Rémy-de-Maurienne (73).svg
-        commons_page: https://commons.wikimedia.org/wiki/File:Blason_ville_fr_Saint-R%C3%A9my-de-Maurienne_(73).svg
-        download_url: https://commons.wikimedia.org/wiki/Special:FilePath/Blason_ville_fr_Saint-R%C3%A9my-de-Maurienne_(73).svg
-        note: titre de fichier attesté par les résultats de recherche ; page non consultée
+    status: VERIFIED_CREDITS_PENDING
+    blazon: "D'azur au sautoir cantonné, en chef et en pointe, de deux étoiles et, aux flancs, de deux losanges, le tout d'or."
+    blazon_source: "Banque du Blason (newgaso.fr, fiche 73278) ; Office du Tourisme du canton de La Chambre (REGISTRY.yaml)"
+    blazon_note: "Extrait de recherche du 2026-09-10 : armes attribuées à la famille de Passier, anciens seigneurs du lieu — à confirmer."
+    official_status: "à déterminer (mairie)"
+    commons_file: "File:Blason ville fr Saint-Rémy-de-Maurienne (73).svg"
     wikidata: Q601361
-    svg: null
-    sha256: null
-    licence: null
-    author: null
-    source_url: null
-    rights: NOT_DOCUMENTED
-    verified_by: null
-    verified_on: null
+    svg: assets/svg/blasons/73278-saint-remy-de-maurienne.svg
+    sha256: c0af6d8a01b54e35ed33c26bfacf4c565182d5e2c8ba9280a971c82a90e8bfe6
+    licence: "CC BY-SA 3.0 (et 2.5, 2.0, 1.0) / GFDL, au choix"
+    licence_url: https://creativecommons.org/licenses/by-sa/3.0
+    author: "Odejea (Wikimedia Commons) — travail personnel, 2010-02-16"
+    source_url: "https://commons.wikimedia.org/wiki/File:Blason_ville_fr_Saint-R%C3%A9my-de-Maurienne_(73).svg"
+    derived_from: "Blason Vide 3D.svg, Pièce héraldique sautoir.svg, Étoile d'or.svg (Commons)"
+    rights: ATTRIBUTION_SHAREALIKE
+    credit_line: "Blason de Saint-Rémy-de-Maurienne — Odejea / Wikimedia Commons — CC BY-SA 3.0"
+    verified_by: "Gérald Kerma (propriétaire) — PR #22, commit bd5b2b9, assets/svg/blasons/REGISTRY.yaml"
+    verified_on: 2026-09-10

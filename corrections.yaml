@@ -374,4 +374,12 @@ communal_arms_2026_09_10:
   state_2026_09_10: 'Sources bloquées depuis l''environnement (Wikipédia, Commons, armorialdefrance, heraldry-wiki, sites
     des mairies) : 0 commune vérifiée ; fichiers Commons identifiés pour La Chambre, Saint-Étienne-de-Cuines, Saint-Rémy-de-Maurienne
     ; blasonnement rapporté pour Sainte-Marie-de-Cuines ; aucune armoirie trouvée pour Notre-Dame-du-Cruet.'
+  state_2026_09_11: 'SVG Commons de La Chambre, Saint-Étienne-de-Cuines et Saint-Rémy-de-Maurienne déposés par le propriétaire
+    avec provenance (assets/svg/blasons/REGISTRY.yaml, PR #22) ; registre technique au statut VERIFIED_CREDITS_PENDING ; aucune
+    armoirie composée : les dessins sont CC BY-SA et la ligne de crédit n''est pas inscrite au canon. Sainte-Marie-de-Cuines et
+    Notre-Dame-du-Cruet : aucun blason connu.'
+  credits_gate: 'Droits ATTRIBUTION_SHAREALIKE : composition refusée (scripts/layered_compose.py, scripts/heraldry_check.py) tant que
+    credit_line ne figure pas mot pour mot dans un canonical_text. Proposition d''amendement de la page 15 (trois lignes de crédit,
+    exclusion des blasons de la mention « Tous droits réservés ») dans COMMUNAL_ARMS.md §5, à arbitrer par le propriétaire ; canon
+    inchangé dans ce lot.'
   record: docs/migration-text-layer/COMMUNAL_ARMS.md

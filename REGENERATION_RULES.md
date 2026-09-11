@@ -81,6 +81,11 @@ mairie) avec licence, auteur, SHA-256, blasonnement confirmé et sa source, vér
 (`assets/heraldry/communes/COMMUNES.yaml`, statut `VERIFIED`). Jamais de dessin à partir d'un
 blasonnement non confirmé, jamais de génération d'image. Tant qu'une entrée n'est pas vérifiée, le
 fragment seigneurial reste et la légende « Armoiries de <Commune> » n'est pas composée.
+Licence à attribution (CC BY-SA, droits `ATTRIBUTION_SHAREALIKE`, 2026-09-11) : le dessin n'est
+composé que si sa ligne de crédit (`credit_line`, identique à `assets/svg/blasons/REGISTRY.yaml`)
+figure mot pour mot dans le `canonical_text` d'une page et que la mention globale de droits du
+livret l'exclut ; jusque-là, statut `VERIFIED_CREDITS_PENDING` (provenance contrôlée, non composé).
+Jamais de crédit inscrit d'office : c'est un amendement canonique à arbitrer.
 
 ### Sources HD régénérées (Phase C, 2026-09-09)
 Une illustration peut être remplacée par une **reconstitution HD guidée par référence** (prompt +

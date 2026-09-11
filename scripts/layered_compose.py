@@ -51,6 +51,8 @@ import yaml
 import pymupdf as fitz  # PyMuPDF
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from heraldry_check import credit_gate_error, credit_inscribed_in_canon  # noqa: E402  (attribution gate shared with make heraldry-check)
 PAGE_SIZES = {"A5": A5, "A4": A4, "A2": A2, "A1": A1}
 ALIGN = {"left": TA_LEFT, "center": TA_CENTER, "right": TA_RIGHT, "justify": TA_JUSTIFY}
 INK_THRESHOLD = 45.0
@@ -364,6 +366,11 @@ class Composer:
         status = entry.get("status")
         self.report["communal_arms"] = {"commune": slug, "name": entry.get("name"), "status": status, "active": False,
                                         "replaces_fragment": self.arms_spec["replaces_fragment"]}
+        if status == "VERIFIED_CREDITS_PENDING":
+            # provenance verified, but the licence requires an attribution line that is not yet in the canon
+            self.issues.append(("info", "communal_arms_pending_credits",
+                                f"communal arms of {entry.get('name')} verified but CC BY-SA credit line not inscribed in canon — seigneurial arms fragment kept, conditional caption not composed"))
+            return None
         if status != "VERIFIED":
             self.issues.append(("info", "communal_arms_pending",
                                 f"communal arms of {entry.get('name')} not verified ({status}) — seigneurial arms fragment kept, conditional caption not composed"))
@@ -377,10 +384,15 @@ class Composer:
         got = sha256(svg)
         if got != entry["sha256"]:
             raise SystemExit(f"communal_arms {slug}: SVG SHA mismatch ({got})")
-        if entry.get("rights") not in ("CLEARED", "PROJECT_INTERNAL", "ASSOCIATION_PROVIDED"):
+        if entry.get("rights") not in ("CLEARED", "PROJECT_INTERNAL", "ASSOCIATION_PROVIDED", "ATTRIBUTION_SHAREALIKE"):
             raise SystemExit(f"communal_arms {slug}: rights {entry.get('rights')!r} not accepted")
+        gate = credit_gate_error(entry)  # CC BY-SA: the credit line must be canonical text before the drawing is composed
+        if gate:
+            raise SystemExit(f"communal_arms {slug}: {gate}")
         self.report["communal_arms"].update({"active": True, "svg": entry["svg"], "svg_sha256": got,
-                                             "licence": entry["licence"], "author": entry["author"]})
+                                             "licence": entry["licence"], "author": entry["author"],
+                                             "credit_line": entry.get("credit_line"),
+                                             "credit_pages": credit_inscribed_in_canon(entry["credit_line"]) if entry.get("credit_line") else []})
         return entry
 
     def render_communal_arms(self, f, frag_dir):
