@@ -5,7 +5,7 @@ title: La Tour de Burgin
 status: APPROVED
 generated_from:
   composition: prototypes/page-06/composition.yaml
-  composition_run: 9a2a20685974b6cd80166890ca8ff6d8afdda9fb36c7dce509da696f2d9ac151
+  composition_run: 342ba55e5d158efd038a2441b9d8484388d0083dbca78c6cf3db05f605e6e72b
 canonical_reference:
   path: assets/page-06.jpg
   sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031
@@ -833,6 +833,20 @@ text_zones:
   - 220
   - 44
   parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/06.yaml:canonical_text
+- id: P06-T-cap_arms
+  role: cap_arms
+  canonical_block: 22
+  expect: Armoiries de
+  bbox_px:
+  - 40
+  - 196
+  - 135
+  - 86
+  parent_region: R01
   layer_target: text_layer
   compose_as: live_text
   style: caption

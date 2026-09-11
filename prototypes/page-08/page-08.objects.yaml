@@ -5,7 +5,7 @@ title: La Maison-Forte du Châtelet
 status: APPROVED
 generated_from:
   composition: prototypes/page-08/composition.yaml
-  composition_run: 712cae8a3130e3890b6597e96bd36a14573bdee28b0209e9e371494b7fb40a5b
+  composition_run: 75e5fda99c9798038ec6f9584924602c9f735ae60e58441fb5c40133ff97b043
 canonical_reference:
   path: assets/page-08.jpg
   sha256: 5ddbe419c36418e782d2d4fbc308dd66a871bb90968341bf1cbbdc7f56d52927
@@ -819,6 +819,20 @@ text_zones:
   - 60
   - 22
   parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/08.yaml:canonical_text
+- id: P08-T-cap_arms
+  role: cap_arms
+  canonical_block: 25
+  expect: Armoiries de
+  bbox_px:
+  - 36
+  - 230
+  - 145
+  - 88
+  parent_region: R01
   layer_target: text_layer
   compose_as: live_text
   style: caption

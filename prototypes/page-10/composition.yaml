@@ -8,10 +8,13 @@ title: Le Château de Notre-Dame-du-Cruet
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09 (« Go, page 10 puis 13 à 16 »)
 source: {path: assets/page-10.jpg, sha256: 8aadbcf5cda05bec84012f52c636d8499bb5d052010bc5df998aaac3a5c13bae}
-canonical_text: {path: pages/10.yaml, key: canonical_text, expected_blocks: 27}
+canonical_text: {path: pages/10.yaml, key: canonical_text, expected_blocks: 28}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+# Armoiries communales (2026-09-10) : remplace le fragment des armes de La Chambre par le SVG officiel
+# dès que l'entrée du registre est VERIFIED ; sinon armes seigneuriales conservées, légende non composée.
+communal_arms: {commune: notre-dame-du-cruet, replaces_fragment: heraldry_captioned, registry: assets/heraldry/communes/COMMUNES.yaml}
 text_styles_from: prototypes/_shared/text-styles.yaml
 text_styles:
   small_bold_center: {font: LiberationSerif-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
@@ -72,6 +75,7 @@ text_blocks:
   - {key: b4,           block: 25, expect: "• Édifié",                  bbox_px: [100, 1406, 410, 20], style: tiny}
   # Légendes raster inscrites au canon le 2026-09-09 (ordre du propriétaire) — composées en couche texte, raster masqué.
   - {key: cap_marian, block: 26, expect: "Notre-Dame-du-Cruet, protectrice du", bbox_px: [904, 292, 126, 56], style: caption, caption_of: marian_figure_captioned, allow_ink_overlap: true}
+  - {key: cap_arms, block: 27, expect: "Armoiries de", bbox_px: [36, 175, 128, 70], style: caption, requires_communal_arms: true}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-10-google-maps.svg, placement: reference_canvas}

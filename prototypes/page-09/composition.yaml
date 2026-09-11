@@ -5,10 +5,13 @@ title: La Maison-Forte de Gruyère
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-09.jpg, sha256: d54cab494ac8f931d8cb9dd5953d7f171a0c0d6c0b7abd7a73cc32e7f7de1aed}
-canonical_text: {path: pages/09.yaml, key: canonical_text, expected_blocks: 16}
+canonical_text: {path: pages/09.yaml, key: canonical_text, expected_blocks: 17}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+# Armoiries communales (2026-09-10) : remplace le fragment des armes de La Chambre par le SVG officiel
+# dès que l'entrée du registre est VERIFIED ; sinon armes seigneuriales conservées, légende non composée.
+communal_arms: {commune: saint-etienne-de-cuines, replaces_fragment: heraldry_captioned, registry: assets/heraldry/communes/COMMUNES.yaml}
 text_styles_from: prototypes/_shared/text-styles.yaml
 text_styles: {}
 
@@ -54,6 +57,7 @@ text_blocks:
   - {key: b3,           block: 14, expect: "• Propriété",                 bbox_px: [100, 1428, 225, 22], style: tiny}
   # Légendes raster inscrites au canon le 2026-09-09 (ordre du propriétaire) — composées en couche texte, raster masqué.
   - {key: cap_magnolia, block: 15, expect: "Magnolia séculaire ombrageant", bbox_px: [867, 416, 120, 66], style: caption_right, caption_of: magnolia_captioned}
+  - {key: cap_arms, block: 16, expect: "Armoiries de", bbox_px: [36, 235, 145, 90], style: caption, requires_communal_arms: true}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-09-google-maps.svg, placement: reference_canvas}

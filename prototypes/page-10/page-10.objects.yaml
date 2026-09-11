@@ -5,7 +5,7 @@ title: Le Château de Notre-Dame-du-Cruet
 status: APPROVED
 generated_from:
   composition: prototypes/page-10/composition.yaml
-  composition_run: 2a39c542877ec275b1a627a540c5843035fec0867101f88f90fecacbdb0344fc
+  composition_run: bdb29782ffd31039ca21a3e01fc7dbcdb65918d5cc322381c242afee3d1a8cb6
 canonical_reference:
   path: assets/page-10.jpg
   sha256: 8aadbcf5cda05bec84012f52c636d8499bb5d052010bc5df998aaac3a5c13bae
@@ -861,6 +861,20 @@ text_zones:
   - 126
   - 56
   parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/10.yaml:canonical_text
+- id: P10-T-cap_arms
+  role: cap_arms
+  canonical_block: 27
+  expect: Armoiries de
+  bbox_px:
+  - 36
+  - 175
+  - 128
+  - 70
+  parent_region: R01
   layer_target: text_layer
   compose_as: live_text
   style: caption

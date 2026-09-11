@@ -5,10 +5,13 @@ title: La Tour de Notre-Dame-du-Cruet
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-11.jpg, sha256: d4090803bb0c287fe6bb6a7044a77451b47b688de891a52320918f0ef48b0bc8}
-canonical_text: {path: pages/11.yaml, key: canonical_text, expected_blocks: 22}
+canonical_text: {path: pages/11.yaml, key: canonical_text, expected_blocks: 23}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+# Armoiries communales (2026-09-10) : remplace le fragment des armes de La Chambre par le SVG officiel
+# dès que l'entrée du registre est VERIFIED ; sinon armes seigneuriales conservées, légende non composée.
+communal_arms: {commune: notre-dame-du-cruet, replaces_fragment: heraldry_captioned, registry: assets/heraldry/communes/COMMUNES.yaml}
 text_styles_from: prototypes/_shared/text-styles.yaml
 text_styles:
   small_bold_center: {font: LiberationSerif-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
@@ -60,6 +63,7 @@ text_blocks:
   - {key: cap_valley_2, block: 19, expect: "Le Cruet", bbox_px: [930, 839, 56, 18], style: caption, caption_of: valley_box_captioned}
   - {key: cap_valley_3, block: 20, expect: "Le Bugeon", bbox_px: [599, 957, 68, 18], style: caption, caption_of: valley_box_captioned, allow_ink_overlap: true}
   - {key: cap_valley_4, block: 21, expect: "Le Bugeon", bbox_px: [577, 992, 68, 18], style: caption, caption_of: valley_box_captioned, allow_ink_overlap: true}
+  - {key: cap_arms, block: 22, expect: "Armoiries de", bbox_px: [36, 211, 160, 86], style: caption, requires_communal_arms: true}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-11-google-maps.svg, placement: reference_canvas}

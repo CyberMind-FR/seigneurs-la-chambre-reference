@@ -93,6 +93,38 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
 - `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
   committées).
 
+## État au 2026-09-11 : armoiries communales — SVG officiels au dépôt, composition en attente du crédit CC BY-SA
+
+Guide : `docs/migration-text-layer/COMMUNAL_ARMS.md` (§5 proposition d'amendement page 15, §6 test).
+
+- Le propriétaire a déposé les trois blasons Commons disponibles et leur provenance
+  (`assets/svg/blasons/{73067-la-chambre,73231-saint-etienne-de-cuines,73278-saint-remy-de-maurienne}.svg`,
+  `assets/svg/blasons/REGISTRY.yaml`, PR #22) ; Sainte-Marie-de-Cuines et Notre-Dame-du-Cruet sans
+  blason connu (mairies à interroger).
+- `assets/heraldry/communes/COMMUNES.yaml` reprend cette provenance (chemin et SHA-256 croisés avec
+  `REGISTRY.yaml` par `make heraldry-check`) au statut `VERIFIED_CREDITS_PENDING` : les dessins sont
+  CC BY-SA ; la composition exige que la ligne de crédit soit inscrite au canon
+  (`credit_inscribed_in_canon`, refus du compositeur sinon) et que la mention « © Tous droits
+  réservés » de la page 15 les exclue. Aucune modification du canon dans ce lot.
+- Mécanisme prouvé sur les dessins réels (pages 07–09, 12, hors dépôt) : rendu 1224.72 ppi, écu
+  dans la zone, légendes composées ; garde-fou du crédit testé.
+- **Décision propriétaire attendue** : inscrire les trois lignes de crédit (page 15 ou colophon) et
+  amender la mention globale (proposition §5), puis `status: VERIFIED` et recomposition.
+
+## État au 2026-09-10 : armoiries communales — registre et mécanisme, sources bloquées
+
+Guide : `docs/migration-text-layer/COMMUNAL_ARMS.md`. Registre : `assets/heraldry/communes/COMMUNES.yaml`.
+
+- Cinq communes listées (La Chambre, Sainte-Marie-de-Cuines, Saint-Étienne-de-Cuines,
+  Notre-Dame-du-Cruet, Saint-Rémy-de-Maurienne) avec sites, pages, fichiers Commons identifiés,
+  blasonnements rapportés (non vérifiés) ; Notre-Dame-du-Cruet sans armoirie trouvée.
+- Mécanisme `communal_arms` dans les compositions 05–12 : remplacement du fragment des armes de La
+  Chambre par le SVG officiel rendu au gate trait + légende canonique conditionnelle « Armoiries de
+  <Commune> », uniquement quand l'entrée est `VERIFIED` (fichier, SHA, licence, auteur, source,
+  blasonnement sourcé, vérificateur). `make heraldry-check` dans `make validate`.
+- **Bloquant** : aucune source héraldique accessible depuis l'environnement (proxy) ; images à
+  récupérer et blasonnements à confirmer depuis un poste non filtré (procédure dans le guide).
+
 ## État au 2026-09-09 : release v3.0.0 publiée — correctif de publication (v3.0.1)
 
 - `v3.0.0` publiée par `workflow_dispatch` (`release_tag`) sur `main` `8db3a9c` : le push direct
@@ -295,6 +327,11 @@ Chaque fragment raster produit doit enregistrer : page source, zone/bounding box
 11b. ~~inscrire au canon les 35 légendes raster~~ — fait le 2026-09-09 (à relire) ; déclarer les droits
     des images générées ; décider Git LFS pour `assets/hd/` ; légendes d'armoiries (11) à traiter
     avec la voie SVG ;
+11c. armoiries communales : ~~récupérer les SVG Commons et confirmer les blasonnements~~ — fait par le
+    propriétaire le 2026-09-10 (PR #22) ; **arbitrer le crédit CC BY-SA** (page 15 / colophon,
+    `COMMUNAL_ARMS.md` §5), passer les trois entrées à `VERIFIED`, recomposer 07–09 et 12, déclarer
+    les actifs dans `manifest-v3.yaml` ; mairies de Sainte-Marie-de-Cuines et Notre-Dame-du-Cruet à
+    interroger ;
 12. confirmer le nom de l'association sur le site officiel ; régénérer les rasters qui portent
     encore « Les Amis… » ; arbitrer mention illustrations, armoiries communales, citation de
     couverture, droits (couvertures p14, logo p16).

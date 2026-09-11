@@ -5,7 +5,7 @@ title: La Maison-Forte de Gruyère
 status: APPROVED
 generated_from:
   composition: prototypes/page-09/composition.yaml
-  composition_run: 1c1888ca15d5952ce0bd4bd95c1b1c7d895b1a19ad3b6a22c8d0a88d84abbeab
+  composition_run: 510b17faa180ea6dc8e3bcd5e0c64db69a5024a86d02f80b101f73d1c2e48961
 canonical_reference:
   path: assets/page-09.jpg
   sha256: d54cab494ac8f931d8cb9dd5953d7f171a0c0d6c0b7abd7a73cc32e7f7de1aed
@@ -601,6 +601,20 @@ text_zones:
   layer_target: text_layer
   compose_as: live_text
   style: caption_right
+  authority: pages/09.yaml:canonical_text
+- id: P09-T-cap_arms
+  role: cap_arms
+  canonical_block: 16
+  expect: Armoiries de
+  bbox_px:
+  - 36
+  - 235
+  - 145
+  - 90
+  parent_region: R01
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
   authority: pages/09.yaml:canonical_text
 functional_objects:
 - id: P09-F-google_maps

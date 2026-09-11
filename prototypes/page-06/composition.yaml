@@ -5,10 +5,13 @@ title: La Tour de Burgin
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-06.jpg, sha256: 8169817e1bbbcafb3c5a53221f05dde95e9da34625e8e806021ca0514d323031}
-canonical_text: {path: pages/06.yaml, key: canonical_text, expected_blocks: 22}
+canonical_text: {path: pages/06.yaml, key: canonical_text, expected_blocks: 23}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+# Armoiries communales (2026-09-10) : remplace le fragment des armes de La Chambre par le SVG officiel
+# dès que l'entrée du registre est VERIFIED ; sinon armes seigneuriales conservées, légende non composée.
+communal_arms: {commune: sainte-marie-de-cuines, replaces_fragment: heraldry_captioned, registry: assets/heraldry/communes/COMMUNES.yaml}
 text_styles_from: prototypes/_shared/text-styles.yaml
 text_styles:
   title: {size: 22.0, leading: 22.5}
@@ -64,6 +67,7 @@ text_blocks:
   - {key: cap_berthollet, block: 19, expect: "Claude-Louis Berthollet 1748-1822", bbox_px: [509, 1078, 169, 40], style: caption_plain, caption_of: berthollet_portrait_captioned}
   - {key: cap_vestiges_1, block: 20, expect: "Vestiges aujourd'hui", bbox_px: [755, 814, 172, 26], style: caption_title_red, caption_of: vestiges_box_captioned}
   - {key: cap_vestiges_2, block: 21, expect: "« Réduits à", bbox_px: [732, 1049, 220, 44], style: caption, caption_of: vestiges_box_captioned}
+  - {key: cap_arms, block: 22, expect: "Armoiries de", bbox_px: [40, 196, 135, 86], style: caption, requires_communal_arms: true}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-06-google-maps.svg, placement: reference_canvas}
