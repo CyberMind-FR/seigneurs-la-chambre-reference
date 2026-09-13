@@ -5,10 +5,13 @@ title: La Tour de Châtel-André
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-07.jpg, sha256: 53440127c11ca72289c1c59ebf51cf1ef037972d1754b8794dada88c85c39c3e}
-canonical_text: {path: pages/07.yaml, key: canonical_text, expected_blocks: 30}
+canonical_text: {path: pages/07.yaml, key: canonical_text, expected_blocks: 31}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+# Armoiries communales (2026-09-10) : remplace le fragment des armes de La Chambre par le SVG officiel
+# dès que l'entrée du registre est VERIFIED ; sinon armes seigneuriales conservées, légende non composée.
+communal_arms: {commune: saint-etienne-de-cuines, replaces_fragment: heraldry_captioned, registry: assets/heraldry/communes/COMMUNES.yaml}
 text_styles_from: prototypes/_shared/text-styles.yaml
 text_styles:
   small_bold_center: {font: LiberationSerif-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
@@ -76,6 +79,7 @@ text_blocks:
   - {key: cap_def_5, block: 27, expect: "La Chambre", bbox_px: [742, 834, 74, 22], style: caption_plain, caption_of: defensive_box_captioned}
   - {key: cap_def_6, block: 28, expect: "Vallée des Villards", bbox_px: [850, 837, 134, 22], style: caption, caption_of: defensive_box_captioned}
   - {key: cap_battle, block: 29, expect: "Reprise de la", bbox_px: [879, 935, 111, 94], style: caption, caption_of: battle_scene_captioned}
+  - {key: cap_arms, block: 30, expect: "Armoiries de", bbox_px: [36, 224, 138, 94], style: caption, requires_communal_arms: true}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-07-google-maps.svg, placement: reference_canvas}

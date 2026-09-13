@@ -5,7 +5,7 @@ title: La Maison Forte de La Landonnière
 status: APPROVED
 generated_from:
   composition: prototypes/page-12/composition.yaml
-  composition_run: 1f78d7a69aa0a55f679a710bb871983b305642d5d81eaca431b36b5c5a4325ce
+  composition_run: 18a12756d1b8ef5564b7ea6f5cc7848ca2914787a346f3888b086ac93f98957e
 canonical_reference:
   path: assets/page-12.jpg
   sha256: 0afd9e2eb552b9fff7339a03817205f511b83ae7614884437812463123e61638
@@ -985,6 +985,20 @@ text_zones:
   - 107
   - 23
   parent_region: R02
+  layer_target: text_layer
+  compose_as: live_text
+  style: caption
+  authority: pages/12.yaml:canonical_text
+- id: P12-T-cap_arms
+  role: cap_arms
+  canonical_block: 33
+  expect: Armoiries de
+  bbox_px:
+  - 30
+  - 198
+  - 140
+  - 79
+  parent_region: R01
   layer_target: text_layer
   compose_as: live_text
   style: caption

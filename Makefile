@@ -1,4 +1,4 @@
-.PHONY: help sync qr-svg validate-qr-svg validate-phase-b-svg manifest-v3 validate validate-layered layered-measure layered-compose layered-inventory layered-register hd-prompts hd-pack hd-ingest hd-check build validate-build build-v3 validate-build-v3 release clean
+.PHONY: help sync qr-svg validate-qr-svg validate-phase-b-svg manifest-v3 validate validate-layered layered-measure layered-compose layered-inventory layered-register hd-prompts hd-pack hd-ingest hd-check heraldry-check build validate-build build-v3 validate-build-v3 release clean
 
 PYTHON ?= python3
 DIST ?= dist
@@ -20,6 +20,7 @@ help:
 	@echo "make hd-pack             - prompts + crops de référence bruts dans dist/hd-pack (jamais committés)"
 	@echo "make hd-ingest           - inscrit les images déposées dans assets/hd/page-NN/ (statut PENDING_REVIEW)"
 	@echo "make hd-check            - contrôle prompts à jour, SHA, ratio, gates et approbations des sources HD"
+	@echo "make heraldry-check      - contrôle le registre des armoiries communales et les compositions qui le référencent"
 	@echo "make build               - construit les PDF puis valide les QR du PDF final"
 	@echo "make validate-build      - valide les QR réinjectés dans le PDF final"
 	@echo "make build-v3            - assemble les PDF v3 (compositions multicouches, page 04 en repli raster) puis les valide"
@@ -47,6 +48,7 @@ validate:
 	$(PYTHON) scripts/validate_qr_svg.py
 	$(PYTHON) scripts/validate_phase_b_svg.py
 	$(MAKE) hd-check
+	$(MAKE) heraldry-check
 	$(MAKE) validate-layered
 
 layered-measure:
@@ -77,6 +79,9 @@ hd-ingest:
 hd-check:
 	$(PYTHON) scripts/hd_prompt_pack.py --check
 	$(PYTHON) scripts/hd_check.py
+
+heraldry-check:
+	$(PYTHON) scripts/heraldry_check.py
 
 validate-build:
 	$(PYTHON) scripts/validate_built_pdfs.py

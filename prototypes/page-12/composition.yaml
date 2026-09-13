@@ -5,10 +5,13 @@ title: La Maison Forte de La Landonnière
 family: site
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09
 source: {path: assets/page-12.jpg, sha256: 0afd9e2eb552b9fff7339a03817205f511b83ae7614884437812463123e61638}
-canonical_text: {path: pages/12.yaml, key: canonical_text, expected_blocks: 33}
+canonical_text: {path: pages/12.yaml, key: canonical_text, expected_blocks: 34}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
+# Armoiries communales (2026-09-10) : remplace le fragment des armes de La Chambre par le SVG officiel
+# dès que l'entrée du registre est VERIFIED ; sinon armes seigneuriales conservées, légende non composée.
+communal_arms: {commune: saint-remy-de-maurienne, replaces_fragment: heraldry_captioned, registry: assets/heraldry/communes/COMMUNES.yaml}
 text_styles_from: prototypes/_shared/text-styles.yaml
 text_styles:
   small_bold_center: {font: LiberationSerif-Bold, size: 6.1, leading: 6.8, color: "#2f241e", align: center}
@@ -75,6 +78,7 @@ text_blocks:
   - {key: cap_net_4c, block: 30, expect: "Châtelet, Gruyère", bbox_px: [658, 1058, 112, 15], style: caption, caption_of: network_panorama_captioned}
   - {key: cap_net_5a, block: 31, expect: "SAINT-RÉMY-DE-MAURIENNE", bbox_px: [879, 1019, 107, 26], style: caption_caps, caption_of: network_panorama_captioned}
   - {key: cap_net_5b, block: 32, expect: "La Landonnière", bbox_px: [879, 1045, 107, 23], style: caption, caption_of: network_panorama_captioned}
+  - {key: cap_arms, block: 33, expect: "Armoiries de", bbox_px: [30, 198, 140, 79], style: caption, requires_communal_arms: true}
 
 qr:
   - {id: google_maps, svg: assets/qr-svg/page-12-google-maps.svg, placement: reference_canvas}
