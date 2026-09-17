@@ -1059,7 +1059,7 @@ layered_compositions:
   pages:
   - page: 1
     composition: prototypes/page-01/composition.yaml
-    composition_sha256: 15f7485b26fe747464ecb4db1c7c9b5ad1c82885b88c1a6993f47efe7af06a96
+    composition_sha256: 4fa93a6f84f1136afe4e1a5001509850cd40b29637e045568977181f0b1a466d
     fragment_lock: prototypes/page-01/fragments.lock.yaml
     status: APPROVED
     methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE
@@ -1131,7 +1131,7 @@ layered_compositions:
     effective_ppi_a5_after_upscale: 300.56
   - page: 11
     composition: prototypes/page-11/composition.yaml
-    composition_sha256: 00aa396dc58db86b106e00f85509d2d59a8f26e50e03eecd29759769cf91fcc2
+    composition_sha256: 6d782dbe1171d53c35a713a6b722fa02a5371c3a4749436c1c427661e5e781ab
     fragment_lock: prototypes/page-11/fragments.lock.yaml
     status: APPROVED
     methodology_gate: PASS_WITH_PROVISIONAL_UPSCALE

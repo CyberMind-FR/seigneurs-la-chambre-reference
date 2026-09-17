@@ -104,7 +104,7 @@ fragments:
     upscale_factor: 1.62
     upscale_provisional: true
   castle_bottom_left:
-    sha256: 55c54a5d0326a31b30b492171a761fd775bfac4cf41cbda4b521fdf9feada518
+    sha256: 851b9762a228142f8e8f4a1953c4fecbbe85375124aa4d91681a8152fc527255
     bbox_px:
       x: 25
       y: 993
