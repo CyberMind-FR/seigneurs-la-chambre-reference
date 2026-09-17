@@ -93,6 +93,26 @@ Rapport : `docs/migration-text-layer/PHASE_B_SITE_FAMILY_INDUSTRIALIZATION.md`.
 - `make validate` inclut désormais `validate-layered` (sorties dans `_verify-layered/`, jamais
   committées).
 
+## État au 2026-09-17 : couverture allégée, état actuel de la tour du Cruet, release 3.0.2
+
+Traçabilité : `corrections.yaml:cover_cleanup_2026_09_17`, `corrections.yaml:page_11_tower_reduced_2026_09_17`.
+
+- **Couverture** : la ligne « Notre-Dame-du-Cruet — Décembre 2025 » et la ligne « Association « Amis du
+  Couvent des Cordeliers de La Chambre » » sont retirées du canon (ordres du propriétaire). Le nom de
+  l'association ne subsiste plus que dans le logo et dans le pied de page commun aux 16 pages ;
+  « Commission Histoire et Patrimoine » remonte à la place libérée. `expected_blocks` 14 → 12.
+- **Page 11** : quatrième puce « • Aujourd'hui réduite de deux étages » inscrite au canon dans
+  l'encadré CARACTÉRISTIQUES ; « 4 étages / environ 12 m » décrivent désormais l'état d'origine.
+  `expected_blocks` 23 → 24, légendes renumérotées 16–23. Le croquis montre toujours quatre étages :
+  à traiter avec la mention générale sur les illustrations.
+- **Défaut de masque corrigé (page 01)** : le fragment `castle_bottom_left`, dessiné après
+  `seal_captioned`, redessinait le bas de la légende raster « XIIIe siècle » du sceau par-dessus le
+  masque ; troisième masque `{box: [168, 991, 90, 16], fill: paper}` ajouté, lock et registres
+  régénérés. Trouvé pendant la relecture des 35 légendes.
+- **Relecture des légendes (en cours)** : pages 01 et 02 relues fragment par fragment à
+  l'agrandissement (12 légendes sur 35) — transcriptions conformes au raster. Reste 03, 05–12.
+- `build-config.yaml:v3.version` = `3.0.2`.
+
 ## État au 2026-09-11 : armoiries communales — SVG officiels au dépôt, composition en attente du crédit CC BY-SA
 
 Guide : `docs/migration-text-layer/COMMUNAL_ARMS.md` (§5 proposition d'amendement page 15, §6 test).
