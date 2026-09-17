@@ -5,7 +5,7 @@ title: LES SEIGNEURS DE LA CHAMBRE
 status: APPROVED
 generated_from:
   composition: prototypes/page-01/composition.yaml
-  composition_run: 5a48aa15d40689f39bad04cc4baf8534f41f5913d85efe06a18c7475d5ea8226
+  composition_run: 439cbacfc4c45035494bbb67442fa055611296c45e5dba8b8befac051708c89e
 canonical_reference:
   path: assets/page-01.jpg
   sha256: 7b3058fe609f08f59d6fead46bb7d5d7e544de568b57187219fc55ee70ecbb8b
@@ -291,8 +291,9 @@ objects:
   - bottom
   review_status: APPROVED
 - id: P01-O-castle_bottom_left
-  visual_description: résidus raster des lignes « Notre-Dame-du-Cruet — Décembre 2025 », « Association… », « Commission… »
-    masqués (ciel)
+  visual_description: 'résidus raster des lignes « Notre-Dame-du-Cruet — Décembre 2025 », « Association… », « Commission…
+    » masqués (ciel) ; 3e masque (2026-09-17) : bas de la légende raster « XIIIe siècle » du sceau, que ce fragment redessinait
+    par-dessus le masque de seal_captioned'
   object_class: illustration
   source_bbox_px:
   - 25
@@ -322,9 +323,18 @@ objects:
     - 253
     - 250
     fill_mode: paper
+  - x: 168
+    y: 991
+    w: 90
+    h: 16
+    fill_rgb:
+    - 255
+    - 253
+    - 250
+    fill_mode: paper
   provenance: canonical_pages
   source_ref: assets/page-01.jpg
-  sha256: 55c54a5d0326a31b30b492171a761fd775bfac4cf41cbda4b521fdf9feada518
+  sha256: 851b9762a228142f8e8f4a1953c4fecbbe85375124aa4d91681a8152fc527255
   effective_ppi_a5: 300.97
   dirty_edges:
   - bottom
@@ -534,24 +544,10 @@ text_zones:
   compose_as: live_text
   style: cover_bold
   authority: pages/01.yaml:canonical_text
-- id: P01-T-l5
-  role: l5
+- id: P01-T-l7
+  role: l7
   canonical_block: 5
-  expect: Notre-Dame-du-Cruet — Décembre
-  bbox_px:
-  - 300
-  - 985
-  - 430
-  - 34
-  parent_region: R02
-  layer_target: text_layer
-  compose_as: live_text
-  style: cover_body
-  authority: pages/01.yaml:canonical_text
-- id: P01-T-l6
-  role: l6
-  canonical_block: 6
-  expect: Association
+  expect: Commission
   bbox_px:
   - 240
   - 1058
@@ -562,23 +558,9 @@ text_zones:
   compose_as: live_text
   style: cover_small_italic
   authority: pages/01.yaml:canonical_text
-- id: P01-T-l7
-  role: l7
-  canonical_block: 7
-  expect: Commission
-  bbox_px:
-  - 240
-  - 1088
-  - 540
-  - 26
-  parent_region: R02
-  layer_target: text_layer
-  compose_as: live_text
-  style: cover_small_italic
-  authority: pages/01.yaml:canonical_text
 - id: P01-T-q1
   role: q1
-  canonical_block: 8
+  canonical_block: 6
   expect: « Le passé
   bbox_px:
   - 420
@@ -592,7 +574,7 @@ text_zones:
   authority: pages/01.yaml:canonical_text
 - id: P01-T-q2
   role: q2
-  canonical_block: 9
+  canonical_block: 7
   expect: il est sous nos pas
   bbox_px:
   - 420
@@ -606,7 +588,7 @@ text_zones:
   authority: pages/01.yaml:canonical_text
 - id: P01-T-cap_church
   role: cap_church
-  canonical_block: 10
+  canonical_block: 8
   expect: Église Notre-Dame-du-Cruet XIVe
   bbox_px:
   - 66
@@ -620,7 +602,7 @@ text_zones:
   authority: pages/01.yaml:canonical_text
 - id: P01-T-cap_mountains
   role: cap_mountains
-  canonical_block: 11
+  canonical_block: 9
   expect: Maurienne Terre de
   bbox_px:
   - 750
@@ -634,7 +616,7 @@ text_zones:
   authority: pages/01.yaml:canonical_text
 - id: P01-T-cap_seal
   role: cap_seal
-  canonical_block: 12
+  canonical_block: 10
   expect: Sceau d'un seigneur
   bbox_px:
   - 170
@@ -648,7 +630,7 @@ text_zones:
   authority: pages/01.yaml:canonical_text
 - id: P01-T-cap_maison_forte
   role: cap_maison_forte
-  canonical_block: 13
+  canonical_block: 11
   expect: Maison forte de
   bbox_px:
   - 866
