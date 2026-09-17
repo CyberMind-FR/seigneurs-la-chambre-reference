@@ -383,3 +383,36 @@ communal_arms_2026_09_10:
     exclusion des blasons de la mention « Tous droits réservés ») dans COMMUNAL_ARMS.md §5, à arbitrer par le propriétaire ; canon
     inchangé dans ce lot.'
   record: docs/migration-text-layer/COMMUNAL_ARMS.md
+cover_cleanup_2026_09_17:
+  status: canonical_amendment
+  reason: 'Ordres du propriétaire (2026-09-17) : « sur la page de couverture, supprimer les mentions en doublon de l''association »
+    et « supprimer la mention relative à l''exposition de Notre-Dame-du-Cruet de décembre 2025 ».'
+  page: 1
+  removed_blocks:
+  - Notre-Dame-du-Cruet — Décembre 2025
+  - Association « Amis du Couvent des Cordeliers de La Chambre »
+  kept:
+  - Livret de l'exposition
+  - Commission Histoire et Patrimoine
+  decision: 'Doublon de l''association arbitré le 2026-09-17 : le nom ne subsiste sur la couverture que dans le logo (fragment
+    timeline_and_logo) et dans le pied de page commun aux 16 pages ; la ligne « Association « … » » est retirée du canon.
+    Mention de l''exposition : la ligne lieu + date est retirée, « Livret de l''exposition » est conservé.'
+  composition: 'prototypes/page-01/composition.yaml : text_blocks l5 et l6 supprimés, blocs renumérotés (expected_blocks 14 → 12),
+    « Commission Histoire et Patrimoine » remontée à la place libérée (bbox_px y 1088 → 1058). Les résidus raster des deux lignes
+    étaient déjà masqués dans le fragment castle_bottom_left ; aucune nouvelle zone raster à masquer.'
+  raster_note: La référence visuelle assets/page-01.jpg et le livret v2 portent encore les deux lignes ; le canon prévaut pour
+    la composition v3.
+  scope_note: 'Non concernés : « Date d''édition : Décembre 2025 » (page 15, colophon) et « Décembre 2025 » (page 14), qui
+    datent l''édition et non l''exposition.'
+page_11_tower_reduced_2026_09_17:
+  status: canonical_amendment
+  reason: 'Ordre du propriétaire (2026-09-17) : « sur la tour carrée de Notre-Dame-du-Cruet, mentionner qu''actuellement elle
+    a été réduite de 2 étages ».'
+  page: 11
+  added_block: '• Aujourd''hui réduite de deux étages'
+  placement: 'Quatrième puce de l''encadré CARACTÉRISTIQUES, après « • Propriété privée » (canonical_text de pages/11.yaml) ;
+    composée en couche texte (prototypes/page-11/composition.yaml, key b4, bbox_px [100, 1424, 390, 22], style tiny) ;
+    expected_blocks 23 → 24, blocs de légendes renumérotés 15–22 → 16–23.'
+  note: 'Les puces « Hauteur : environ 12 mètres (4 étages) » et le cartouche raster « Tour carrée médiévale / 4 étages /
+    Hauteur : environ 12 m » décrivent l''état d''origine ; la nouvelle puce déclare l''état actuel. Le croquis de la page
+    montre toujours la tour à quatre étages (à traiter avec la mention générale sur les illustrations).'

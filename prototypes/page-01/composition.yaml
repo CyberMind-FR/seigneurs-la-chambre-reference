@@ -5,7 +5,7 @@ title: LES SEIGNEURS DE LA CHAMBRE
 family: cover
 status: APPROVED  # crops et composition validés par gkerma le 2026-09-09 (« Go, pages 01 et 02 »)
 source: {path: assets/page-01.jpg, sha256: 7b3058fe609f08f59d6fead46bb7d5d7e544de568b57187219fc55ee70ecbb8b}
-canonical_text: {path: pages/01.yaml, key: canonical_text, expected_blocks: 14}
+canonical_text: {path: pages/01.yaml, key: canonical_text, expected_blocks: 12}
 qr_registry: qr_registry.yaml
 canvas: {page_size: A5, fit: contain, background: "#fffdf7", qr_reference_canvas: [1920, 2880]}
 layer_order: [background, raster_fragments, documentary_vectors, text_layer, functional_overlay]
@@ -39,16 +39,17 @@ text_blocks:
   - {key: l2,         block: 2, expect: "Quatre siècles",                  bbox_px: [280, 750, 480, 45],  style: cover_italic}
   - {key: l3,         block: 3, expect: "(XIe - XVe siècles)",             bbox_px: [280, 798, 480, 40],  style: cover_italic}
   - {key: l4,         block: 4, expect: "Livret de l'exposition",          bbox_px: [300, 935, 430, 40],  style: cover_bold}
-  - {key: l5,         block: 5, expect: "Notre-Dame-du-Cruet — Décembre",  bbox_px: [300, 985, 430, 34],  style: cover_body}
-  - {key: l6,         block: 6, expect: "Association",                     bbox_px: [240, 1058, 540, 26], style: cover_small_italic}
-  - {key: l7,         block: 7, expect: "Commission",                      bbox_px: [240, 1088, 540, 26], style: cover_small_italic}
-  - {key: q1,         block: 8, expect: "« Le passé",                      bbox_px: [420, 1150, 260, 22], style: small_italic}
-  - {key: q2,         block: 9, expect: "il est sous nos pas",             bbox_px: [420, 1174, 260, 22], style: small_italic}
+  # 2026-09-17 (ordre du propriétaire) : ligne « Notre-Dame-du-Cruet — Décembre 2025 » et ligne
+  # « Association « Amis du Couvent… » » retirées du canon ; la mention de l'association ne subsiste
+  # que dans le logo (fragment timeline_and_logo) et le pied de page commun aux 16 pages.
+  - {key: l7,         block: 5, expect: "Commission",                      bbox_px: [240, 1058, 540, 26], style: cover_small_italic}
+  - {key: q1,         block: 6, expect: "« Le passé",                      bbox_px: [420, 1150, 260, 22], style: small_italic}
+  - {key: q2,         block: 7, expect: "il est sous nos pas",             bbox_px: [420, 1174, 260, 22], style: small_italic}
   # Légendes raster inscrites au canon le 2026-09-09 (ordre du propriétaire) — composées en couche texte, raster masqué.
-  - {key: cap_church, block: 10, expect: "Église Notre-Dame-du-Cruet XIVe", bbox_px: [66, 351, 142, 64], style: caption_left, caption_of: church_captioned}
-  - {key: cap_mountains, block: 11, expect: "Maurienne Terre de", bbox_px: [750, 308, 108, 62], style: caption_left, caption_of: mountains_captioned}
-  - {key: cap_seal, block: 12, expect: "Sceau d'un seigneur", bbox_px: [170, 920, 82, 86], style: caption_left, caption_of: seal_captioned}
-  - {key: cap_maison_forte, block: 13, expect: "Maison forte de", bbox_px: [866, 740, 82, 44], style: caption, caption_of: maison_forte_captioned}
+  - {key: cap_church, block: 8, expect: "Église Notre-Dame-du-Cruet XIVe", bbox_px: [66, 351, 142, 64], style: caption_left, caption_of: church_captioned}
+  - {key: cap_mountains, block: 9, expect: "Maurienne Terre de", bbox_px: [750, 308, 108, 62], style: caption_left, caption_of: mountains_captioned}
+  - {key: cap_seal, block: 10, expect: "Sceau d'un seigneur", bbox_px: [170, 920, 82, 86], style: caption_left, caption_of: seal_captioned}
+  - {key: cap_maison_forte, block: 11, expect: "Maison forte de", bbox_px: [866, 740, 82, 44], style: caption, caption_of: maison_forte_captioned}
 
 qr: []
 
